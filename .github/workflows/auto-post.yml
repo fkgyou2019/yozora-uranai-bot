@@ -74,6 +74,9 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      - name: Quality check (rule-based, not AI self-score)
+        run: python .github/scripts/quality_check.py
+
       - name: Post one from queue
         run: python agents/poster.py
         env:
