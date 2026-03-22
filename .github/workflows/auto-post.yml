@@ -102,10 +102,26 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      - name: Create x-accounts.json from secret
+        run: |
+          if [ -n "$X_ACCOUNTS_JSON" ]; then
+            echo "$X_ACCOUNTS_JSON" > config/x-accounts.json
+          fi
+        env:
+          X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
+
       - name: Post one from queue
         run: python agents/poster.py
         env:
           PYTHONIOENCODING: utf-8
+          X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
+
+      - name: Wait for repost to complete
+        run: |
+          if [ -f state/repost-queue.json ]; then
+            echo "リポスト処理の完了を待機中..."
+            sleep 70
+          fi
 
       - name: Commit state changes
         run: |

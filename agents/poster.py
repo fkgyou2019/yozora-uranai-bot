@@ -293,6 +293,23 @@ def post_one():
             post_id = x_post_tweet(content)
             log("INFO", f"X投稿完了: {post_id}")
 
+            # 自動リポスト連携
+            if post_id:
+                try:
+                    import subprocess
+                    repost_config = load_json("config/repost.json")
+                    if repost_config.get("enabled", False):
+                        source_account = post.get("repost_source_account", "account_1")
+                        repost_script = os.path.join(PROJECT_DIR, "agents", "repost.py")
+                        subprocess.Popen([
+                            sys.executable, repost_script,
+                            "--tweet-id", str(post_id),
+                            "--source", source_account,
+                        ])
+                        log("INFO", f"自動リポスト開始: source={source_account}")
+                except Exception as e:
+                    log("WARN", f"自動リポスト起動失敗（投稿自体は成功）: {e}")
+
         # 成功 → 履歴に追加
         post["status"] = "posted"
         post["posted_at"] = datetime.now(JST).isoformat()
