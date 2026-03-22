@@ -427,6 +427,28 @@
       "status": "posted",
       "posted_at": "2026-03-22T00:07:38.559007+09:00",
       "platform_post_id": "17856846702680857"
+    },
+    {
+      "pattern_name": "星座別アドバイス型",
+      "category": "星座占い",
+      "content": "獅子座さんへ。\n\n春分を過ぎて、\nあなたの中で眠っていた\n創造力が目覚める時期です。\n\n周囲の声より、\n自分の心の声を大切に。\n\nその先に、\n本当にやりたいことが\n見えてきますよ。✨",
+      "hashtag": "#星座占い",
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260322_020",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "posted_at": "2026-03-22T10:40:56.760921+09:00",
+      "platform_post_id": "18061827368663614"
     }
   ]
 }
