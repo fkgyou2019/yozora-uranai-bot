@@ -1,0 +1,19 @@
+# API Keys (絶対にコミットしない)
+config/api-keys.env
+
+# State files (実行時に生成される)
+state/*.json
+state/*.log
+state/_tmp_*
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.bak

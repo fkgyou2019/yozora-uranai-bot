@@ -1,0 +1,44 @@
+{
+  "quality_control": {
+    "min_quality_score": 7.0,
+    "scoring_criteria": {
+      "hook_strength": {"weight": 1, "description": "1行目のフック力（10点満点）"},
+      "usefulness": {"weight": 1, "description": "有益性・価値提供（10点満点）"},
+      "specificity": {"weight": 1, "description": "具体性（10点満点）"},
+      "tempo": {"weight": 1, "description": "テンポ・読みやすさ（10点満点）"},
+      "persona_match": {"weight": 1, "description": "ペルソナとの一致度（10点満点）"},
+      "mobile_readability": {"weight": 1, "description": "スマホ可読性：1行25文字以内・空行分割・壁文禁止（10点満点）"}
+    },
+    "max_rewrite_attempts": 2,
+    "discard_on_failure": true
+  },
+  "similarity_check": {
+    "max_similarity": 0.85,
+    "compare_against_last_n": 100,
+    "method": "cosine_similarity"
+  },
+  "posting_safety": {
+    "min_interval_seconds": 7200,
+    "max_posts_per_day": 8,
+    "max_affiliate_posts_per_day": 1,
+    "affiliate_enabled": false,
+    "duplicate_check": true,
+    "banned_hours": [1, 2, 3, 4, 5, 6, 7],
+    "note": "2時間以上間隔 / 1日8件上限 / 深夜1-7時は投稿禁止（スパム対策）"
+  },
+  "error_handling": {
+    "max_consecutive_errors": 3,
+    "action_on_max_errors": "auto_stop",
+    "notification_method": "log"
+  },
+  "ng_word_filter": {
+    "enabled": true,
+    "action": "block_and_rewrite",
+    "ng_words_file": "knowledge/uranai/ng-words.json"
+  },
+  "kill_switch": {
+    "file": "state/system-status.json",
+    "field": "kill_switch",
+    "check_interval_seconds": 60
+  }
+}

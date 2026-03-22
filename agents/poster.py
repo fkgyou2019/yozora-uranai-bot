@@ -1,0 +1,340 @@
+#!/usr/bin/env python3
+"""
+エージェント4: ポスター
+投稿キューからThreads API / X APIで投稿を実行
+"""
+
+import json
+import os
+import sys
+import time
+import urllib.request
+import urllib.error
+import urllib.parse
+import hmac
+import hashlib
+import base64
+from datetime import datetime, timezone, timedelta
+
+JST = timezone(timedelta(hours=9))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def load_env():
+    env_file = os.path.join(PROJECT_DIR, "config", "api-keys.env")
+    if not os.path.exists(env_file):
+        print("[ERROR] config/api-keys.env が見つかりません")
+        sys.exit(1)
+    with open(env_file, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                key, value = line.split("=", 1)
+                os.environ[key.strip()] = value.strip()
+
+
+def load_json(path):
+    full = os.path.join(PROJECT_DIR, path)
+    if os.path.exists(full):
+        with open(full, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def save_json(path, data):
+    full = os.path.join(PROJECT_DIR, path)
+    with open(full, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def log(level, msg):
+    print(f"[{datetime.now(JST).strftime('%Y-%m-%d %H:%M:%S')}] [{level}] {msg}")
+
+
+def check_kill_switch():
+    status = load_json("state/system-status.json")
+    if status.get("kill_switch", False):
+        log("INFO", "KILL_SWITCH がONのため停止")
+        sys.exit(0)
+
+
+def update_agent_status(agent, status_str):
+    data = load_json("state/system-status.json")
+    data["agents"][agent]["status"] = status_str
+    data["agents"][agent]["last_run"] = datetime.now(JST).isoformat()
+    if status_str == "error":
+        data["agents"][agent]["error_count"] = data["agents"][agent].get("error_count", 0) + 1
+        data["consecutive_errors"] = data.get("consecutive_errors", 0) + 1
+    else:
+        data["consecutive_errors"] = 0
+    save_json("state/system-status.json", data)
+
+
+def check_posting_interval(history, safety):
+    """最低投稿間隔のチェック（safety.jsonの設定値を使用）"""
+    min_interval = safety.get("posting_safety", {}).get("min_interval_seconds", 7200)
+    posts = history.get("posts", [])
+    if not posts:
+        return True
+    last = posts[-1]
+    last_time = datetime.fromisoformat(last.get("posted_at", "2000-01-01T00:00:00"))
+    if last_time.tzinfo is None:
+        last_time = last_time.replace(tzinfo=JST)
+    elapsed = (datetime.now(JST) - last_time).total_seconds()
+    if elapsed < min_interval:
+        remaining = int(min_interval - elapsed)
+        log("INFO", f"投稿間隔{min_interval}秒未満のためスキップ（残り{remaining}秒）")
+        return False
+    return True
+
+
+def check_banned_hours(safety):
+    """深夜投稿禁止時間帯のチェック"""
+    banned = safety.get("posting_safety", {}).get("banned_hours", [])
+    current_hour = datetime.now(JST).hour
+    if current_hour in banned:
+        log("INFO", f"投稿禁止時間帯（{current_hour}時）のためスキップ")
+        return False
+    return True
+
+
+def check_daily_limit(status, safety):
+    """1日の投稿上限チェック（safety.jsonの設定値を使用）"""
+    max_posts = safety.get("posting_safety", {}).get("max_posts_per_day", 8)
+    today = datetime.now(JST).strftime("%Y-%m-%d")
+    if status.get("daily_post_date") != today:
+        status["daily_post_count"] = 0
+        status["daily_post_date"] = today
+    current = status.get("daily_post_count", 0)
+    if current >= max_posts:
+        log("INFO", f"1日の投稿上限（{max_posts}件）に到達")
+        return False
+    return True
+
+
+# =============================================
+# Threads API
+# =============================================
+def threads_post_text(text, user_id, access_token, max_retries=2):
+    """Threads APIでテキスト投稿（auto_publish_text で1コール完了）"""
+    url = f"https://graph.threads.net/v1.0/{user_id}/threads"
+    params = {
+        "media_type": "TEXT",
+        "text": text,
+        "auto_publish_text": "true",
+        "access_token": access_token,
+    }
+    data = urllib.parse.urlencode(params).encode("utf-8")
+
+    for attempt in range(max_retries + 1):
+        try:
+            req = urllib.request.Request(url, data=data, method="POST")
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+            return result.get("id")
+        except (urllib.error.URLError, OSError) as e:
+            log("WARN", f"Threads API リトライ {attempt+1}/{max_retries+1}: {e}")
+            if attempt < max_retries:
+                time.sleep(5)
+            else:
+                raise
+
+
+def threads_reply(text, reply_to_id, user_id, access_token, max_retries=2):
+    """Threads APIで自コメント（reply_to_id + auto_publish_text で1コール完了）"""
+    url = f"https://graph.threads.net/v1.0/{user_id}/threads"
+    params = {
+        "media_type": "TEXT",
+        "text": text,
+        "reply_to_id": reply_to_id,
+        "auto_publish_text": "true",
+        "access_token": access_token,
+    }
+    data = urllib.parse.urlencode(params).encode("utf-8")
+
+    for attempt in range(max_retries + 1):
+        try:
+            req = urllib.request.Request(url, data=data, method="POST")
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+            return result.get("id")
+        except (urllib.error.URLError, OSError) as e:
+            log("WARN", f"Threads Reply リトライ {attempt+1}/{max_retries+1}: {e}")
+            if attempt < max_retries:
+                time.sleep(5)
+            else:
+                raise
+
+
+# =============================================
+# X (Twitter) API v2
+# =============================================
+def x_create_oauth_header(method, url, params, consumer_key, consumer_secret,
+                          access_token, access_secret):
+    """OAuth 1.0a 署名ヘッダーを生成"""
+    import uuid
+    oauth_params = {
+        "oauth_consumer_key": consumer_key,
+        "oauth_nonce": uuid.uuid4().hex,
+        "oauth_signature_method": "HMAC-SHA1",
+        "oauth_timestamp": str(int(time.time())),
+        "oauth_token": access_token,
+        "oauth_version": "1.0",
+    }
+    all_params = {**oauth_params, **params}
+    sorted_params = "&".join(
+        f"{urllib.parse.quote(k, safe='')}={urllib.parse.quote(str(v), safe='')}"
+        for k, v in sorted(all_params.items())
+    )
+    base_string = f"{method}&{urllib.parse.quote(url, safe='')}&{urllib.parse.quote(sorted_params, safe='')}"
+    signing_key = f"{urllib.parse.quote(consumer_secret, safe='')}&{urllib.parse.quote(access_secret, safe='')}"
+    signature = base64.b64encode(
+        hmac.new(signing_key.encode(), base_string.encode(), hashlib.sha1).digest()
+    ).decode()
+    oauth_params["oauth_signature"] = signature
+    auth_header = "OAuth " + ", ".join(
+        f'{k}="{urllib.parse.quote(v, safe="")}"'
+        for k, v in sorted(oauth_params.items())
+    )
+    return auth_header
+
+
+def x_post_tweet(text):
+    """X API v2 でツイート投稿"""
+    url = "https://api.twitter.com/2/tweets"
+    consumer_key = os.environ.get("X_API_KEY", "")
+    consumer_secret = os.environ.get("X_API_SECRET", "")
+    access_token = os.environ.get("X_ACCESS_TOKEN", "")
+    access_secret = os.environ.get("X_ACCESS_TOKEN_SECRET", "")
+
+    body = json.dumps({"text": text}).encode("utf-8")
+    auth_header = x_create_oauth_header(
+        "POST", url, {}, consumer_key, consumer_secret, access_token, access_secret
+    )
+    req = urllib.request.Request(
+        url, data=body,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": auth_header,
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        result = json.loads(resp.read().decode("utf-8"))
+    return result.get("data", {}).get("id")
+
+
+# =============================================
+# メイン処理
+# =============================================
+def post_one():
+    """キューから1件取り出して投稿"""
+    check_kill_switch()
+
+    queue = load_json("state/post-queue.json")
+    history = load_json("state/post-history.json")
+    status = load_json("state/system-status.json")
+    safety = load_json("config/safety.json")
+
+    # 安全チェック（3段階）
+    if not check_banned_hours(safety):
+        return
+    if not check_posting_interval(history, safety):
+        return
+    if not check_daily_limit(status, safety):
+        return
+
+    # キューから次の投稿を取得
+    pending = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
+    if not pending:
+        log("INFO", "投稿キューが空です")
+        return
+
+    post = pending[0]
+    post["status"] = "posting"
+    save_json("state/post-queue.json", queue)
+
+    update_agent_status("poster", "running")
+    platform = post.get("platform", "threads")
+
+    try:
+        post_id = None
+
+        if platform == "threads":
+            user_id = os.environ.get("THREADS_USER_ID", "")
+            access_token = os.environ.get("THREADS_ACCESS_TOKEN", "")
+            if not user_id or not access_token:
+                raise ValueError("THREADS_USER_ID / THREADS_ACCESS_TOKEN が未設定")
+
+            content = post.get("content", "")
+            hashtag = post.get("hashtag", "")
+            if hashtag:
+                content = f"{content}\n\n{hashtag}"
+
+            post_id = threads_post_text(content, user_id, access_token)
+            log("INFO", f"Threads投稿完了: {post_id}")
+
+            # アフィリエイト投稿の場合、コメントでPRリンク
+            if post.get("is_affiliate") and post.get("affiliate_comment"):
+                time.sleep(5)
+                reply_id = threads_reply(
+                    post["affiliate_comment"], post_id, user_id, access_token
+                )
+                log("INFO", f"PRコメント投稿完了: {reply_id}")
+
+        elif platform == "x":
+            content = post.get("content", "")
+            hashtag = post.get("hashtag", "")
+            if hashtag:
+                content = f"{content}\n\n{hashtag}"
+            # X は140文字制限
+            if len(content) > 280:
+                content = content[:277] + "..."
+            post_id = x_post_tweet(content)
+            log("INFO", f"X投稿完了: {post_id}")
+
+        # 成功 → 履歴に追加
+        post["status"] = "posted"
+        post["posted_at"] = datetime.now(JST).isoformat()
+        post["platform_post_id"] = post_id
+
+        if "posts" not in history:
+            history["posts"] = []
+        history["posts"].append(post)
+        save_json("state/post-history.json", history)
+
+        # キューから削除
+        queue["queue"] = [p for p in queue["queue"] if p.get("id") != post.get("id")]
+        save_json("state/post-queue.json", queue)
+
+        # 日次カウント更新
+        status["daily_post_count"] = status.get("daily_post_count", 0) + 1
+        save_json("state/system-status.json", status)
+
+        update_agent_status("poster", "idle")
+
+    except Exception as e:
+        log("ERROR", f"投稿失敗: {e}")
+        post["status"] = "error"
+        post["error"] = str(e)
+        save_json("state/post-queue.json", queue)
+        update_agent_status("poster", "error")
+
+
+if __name__ == "__main__":
+    import threading
+
+    def watchdog(timeout_sec=90):
+        """グローバルタイムアウト: poster.pyが指定秒数でハングしたら強制終了"""
+        time.sleep(timeout_sec)
+        log("ERROR", f"グローバルタイムアウト({timeout_sec}秒)で強制終了")
+        os._exit(1)
+
+    # ウォッチドッグ起動（デーモンスレッドなので正常終了時は自動消滅）
+    wd = threading.Thread(target=watchdog, args=(90,), daemon=True)
+    wd.start()
+
+    load_env()
+    log("INFO", "ポスターエージェント開始")
+    post_one()
+    log("INFO", "ポスターエージェント完了")
