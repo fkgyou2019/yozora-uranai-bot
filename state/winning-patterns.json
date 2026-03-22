@@ -1,0 +1,55 @@
+{
+  "data_count": 0,
+  "last_analyzed": "2026-03-22T11:22:25.335404+09:00",
+  "confidence": "low",
+  "top_patterns": [
+    {
+      "pattern": "ランキング型",
+      "weight": 40,
+      "reason": "初期値（市場分析から）"
+    },
+    {
+      "pattern": "数字インパクト型",
+      "weight": 25,
+      "reason": "初期値"
+    },
+    {
+      "pattern": "コメント誘導型",
+      "weight": 20,
+      "reason": "初期値"
+    },
+    {
+      "pattern": "星座別アドバイス型",
+      "weight": 15,
+      "reason": "初期値"
+    }
+  ],
+  "top_hook_styles": [
+    {
+      "style": "恐怖×期待型",
+      "example": "○月に人生が変わる星座。",
+      "avg_eng": 0
+    },
+    {
+      "style": "限定型",
+      "example": "12星座中、たった2つだけ。",
+      "avg_eng": 0
+    },
+    {
+      "style": "ランキング見出し型",
+      "example": "【○○な星座TOP3】",
+      "avg_eng": 0
+    }
+  ],
+  "top_cta_styles": [
+    {
+      "style": "絵文字CTA",
+      "example": "「🔮」を置いた方に届きます。",
+      "avg_eng": 0
+    }
+  ],
+  "avoid_patterns": [],
+  "insights": [
+    "データ蓄積中。10件以上でパターン分析が有効になります。"
+  ]
+}
