@@ -1,0 +1,60 @@
+name: Daily Learn (Fetch Metrics & Analyze)
+
+on:
+  schedule:
+    # 毎朝6:03 JST (21:03 UTC前日) に実行
+    - cron: '3 21 * * *'
+  workflow_dispatch:  # 手動実行も可能
+
+permissions:
+  contents: write
+
+jobs:
+  learn:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state files if missing
+        run: |
+          mkdir -p state
+          [ ! -f state/post-history.json ] && echo '{"posts":[]}' > state/post-history.json
+          [ ! -f state/performance-data.json ] && echo '{"posts":[],"last_updated":null}' > state/performance-data.json
+          [ ! -f state/winning-patterns.json ] && echo '{}' > state/winning-patterns.json
+          true
+
+      - name: Create api-keys.env from secrets
+        run: |
+          cat > config/api-keys.env << EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN=${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
+          EOF
+
+      - name: Fetch metrics (24h+ posts)
+        run: python .github/scripts/fetch_metrics.py
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+
+      - name: Analyze winning patterns
+        run: python .github/scripts/analyze_patterns.py
+
+      - name: Commit learning data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/performance-data.json state/winning-patterns.json
+          if git diff --cached --quiet; then
+            echo "No learning data changes"
+          else
+            git commit -m "chore: update learning data [skip ci]"
+            git push
+          fi

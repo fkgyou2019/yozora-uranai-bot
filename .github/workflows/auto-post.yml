@@ -69,6 +69,19 @@ jobs:
           THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
           EOF
 
+      - name: Initialize learning state files
+        run: |
+          [ ! -f state/performance-data.json ] && echo '{"posts":[],"last_updated":null}' > state/performance-data.json
+          [ ! -f state/winning-patterns.json ] && echo '{}' > state/winning-patterns.json
+          true
+
+      - name: Fetch metrics & analyze (learning loop)
+        run: |
+          python .github/scripts/fetch_metrics.py
+          python .github/scripts/analyze_patterns.py
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+
       - name: Generate posts if queue is empty
         run: python .github/scripts/generate_posts.py
         env:
