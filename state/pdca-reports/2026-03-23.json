@@ -1,14 +1,14 @@
 {
   "date": "2026-03-23",
-  "generated_at": "2026-03-23T06:00:51.775438+09:00",
+  "generated_at": "2026-03-23T06:46:39.780310+09:00",
   "summary": {
     "total_posts": 6,
-    "total_views": 1629,
-    "total_likes": 227,
+    "total_views": 1633,
+    "total_likes": 228,
     "total_replies": 33,
-    "avg_eng_rate": 19.0,
+    "avg_eng_rate": 19.01,
     "avg_views": 272.0,
-    "eng_trend": "↓",
+    "eng_trend": "↑",
     "views_trend": "↑"
   },
   "feature_analysis": {
@@ -16,22 +16,22 @@
       "with_count": 3,
       "without_count": 3,
       "avg_eng_with": 22.06,
-      "avg_eng_without": 15.94,
-      "lift": 6.12
+      "avg_eng_without": 15.95,
+      "lift": 6.11
     },
     "has_cta": {
       "with_count": 3,
       "without_count": 3,
-      "avg_eng_with": 25.22,
-      "avg_eng_without": 12.78,
-      "lift": 12.44
+      "avg_eng_with": 25.2,
+      "avg_eng_without": 12.82,
+      "lift": 12.38
     },
     "has_number_hook": {
       "with_count": 2,
       "without_count": 4,
-      "avg_eng_with": 26.35,
-      "avg_eng_without": 15.32,
-      "lift": 11.02
+      "avg_eng_with": 26.31,
+      "avg_eng_without": 15.35,
+      "lift": 10.96
     }
   },
   "best_post": {
@@ -46,8 +46,8 @@
   },
   "hourly_data": {
     "10": {
-      "avg_eng": 13.95,
-      "avg_views": 324.0,
+      "avg_eng": 14.0,
+      "avg_views": 326.0,
       "count": 2
     },
     "18": {
@@ -56,8 +56,8 @@
       "count": 1
     },
     "20": {
-      "avg_eng": 19.92,
-      "avg_views": 261.0,
+      "avg_eng": 19.85,
+      "avg_views": 262.0,
       "count": 1
     },
     "22": {
