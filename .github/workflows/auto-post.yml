@@ -1,0 +1,89 @@
+name: Auto Post to Threads
+
+on:
+  schedule:
+    # JST 08:07, 10:07, 12:07, 14:07, 16:07, 18:07, 20:07, 22:07
+    # UTC = JST - 9h
+    - cron: '7 23 * * *'   # JST 08:07
+    - cron: '7 1 * * *'    # JST 10:07
+    - cron: '7 3 * * *'    # JST 12:07
+    - cron: '7 5 * * *'    # JST 14:07
+    - cron: '7 7 * * *'    # JST 16:07
+    - cron: '7 9 * * *'    # JST 18:07
+    - cron: '7 11 * * *'   # JST 20:07
+    - cron: '7 13 * * *'   # JST 22:07
+  workflow_dispatch:  # 手動実行も可能
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state files if missing
+        run: |
+          mkdir -p state
+          if [ ! -f state/post-queue.json ]; then
+            echo '{"queue":[]}' > state/post-queue.json
+          fi
+          if [ ! -f state/post-history.json ]; then
+            echo '{"posts":[]}' > state/post-history.json
+          fi
+          if [ ! -f state/system-status.json ]; then
+            cat > state/system-status.json << 'EOJSON'
+          {
+            "kill_switch": false,
+            "consecutive_errors": 0,
+            "daily_post_count": 0,
+            "daily_post_date": "",
+            "agents": {
+              "researcher": {"status": "idle", "last_run": null, "error_count": 0},
+              "analyst": {"status": "idle", "last_run": null, "error_count": 0},
+              "writer": {"status": "idle", "last_run": null, "error_count": 0},
+              "poster": {"status": "idle", "last_run": null, "error_count": 0},
+              "fetcher": {"status": "idle", "last_run": null, "error_count": 0},
+              "supervisor": {"status": "idle", "last_run": null, "error_count": 0}
+            }
+          }
+          EOJSON
+          fi
+
+      - name: Create api-keys.env from secrets
+        run: |
+          cat > config/api-keys.env << EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN=${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
+          EOF
+
+      - name: Generate posts if queue is empty
+        run: python .github/scripts/generate_posts.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Post one from queue
+        run: python agents/poster.py
+        env:
+          PYTHONIOENCODING: utf-8
+
+      - name: Commit state changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/
+          if git diff --cached --quiet; then
+            echo "No state changes to commit"
+          else
+            git commit -m "chore: update post state [skip ci]"
+            git push
+          fi
