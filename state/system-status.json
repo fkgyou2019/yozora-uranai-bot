@@ -1,0 +1,40 @@
+{
+  "kill_switch": false,
+  "last_run": null,
+  "agents": {
+    "researcher": {
+      "status": "idle",
+      "last_run": "2026-03-21T11:16:52.767770",
+      "error_count": 0
+    },
+    "analyst": {
+      "status": "idle",
+      "last_run": "2026-03-21T11:16:31.247134",
+      "error_count": 0
+    },
+    "writer": {
+      "status": "idle",
+      "last_run": "2026-03-21T11:17:25.470299",
+      "error_count": 0
+    },
+    "poster": {
+      "status": "idle",
+      "last_run": "2026-03-21T22:21:30.972220+09:00",
+      "error_count": 0
+    },
+    "fetcher": {
+      "status": "idle",
+      "last_run": "2026-03-21T11:16:29.358815+09:00",
+      "error_count": 0
+    },
+    "supervisor": {
+      "status": "idle",
+      "last_run": "2026-03-21T11:17:26.663556",
+      "error_count": 0
+    }
+  },
+  "daily_post_count": 2,
+  "daily_post_date": "2026-03-21",
+  "consecutive_errors": 0,
+  "max_consecutive_errors": 3
+}
