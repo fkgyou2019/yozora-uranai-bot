@@ -89,6 +89,18 @@ jobs:
 
       - name: Quality check (rule-based, not AI self-score)
         run: python .github/scripts/quality_check.py
+        continue-on-error: true
+
+      - name: Regenerate if queue empty after quality check
+        run: |
+          REMAINING=$(python -c "import json; q=json.load(open('state/post-queue.json')); print(len([p for p in q.get('queue',[]) if p.get('status')=='queued']))")
+          if [ "$REMAINING" = "0" ]; then
+            echo "品質チェック後にキューが空。再生成します..."
+            python .github/scripts/generate_posts.py
+            python .github/scripts/quality_check.py || true
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Post one from queue
         run: python agents/poster.py
