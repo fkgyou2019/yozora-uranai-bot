@@ -14,6 +14,9 @@ on:
     - cron: '7 13 * * *'   # JST 22:07
   workflow_dispatch:  # 手動実行も可能
 
+permissions:
+  contents: write
+
 jobs:
   post:
     runs-on: ubuntu-latest
