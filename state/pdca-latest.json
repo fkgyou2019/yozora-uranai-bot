@@ -1,74 +1,74 @@
 {
   "date": "2026-03-23",
-  "generated_at": "2026-03-23T01:00:53.795229+09:00",
+  "generated_at": "2026-03-23T06:00:51.775438+09:00",
   "summary": {
     "total_posts": 6,
-    "total_views": 1574,
-    "total_likes": 221,
-    "total_replies": 23,
-    "avg_eng_rate": 19.38,
-    "avg_views": 262.0,
-    "eng_trend": "↑",
+    "total_views": 1629,
+    "total_likes": 227,
+    "total_replies": 33,
+    "avg_eng_rate": 19.0,
+    "avg_views": 272.0,
+    "eng_trend": "↓",
     "views_trend": "↑"
   },
   "feature_analysis": {
     "has_ranking": {
       "with_count": 3,
       "without_count": 3,
-      "avg_eng_with": 23.49,
-      "avg_eng_without": 15.26,
-      "lift": 8.23
+      "avg_eng_with": 22.06,
+      "avg_eng_without": 15.94,
+      "lift": 6.12
     },
     "has_cta": {
       "with_count": 3,
       "without_count": 3,
-      "avg_eng_with": 26.17,
-      "avg_eng_without": 12.58,
-      "lift": 13.59
+      "avg_eng_with": 25.22,
+      "avg_eng_without": 12.78,
+      "lift": 12.44
     },
     "has_number_hook": {
       "with_count": 2,
       "without_count": 4,
-      "avg_eng_with": 24.98,
-      "avg_eng_without": 16.58,
-      "lift": 8.4
+      "avg_eng_with": 26.35,
+      "avg_eng_without": 15.32,
+      "lift": 11.02
     }
   },
   "best_post": {
     "first_line": "【3月下旬、金運が",
-    "eng_rate": 31.62,
-    "views": 117
+    "eng_rate": 32.77,
+    "views": 119
   },
   "worst_post": {
-    "first_line": "【春分直後の新生活準備運ランキングTOP3】",
-    "eng_rate": 10.29,
-    "views": 525
+    "first_line": "獅子座さんへ。",
+    "eng_rate": 10.43,
+    "views": 230
   },
   "hourly_data": {
     "10": {
-      "avg_eng": 13.72,
-      "avg_views": 318.0,
+      "avg_eng": 13.95,
+      "avg_views": 324.0,
       "count": 2
     },
     "18": {
-      "avg_eng": 31.62,
-      "avg_views": 117.0,
+      "avg_eng": 32.77,
+      "avg_views": 119.0,
       "count": 1
     },
     "20": {
-      "avg_eng": 18.33,
-      "avg_views": 240.0,
+      "avg_eng": 19.92,
+      "avg_views": 261.0,
       "count": 1
     },
     "22": {
-      "avg_eng": 19.43,
-      "avg_views": 290.0,
+      "avg_eng": 16.7,
+      "avg_views": 300.0,
       "count": 2
     }
   },
   "improvements": [
-    "CTAあり投稿のeng率が13.6%高い。全投稿にCTAを入れる方針を継続。",
-    "ランキング型のeng率が8.2%高い。配分を増やすべき。",
+    "CTAあり投稿のeng率が12.4%高い。全投稿にCTAを入れる方針を継続。",
+    "ランキング型のeng率が6.1%高い。配分を増やすべき。",
     "平均行長10文字。短すぎ。15-20文字を目指すべき。",
     "投稿数6件。1日8件を目標に。"
   ],
