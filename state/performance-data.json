@@ -1,4 +1,31 @@
 {
-  "posts": [],
-  "last_updated": "2026-03-22T20:57:50.211937+09:00"
+  "posts": [
+    {
+      "id": "post_20260321_004",
+      "platform_post_id": "18079309787099958",
+      "posted_at": "2026-03-21T22:21:57.964994+09:00",
+      "pattern_name": "ランキング型",
+      "category": "星座運勢",
+      "content_preview": "【春分直後の新生活準備運ランキングTOP3】\n\n🥉3位：獅子座\n→ 環境整備がスムーズ。新しい場所に",
+      "first_line": "【春分直後の新生活準備運ランキングTOP3】",
+      "char_count": 127,
+      "metrics": {
+        "views": 524,
+        "likes": 53,
+        "replies": 1,
+        "reposts": 0,
+        "engagement_rate": 10.31
+      },
+      "features": {
+        "has_ranking": true,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 22
+      },
+      "collected_at": "2026-03-22T22:59:15.630299+09:00"
+    }
+  ],
+  "last_updated": "2026-03-22T22:59:15.630299+09:00"
 }
