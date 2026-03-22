@@ -1,14 +1,14 @@
 {
   "date": "2026-03-23",
-  "generated_at": "2026-03-23T06:46:39.780310+09:00",
+  "generated_at": "2026-03-23T06:57:38.208168+09:00",
   "summary": {
     "total_posts": 6,
-    "total_views": 1633,
+    "total_views": 1638,
     "total_likes": 228,
     "total_replies": 33,
-    "avg_eng_rate": 19.01,
-    "avg_views": 272.0,
-    "eng_trend": "↑",
+    "avg_eng_rate": 18.95,
+    "avg_views": 273.0,
+    "eng_trend": "↓",
     "views_trend": "↑"
   },
   "feature_analysis": {
@@ -16,22 +16,22 @@
       "with_count": 3,
       "without_count": 3,
       "avg_eng_with": 22.06,
-      "avg_eng_without": 15.95,
-      "lift": 6.11
+      "avg_eng_without": 15.84,
+      "lift": 6.22
     },
     "has_cta": {
       "with_count": 3,
       "without_count": 3,
-      "avg_eng_with": 25.2,
-      "avg_eng_without": 12.82,
-      "lift": 12.38
+      "avg_eng_with": 25.1,
+      "avg_eng_without": 12.8,
+      "lift": 12.29
     },
     "has_number_hook": {
       "with_count": 2,
       "without_count": 4,
-      "avg_eng_with": 26.31,
-      "avg_eng_without": 15.35,
-      "lift": 10.96
+      "avg_eng_with": 26.16,
+      "avg_eng_without": 15.34,
+      "lift": 10.82
     }
   },
   "best_post": {
@@ -46,7 +46,7 @@
   },
   "hourly_data": {
     "10": {
-      "avg_eng": 14.0,
+      "avg_eng": 13.98,
       "avg_views": 326.0,
       "count": 2
     },
@@ -56,8 +56,8 @@
       "count": 1
     },
     "20": {
-      "avg_eng": 19.85,
-      "avg_views": 262.0,
+      "avg_eng": 19.55,
+      "avg_views": 266.0,
       "count": 1
     },
     "22": {
@@ -67,8 +67,8 @@
     }
   },
   "improvements": [
-    "CTAあり投稿のeng率が12.4%高い。全投稿にCTAを入れる方針を継続。",
-    "ランキング型のeng率が6.1%高い。配分を増やすべき。",
+    "CTAあり投稿のeng率が12.3%高い。全投稿にCTAを入れる方針を継続。",
+    "ランキング型のeng率が6.2%高い。配分を増やすべき。",
     "平均行長10文字。短すぎ。15-20文字を目指すべき。",
     "投稿数6件。1日8件を目標に。"
   ],
