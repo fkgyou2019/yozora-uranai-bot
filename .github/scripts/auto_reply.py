@@ -7,6 +7,7 @@
 
 import json
 import os
+import random
 import re
 import sys
 import urllib.request
@@ -55,29 +56,75 @@ def threads_reply(text, reply_to_id, user_id, access_token):
     return result.get("id")
 
 
-def generate_reply(comment_text, original_post_text, api_key):
-    prompt = f"""あなたは占いSNSアカウント「よぞら.」の運営者です。
-ペルソナ: 月詠（つくよみ）。穏やかで温かい、でも神秘的。
+def generate_reply(comment_text, original_post_text, commenter_name, recent_replies, api_key):
+    now = datetime.now(JST)
+    hour = now.hour
+    if 5 <= hour < 11:
+        time_context = "現在は朝です。朝らしい爽やかな挨拶を入れてもOK（「おはようございます」等）"
+    elif 11 <= hour < 17:
+        time_context = "現在は昼です。"
+    elif 17 <= hour < 22:
+        time_context = "現在は夜です。夜らしい挨拶を入れてもOK（「こんばんは」「夜分に」等）"
+    else:
+        time_context = "現在は深夜です。「遅い時間にありがとうございます」等の気遣いを入れてもOK"
 
-以下のコメントに返信してください。
+    # 直近の返信を渡して重複を防ぐ
+    recent_block = ""
+    if recent_replies:
+        recent_block = "【直近の返信（これと同じ言い回しは絶対に使うな）】\n"
+        for r in recent_replies[-5:]:
+            recent_block += f"・{r[:40]}\n"
+
+    # 絵文字コメントの種類別ヒント
+    emoji_hint = ""
+    stripped = comment_text.strip()
+    if len(stripped) <= 3 and not any(c.isalpha() or c in 'ぁ-んァ-ヶ亜-熙' for c in stripped):
+        emoji_map = {
+            "🔮": "水晶玉→占いへの関心。「見えてきましたよ」「導きが届きます」系",
+            "✨": "キラキラ→ポジティブ。「輝きが増しますね」「その光が広がります」系",
+            "🌙": "月→夜空・神秘。「月の力が味方してます」「静かな流れが来ます」系",
+            "🌸": "桜→春・恋愛。「春の風が吹いてきましたね」系",
+            "🍀": "四葉→幸運。「ご縁が近づいてますよ」系",
+            "⭐": "星→希望。「星の導きがありますよ」系",
+        }
+        for emoji, hint in emoji_map.items():
+            if emoji in stripped:
+                emoji_hint = f"\n※ この絵文字の解釈ヒント: {hint}"
+                break
+
+    prompt = f"""あなたは占いSNSアカウント「よぞら.」の運営者・月詠（つくよみ）です。
+穏やかで温かい人柄。フレンドリーだが、ほんの少し神秘的。
+
+【コメントしてくれた人】@{commenter_name} さん
 
 【元の投稿（あなたが書いたもの）】
 {original_post_text[:200]}
 
 【届いたコメント】
-{comment_text}
+{comment_text}{emoji_hint}
 
+【{time_context}】
+
+{recent_block}
 【返信ルール】
-1. 1-3行の短い返信（50文字以内が理想）
-2. 温かく、感謝を込めて
-3. 相手の星座が分かれば星座に触れる
-4. 絵文字は1個まで
-5. 「ありがとうございます」のバリエーションを毎回変える
-6. 占い師っぽい言い回しを少し入れる（「素敵な流れですね」「星が味方してますよ」等）
-7. 定型文っぽくならないこと
-8. コメントが絵文字だけ（🔮、✨等）の場合は「受け取ってくださりありがとうございます🌙 良い流れが届きますように」のような短い返信
+1. 冒頭に「@{commenter_name} さん」から始めること（必須）
+2. 1-2行の短い返信（40-60文字が理想）
+3. 温かく、でも毎回違う表現で
+4. 絵文字は1個まで（🌙✨🔮⭐のいずれか）
+5. 以下の表現は禁止（Bot臭くなるため）:
+   - 「受け取ってくださり」（多用されすぎ）
+   - 「ありがとうございます」で始める（毎回同じに見える）
+   - 「良い流れが届きますように」（定型文）
+6. 代わりに使える表現例:
+   - 「嬉しいです」「感謝です」「心強いです」
+   - 「○○さんの直感、冴えてますね」
+   - 「星が微笑んでますよ」「素敵なタイミングですね」
+   - 「その想い、きっと届きますよ」
+7. 相手のコメントに文章がある場合は、その内容に具体的に触れる
+8. 相手の星座が分かれば星座に触れる
+9. 直近の返信と絶対に同じ言い回しを使わない
 
-返信文のみを出力。余計な説明不要。"""
+返信文のみを出力。「@{commenter_name} さん」から始めること。余計な説明不要。"""
 
     body = json.dumps({
         "model": "claude-haiku-4-5-20251001",
@@ -149,7 +196,9 @@ def main():
 
     posts = posts_data.get("data", [])
     total_replied = 0
+    total_skipped = 0
     max_replies_per_run = 5  # 1回の実行で最大5件返信（スパム防止）
+    recent_replies = replied.get("recent_reply_texts", [])  # 直近の返信文を保持
 
     for post in posts:
         if total_replied >= max_replies_per_run:
@@ -193,9 +242,23 @@ def main():
             if not comment_text.strip():
                 continue
 
-            # Claude APIで返信生成
+            # 70%の確率で返信（人間は全レスしない）
+            # ただし、文章コメント（絵文字以外）には必ず返信
+            is_text_comment = any(
+                c.isalpha() or '\u3040' <= c <= '\u9fff' for c in comment_text
+            )
+            if not is_text_comment and random.random() > 0.7:
+                replied_ids.add(comment_id)  # スキップしたことは記録
+                total_skipped += 1
+                print(f"  ⏭ @{comment_user}: 「{comment_text[:10]}」（スキップ）")
+                continue
+
+            # Claude APIで返信生成（名前・履歴・時間帯を渡す）
             try:
-                reply_text = generate_reply(comment_text, post_text, api_key)
+                reply_text = generate_reply(
+                    comment_text, post_text,
+                    comment_user, recent_replies, api_key
+                )
             except Exception as e:
                 print(f"  [WARN] 返信生成エラー: {e}")
                 continue
@@ -204,18 +267,20 @@ def main():
             try:
                 reply_id = threads_reply(reply_text, comment_id, user_id, access_token)
                 replied_ids.add(comment_id)
+                recent_replies.append(reply_text)
                 total_replied += 1
-                print(f"  ✅ @{comment_user}: 「{comment_text[:20]}」→ 「{reply_text[:30]}」")
+                print(f"  ✅ @{comment_user}: 「{comment_text[:20]}」→ 「{reply_text[:40]}」")
             except Exception as e:
                 print(f"  [WARN] 返信投稿エラー: {e}")
                 continue
 
-    # 返信済みIDを保存（直近500件まで保持）
+    # 返信済みIDと直近返信テキストを保存
     replied["replied_ids"] = list(replied_ids)[-500:]
+    replied["recent_reply_texts"] = recent_replies[-20:]  # 直近20件の返信文を保持
     replied["last_checked"] = datetime.now(JST).isoformat()
     save_json("state/replied-comments.json", replied)
 
-    print(f"\n返信完了: {total_replied}件（累計{len(replied['replied_ids'])}件）")
+    print(f"\n返信完了: {total_replied}件 / スキップ{total_skipped}件（累計{len(replied['replied_ids'])}件）")
 
 
 if __name__ == "__main__":
