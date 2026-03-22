@@ -1,0 +1,50 @@
+name: Auto Reply to Comments
+
+on:
+  schedule:
+    # 30分おきに実行（GitHub Actions遅延考慮で25分間隔に設定）
+    - cron: '5 * * * *'    # 毎時05分
+    - cron: '35 * * * *'   # 毎時35分
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state
+        run: |
+          mkdir -p state
+          [ ! -f state/replied-comments.json ] && echo '{"replied_ids":[],"last_checked":null}' > state/replied-comments.json
+          true
+
+      - name: Auto reply to comments
+        run: python .github/scripts/auto_reply.py
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/replied-comments.json
+          if git diff --cached --quiet; then
+            echo "No new replies"
+          else
+            git commit -m "chore: update replied comments [skip ci]"
+            git push
+          fi
