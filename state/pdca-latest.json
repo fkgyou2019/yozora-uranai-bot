@@ -1,0 +1,76 @@
+{
+  "date": "2026-03-23",
+  "generated_at": "2026-03-23T01:00:53.795229+09:00",
+  "summary": {
+    "total_posts": 6,
+    "total_views": 1574,
+    "total_likes": 221,
+    "total_replies": 23,
+    "avg_eng_rate": 19.38,
+    "avg_views": 262.0,
+    "eng_trend": "↑",
+    "views_trend": "↑"
+  },
+  "feature_analysis": {
+    "has_ranking": {
+      "with_count": 3,
+      "without_count": 3,
+      "avg_eng_with": 23.49,
+      "avg_eng_without": 15.26,
+      "lift": 8.23
+    },
+    "has_cta": {
+      "with_count": 3,
+      "without_count": 3,
+      "avg_eng_with": 26.17,
+      "avg_eng_without": 12.58,
+      "lift": 13.59
+    },
+    "has_number_hook": {
+      "with_count": 2,
+      "without_count": 4,
+      "avg_eng_with": 24.98,
+      "avg_eng_without": 16.58,
+      "lift": 8.4
+    }
+  },
+  "best_post": {
+    "first_line": "【3月下旬、金運が",
+    "eng_rate": 31.62,
+    "views": 117
+  },
+  "worst_post": {
+    "first_line": "【春分直後の新生活準備運ランキングTOP3】",
+    "eng_rate": 10.29,
+    "views": 525
+  },
+  "hourly_data": {
+    "10": {
+      "avg_eng": 13.72,
+      "avg_views": 318.0,
+      "count": 2
+    },
+    "18": {
+      "avg_eng": 31.62,
+      "avg_views": 117.0,
+      "count": 1
+    },
+    "20": {
+      "avg_eng": 18.33,
+      "avg_views": 240.0,
+      "count": 1
+    },
+    "22": {
+      "avg_eng": 19.43,
+      "avg_views": 290.0,
+      "count": 2
+    }
+  },
+  "improvements": [
+    "CTAあり投稿のeng率が13.6%高い。全投稿にCTAを入れる方針を継続。",
+    "ランキング型のeng率が8.2%高い。配分を増やすべき。",
+    "平均行長10文字。短すぎ。15-20文字を目指すべき。",
+    "投稿数6件。1日8件を目標に。"
+  ],
+  "post_count": 6
+}
