@@ -1,0 +1,118 @@
+name: PDCA Monitor & Report
+
+on:
+  schedule:
+    # 毎朝5:50 JST（20:50 UTC前日）に日次レポート生成
+    - cron: '50 20 * * *'
+    # 毎時23分にシステム監視（投稿・返信の実行状況チェック）
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state
+        run: |
+          mkdir -p state/pdca-reports
+          [ ! -f state/pdca-latest.json ] && echo '{}' > state/pdca-latest.json
+          true
+
+      - name: Determine run type
+        id: runtype
+        run: |
+          HOUR=$(TZ=Asia/Tokyo date +%H)
+          if [ "$HOUR" = "05" ] || [ "$HOUR" = "06" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "type=full_report" >> $GITHUB_OUTPUT
+          else
+            echo "type=health_check" >> $GITHUB_OUTPUT
+          fi
+
+      # --- 毎時: ヘルスチェック ---
+      - name: Health check (hourly)
+        if: steps.runtype.outputs.type == 'health_check'
+        run: |
+          echo "=== システムヘルスチェック $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST') ==="
+
+          # 最新のauto-post実行を確認
+          LATEST_POST=$(cat state/post-history.json 2>/dev/null | python3 -c "
+          import json, sys
+          try:
+              h = json.load(sys.stdin)
+              posts = h.get('posts', [])
+              if posts:
+                  last = posts[-1]
+                  print(f\"最新投稿: {last.get('posted_at', 'N/A')[:19]} | {last.get('pattern_name', 'N/A')}\")
+              else:
+                  print('投稿履歴なし')
+          except:
+              print('post-history.json 読み取りエラー')
+          ")
+          echo "$LATEST_POST"
+
+          # キュー残数
+          QUEUE=$(python3 -c "
+          import json
+          try:
+              q = json.load(open('state/post-queue.json'))
+              pending = [p for p in q.get('queue', []) if p.get('status') == 'queued']
+              print(f'キュー残: {len(pending)}件')
+          except:
+              print('キュー確認エラー')
+          ")
+          echo "$QUEUE"
+
+          # system-status確認
+          python3 -c "
+          import json
+          try:
+              s = json.load(open('state/system-status.json'))
+              ks = s.get('kill_switch', False)
+              errs = s.get('consecutive_errors', 0)
+              daily = s.get('daily_post_count', 0)
+              print(f'KILL_SWITCH: {ks} | エラー連続: {errs} | 本日投稿: {daily}件')
+              if ks:
+                  print('⚠️ KILL_SWITCH が ON です！')
+              if errs >= 3:
+                  print('⚠️ エラーが3回連続しています！')
+          except:
+              print('system-status.json 読み取りエラー')
+          "
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+
+      # --- 朝: フルレポート ---
+      - name: Fetch metrics & generate PDCA report
+        if: steps.runtype.outputs.type == 'full_report'
+        run: |
+          python .github/scripts/fetch_metrics.py
+          python .github/scripts/analyze_patterns.py
+          python .github/scripts/pdca_report.py
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+
+      - name: Commit reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: update PDCA report & metrics [skip ci]"
+            git push
+          fi
