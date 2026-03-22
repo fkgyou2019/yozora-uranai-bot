@@ -44,11 +44,11 @@ def check_post(post):
     lines = content.split("\n")
     non_empty_lines = [l for l in lines if l.strip()]
 
-    # 30文字以上の改行なしベタ打ち
+    # 25文字以上の行（スマホで自動折り返しが入る）
     for i, line in enumerate(non_empty_lines):
-        if len(line) > 35:
-            issues.append(f"行{i+1}が長すぎ: {len(line)}文字「{line[:20]}...」（最大35文字）")
-            break  # 1つ見つけたら十分
+        if len(line) > 25:
+            issues.append(f"行{i+1}が長すぎ: {len(line)}文字「{line[:20]}...」（最大25文字）")
+            break
 
     # 空行による分割チェック
     blocks = [b.strip() for b in content.split("\n\n") if b.strip()]
@@ -58,13 +58,18 @@ def check_post(post):
     # 最長ブロック
     if blocks:
         longest_block = max(len(b) for b in blocks)
-        if longest_block > 60:
-            issues.append(f"ブロックが長すぎ: {longest_block}文字（最大60文字）")
+        if longest_block > 80:
+            issues.append(f"ブロックが長すぎ: {longest_block}文字（最大80文字）")
+
+    # 全体行数チェック（空行含む）
+    total_lines = len(lines)
+    if total_lines > 16:
+        issues.append(f"縦長すぎ: {total_lines}行（最大16行）")
 
     # --- 3. フック（1行目）チェック ---
     first_line = non_empty_lines[0] if non_empty_lines else ""
-    if len(first_line) > 25:
-        issues.append(f"フックが長すぎ: {len(first_line)}文字「{first_line[:15]}...」（最大25文字）")
+    if len(first_line) > 22:
+        issues.append(f"フックが長すぎ: {len(first_line)}文字「{first_line[:15]}...」（最大22文字）")
 
     # --- 4. Bot臭さチェック ---
     bot_phrases = [
