@@ -1,0 +1,48 @@
+name: Refresh Threads Token
+
+on:
+  schedule:
+    # 毎週月曜 3:17 JST (日曜 18:17 UTC)
+    - cron: '17 18 * * 0'
+  workflow_dispatch:  # 手動実行も可能
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize token state
+        run: |
+          mkdir -p state
+          [ ! -f state/token-state.json ] && echo '{}' > state/token-state.json
+          true
+
+      - name: Refresh token
+        run: python .github/scripts/refresh_token.py
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit token state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/token-state.json
+          if git diff --cached --quiet; then
+            echo "No token state changes"
+          else
+            git commit -m "chore: update token state [skip ci]"
+            git push
+          fi
