@@ -1,10 +1,12 @@
 # API Keys (絶対にコミットしない)
 config/api-keys.env
 
-# State files (実行時に生成される)
-state/*.json
-state/*.log
+# State temp files
 state/_tmp_*
+state/*.log
+
+# API Keys (絶対にコミットしない)
+# (api-keys.envは上で既に指定)
 
 # Python
 __pycache__/
