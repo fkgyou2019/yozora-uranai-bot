@@ -1,0 +1,33 @@
+{
+  "description": "投稿スケジュール設定",
+  "timezone": "Asia/Tokyo",
+  "posting_schedule": {
+    "slots": [
+      {"time": "08:00", "priority": "high", "note": "朝の通勤時間帯"},
+      {"time": "10:00", "priority": "medium", "note": "午前中"},
+      {"time": "12:00", "priority": "high", "note": "昼休み"},
+      {"time": "14:00", "priority": "medium", "note": "午後"},
+      {"time": "16:00", "priority": "medium", "note": "夕方前"},
+      {"time": "18:00", "priority": "high", "note": "帰宅時間帯"},
+      {"time": "20:00", "priority": "high", "note": "ゴールデンタイム"},
+      {"time": "21:30", "priority": "high", "note": "就寝前"},
+      {"time": "23:00", "priority": "medium", "note": "深夜帯"},
+      {"time": "01:00", "priority": "low", "note": "夜更かし層"}
+    ],
+    "max_posts_per_day": 10,
+    "min_interval_minutes": 60
+  },
+  "daily_workflow": {
+    "06:00": "fetcher - 昨日の投稿メトリクス回収",
+    "06:30": "analyst - メトリクス分析・フィードバック生成",
+    "07:00": "researcher - ネタ収集",
+    "07:30": "writer - 投稿バッチ生成（10本）",
+    "08:00-01:00": "poster - スケジュールに従い分散投稿",
+    "常時": "supervisor - 全体監視"
+  },
+  "affiliate_posting": {
+    "max_per_day": 1,
+    "preferred_time": "21:30",
+    "min_interval_days_same_campaign": 3
+  }
+}
