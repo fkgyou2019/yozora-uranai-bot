@@ -107,8 +107,8 @@ def generate_reply(comment_text, original_post_text, commenter_name, recent_repl
 
 {recent_block}
 【返信ルール】
-1. 冒頭に「@{commenter_name} さん」から始めること（必須）
-2. 1-2行の短い返信（40-60文字が理想）
+1. 冒頭に「@{commenter_name} さん\\n」から始めること（必須。さんの後に必ず改行\\n）
+2. 1-2行の短い返信（40-60文字が理想。名前行は文字数に含めない）
 3. 温かく、でも毎回違う表現で
 4. 絵文字は1個まで（🌙✨🔮⭐のいずれか）
 5. 以下の表現は禁止（Bot臭くなるため）:
@@ -124,7 +124,7 @@ def generate_reply(comment_text, original_post_text, commenter_name, recent_repl
 8. 相手の星座が分かれば星座に触れる
 9. 直近の返信と絶対に同じ言い回しを使わない
 
-返信文のみを出力。「@{commenter_name} さん」から始めること。余計な説明不要。"""
+返信文のみを出力。「@{commenter_name} さん\\n本文」の形式で。余計な説明不要。"""
 
     body = json.dumps({
         "model": "claude-haiku-4-5-20251001",
