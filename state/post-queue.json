@@ -1,24 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "注意喚起型・仕事運",
-      "category": "警告型",
-      "content": "来週、仕事で大きな話が\n来やすい星座。\n\n獅子座と天秤座。\n\n獅子座は、昇進や抜擢の可能性。\n天秤座は、予想外の転機です。\n\nここは自分を信じる時。\n迷わず進んでください。\n\n「🍀」を置いた方に、\n今週中に嬉しい連絡が届きます。\n\n#仕事運 #今日の運勢",
-      "hashtag": "",
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 8,
-        "persona_match": 8,
-        "mobile_readability": 9,
-        "average": 8.3
-      },
-      "id": "post_20260324_011",
-      "platform": "threads",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "status": "queued"
-    }
-  ]
+  "queue": []
 }
