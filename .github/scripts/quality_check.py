@@ -137,6 +137,30 @@ def main():
         return
 
     print(f"品質チェック開始: {len(pending)}件")
+
+    # --- バッチ全体のCTA多様性チェック ---
+    cta_emojis = []
+    for post in pending:
+        content = post.get("content", "")
+        emoji_cta = re.search(r"「(.)」を置", content)
+        if emoji_cta:
+            cta_emojis.append(emoji_cta.group(1))
+    if len(cta_emojis) > 0:
+        from collections import Counter
+        cta_counts = Counter(cta_emojis)
+        for emoji, count in cta_counts.items():
+            if count > 1:
+                print(f"  ⚠ CTA絵文字「{emoji}」が{count}件で重複（多様性不足）")
+
+    # --- パターン多様性チェック ---
+    pattern_counts = {}
+    for post in pending:
+        pname = post.get("pattern_name", "不明")
+        pattern_counts[pname] = pattern_counts.get(pname, 0) + 1
+    for pname, count in pattern_counts.items():
+        if count > 3:
+            print(f"  ⚠ パターン「{pname}」が{count}件（偏り注意）")
+
     passed = 0
     failed = 0
 

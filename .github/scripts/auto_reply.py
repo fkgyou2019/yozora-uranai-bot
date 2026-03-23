@@ -75,6 +75,20 @@ def generate_reply(comment_text, original_post_text, commenter_name, recent_repl
         for r in recent_replies[-5:]:
             recent_block += f"・{r[:40]}\n"
 
+    # 星座名コメントの検出（コメント誘導型の投稿への返信）
+    zodiac_hint = ""
+    zodiac_names = ["牡羊座", "おひつじ座", "牡牛座", "おうし座", "双子座", "ふたご座",
+                    "蟹座", "かに座", "獅子座", "しし座", "乙女座", "おとめ座",
+                    "天秤座", "てんびん座", "蠍座", "さそり座", "射手座", "いて座",
+                    "山羊座", "やぎ座", "水瓶座", "みずがめ座", "魚座", "うお座"]
+    found_zodiac = None
+    for z in zodiac_names:
+        if z in comment_text:
+            found_zodiac = z
+            break
+    if found_zodiac:
+        zodiac_hint = f"\n※ この方は「{found_zodiac}」と星座を教えてくれました。元の投稿で約束した通り、この星座に個別のアドバイスを3行程度で具体的に伝えてください。スピリチュアルな表現を入れつつも、実際に行動できる具体的なアドバイスを含めること。これは返信の中で最も重要な要素です。"
+
     # 絵文字コメントの種類別ヒント
     emoji_hint = ""
     stripped = comment_text.strip()
@@ -101,14 +115,14 @@ def generate_reply(comment_text, original_post_text, commenter_name, recent_repl
 {original_post_text[:200]}
 
 【届いたコメント】
-{comment_text}{emoji_hint}
+{comment_text}{zodiac_hint}{emoji_hint}
 
 【{time_context}】
 
 {recent_block}
 【返信ルール】
 1. 冒頭に「@{commenter_name} さん\\n」から始めること（必須。さんの後に必ず改行\\n）
-2. 1-2行の短い返信（40-60文字が理想。名前行は文字数に含めない）
+2. {'星座コメントの場合は3-4行（80-120文字）で個別アドバイスを含める' if found_zodiac else '1-2行の短い返信（40-60文字が理想）'}。名前行は文字数に含めない
 3. 温かく、でも毎回違う表現で
 4. 絵文字は1個まで（🌙✨🔮⭐のいずれか）
 5. 以下の表現は禁止（Bot臭くなるため）:
@@ -242,12 +256,15 @@ def main():
             if not comment_text.strip():
                 continue
 
-            # 70%の確率で返信（人間は全レスしない）
-            # ただし、文章コメント（絵文字以外）には必ず返信
+            # 返信判定:
+            # - 星座名を含むコメント → 必ず返信（コメント誘導型の約束）
+            # - 文章コメント → 必ず返信
+            # - 絵文字のみ → 70%の確率（人間は全レスしない）
             is_text_comment = any(
                 c.isalpha() or ('\u3040' <= c <= '\u309f') or ('\u30a0' <= c <= '\u30ff') or ('\u4e00' <= c <= '\u9fff') for c in comment_text
             )
-            if not is_text_comment and random.random() > 0.7:
+            has_zodiac = any(z in comment_text for z in ["牡羊座", "おひつじ", "牡牛座", "おうし", "双子座", "ふたご", "蟹座", "かに", "獅子座", "しし", "乙女座", "おとめ", "天秤座", "てんびん", "蠍座", "さそり", "射手座", "いて", "山羊座", "やぎ", "水瓶座", "みずがめ", "魚座", "うお"])
+            if not is_text_comment and not has_zodiac and random.random() > 0.7:
                 replied_ids.add(comment_id)  # スキップしたことは記録
                 total_skipped += 1
                 print(f"  ⏭ @{comment_user}: 「{comment_text[:10]}」（スキップ）")
