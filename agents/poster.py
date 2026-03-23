@@ -293,22 +293,24 @@ def post_one():
             post_id = x_post_tweet(content)
             log("INFO", f"X投稿完了: {post_id}")
 
-            # 自動リポスト連携
+            # リポスト待ちキューに追加（別ワークフローが処理）
             if post_id:
                 try:
-                    import subprocess
                     repost_config = load_json("config/repost.json")
                     if repost_config.get("enabled", False):
                         source_account = post.get("repost_source_account", "account_1")
-                        repost_script = os.path.join(PROJECT_DIR, "agents", "repost.py")
-                        subprocess.Popen([
-                            sys.executable, repost_script,
-                            "--tweet-id", str(post_id),
-                            "--source", source_account,
-                        ])
-                        log("INFO", f"自動リポスト開始: source={source_account}")
+                        pending_repost = load_json("state/pending-reposts.json")
+                        if "pending" not in pending_repost:
+                            pending_repost["pending"] = []
+                        pending_repost["pending"].append({
+                            "tweet_id": str(post_id),
+                            "source_account": source_account,
+                            "posted_at": datetime.now(JST).isoformat(),
+                        })
+                        save_json("state/pending-reposts.json", pending_repost)
+                        log("INFO", f"リポスト待ちキュー追加: tweet={post_id}, source={source_account}")
                 except Exception as e:
-                    log("WARN", f"自動リポスト起動失敗（投稿自体は成功）: {e}")
+                    log("WARN", f"リポストキュー追加失敗（投稿自体は成功）: {e}")
 
         # 成功 → 履歴に追加
         post["status"] = "posted"
@@ -324,11 +326,13 @@ def post_one():
         queue["queue"] = [p for p in queue["queue"] if p.get("id") != post.get("id")]
         save_json("state/post-queue.json", queue)
 
-        # 日次カウント更新
+        # 日次カウント更新 + エージェントステータス更新（二重save防止のため統合）
         status["daily_post_count"] = status.get("daily_post_count", 0) + 1
+        status["consecutive_errors"] = 0
+        if "agents" in status and "poster" in status["agents"]:
+            status["agents"]["poster"]["status"] = "idle"
+            status["agents"]["poster"]["last_run"] = datetime.now(JST).isoformat()
         save_json("state/system-status.json", status)
-
-        update_agent_status("poster", "idle")
 
     except Exception as e:
         log("ERROR", f"投稿失敗: {e}")

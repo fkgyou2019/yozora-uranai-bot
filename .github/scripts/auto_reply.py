@@ -78,7 +78,7 @@ def generate_reply(comment_text, original_post_text, commenter_name, recent_repl
     # 絵文字コメントの種類別ヒント
     emoji_hint = ""
     stripped = comment_text.strip()
-    if len(stripped) <= 3 and not any(c.isalpha() or c in 'ぁ-んァ-ヶ亜-熙' for c in stripped):
+    if len(stripped) <= 3 and not any(c.isalpha() or ('\u3040' <= c <= '\u309f') or ('\u30a0' <= c <= '\u30ff') or ('\u4e00' <= c <= '\u9fff') for c in stripped):
         emoji_map = {
             "🔮": "水晶玉→占いへの関心。「見えてきましたよ」「導きが届きます」系",
             "✨": "キラキラ→ポジティブ。「輝きが増しますね」「その光が広がります」系",
@@ -245,7 +245,7 @@ def main():
             # 70%の確率で返信（人間は全レスしない）
             # ただし、文章コメント（絵文字以外）には必ず返信
             is_text_comment = any(
-                c.isalpha() or '\u3040' <= c <= '\u9fff' for c in comment_text
+                c.isalpha() or ('\u3040' <= c <= '\u309f') or ('\u30a0' <= c <= '\u30ff') or ('\u4e00' <= c <= '\u9fff') for c in comment_text
             )
             if not is_text_comment and random.random() > 0.7:
                 replied_ids.add(comment_id)  # スキップしたことは記録

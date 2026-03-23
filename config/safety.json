@@ -13,9 +13,10 @@
     "discard_on_failure": true
   },
   "similarity_check": {
-    "max_similarity": 0.85,
-    "compare_against_last_n": 100,
-    "method": "cosine_similarity"
+    "max_similarity": 0.45,
+    "compare_against_last_n": 20,
+    "method": "SequenceMatcher",
+    "note": "generate_posts.pyで実装。0.45超で類似と判定し除外"
   },
   "posting_safety": {
     "min_interval_seconds": 3600,

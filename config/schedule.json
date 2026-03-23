@@ -1,33 +1,31 @@
 {
-  "description": "投稿スケジュール設定",
+  "description": "投稿スケジュール設定（データ駆動型：Buffer 250万投稿 + App Ape日本データ統合）",
   "timezone": "Asia/Tokyo",
   "posting_schedule": {
     "slots": [
-      {"time": "08:00", "priority": "high", "note": "朝の通勤時間帯"},
-      {"time": "10:00", "priority": "medium", "note": "午前中"},
-      {"time": "12:00", "priority": "high", "note": "昼休み"},
-      {"time": "14:00", "priority": "medium", "note": "午後"},
-      {"time": "16:00", "priority": "medium", "note": "夕方前"},
-      {"time": "18:00", "priority": "high", "note": "帰宅時間帯"},
-      {"time": "20:00", "priority": "high", "note": "ゴールデンタイム"},
-      {"time": "21:30", "priority": "high", "note": "就寝前"},
-      {"time": "23:00", "priority": "medium", "note": "深夜帯"},
-      {"time": "01:00", "priority": "low", "note": "夜更かし層"}
+      {"time": "07:07", "priority": "high", "note": "朝一「今日の運勢」需要"},
+      {"time": "09:07", "priority": "high", "note": "出社後チェック（Buffer最強帯）"},
+      {"time": "10:37", "priority": "medium", "note": "主婦の一息タイム"},
+      {"time": "12:07", "priority": "high", "note": "ランチ休憩（安定帯）"},
+      {"time": "15:07", "priority": "medium", "note": "午後の休憩"},
+      {"time": "19:07", "priority": "high", "note": "帰宅後スマホタイム"},
+      {"time": "20:37", "priority": "high", "note": "占い層ゴールデン（日本データ最強）"},
+      {"time": "21:37", "priority": "high", "note": "寝かしつけ後（主婦層ピーク）"}
     ],
-    "max_posts_per_day": 10,
+    "max_posts_per_day": 8,
     "min_interval_minutes": 60
   },
   "daily_workflow": {
-    "06:00": "fetcher - 昨日の投稿メトリクス回収",
-    "06:30": "analyst - メトリクス分析・フィードバック生成",
-    "07:00": "researcher - ネタ収集",
-    "07:30": "writer - 投稿バッチ生成（10本）",
-    "08:00-01:00": "poster - スケジュールに従い分散投稿",
-    "常時": "supervisor - 全体監視"
+    "06:03": "daily-learn - メトリクス収集・パターン分析",
+    "06:33": "pdca-monitor - 日次レポート生成",
+    "07:07-21:37": "auto-post - 8スロットで分散投稿",
+    "投稿30分後": "auto-reply - コメント返信チェック（8回/日）"
   },
   "affiliate_posting": {
     "max_per_day": 1,
-    "preferred_time": "21:30",
-    "min_interval_days_same_campaign": 3
+    "preferred_time": "21:37",
+    "min_interval_days_same_campaign": 3,
+    "enabled": false,
+    "note": "Phase1（コンテンツ蓄積期間）はアフィリエイト無効"
   }
 }

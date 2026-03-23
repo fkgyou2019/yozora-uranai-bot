@@ -271,8 +271,21 @@ CTAの後に、以下のようなフォロー誘導を自然に入れる:
         method="POST",
     )
 
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
+    # Claude APIリトライ（最大3回）
+    import time as _time
+    result = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+            break
+        except Exception as e:
+            print(f"  Claude API エラー (試行{attempt+1}/3): {e}")
+            if attempt < 2:
+                _time.sleep(5 * (attempt + 1))
+            else:
+                print("ERROR: Claude API 3回失敗。生成中止。")
+                sys.exit(1)
 
     text = result["content"][0]["text"]
     m = re.search(r"\[.*\]", text, re.DOTALL)
@@ -281,7 +294,12 @@ CTAの後に、以下のようなフォロー誘導を自然に入れる:
         print(text[:500])
         sys.exit(1)
 
-    posts = json.loads(m.group())
+    try:
+        posts = json.loads(m.group())
+    except json.JSONDecodeError as e:
+        print(f"ERROR: Claude APIの出力がJSON不正: {e}")
+        print(text[:500])
+        sys.exit(1)
     today_str = datetime.now(JST).strftime("%Y%m%d")
     post_count = len(history.get("posts", []))
 
@@ -307,8 +325,8 @@ CTAの後に、以下のようなフォロー誘導を自然に入れる:
                     break
         if not is_similar:
             filtered.append(p)
-        # 直近テキストに追加（次のチェック用）
-        recent_texts.append(content)
+            # 合格した投稿のみ直近テキストに追加（除外投稿で汚染しない）
+            recent_texts.append(content)
 
     if len(filtered) < len(posts):
         print(f"  類似チェック: {len(posts)}件→{len(filtered)}件")
