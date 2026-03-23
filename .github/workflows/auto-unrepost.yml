@@ -1,0 +1,72 @@
+name: Auto Unrepost (Repost解除)
+
+on:
+  schedule:
+    # 1日2回、期限切れリポストをチェック・解除
+    - cron: '33 3 * * *'   # JST 12:33
+    - cron: '33 13 * * *'  # JST 22:33
+  workflow_dispatch:
+
+concurrency:
+  group: repost
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  unrepost:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state files if missing
+        run: |
+          mkdir -p state
+          if [ ! -f state/repost-queue.json ]; then
+            echo '{"active_reposts":[]}' > state/repost-queue.json
+          fi
+
+      - name: Check for expired reposts
+        id: check
+        run: |
+          python -c "
+          import json, os
+          from datetime import datetime, timezone, timedelta
+          JST = timezone(timedelta(hours=9))
+          now = datetime.now(JST)
+          q = json.load(open('state/repost-queue.json'))
+          expired = [e for e in q.get('active_reposts', []) if datetime.fromisoformat(e['unrepost_at']) <= now]
+          print(f'期限切れリポスト: {len(expired)}件')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f'has_expired={\"true\" if expired else \"false\"}\n')
+          "
+
+      - name: Run unrepost agent
+        if: steps.check.outputs.has_expired == 'true'
+        run: python agents/unrepost.py
+        env:
+          X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
+
+      - name: Commit state changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin master || true
+          git add state/
+          if git diff --cached --quiet; then
+            echo "No state changes to commit"
+          else
+            git commit -m "chore: unrepost expired retweets [skip ci]"
+            git push || (git pull --rebase origin master && git push)
+          fi

@@ -2,13 +2,23 @@ name: Auto Reply to Comments
 
 on:
   schedule:
-    # 30分おきに実行（GitHub Actions遅延考慮で25分間隔に設定）
-    - cron: '5 * * * *'    # 毎時05分
-    - cron: '35 * * * *'   # 毎時35分
+    # 投稿スケジュールの30分後に返信チェック（1日8回）
+    - cron: '17 22 * * *'  # JST 07:37
+    - cron: '17 0 * * *'   # JST 09:37
+    - cron: '47 1 * * *'   # JST 11:07
+    - cron: '17 3 * * *'   # JST 12:37
+    - cron: '17 6 * * *'   # JST 15:37
+    - cron: '17 10 * * *'  # JST 19:37
+    - cron: '47 11 * * *'  # JST 21:07
+    - cron: '47 12 * * *'  # JST 22:07
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: auto-reply
+  cancel-in-progress: true
 
 jobs:
   reply:

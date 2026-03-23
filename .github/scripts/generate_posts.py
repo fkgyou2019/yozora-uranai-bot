@@ -323,6 +323,13 @@ CTAの後に、以下のようなフォロー誘導を自然に入れる:
         p["status"] = "queued"
         queue["queue"].append(p)
 
+    # post-history.json の肥大化防止: 直近200件のみ保持
+    all_posts = history.get("posts", [])
+    if len(all_posts) > 200:
+        history["posts"] = all_posts[-200:]
+        save_json("state/post-history.json", history)
+        print(f"  履歴を{len(all_posts)}件→200件にトリミング")
+
     save_json("state/post-queue.json", queue)
     print(f"生成完了: {len(posts)}件をキューに追加")
     print(f"学習データ参照: {winning.get('data_count', 0)}件 (信頼度: {winning.get('confidence', 'none')})")

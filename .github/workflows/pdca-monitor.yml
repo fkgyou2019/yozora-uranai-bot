@@ -2,14 +2,18 @@ name: PDCA Monitor & Report
 
 on:
   schedule:
-    # 毎朝5:50 JST（20:50 UTC前日）に日次レポート生成
-    - cron: '50 20 * * *'
-    # 毎時23分にシステム監視（投稿・返信の実行状況チェック）
-    - cron: '23 * * * *'
+    # 朝6:33 JST に日次レポート生成（daily-learnの30分後）
+    - cron: '33 21 * * *'
+    # 夜23:03 JST にシステム監視
+    - cron: '3 14 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: pdca-monitor
+  cancel-in-progress: true
 
 jobs:
   monitor:

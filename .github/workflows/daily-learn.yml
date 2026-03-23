@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: daily-learn
+  cancel-in-progress: true
+
 jobs:
   learn:
     runs-on: ubuntu-latest

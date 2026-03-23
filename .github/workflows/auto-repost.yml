@@ -1,0 +1,96 @@
+name: Auto Repost (自動リポスト)
+
+on:
+  schedule:
+    # 投稿スケジュールの5分後に実行（pending-repostsがあれば処理）
+    - cron: '12 22 * * *'   # JST 07:12
+    - cron: '12 0 * * *'    # JST 09:12
+    - cron: '42 1 * * *'    # JST 10:42
+    - cron: '12 3 * * *'    # JST 12:12
+    - cron: '12 6 * * *'    # JST 15:12
+    - cron: '12 10 * * *'   # JST 19:12
+    - cron: '42 11 * * *'   # JST 20:42
+    - cron: '42 12 * * *'   # JST 21:42
+  workflow_dispatch:  # 手動実行も可能
+
+concurrency:
+  group: repost
+  cancel-in-progress: false  # 前回の実行が完了するまで待つ
+
+permissions:
+  contents: write
+
+jobs:
+  repost:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state files if missing
+        run: |
+          mkdir -p state
+          [ ! -f state/pending-reposts.json ] && echo '{"pending":[]}' > state/pending-reposts.json
+          [ ! -f state/repost-queue.json ] && echo '{"active_reposts":[]}' > state/repost-queue.json
+          true
+
+      - name: Check for pending reposts
+        id: check
+        run: |
+          COUNT=$(python -c "import json; d=json.load(open('state/pending-reposts.json')); print(len(d.get('pending',[])))")
+          echo "pending_count=$COUNT" >> $GITHUB_OUTPUT
+          if [ "$COUNT" = "0" ]; then
+            echo "リポスト待ちなし。スキップします。"
+          else
+            echo "リポスト待ち: ${COUNT}件"
+          fi
+
+      - name: Process pending reposts
+        if: steps.check.outputs.pending_count != '0'
+        run: |
+          python -c "
+          import json, subprocess, sys, os
+
+          pending = json.load(open('state/pending-reposts.json'))
+          items = pending.get('pending', [])
+
+          for item in items:
+              tweet_id = item['tweet_id']
+              source = item['source_account']
+              print(f'Processing: tweet={tweet_id}, source={source}')
+              result = subprocess.run([
+                  sys.executable, 'agents/repost.py',
+                  '--tweet-id', tweet_id,
+                  '--source', source,
+              ], timeout=12000)
+              if result.returncode != 0:
+                  print(f'WARNING: repost.py exited with code {result.returncode}')
+
+          # 処理済みをクリア
+          pending['pending'] = []
+          json.dump(pending, open('state/pending-reposts.json', 'w'), ensure_ascii=False, indent=2)
+          print('All pending reposts processed.')
+          "
+        env:
+          X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
+
+      - name: Commit state changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/
+          if git diff --cached --quiet; then
+            echo "No state changes to commit"
+          else
+            git commit -m "chore: process reposts [skip ci]"
+            git push
+          fi

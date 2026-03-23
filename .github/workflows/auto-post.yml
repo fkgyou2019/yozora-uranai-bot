@@ -14,19 +14,14 @@ on:
     - cron: '47 9 * * *'   # → JST 18:47→19:07頃 🌆 帰宅後
     - cron: '17 11 * * *'  # → JST 20:17→20:37頃 🌙 ゴールデン
     - cron: '17 12 * * *'  # → JST 21:17→21:37頃 🛏 寝かしつけ後
-    # --- 補完スロット（メインが発火しなかった場合の保険）---
-    - cron: '20 22 * * *'  # → JST 07:20→07:40頃（朝の補完）
-    - cron: '20 0 * * *'   # → JST 09:20→09:40頃（出社後の補完）
-    - cron: '50 1 * * *'   # → JST 10:50→11:10頃（主婦の補完）
-    - cron: '20 3 * * *'   # → JST 12:20→12:40頃（ランチの補完）
-    - cron: '20 6 * * *'   # → JST 15:20→15:40頃（午後の補完）
-    - cron: '20 10 * * *'  # → JST 19:20→19:40頃（帰宅後の補完）
-    - cron: '50 11 * * *'  # → JST 20:50→21:10頃（ゴールデンの補完）
-    - cron: '50 12 * * *'  # → JST 21:50→22:10頃（寝かしつけの補完）
-  workflow_dispatch:  # 手動実行も可能
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: auto-post
+  cancel-in-progress: false
 
 jobs:
   post:
@@ -132,7 +127,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin master || true
-          git add state/
+          git add state/post-queue.json state/post-history.json state/system-status.json state/performance-data.json state/winning-patterns.json state/metrics.json
           if git diff --cached --quiet; then
             echo "No state changes to commit"
           else
