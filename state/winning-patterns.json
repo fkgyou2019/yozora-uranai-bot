@@ -1,44 +1,73 @@
 {
-  "data_count": 2,
-  "last_analyzed": "2026-03-23T17:36:51.249838+09:00",
+  "data_count": 3,
+  "last_analyzed": "2026-03-23T20:56:45.203155+09:00",
   "confidence": "low",
   "top_patterns": [
     {
       "pattern": "ランキング型",
-      "weight": 40,
-      "reason": "初期値（市場分析から）"
-    },
-    {
-      "pattern": "数字インパクト型",
-      "weight": 25,
-      "reason": "初期値"
-    },
-    {
-      "pattern": "コメント誘導型",
-      "weight": 20,
-      "reason": "初期値"
+      "weight": 66,
+      "avg_engagement": 20.98,
+      "sample_count": 2,
+      "reason": "eng率21.0% (2件)"
     },
     {
       "pattern": "星座別アドバイス型",
-      "weight": 15,
-      "reason": "初期値"
+      "weight": 33,
+      "avg_engagement": 10.39,
+      "sample_count": 1,
+      "reason": "eng率10.4% (1件)"
+    }
+  ],
+  "pattern_ranking": [
+    {
+      "pattern": "ランキング型",
+      "count": 2,
+      "avg_engagement": 20.98,
+      "avg_views": 332.0,
+      "total_likes": 91,
+      "total_replies": 7
+    },
+    {
+      "pattern": "星座別アドバイス型",
+      "count": 1,
+      "avg_engagement": 10.39,
+      "avg_views": 231.0,
+      "total_likes": 24,
+      "total_replies": 0
+    }
+  ],
+  "feature_ranking": [
+    {
+      "feature": "has_number_hook",
+      "count": 1,
+      "avg_engagement": 31.65
+    },
+    {
+      "feature": "has_cta_emoji",
+      "count": 1,
+      "avg_engagement": 31.65
+    },
+    {
+      "feature": "has_ranking",
+      "count": 2,
+      "avg_engagement": 20.98
     }
   ],
   "top_hook_styles": [
     {
-      "style": "恐怖×期待型",
-      "example": "○月に人生が変わる星座。",
-      "avg_eng": 0
+      "style": "ランキング型",
+      "example": "【3月下旬、金運が",
+      "avg_eng": 31.65
     },
     {
-      "style": "限定型",
-      "example": "12星座中、たった2つだけ。",
-      "avg_eng": 0
+      "style": "星座別アドバイス型",
+      "example": "獅子座さんへ。",
+      "avg_eng": 10.39
     },
     {
-      "style": "ランキング見出し型",
-      "example": "【○○な星座TOP3】",
-      "avg_eng": 0
+      "style": "ランキング型",
+      "example": "【春分直後の新生活準備運ランキングTOP3】",
+      "avg_eng": 10.31
     }
   ],
   "top_cta_styles": [
@@ -48,8 +77,43 @@
       "avg_eng": 0
     }
   ],
+  "best_posts": [
+    {
+      "id": "post_20260322_021",
+      "pattern": "ランキング型",
+      "eng_rate": 31.65,
+      "views": 139,
+      "likes": 38,
+      "replies": 6,
+      "first_line": "【3月下旬、金運が",
+      "content_preview": "【3月下旬、金運が\n爆発する星座TOP3】\n\n第3位は射手座。\n思わぬ臨時収入が\n舞い込む予感です。"
+    },
+    {
+      "id": "post_20260322_020",
+      "pattern": "星座別アドバイス型",
+      "eng_rate": 10.39,
+      "views": 231,
+      "likes": 24,
+      "replies": 0,
+      "first_line": "獅子座さんへ。",
+      "content_preview": "獅子座さんへ。\n\n春分を過ぎて、\nあなたの中で眠っていた\n創造力が目覚める時期です。\n\n周囲の声より"
+    },
+    {
+      "id": "post_20260321_004",
+      "pattern": "ランキング型",
+      "eng_rate": 10.31,
+      "views": 524,
+      "likes": 53,
+      "replies": 1,
+      "first_line": "【春分直後の新生活準備運ランキングTOP3】",
+      "content_preview": "【春分直後の新生活準備運ランキングTOP3】\n\n🥉3位：獅子座\n→ 環境整備がスムーズ。新しい場所に"
+    }
+  ],
   "avoid_patterns": [],
   "insights": [
-    "データ蓄積中。10件以上でパターン分析が有効になります。"
+    "最強パターン: ランキング型（eng率21.0%）",
+    "数字フックあり → avg eng 31.6%",
+    "絵文字CTAあり → avg eng 31.6%",
+    "ランキング形式あり → avg eng 21.0%"
   ]
 }

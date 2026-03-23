@@ -51,7 +51,33 @@
         "hook_length": 7
       },
       "collected_at": "2026-03-23T14:26:14.681899+09:00"
+    },
+    {
+      "id": "post_20260322_021",
+      "platform_post_id": "18577740256046978",
+      "posted_at": "2026-03-22T18:48:56.846222+09:00",
+      "pattern_name": "ランキング型",
+      "category": "金運",
+      "content_preview": "【3月下旬、金運が\n爆発する星座TOP3】\n\n第3位は射手座。\n思わぬ臨時収入が\n舞い込む予感です。",
+      "first_line": "【3月下旬、金運が",
+      "char_count": 169,
+      "metrics": {
+        "views": 139,
+        "likes": 38,
+        "replies": 6,
+        "reposts": 0,
+        "engagement_rate": 31.65
+      },
+      "features": {
+        "has_ranking": true,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-03-23T20:56:44.751827+09:00"
     }
   ],
-  "last_updated": "2026-03-23T17:36:51.220451+09:00"
+  "last_updated": "2026-03-23T20:56:44.751827+09:00"
 }
