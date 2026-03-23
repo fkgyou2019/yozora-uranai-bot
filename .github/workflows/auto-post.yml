@@ -2,17 +2,27 @@ name: Auto Post to Threads
 
 on:
   schedule:
-    # データ駆動型スケジュール（Buffer 250万投稿 + App Ape日本データ統合）
-    # GitHub Actions cron遅延（15-20分）を考慮して前倒し設定
+    # GitHub Actionsのcronは30-60%がスキップされるため、冗長スロットを追加
+    # 投稿間隔ガード（3600秒）が重複投稿を防ぐので、多めにトリガーしても安全
     # UTC = JST - 9h
-    - cron: '47 21 * * *'  # → JST 07:07頃 🌅 朝一「今日の運勢」需要
-    - cron: '47 23 * * *'  # → JST 09:07頃 💼 出社後チェック（Buffer最強帯）
-    - cron: '17 1 * * *'   # → JST 10:37頃 🏠 主婦の一息タイム
-    - cron: '47 2 * * *'   # → JST 12:07頃 🍱 ランチ休憩（安定帯）
-    - cron: '47 5 * * *'   # → JST 15:07頃 ☕ 午後の休憩
-    - cron: '47 9 * * *'   # → JST 19:07頃 🌆 帰宅後スマホタイム
-    - cron: '17 11 * * *'  # → JST 20:37頃 🌙 占い層ゴールデン（日本データ最強）
-    - cron: '17 12 * * *'  # → JST 21:37頃 🛏 寝かしつけ後（主婦層ピーク）
+    # --- メインスロット（8件/日の目標投稿時刻）---
+    - cron: '47 21 * * *'  # → JST 06:47→07:07頃 🌅 朝一
+    - cron: '47 23 * * *'  # → JST 08:47→09:07頃 💼 出社後
+    - cron: '17 1 * * *'   # → JST 10:17→10:37頃 🏠 主婦
+    - cron: '47 2 * * *'   # → JST 11:47→12:07頃 🍱 ランチ
+    - cron: '47 5 * * *'   # → JST 14:47→15:07頃 ☕ 午後
+    - cron: '47 9 * * *'   # → JST 18:47→19:07頃 🌆 帰宅後
+    - cron: '17 11 * * *'  # → JST 20:17→20:37頃 🌙 ゴールデン
+    - cron: '17 12 * * *'  # → JST 21:17→21:37頃 🛏 寝かしつけ後
+    # --- 補完スロット（メインが発火しなかった場合の保険）---
+    - cron: '20 22 * * *'  # → JST 07:20→07:40頃（朝の補完）
+    - cron: '20 0 * * *'   # → JST 09:20→09:40頃（出社後の補完）
+    - cron: '50 1 * * *'   # → JST 10:50→11:10頃（主婦の補完）
+    - cron: '20 3 * * *'   # → JST 12:20→12:40頃（ランチの補完）
+    - cron: '20 6 * * *'   # → JST 15:20→15:40頃（午後の補完）
+    - cron: '20 10 * * *'  # → JST 19:20→19:40頃（帰宅後の補完）
+    - cron: '50 11 * * *'  # → JST 20:50→21:10頃（ゴールデンの補完）
+    - cron: '50 12 * * *'  # → JST 21:50→22:10頃（寝かしつけの補完）
   workflow_dispatch:  # 手動実行も可能
 
 permissions:
@@ -117,21 +127,15 @@ jobs:
           PYTHONIOENCODING: utf-8
           X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
 
-      - name: Wait for repost to complete
-        run: |
-          if [ -f state/repost-queue.json ]; then
-            echo "リポスト処理の完了を待機中..."
-            sleep 70
-          fi
-
       - name: Commit state changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin master || true
           git add state/
           if git diff --cached --quiet; then
             echo "No state changes to commit"
           else
             git commit -m "chore: update post state [skip ci]"
-            git push
+            git push || (git pull --rebase origin master && git push)
           fi

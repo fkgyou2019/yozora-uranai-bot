@@ -35,7 +35,7 @@ def build_learning_block(winning):
     """学習データからプロンプトブロックを動的構築"""
     if not winning or winning.get("data_count", 0) < 3:
         return """【市場分析から導出した勝ちパターン（初期値）】
-・ランキング型（第1位〜第3位 or 第5位）を10件中5件以上にする
+・ランキング型は10件中3件まで。限定型・緊急型・シリーズ型を混ぜて多様性を確保
 ・フックは「恐怖×期待」型が最強（例: 「○月に人生が変わる星座。」）
 ・数字×限定×具体性の組み合わせが効く（例: 「12星座中、たった2つだけ。」）"""
 
@@ -234,11 +234,11 @@ CTAの後に、以下のようなフォロー誘導を自然に入れる:
 1. 10件生成（アフィリエイトなし）
 2. 各投稿は150-300文字
 3. 具体的な星座名を含める
-4. ランキング型を10件中5件以上にする（最もバズるため）
+4. ランキング型は10件中3件まで（多すぎるとアカウントが単調に見える）。残り7件は限定型・緊急型・シリーズ型等を混ぜる
 5. 全投稿にCTA（絵文字を置く＋報酬）を含める
 6. ハッシュタグはcontentに含める（hashtagフィールドは空文字）
 7. 使用可能ハッシュタグ: #今日の運勢 #恋愛運 #金運 #仕事運 #タロット #星座占い
-8. 10件全てのフック・CTA・星座の組み合わせをユニークにする
+8. 10件全てのフック・CTA・星座の組み合わせをユニークにする。「12星座中、たった○つだけ。」のフックは10件中1件まで。同じフック構造の繰り返し禁止
 9. 1件目は今日のシリーズコンテンツ（上記参照）
 10. 10件中2件にフォロー導線を含める（上記参照）
 
@@ -284,6 +284,36 @@ CTAの後に、以下のようなフォロー誘導を自然に入れる:
     posts = json.loads(m.group())
     today_str = datetime.now(JST).strftime("%Y%m%d")
     post_count = len(history.get("posts", []))
+
+    # --- 類似度チェック: 直近投稿と56%以上類似なら除外 ---
+    from difflib import SequenceMatcher
+    recent_texts = [p.get("content", "") for p in history.get("posts", [])[-20:]]
+    filtered = []
+    for p in posts:
+        content = p.get("content", "")
+        is_similar = False
+        # 直近投稿との類似度
+        for rt in recent_texts:
+            if SequenceMatcher(None, content, rt).ratio() > 0.45:
+                print(f"  ⚠ 類似度超過で除外: {content[:30]}...")
+                is_similar = True
+                break
+        # 今回バッチ内での類似度
+        if not is_similar:
+            for fp in filtered:
+                if SequenceMatcher(None, content, fp.get("content", "")).ratio() > 0.45:
+                    print(f"  ⚠ バッチ内類似で除外: {content[:30]}...")
+                    is_similar = True
+                    break
+        if not is_similar:
+            filtered.append(p)
+        # 直近テキストに追加（次のチェック用）
+        recent_texts.append(content)
+
+    if len(filtered) < len(posts):
+        print(f"  類似チェック: {len(posts)}件→{len(filtered)}件")
+    posts = filtered
+    # --- 類似度チェック終了 ---
 
     for i, p in enumerate(posts):
         p["id"] = f"post_{today_str}_{post_count + i + 1:03d}"
