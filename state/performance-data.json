@@ -25,7 +25,33 @@
         "hook_length": 22
       },
       "collected_at": "2026-03-22T22:59:15.630299+09:00"
+    },
+    {
+      "id": "post_20260322_020",
+      "platform_post_id": "18061827368663614",
+      "posted_at": "2026-03-22T10:40:56.760921+09:00",
+      "pattern_name": "星座別アドバイス型",
+      "category": "星座占い",
+      "content_preview": "獅子座さんへ。\n\n春分を過ぎて、\nあなたの中で眠っていた\n創造力が目覚める時期です。\n\n周囲の声より",
+      "first_line": "獅子座さんへ。",
+      "char_count": 91,
+      "metrics": {
+        "views": 231,
+        "likes": 24,
+        "replies": 0,
+        "reposts": 1,
+        "engagement_rate": 10.39
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 7
+      },
+      "collected_at": "2026-03-23T14:26:14.681899+09:00"
     }
   ],
-  "last_updated": "2026-03-23T07:01:24.194157+09:00"
+  "last_updated": "2026-03-23T14:26:14.681899+09:00"
 }
