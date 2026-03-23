@@ -77,7 +77,59 @@
         "hook_length": 9
       },
       "collected_at": "2026-03-23T20:56:44.751827+09:00"
+    },
+    {
+      "id": "post_20260322_022",
+      "platform_post_id": "17993230367934077",
+      "posted_at": "2026-03-22T20:57:56.008114+09:00",
+      "pattern_name": "限定型",
+      "category": "恋愛運",
+      "content_preview": "12星座中、たった2つだけ。\n\n3月下旬に急に\n「好きな人」から\n連絡が来る星座があります。\n\nそれ",
+      "first_line": "12星座中、たった2つだけ。",
+      "char_count": 175,
+      "metrics": {
+        "views": 354,
+        "likes": 32,
+        "replies": 25,
+        "reposts": 0,
+        "engagement_rate": 16.1
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 14
+      },
+      "collected_at": "2026-03-23T23:42:43.238725+09:00"
+    },
+    {
+      "id": "post_20260322_023",
+      "platform_post_id": "18056524457498582",
+      "posted_at": "2026-03-22T22:59:21.330628+09:00",
+      "pattern_name": "ランキング型",
+      "category": "仕事運",
+      "content_preview": "【来週、仕事が\n急に動く星座TOP3】\n\n第3位は水瓶座。\n新しいプロジェクトが\n舞い込みます。\n\n",
+      "first_line": "【来週、仕事が",
+      "char_count": 172,
+      "metrics": {
+        "views": 100,
+        "likes": 15,
+        "replies": 7,
+        "reposts": 0,
+        "engagement_rate": 22.0
+      },
+      "features": {
+        "has_ranking": true,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 7
+      },
+      "collected_at": "2026-03-23T23:42:43.238725+09:00"
     }
   ],
-  "last_updated": "2026-03-23T20:56:44.751827+09:00"
+  "last_updated": "2026-03-23T23:42:43.238725+09:00"
 }

@@ -1,18 +1,25 @@
 {
-  "data_count": 3,
-  "last_analyzed": "2026-03-23T20:56:45.203155+09:00",
+  "data_count": 5,
+  "last_analyzed": "2026-03-23T23:42:43.968872+09:00",
   "confidence": "low",
   "top_patterns": [
     {
       "pattern": "ランキング型",
-      "weight": 66,
-      "avg_engagement": 20.98,
-      "sample_count": 2,
-      "reason": "eng率21.0% (2件)"
+      "weight": 44,
+      "avg_engagement": 21.32,
+      "sample_count": 3,
+      "reason": "eng率21.3% (3件)"
+    },
+    {
+      "pattern": "限定型",
+      "weight": 33,
+      "avg_engagement": 16.1,
+      "sample_count": 1,
+      "reason": "eng率16.1% (1件)"
     },
     {
       "pattern": "星座別アドバイス型",
-      "weight": 33,
+      "weight": 21,
       "avg_engagement": 10.39,
       "sample_count": 1,
       "reason": "eng率10.4% (1件)"
@@ -21,11 +28,19 @@
   "pattern_ranking": [
     {
       "pattern": "ランキング型",
-      "count": 2,
-      "avg_engagement": 20.98,
-      "avg_views": 332.0,
-      "total_likes": 91,
-      "total_replies": 7
+      "count": 3,
+      "avg_engagement": 21.32,
+      "avg_views": 254.0,
+      "total_likes": 106,
+      "total_replies": 14
+    },
+    {
+      "pattern": "限定型",
+      "count": 1,
+      "avg_engagement": 16.1,
+      "avg_views": 354.0,
+      "total_likes": 32,
+      "total_replies": 25
     },
     {
       "pattern": "星座別アドバイス型",
@@ -39,18 +54,18 @@
   "feature_ranking": [
     {
       "feature": "has_number_hook",
-      "count": 1,
-      "avg_engagement": 31.65
+      "count": 2,
+      "avg_engagement": 23.88
     },
     {
       "feature": "has_cta_emoji",
-      "count": 1,
-      "avg_engagement": 31.65
+      "count": 3,
+      "avg_engagement": 23.25
     },
     {
       "feature": "has_ranking",
-      "count": 2,
-      "avg_engagement": 20.98
+      "count": 3,
+      "avg_engagement": 21.32
     }
   ],
   "top_hook_styles": [
@@ -58,6 +73,16 @@
       "style": "ランキング型",
       "example": "【3月下旬、金運が",
       "avg_eng": 31.65
+    },
+    {
+      "style": "ランキング型",
+      "example": "【来週、仕事が",
+      "avg_eng": 22.0
+    },
+    {
+      "style": "限定型",
+      "example": "12星座中、たった2つだけ。",
+      "avg_eng": 16.1
     },
     {
       "style": "星座別アドバイス型",
@@ -89,6 +114,26 @@
       "content_preview": "【3月下旬、金運が\n爆発する星座TOP3】\n\n第3位は射手座。\n思わぬ臨時収入が\n舞い込む予感です。"
     },
     {
+      "id": "post_20260322_023",
+      "pattern": "ランキング型",
+      "eng_rate": 22.0,
+      "views": 100,
+      "likes": 15,
+      "replies": 7,
+      "first_line": "【来週、仕事が",
+      "content_preview": "【来週、仕事が\n急に動く星座TOP3】\n\n第3位は水瓶座。\n新しいプロジェクトが\n舞い込みます。\n\n"
+    },
+    {
+      "id": "post_20260322_022",
+      "pattern": "限定型",
+      "eng_rate": 16.1,
+      "views": 354,
+      "likes": 32,
+      "replies": 25,
+      "first_line": "12星座中、たった2つだけ。",
+      "content_preview": "12星座中、たった2つだけ。\n\n3月下旬に急に\n「好きな人」から\n連絡が来る星座があります。\n\nそれ"
+    },
+    {
       "id": "post_20260322_020",
       "pattern": "星座別アドバイス型",
       "eng_rate": 10.39,
@@ -111,9 +156,9 @@
   ],
   "avoid_patterns": [],
   "insights": [
-    "最強パターン: ランキング型（eng率21.0%）",
-    "数字フックあり → avg eng 31.6%",
-    "絵文字CTAあり → avg eng 31.6%",
-    "ランキング形式あり → avg eng 21.0%"
+    "最強パターン: ランキング型（eng率21.3%）",
+    "数字フックあり → avg eng 23.9%",
+    "絵文字CTAあり → avg eng 23.2%",
+    "ランキング形式あり → avg eng 21.3%"
   ]
 }

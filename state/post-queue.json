@@ -1,24 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "時限×スピリチュアルアクション",
-      "category": "開運",
-      "content": "今夜23時までにこれをやって。\n\n机の上に白い布を敷いて、\nそこに水晶か塩を置くだけ。\n\nそれだけで明日の運気が\n整い始めます。\n\n特に天秤座と獅子座の方は\n48時間以内に効果が出やすい\n時期ですよ。\n\n「🔮」を置いた方に、\n今夜良い流れが届きます。\n\n#今日の運勢 #タロット",
-      "hashtag": "",
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.8
-      },
-      "id": "post_20260323_010",
-      "platform": "threads",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "status": "queued"
-    }
-  ]
+  "queue": []
 }
