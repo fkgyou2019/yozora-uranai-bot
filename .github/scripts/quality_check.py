@@ -100,7 +100,20 @@ def check_post(post):
     if "#" not in content:
         issues.append("ハッシュタグが含まれていない")
 
-    # --- 6. 絵文字過多チェック ---
+    # --- 6. 時間限定表現チェック ---
+    # バッチ生成時は何時に投稿されるか不明なので、
+    # 特定時刻を含む表現は危険（矛盾リスク）
+    risky_time_patterns = [
+        (r"今夜\d+時まで", "「今夜○時まで」は投稿時刻によって矛盾する"),
+        (r"今朝", "「今朝」は午後投稿で矛盾する"),
+        (r"午前中に", "「午前中に」は午後投稿で矛盾する"),
+    ]
+    for pattern, msg in risky_time_patterns:
+        if re.search(pattern, content):
+            issues.append(f"時間矛盾リスク: {msg}")
+            break
+
+    # --- 7. 絵文字過多チェック ---
     emoji_pattern = re.compile(
         r"[\U0001F300-\U0001F9FF\u2600-\u26FF\u2700-\u27BF"
         r"\u2B50\u2728\u2764\u23E9-\u23FA\u25AA-\u25FE"

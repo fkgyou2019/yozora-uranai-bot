@@ -88,6 +88,28 @@ def check_posting_interval(history, safety):
     return True
 
 
+def check_time_contradiction(content, current_hour):
+    """投稿内容と現在時刻の矛盾をチェック。矛盾があれば理由を返す"""
+    import re
+    # 「今夜○時までに」が○時以降
+    m = re.search(r'今夜(\d+)時まで', content)
+    if m and current_hour >= int(m.group(1)):
+        return f"「今夜{m.group(1)}時まで」だが現在{current_hour}時"
+    # 「今朝」が15時以降
+    if '今朝' in content and current_hour >= 15:
+        return f"「今朝」だが現在{current_hour}時"
+    # 「午前中に」が13時以降
+    if '午前中に' in content and current_hour >= 13:
+        return f"「午前中に」だが現在{current_hour}時"
+    # 「朝一で」が11時以降
+    if '朝一で' in content and current_hour >= 11:
+        return f"「朝一で」だが現在{current_hour}時"
+    # 「今夜中に」が朝（6-12時）
+    if '今夜中に' in content and 6 <= current_hour <= 12:
+        return f"「今夜中に」だが現在{current_hour}時（朝）"
+    return None
+
+
 def check_banned_hours(safety):
     """深夜投稿禁止時間帯のチェック"""
     banned = safety.get("posting_safety", {}).get("banned_hours", [])
@@ -244,13 +266,30 @@ def post_one():
     if not check_daily_limit(status, safety):
         return
 
-    # キューから次の投稿を取得
+    # キューから次の投稿を取得（時間矛盾チェック付き）
     pending = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
     if not pending:
         log("INFO", "投稿キューが空です")
         return
 
-    post = pending[0]
+    now = datetime.now(JST)
+    current_hour = now.hour
+
+    post = None
+    for candidate in pending:
+        content = candidate.get("content", "")
+        skip_reason = check_time_contradiction(content, current_hour)
+        if skip_reason:
+            log("INFO", f"時間矛盾で除外: {skip_reason} | {content[:25]}...")
+            candidate["status"] = "skipped_time"
+        else:
+            post = candidate
+            break
+
+    if not post:
+        log("INFO", "時間矛盾により投稿可能な投稿なし")
+        save_json("state/post-queue.json", queue)
+        return
     post["status"] = "posting"
     save_json("state/post-queue.json", queue)
 
