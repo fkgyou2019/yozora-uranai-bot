@@ -1,0 +1,77 @@
+name: Post Health Check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post-health-check
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Create api-keys.env from secrets
+        run: |
+          mkdir -p config state
+          cat > config/api-keys.env << EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN=${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
+          EOF
+
+      - name: Run health check
+        run: python .github/scripts/post_health_check.py
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+
+      - name: Repost if needed
+        run: |
+          if [ -f state/needs-repost.flag ]; then
+            COUNT=$(cat state/needs-repost.flag)
+            echo "${COUNT}件の再投稿が必要。投稿ワークフローをトリガーします。"
+            # キューが空なら再生成
+            REMAINING=$(python -c "import json; q=json.load(open('state/post-queue.json')) if __import__('os').path.exists('state/post-queue.json') else {'queue':[]}; print(len([p for p in q.get('queue',[]) if p.get('status')=='queued']))")
+            if [ "$REMAINING" = "0" ]; then
+              python .github/scripts/generate_posts.py
+              python .github/scripts/quality_check.py || true
+            fi
+            python agents/poster.py
+            rm -f state/needs-repost.flag
+          else
+            echo "再投稿不要"
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          PYTHONIOENCODING: utf-8
+
+      - name: Commit state changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin master || true
+          git add state/health-check-log.json state/post-queue.json state/post-history.json state/system-status.json
+          if git diff --cached --quiet; then
+            echo "No state changes"
+          else
+            git commit -m "chore: health check [skip ci]"
+            git push || (git pull --rebase origin master && git push)
+          fi
