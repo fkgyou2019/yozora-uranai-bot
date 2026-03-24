@@ -235,6 +235,7 @@ def main():
             continue
 
         comments = replies_data.get("data", [])
+        replied_users_this_post = set()  # この投稿で既に返信したユーザー
 
         for comment in comments:
             if total_replied >= max_replies_per_run:
@@ -246,10 +247,18 @@ def main():
 
             # 自分のコメントはスキップ
             if comment_user == "yozora.uranai":
+                replied_users_this_post.add(comment_user)
                 continue
 
             # 既に返信済みならスキップ
             if comment_id in replied_ids:
+                replied_users_this_post.add(comment_user)
+                continue
+
+            # 同一ユーザーへの返信は1投稿につき1回まで（重複返信防止）
+            if comment_user in replied_users_this_post:
+                replied_ids.add(comment_id)
+                print(f"  ⏭ @{comment_user}: 同一ユーザー重複スキップ")
                 continue
 
             # 空コメントはスキップ
@@ -284,6 +293,7 @@ def main():
             try:
                 reply_id = threads_reply(reply_text, comment_id, user_id, access_token)
                 replied_ids.add(comment_id)
+                replied_users_this_post.add(comment_user)
                 recent_replies.append(reply_text)
                 total_replied += 1
                 print(f"  ✅ @{comment_user}: 「{comment_text[:20]}」→ 「{reply_text[:40]}」")
