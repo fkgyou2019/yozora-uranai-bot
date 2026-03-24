@@ -221,6 +221,28 @@
       "status": "posted",
       "posted_at": "2026-03-24T07:07:21.923206+09:00",
       "platform_post_id": "18087399289973056"
+    },
+    {
+      "pattern_name": "コメント誘導型・個別回答",
+      "category": "恋愛運",
+      "content": "あなたの星座を\nコメント欄に書いて🔮\n\n来週、特に恋愛運が上昇する\n星座が4つあります。\n\nあなたが該当していたら\nどんな幸運が来るのか\n個別にお伝えしますね。\n\nコメントで星座を教えてくれたら、\n深掘りして返信します。\nちなみに金星の影響が強いのは\n牡牛座・天秤座・魚座あたり🌙\n#恋愛運 #星座占い",
+      "hashtag": "",
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 9,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260324_013",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "posted_at": "2026-03-24T09:07:45.055764+09:00",
+      "platform_post_id": "17986925963792706"
     }
   ]
 }
