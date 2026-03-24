@@ -18,7 +18,8 @@
       },
       "id": "post_20260324_x_002",
       "platform": "x",
-      "status": "queued"
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "pattern_name": "予告型・フォロー動機",
