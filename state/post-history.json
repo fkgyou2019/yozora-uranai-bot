@@ -265,6 +265,28 @@
       "status": "posted",
       "posted_at": "2026-03-24T10:37:42.342004+09:00",
       "platform_post_id": "18098716504985581"
+    },
+    {
+      "pattern_name": "コメント誘導型・個別回答②",
+      "category": "金運",
+      "content": "3日以内に\nお金の「ラッキー」が来そうな人、\nコメントで星座教えて🔮\n\n今週は金運が上がるタイミングです。\n\nあなたの星座を教えてくれたら\n具体的な開運アクション\n個別にお伝えしますね。\n\n火の星座（牡羊・獅子・射手）は\n特に積極的な動きがいいかも✨\n\n#金運",
+      "hashtag": "",
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 9,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 8,
+        "mobile_readability": 8,
+        "average": 8.4
+      },
+      "id": "post_20260324_014",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "posted_at": "2026-03-24T12:07:19.842256+09:00",
+      "platform_post_id": "18069671855270180"
     }
   ]
 }
