@@ -1,0 +1,57 @@
+name: Post Verify & Retry
+
+on:
+  # cron-job.org から投稿スロットの5分後にトリガー
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post-verify
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state files if missing
+        run: |
+          mkdir -p state config
+          [ ! -f state/post-queue.json ] && echo '{"queue":[]}' > state/post-queue.json
+          [ ! -f state/post-history.json ] && echo '{"posts":[]}' > state/post-history.json
+          [ ! -f state/system-status.json ] && echo '{"kill_switch":false,"consecutive_errors":0,"daily_post_count":0,"daily_post_date":"","agents":{"poster":{"status":"idle","last_run":null,"error_count":0}}}' > state/system-status.json
+          true
+
+      - name: Verify & retry post if needed
+        run: python .github/scripts/verify_post.py
+        env:
+          PYTHONIOENCODING: utf-8
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: "25853055367730058"
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit state changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin master || true
+          git add state/post-queue.json state/post-history.json state/system-status.json
+          if git diff --cached --quiet; then
+            echo "No state changes to commit"
+          else
+            git commit -m "chore: post-verify state update [skip ci]"
+            git push || (git pull --rebase origin master && git push)
+          fi

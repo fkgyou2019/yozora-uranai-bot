@@ -1,0 +1,315 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+投稿検証スクリプト: 投稿スロットの5分後に実行し、投稿成功を確認。
+失敗していればキューから再投稿、キュー空ならClaude APIで生成→即投稿。
+"""
+
+import json
+import os
+import re
+import sys
+import time
+import urllib.request
+import urllib.error
+import urllib.parse
+from datetime import datetime, timezone, timedelta
+
+JST = timezone(timedelta(hours=9))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# ---------------------------------------------------------------------------
+# ユーティリティ
+# ---------------------------------------------------------------------------
+
+def log(level, msg):
+    print(f"[{datetime.now(JST).strftime('%Y-%m-%d %H:%M:%S')}] [{level}] {msg}")
+
+
+def load_json(path):
+    full = os.path.join(PROJECT_DIR, path)
+    if os.path.exists(full):
+        with open(full, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def save_json(path, data):
+    full = os.path.join(PROJECT_DIR, path)
+    os.makedirs(os.path.dirname(full), exist_ok=True)
+    with open(full, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+# ---------------------------------------------------------------------------
+# Threads API: 最新投稿を取得
+# ---------------------------------------------------------------------------
+
+def fetch_latest_thread(user_id, access_token):
+    """Threads APIで最新投稿のtimestampを取得"""
+    url = (
+        f"https://graph.threads.net/v1.0/{user_id}/threads"
+        f"?fields=id,text,timestamp"
+        f"&limit=1"
+        f"&access_token={urllib.parse.quote(access_token, safe='')}"
+    )
+    try:
+        req = urllib.request.Request(url, method="GET")
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        posts = data.get("data", [])
+        if posts:
+            return posts[0]
+        return None
+    except Exception as e:
+        log("ERROR", f"Threads API 最新投稿取得失敗: {e}")
+        return None
+
+
+def is_recent_post(post, minutes=15):
+    """投稿が直近N分以内かチェック"""
+    if not post or "timestamp" not in post:
+        return False
+    # Threads APIのtimestampは ISO 8601 (例: 2024-01-01T12:00:00+0000)
+    ts_str = post["timestamp"]
+    try:
+        # タイムゾーン付きISO形式をパース
+        ts = datetime.fromisoformat(ts_str.replace("+0000", "+00:00"))
+    except ValueError:
+        # フォールバック: 手動パース
+        try:
+            ts = datetime.strptime(ts_str, "%Y-%m-%dT%H:%M:%S%z")
+        except ValueError:
+            log("WARN", f"timestamp パース失敗: {ts_str}")
+            return False
+
+    now = datetime.now(timezone.utc)
+    elapsed = (now - ts).total_seconds()
+    log("INFO", f"最新投稿: {elapsed:.0f}秒前 (閾値: {minutes * 60}秒)")
+    return elapsed <= minutes * 60
+
+
+# ---------------------------------------------------------------------------
+# Threads API: テキスト投稿
+# ---------------------------------------------------------------------------
+
+def threads_post_text(text, user_id, access_token):
+    """Threads APIでテキスト投稿（auto_publish_text で1コール完了）"""
+    url = f"https://graph.threads.net/v1.0/{user_id}/threads"
+    params = {
+        "media_type": "TEXT",
+        "text": text,
+        "auto_publish_text": "true",
+        "access_token": access_token,
+    }
+    data = urllib.parse.urlencode(params).encode("utf-8")
+
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(url, data=data, method="POST")
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+            return result.get("id")
+        except (urllib.error.URLError, OSError) as e:
+            log("WARN", f"Threads API リトライ {attempt + 1}/3: {e}")
+            if attempt < 2:
+                time.sleep(5)
+            else:
+                raise
+
+
+# ---------------------------------------------------------------------------
+# Claude API: 緊急1件生成
+# ---------------------------------------------------------------------------
+
+def generate_emergency_post(api_key):
+    """Claude APIで占い投稿を1件だけ緊急生成"""
+    now = datetime.now(JST)
+    prompt = f"""あなたは占いSNSアカウント「よぞら.」のThreads投稿ライターです。
+今すぐ投稿する占い投稿を1件だけ生成してください。
+
+【今日の日付】{now.strftime('%Y年%m月%d日')}
+【ペルソナ】月詠（つくよみ）: 穏やかで親しみやすい。共感的。敬語ベースだが柔らかい。
+【絵文字】🔮✨🌙⭐☀️ を自然に使用（1投稿に2-3個）
+
+【ルール】
+1. 文字数: 200-300文字
+2. 1行は15-22文字を目安
+3. 空行で3〜4ブロックに分割
+4. フック（1行目）は20文字以内
+5. トピックタグは末尾に1つだけ
+6. 1行目にCTAを置かない
+7. 答えを出し惜しみしない（星座名を明示）
+8. CTAは最後に配置（「🔮を置いた方に〜」系）
+
+JSON形式で1件だけ返してください:
+{{"content": "投稿本文", "hashtag": "#星座占い"}}
+"""
+
+    body = json.dumps({
+        "model": "claude-haiku-4-5-20251001",
+        "max_tokens": 1024,
+        "messages": [{"role": "user", "content": prompt}]
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        "https://api.anthropic.com/v1/messages",
+        data=body,
+        headers={
+            "Content-Type": "application/json",
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
+        },
+        method="POST",
+    )
+
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+            break
+        except Exception as e:
+            log("WARN", f"Claude API リトライ {attempt + 1}/3: {e}")
+            if attempt < 2:
+                time.sleep(5)
+            else:
+                log("ERROR", "Claude API 3回失敗。生成中止。")
+                return None
+
+    text = result["content"][0]["text"]
+    # JSONを抽出
+    m = re.search(r"\{.*\}", text, re.DOTALL)
+    if not m:
+        log("ERROR", f"Claude応答からJSONを抽出できません: {text[:200]}")
+        return None
+
+    try:
+        post_data = json.loads(m.group())
+        return post_data
+    except json.JSONDecodeError as e:
+        log("ERROR", f"JSON パースエラー: {e}")
+        return None
+
+
+# ---------------------------------------------------------------------------
+# state更新
+# ---------------------------------------------------------------------------
+
+def record_post_to_history(post_id, content, hashtag=""):
+    """投稿成功をhistory/queueに記録"""
+    now = datetime.now(JST)
+
+    # post-history.json に追加
+    history = load_json("state/post-history.json")
+    if "posts" not in history:
+        history["posts"] = []
+    history["posts"].append({
+        "id": f"verify-retry-{now.strftime('%Y%m%d%H%M%S')}",
+        "content": content,
+        "hashtag": hashtag,
+        "platform": "threads",
+        "status": "posted",
+        "posted_at": now.isoformat(),
+        "platform_post_id": post_id,
+        "source": "post-verify",
+    })
+    save_json("state/post-history.json", history)
+
+    # system-status.json 更新
+    status = load_json("state/system-status.json")
+    today = now.strftime("%Y-%m-%d")
+    if status.get("daily_post_date") != today:
+        status["daily_post_count"] = 0
+        status["daily_post_date"] = today
+    status["daily_post_count"] = status.get("daily_post_count", 0) + 1
+    status["consecutive_errors"] = 0
+    save_json("state/system-status.json", status)
+
+    log("INFO", f"state更新完了 (post_id={post_id})")
+
+
+# ---------------------------------------------------------------------------
+# メイン処理
+# ---------------------------------------------------------------------------
+
+def main():
+    access_token = os.environ.get("THREADS_ACCESS_TOKEN", "")
+    user_id = os.environ.get("THREADS_USER_ID", "")
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+
+    if not access_token or not user_id:
+        log("ERROR", "THREADS_ACCESS_TOKEN / THREADS_USER_ID が未設定")
+        sys.exit(1)
+
+    # kill switch チェック
+    status = load_json("state/system-status.json")
+    if status.get("kill_switch", False):
+        log("INFO", "KILL_SWITCH がONのため停止")
+        return
+
+    # ステップ1: 最新投稿を確認
+    log("INFO", "最新投稿を確認中...")
+    latest = fetch_latest_thread(user_id, access_token)
+
+    if is_recent_post(latest, minutes=15):
+        log("INFO", "OK: 直近15分以内に投稿あり。再投稿不要。")
+        return
+
+    log("WARN", "直近15分以内に投稿なし。再投稿を開始します。")
+
+    # ステップ2: キューから1件取り出して投稿
+    queue = load_json("state/post-queue.json")
+    pending = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
+
+    if pending:
+        post = pending[0]
+        content = post.get("content", "")
+        hashtag = post.get("hashtag", "")
+        full_text = f"{content}\n\n{hashtag}" if hashtag else content
+
+        log("INFO", f"キューから再投稿: {content[:30]}...")
+        try:
+            post_id = threads_post_text(full_text, user_id, access_token)
+            log("INFO", f"再投稿成功: {post_id}")
+
+            # キューから削除
+            post["status"] = "posted"
+            post["posted_at"] = datetime.now(JST).isoformat()
+            post["platform_post_id"] = post_id
+            post["source"] = "post-verify"
+            queue["queue"] = [p for p in queue["queue"] if p.get("id") != post.get("id")]
+            save_json("state/post-queue.json", queue)
+
+            record_post_to_history(post_id, content, hashtag)
+            return
+        except Exception as e:
+            log("ERROR", f"キューからの再投稿失敗: {e}")
+            # フォールスルーしてClaude生成を試行
+
+    # ステップ3: キュー空 or キュー投稿失敗 → Claude APIで生成→即投稿
+    if not api_key:
+        log("ERROR", "ANTHROPIC_API_KEY が未設定。生成できません。")
+        sys.exit(1)
+
+    log("INFO", "キューが空のためClaude APIで緊急生成...")
+    post_data = generate_emergency_post(api_key)
+    if not post_data:
+        log("ERROR", "緊急生成失敗。終了。")
+        sys.exit(1)
+
+    content = post_data.get("content", "")
+    hashtag = post_data.get("hashtag", "")
+    full_text = f"{content}\n\n{hashtag}" if hashtag else content
+
+    log("INFO", f"生成完了。即投稿: {content[:30]}...")
+    try:
+        post_id = threads_post_text(full_text, user_id, access_token)
+        log("INFO", f"緊急投稿成功: {post_id}")
+        record_post_to_history(post_id, content, hashtag)
+    except Exception as e:
+        log("ERROR", f"緊急投稿失敗: {e}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

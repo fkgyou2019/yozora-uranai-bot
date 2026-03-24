@@ -258,12 +258,37 @@ def x_post_tweet(text):
 # =============================================
 def post_one():
     """キューから1件取り出して投稿"""
+    try:
+        _post_one_inner()
+    except SystemExit:
+        raise  # kill_switch等のsys.exit()は再送出
+    except Exception as e:
+        log("ERROR", f"post_one() で予期しない例外が発生: {e}")
+        import traceback
+        traceback.print_exc()
+        try:
+            update_agent_status("poster", "error")
+        except Exception:
+            pass
+
+
+def _post_one_inner():
+    """post_one() の内部実装"""
     check_kill_switch()
 
     queue = load_json("state/post-queue.json")
     history = load_json("state/post-history.json")
     status = load_json("state/system-status.json")
     safety = load_json("config/safety.json")
+
+    # errorステータスの投稿をキューからクリーンアップ
+    error_posts = [p for p in queue.get("queue", []) if p.get("status") == "error"]
+    if error_posts:
+        log("INFO", f"errorステータスの投稿を{len(error_posts)}件キューから除去")
+        for ep in error_posts:
+            log("INFO", f"  除去: id={ep.get('id', '?')} error={ep.get('error', '不明')}")
+        queue["queue"] = [p for p in queue.get("queue", []) if p.get("status") != "error"]
+        save_json("state/post-queue.json", queue)
 
     # 安全チェック（3段階）
     if not check_banned_hours(safety):
@@ -303,12 +328,47 @@ def post_one():
     update_agent_status("poster", "running")
     platform = post.get("platform", "threads")
 
+    # マルチアカウント: account_id からアカウント情報を解決
+    from agents.account_manager import (
+        get_account, get_credentials, select_next_account,
+        record_post as am_record_post, record_error as am_record_error,
+        check_account_daily_limit, check_account_interval,
+    )
+
+    account_id = post.get("account_id")
+    account = None
+    if account_id:
+        account = get_account(account_id)
+        if account and not check_account_daily_limit(account_id, account):
+            log("INFO", f"アカウント {account_id} の日次上限に到達。スキップ")
+            post["status"] = "queued"  # 戻す
+            save_json("state/post-queue.json", queue)
+            return
+        if account and not check_account_interval(account_id, account):
+            log("INFO", f"アカウント {account_id} の投稿間隔未達。スキップ")
+            post["status"] = "queued"
+            save_json("state/post-queue.json", queue)
+            return
+    else:
+        # account_id 未指定 → 自動選択（後方互換: 環境変数フォールバック）
+        account = select_next_account(platform)
+        if account:
+            account_id = account["id"]
+            log("INFO", f"アカウント自動選択: {account_id}")
+
     try:
         post_id = None
 
         if platform == "threads":
-            user_id = os.environ.get("THREADS_USER_ID", "")
-            access_token = os.environ.get("THREADS_ACCESS_TOKEN", "")
+            # マルチアカウント: accounts.json から認証情報を取得
+            if account:
+                creds = get_credentials(account)
+                user_id = creds.get("user_id", "")
+                access_token = creds.get("access_token", "")
+            else:
+                # 後方互換: 環境変数から取得
+                user_id = os.environ.get("THREADS_USER_ID", "")
+                access_token = os.environ.get("THREADS_ACCESS_TOKEN", "")
             if not user_id or not access_token:
                 raise ValueError("THREADS_USER_ID / THREADS_ACCESS_TOKEN が未設定")
 
@@ -318,7 +378,7 @@ def post_one():
                 content = f"{content}\n\n{hashtag}"
 
             post_id = threads_post_text(content, user_id, access_token)
-            log("INFO", f"Threads投稿完了: {post_id}")
+            log("INFO", f"Threads投稿完了: {post_id} (account={account_id or 'default'})")
 
             # アフィリエイト投稿の場合、コメントでPRリンク
             if post.get("is_affiliate") and post.get("affiliate_comment"):
@@ -333,18 +393,44 @@ def post_one():
             hashtag = post.get("hashtag", "")
             if hashtag:
                 content = f"{content}\n\n{hashtag}"
-            # X は140文字制限
             if len(content) > 280:
+                log("WARN", f"X投稿が280文字超過({len(content)}文字)。トリミングします。")
                 content = content[:277] + "..."
-            post_id = x_post_tweet(content)
-            log("INFO", f"X投稿完了: {post_id}")
+
+            # マルチアカウント: accounts.json から認証情報を取得
+            if account:
+                creds = get_credentials(account)
+                consumer_key = os.environ.get("X_API_KEY", "")
+                consumer_secret = os.environ.get("X_API_SECRET", "")
+                acc_token = creds.get("access_token", "")
+                acc_secret = creds.get("access_token_secret", "")
+                if acc_token and acc_secret:
+                    url = "https://api.twitter.com/2/tweets"
+                    body = json.dumps({"text": content}).encode("utf-8")
+                    auth_header = x_create_oauth_header(
+                        "POST", url, {}, consumer_key, consumer_secret, acc_token, acc_secret
+                    )
+                    req = urllib.request.Request(
+                        url, data=body,
+                        headers={"Content-Type": "application/json", "Authorization": auth_header},
+                        method="POST",
+                    )
+                    with urllib.request.urlopen(req, timeout=30) as resp:
+                        result = json.loads(resp.read().decode("utf-8"))
+                    post_id = result.get("data", {}).get("id")
+                else:
+                    post_id = x_post_tweet(content)
+            else:
+                post_id = x_post_tweet(content)
+
+            log("INFO", f"X投稿完了: {post_id} ({len(content)}文字, account={account_id or 'default'})")
 
             # リポスト待ちキューに追加（別ワークフローが処理）
             if post_id:
                 try:
                     repost_config = load_json("config/repost.json")
                     if repost_config.get("enabled", False):
-                        source_account = post.get("repost_source_account", "account_1")
+                        source_account = post.get("repost_source_account", account_id or "account_1")
                         pending_repost = load_json("state/pending-reposts.json")
                         if "pending" not in pending_repost:
                             pending_repost["pending"] = []
@@ -362,6 +448,8 @@ def post_one():
         post["status"] = "posted"
         post["posted_at"] = datetime.now(JST).isoformat()
         post["platform_post_id"] = post_id
+        if account_id:
+            post["account_id"] = account_id
 
         if "posts" not in history:
             history["posts"] = []
@@ -380,12 +468,19 @@ def post_one():
             status["agents"]["poster"]["last_run"] = datetime.now(JST).isoformat()
         save_json("state/system-status.json", status)
 
+        # マルチアカウント: アカウント別ステータス記録
+        if account_id:
+            am_record_post(account_id)
+
     except Exception as e:
         log("ERROR", f"投稿失敗: {e}")
         post["status"] = "error"
         post["error"] = str(e)
         save_json("state/post-queue.json", queue)
         update_agent_status("poster", "error")
+        # マルチアカウント: アカウント別エラー記録
+        if account_id:
+            am_record_error(account_id, str(e))
 
 
 if __name__ == "__main__":
