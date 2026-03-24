@@ -1,3 +1,104 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "図星突き型・睡眠",
+      "category": "ウェルネス",
+      "content": "今これ見てるあんた、\nちゃんと寝てないでしょ。\n\n「大丈夫」って言いながら\n全然大丈夫じゃない顔してる。\n\n今日やること1つだけ。\n23時にスマホ置いて寝なさい。\n\nあんたが倒れたら困る人がいるの。\n\nこの投稿、3日後に見返しなさい。変わってるから。\n\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260324_x_002",
+      "platform": "x",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "予告型・フォロー動機",
+      "category": "予告メッセージ",
+      "content": "来週、12星座の中で\n最も恋愛が動く星座。\n\n蟹座さんです。\n\n新しい出会いか、\n既存の関係の深まりか。\nどちらにしろ、\nあなたの気持ちが試される時期。\n\n迷わず、心の声を聞いてください。\n\n明日は牡羊座さんの\n仕事運を深掘りします🔮\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 8,
+        "mobile_readability": 9,
+        "average": 8.17
+      },
+      "id": "post_20260324_th_002",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "二択迫り型・頑張り診断",
+      "category": "メンタル",
+      "content": "正直に答えなさい。\n\n今のあんた、\n\nA. 頑張りすぎて限界近い\nB. サボりすぎて焦ってる\n\nどっちかでしょ。\n\nAの人 → 今週は手抜きしなさい\nBの人 → 今日中に1つだけ片付けなさい\n\n引用で教えて。見当つかなかったら謝るから。\n\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.67
+      },
+      "id": "post_20260324_x_003",
+      "platform": "x",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "週間予告型・火木金フロー",
+      "category": "週間予報",
+      "content": "今週、あたしが見た星の動き。\n\n火曜：人間関係が揺れる\n木曜：決断を迫られる\n金曜：答えが出る\n\n焦って動くな。\nこの3日の流れを待てた人だけが勝つ。\n\nこの投稿、金曜に見返しなさい。\n\n#今週の運勢",
+      "hashtag": "#今週の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.5
+      },
+      "id": "post_20260324_x_004",
+      "platform": "x",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "星座呼びかけ型・蠍座火曜",
+      "category": "シリーズ・個別星座",
+      "content": "蠍座のあんた、今日だけは黙ってなさい。\n\n来る話の9割、ハズレ。\n「いいかも」で飛びつくと\n3日後に泣く。\n\n15時までの連絡は無視。\n15時以降の話だけが本物。\n\nこのルール守れた人だけ\n来週褒めてあげる。\n\n#蠍座 #今日の運勢",
+      "hashtag": "#蠍座 #今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.83
+      },
+      "id": "post_20260324_x_005",
+      "platform": "x",
+      "status": "queued"
+    }
+  ]
 }
