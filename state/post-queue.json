@@ -39,7 +39,8 @@
       },
       "id": "post_20260324_x_003",
       "platform": "x",
-      "status": "queued"
+      "status": "error",
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "pattern_name": "週間予告型・火木金フロー",
