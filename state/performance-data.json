@@ -155,7 +155,33 @@
         "hook_length": 14
       },
       "collected_at": "2026-03-24T15:07:15.920026+09:00"
+    },
+    {
+      "id": "post_20260323_008",
+      "platform_post_id": "17960015621921471",
+      "posted_at": "2026-03-23T17:36:56.441930+09:00",
+      "pattern_name": "限定×恐怖型・恋愛",
+      "category": "恋愛運",
+      "content_preview": "12星座中、たった3つだけ。\n\n今週、恋の流れが\nドラマティックに変わる星座があります。\n\nそれは蟹",
+      "first_line": "12星座中、たった3つだけ。",
+      "char_count": 150,
+      "metrics": {
+        "views": 559,
+        "likes": 57,
+        "replies": 62,
+        "reposts": 0,
+        "engagement_rate": 21.29
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 14
+      },
+      "collected_at": "2026-03-24T19:07:14.928643+09:00"
     }
   ],
-  "last_updated": "2026-03-24T15:07:15.920026+09:00"
+  "last_updated": "2026-03-24T19:07:14.928643+09:00"
 }

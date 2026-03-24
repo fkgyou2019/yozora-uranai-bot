@@ -1,32 +1,39 @@
 {
-  "data_count": 6,
-  "last_analyzed": "2026-03-24T15:07:16.248942+09:00",
+  "data_count": 7,
+  "last_analyzed": "2026-03-24T19:07:15.168084+09:00",
   "confidence": "low",
   "top_patterns": [
     {
       "pattern": "ランキング型",
-      "weight": 31,
+      "weight": 23,
       "avg_engagement": 21.32,
       "sample_count": 3,
       "reason": "eng率21.3% (3件)"
     },
     {
+      "pattern": "限定×恐怖型・恋愛",
+      "weight": 23,
+      "avg_engagement": 21.29,
+      "sample_count": 1,
+      "reason": "eng率21.3% (1件)"
+    },
+    {
       "pattern": "限定型・恐怖×期待",
-      "weight": 29,
+      "weight": 22,
       "avg_engagement": 20.13,
       "sample_count": 1,
       "reason": "eng率20.1% (1件)"
     },
     {
       "pattern": "限定型",
-      "weight": 23,
+      "weight": 18,
       "avg_engagement": 16.1,
       "sample_count": 1,
       "reason": "eng率16.1% (1件)"
     },
     {
       "pattern": "星座別アドバイス型",
-      "weight": 15,
+      "weight": 11,
       "avg_engagement": 10.39,
       "sample_count": 1,
       "reason": "eng率10.4% (1件)"
@@ -40,6 +47,14 @@
       "avg_views": 254.0,
       "total_likes": 106,
       "total_replies": 14
+    },
+    {
+      "pattern": "限定×恐怖型・恋愛",
+      "count": 1,
+      "avg_engagement": 21.29,
+      "avg_views": 559.0,
+      "total_likes": 57,
+      "total_replies": 62
     },
     {
       "pattern": "限定型・恐怖×期待",
@@ -69,13 +84,13 @@
   "feature_ranking": [
     {
       "feature": "has_number_hook",
-      "count": 3,
-      "avg_engagement": 22.63
+      "count": 4,
+      "avg_engagement": 22.29
     },
     {
       "feature": "has_cta_emoji",
-      "count": 4,
-      "avg_engagement": 22.47
+      "count": 5,
+      "avg_engagement": 22.23
     },
     {
       "feature": "has_ranking",
@@ -95,6 +110,11 @@
       "avg_eng": 22.0
     },
     {
+      "style": "限定×恐怖型・恋愛",
+      "example": "12星座中、たった3つだけ。",
+      "avg_eng": 21.29
+    },
+    {
       "style": "限定型・恐怖×期待",
       "example": "12星座中、たった3つだけ。",
       "avg_eng": 20.13
@@ -103,11 +123,6 @@
       "style": "限定型",
       "example": "12星座中、たった2つだけ。",
       "avg_eng": 16.1
-    },
-    {
-      "style": "星座別アドバイス型",
-      "example": "獅子座さんへ。",
-      "avg_eng": 10.39
     }
   ],
   "top_cta_styles": [
@@ -139,6 +154,16 @@
       "content_preview": "【来週、仕事が\n急に動く星座TOP3】\n\n第3位は水瓶座。\n新しいプロジェクトが\n舞い込みます。\n\n"
     },
     {
+      "id": "post_20260323_008",
+      "pattern": "限定×恐怖型・恋愛",
+      "eng_rate": 21.29,
+      "views": 559,
+      "likes": 57,
+      "replies": 62,
+      "first_line": "12星座中、たった3つだけ。",
+      "content_preview": "12星座中、たった3つだけ。\n\n今週、恋の流れが\nドラマティックに変わる星座があります。\n\nそれは蟹"
+    },
+    {
       "id": "post_20260323_007",
       "pattern": "限定型・恐怖×期待",
       "eng_rate": 20.13,
@@ -157,23 +182,13 @@
       "replies": 25,
       "first_line": "12星座中、たった2つだけ。",
       "content_preview": "12星座中、たった2つだけ。\n\n3月下旬に急に\n「好きな人」から\n連絡が来る星座があります。\n\nそれ"
-    },
-    {
-      "id": "post_20260322_020",
-      "pattern": "星座別アドバイス型",
-      "eng_rate": 10.39,
-      "views": 231,
-      "likes": 24,
-      "replies": 0,
-      "first_line": "獅子座さんへ。",
-      "content_preview": "獅子座さんへ。\n\n春分を過ぎて、\nあなたの中で眠っていた\n創造力が目覚める時期です。\n\n周囲の声より"
     }
   ],
   "avoid_patterns": [],
   "insights": [
     "最強パターン: ランキング型（eng率21.3%）",
-    "数字フックあり → avg eng 22.6%",
-    "絵文字CTAあり → avg eng 22.5%",
+    "数字フックあり → avg eng 22.3%",
+    "絵文字CTAあり → avg eng 22.2%",
     "ランキング形式あり → avg eng 21.3%"
   ]
 }

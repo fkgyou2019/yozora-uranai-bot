@@ -309,6 +309,28 @@
       "status": "posted",
       "posted_at": "2026-03-24T15:07:20.997745+09:00",
       "platform_post_id": "18074510210184400"
+    },
+    {
+      "pattern_name": "コメント誘導型・個別回答④",
+      "category": "恋愛運",
+      "content": "当たってた人、\nコメントで教えて✨\n\nこの前の\n「恋愛運が上がる星座」の投稿。\n\n実際に当てはまったら\nコメント欄に星座を書いてくれたら、\n次はもっと詳しく\nあなたの恋を見ますね。\n\n次の満月までに\n大きな変化が起きるはずです🌙\n\n#恋愛運",
+      "hashtag": "",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260324_016",
+      "platform": "threads",
+      "status": "posted",
+      "posted_at": "2026-03-24T19:08:03.543530+09:00",
+      "platform_post_id": "18137355229502914"
     }
   ]
 }
