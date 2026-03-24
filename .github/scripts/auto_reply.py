@@ -121,7 +121,7 @@ def generate_reply(comment_text, original_post_text, commenter_name, recent_repl
 
 {recent_block}
 【返信ルール】
-1. 冒頭に「@{commenter_name} さん\\n」から始めること（必須。さんの後に必ず改行\\n）
+1. 冒頭に「@{commenter_name} さん\\n\\n」から始めること（必須。さんの後に空行1つ）
 2. {'星座コメントの場合は3-4行（80-120文字）で個別アドバイスを含める' if found_zodiac else '1-2行の短い返信（40-60文字が理想）'}。名前行は文字数に含めない
 3. 温かく、でも毎回違う表現で
 4. 絵文字は1個まで（🌙✨🔮⭐のいずれか）
@@ -137,8 +137,13 @@ def generate_reply(comment_text, original_post_text, commenter_name, recent_repl
 7. 相手のコメントに文章がある場合は、その内容に具体的に触れる
 8. 相手の星座が分かれば星座に触れる
 9. 直近の返信と絶対に同じ言い回しを使わない
+10. 【改行ルール（重要）】
+   - 1行は最大20文字。超えたら改行する
+   - 名前の後は必ず空行を入れる
+   - 2文以上の返信は文と文の間に改行を入れる
+   - スマホで読みやすいように詰め込まない
 
-返信文のみを出力。「@{commenter_name} さん\\n本文」の形式で。余計な説明不要。"""
+返信文のみを出力。「@{commenter_name} さん\\n\\n本文」の形式で。余計な説明不要。"""
 
     body = json.dumps({
         "model": "claude-haiku-4-5-20251001",
