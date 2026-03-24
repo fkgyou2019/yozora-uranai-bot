@@ -243,6 +243,28 @@
       "status": "posted",
       "posted_at": "2026-03-24T09:07:45.055764+09:00",
       "platform_post_id": "17986925963792706"
+    },
+    {
+      "pattern_name": "シリーズ型・火曜定番",
+      "category": "総合運",
+      "content": "【毎週火曜】蟹座さんへの手紙\n\n今週のあなたは\n「選択の時期」を迎えています。\n\n複数の道が見えてるのかもしれません。\nでも大丈夫。直感が冴えてる時期です。\n\n迷ったときは\n「心がときめく方」を選んでください。\n\n来週も深掘りしますね。\nフォローしておくと\n毎日の運勢も届きますよ🌙\n\n#星座占い",
+      "hashtag": "",
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260324_012",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "posted_at": "2026-03-24T10:37:42.342004+09:00",
+      "platform_post_id": "18098716504985581"
     }
   ]
 }
