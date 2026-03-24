@@ -2,7 +2,6 @@ name: Auto Post to Threads
 
 on:
   # cron-job.org から workflow_dispatch で確実にトリガー（100%発火）
-  # GitHub Actions の cron は不安定（60-70%発火率）のため廃止
   # スケジュール: 07:07, 09:07, 10:37, 12:07, 15:07, 19:07, 20:37, 21:37 JST
   workflow_dispatch:
 
@@ -31,7 +30,7 @@ jobs:
 
       - name: Initialize state files if missing
         run: |
-          mkdir -p state
+          mkdir -p state config
           if [ ! -f state/post-queue.json ]; then
             echo '{"queue":[]}' > state/post-queue.json
           fi
@@ -56,6 +55,9 @@ jobs:
           }
           EOJSON
           fi
+          [ ! -f state/performance-data.json ] && echo '{"posts":[],"last_updated":null}' > state/performance-data.json
+          [ ! -f state/winning-patterns.json ] && echo '{}' > state/winning-patterns.json
+          true
 
       - name: Create api-keys.env from secrets
         run: |
@@ -65,25 +67,41 @@ jobs:
           THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
           EOF
 
-      - name: Initialize learning state files
+      - name: Create x-accounts.json from secret
         run: |
-          [ ! -f state/performance-data.json ] && echo '{"posts":[],"last_updated":null}' > state/performance-data.json
-          [ ! -f state/winning-patterns.json ] && echo '{}' > state/winning-patterns.json
-          true
+          if [ -n "$X_ACCOUNTS_JSON" ]; then
+            echo "$X_ACCOUNTS_JSON" > config/x-accounts.json
+          fi
+        env:
+          X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
 
+      # ========================================
+      # 投稿を最優先で実行（タイムラグ解消）
+      # ========================================
+      - name: Post one from queue (最優先)
+        run: python agents/poster.py
+        env:
+          PYTHONIOENCODING: utf-8
+          X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
+
+      # ========================================
+      # 学習ループは投稿後に実行（失敗しても投稿に影響しない）
+      # ========================================
       - name: Fetch metrics & analyze (learning loop)
         run: |
           python .github/scripts/fetch_metrics.py
           python .github/scripts/analyze_patterns.py
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        continue-on-error: true
 
       - name: Generate posts if queue is empty
         run: python .github/scripts/generate_posts.py
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        continue-on-error: true
 
-      - name: Quality check (rule-based, not AI self-score)
+      - name: Quality check (rule-based)
         run: python .github/scripts/quality_check.py
         continue-on-error: true
 
@@ -97,20 +115,7 @@ jobs:
           fi
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-
-      - name: Create x-accounts.json from secret
-        run: |
-          if [ -n "$X_ACCOUNTS_JSON" ]; then
-            echo "$X_ACCOUNTS_JSON" > config/x-accounts.json
-          fi
-        env:
-          X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
-
-      - name: Post one from queue
-        run: python agents/poster.py
-        env:
-          PYTHONIOENCODING: utf-8
-          X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
+        continue-on-error: true
 
       - name: Commit state changes
         run: |

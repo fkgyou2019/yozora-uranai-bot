@@ -19,14 +19,32 @@
     "note": "generate_posts.pyで実装。0.45超で類似と判定し除外"
   },
   "posting_safety": {
-    "min_interval_seconds": 3600,
-    "max_posts_per_day": 8,
-    "max_affiliate_posts_per_day": 1,
+    "min_interval_seconds": 1200,
+    "max_posts_per_day": 10,
+    "max_posts_per_day_x": 5,
+    "max_posts_per_day_threads": 5,
+    "max_affiliate_posts_per_day": 2,
     "affiliate_enabled": false,
     "affiliate_note": "ASP登録完了後にtrueに変更。asp-links.jsonのaffiliate_urlも実URLに差替えること",
     "duplicate_check": true,
     "banned_hours": [1, 2, 3, 4, 5, 6],
-    "note": "1時間以上間隔 / 1日8件上限 / 深夜1-6時は投稿禁止（7時は朝一投稿のため除外）"
+    "note": "30分以上間隔 / 1日10件上限(X5+Threads5) / 深夜1-6時は投稿禁止",
+    "platform_rules": {
+      "x": {
+        "max_chars": 280,
+        "optimal_chars": "80-140",
+        "max_hashtags": 2,
+        "link_in_content": false,
+        "note": "リンクは自己リプまたはプロフ誘導のみ"
+      },
+      "threads": {
+        "max_chars": 500,
+        "optimal_chars": "200-300",
+        "max_topic_tags": 1,
+        "link_in_content": true,
+        "note": "リンクペナルティなし。本文に直接貼れる"
+      }
+    }
   },
   "error_handling": {
     "max_consecutive_errors": 3,
