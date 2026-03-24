@@ -22,26 +22,6 @@
       "error": "HTTP Error 401: Unauthorized"
     },
     {
-      "pattern_name": "予告型・フォロー動機",
-      "category": "予告メッセージ",
-      "content": "来週、12星座の中で\n最も恋愛が動く星座。\n\n蟹座さんです。\n\n新しい出会いか、\n既存の関係の深まりか。\nどちらにしろ、\nあなたの気持ちが試される時期。\n\n迷わず、心の声を聞いてください。\n\n明日は牡羊座さんの\n仕事運を深掘りします🔮\n\n#星座占い",
-      "hashtag": "#星座占い",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 7,
-        "specificity": 8,
-        "tempo": 9,
-        "persona_match": 8,
-        "mobile_readability": 9,
-        "average": 8.17
-      },
-      "id": "post_20260324_th_002",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
       "pattern_name": "二択迫り型・頑張り診断",
       "category": "メンタル",
       "content": "正直に答えなさい。\n\n今のあんた、\n\nA. 頑張りすぎて限界近い\nB. サボりすぎて焦ってる\n\nどっちかでしょ。\n\nAの人 → 今週は手抜きしなさい\nBの人 → 今日中に1つだけ片付けなさい\n\n引用で教えて。見当つかなかったら謝るから。\n\n#今日の運勢",

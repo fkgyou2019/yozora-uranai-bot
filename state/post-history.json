@@ -331,6 +331,28 @@
       "status": "posted",
       "posted_at": "2026-03-24T19:08:03.543530+09:00",
       "platform_post_id": "18137355229502914"
+    },
+    {
+      "pattern_name": "予告型・フォロー動機",
+      "category": "予告メッセージ",
+      "content": "来週、12星座の中で\n最も恋愛が動く星座。\n\n蟹座さんです。\n\n新しい出会いか、\n既存の関係の深まりか。\nどちらにしろ、\nあなたの気持ちが試される時期。\n\n迷わず、心の声を聞いてください。\n\n明日は牡羊座さんの\n仕事運を深掘りします🔮\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 8,
+        "mobile_readability": 9,
+        "average": 8.17
+      },
+      "id": "post_20260324_th_002",
+      "platform": "threads",
+      "status": "posted",
+      "posted_at": "2026-03-24T21:37:18.885167+09:00",
+      "platform_post_id": "18016823117829673"
     }
   ]
 }
