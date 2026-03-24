@@ -1,0 +1,35 @@
+{
+  "description": "バズ投稿監視対象アカウント",
+  "x_accounts": [
+    {
+      "username": "example_uranai",
+      "user_id": "",
+      "category": "占い",
+      "note": "ここにX占いアカウントを追加"
+    }
+  ],
+  "threads_accounts": [
+    {
+      "username": "example.uranai",
+      "category": "占い",
+      "note": "ここにThreads占いアカウントを追加"
+    }
+  ],
+  "search_keywords": {
+    "primary": ["占い", "星座", "今日の運勢", "タロット"],
+    "secondary": ["スピリチュアル", "開運", "金運", "恋愛運", "満月", "新月"],
+    "hashtags": ["#今日の占い", "#星座占い", "#タロット占い", "#スピリチュアル", "#12星座"]
+  },
+  "buzz_threshold": {
+    "x": {
+      "min_likes": 100,
+      "min_retweets": 20,
+      "min_impressions": 5000
+    },
+    "threads": {
+      "min_likes": 50,
+      "min_replies": 10,
+      "min_views": 1000
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "description": "手動でバズ投稿を追加するファイル。他アカウントのバズった投稿をここにコピペ",
+  "how_to_use": "postsに投稿を追加 → 次回のbuzz-learnで自動取り込み → processedフラグがtrueに",
+  "posts": []
+}

@@ -23,6 +23,7 @@
     "max_posts_per_day": 8,
     "max_affiliate_posts_per_day": 1,
     "affiliate_enabled": false,
+    "affiliate_note": "ASP登録完了後にtrueに変更。asp-links.jsonのaffiliate_urlも実URLに差替えること",
     "duplicate_check": true,
     "banned_hours": [1, 2, 3, 4, 5, 6],
     "note": "1時間以上間隔 / 1日8件上限 / 深夜1-6時は投稿禁止（7時は朝一投稿のため除外）"

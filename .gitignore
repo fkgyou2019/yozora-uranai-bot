@@ -1,5 +1,8 @@
 # API Keys (絶対にコミットしない)
+.env
+.env.*
 config/api-keys.env
+config/x-accounts.json
 
 # State temp files
 state/_tmp_*

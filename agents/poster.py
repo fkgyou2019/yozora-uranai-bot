@@ -20,17 +20,24 @@ JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-def load_env():
-    env_file = os.path.join(PROJECT_DIR, "config", "api-keys.env")
-    if not os.path.exists(env_file):
-        print("[ERROR] config/api-keys.env が見つかりません")
-        sys.exit(1)
-    with open(env_file, "r", encoding="utf-8") as f:
+def _read_env_file(path):
+    if not os.path.exists(path):
+        return False
+    with open(path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line and not line.startswith("#") and "=" in line:
                 key, value = line.split("=", 1)
-                os.environ[key.strip()] = value.strip()
+                os.environ.setdefault(key.strip(), value.strip())
+    return True
+
+
+def load_env():
+    primary = os.path.join(PROJECT_DIR, "config", "api-keys.env")
+    fallback = os.path.join(PROJECT_DIR, ".env")
+    if not _read_env_file(primary) and not _read_env_file(fallback):
+        print("[ERROR] config/api-keys.env も .env も見つかりません")
+        sys.exit(1)
 
 
 def load_json(path):

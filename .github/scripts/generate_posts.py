@@ -111,6 +111,16 @@ def main():
         history = {"posts": []}
 
     winning = load_json("state/winning-patterns.json")
+    safety = load_json("config/safety.json")
+    asp_links = load_json("knowledge/uranai/asp-links.json")
+
+    # アフィリエイト設定
+    affiliate_enabled = safety.get("posting_safety", {}).get("affiliate_enabled", False)
+    # 今日既にアフィリエイト投稿しているかチェック
+    today_posts = [p for p in history.get("posts", [])
+                   if p.get("posted_at", "").startswith(datetime.now(JST).strftime("%Y-%m-%d"))]
+    affiliate_today = any(p.get("is_affiliate") for p in today_posts)
+    should_generate_affiliate = affiliate_enabled and not affiliate_today
 
     used_patterns = [p.get("pattern_name", "") for p in history.get("posts", [])[-15:]]
     now = datetime.now(JST)
@@ -268,8 +278,23 @@ CTAの後に、以下のようなフォロー誘導を自然に入れる:
 ・「毎日届く星占い、\\nフォローで受け取れます✨」
 ※ 全投稿に入れるとBot臭くなるので、10件中2件だけ。
 
+{'【アフィリエイト投稿ルール（10件中1件目をアフィリエイト投稿にする）】' if should_generate_affiliate else ''}
+{f"""■ アフィリエイト対象案件:
+""" + chr(10).join(f"  ・{c['name']}（{c['reward']}）: {c['pr_text_templates'][0]}" for c in asp_links.get('campaigns', [])[:3]) + f"""
+
+■ アフィリエイト投稿の形式:
+  - 本文: 有益な占いコンテンツ（リンクなし、普通の投稿と同じ品質）
+  - affiliate_comment: コメント欄用PRテキスト（「ちなみに〜」で始まる自然な導入 + ASPリンクURL + ※PR表記）
+  - is_affiliate: true
+  - カテゴリ: 恋愛運（電話占い案件と相性◎）
+  - 投稿時間: 21:37枠（夜のリラックスタイム=CV率最高）
+
+■ affiliate_commentのテンプレート:
+  "ちなみに、本格的な鑑定を受けたい方はこちらもおすすめです👇\\n初回無料体験あり🔮\\n[ASPリンクURL]\\n※PR"
+""" if should_generate_affiliate else ''}
+
 【生成ルール】
-1. 10件生成（アフィリエイトなし）
+1. 10件生成{'（うち1件目はアフィリエイト投稿）' if should_generate_affiliate else '（アフィリエイトなし）'}
 2. 各投稿は150-300文字
 3. 具体的な星座名を含める
 4. パターン配分（厳守）:
@@ -294,9 +319,12 @@ CTAの後に、以下のようなフォロー誘導を自然に入れる:
     "category": "カテゴリ",
     "content": "投稿本文（\\nで改行、末尾にCTA+ハッシュタグ含む）",
     "hashtag": "",
+    "is_affiliate": false,
+    "affiliate_comment": null,
     "quality_score": {{"hook":8,"usefulness":8,"specificity":8,"tempo":8,"persona_match":8,"mobile_readability":8,"average":8.0}}
   }}
 ]
+{'※ 1件目はis_affiliate: true、affiliate_commentにPRテキストを入れること' if should_generate_affiliate else ''}
 """
 
     body = json.dumps({
@@ -428,11 +456,21 @@ CTAの後に、以下のようなフォロー誘導を自然に入れる:
 
     posts.sort(key=sort_key)
 
+    # アフィリエイト投稿は最後尾に移動（21:37枠で投稿されるように）
+    affiliate_posts = [p for p in posts if p.get("is_affiliate")]
+    normal_posts = [p for p in posts if not p.get("is_affiliate")]
+    posts = normal_posts + affiliate_posts
+
     for i, p in enumerate(posts):
         p["id"] = f"post_{today_str}_{post_count + i + 1:03d}"
         p["platform"] = "threads"
-        p["is_affiliate"] = False
-        p["affiliate_comment"] = None
+        # アフィリエイトが無効なら強制off、有効なら生成結果を尊重
+        if not affiliate_enabled:
+            p["is_affiliate"] = False
+            p["affiliate_comment"] = None
+        else:
+            p.setdefault("is_affiliate", False)
+            p.setdefault("affiliate_comment", None)
         p["status"] = "queued"
         queue["queue"].append(p)
 
