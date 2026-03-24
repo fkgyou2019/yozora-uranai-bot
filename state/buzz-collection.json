@@ -1,0 +1,111 @@
+{
+  "posts": [
+    {
+      "id": "buzz_own_best_20260325_070402_000",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "【金運が急上昇する星座TOP3】\n\n🥉第3位：山羊座。\n地道な努力が報われる時期です。\n\n🥈第2位：",
+      "metrics": {
+        "likes": 79,
+        "retweets": 0,
+        "replies": 65,
+        "views": 398,
+        "engagement_rate": 36.18
+      },
+      "original_id": "post_20260323_009",
+      "pattern": "ランキング型・金運爆発",
+      "collected_at": "2026-03-25T07:04:02.065164+09:00",
+      "analyzed": true
+    },
+    {
+      "id": "buzz_own_best_20260325_070402_001",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "【3月下旬、金運が\n爆発する星座TOP3】\n\n第3位は射手座。\n思わぬ臨時収入が\n舞い込む予感です。",
+      "metrics": {
+        "likes": 38,
+        "retweets": 0,
+        "replies": 6,
+        "views": 139,
+        "engagement_rate": 31.65
+      },
+      "original_id": "post_20260322_021",
+      "pattern": "ランキング型",
+      "collected_at": "2026-03-25T07:04:02.065190+09:00",
+      "analyzed": true
+    },
+    {
+      "id": "buzz_own_best_20260325_070402_002",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "【来週、仕事が\n急に動く星座TOP3】\n\n第3位は水瓶座。\n新しいプロジェクトが\n舞い込みます。\n\n",
+      "metrics": {
+        "likes": 15,
+        "retweets": 0,
+        "replies": 7,
+        "views": 100,
+        "engagement_rate": 22.0
+      },
+      "original_id": "post_20260322_023",
+      "pattern": "ランキング型",
+      "collected_at": "2026-03-25T07:04:02.065201+09:00",
+      "analyzed": true
+    },
+    {
+      "id": "buzz_own_best_20260325_070402_003",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "12星座中、たった3つだけ。\n\n今週、恋の流れが\nドラマティックに変わる星座があります。\n\nそれは蟹",
+      "metrics": {
+        "likes": 57,
+        "retweets": 0,
+        "replies": 62,
+        "views": 559,
+        "engagement_rate": 21.29
+      },
+      "original_id": "post_20260323_008",
+      "pattern": "限定×恐怖型・恋愛",
+      "collected_at": "2026-03-25T07:04:02.065209+09:00",
+      "analyzed": true
+    },
+    {
+      "id": "buzz_own_best_20260325_070402_004",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です",
+      "metrics": {
+        "likes": 80,
+        "retweets": 0,
+        "replies": 70,
+        "views": 745,
+        "engagement_rate": 20.13
+      },
+      "original_id": "post_20260323_007",
+      "pattern": "限定型・恐怖×期待",
+      "collected_at": "2026-03-25T07:04:02.065216+09:00",
+      "analyzed": true
+    }
+  ],
+  "sources": {
+    "x_search": {
+      "enabled": false,
+      "last_count": 0
+    },
+    "threads_search": {
+      "enabled": false,
+      "last_count": 0
+    },
+    "manual": {
+      "last_count": 0
+    },
+    "own_best": {
+      "last_count": 5
+    }
+  },
+  "last_collected": "2026-03-25T07:04:01.886250+09:00"
+}
