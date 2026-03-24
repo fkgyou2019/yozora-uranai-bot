@@ -1,25 +1,32 @@
 {
-  "data_count": 5,
-  "last_analyzed": "2026-03-24T12:07:13.791866+09:00",
+  "data_count": 6,
+  "last_analyzed": "2026-03-24T15:07:16.248942+09:00",
   "confidence": "low",
   "top_patterns": [
     {
       "pattern": "ランキング型",
-      "weight": 44,
+      "weight": 31,
       "avg_engagement": 21.32,
       "sample_count": 3,
       "reason": "eng率21.3% (3件)"
     },
     {
+      "pattern": "限定型・恐怖×期待",
+      "weight": 29,
+      "avg_engagement": 20.13,
+      "sample_count": 1,
+      "reason": "eng率20.1% (1件)"
+    },
+    {
       "pattern": "限定型",
-      "weight": 33,
+      "weight": 23,
       "avg_engagement": 16.1,
       "sample_count": 1,
       "reason": "eng率16.1% (1件)"
     },
     {
       "pattern": "星座別アドバイス型",
-      "weight": 21,
+      "weight": 15,
       "avg_engagement": 10.39,
       "sample_count": 1,
       "reason": "eng率10.4% (1件)"
@@ -33,6 +40,14 @@
       "avg_views": 254.0,
       "total_likes": 106,
       "total_replies": 14
+    },
+    {
+      "pattern": "限定型・恐怖×期待",
+      "count": 1,
+      "avg_engagement": 20.13,
+      "avg_views": 745.0,
+      "total_likes": 80,
+      "total_replies": 70
     },
     {
       "pattern": "限定型",
@@ -54,13 +69,13 @@
   "feature_ranking": [
     {
       "feature": "has_number_hook",
-      "count": 2,
-      "avg_engagement": 23.88
+      "count": 3,
+      "avg_engagement": 22.63
     },
     {
       "feature": "has_cta_emoji",
-      "count": 3,
-      "avg_engagement": 23.25
+      "count": 4,
+      "avg_engagement": 22.47
     },
     {
       "feature": "has_ranking",
@@ -80,6 +95,11 @@
       "avg_eng": 22.0
     },
     {
+      "style": "限定型・恐怖×期待",
+      "example": "12星座中、たった3つだけ。",
+      "avg_eng": 20.13
+    },
+    {
       "style": "限定型",
       "example": "12星座中、たった2つだけ。",
       "avg_eng": 16.1
@@ -88,11 +108,6 @@
       "style": "星座別アドバイス型",
       "example": "獅子座さんへ。",
       "avg_eng": 10.39
-    },
-    {
-      "style": "ランキング型",
-      "example": "【春分直後の新生活準備運ランキングTOP3】",
-      "avg_eng": 10.31
     }
   ],
   "top_cta_styles": [
@@ -124,6 +139,16 @@
       "content_preview": "【来週、仕事が\n急に動く星座TOP3】\n\n第3位は水瓶座。\n新しいプロジェクトが\n舞い込みます。\n\n"
     },
     {
+      "id": "post_20260323_007",
+      "pattern": "限定型・恐怖×期待",
+      "eng_rate": 20.13,
+      "views": 745,
+      "likes": 80,
+      "replies": 70,
+      "first_line": "12星座中、たった3つだけ。",
+      "content_preview": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です"
+    },
+    {
       "id": "post_20260322_022",
       "pattern": "限定型",
       "eng_rate": 16.1,
@@ -142,23 +167,13 @@
       "replies": 0,
       "first_line": "獅子座さんへ。",
       "content_preview": "獅子座さんへ。\n\n春分を過ぎて、\nあなたの中で眠っていた\n創造力が目覚める時期です。\n\n周囲の声より"
-    },
-    {
-      "id": "post_20260321_004",
-      "pattern": "ランキング型",
-      "eng_rate": 10.31,
-      "views": 524,
-      "likes": 53,
-      "replies": 1,
-      "first_line": "【春分直後の新生活準備運ランキングTOP3】",
-      "content_preview": "【春分直後の新生活準備運ランキングTOP3】\n\n🥉3位：獅子座\n→ 環境整備がスムーズ。新しい場所に"
     }
   ],
   "avoid_patterns": [],
   "insights": [
     "最強パターン: ランキング型（eng率21.3%）",
-    "数字フックあり → avg eng 23.9%",
-    "絵文字CTAあり → avg eng 23.2%",
+    "数字フックあり → avg eng 22.6%",
+    "絵文字CTAあり → avg eng 22.5%",
     "ランキング形式あり → avg eng 21.3%"
   ]
 }

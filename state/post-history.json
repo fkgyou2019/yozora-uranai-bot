@@ -287,6 +287,28 @@
       "status": "posted",
       "posted_at": "2026-03-24T12:07:19.842256+09:00",
       "platform_post_id": "18069671855270180"
+    },
+    {
+      "pattern_name": "選択肢型・開運アクション",
+      "category": "総合運",
+      "content": "直感で選んで✨\n\nA. 🌙 月\nB. ⭐ 星\nC. ☀️ 太陽\n\n選んだ？\n\nA → 感情が整理されます。3日以内に\nB → 新しい情報が入ります。週末チェック\nC → 行動力が高まります。今月チャンス\n\n当たってた人、コメントで教えて。\n次はもっと詳しく見ますね🔮\n\n#今日の運勢",
+      "hashtag": "",
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 8,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260324_015",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "posted_at": "2026-03-24T15:07:20.997745+09:00",
+      "platform_post_id": "18074510210184400"
     }
   ]
 }

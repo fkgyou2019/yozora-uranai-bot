@@ -129,7 +129,33 @@
         "hook_length": 7
       },
       "collected_at": "2026-03-23T23:42:43.238725+09:00"
+    },
+    {
+      "id": "post_20260323_007",
+      "platform_post_id": "17956147494065714",
+      "posted_at": "2026-03-23T14:26:21.568014+09:00",
+      "pattern_name": "限定型・恐怖×期待",
+      "category": "恋愛運",
+      "content_preview": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です",
+      "first_line": "12星座中、たった3つだけ。",
+      "char_count": 145,
+      "metrics": {
+        "views": 745,
+        "likes": 80,
+        "replies": 70,
+        "reposts": 0,
+        "engagement_rate": 20.13
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 14
+      },
+      "collected_at": "2026-03-24T15:07:15.920026+09:00"
     }
   ],
-  "last_updated": "2026-03-24T12:07:13.747583+09:00"
+  "last_updated": "2026-03-24T15:07:15.920026+09:00"
 }
