@@ -1,0 +1,45 @@
+name: Supervisor (全体監視)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 22 * * *'  # 毎日 07:30 JST（1日の終わりに全体確認）
+
+permissions:
+  contents: write
+
+concurrency:
+  group: supervisor
+  cancel-in-progress: true
+
+jobs:
+  supervise:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+      THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Create api-keys.env
+        run: |
+          mkdir -p config state
+          cat > config/api-keys.env << EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN=${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
+          EOF
+
+      - name: Run supervisor check
+        run: python .github/scripts/supervisor_check.py
