@@ -19,26 +19,6 @@
       "id": "post_20260324_x_004",
       "platform": "x",
       "status": "posting"
-    },
-    {
-      "pattern_name": "星座呼びかけ型・蠍座火曜",
-      "category": "シリーズ・個別星座",
-      "content": "蠍座のあんた、今日だけは黙ってなさい。\n\n来る話の9割、ハズレ。\n「いいかも」で飛びつくと\n3日後に泣く。\n\n15時までの連絡は無視。\n15時以降の話だけが本物。\n\nこのルール守れた人だけ\n来週褒めてあげる。\n\n#蠍座 #今日の運勢",
-      "hashtag": "#蠍座 #今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.83
-      },
-      "id": "post_20260324_x_005",
-      "platform": "x",
-      "status": "queued"
     }
   ]
 }
