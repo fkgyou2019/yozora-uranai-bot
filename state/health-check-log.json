@@ -86,6 +86,33 @@
           "deleted": false
         }
       ]
+    },
+    {
+      "timestamp": "2026-03-25T22:37:14.835559+09:00",
+      "checked": 2,
+      "deleted": 1,
+      "results": [
+        {
+          "post_id": "17858737326654387",
+          "time": "2026-03-25T21:42:17+09:00",
+          "views": 7,
+          "likes": 1,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=7 < 20",
+          "deleted": true
+        },
+        {
+          "post_id": "18044598851738616",
+          "time": "2026-03-25T20:42:17+09:00",
+          "views": 278,
+          "likes": 23,
+          "replies": 2,
+          "status": "GREEN",
+          "reason": "views=278, eng=9.0%",
+          "deleted": false
+        }
+      ]
     }
   ]
 }
