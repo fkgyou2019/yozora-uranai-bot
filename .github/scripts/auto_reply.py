@@ -274,10 +274,7 @@ def main():
                 print(f"  ⏭ @{comment_user}: 同一投稿内重複スキップ")
                 continue
 
-            # 1日に同一ユーザーへの返信は最大2回まで（Bot感防止）
-            if replied_users_today.get(comment_user, 0) >= 2:
-                replied_ids.add(comment_id)
-                print(f"  ⏭ @{comment_user}: 本日2回以上返信済みスキップ")
+            # ファンへの返信は制限しない（異なる投稿への各1回返信はOK）
                 continue
 
             # 空コメントはスキップ
