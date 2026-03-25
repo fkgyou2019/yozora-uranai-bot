@@ -1,45 +1,53 @@
 {
-  "data_count": 8,
-  "last_analyzed": "2026-03-25T07:07:14.873634+09:00",
+  "data_count": 9,
+  "last_analyzed": "2026-03-25T09:07:18.791230+09:00",
   "confidence": "low",
   "top_patterns": [
     {
+      "pattern": "注意喚起型・仕事運",
+      "weight": 25,
+      "avg_engagement": 42.14,
+      "sample_count": 1,
+      "reason": "eng率42.1% (1件)"
+    },
+    {
       "pattern": "ランキング型・金運爆発",
-      "weight": 28,
+      "weight": 21,
       "avg_engagement": 36.18,
       "sample_count": 1,
       "reason": "eng率36.2% (1件)"
     },
     {
       "pattern": "ランキング型",
-      "weight": 17,
+      "weight": 12,
       "avg_engagement": 21.32,
       "sample_count": 3,
       "reason": "eng率21.3% (3件)"
     },
     {
       "pattern": "限定×恐怖型・恋愛",
-      "weight": 16,
+      "weight": 12,
       "avg_engagement": 21.29,
       "sample_count": 1,
       "reason": "eng率21.3% (1件)"
     },
     {
       "pattern": "限定型・恐怖×期待",
-      "weight": 16,
+      "weight": 12,
       "avg_engagement": 20.13,
       "sample_count": 1,
       "reason": "eng率20.1% (1件)"
-    },
-    {
-      "pattern": "限定型",
-      "weight": 12,
-      "avg_engagement": 16.1,
-      "sample_count": 1,
-      "reason": "eng率16.1% (1件)"
     }
   ],
   "pattern_ranking": [
+    {
+      "pattern": "注意喚起型・仕事運",
+      "count": 1,
+      "avg_engagement": 42.14,
+      "avg_views": 674.0,
+      "total_likes": 93,
+      "total_replies": 191
+    },
     {
       "pattern": "ランキング型・金運爆発",
       "count": 1,
@@ -91,6 +99,11 @@
   ],
   "feature_ranking": [
     {
+      "feature": "has_cta_emoji",
+      "count": 7,
+      "avg_engagement": 27.07
+    },
+    {
       "feature": "has_number_hook",
       "count": 5,
       "avg_engagement": 25.07
@@ -99,14 +112,14 @@
       "feature": "has_ranking",
       "count": 4,
       "avg_engagement": 25.04
-    },
-    {
-      "feature": "has_cta_emoji",
-      "count": 6,
-      "avg_engagement": 24.56
     }
   ],
   "top_hook_styles": [
+    {
+      "style": "注意喚起型・仕事運",
+      "example": "来週、仕事で大きな話が",
+      "avg_eng": 42.14
+    },
     {
       "style": "ランキング型・金運爆発",
       "example": "【金運が急上昇する星座TOP3】",
@@ -126,11 +139,6 @@
       "style": "限定×恐怖型・恋愛",
       "example": "12星座中、たった3つだけ。",
       "avg_eng": 21.29
-    },
-    {
-      "style": "限定型・恐怖×期待",
-      "example": "12星座中、たった3つだけ。",
-      "avg_eng": 20.13
     }
   ],
   "top_cta_styles": [
@@ -141,6 +149,16 @@
     }
   ],
   "best_posts": [
+    {
+      "id": "post_20260324_011",
+      "pattern": "注意喚起型・仕事運",
+      "eng_rate": 42.14,
+      "views": 674,
+      "likes": 93,
+      "replies": 191,
+      "first_line": "来週、仕事で大きな話が",
+      "content_preview": "来週、仕事で大きな話が\n来やすい星座。\n\n獅子座と天秤座。\n\n獅子座は、昇進や抜擢の可能性。\n天秤座"
+    },
     {
       "id": "post_20260323_009",
       "pattern": "ランキング型・金運爆発",
@@ -180,23 +198,13 @@
       "replies": 62,
       "first_line": "12星座中、たった3つだけ。",
       "content_preview": "12星座中、たった3つだけ。\n\n今週、恋の流れが\nドラマティックに変わる星座があります。\n\nそれは蟹"
-    },
-    {
-      "id": "post_20260323_007",
-      "pattern": "限定型・恐怖×期待",
-      "eng_rate": 20.13,
-      "views": 745,
-      "likes": 80,
-      "replies": 70,
-      "first_line": "12星座中、たった3つだけ。",
-      "content_preview": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です"
     }
   ],
   "avoid_patterns": [],
   "insights": [
-    "最強パターン: ランキング型・金運爆発（eng率36.2%）",
+    "最強パターン: 注意喚起型・仕事運（eng率42.1%）",
+    "絵文字CTAあり → avg eng 27.1%",
     "数字フックあり → avg eng 25.1%",
-    "ランキング形式あり → avg eng 25.0%",
-    "絵文字CTAあり → avg eng 24.6%"
+    "ランキング形式あり → avg eng 25.0%"
   ]
 }

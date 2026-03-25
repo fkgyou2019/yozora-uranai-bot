@@ -1,48 +1,6 @@
 {
   "queue": [
     {
-      "pattern_name": "図星突き型・睡眠",
-      "category": "ウェルネス",
-      "content": "今これ見てるあんた、\nちゃんと寝てないでしょ。\n\n「大丈夫」って言いながら\n全然大丈夫じゃない顔してる。\n\n今日やること1つだけ。\n23時にスマホ置いて寝なさい。\n\nあんたが倒れたら困る人がいるの。\n\nこの投稿、3日後に見返しなさい。変わってるから。\n\n#今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 9,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 9.0
-      },
-      "id": "post_20260324_x_002",
-      "platform": "x",
-      "status": "error",
-      "error": "HTTP Error 401: Unauthorized"
-    },
-    {
-      "pattern_name": "二択迫り型・頑張り診断",
-      "category": "メンタル",
-      "content": "正直に答えなさい。\n\n今のあんた、\n\nA. 頑張りすぎて限界近い\nB. サボりすぎて焦ってる\n\nどっちかでしょ。\n\nAの人 → 今週は手抜きしなさい\nBの人 → 今日中に1つだけ片付けなさい\n\n引用で教えて。見当つかなかったら謝るから。\n\n#今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.67
-      },
-      "id": "post_20260324_x_003",
-      "platform": "x",
-      "status": "error",
-      "error": "HTTP Error 401: Unauthorized"
-    },
-    {
       "pattern_name": "週間予告型・火木金フロー",
       "category": "週間予報",
       "content": "今週、あたしが見た星の動き。\n\n火曜：人間関係が揺れる\n木曜：決断を迫られる\n金曜：答えが出る\n\n焦って動くな。\nこの3日の流れを待てた人だけが勝つ。\n\nこの投稿、金曜に見返しなさい。\n\n#今週の運勢",
@@ -60,7 +18,7 @@
       },
       "id": "post_20260324_x_004",
       "platform": "x",
-      "status": "queued"
+      "status": "posting"
     },
     {
       "pattern_name": "星座呼びかけ型・蠍座火曜",
