@@ -113,6 +113,23 @@
           "deleted": false
         }
       ]
+    },
+    {
+      "timestamp": "2026-03-26T08:07:12.019935+09:00",
+      "checked": 1,
+      "deleted": 0,
+      "results": [
+        {
+          "post_id": "18078665903620995",
+          "time": "2026-03-26T07:12:20+09:00",
+          "views": 48,
+          "likes": 5,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=48, eng=10.4%",
+          "deleted": false
+        }
+      ]
     }
   ]
 }
