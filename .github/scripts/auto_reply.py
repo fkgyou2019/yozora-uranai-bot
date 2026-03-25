@@ -121,23 +121,26 @@ def generate_reply(comment_text, original_post_text, commenter_name, recent_repl
 
 {recent_block}
 【返信ルール】
-1. 冒頭に「@{commenter_name} さん\\n\\n」から始めること（必須。さんの後に空行1つ）
-2. {'星座コメントの場合は3-4行（80-120文字）で個別アドバイスを含める' if found_zodiac else '1-2行の短い返信（40-60文字が理想）'}。名前行は文字数に含めない
-3. 温かく、でも毎回違う表現で
-4. 絵文字は1個まで（🌙✨🔮⭐のいずれか）
-5. 以下の表現は禁止（Bot臭くなるため）:
+1. 冒頭に「@{commenter_name} さん\\n\\n」から始めること（必須。さんの後に必ず改行＋空行）
+2. {'星座コメントの場合は3行以内で個別アドバイスを含める' if found_zodiac else '1-2行の短い返信（40-60文字が理想）'}。名前行は行数に含めない
+3. 返信全体は3行以内に収めること（短く簡潔に）
+4. 1行は20文字以内にすること（超えたら改行する）
+5. 温かく、でも毎回違う表現で
+6. 絵文字は1個まで（🌙✨🔮⭐のいずれか）
+7. 以下の表現は禁止（Bot臭くなるため）:
    - 「受け取ってくださり」（多用されすぎ）
    - 「ありがとうございます」で始める（毎回同じに見える）
    - 「良い流れが届きますように」（定型文）
-6. 代わりに使える表現例:
+8. 代わりに使える表現例:
    - 「嬉しいです」「感謝です」「心強いです」
    - 「○○さんの直感、冴えてますね」
    - 「星が微笑んでますよ」「素敵なタイミングですね」
    - 「その想い、きっと届きますよ」
-7. 相手のコメントに文章がある場合は、その内容に具体的に触れる
-8. 相手の星座が分かれば星座に触れる
-9. 直近の返信と絶対に同じ言い回しを使わない
-10. 【改行ルール（重要）】
+9. 相手のコメントに文章がある場合は、その内容に具体的に触れる
+10. 相手の星座が分かれば星座に触れる
+11. 直近の返信と絶対に同じ言い回しを使わない
+12. 【改行ルール（重要）】
+   - @usernameさん の後は必ず改行すること
    - 1行は最大20文字。超えたら改行する
    - 名前の後は必ず空行を入れる
    - 2文以上の返信は文と文の間に改行を入れる
@@ -200,14 +203,6 @@ def main():
         replied = {"replied_ids": [], "last_checked": None}
 
     replied_ids = set(replied.get("replied_ids", []))
-
-    # 過去に返信したユーザー一覧（1日に同一ユーザーへの返信は最大2回まで）
-    replied_users_today = {}
-    for entry in replied.get("recent_reply_texts", []):
-        if isinstance(entry, dict):
-            u = entry.get("to_user", "")
-            if u:
-                replied_users_today[u] = replied_users_today.get(u, 0) + 1
 
     # 最近の投稿を取得（直近10件）
     posts_url = (
@@ -274,9 +269,6 @@ def main():
                 print(f"  ⏭ @{comment_user}: 同一投稿内重複スキップ")
                 continue
 
-            # ファンへの返信は制限しない（異なる投稿への各1回返信はOK）
-                continue
-
             # 空コメントはスキップ
             if not comment_text.strip():
                 continue
@@ -310,7 +302,6 @@ def main():
                 reply_id = threads_reply(reply_text, comment_id, user_id, access_token)
                 replied_ids.add(comment_id)
                 replied_users_this_post.add(comment_user)
-                replied_users_today[comment_user] = replied_users_today.get(comment_user, 0) + 1
                 recent_replies.append({"text": reply_text, "to_user": comment_user})
                 total_replied += 1
                 print(f"  ✅ @{comment_user}: 「{comment_text[:20]}」→ 「{reply_text[:40]}」")

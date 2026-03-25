@@ -290,6 +290,32 @@ def _post_one_inner():
         queue["queue"] = [p for p in queue.get("queue", []) if p.get("status") != "error"]
         save_json("state/post-queue.json", queue)
 
+    # postingステータスのまま30分以上滞留した投稿をクリーンアップ
+    now_cleanup = datetime.now(JST)
+    stale_posting = []
+    for p in queue.get("queue", []):
+        if p.get("status") == "posting":
+            posted_at = p.get("posting_started_at") or p.get("posted_at")
+            if posted_at:
+                try:
+                    started = datetime.fromisoformat(posted_at)
+                    if started.tzinfo is None:
+                        started = started.replace(tzinfo=JST)
+                    if (now_cleanup - started).total_seconds() > 1800:
+                        stale_posting.append(p)
+                except (ValueError, TypeError):
+                    stale_posting.append(p)
+            else:
+                # タイムスタンプなしのpostingは滞留とみなす
+                stale_posting.append(p)
+    if stale_posting:
+        log("WARN", f"postingステータスで30分以上滞留した投稿を{len(stale_posting)}件errorに変更")
+        for sp in stale_posting:
+            log("WARN", f"  滞留: id={sp.get('id', '?')}")
+            sp["status"] = "error"
+            sp["error"] = "posting状態で30分以上滞留（タイムアウト）"
+        save_json("state/post-queue.json", queue)
+
     # 安全チェック（3段階）
     if not check_banned_hours(safety):
         return
@@ -323,9 +349,13 @@ def _post_one_inner():
         save_json("state/post-queue.json", queue)
         return
     post["status"] = "posting"
+    post["posting_started_at"] = datetime.now(JST).isoformat()
     save_json("state/post-queue.json", queue)
 
-    update_agent_status("poster", "running")
+    # エージェントステータスをrunningに（status dictに直接書き込み、後で一括save）
+    if "agents" in status and "poster" in status["agents"]:
+        status["agents"]["poster"]["status"] = "running"
+        status["agents"]["poster"]["last_run"] = datetime.now(JST).isoformat()
     platform = post.get("platform", "threads")
 
     # マルチアカウント: account_id からアカウント情報を解決
@@ -466,6 +496,7 @@ def _post_one_inner():
         if "agents" in status and "poster" in status["agents"]:
             status["agents"]["poster"]["status"] = "idle"
             status["agents"]["poster"]["last_run"] = datetime.now(JST).isoformat()
+            status["agents"]["poster"]["error_count"] = 0
         save_json("state/system-status.json", status)
 
         # マルチアカウント: アカウント別ステータス記録
