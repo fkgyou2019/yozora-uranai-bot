@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "id": "buzz_own_best_20260326_070636_000",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "来週、仕事で大きな話が\n来やすい星座。\n\n獅子座と天秤座。\n\n獅子座は、昇進や抜擢の可能性。\n天秤座",
+      "metrics": {
+        "likes": 93,
+        "retweets": 0,
+        "replies": 191,
+        "views": 674,
+        "engagement_rate": 42.14
+      },
+      "original_id": "post_20260324_011",
+      "pattern": "注意喚起型・仕事運",
+      "collected_at": "2026-03-26T07:06:36.418121+09:00",
+      "analyzed": true
+    },
+    {
       "id": "buzz_own_best_20260325_070402_000",
       "platform": "threads",
       "source": "own_best",
@@ -104,8 +122,8 @@
       "last_count": 0
     },
     "own_best": {
-      "last_count": 5
+      "last_count": 1
     }
   },
-  "last_collected": "2026-03-25T07:04:01.886250+09:00"
+  "last_collected": "2026-03-26T07:06:36.226035+09:00"
 }

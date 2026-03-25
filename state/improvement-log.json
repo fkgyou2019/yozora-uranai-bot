@@ -8,8 +8,17 @@
       "key_changes": [
         "インサイト8件追加"
       ]
+    },
+    {
+      "date": "2026-03-26",
+      "hooks_added": 0,
+      "insights_added": 6,
+      "source_posts_analyzed": 6,
+      "key_changes": [
+        "インサイト6件追加"
+      ]
     }
   ],
-  "total_improvements": 1,
-  "last_improved": "2026-03-25T07:04:30.266621+09:00"
+  "total_improvements": 2,
+  "last_improved": "2026-03-26T07:06:51.399353+09:00"
 }
