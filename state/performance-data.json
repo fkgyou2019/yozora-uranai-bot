@@ -233,7 +233,33 @@
         "hook_length": 11
       },
       "collected_at": "2026-03-25T09:07:18.127524+09:00"
+    },
+    {
+      "id": "post_20260324_th_002",
+      "platform_post_id": "18016823117829673",
+      "posted_at": "2026-03-24T21:37:18.885167+09:00",
+      "pattern_name": "予告型・フォロー動機",
+      "category": "予告メッセージ",
+      "content_preview": "来週、12星座の中で\n最も恋愛が動く星座。\n\n蟹座さんです。\n\n新しい出会いか、\n既存の関係の深まり",
+      "first_line": "来週、12星座の中で",
+      "char_count": 124,
+      "metrics": {
+        "views": 767,
+        "likes": 53,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 6.91
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 10
+      },
+      "collected_at": "2026-03-26T07:07:13.087807+09:00"
     }
   ],
-  "last_updated": "2026-03-25T21:37:14.380957+09:00"
+  "last_updated": "2026-03-26T07:07:13.087807+09:00"
 }

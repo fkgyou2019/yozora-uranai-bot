@@ -1,18 +1,18 @@
 {
-  "data_count": 9,
-  "last_analyzed": "2026-03-25T21:37:15.325034+09:00",
-  "confidence": "low",
+  "data_count": 10,
+  "last_analyzed": "2026-03-26T07:07:14.477166+09:00",
+  "confidence": "medium",
   "top_patterns": [
     {
       "pattern": "注意喚起型・仕事運",
-      "weight": 25,
+      "weight": 24,
       "avg_engagement": 42.14,
       "sample_count": 1,
       "reason": "eng率42.1% (1件)"
     },
     {
       "pattern": "ランキング型・金運爆発",
-      "weight": 21,
+      "weight": 20,
       "avg_engagement": 36.18,
       "sample_count": 1,
       "reason": "eng率36.2% (1件)"
@@ -33,7 +33,7 @@
     },
     {
       "pattern": "限定型・恐怖×期待",
-      "weight": 12,
+      "weight": 11,
       "avg_engagement": 20.13,
       "sample_count": 1,
       "reason": "eng率20.1% (1件)"
@@ -95,6 +95,14 @@
       "avg_views": 231.0,
       "total_likes": 24,
       "total_replies": 0
+    },
+    {
+      "pattern": "予告型・フォロー動機",
+      "count": 1,
+      "avg_engagement": 6.91,
+      "avg_views": 767.0,
+      "total_likes": 53,
+      "total_replies": 0
     }
   ],
   "feature_ranking": [
@@ -104,14 +112,14 @@
       "avg_engagement": 27.07
     },
     {
-      "feature": "has_number_hook",
-      "count": 5,
-      "avg_engagement": 25.07
-    },
-    {
       "feature": "has_ranking",
       "count": 4,
       "avg_engagement": 25.04
+    },
+    {
+      "feature": "has_number_hook",
+      "count": 6,
+      "avg_engagement": 22.04
     }
   ],
   "top_hook_styles": [
@@ -202,15 +210,9 @@
   ],
   "avoid_patterns": [],
   "insights": [
-    "数値データ（『過去3年で該当星座の昇進率○%』）を根拠として示すことで信頼性と説得力を向上",
-    "高エンゲージメント率をさらに向上させるため、『あなたの星座は？』という質問を明示的にCTAとして追加",
-    "名指しされた星座だけでなく『月星座』『金星星座』など複数観点を示唆して、より多くのユーザーが自分と関連付ける機会を増加",
-    "時間軸をより明確に『明日～3日以内』『来週月～木』など細分化することでUrgency感を強化",
-    "絵文字（✨🔮♈など星座/占い関連）を戦略的に挿入して視認性と信頼感を向上",
-    "完全な文を提示した上で、追加情報や詳細を『スレッドで詳しく解説』と明記してスレッド化することで、より多くの保存・シェアを獲得",
     "最強パターン: 注意喚起型・仕事運（eng率42.1%）",
     "絵文字CTAあり → avg eng 27.1%",
-    "数字フックあり → avg eng 25.1%",
-    "ランキング形式あり → avg eng 25.0%"
+    "ランキング形式あり → avg eng 25.0%",
+    "数字フックあり → avg eng 22.0%"
   ]
 }
