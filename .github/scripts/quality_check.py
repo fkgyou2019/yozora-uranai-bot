@@ -153,8 +153,9 @@ def check_post(post):
         engagement_bait = [
             "いいねしてね", "フォローしてね", "リポストして",
             "いいねお願い", "フォローお願い", "シェアしてね",
-            "を置いた方に",  # X用CTAはThreadsでは不自然
         ]
+        # 占いジャンルの標準的CTA（「🔮を置いた方に」等）は除外
+        spiritual_cta_pattern = re.compile(r".を置い")  # 絵文字+「を置い〜」
         for bait in engagement_bait:
             if bait in content:
                 issues.append(f"Threadsエンゲージメントベイト検出:「{bait}」（降格対象）[threads]")
