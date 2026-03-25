@@ -30,46 +30,68 @@ def save_json(path, data):
 
 def check_post(post):
     """1件の投稿を検証。問題点のリストを返す（空なら合格）"""
+    platform = post.get("platform", "threads")
     issues = []
     content = post.get("content", "")
 
+    # --- プラットフォーム別の閾値設定 ---
+    if platform == "x":
+        min_chars = 40
+        max_chars = 280
+        max_line_length = 22  # Xのスマホ表示は少し狭い
+        min_blocks = 2
+        max_block_length = 60
+        max_total_lines = 12
+        max_hook_length = 20
+        max_emoji = 3
+        max_hashtags = 2
+    else:  # threads
+        min_chars = 80
+        max_chars = 500
+        max_line_length = 25
+        min_blocks = 3
+        max_block_length = 80
+        max_total_lines = 16
+        max_hook_length = 22
+        max_emoji = 5
+        max_hashtags = 1  # Threadsはトピックタグ1つのみ
+
     # --- 1. 文字数チェック ---
     char_count = len(content)
-    if char_count < 80:
-        issues.append(f"文字数不足: {char_count}文字（最低80文字）")
-    if char_count > 500:
-        issues.append(f"文字数超過: {char_count}文字（最大500文字）")
+    if char_count < min_chars:
+        issues.append(f"文字数不足: {char_count}文字（最低{min_chars}文字）[{platform}]")
+    if char_count > max_chars:
+        issues.append(f"文字数超過: {char_count}文字（最大{max_chars}文字）[{platform}]")
 
     # --- 2. 改行チェック ---
     lines = content.split("\n")
     non_empty_lines = [l for l in lines if l.strip()]
 
-    # 25文字以上の行（スマホで自動折り返しが入る）
     for i, line in enumerate(non_empty_lines):
-        if len(line) > 25:
-            issues.append(f"行{i+1}が長すぎ: {len(line)}文字「{line[:20]}...」（最大25文字）")
+        if len(line) > max_line_length:
+            issues.append(f"行{i+1}が長すぎ: {len(line)}文字「{line[:20]}...」（最大{max_line_length}文字）[{platform}]")
             break
 
     # 空行による分割チェック
     blocks = [b.strip() for b in content.split("\n\n") if b.strip()]
-    if len(blocks) < 3 and char_count > 100:
-        issues.append(f"ブロック分割不足: {len(blocks)}ブロック（最低3ブロック）")
+    if len(blocks) < min_blocks and char_count > (60 if platform == "x" else 100):
+        issues.append(f"ブロック分割不足: {len(blocks)}ブロック（最低{min_blocks}ブロック）[{platform}]")
 
     # 最長ブロック
     if blocks:
         longest_block = max(len(b) for b in blocks)
-        if longest_block > 80:
-            issues.append(f"ブロックが長すぎ: {longest_block}文字（最大80文字）")
+        if longest_block > max_block_length:
+            issues.append(f"ブロックが長すぎ: {longest_block}文字（最大{max_block_length}文字）[{platform}]")
 
-    # 全体行数チェック（空行含む）
+    # 全体行数チェック
     total_lines = len(lines)
-    if total_lines > 16:
-        issues.append(f"縦長すぎ: {total_lines}行（最大16行）")
+    if total_lines > max_total_lines:
+        issues.append(f"縦長すぎ: {total_lines}行（最大{max_total_lines}行）[{platform}]")
 
     # --- 3. フック（1行目）チェック ---
     first_line = non_empty_lines[0] if non_empty_lines else ""
-    if len(first_line) > 22:
-        issues.append(f"フックが長すぎ: {len(first_line)}文字「{first_line[:15]}...」（最大22文字）")
+    if len(first_line) > max_hook_length:
+        issues.append(f"フックが長すぎ: {len(first_line)}文字「{first_line[:15]}...」（最大{max_hook_length}文字）[{platform}]")
 
     # --- 4. Bot臭さチェック ---
     bot_phrases = [
@@ -83,26 +105,61 @@ def check_post(post):
         if phrase in content:
             issues.append(f"Bot定型文を検出:「{phrase}」")
 
+    # --- 4b. ペルソナ違反チェック（よぞら. = 穏やか・敬語ベース） ---
+    persona_ng_words = [
+        # 凛（姉御キャラ）の口調
+        "あんた", "黙って", "聞きなさい", "褒めてあげる",
+        "しなさい", "やりな", "でしょうが", "だろうが",
+        "バカ", "アホ", "ハズレ", "ダメ出し",
+        # タメ口・乱暴な口調
+        "だよね？", "じゃん", "マジで", "ヤバい",
+        "ウケる", "草", "それな", "知らんけど",
+        # よぞら.が使わない表現
+        "泣く", "怒る", "無視", "ぶっちゃけ",
+    ]
+    for ng in persona_ng_words:
+        if ng in content:
+            issues.append(f"ペルソナ違反（よぞら.の口調ではない）:「{ng}」")
+            break  # 1つ見つければ十分
+
     # ハッシュタグとその直前の文でキーワード重複チェック
     hashtag_match = re.search(r"#(\S+)", content)
     if hashtag_match:
         tag_text = hashtag_match.group(1)
-        # ハッシュタグの直前のブロックを取得
         before_tag = content[:hashtag_match.start()].strip()
         last_line_before_tag = before_tag.split("\n")[-1] if before_tag else ""
-        # 2文字以上の共通キーワードチェック
         for keyword in [tag_text[i:i+3] for i in range(len(tag_text)-2)]:
             if keyword in last_line_before_tag:
                 issues.append(f"締めとハッシュタグのキーワード重複:「{keyword}」")
                 break
 
-    # --- 5. ハッシュタグ存在チェック ---
-    if "#" not in content:
-        issues.append("ハッシュタグが含まれていない")
+    # --- 5. ハッシュタグ/トピックタグ チェック ---
+    hashtag_count = len(re.findall(r"#\S+", content))
+    if hashtag_count == 0:
+        issues.append(f"ハッシュタグが含まれていない[{platform}]")
+    if platform == "threads" and hashtag_count > max_hashtags:
+        issues.append(f"トピックタグが多すぎ: {hashtag_count}個（Threadsは{max_hashtags}個のみ）")
+    if platform == "x" and hashtag_count > max_hashtags:
+        issues.append(f"ハッシュタグが多すぎ: {hashtag_count}個（Xは{max_hashtags}個まで）")
 
-    # --- 6. 時間限定表現チェック ---
-    # バッチ生成時は何時に投稿されるか不明なので、
-    # 特定時刻を含む表現は危険（矛盾リスク）
+    # --- 6. X専用: リンクペナルティチェック ---
+    if platform == "x":
+        url_pattern = re.compile(r"https?://\S+")
+        if url_pattern.search(content):
+            issues.append("X投稿にURL検出（リンクペナルティ-50%。リンクはaffiliate_commentに移動すべき）[x]")
+
+    # --- 7. Threads専用: エンゲージメントベイトチェック ---
+    if platform == "threads":
+        engagement_bait = [
+            "いいねしてね", "フォローしてね", "リポストして",
+            "いいねお願い", "フォローお願い", "シェアしてね",
+            "を置いた方に",  # X用CTAはThreadsでは不自然
+        ]
+        for bait in engagement_bait:
+            if bait in content:
+                issues.append(f"Threadsエンゲージメントベイト検出:「{bait}」（降格対象）[threads]")
+
+    # --- 8. 時間限定表現チェック ---
     risky_time_patterns = [
         (r"今夜\d+時まで", "「今夜○時まで」は投稿時刻によって矛盾する"),
         (r"今朝", "「今朝」は午後投稿で矛盾する"),
@@ -113,15 +170,15 @@ def check_post(post):
             issues.append(f"時間矛盾リスク: {msg}")
             break
 
-    # --- 7. 絵文字過多チェック ---
+    # --- 9. 絵文字過多チェック ---
     emoji_pattern = re.compile(
         r"[\U0001F300-\U0001F9FF\u2600-\u26FF\u2700-\u27BF"
         r"\u2B50\u2728\u2764\u23E9-\u23FA\u25AA-\u25FE"
         r"\U0001FA00-\U0001FAFF]"
     )
     emoji_count = len(emoji_pattern.findall(content))
-    if emoji_count > 5:
-        issues.append(f"絵文字多すぎ: {emoji_count}個（最大5個）")
+    if emoji_count > max_emoji:
+        issues.append(f"絵文字多すぎ: {emoji_count}個（最大{max_emoji}個）[{platform}]")
 
     return issues
 
