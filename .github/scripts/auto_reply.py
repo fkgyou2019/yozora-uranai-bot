@@ -201,6 +201,14 @@ def main():
 
     replied_ids = set(replied.get("replied_ids", []))
 
+    # 過去に返信したユーザー一覧（1日に同一ユーザーへの返信は最大2回まで）
+    replied_users_today = {}
+    for entry in replied.get("recent_reply_texts", []):
+        if isinstance(entry, dict):
+            u = entry.get("to_user", "")
+            if u:
+                replied_users_today[u] = replied_users_today.get(u, 0) + 1
+
     # 最近の投稿を取得（直近10件）
     posts_url = (
         f"https://graph.threads.net/v1.0/{user_id}/threads"
@@ -263,7 +271,13 @@ def main():
             # 同一ユーザーへの返信は1投稿につき1回まで（重複返信防止）
             if comment_user in replied_users_this_post:
                 replied_ids.add(comment_id)
-                print(f"  ⏭ @{comment_user}: 同一ユーザー重複スキップ")
+                print(f"  ⏭ @{comment_user}: 同一投稿内重複スキップ")
+                continue
+
+            # 1日に同一ユーザーへの返信は最大2回まで（Bot感防止）
+            if replied_users_today.get(comment_user, 0) >= 2:
+                replied_ids.add(comment_id)
+                print(f"  ⏭ @{comment_user}: 本日2回以上返信済みスキップ")
                 continue
 
             # 空コメントはスキップ
@@ -299,7 +313,8 @@ def main():
                 reply_id = threads_reply(reply_text, comment_id, user_id, access_token)
                 replied_ids.add(comment_id)
                 replied_users_this_post.add(comment_user)
-                recent_replies.append(reply_text)
+                replied_users_today[comment_user] = replied_users_today.get(comment_user, 0) + 1
+                recent_replies.append({"text": reply_text, "to_user": comment_user})
                 total_replied += 1
                 print(f"  ✅ @{comment_user}: 「{comment_text[:20]}」→ 「{reply_text[:40]}」")
             except Exception as e:
