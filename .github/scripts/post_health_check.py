@@ -35,7 +35,7 @@ YELLOW_VIEWS_MAX = 50
 YELLOW_ENG_THRESHOLD = 3.0
 GREEN_VIEWS_MIN = 50
 GREEN_ENG_MIN = 5.0
-CHECK_WINDOW_MINUTES = 90  # 投稿後60-90分の投稿を対象
+CHECK_WINDOW_MINUTES = 180  # 投稿後30-180分の投稿を対象
 
 
 def load_env():
@@ -197,7 +197,7 @@ def main():
 
         # 投稿後60-90分の投稿のみ対象
         age_minutes = (now - jst_time).total_seconds() / 60
-        if age_minutes < 60 or age_minutes > CHECK_WINDOW_MINUTES:
+        if age_minutes < 30 or age_minutes > CHECK_WINDOW_MINUTES:
             continue
 
         checked_count += 1
