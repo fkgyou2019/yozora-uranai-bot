@@ -228,6 +228,23 @@
           "deleted": false
         }
       ]
+    },
+    {
+      "timestamp": "2026-03-26T20:07:13.679167+09:00",
+      "checked": 1,
+      "deleted": 0,
+      "results": [
+        {
+          "post_id": "18131636767557934",
+          "time": "2026-03-26T19:12:16+09:00",
+          "views": 9,
+          "likes": 0,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=9 < 20",
+          "deleted": true
+        }
+      ]
     }
   ]
 }
