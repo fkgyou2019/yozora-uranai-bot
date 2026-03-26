@@ -1,46 +1,218 @@
 {
-  "last_updated": "2026-03-26T11:00:00+09:00",
-  "sample_size": 20,
-  "top_patterns": {
-    "cta_with_ranking": {
-      "avg_eng": 22.6,
-      "avg_views": 321,
-      "weight": 0.3,
-      "description": "ランキング型(🥇🥈🥉) + CTA(🍀を置いた方に)"
+  "data_count": 10,
+  "last_analyzed": "2026-03-26T15:07:15.209305+09:00",
+  "confidence": "medium",
+  "top_patterns": [
+    {
+      "pattern": "注意喚起型・仕事運",
+      "weight": 24,
+      "avg_engagement": 42.14,
+      "sample_count": 1,
+      "reason": "eng率42.1% (1件)"
     },
-    "cta_with_number_hook": {
-      "avg_eng": 28.0,
-      "avg_views": 469,
-      "weight": 0.35,
-      "description": "数字フック(たった○つだけ) + CTA"
+    {
+      "pattern": "ランキング型・金運爆発",
+      "weight": 20,
+      "avg_engagement": 36.18,
+      "sample_count": 1,
+      "reason": "eng率36.2% (1件)"
     },
-    "cta_with_zodiac": {
-      "avg_eng": 20.0,
-      "avg_views": 400,
-      "weight": 0.25,
-      "description": "星座名限定(○座さん) + CTA"
+    {
+      "pattern": "ランキング型",
+      "weight": 12,
+      "avg_engagement": 21.32,
+      "sample_count": 3,
+      "reason": "eng率21.3% (3件)"
     },
-    "cta_only": {
-      "avg_eng": 15.0,
-      "avg_views": 300,
-      "weight": 0.1,
-      "description": "CTA付きその他パターン"
+    {
+      "pattern": "限定×恐怖型・恋愛",
+      "weight": 12,
+      "avg_engagement": 21.29,
+      "sample_count": 1,
+      "reason": "eng率21.3% (1件)"
+    },
+    {
+      "pattern": "限定型・恐怖×期待",
+      "weight": 11,
+      "avg_engagement": 20.13,
+      "sample_count": 1,
+      "reason": "eng率20.1% (1件)"
     }
-  },
-  "rules": {
-    "all_posts_must_have_cta": true,
-    "cta_examples": [
-      "「🍀」を置いた方に、今週中に嬉しい連絡が届きます。",
-      "🔮を置いた方に良い出会いが届きます。",
-      "✨を置いた方に、今月中に素敵な変化が訪れます。",
-      "🌙を置いた方に、来週運気の波が届きます。"
-    ],
-    "avoid_questions_in_hook": true,
-    "best_time_slots": [
-      "07:07",
-      "14:07",
-      "20:37",
-      "22:06"
-    ]
-  }
+  ],
+  "pattern_ranking": [
+    {
+      "pattern": "注意喚起型・仕事運",
+      "count": 1,
+      "avg_engagement": 42.14,
+      "avg_views": 674.0,
+      "total_likes": 93,
+      "total_replies": 191
+    },
+    {
+      "pattern": "ランキング型・金運爆発",
+      "count": 1,
+      "avg_engagement": 36.18,
+      "avg_views": 398.0,
+      "total_likes": 79,
+      "total_replies": 65
+    },
+    {
+      "pattern": "ランキング型",
+      "count": 3,
+      "avg_engagement": 21.32,
+      "avg_views": 254.0,
+      "total_likes": 106,
+      "total_replies": 14
+    },
+    {
+      "pattern": "限定×恐怖型・恋愛",
+      "count": 1,
+      "avg_engagement": 21.29,
+      "avg_views": 559.0,
+      "total_likes": 57,
+      "total_replies": 62
+    },
+    {
+      "pattern": "限定型・恐怖×期待",
+      "count": 1,
+      "avg_engagement": 20.13,
+      "avg_views": 745.0,
+      "total_likes": 80,
+      "total_replies": 70
+    },
+    {
+      "pattern": "限定型",
+      "count": 1,
+      "avg_engagement": 16.1,
+      "avg_views": 354.0,
+      "total_likes": 32,
+      "total_replies": 25
+    },
+    {
+      "pattern": "星座別アドバイス型",
+      "count": 1,
+      "avg_engagement": 10.39,
+      "avg_views": 231.0,
+      "total_likes": 24,
+      "total_replies": 0
+    },
+    {
+      "pattern": "予告型・フォロー動機",
+      "count": 1,
+      "avg_engagement": 6.91,
+      "avg_views": 767.0,
+      "total_likes": 53,
+      "total_replies": 0
+    }
+  ],
+  "feature_ranking": [
+    {
+      "feature": "has_cta_emoji",
+      "count": 7,
+      "avg_engagement": 27.07
+    },
+    {
+      "feature": "has_ranking",
+      "count": 4,
+      "avg_engagement": 25.04
+    },
+    {
+      "feature": "has_number_hook",
+      "count": 6,
+      "avg_engagement": 22.04
+    }
+  ],
+  "top_hook_styles": [
+    {
+      "style": "注意喚起型・仕事運",
+      "example": "来週、仕事で大きな話が",
+      "avg_eng": 42.14
+    },
+    {
+      "style": "ランキング型・金運爆発",
+      "example": "【金運が急上昇する星座TOP3】",
+      "avg_eng": 36.18
+    },
+    {
+      "style": "ランキング型",
+      "example": "【3月下旬、金運が",
+      "avg_eng": 31.65
+    },
+    {
+      "style": "ランキング型",
+      "example": "【来週、仕事が",
+      "avg_eng": 22.0
+    },
+    {
+      "style": "限定×恐怖型・恋愛",
+      "example": "12星座中、たった3つだけ。",
+      "avg_eng": 21.29
+    }
+  ],
+  "top_cta_styles": [
+    {
+      "style": "絵文字CTA",
+      "example": "「🔮」を置いた方に届きます。",
+      "avg_eng": 0
+    }
+  ],
+  "best_posts": [
+    {
+      "id": "post_20260324_011",
+      "pattern": "注意喚起型・仕事運",
+      "eng_rate": 42.14,
+      "views": 674,
+      "likes": 93,
+      "replies": 191,
+      "first_line": "来週、仕事で大きな話が",
+      "content_preview": "来週、仕事で大きな話が\n来やすい星座。\n\n獅子座と天秤座。\n\n獅子座は、昇進や抜擢の可能性。\n天秤座"
+    },
+    {
+      "id": "post_20260323_009",
+      "pattern": "ランキング型・金運爆発",
+      "eng_rate": 36.18,
+      "views": 398,
+      "likes": 79,
+      "replies": 65,
+      "first_line": "【金運が急上昇する星座TOP3】",
+      "content_preview": "【金運が急上昇する星座TOP3】\n\n🥉第3位：山羊座。\n地道な努力が報われる時期です。\n\n🥈第2位："
+    },
+    {
+      "id": "post_20260322_021",
+      "pattern": "ランキング型",
+      "eng_rate": 31.65,
+      "views": 139,
+      "likes": 38,
+      "replies": 6,
+      "first_line": "【3月下旬、金運が",
+      "content_preview": "【3月下旬、金運が\n爆発する星座TOP3】\n\n第3位は射手座。\n思わぬ臨時収入が\n舞い込む予感です。"
+    },
+    {
+      "id": "post_20260322_023",
+      "pattern": "ランキング型",
+      "eng_rate": 22.0,
+      "views": 100,
+      "likes": 15,
+      "replies": 7,
+      "first_line": "【来週、仕事が",
+      "content_preview": "【来週、仕事が\n急に動く星座TOP3】\n\n第3位は水瓶座。\n新しいプロジェクトが\n舞い込みます。\n\n"
+    },
+    {
+      "id": "post_20260323_008",
+      "pattern": "限定×恐怖型・恋愛",
+      "eng_rate": 21.29,
+      "views": 559,
+      "likes": 57,
+      "replies": 62,
+      "first_line": "12星座中、たった3つだけ。",
+      "content_preview": "12星座中、たった3つだけ。\n\n今週、恋の流れが\nドラマティックに変わる星座があります。\n\nそれは蟹"
+    }
+  ],
+  "avoid_patterns": [],
+  "insights": [
+    "最強パターン: 注意喚起型・仕事運（eng率42.1%）",
+    "絵文字CTAあり → avg eng 27.1%",
+    "ランキング形式あり → avg eng 25.0%",
+    "数字フックあり → avg eng 22.0%"
+  ]
 }
