@@ -287,14 +287,38 @@ def main():
                 print(f"  ⏭ @{comment_user}: 「{comment_text[:10]}」（スキップ）")
                 continue
 
-            # Claude APIで返信生成（名前・履歴・時間帯を渡す）
-            try:
-                reply_text = generate_reply(
-                    comment_text, post_text,
-                    comment_user, recent_replies, api_key
-                )
-            except Exception as e:
-                print(f"  [WARN] 返信生成エラー: {e}")
+            # Claude APIで返信生成（類似性チェック付き。合格するまで最大3回再生成）
+            reply_text = None
+            for attempt in range(3):
+                try:
+                    candidate = generate_reply(
+                        comment_text, post_text,
+                        comment_user, recent_replies, api_key
+                    )
+                except Exception as e:
+                    print(f"  [WARN] 返信生成エラー (attempt {attempt+1}): {e}")
+                    break
+
+                # 類似性チェック: 直近返信と85%以上類似なら棄却
+                from difflib import SequenceMatcher
+                is_similar = False
+                for prev in recent_replies[-10:]:
+                    prev_text = prev.get("text", "") if isinstance(prev, dict) else str(prev)
+                    ratio = SequenceMatcher(None, candidate, prev_text).ratio()
+                    if ratio >= 0.85:
+                        print(f"  ⚠ 類似度{ratio:.0%}で棄却 (attempt {attempt+1})")
+                        is_similar = True
+                        break
+
+                if not is_similar:
+                    reply_text = candidate
+                    if attempt > 0:
+                        print(f"  ✅ {attempt+1}回目で合格")
+                    break
+
+            if reply_text is None:
+                print(f"  [WARN] @{comment_user}: 3回生成しても類似度85%超。スキップ")
+                replied_ids.add(comment_id)
                 continue
 
             # Threads APIで返信投稿
