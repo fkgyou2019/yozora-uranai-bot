@@ -259,7 +259,33 @@
         "hook_length": 10
       },
       "collected_at": "2026-03-26T07:07:13.087807+09:00"
+    },
+    {
+      "id": "verify-retry-20260325204219",
+      "platform_post_id": "18044598851738616",
+      "posted_at": "2026-03-25T20:42:19.509344+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "春分を過ぎて、新しい季節へ\n\n✨牡羊座さんは今週、大切な\n人との関係が深まるタイミング。\n素直な気持",
+      "first_line": "春分を過ぎて、新しい季節へ",
+      "char_count": 247,
+      "metrics": {
+        "views": 434,
+        "likes": 33,
+        "replies": 4,
+        "reposts": 0,
+        "engagement_rate": 8.53
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-03-26T21:37:14.402479+09:00"
     }
   ],
-  "last_updated": "2026-03-26T20:37:14.513419+09:00"
+  "last_updated": "2026-03-26T21:37:14.402479+09:00"
 }

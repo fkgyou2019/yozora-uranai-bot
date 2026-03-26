@@ -1,32 +1,32 @@
 {
-  "data_count": 10,
-  "last_analyzed": "2026-03-26T20:37:15.281902+09:00",
+  "data_count": 11,
+  "last_analyzed": "2026-03-26T21:37:15.881969+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
       "pattern": "注意喚起型・仕事運",
-      "weight": 24,
+      "weight": 23,
       "avg_engagement": 42.14,
       "sample_count": 1,
       "reason": "eng率42.1% (1件)"
     },
     {
       "pattern": "ランキング型・金運爆発",
-      "weight": 20,
+      "weight": 19,
       "avg_engagement": 36.18,
       "sample_count": 1,
       "reason": "eng率36.2% (1件)"
     },
     {
       "pattern": "ランキング型",
-      "weight": 12,
+      "weight": 11,
       "avg_engagement": 21.32,
       "sample_count": 3,
       "reason": "eng率21.3% (3件)"
     },
     {
       "pattern": "限定×恐怖型・恋愛",
-      "weight": 12,
+      "weight": 11,
       "avg_engagement": 21.29,
       "sample_count": 1,
       "reason": "eng率21.3% (1件)"
@@ -97,6 +97,14 @@
       "total_replies": 0
     },
     {
+      "pattern": "",
+      "count": 1,
+      "avg_engagement": 8.53,
+      "avg_views": 434.0,
+      "total_likes": 33,
+      "total_replies": 4
+    },
+    {
       "pattern": "予告型・フォロー動機",
       "count": 1,
       "avg_engagement": 6.91,
@@ -120,6 +128,11 @@
       "feature": "has_number_hook",
       "count": 6,
       "avg_engagement": 22.04
+    },
+    {
+      "feature": "has_question",
+      "count": 1,
+      "avg_engagement": 8.53
     }
   ],
   "top_hook_styles": [
