@@ -1,0 +1,61 @@
+name: Buzz Post Analysis
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: buzz-analyze
+  cancel-in-progress: true
+
+jobs:
+  buzz-analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state files if missing
+        run: |
+          mkdir -p state
+          [ ! -f state/buzz-examples.json ] && echo '{"examples":[],"last_analyzed":null}' > state/buzz-examples.json
+          [ ! -f state/performance-data.json ] && echo '{"posts":[]}' > state/performance-data.json
+          [ ! -f state/winning-patterns.json ] && echo '{}' > state/winning-patterns.json
+          [ ! -f state/buzz-analysis.json ] && echo '{"analysis":{},"history":[]}' > state/buzz-analysis.json
+          true
+
+      - name: Create api-keys.env from secrets
+        run: |
+          cat > config/api-keys.env << EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN=${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
+          EOF
+
+      - name: Run buzz analyzer
+        run: python .github/scripts/buzz_analyzer.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/buzz-examples.json state/buzz-analysis.json state/winning-patterns.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: buzz analysis - update winning patterns [skip ci]"
+            git push || (git pull --rebase origin master && git push)
+          fi

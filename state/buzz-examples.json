@@ -1,0 +1,39 @@
+{
+  "examples": [
+    {
+      "account": "@uru.uranai.healing",
+      "text": "🌸を置いた方に奇跡がどんどん押し寄せます",
+      "likes": 5242,
+      "comments": 2784,
+      "collected_at": "2026-03-26",
+      "tags": ["CTA", "スピリチュアル報酬", "絵文字CTA"]
+    },
+    {
+      "account": "@uru.uranai.healing",
+      "text": "【○○な星座ランキングTOP3】形式の投稿",
+      "likes": 1301,
+      "comments": 856,
+      "collected_at": "2026-03-26",
+      "tags": ["ランキング", "CTA"]
+    },
+    {
+      "account": "@yozora.uranai",
+      "text": "来週、仕事で大きな話が来やすい星座。獅子座と天秤座。\n\n獅子座は、昇進や抜擢の可能性。\n天秤座は、新しいプロジェクトへの参画。\n\nどちらも今週中の準備が鍵。\n\n🍀を置いた方に届きます。",
+      "likes": 93,
+      "comments": 261,
+      "views": 699,
+      "collected_at": "2026-03-26",
+      "tags": ["数字フック", "星座限定", "CTA"]
+    },
+    {
+      "account": "@yozora.uranai",
+      "text": "【金運が急上昇する星座TOP3】\n\n🥉第3位：山羊座。\n地道な努力が報われる時期です。\n\n🥈第2位：蠍座。\n思わぬ臨時収入の暗示。\n\n🥇第1位：牡牛座。\n大きなお金の流れが来ます。\n\n🍀を置いた方に金運が届きます。",
+      "likes": 80,
+      "comments": 81,
+      "views": 439,
+      "collected_at": "2026-03-26",
+      "tags": ["ランキング", "CTA", "金運"]
+    }
+  ],
+  "last_analyzed": null
+}
