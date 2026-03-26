@@ -299,6 +299,23 @@
           "deleted": false
         }
       ]
+    },
+    {
+      "timestamp": "2026-03-27T08:07:13.630554+09:00",
+      "checked": 1,
+      "deleted": 0,
+      "results": [
+        {
+          "post_id": "17956686267086964",
+          "time": "2026-03-27T07:12:20+09:00",
+          "views": 56,
+          "likes": 2,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=56, eng=3.6% + 時刻矛盾",
+          "deleted": true
+        }
+      ]
     }
   ]
 }
