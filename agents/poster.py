@@ -236,7 +236,7 @@ def x_post_tweet(text):
     access_token = os.environ.get("X_ACCESS_TOKEN", "")
     access_secret = os.environ.get("X_ACCESS_TOKEN_SECRET", "")
 
-    body = json.dumps({"text": text}).encode("utf-8")
+    body = json.dumps({"text": text}, ensure_ascii=False).encode("utf-8")
     auth_header = x_create_oauth_header(
         "POST", url, {}, consumer_key, consumer_secret, access_token, access_secret
     )
@@ -436,7 +436,7 @@ def _post_one_inner():
                 acc_secret = creds.get("access_token_secret", "")
                 if acc_token and acc_secret:
                     url = "https://api.twitter.com/2/tweets"
-                    body = json.dumps({"text": content}).encode("utf-8")
+                    body = json.dumps({"text": content}, ensure_ascii=False).encode("utf-8")
                     auth_header = x_create_oauth_header(
                         "POST", url, {}, consumer_key, consumer_secret, acc_token, acc_secret
                     )

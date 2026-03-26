@@ -1,31 +1,55 @@
 {
-  "description": "投稿スケジュール設定（データ駆動型：Buffer 250万投稿 + App Ape日本データ統合）",
+  "description": "投稿スケジュール設定（プラットフォーム別最適化。Buffer 250万投稿 + App Ape日本データ統合）",
   "timezone": "Asia/Tokyo",
   "posting_schedule": {
     "slots": [
-      {"time": "07:07", "priority": "high", "note": "朝一「今日の運勢」需要"},
-      {"time": "09:07", "priority": "high", "note": "出社後チェック（Buffer最強帯）"},
-      {"time": "10:37", "priority": "medium", "note": "主婦の一息タイム"},
-      {"time": "12:07", "priority": "high", "note": "ランチ休憩（安定帯）"},
-      {"time": "15:07", "priority": "medium", "note": "午後の休憩"},
-      {"time": "19:07", "priority": "high", "note": "帰宅後スマホタイム"},
-      {"time": "20:37", "priority": "high", "note": "占い層ゴールデン（日本データ最強）"},
-      {"time": "21:37", "priority": "high", "note": "寝かしつけ後（主婦層ピーク）"}
+      {"time": "07:07", "platform": "threads", "account_group": "auto", "priority": "high", "note": "Threads朝一：挨拶+今日の運勢（質問型）"},
+      {"time": "08:07", "platform": "x", "account_group": "auto", "priority": "high", "note": "X朝：ランキングTOP3（断定型）"},
+      {"time": "09:07", "platform": "threads", "account_group": "auto", "priority": "high", "note": "Threads午前：共感型（出社後チェック帯）"},
+      {"time": "12:07", "platform": "x", "account_group": "auto", "priority": "high", "note": "Xランチ：限定×恐怖型（拡散狙い）"},
+      {"time": "15:07", "platform": "threads", "account_group": "auto", "priority": "medium", "note": "Threads午後：選択肢型（参加型）"},
+      {"time": "18:07", "platform": "x", "account_group": "auto", "priority": "high", "note": "X夕方：リプ欄活用型（帰宅後スマホタイム）"},
+      {"time": "19:37", "platform": "threads", "account_group": "auto", "priority": "high", "note": "Threadsゴールデン：癒し系+リンク（占い層ピーク）"},
+      {"time": "20:37", "platform": "x", "account_group": "auto", "priority": "high", "note": "X夜：煽り×期待型（プロフ誘導）"},
+      {"time": "21:07", "platform": "threads", "account_group": "auto", "priority": "high", "note": "Threads夜：対話型（寝かしつけ後ピーク）"},
+      {"time": "21:37", "platform": "x", "account_group": "auto", "priority": "high", "note": "X夜：予告型（明日のフォロー誘導）"}
     ],
-    "max_posts_per_day": 8,
-    "min_interval_minutes": 60
+    "max_posts_per_day": 10,
+    "max_posts_per_day_x": 5,
+    "max_posts_per_day_threads": 5,
+    "min_interval_minutes": 30
   },
   "daily_workflow": {
+    "05:47": "buzz-learn - バズ投稿収集・分析・テンプレート改善",
     "06:03": "daily-learn - メトリクス収集・パターン分析",
     "06:33": "pdca-monitor - 日次レポート生成",
-    "07:07-21:37": "auto-post - 8スロットで分散投稿",
-    "投稿30分後": "auto-reply - コメント返信チェック（8回/日）"
+    "07:07-21:37": "auto-post - 10スロット（X5件+Threads5件）で分散投稿",
+    "投稿30分後": "auto-reply - コメント返信チェック"
   },
   "affiliate_posting": {
-    "max_per_day": 1,
-    "preferred_time": "21:37",
+    "max_per_day": 2,
+    "preferred_time_x": "20:37",
+    "preferred_time_threads": "19:37",
     "min_interval_days_same_campaign": 3,
     "enabled": false,
-    "note": "Phase1（コンテンツ蓄積期間）はアフィリエイト無効"
+    "note": "Phase1はアフィリエイト無効。Threadsはリンク直貼り、Xはプロフ誘導+自己リプ"
+  },
+  "platform_strategy": {
+    "x": {
+      "tone": "断定的・刺激的・短文",
+      "optimal_chars": "80-140",
+      "hashtags": "1-2個",
+      "link_strategy": "本文にリンク禁止。プロフ誘導 or 自己リプにリンク",
+      "cta_focus": "RT誘発・リプ誘導・絵文字設置",
+      "note": "初速30分のエンゲージメントが命"
+    },
+    "threads": {
+      "tone": "会話的・共感的・親しみやすい",
+      "optimal_chars": "200-300",
+      "hashtags": "トピックタグ1つのみ",
+      "link_strategy": "本文にリンク直貼りOK（ペナルティなし）",
+      "cta_focus": "質問→個別回答の約束でリプライ誘発",
+      "note": "リプライの質と数が最重要シグナル"
+    }
   }
 }
