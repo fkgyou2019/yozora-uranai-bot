@@ -73,7 +73,8 @@ def generate_reply(comment_text, original_post_text, commenter_name, recent_repl
     if recent_replies:
         recent_block = "【直近の返信（これと同じ言い回しは絶対に使うな）】\n"
         for r in recent_replies[-5:]:
-            recent_block += f"・{r[:40]}\n"
+            text = r.get("text", "") if isinstance(r, dict) else str(r)
+            recent_block += f"・{text[:40]}\n"
 
     # 星座名コメントの検出（コメント誘導型の投稿への返信）
     zodiac_hint = ""
@@ -299,13 +300,17 @@ def main():
                     print(f"  [WARN] 返信生成エラー (attempt {attempt+1}): {e}")
                     break
 
-                # 類似性チェック: 直近返信と85%以上類似なら棄却
+                # 類似性チェック: 同じ投稿への直近返信と90%以上類似なら棄却
                 from difflib import SequenceMatcher
                 is_similar = False
-                for prev in recent_replies[-10:]:
+                same_post_replies = [
+                    r for r in recent_replies
+                    if (r.get("post_id") if isinstance(r, dict) else None) == post_id
+                ][-5:]
+                for prev in same_post_replies:
                     prev_text = prev.get("text", "") if isinstance(prev, dict) else str(prev)
                     ratio = SequenceMatcher(None, candidate, prev_text).ratio()
-                    if ratio >= 0.85:
+                    if ratio >= 0.90:
                         print(f"  ⚠ 類似度{ratio:.0%}で棄却 (attempt {attempt+1})")
                         is_similar = True
                         break
@@ -317,7 +322,7 @@ def main():
                     break
 
             if reply_text is None:
-                print(f"  [WARN] @{comment_user}: 3回生成しても類似度85%超。スキップ")
+                print(f"  [WARN] @{comment_user}: 3回生成しても類似度90%超。スキップ")
                 replied_ids.add(comment_id)
                 continue
 
@@ -326,7 +331,7 @@ def main():
                 reply_id = threads_reply(reply_text, comment_id, user_id, access_token)
                 replied_ids.add(comment_id)
                 replied_users_this_post.add(comment_user)
-                recent_replies.append({"text": reply_text, "to_user": comment_user})
+                recent_replies.append({"text": reply_text, "to_user": comment_user, "post_id": post_id})
                 total_replied += 1
                 print(f"  ✅ @{comment_user}: 「{comment_text[:20]}」→ 「{reply_text[:40]}」")
             except Exception as e:
@@ -335,7 +340,7 @@ def main():
 
     # 返信済みIDと直近返信テキストを保存
     replied["replied_ids"] = list(replied_ids)[-500:]
-    replied["recent_reply_texts"] = recent_replies[-20:]  # 直近20件の返信文を保持
+    replied["recent_reply_texts"] = recent_replies[-5:]  # 直近5件の返信文を保持
     replied["last_checked"] = datetime.now(JST).isoformat()
     save_json("state/replied-comments.json", replied)
 
