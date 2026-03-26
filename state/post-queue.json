@@ -1,25 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "週間予告型・火木金フロー",
-      "category": "週間予報",
-      "content": "今週、あたしが見た星の動き。\n\n火曜：人間関係が揺れる\n木曜：決断を迫られる\n金曜：答えが出る\n\n焦って動くな。\nこの3日の流れを待てた人だけが勝つ。\n\nこの投稿、金曜に見返しなさい。\n\n#今週の運勢",
-      "hashtag": "#今週の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 8,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.5
-      },
-      "id": "post_20260324_x_004",
-      "platform": "x",
-      "status": "error",
-      "error": "posting状態で30分以上滞留（タイムアウト）"
-    }
-  ]
+  "queue": []
 }
