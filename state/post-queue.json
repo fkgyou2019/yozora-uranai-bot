@@ -1,24 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "ランキング型・金運爆発",
-      "category": "ランキング型・金運爆発",
-      "content": "【金運が急上昇する星座TOP3】\n\n🥉第3位：山羊座さん。\n地道な努力が報われる時期です。\n\n🥈第2位：牡牛座さん。\n投資や副業に追い風が吹きます。\n\n🥇第1位：射手座さん。\n今月中に大きなお金の流れが\n変わる予感。臨時収入も近いです。\n\n「🍀」を置いた方に、\n今週中に嬉しい連絡が届きます。\n\n金運 #今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 9,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 8,
-        "mobile_readability": 9,
-        "average": 8.9
-      },
-      "id": "post_20260326_th_003",
-      "platform": "threads",
-      "status": "queued"
-    }
-  ]
+  "queue": []
 }
