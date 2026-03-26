@@ -20,26 +20,6 @@
       "platform": "x",
       "status": "error",
       "error": "posting状態で30分以上滞留（タイムアウト）"
-    },
-    {
-      "pattern_name": "木曜定番・注意星座型",
-      "category": "注意喚起型・仕事運",
-      "content": "今週後半、気をつけた方がいい星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座さん。\n\n双子座は金曜日、予想外の連絡が。\n天秤座は木曜夜、判断を急がないで。\n水瓶座は土曜まで、焦らずゆっくり進んで。\n\n大事なのは「一呼吸置くこと」です。\n\n「🌙」を置いた方に、\n土日中に穏やかな気づきが届きます。\n\n今週の占い #今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 8,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.7
-      },
-      "id": "post_20260326_th_002",
-      "platform": "threads",
-      "status": "queued"
     }
   ]
 }
