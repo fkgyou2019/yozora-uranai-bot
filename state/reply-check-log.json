@@ -1,8 +1,101 @@
 {
-  "checked_at": "2026-03-27T10:30:26.711009+09:00",
+  "checked_at": "2026-03-27T11:30:24.323173+09:00",
   "posts_checked": 10,
-  "replies_checked": 0,
+  "replies_checked": 37,
   "deleted": 0,
-  "warnings": 0,
-  "details": []
+  "warnings": 16,
+  "details": [
+    {
+      "post_id": "17866623132601104",
+      "time": "20:42",
+      "issues": [
+        {
+          "type": "format_warning",
+          "reply_id": "18072524660220730",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18100145269767565",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17931774126234896",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18079069565121442",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18098764192786961",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17873001264569358",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18079469495104166",
+          "detail": "返信が4行（4行以上）"
+        }
+      ]
+    },
+    {
+      "post_id": "17868684261598132",
+      "time": "09:12",
+      "issues": [
+        {
+          "type": "format_warning",
+          "reply_id": "18039715424561740",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17965809138045341",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17854212150650611",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18013169543837148",
+          "detail": "行4が26文字（25文字以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18428395966143869",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18079873319093723",
+          "detail": "返信が5行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18014642711674753",
+          "detail": "行4が30文字（25文字以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18516249394077974",
+          "detail": "行4が25文字（25文字以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18312231421284853",
+          "detail": "返信が4行（4行以上）"
+        }
+      ]
+    }
+  ]
 }
