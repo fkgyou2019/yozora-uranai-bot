@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 GitHub Actions用: キューが空なら Claude API で投稿を生成
-X用5件 + Threads用5件 = 合計10件（プラットフォーム別に最適化）
+Threads用10件を生成（X用は現在無効）
 学習データ（winning-patterns.json）を参照し、日々進化するプロンプトを構築
 """
 
@@ -230,7 +230,7 @@ def build_threads_prompt(ctx, should_generate_affiliate, asp_links):
 """ if should_generate_affiliate else ''}
 
 【生成ルール】
-1. 5件生成（Threads専用）{'（うち1件はアフィリエイト投稿）' if should_generate_affiliate else ''}
+1. 10件生成（Threads専用）{'（うち1件はアフィリエイト投稿）' if should_generate_affiliate else ''}
 2. 各投稿は200-300文字（Threadsの最適値）
 3. 全投稿で会話を誘導するCTAを含める（質問型中心）
 4. トピックタグは末尾に1つだけ
@@ -462,7 +462,7 @@ def main():
         print(f"キューに{len(pending)}件残っています。生成スキップ。")
         return
 
-    print("キューが空のため、Claude APIでX用5件 + Threads用5件を生成します...")
+    print("キューが空のため、Claude APIでThreads用10件を生成します...")
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key:
@@ -503,18 +503,12 @@ def main():
     ctx = build_common_context(today, used_patterns, learning_block, weekday, series_map)
 
     # ========================================
-    # Phase 1: X用投稿を5件生成
+    # X用投稿は現在無効（Xは未運用のため）
     # ========================================
-    print("\n--- X用投稿を生成中 ---")
-    x_prompt = build_x_prompt(ctx, should_generate_affiliate, asp_links)
-    x_posts = call_claude_api(api_key, x_prompt)
-    if x_posts is None:
-        print("ERROR: X用投稿の生成に失敗")
-        sys.exit(1)
-    print(f"  X用: {len(x_posts)}件生成")
+    x_posts = []
 
     # ========================================
-    # Phase 2: Threads用投稿を5件生成
+    # Threads用投稿を10件生成
     # ========================================
     print("\n--- Threads用投稿を生成中 ---")
     threads_prompt = build_threads_prompt(ctx, should_generate_affiliate, asp_links)
@@ -589,7 +583,7 @@ def main():
             print(f"  [{platform_label}] 類似チェック: {len(posts)}件→{len(filtered)}件")
         return filtered
 
-    x_posts = filter_similar(x_posts, "X")
+    # X用は現在無効
     threads_posts = filter_similar(threads_posts, "Threads")
 
     # ========================================
@@ -623,7 +617,7 @@ def main():
         normal = [p for p in posts if not p.get("is_affiliate")]
         return normal + affiliate
 
-    x_posts = sort_by_time(x_posts, x_time_priority)
+    # X用は現在無効
     threads_posts = sort_by_time(threads_posts, threads_time_priority)
 
     # ========================================
@@ -632,18 +626,7 @@ def main():
     today_str = datetime.now(JST).strftime("%Y%m%d")
     post_count = len(history.get("posts", []))
 
-    # X投稿にプラットフォームタグ
-    for i, p in enumerate(x_posts):
-        p["id"] = f"post_{today_str}_x_{i + 1:03d}"
-        p["platform"] = "x"
-        if not affiliate_enabled:
-            p["is_affiliate"] = False
-            p["affiliate_comment"] = None
-        else:
-            p.setdefault("is_affiliate", False)
-            p.setdefault("affiliate_comment", None)
-        p["status"] = "queued"
-        queue["queue"].append(p)
+    # X投稿は現在無効（キューに追加しない）
 
     # Threads投稿にプラットフォームタグ
     for i, p in enumerate(threads_posts):
@@ -686,7 +669,7 @@ def main():
         print(f"  履歴を{len(all_posts)}件→200件にトリミング")
 
     save_json("state/post-queue.json", queue)
-    print(f"\n生成完了: X={len(x_posts)}件 + Threads={len(threads_posts)}件 = 合計{total_posts}件をキューに追加")
+    print(f"\n生成完了: Threads={len(threads_posts)}件をキューに追加")
     print(f"学習データ参照: {winning.get('data_count', 0)}件 (信頼度: {winning.get('confidence', 'none')})")
 
 
