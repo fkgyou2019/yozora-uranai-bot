@@ -316,6 +316,33 @@
           "deleted": true
         }
       ]
+    },
+    {
+      "timestamp": "2026-03-27T10:07:13.501751+09:00",
+      "checked": 2,
+      "deleted": 0,
+      "results": [
+        {
+          "post_id": "17847950058675342",
+          "time": "2026-03-27T09:12:15+09:00",
+          "views": 7,
+          "likes": 0,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=7 < 20",
+          "deleted": true
+        },
+        {
+          "post_id": "17956686267086964",
+          "time": "2026-03-27T07:12:20+09:00",
+          "views": 65,
+          "likes": 2,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=65, eng=3.1% + 時刻矛盾",
+          "deleted": true
+        }
+      ]
     }
   ]
 }
