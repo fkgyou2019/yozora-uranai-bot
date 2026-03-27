@@ -246,6 +246,22 @@ def main():
         comments = replies_data.get("data", [])
         replied_users_this_post = set()  # この投稿で既に返信したユーザー
 
+        # Threads API上で既に返信済みのコメントIDとユーザーを特定
+        # （replied-comments.json リセット時の再返信防止）
+        already_replied_on_threads = set()  # Threads上で既に返信が存在するコメントID
+        my_replies_in_thread = [c for c in comments if c.get("username") == "yozora.uranai"]
+        for my_reply in my_replies_in_thread:
+            my_text = my_reply.get("text", "")
+            # 返信テキスト冒頭の @ユーザー名 を抽出して返信済みユーザーを特定
+            mention_match = re.match(r"@(\S+)", my_text)
+            if mention_match:
+                mentioned_user = mention_match.group(1)
+                replied_users_this_post.add(mentioned_user)
+                # そのユーザーのコメントIDを返信済みとしてマーク
+                for c in comments:
+                    if c.get("username") == mentioned_user:
+                        already_replied_on_threads.add(c["id"])
+
         for comment in comments:
             if total_replied >= max_replies_per_run:
                 break
@@ -259,9 +275,11 @@ def main():
                 replied_users_this_post.add(comment_user)
                 continue
 
-            # 既に返信済みならスキップ
-            if comment_id in replied_ids:
+            # 既に返信済みならスキップ（JSON記録 OR Threads上に返信が存在）
+            if comment_id in replied_ids or comment_id in already_replied_on_threads:
                 replied_users_this_post.add(comment_user)
+                if comment_id in already_replied_on_threads and comment_id not in replied_ids:
+                    replied_ids.add(comment_id)  # JSONにも記録を復元
                 continue
 
             # 同一ユーザーへの返信は1投稿につき1回まで（重複返信防止）
