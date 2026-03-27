@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-03-28T00:30:28.778051+09:00",
+  "checked_at": "2026-03-28T01:30:25.822423+09:00",
   "posts_checked": 10,
   "replies_checked": 16,
   "deleted": 3,
-  "warnings": 11,
+  "warnings": 12,
   "details": [
     {
       "post_id": "18573310993062578",
@@ -22,21 +22,36 @@
       "issues": [
         {
           "type": "duplicate_reply",
-          "target_user": "atori",
-          "reply_id": "18121052905619076",
+          "target_user": "_r10__n2",
+          "reply_id": "18079069565121442",
           "action": "deleted"
         },
         {
           "type": "duplicate_reply",
-          "target_user": "jiacheng1651",
-          "reply_id": "17873001264569358",
+          "target_user": "aaayaka.m",
+          "reply_id": "18067803431312797",
           "action": "deleted"
         },
         {
           "type": "duplicate_reply",
-          "target_user": "ohagiyasake",
-          "reply_id": "18079469495104166",
+          "target_user": "tu.to06",
+          "reply_id": "18125309392510540",
           "action": "deleted"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18002944340857630",
+          "detail": "返信が5行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17996544287754978",
+          "detail": "返信が7行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17946162333133745",
+          "detail": "返信が6行（4行以上）"
         },
         {
           "type": "format_warning",
@@ -76,16 +91,6 @@
         {
           "type": "format_warning",
           "reply_id": "18098764192786961",
-          "detail": "返信が4行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "17873001264569358",
-          "detail": "返信が4行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "18079469495104166",
           "detail": "返信が4行（4行以上）"
         }
       ]
