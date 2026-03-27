@@ -363,7 +363,33 @@
         "hook_length": 14
       },
       "collected_at": "2026-03-27T12:07:14.793518+09:00"
+    },
+    {
+      "id": "verify-retry-20260326121220",
+      "platform_post_id": "17911027851181937",
+      "posted_at": "2026-03-26T12:12:20.665548+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "木星の優しい光が\nあなたを包んでいます✨\n\n牡羊座のあなたへ。\n今日は新しい挑戦を始める\n絶好のタイ",
+      "first_line": "木星の優しい光が",
+      "char_count": 158,
+      "metrics": {
+        "views": 165,
+        "likes": 5,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 3.03
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-03-27T15:07:14.663384+09:00"
     }
   ],
-  "last_updated": "2026-03-27T12:07:14.793518+09:00"
+  "last_updated": "2026-03-27T15:07:14.663384+09:00"
 }
