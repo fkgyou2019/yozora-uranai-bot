@@ -175,6 +175,7 @@ def main():
         sys.exit(1)
 
     posts = data.get("data", [])
+    print(f"投稿{len(posts)}件取得")
     if not posts:
         print("投稿がありません")
         sys.exit(0)
@@ -188,16 +189,29 @@ def main():
         text = p.get("text", "")
         ts = p.get("timestamp", "")
 
-        # UTC → JST
+        # UTC → JST（複数フォーマット対応）
         try:
-            utc_time = datetime.fromisoformat(ts.replace("+0000", "+00:00"))
+            # Threads APIの返すフォーマットに対応
+            ts_normalized = ts.replace("+0000", "+00:00").replace("Z", "+00:00")
+            utc_time = datetime.fromisoformat(ts_normalized)
+            # タイムゾーン情報がない場合はUTCとして扱う
+            if utc_time.tzinfo is None:
+                utc_time = utc_time.replace(tzinfo=timezone.utc)
             jst_time = utc_time.astimezone(JST)
-        except Exception:
+        except Exception as e:
+            print(f"  投稿 {pid}: タイムスタンプ解析失敗 ts='{ts}' error={e}")
             continue
 
-        # 投稿後60-90分の投稿のみ対象
+        # 投稿後30-180分の投稿のみ対象
         age_minutes = (now - jst_time).total_seconds() / 60
-        if age_minutes < 30 or age_minutes > CHECK_WINDOW_MINUTES:
+        in_window = 30 <= age_minutes <= CHECK_WINDOW_MINUTES
+        status_mark = "ウィンドウ内 → チェック対象" if in_window else (
+            f"ウィンドウ外(age={age_minutes:.0f}分 < 30分)" if age_minutes < 30
+            else f"ウィンドウ外(age={age_minutes:.0f}分 > {CHECK_WINDOW_MINUTES}分)"
+        )
+        print(f"  投稿 {jst_time.strftime('%H:%M')} JST (age={age_minutes:.0f}分) → {status_mark}")
+
+        if not in_window:
             continue
 
         checked_count += 1

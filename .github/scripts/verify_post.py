@@ -177,18 +177,39 @@ JSON形式で1件だけ返してください:
                 return None
 
     text = result["content"][0]["text"]
-    # JSONを抽出
+
+    # サニタイズ: マークダウンコードブロック除去
+    text = re.sub(r'```json\s*', '', text)
+    text = re.sub(r'```\s*', '', text)
+    # 制御文字を除去（改行・タブは保持）
+    text = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', text)
+
+    # JSONオブジェクトを抽出
     m = re.search(r"\{.*\}", text, re.DOTALL)
     if not m:
         log("ERROR", f"Claude応答からJSONを抽出できません: {text[:200]}")
         return None
 
+    json_str = m.group()
     try:
-        post_data = json.loads(m.group())
+        post_data = json.loads(json_str)
         return post_data
     except json.JSONDecodeError as e:
-        log("ERROR", f"JSON パースエラー: {e}")
-        return None
+        log("WARN", f"JSON パース1回目失敗: {e}")
+        # フォールバック: 文字列値内の生改行をエスケープして再パース
+        try:
+            sanitized = re.sub(
+                r'("(?:[^"\\]|\\.)*")',
+                lambda m: m.group(0).replace('\n', '\\n').replace('\r', '\\r').replace('\t', '\\t'),
+                json_str
+            )
+            post_data = json.loads(sanitized)
+            log("INFO", "サニタイズ後のJSON パース成功")
+            return post_data
+        except json.JSONDecodeError as e2:
+            log("ERROR", f"JSON パースエラー（サニタイズ後も失敗）: {e2}")
+            log("ERROR", f"対象テキスト: {json_str[:300]}")
+            return None
 
 
 # ---------------------------------------------------------------------------
@@ -294,8 +315,8 @@ def main():
     log("INFO", "キューが空のためClaude APIで緊急生成...")
     post_data = generate_emergency_post(api_key)
     if not post_data:
-        log("ERROR", "緊急生成失敗。終了。")
-        sys.exit(1)
+        log("ERROR", "緊急生成失敗。次回スロットに委ねます。")
+        sys.exit(0)
 
     content = post_data.get("content", "")
     hashtag = post_data.get("hashtag", "")

@@ -41,6 +41,7 @@ def threads_get(url):
 
 
 def threads_reply(text, reply_to_id, user_id, access_token):
+    """Threads APIで返信を投稿する。reply_to_idには元の投稿IDを指定すること（コメントIDではない）。"""
     url = f"https://graph.threads.net/v1.0/{user_id}/threads"
     params = {
         "media_type": "TEXT",
@@ -49,11 +50,21 @@ def threads_reply(text, reply_to_id, user_id, access_token):
         "auto_publish_text": "true",
         "access_token": access_token,
     }
+    print(f"  [DEBUG] reply_to_id={reply_to_id} (投稿ID)")
     data = urllib.parse.urlencode(params).encode("utf-8")
     req = urllib.request.Request(url, data=data, method="POST")
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
-    return result.get("id")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+        return result.get("id")
+    except urllib.error.HTTPError as e:
+        error_body = ""
+        try:
+            error_body = e.read().decode("utf-8")
+        except Exception:
+            pass
+        print(f"  [ERROR] Threads API {e.code}: reply_to_id={reply_to_id}, body={error_body}")
+        raise
 
 
 def generate_reply(comment_text, original_post_text, commenter_name, recent_replies, api_key):
@@ -222,6 +233,7 @@ def main():
     total_skipped = 0
     max_replies_per_run = 5  # 1回の実行で最大5件返信（スパム防止）
     recent_replies = replied.get("recent_reply_texts", [])  # 直近の返信文を保持
+    consecutive_errors = {}  # 投稿IDごとの連続400エラー回数
 
     for post in posts:
         if total_replied >= max_replies_per_run:
@@ -344,17 +356,28 @@ def main():
                 replied_ids.add(comment_id)
                 continue
 
-            # Threads APIで返信投稿
+            # Threads APIで返信投稿（reply_to_idには元の投稿IDを使う。コメントIDではない）
             try:
-                reply_id = threads_reply(reply_text, comment_id, user_id, access_token)
+                reply_id = threads_reply(reply_text, post_id, user_id, access_token)
                 replied_ids.add(comment_id)
                 replied_users_this_post.add(comment_user)
                 recent_replies.append({"text": reply_text, "to_user": comment_user, "post_id": post_id})
                 total_replied += 1
                 print(f"  ✅ @{comment_user}: 「{comment_text[:20]}」→ 「{reply_text[:40]}」")
+            except urllib.error.HTTPError as e:
+                error_count = consecutive_errors.get(post_id, 0) + 1
+                consecutive_errors[post_id] = error_count
+                if e.code == 400 and error_count >= 3:
+                    print(f"  [WARN] 投稿{post_id}で400エラーが{error_count}回連続。この投稿への返信をスキップします。")
+                    break  # この投稿のコメントループを抜ける
+                print(f"  [WARN] 返信投稿エラー ({e.code}): {e}")
+                continue
             except Exception as e:
                 print(f"  [WARN] 返信投稿エラー: {e}")
                 continue
+            else:
+                # 成功したらこの投稿の連続エラーカウントをリセット
+                consecutive_errors[post_id] = 0
 
     # 返信済みIDと直近返信テキストを保存
     replied["replied_ids"] = list(replied_ids)[-500:]
