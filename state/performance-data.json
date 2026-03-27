@@ -337,7 +337,33 @@
         "hook_length": 17
       },
       "collected_at": "2026-03-27T10:37:14.906026+09:00"
+    },
+    {
+      "id": "verify-retry-20260326104221",
+      "platform_post_id": "18110572015795197",
+      "posted_at": "2026-03-26T10:42:21.267180+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "木星があなたを後押しする日🌙\n\nおはようございます。本日3月26日は、\nあなたの可能性を広げる星の配",
+      "first_line": "木星があなたを後押しする日🌙",
+      "char_count": 228,
+      "metrics": {
+        "views": 88,
+        "likes": 6,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 6.82
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 14
+      },
+      "collected_at": "2026-03-27T12:07:14.793518+09:00"
     }
   ],
-  "last_updated": "2026-03-27T10:37:14.906026+09:00"
+  "last_updated": "2026-03-27T12:07:14.793518+09:00"
 }

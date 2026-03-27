@@ -1,6 +1,6 @@
 {
-  "data_count": 13,
-  "last_analyzed": "2026-03-27T10:37:17.108971+09:00",
+  "data_count": 14,
+  "last_analyzed": "2026-03-27T12:07:16.863895+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
@@ -89,20 +89,20 @@
       "total_replies": 25
     },
     {
-      "pattern": "",
-      "count": 3,
-      "avg_engagement": 10.95,
-      "avg_views": 970.0,
-      "total_likes": 335,
-      "total_replies": 169
-    },
-    {
       "pattern": "星座別アドバイス型",
       "count": 1,
       "avg_engagement": 10.39,
       "avg_views": 231.0,
       "total_likes": 24,
       "total_replies": 0
+    },
+    {
+      "pattern": "",
+      "count": 4,
+      "avg_engagement": 9.92,
+      "avg_views": 750.0,
+      "total_likes": 341,
+      "total_replies": 169
     },
     {
       "pattern": "予告型・フォロー動機",
