@@ -1,14 +1,58 @@
 {
-  "checked_at": "2026-03-27T23:30:26.348631+09:00",
+  "checked_at": "2026-03-28T00:30:28.778051+09:00",
   "posts_checked": 10,
-  "replies_checked": 12,
-  "deleted": 0,
-  "warnings": 7,
+  "replies_checked": 16,
+  "deleted": 3,
+  "warnings": 11,
   "details": [
+    {
+      "post_id": "18573310993062578",
+      "time": "20:42",
+      "issues": [
+        {
+          "type": "format_warning",
+          "reply_id": "17856708798629625",
+          "detail": "返信が6行（4行以上）"
+        }
+      ]
+    },
     {
       "post_id": "17866623132601104",
       "time": "20:42",
       "issues": [
+        {
+          "type": "duplicate_reply",
+          "target_user": "atori",
+          "reply_id": "18121052905619076",
+          "action": "deleted"
+        },
+        {
+          "type": "duplicate_reply",
+          "target_user": "jiacheng1651",
+          "reply_id": "17873001264569358",
+          "action": "deleted"
+        },
+        {
+          "type": "duplicate_reply",
+          "target_user": "ohagiyasake",
+          "reply_id": "18079469495104166",
+          "action": "deleted"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18078182768386050",
+          "detail": "返信が6行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17884337499470250",
+          "detail": "返信が6行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18221982181313754",
+          "detail": "返信が7行（4行以上）"
+        },
         {
           "type": "format_warning",
           "reply_id": "18072524660220730",
