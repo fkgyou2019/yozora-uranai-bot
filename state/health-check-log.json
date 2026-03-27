@@ -393,6 +393,23 @@
       "checked": 0,
       "deleted": 0,
       "results": []
+    },
+    {
+      "timestamp": "2026-03-27T20:07:11.394080+09:00",
+      "checked": 1,
+      "deleted": 1,
+      "results": [
+        {
+          "post_id": "17940123372015269",
+          "time": "2026-03-27T19:12:16+09:00",
+          "views": 14,
+          "likes": 4,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=14 < 20",
+          "deleted": true
+        }
+      ]
     }
   ]
 }
