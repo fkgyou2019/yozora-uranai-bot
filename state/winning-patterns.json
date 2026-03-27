@@ -1,11 +1,11 @@
 {
-  "data_count": 12,
-  "last_analyzed": "2026-03-27T09:07:18.344599+09:00",
+  "data_count": 13,
+  "last_analyzed": "2026-03-27T10:37:17.108971+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
       "pattern": "注意喚起型・仕事運",
-      "weight": 23,
+      "weight": 22,
       "avg_engagement": 42.14,
       "sample_count": 1,
       "reason": "eng率42.1% (1件)"
@@ -33,7 +33,7 @@
     },
     {
       "pattern": "限定型・恐怖×期待",
-      "weight": 11,
+      "weight": 10,
       "avg_engagement": 20.13,
       "sample_count": 1,
       "reason": "eng率20.1% (1件)"
@@ -89,6 +89,14 @@
       "total_replies": 25
     },
     {
+      "pattern": "",
+      "count": 3,
+      "avg_engagement": 10.95,
+      "avg_views": 970.0,
+      "total_likes": 335,
+      "total_replies": 169
+    },
+    {
       "pattern": "星座別アドバイス型",
       "count": 1,
       "avg_engagement": 10.39,
@@ -103,21 +111,13 @@
       "avg_views": 767.0,
       "total_likes": 53,
       "total_replies": 0
-    },
-    {
-      "pattern": "",
-      "count": 2,
-      "avg_engagement": 6.69,
-      "avg_views": 268.0,
-      "total_likes": 38,
-      "total_replies": 4
     }
   ],
   "feature_ranking": [
     {
       "feature": "has_cta_emoji",
-      "count": 7,
-      "avg_engagement": 27.07
+      "count": 8,
+      "avg_engagement": 26.12
     },
     {
       "feature": "has_ranking",
@@ -224,7 +224,7 @@
   "avoid_patterns": [],
   "insights": [
     "最強パターン: 注意喚起型・仕事運（eng率42.1%）",
-    "絵文字CTAあり → avg eng 27.1%",
+    "絵文字CTAあり → avg eng 26.1%",
     "ランキング形式あり → avg eng 25.0%",
     "数字フックあり → avg eng 22.0%"
   ]

@@ -311,7 +311,33 @@
         "hook_length": 18
       },
       "collected_at": "2026-03-27T09:07:15.650576+09:00"
+    },
+    {
+      "id": "verify-retry-20260326091217",
+      "platform_post_id": "17868684261598132",
+      "posted_at": "2026-03-26T09:12:17.681746+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "今週後半、気をつけた方がいい星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座さん。\n\n双子座",
+      "first_line": "今週後半、気をつけた方がいい星座。",
+      "char_count": 165,
+      "metrics": {
+        "views": 2373,
+        "likes": 297,
+        "replies": 165,
+        "reposts": 0,
+        "engagement_rate": 19.47
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 17
+      },
+      "collected_at": "2026-03-27T10:37:14.906026+09:00"
     }
   ],
-  "last_updated": "2026-03-27T09:07:15.650576+09:00"
+  "last_updated": "2026-03-27T10:37:14.906026+09:00"
 }
