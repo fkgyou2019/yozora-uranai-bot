@@ -454,6 +454,23 @@
           "deleted": false
         }
       ]
+    },
+    {
+      "timestamp": "2026-03-28T08:07:17.417328+09:00",
+      "checked": 1,
+      "deleted": 1,
+      "results": [
+        {
+          "post_id": "18071107583252597",
+          "time": "2026-03-28T07:12:16+09:00",
+          "views": 40,
+          "likes": 0,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=40だがlikes=0, replies=0",
+          "deleted": true
+        }
+      ]
     }
   ]
 }

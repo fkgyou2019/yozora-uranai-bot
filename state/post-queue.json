@@ -1,26 +1,65 @@
 {
   "queue": [
     {
-      "pattern_name": "ランキング型・金運爆発TOP3",
-      "category": "ランキング型・金運",
-      "content": "【3月下旬、金運が急上昇する星座TOP3】\n\n🥉第3位：山羊座さん。\n地道な努力が報われる時期です。\n\n🥈第2位：牡牛座さん。\n投資や副業に追い風が吹きます。\n\n🥇第1位：射手座さん。\n今月中に大きなお金の流れが\n変わる予感がします。\n\nあなたの星座は入ってましたか？\nコメントで教えてくださいね✨\n\n金運 #今週の占い",
-      "hashtag": "#今週の占い",
+      "pattern_name": "共感→答え→CTA型",
+      "category": "総合運",
+      "content": "なんか最近、\n心がざわざわする人いませんか？\n\nそれ、水星逆行の影響かもしれません。\n特に双子座、乙女座、射手座さんは\n影響を受けやすい時期です。\n\n自分を責めなくて大丈夫ですよ。\n来週から落ち着きます。\nそれまでは深呼吸を大事にしてください。\n\n「🌙」を置いた方に、\n穏やかで温かい気持ちが届きます。\n\n#今週の占い",
+      "hashtag": "今週の占い",
       "is_affiliate": false,
       "affiliate_comment": null,
       "quality_score": {
         "hook": 8,
-        "usefulness": 8,
+        "usefulness": 9,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260328_th_001",
+      "platform": "threads",
+      "status": "posting",
+      "posting_started_at": "2026-03-28T08:07:41.723956+09:00"
+    },
+    {
+      "pattern_name": "限定型・来週予告",
+      "category": "仕事運",
+      "content": "来週、12星座の中で\n最も仕事運が動く星座。\n\n獅子座と天秤座です。\n\n獅子座は昇進や抜擢の話が\n舞い込む可能性が高い。\n天秤座は予想外の転機が訪れます。\n\nここは迷わず、自分を信じる時。\n新しい扉を開く勇気を持ってください。\n\n「🍀」を置いた方に、\n今週中に嬉しい連絡が届きます。\n\n仕事運 #今日の運勢",
+      "hashtag": "仕事運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260328_th_002",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "ランキング型・金運TOP3",
+      "category": "金運",
+      "content": "【金運が開く星座TOP3】\n\n🥉第3位：山羊座さん。\n地道な努力が大きく報われる時期です。\n\n🥈第2位：牡牛座さん。\n副業や投資に良い流れが来ています。\n\n🥇第1位：射手座さん。\n今月中に大きなお金の動きが\n変わる予感。思わぬ収入もあるかも。\n\nあなたの星座は入ってましたか？\nコメントで教えてくださいね🔮\n\n金運 #星座占い",
+      "hashtag": "金運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 9,
         "specificity": 9,
         "tempo": 8,
         "persona_match": 9,
         "mobile_readability": 9,
-        "average": 8.5
+        "average": 8.7
       },
-      "id": "post_20260327_th_004",
+      "id": "post_20260328_th_004",
       "platform": "threads",
-      "status": "error",
-      "posting_started_at": "2026-03-27T22:37:16.803556+09:00",
-      "error": "posting状態で30分以上滞留（タイムアウト）"
+      "status": "queued"
     }
   ]
 }
