@@ -389,7 +389,33 @@
         "hook_length": 8
       },
       "collected_at": "2026-03-27T15:07:14.663384+09:00"
+    },
+    {
+      "id": "verify-retry-20260326151221",
+      "platform_post_id": "18033537950619733",
+      "posted_at": "2026-03-26T15:12:21.776333+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "木星の優しい光が射す今日✨\n\n牡羊座さんは、思いがけない\n誰かからの言葉に心がほっと\nなる日。大切な",
+      "first_line": "木星の優しい光が射す今日✨",
+      "char_count": 157,
+      "metrics": {
+        "views": 165,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 1.82
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-03-27T19:07:15.981072+09:00"
     }
   ],
-  "last_updated": "2026-03-27T15:07:14.663384+09:00"
+  "last_updated": "2026-03-27T19:07:15.981072+09:00"
 }
