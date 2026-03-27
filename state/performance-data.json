@@ -415,7 +415,33 @@
         "hook_length": 13
       },
       "collected_at": "2026-03-27T19:07:15.981072+09:00"
+    },
+    {
+      "id": "verify-retry-20260326204216",
+      "platform_post_id": "17866623132601104",
+      "posted_at": "2026-03-26T20:42:16.931989+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "木星の優しい光が\n\n蟹座のあなたへ。\nこの春、心の奥底に\n秘めていた想いが\n静かに花開く季節です。✨",
+      "first_line": "木星の優しい光が",
+      "char_count": 170,
+      "metrics": {
+        "views": 377,
+        "likes": 44,
+        "replies": 50,
+        "reposts": 0,
+        "engagement_rate": 24.93
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-03-27T21:37:15.101202+09:00"
     }
   ],
-  "last_updated": "2026-03-27T20:37:14.456108+09:00"
+  "last_updated": "2026-03-27T21:37:15.101202+09:00"
 }
