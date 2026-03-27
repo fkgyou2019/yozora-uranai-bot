@@ -285,7 +285,33 @@
         "hook_length": 13
       },
       "collected_at": "2026-03-26T21:37:14.402479+09:00"
+    },
+    {
+      "id": "verify-retry-20260326071223",
+      "platform_post_id": "18078665903620995",
+      "posted_at": "2026-03-26T07:12:23.207877+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "🌙 木星の恵みがやさしく降りそそぐ日\n\n牡羊座さんは、ここ数日の迷いがスッと\n晴れる瞬間に出会えそう",
+      "first_line": "🌙 木星の恵みがやさしく降りそそぐ日",
+      "char_count": 206,
+      "metrics": {
+        "views": 103,
+        "likes": 5,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 4.85
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 18
+      },
+      "collected_at": "2026-03-27T09:07:15.650576+09:00"
     }
   ],
-  "last_updated": "2026-03-27T07:07:16.052890+09:00"
+  "last_updated": "2026-03-27T09:07:15.650576+09:00"
 }

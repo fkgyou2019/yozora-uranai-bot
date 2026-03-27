@@ -1,6 +1,6 @@
 {
-  "data_count": 11,
-  "last_analyzed": "2026-03-27T07:07:18.575190+09:00",
+  "data_count": 12,
+  "last_analyzed": "2026-03-27T09:07:18.344599+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
@@ -97,20 +97,20 @@
       "total_replies": 0
     },
     {
-      "pattern": "",
-      "count": 1,
-      "avg_engagement": 8.53,
-      "avg_views": 434.0,
-      "total_likes": 33,
-      "total_replies": 4
-    },
-    {
       "pattern": "予告型・フォロー動機",
       "count": 1,
       "avg_engagement": 6.91,
       "avg_views": 767.0,
       "total_likes": 53,
       "total_replies": 0
+    },
+    {
+      "pattern": "",
+      "count": 2,
+      "avg_engagement": 6.69,
+      "avg_views": 268.0,
+      "total_likes": 38,
+      "total_replies": 4
     }
   ],
   "feature_ranking": [
