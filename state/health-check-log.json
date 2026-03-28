@@ -558,6 +558,43 @@
           "deleted": false
         }
       ]
+    },
+    {
+      "timestamp": "2026-03-28T20:07:11.670724+09:00",
+      "checked": 3,
+      "deleted": 3,
+      "results": [
+        {
+          "post_id": "18070538201274353",
+          "time": "2026-03-28T19:12:18+09:00",
+          "views": 1,
+          "likes": 0,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=1 < 20",
+          "deleted": true
+        },
+        {
+          "post_id": "17926565457252358",
+          "time": "2026-03-28T18:43:13+09:00",
+          "views": 16,
+          "likes": 2,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=16 < 20",
+          "deleted": true
+        },
+        {
+          "post_id": "18582694543062347",
+          "time": "2026-03-28T17:43:12+09:00",
+          "views": 20,
+          "likes": 0,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=20だがlikes=0, replies=0",
+          "deleted": true
+        }
+      ]
     }
   ]
 }
