@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-03-28T16:30:22.675539+09:00",
+  "checked_at": "2026-03-28T17:30:24.495589+09:00",
   "posts_checked": 10,
-  "replies_checked": 28,
+  "replies_checked": 29,
   "deleted": 0,
-  "warnings": 25,
+  "warnings": 26,
   "details": [
     {
       "post_id": "18095722925122269",
@@ -51,6 +51,11 @@
       "post_id": "17921395320272617",
       "time": "11:23",
       "issues": [
+        {
+          "type": "format_warning",
+          "reply_id": "17892602874305939",
+          "detail": "返信が4行（4行以上）"
+        },
         {
           "type": "format_warning",
           "reply_id": "18572100811015468",
