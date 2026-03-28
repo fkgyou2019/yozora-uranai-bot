@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-03-28T17:30:24.495589+09:00",
+  "checked_at": "2026-03-28T18:30:24.336039+09:00",
   "posts_checked": 10,
-  "replies_checked": 29,
+  "replies_checked": 17,
   "deleted": 0,
-  "warnings": 26,
+  "warnings": 15,
   "details": [
     {
       "post_id": "18095722925122269",
@@ -107,67 +107,6 @@
           "type": "format_warning",
           "reply_id": "17856708798629625",
           "detail": "返信が6行（4行以上）"
-        }
-      ]
-    },
-    {
-      "post_id": "17866623132601104",
-      "time": "20:42",
-      "issues": [
-        {
-          "type": "format_warning",
-          "reply_id": "17871840513588795",
-          "detail": "返信が10行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "18195206203351344",
-          "detail": "返信が5行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "17876003652557789",
-          "detail": "返信が6行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "18002944340857630",
-          "detail": "返信が5行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "17996544287754978",
-          "detail": "返信が7行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "17946162333133745",
-          "detail": "返信が6行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "18078182768386050",
-          "detail": "返信が6行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "17884337499470250",
-          "detail": "返信が6行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "18221982181313754",
-          "detail": "返信が7行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "17931774126234896",
-          "detail": "返信が4行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "18098764192786961",
-          "detail": "返信が4行（4行以上）"
         }
       ]
     }
