@@ -196,6 +196,20 @@ def main():
         print("[ERROR] 認証情報が不足しています")
         return
 
+    # モニターが適用した再発防止策をstateから読み込んで上書き
+    max_comments_per_run = state.get("adjusted_per_run", MAX_COMMENTS_PER_RUN)
+    comment_interval = state.get("adjusted_interval_sec", COMMENT_INTERVAL_SEC)
+    max_daily = state.get("adjusted_daily_limit", MAX_DAILY)
+    min_comment_len = state.get("min_comment_length", 30)
+    strict_user_dedup = state.get("strict_user_dedup", False)
+
+    if any([
+        max_comments_per_run != MAX_COMMENTS_PER_RUN,
+        comment_interval != COMMENT_INTERVAL_SEC,
+        max_daily != MAX_DAILY,
+    ]):
+        print(f"[CONFIG] 再発防止策適用中: {max_comments_per_run}件/回, {comment_interval}秒間隔, {max_daily}件/日上限")
+
     # 一時停止チェック
     if state.get("paused_until"):
         try:
@@ -213,8 +227,8 @@ def main():
         state["daily_count"] = 0
         state["daily_date"] = today
 
-    if state.get("daily_count", 0) >= MAX_DAILY:
-        print(f"[SKIP] 本日の上限 {MAX_DAILY} 件に到達済み")
+    if state.get("daily_count", 0) >= max_daily:
+        print(f"[SKIP] 本日の上限 {max_daily} 件に到達済み")
         return
 
     # 自アカウントのユーザー名取得（初回のみ）
@@ -228,11 +242,13 @@ def main():
 
     # キーワードをランダムに3つ選択（多様性確保）
     selected_keywords = random.sample(KEYWORDS, min(3, len(KEYWORDS)))
+    # strict_user_dedup: 同一セッション内で同じユーザーへのコメントを禁止
+    commented_users_this_run = set()
 
     for keyword in selected_keywords:
-        if comment_count >= MAX_COMMENTS_PER_RUN:
+        if comment_count >= max_comments_per_run:
             break
-        if state.get("daily_count", 0) >= MAX_DAILY:
+        if state.get("daily_count", 0) >= max_daily:
             break
 
         print(f"\n[SEARCH] キーワード: 「{keyword}」")
@@ -243,7 +259,7 @@ def main():
         random.shuffle(posts)
 
         for post in posts:
-            if comment_count >= MAX_COMMENTS_PER_RUN:
+            if comment_count >= max_comments_per_run:
                 break
 
             post_id = post.get("id", "")
@@ -256,6 +272,8 @@ def main():
                 continue
             if our_username and username == our_username:
                 continue
+            if strict_user_dedup and username in commented_users_this_run:
+                continue
             if not is_relevant_post(post_text):
                 continue
 
@@ -263,6 +281,10 @@ def main():
 
             comment = generate_comment(post_text, api_key)
             if not comment:
+                continue
+            # 再発防止策: 最小文字数チェック
+            if len(comment) < min_comment_len:
+                print(f"[SKIP] コメントが短すぎる({len(comment)}文字 < {min_comment_len}文字): {comment}")
                 continue
 
             print(f"[COMMENT] 生成: {comment}")
@@ -273,6 +295,7 @@ def main():
                     print(f"[OK] 投稿成功 comment_id={comment_id}")
 
                     commented_ids.add(post_id)
+                    commented_users_this_run.add(username)
                     state["daily_count"] = state.get("daily_count", 0) + 1
                     state["total_count"] = state.get("total_count", 0) + 1
 
@@ -291,9 +314,9 @@ def main():
                     comment_count += 1
                     save_state(state)
 
-                    if comment_count < MAX_COMMENTS_PER_RUN:
-                        print(f"[WAIT] {COMMENT_INTERVAL_SEC}秒待機...")
-                        time.sleep(COMMENT_INTERVAL_SEC)
+                    if comment_count < max_comments_per_run:
+                        print(f"[WAIT] {comment_interval}秒待機...")
+                        time.sleep(comment_interval)
 
             except urllib.error.HTTPError as e:
                 body = e.read().decode("utf-8", errors="replace")
@@ -313,7 +336,7 @@ def main():
     state["last_run"] = datetime.now(JST).isoformat()
     save_state(state)
 
-    print(f"\n[DONE] 今回: {comment_count}件 / 本日合計: {state['daily_count']}件")
+    print(f"\n[DONE] 今回: {comment_count}件 / 本日合計: {state['daily_count']}件 / 上限: {max_daily}件")
 
 
 if __name__ == "__main__":
