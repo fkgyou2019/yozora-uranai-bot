@@ -19,8 +19,8 @@
     },
     "poster": {
       "status": "error",
-      "last_run": "2026-03-28T08:07:41.735999+09:00",
-      "error_count": 6
+      "last_run": "2026-03-28T09:07:15.466794+09:00",
+      "error_count": 7
     },
     "fetcher": {
       "status": "idle",
@@ -35,6 +35,6 @@
   },
   "daily_post_count": 1,
   "daily_post_date": "2026-03-28",
-  "consecutive_errors": 1,
+  "consecutive_errors": 2,
   "max_consecutive_errors": 3
 }

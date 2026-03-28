@@ -18,8 +18,9 @@
       },
       "id": "post_20260328_th_001",
       "platform": "threads",
-      "status": "posting",
-      "posting_started_at": "2026-03-28T08:07:41.723956+09:00"
+      "status": "error",
+      "posting_started_at": "2026-03-28T08:07:41.723956+09:00",
+      "error": "posting状態で30分以上滞留（タイムアウト）"
     },
     {
       "pattern_name": "限定型・来週予告",
@@ -39,7 +40,8 @@
       },
       "id": "post_20260328_th_002",
       "platform": "threads",
-      "status": "queued"
+      "status": "posting",
+      "posting_started_at": "2026-03-28T09:07:15.455856+09:00"
     },
     {
       "pattern_name": "ランキング型・金運TOP3",

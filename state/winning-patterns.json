@@ -1,6 +1,6 @@
 {
-  "data_count": 18,
-  "last_analyzed": "2026-03-28T07:07:18.276622+09:00",
+  "data_count": 19,
+  "last_analyzed": "2026-03-28T09:07:17.799519+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
@@ -98,10 +98,10 @@
     },
     {
       "pattern": "",
-      "count": 8,
-      "avg_engagement": 9.86,
-      "avg_views": 470.0,
-      "total_likes": 398,
+      "count": 9,
+      "avg_engagement": 9.09,
+      "avg_views": 425.0,
+      "total_likes": 400,
       "total_replies": 219
     },
     {
@@ -115,14 +115,14 @@
   ],
   "feature_ranking": [
     {
-      "feature": "has_cta_emoji",
-      "count": 9,
-      "avg_engagement": 25.99
-    },
-    {
       "feature": "has_ranking",
       "count": 4,
       "avg_engagement": 25.04
+    },
+    {
+      "feature": "has_cta_emoji",
+      "count": 10,
+      "avg_engagement": 23.68
     },
     {
       "feature": "has_number_hook",
@@ -224,8 +224,8 @@
   "avoid_patterns": [],
   "insights": [
     "最強パターン: 注意喚起型・仕事運（eng率42.1%）",
-    "絵文字CTAあり → avg eng 26.0%",
     "ランキング形式あり → avg eng 25.0%",
+    "絵文字CTAあり → avg eng 23.7%",
     "数字フックあり → avg eng 22.0%"
   ]
 }
