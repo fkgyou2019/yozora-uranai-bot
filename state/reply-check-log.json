@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-03-28T23:30:23.113729+09:00",
+  "checked_at": "2026-03-29T00:30:27.052340+09:00",
   "posts_checked": 10,
-  "replies_checked": 31,
-  "deleted": 1,
-  "warnings": 29,
+  "replies_checked": 30,
+  "deleted": 0,
+  "warnings": 28,
   "details": [
     {
       "post_id": "18083277332037197",
@@ -182,19 +182,8 @@
       "time": "20:42",
       "issues": [
         {
-          "type": "duplicate_reply",
-          "target_user": "_unknown_",
-          "reply_id": "18070900313263588",
-          "action": "deleted"
-        },
-        {
           "type": "format_warning",
           "reply_id": "17956163462942862",
-          "detail": "返信が4行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "18070900313263588",
           "detail": "返信が4行（4行以上）"
         },
         {
