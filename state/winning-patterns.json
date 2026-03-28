@@ -1,11 +1,11 @@
 {
-  "data_count": 19,
-  "last_analyzed": "2026-03-28T09:07:17.799519+09:00",
+  "data_count": 20,
+  "last_analyzed": "2026-03-28T10:37:16.946480+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
       "pattern": "注意喚起型・仕事運",
-      "weight": 22,
+      "weight": 23,
       "avg_engagement": 42.14,
       "sample_count": 1,
       "reason": "eng率42.1% (1件)"
@@ -33,7 +33,7 @@
     },
     {
       "pattern": "限定型・恐怖×期待",
-      "weight": 10,
+      "weight": 11,
       "avg_engagement": 20.13,
       "sample_count": 1,
       "reason": "eng率20.1% (1件)"
@@ -98,9 +98,9 @@
     },
     {
       "pattern": "",
-      "count": 9,
-      "avg_engagement": 9.09,
-      "avg_views": 425.0,
+      "count": 10,
+      "avg_engagement": 8.18,
+      "avg_views": 386.0,
       "total_likes": 400,
       "total_replies": 219
     },

@@ -493,7 +493,33 @@
         "hook_length": 14
       },
       "collected_at": "2026-03-28T09:07:15.549040+09:00"
+    },
+    {
+      "id": "verify-retry-20260327091216",
+      "platform_post_id": "17847950058675342",
+      "posted_at": "2026-03-27T09:12:16.692813+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "金曜日の夜は、\nあなたの本当の気持ちが\n浮かび上がる時間です。✨\n\n牡羊座から魚座まで、\n全12星座",
+      "first_line": "金曜日の夜は、",
+      "char_count": 190,
+      "metrics": {
+        "views": 36,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 7
+      },
+      "collected_at": "2026-03-28T10:37:13.837898+09:00"
     }
   ],
-  "last_updated": "2026-03-28T09:07:15.549040+09:00"
+  "last_updated": "2026-03-28T10:37:13.837898+09:00"
 }
