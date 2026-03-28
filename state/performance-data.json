@@ -545,7 +545,33 @@
         "hook_length": 9
       },
       "collected_at": "2026-03-28T12:07:14.149418+09:00"
+    },
+    {
+      "id": "verify-retry-20260327204218",
+      "platform_post_id": "18573310993062578",
+      "posted_at": "2026-03-27T20:42:18.536170+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "春分を過ぎた今、\n双子座さんの運気が高まっています。✨\n\n新しい情報や人間関係が\nあなたのもとへ自然",
+      "first_line": "春分を過ぎた今、",
+      "char_count": 185,
+      "metrics": {
+        "views": 204,
+        "likes": 17,
+        "replies": 6,
+        "reposts": 0,
+        "engagement_rate": 11.27
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-03-29T06:56:39.721208+09:00"
     }
   ],
-  "last_updated": "2026-03-28T12:07:14.149418+09:00"
+  "last_updated": "2026-03-29T06:56:39.721208+09:00"
 }
