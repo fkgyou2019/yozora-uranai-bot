@@ -519,7 +519,33 @@
         "hook_length": 7
       },
       "collected_at": "2026-03-28T10:37:13.837898+09:00"
+    },
+    {
+      "id": "verify-retry-20260327104220",
+      "platform_post_id": "18222801316314880",
+      "posted_at": "2026-03-27T10:42:20.315196+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "金曜日は蟹座の日🌙\n\n今日の蟹座さんは、心の奥底に\nしまっていた気持ちを誰かに\n伝えたくなる運気。\n",
+      "first_line": "金曜日は蟹座の日🌙",
+      "char_count": 154,
+      "metrics": {
+        "views": 52,
+        "likes": 10,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 19.23
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-03-28T12:07:14.149418+09:00"
     }
   ],
-  "last_updated": "2026-03-28T10:37:13.837898+09:00"
+  "last_updated": "2026-03-28T12:07:14.149418+09:00"
 }
