@@ -1,10 +1,62 @@
 {
-  "checked_at": "2026-03-28T22:30:25.394785+09:00",
+  "checked_at": "2026-03-28T23:30:23.113729+09:00",
   "posts_checked": 10,
-  "replies_checked": 21,
-  "deleted": 0,
-  "warnings": 19,
+  "replies_checked": 31,
+  "deleted": 1,
+  "warnings": 29,
   "details": [
+    {
+      "post_id": "18083277332037197",
+      "time": "20:43",
+      "issues": [
+        {
+          "type": "format_warning",
+          "reply_id": "18572925379017769",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18016813199826394",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18094252127149353",
+          "detail": "返信が5行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17963118290912099",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18094251518038600",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17860325496562161",
+          "detail": "返信が4行（4行以上）"
+        }
+      ]
+    },
+    {
+      "post_id": "17965437450027972",
+      "time": "19:43",
+      "issues": [
+        {
+          "type": "format_warning",
+          "reply_id": "18092551571141334",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "18450929410107925",
+          "detail": "返信が5行（4行以上）"
+        }
+      ]
+    },
     {
       "post_id": "18110615047696928",
       "time": "15:12",
@@ -69,6 +121,11 @@
       "issues": [
         {
           "type": "format_warning",
+          "reply_id": "18064439891339229",
+          "detail": "返信が4行（4行以上）"
+        },
+        {
+          "type": "format_warning",
           "reply_id": "17932074915218076",
           "detail": "返信が4行（4行以上）"
         },
@@ -124,6 +181,17 @@
       "post_id": "18573310993062578",
       "time": "20:42",
       "issues": [
+        {
+          "type": "duplicate_reply",
+          "target_user": "_unknown_",
+          "reply_id": "18070900313263588",
+          "action": "deleted"
+        },
+        {
+          "type": "format_warning",
+          "reply_id": "17956163462942862",
+          "detail": "返信が4行（4行以上）"
+        },
         {
           "type": "format_warning",
           "reply_id": "18070900313263588",
