@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-03-28T09:30:23.952658+09:00",
+  "checked_at": "2026-03-28T10:30:24.671534+09:00",
   "posts_checked": 10,
-  "replies_checked": 17,
-  "deleted": 3,
-  "warnings": 15,
+  "replies_checked": 14,
+  "deleted": 0,
+  "warnings": 13,
   "details": [
     {
       "post_id": "17979731111822919",
@@ -31,24 +31,6 @@
       "post_id": "17866623132601104",
       "time": "20:42",
       "issues": [
-        {
-          "type": "duplicate_reply",
-          "target_user": "sumiko_ichikawa",
-          "reply_id": "18072524660220730",
-          "action": "deleted"
-        },
-        {
-          "type": "duplicate_reply",
-          "target_user": "gongbennoriyuki",
-          "reply_id": "18089073350464430",
-          "action": "deleted"
-        },
-        {
-          "type": "duplicate_reply",
-          "target_user": "ys19710703",
-          "reply_id": "18100145269767565",
-          "action": "deleted"
-        },
         {
           "type": "format_warning",
           "reply_id": "17871840513588795",
@@ -93,16 +75,6 @@
           "type": "format_warning",
           "reply_id": "18221982181313754",
           "detail": "返信が7行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "18072524660220730",
-          "detail": "返信が4行（4行以上）"
-        },
-        {
-          "type": "format_warning",
-          "reply_id": "18100145269767565",
-          "detail": "返信が4行（4行以上）"
         },
         {
           "type": "format_warning",
