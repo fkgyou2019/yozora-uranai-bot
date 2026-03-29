@@ -675,6 +675,23 @@
       "checked": 0,
       "deleted": 0,
       "results": []
+    },
+    {
+      "timestamp": "2026-03-29T10:07:11.854693+09:00",
+      "checked": 1,
+      "deleted": 1,
+      "results": [
+        {
+          "post_id": "17878637304544053",
+          "time": "2026-03-29T09:12:17+09:00",
+          "views": 8,
+          "likes": 4,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=8 < 20",
+          "deleted": true
+        }
+      ]
     }
   ]
 }
