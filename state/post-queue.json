@@ -1,3 +1,25 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "日曜定番・1週間振り返り型",
+      "category": "共感→答え→CTA型",
+      "content": "今週、心がざわざわした人いませんか？\n\nそれ、水星逆行と月の引力の影響かもしれません。\n特に双子座・乙女座・射手座さんは\n感情の波が大きかった時期だと思います。\n\nでも大丈夫。来週からエネルギーが\nゆっくり安定していきますよ。\n\n「🌙」を置いた方に、\n来週の穏やかな気持ちが届きます。\n\n当たってた人、コメントで教えてくださいね✨\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260329_th_001",
+      "platform": "threads",
+      "status": "posting",
+      "posting_started_at": "2026-03-29T11:37:36.945934+09:00"
+    }
+  ]
 }
