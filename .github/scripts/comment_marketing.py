@@ -104,13 +104,15 @@ def keyword_search(keyword, token):
     try:
         with urllib.request.urlopen(url, timeout=15) as resp:
             data = json.loads(resp.read())
-            return data.get("data", [])
+            results = data.get("data", [])
+            print(f"[SEARCH_RESULT] {keyword}: {len(results)}件取得 (raw_keys={list(data.keys())})")
+            return results
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", errors="replace")
-        print(f"[ERROR] 検索失敗 ({keyword}): {e.code} {body[:200]}")
+        print(f"[ERROR] 検索失敗 ({keyword}): {e.code} {body[:300]}")
         return []
     except Exception as e:
-        print(f"[ERROR] 検索例外 ({keyword}): {e}")
+        print(f"[ERROR] 検索例外 ({keyword}): {type(e).__name__} {e}")
         return []
 
 
