@@ -1,26 +1,6 @@
 {
   "queue": [
     {
-      "pattern_name": "限定型・総合運ランキング【月曜定番シリーズ】",
-      "category": "総合運",
-      "content": "12星座中、たった3つだけ。\n\n今週、全ての運が\n大きく開く星座があります。\n\nそれは…射手座、獅子座、牡羊座です。\n\n特に射手座さんは、\n新しい扉が次々と開く週になりそう。\n迷わず新しい世界へ一歩踏み出してください。\n\n「✨」を置いた方に、\n今週中に嬉しい連絡が届きます。\n\n #今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 9,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 9.0
-      },
-      "id": "post_20260330_th_001",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
       "pattern_name": "予告型・運命の星座",
       "category": "総合運",
       "content": "来週、12星座の中で\n最も運命が動く星座があります。\n\nそれは…蠍座さんです。\n\n恋愛・仕事・金運のどこかで\n大きな波が来そう。\n\n特に水曜日以降は\n直感を信じて動いてください。\nあなたの感覚が一番のナビゲーターですよ。\n\n蠍座さんですか？\nコメントで教えてくださいね✨\n\n#今週の占い",
