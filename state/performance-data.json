@@ -597,7 +597,33 @@
         "hook_length": 11
       },
       "collected_at": "2026-03-29T20:37:14.491711+09:00"
+    },
+    {
+      "id": "verify-retry-20260328214217",
+      "platform_post_id": "18089056637517888",
+      "posted_at": "2026-03-28T21:42:17.425679+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "土星が優しく微笑む日🌙\n\n牡羊座さんへ。今日は焦らず\n深呼吸する時間を大切にしてください。\n心が求め",
+      "first_line": "土星が優しく微笑む日🌙",
+      "char_count": 167,
+      "metrics": {
+        "views": 224,
+        "likes": 9,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 4.02
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-03-30T06:59:24.681795+09:00"
     }
   ],
-  "last_updated": "2026-03-29T21:37:12.612531+09:00"
+  "last_updated": "2026-03-30T06:59:24.681795+09:00"
 }
