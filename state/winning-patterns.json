@@ -1,6 +1,6 @@
 {
-  "data_count": 22,
-  "last_analyzed": "2026-03-29T06:56:55.096542+09:00",
+  "data_count": 23,
+  "last_analyzed": "2026-03-29T20:37:18.229798+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
@@ -98,11 +98,11 @@
     },
     {
       "pattern": "",
-      "count": 12,
-      "avg_engagement": 9.36,
-      "avg_views": 343.0,
-      "total_likes": 427,
-      "total_replies": 225
+      "count": 13,
+      "avg_engagement": 9.99,
+      "avg_views": 351.0,
+      "total_likes": 477,
+      "total_replies": 253
     },
     {
       "pattern": "予告型・フォロー動機",
@@ -126,8 +126,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 6,
-      "avg_engagement": 22.04
+      "count": 7,
+      "avg_engagement": 21.4
     },
     {
       "feature": "has_question",
@@ -226,6 +226,6 @@
     "最強パターン: 注意喚起型・仕事運（eng率42.1%）",
     "ランキング形式あり → avg eng 25.0%",
     "絵文字CTAあり → avg eng 22.6%",
-    "数字フックあり → avg eng 22.0%"
+    "数字フックあり → avg eng 21.4%"
   ]
 }

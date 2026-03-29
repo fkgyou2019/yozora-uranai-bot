@@ -1,14 +1,14 @@
 {
   "queue": [
     {
-      "pattern_name": "日曜定番・1週間振り返り型",
-      "category": "共感→答え→CTA型",
-      "content": "今週、心がざわざわした人いませんか？\n\nそれ、水星逆行と月の引力の影響かもしれません。\n特に双子座・乙女座・射手座さんは\n感情の波が大きかった時期だと思います。\n\nでも大丈夫。来週からエネルギーが\nゆっくり安定していきますよ。\n\n「🌙」を置いた方に、\n来週の穏やかな気持ちが届きます。\n\n当たってた人、コメントで教えてくださいね✨\n\n#今週の占い",
+      "pattern_name": "共感→答え型・水星逆行影響",
+      "category": "共感型注意喚起",
+      "content": "ここ数日、なんか\nモヤモヤしていませんか？\n\nそれ、水星逆行の影響かもしれません。\n特に双子座さん、乙女座さん、\n射手座さんは敏感な時期です。\n\n自分を責めなくて大丈夫。\nこれは一時的なもの。\n来週からは落ち着きます。\n\n「🌙」を置いた方に、\n穏やかで優しい気持ちが\n戻ってきますように。\n\n#今週の占い",
       "hashtag": "#今週の占い",
       "is_affiliate": false,
       "affiliate_comment": null,
       "quality_score": {
-        "hook": 8,
+        "hook": 9,
         "usefulness": 8,
         "specificity": 8,
         "tempo": 9,
@@ -18,8 +18,27 @@
       },
       "id": "post_20260329_th_001",
       "platform": "threads",
-      "status": "posting",
-      "posting_started_at": "2026-03-29T11:37:36.945934+09:00"
+      "status": "queued"
+    },
+    {
+      "pattern_name": "日曜定番・1週間振り返り＆来週準備",
+      "category": "注意喚起型・運勢",
+      "content": "今週も本当にお疲れ様でした。\n\n疲れていても、あなたの中には\n確かな成長が積み重なっています。\n\n来週は、その成長が花開く時。\n特に月曜日から水曜日までが大切です。\n\n新しい挑戦が来ても、迷わず進んで\nくださいね。あなたなら大丈夫です。\n\n「🌙」を置いた方に、\n来週の最初の3日間で\n思いがけない良い流れが届きます。\n\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 7,
+        "usefulness": 8,
+        "specificity": 7,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.0
+      },
+      "id": "post_20260329_th_003",
+      "platform": "threads",
+      "status": "queued"
     }
   ]
 }

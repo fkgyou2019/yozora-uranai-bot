@@ -571,7 +571,33 @@
         "hook_length": 8
       },
       "collected_at": "2026-03-29T06:56:39.721208+09:00"
+    },
+    {
+      "id": "verify-retry-20260328151218",
+      "platform_post_id": "18110615047696928",
+      "posted_at": "2026-03-28T15:12:18.660911+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "3月28日のあなたへ✨\n\n今日の双子座さんは、\n予想外の出会いが訪れる日。\n新しい視点や情報があなた",
+      "first_line": "3月28日のあなたへ✨",
+      "char_count": 184,
+      "metrics": {
+        "views": 444,
+        "likes": 50,
+        "replies": 28,
+        "reposts": 0,
+        "engagement_rate": 17.57
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-03-29T20:37:14.491711+09:00"
     }
   ],
-  "last_updated": "2026-03-29T06:56:39.721208+09:00"
+  "last_updated": "2026-03-29T20:37:14.491711+09:00"
 }
