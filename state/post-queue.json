@@ -1,24 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "日曜定番・1週間振り返り＆来週準備",
-      "category": "注意喚起型・運勢",
-      "content": "今週も本当にお疲れ様でした。\n\n疲れていても、あなたの中には\n確かな成長が積み重なっています。\n\n来週は、その成長が花開く時。\n特に月曜日から水曜日までが大切です。\n\n新しい挑戦が来ても、迷わず進んで\nくださいね。あなたなら大丈夫です。\n\n「🌙」を置いた方に、\n来週の最初の3日間で\n思いがけない良い流れが届きます。\n\n#今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 7,
-        "usefulness": 8,
-        "specificity": 7,
-        "tempo": 8,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.0
-      },
-      "id": "post_20260329_th_003",
-      "platform": "threads",
-      "status": "queued"
-    }
-  ]
+  "queue": []
 }
