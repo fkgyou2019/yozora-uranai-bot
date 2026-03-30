@@ -1,6 +1,6 @@
 {
   "data_count": 28,
-  "last_analyzed": "2026-03-30T21:37:24.335579+09:00",
+  "last_analyzed": "2026-03-31T07:07:24.195014+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
@@ -226,6 +226,74 @@
     "最強パターン: 注意喚起型・仕事運（eng率42.1%）",
     "ランキング形式あり → avg eng 25.0%",
     "絵文字CTAあり → avg eng 22.9%",
-    "数字フックあり → avg eng 21.4%"
+    "数字フックあり → avg eng 21.4%",
+    "最適投稿時間帯: 20時, 7時, 22時"
+  ],
+  "hourly_data": {
+    "7": {
+      "avg_eng": 16.63,
+      "avg_views": 282.0,
+      "count": 3
+    },
+    "9": {
+      "avg_eng": 9.73,
+      "avg_views": 1204.0,
+      "count": 2
+    },
+    "10": {
+      "avg_eng": 12.15,
+      "avg_views": 124.0,
+      "count": 3
+    },
+    "12": {
+      "avg_eng": 3.93,
+      "avg_views": 114.0,
+      "count": 2
+    },
+    "14": {
+      "avg_eng": 20.13,
+      "avg_views": 745.0,
+      "count": 1
+    },
+    "15": {
+      "avg_eng": 9.72,
+      "avg_views": 275.0,
+      "count": 3
+    },
+    "17": {
+      "avg_eng": 21.29,
+      "avg_views": 559.0,
+      "count": 1
+    },
+    "18": {
+      "avg_eng": 31.65,
+      "avg_views": 139.0,
+      "count": 1
+    },
+    "19": {
+      "avg_eng": 6.06,
+      "avg_views": 66.0,
+      "count": 1
+    },
+    "20": {
+      "avg_eng": 20.52,
+      "avg_views": 314.0,
+      "count": 6
+    },
+    "21": {
+      "avg_eng": 6.79,
+      "avg_views": 348.0,
+      "count": 3
+    },
+    "22": {
+      "avg_eng": 16.16,
+      "avg_views": 312.0,
+      "count": 2
+    }
+  },
+  "optimal_hours": [
+    20,
+    7,
+    22
   ]
 }

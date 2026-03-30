@@ -888,6 +888,29 @@
       "posting_started_at": "2026-03-30T21:37:15.245965+09:00",
       "posted_at": "2026-03-30T21:37:22.129880+09:00",
       "platform_post_id": "18398910823148876"
+    },
+    {
+      "pattern_name": "自由型_仕事運注意喚起",
+      "category": "仕事運",
+      "content": "来週、仕事で\n大きな話が来やすい星座。\n\n獅子座さんと天秤座さんです。\n\n獅子座さんは昇進や抜擢の可能性。\n天秤座さんは予想外の転機が訪れます。\n\nここは自分を信じて進む時です。\n迷わず動いてください。\n\n周りの意見より、\nあなたの直感を優先してね。\n\nこの話、当てはまりそうですか？\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260330_th_004",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T07:07:15.713290+09:00",
+      "posted_at": "2026-03-31T07:07:21.881189+09:00",
+      "platform_post_id": "18097117697084871"
     }
   ]
 }
