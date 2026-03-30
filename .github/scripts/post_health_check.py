@@ -36,7 +36,8 @@ YELLOW_VIEWS_MAX = 50
 YELLOW_ENG_THRESHOLD = 3.0
 GREEN_VIEWS_MIN = 50
 GREEN_ENG_MIN = 5.0
-CHECK_WINDOW_MINUTES = 180  # 投稿後30-180分の投稿を対象
+CHECK_WINDOW_MINUTES = 360  # 投稿後30-360分（6時間）の投稿を対象
+# 1日3回の自動実行（12:37/17:37/23:37 JST）で8投稿全てをカバーするため6時間に拡張
 
 # --- DELETE レート制限管理 ---
 # Threads APIのDELETE上限は24時間で約100件
