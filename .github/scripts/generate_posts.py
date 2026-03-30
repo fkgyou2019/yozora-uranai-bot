@@ -254,7 +254,7 @@ def build_threads_prompt(ctx, should_generate_affiliate, asp_links):
 2. 各投稿は200-300文字（Threadsの最適値）
 3. 全投稿で会話を誘導するCTAを含める（質問型中心）
 4. トピックタグは末尾に1つだけ
-5. パターン配分: 限定型（「たった○つだけ」）2件、ランキング型1件、共感→答え→CTA型1件、予告型1件
+5. パターン配分（10件必須）: 限定型2件（構造A）、ランキング型1件（構造B）、共感→答え→CTA型1件（構造C）、予告型1件（構造D）、カード選択型1件（構造E・必須）、告白型1件（構造F・必須）、その他3件（自由）
 6. 使用可能トピックタグ: #今日の運勢 #恋愛運 #金運 #タロット #星座占い #今週の占い
 7. 親しみやすく穏やかなトーン。断定的・煽り的な表現は避ける
 8. 星座には「さん」付けも可（「牡牛座さん」等）
@@ -538,6 +538,30 @@ def main():
         print("ERROR: Threads用投稿の生成に失敗")
         sys.exit(1)
     print(f"  Threads用: {len(threads_posts)}件生成")
+
+    # ========================================
+    # Phase 2.5: 行数トリミング（16行超過を自動修正）
+    # ========================================
+    def trim_to_max_lines(content, max_lines=16):
+        """16行を超えるコンテンツを自動でmax_linesに圧縮する"""
+        lines = content.split("\n")
+        if len(lines) <= max_lines:
+            return content
+        # 最終行（ハッシュタグ）を保持して前から切る
+        last_line = lines[-1]
+        core_lines = lines[:max_lines - 1]
+        # 末尾の空行を除去してハッシュタグを付ける
+        while core_lines and core_lines[-1] == "":
+            core_lines.pop()
+        trimmed = "\n".join(core_lines) + "\n" + last_line
+        return trimmed
+
+    for post in threads_posts:
+        content = post.get("content", "")
+        lines = content.split("\n")
+        if len(lines) > 16:
+            post["content"] = trim_to_max_lines(content, 16)
+            print(f"  ✂ 行数トリミング: {len(lines)}行→{len(post['content'].split(chr(10)))}行 [{post.get('pattern_name','?')}]")
 
     # ========================================
     # Phase 3: 類似度チェック（プラットフォーム別）
