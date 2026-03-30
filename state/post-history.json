@@ -763,6 +763,29 @@
       "posted_at": "2026-03-30T12:12:18.763885+09:00",
       "platform_post_id": "18098178973817341",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "会話誘導型・相互作用",
+      "category": "総合運",
+      "content": "今週、あなたの星座は\nどんな運気でしたか？\n\nよかったら\nコメント欄で教えてくださいね✨\n\nあなたの星座の詳しい運勢や\nより詳しくアドバイスをするので。\n\n月曜日から\n新しい週が始まってます。\n\nあなたの直感を大切にしながら\nこの1週間を過ごしてみてください。\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 7,
+        "usefulness": 8,
+        "specificity": 7,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.0
+      },
+      "id": "post_20260330_th_003",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-30T14:32:59.280877+09:00",
+      "posted_at": "2026-03-30T14:33:04.039619+09:00",
+      "platform_post_id": "18079659026096099"
     }
   ]
 }
