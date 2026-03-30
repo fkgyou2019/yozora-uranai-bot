@@ -38,6 +38,13 @@ GREEN_VIEWS_MIN = 50
 GREEN_ENG_MIN = 5.0
 CHECK_WINDOW_MINUTES = 180  # 投稿後30-180分の投稿を対象
 
+# --- DELETE レート制限管理 ---
+# Threads APIのDELETE上限は24時間で約100件
+# ヘルスチェック用に温存するため、1回のヘルスチェックで消費する上限を設ける
+DELETE_RATE_LIMIT_FILE = None  # main()でPROJECT_DIRを使って設定
+MAX_DELETES_PER_RUN = 5        # 1回のヘルスチェックで削除する最大件数
+MAX_DELETES_PER_DAY = 20       # 1日の削除上限（レート制限の1/5を上限として安全マージン確保）
+
 
 def load_env():
     env_path = os.path.join(os.path.dirname(__file__), "../../config/api-keys.env")
@@ -60,6 +67,26 @@ def threads_api_get(endpoint, token):
     req = urllib.request.Request(url)
     with urllib.request.urlopen(req, timeout=15) as resp:
         return json.loads(resp.read().decode("utf-8"))
+
+
+def load_delete_count_today(rate_file):
+    """本日の削除件数を取得"""
+    today = datetime.now(JST).strftime("%Y-%m-%d")
+    if os.path.exists(rate_file):
+        with open(rate_file, encoding="utf-8") as f:
+            data = json.load(f)
+        if data.get("date") == today:
+            return data.get("count", 0)
+    return 0
+
+
+def record_delete(rate_file):
+    """削除1件をカウント"""
+    today = datetime.now(JST).strftime("%Y-%m-%d")
+    count = load_delete_count_today(rate_file) + 1
+    with open(rate_file, "w", encoding="utf-8") as f:
+        json.dump({"date": today, "count": count}, f)
+    return count
 
 
 def threads_api_delete(post_id, token):
@@ -163,6 +190,13 @@ def main():
         print("ERROR: THREADS_ACCESS_TOKEN or THREADS_USER_ID not set")
         sys.exit(1)
 
+    # DELETE レート制限管理ファイル
+    rate_file = os.path.join(PROJECT_DIR, "state/delete-rate.json")
+    delete_today = load_delete_count_today(rate_file)
+    print(f"本日の削除実績: {delete_today}/{MAX_DELETES_PER_DAY}件")
+    if delete_today >= MAX_DELETES_PER_DAY:
+        print(f"⚠ 本日の削除上限({MAX_DELETES_PER_DAY}件)に達しています。削除をスキップします。")
+
     now = datetime.now(JST)
     print(f"ヘルスチェック開始: {now.strftime('%Y-%m-%d %H:%M JST')}")
 
@@ -252,11 +286,23 @@ def main():
         # 4. RED判定なら削除（レート制限時は pending-deletions に積む）
         actually_deleted = False
         if status == "RED":
-            print(f"  → 削除実行...")
+            delete_today = load_delete_count_today(rate_file)
+            if delete_today >= MAX_DELETES_PER_DAY:
+                print(f"  ⚠ 本日の削除上限到達 → pending-deletions.json に積む")
+                pd_path = os.path.join(PROJECT_DIR, "state/pending-deletions.json")
+                pd = json.load(open(pd_path, encoding="utf-8")) if os.path.exists(pd_path) else {"pending": []}
+                existing_ids = {x["post_id"] for x in pd["pending"]}
+                if pid not in existing_ids:
+                    pd["pending"].append({"post_id": pid, "reason": reason, "queued_at": now.isoformat(), "text_preview": text[:40]})
+                    with open(pd_path, "w", encoding="utf-8") as f:
+                        json.dump(pd, f, ensure_ascii=False, indent=2)
+            else:
+                print(f"  → 削除実行（本日 {delete_today+1}/{MAX_DELETES_PER_DAY}件目）...")
             try:
                 result = threads_api_delete(pid, token)
                 if result.get("success"):
-                    print(f"  ✅ 削除成功: {pid}")
+                    total = record_delete(rate_file)
+                    print(f"  ✅ 削除成功: {pid} (本日累計 {total}/{MAX_DELETES_PER_DAY}件)")
                     deleted_count += 1
                     actually_deleted = True
                 else:
@@ -316,10 +362,17 @@ def main():
             still_pending = []
             for item in pending:
                 pid2 = item["post_id"]
+                # 日次上限チェック
+                delete_today = load_delete_count_today(rate_file)
+                if delete_today >= MAX_DELETES_PER_DAY:
+                    print(f"  ⚠ 本日の削除上限到達。残り {len(pending) - pending.index(item)}件は明日以降に延期")
+                    still_pending.extend(pending[pending.index(item):])
+                    break
                 try:
                     result = threads_api_delete(pid2, token)
                     if result.get("success"):
-                        print(f"  ✅ 遅延削除成功: {pid2} ({item['text_preview']}...)")
+                        total = record_delete(rate_file)
+                        print(f"  ✅ 遅延削除成功: {pid2} ({item['text_preview']}...) 本日累計{total}件")
                         deleted_count += 1
                     else:
                         print(f"  ❌ 遅延削除失敗: {result}")

@@ -109,6 +109,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add state/health-check-log.json state/post-queue.json state/post-history.json \
                   state/system-status.json state/pending-deletions.json \
+                  state/delete-rate.json \
                   state/performance-data.json state/winning-patterns.json || true
           if git diff --cached --quiet; then
             echo "No state changes"
