@@ -1,24 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "限定型・総合運ランキング（月曜定番シリーズ）",
-      "category": "総合運",
-      "content": "12星座中、今週最も運が開く星座。\n\nそれは牡羊座、獅子座、射手座です。\n\n牡羊座さんは新しい出会いが。\n獅子座さんは仕事で抜擢される予感。\n射手座さんは金運が動きやすい時期。\n\nこの3つの星座に共通するのは\n「行動すればするほど運が伸びる」\nということ。迷わず進んでくださいね🔮\n\nあなたの星座は入ってましたか？\nコメントで教えてください✨\n\n#今週の占い",
-      "hashtag": "#今週の占い",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 9,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 9.0
-      },
-      "id": "post_20260330_th_001",
-      "platform": "threads",
-      "status": "queued"
-    }
-  ]
+  "queue": []
 }
