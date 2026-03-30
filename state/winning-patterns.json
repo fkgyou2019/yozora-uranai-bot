@@ -1,6 +1,6 @@
 {
-  "data_count": 24,
-  "last_analyzed": "2026-03-30T12:07:15.429343+09:00",
+  "data_count": 25,
+  "last_analyzed": "2026-03-30T14:21:30.210075+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
@@ -98,10 +98,10 @@
     },
     {
       "pattern": "",
-      "count": 14,
-      "avg_engagement": 9.56,
-      "avg_views": 342.0,
-      "total_likes": 486,
+      "count": 15,
+      "avg_engagement": 9.25,
+      "avg_views": 323.0,
+      "total_likes": 489,
       "total_replies": 253
     },
     {
@@ -131,8 +131,8 @@
     },
     {
       "feature": "has_question",
-      "count": 1,
-      "avg_engagement": 8.53
+      "count": 2,
+      "avg_engagement": 6.68
     }
   ],
   "top_hook_styles": [

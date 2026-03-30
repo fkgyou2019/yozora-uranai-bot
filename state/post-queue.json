@@ -1,3 +1,64 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "共感→具体的アドバイス型・心身",
+      "category": "心身運",
+      "content": "最近、疲れが溜まってますか？\n\nそういう時期、ありますよね。\n\n実は3月下旬は\n水象星座（蟹座・蠍座・魚座さん）が\nエネルギーチャージの時期なんです。\n\nゆっくり寝たり、\n好きなものを食べたり。\n自分に優しくしてくださいね。\n\n「💫」を置いた方に、\n穏やかな睡眠が届きます。\n\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 9,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.5
+      },
+      "id": "post_20260330_th_001",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "予告型・来週の注目星座",
+      "category": "総合運",
+      "content": "来週、12星座の中で\n最も運命が動く星座があります。\n\nそれは蟹座さんです。\n\n恋愛・仕事・人間関係の\nどこかで大きな波が来そう。\n\n特に火曜日以降は\n直感を大切にしてください。\n\n明日は牡羊座さんの\n詳しい運勢をお届けしますね🔮\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.33
+      },
+      "id": "post_20260330_th_002",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "会話誘導型・相互作用",
+      "category": "総合運",
+      "content": "今週、あなたの星座は\nどんな運気でしたか？\n\nよかったら\nコメント欄で教えてくださいね✨\n\nあなたの星座の詳しい運勢や\nより詳しくアドバイスをするので。\n\n月曜日から\n新しい週が始まってます。\n\nあなたの直感を大切にしながら\nこの1週間を過ごしてみてください。\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 7,
+        "usefulness": 8,
+        "specificity": 7,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.0
+      },
+      "id": "post_20260330_th_003",
+      "platform": "threads",
+      "status": "queued"
+    }
+  ]
 }

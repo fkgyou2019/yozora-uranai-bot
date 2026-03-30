@@ -623,7 +623,33 @@
         "hook_length": 11
       },
       "collected_at": "2026-03-30T06:59:24.681795+09:00"
+    },
+    {
+      "id": "verify-retry-20260329121220",
+      "platform_post_id": "17927371854085864",
+      "posted_at": "2026-03-29T12:12:20.241685+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "春の訪れとともに、あなたの\n運気も変わり始めています。✨\n\n3月下旬は、特に射手座と牡羊座の\n皆さま",
+      "first_line": "春の訪れとともに、あなたの",
+      "char_count": 212,
+      "metrics": {
+        "views": 62,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 4.84
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-03-30T14:21:24.900325+09:00"
     }
   ],
-  "last_updated": "2026-03-30T12:07:13.561287+09:00"
+  "last_updated": "2026-03-30T14:21:24.900325+09:00"
 }
