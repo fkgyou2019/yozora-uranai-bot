@@ -1,6 +1,6 @@
 {
-  "data_count": 27,
-  "last_analyzed": "2026-03-30T20:37:23.497907+09:00",
+  "data_count": 28,
+  "last_analyzed": "2026-03-30T21:37:24.335579+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
@@ -98,11 +98,11 @@
     },
     {
       "pattern": "",
-      "count": 17,
-      "avg_engagement": 9.09,
-      "avg_views": 302.0,
-      "total_likes": 514,
-      "total_replies": 253
+      "count": 18,
+      "avg_engagement": 10.04,
+      "avg_views": 291.0,
+      "total_likes": 517,
+      "total_replies": 280
     },
     {
       "pattern": "予告型・フォロー動機",
@@ -121,8 +121,8 @@
     },
     {
       "feature": "has_cta_emoji",
-      "count": 11,
-      "avg_engagement": 22.55
+      "count": 12,
+      "avg_engagement": 22.85
     },
     {
       "feature": "has_number_hook",
@@ -131,8 +131,8 @@
     },
     {
       "feature": "has_question",
-      "count": 2,
-      "avg_engagement": 6.68
+      "count": 3,
+      "avg_engagement": 13.15
     }
   ],
   "top_hook_styles": [
@@ -153,13 +153,13 @@
     },
     {
       "style": "",
-      "example": "木星の優しい光が",
-      "avg_eng": 24.93
+      "example": "ここ数日、なんか",
+      "avg_eng": 26.09
     },
     {
-      "style": "ランキング型",
-      "example": "【来週、仕事が",
-      "avg_eng": 22.0
+      "style": "",
+      "example": "木星の優しい光が",
+      "avg_eng": 24.93
     }
   ],
   "top_cta_styles": [
@@ -201,6 +201,16 @@
       "content_preview": "【3月下旬、金運が\n爆発する星座TOP3】\n\n第3位は射手座。\n思わぬ臨時収入が\n舞い込む予感です。"
     },
     {
+      "id": "verify-retry-20260329204216",
+      "pattern": "",
+      "eng_rate": 26.09,
+      "views": 115,
+      "likes": 3,
+      "replies": 27,
+      "first_line": "ここ数日、なんか",
+      "content_preview": "ここ数日、なんか\nモヤモヤしていませんか？\n\nそれ、水星逆行の影響かもしれません。\n特に双子座さん、"
+    },
+    {
       "id": "verify-retry-20260326204216",
       "pattern": "",
       "eng_rate": 24.93,
@@ -209,23 +219,13 @@
       "replies": 50,
       "first_line": "木星の優しい光が",
       "content_preview": "木星の優しい光が\n\n蟹座のあなたへ。\nこの春、心の奥底に\n秘めていた想いが\n静かに花開く季節です。✨"
-    },
-    {
-      "id": "post_20260322_023",
-      "pattern": "ランキング型",
-      "eng_rate": 22.0,
-      "views": 100,
-      "likes": 15,
-      "replies": 7,
-      "first_line": "【来週、仕事が",
-      "content_preview": "【来週、仕事が\n急に動く星座TOP3】\n\n第3位は水瓶座。\n新しいプロジェクトが\n舞い込みます。\n\n"
     }
   ],
   "avoid_patterns": [],
   "insights": [
     "最強パターン: 注意喚起型・仕事運（eng率42.1%）",
     "ランキング形式あり → avg eng 25.0%",
-    "絵文字CTAあり → avg eng 22.6%",
+    "絵文字CTAあり → avg eng 22.9%",
     "数字フックあり → avg eng 21.4%"
   ]
 }

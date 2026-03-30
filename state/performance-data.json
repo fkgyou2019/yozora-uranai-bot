@@ -701,7 +701,33 @@
         "hook_length": 8
       },
       "collected_at": "2026-03-30T20:37:21.332326+09:00"
+    },
+    {
+      "id": "verify-retry-20260329204216",
+      "platform_post_id": "18073165205247120",
+      "posted_at": "2026-03-29T20:42:16.108146+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "ここ数日、なんか\nモヤモヤしていませんか？\n\nそれ、水星逆行の影響かもしれません。\n特に双子座さん、",
+      "first_line": "ここ数日、なんか",
+      "char_count": 152,
+      "metrics": {
+        "views": 115,
+        "likes": 3,
+        "replies": 27,
+        "reposts": 0,
+        "engagement_rate": 26.09
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-03-30T21:37:22.321119+09:00"
     }
   ],
-  "last_updated": "2026-03-30T20:37:21.332326+09:00"
+  "last_updated": "2026-03-30T21:37:22.321119+09:00"
 }

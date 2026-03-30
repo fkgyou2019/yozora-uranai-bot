@@ -1,26 +1,6 @@
 {
   "queue": [
     {
-      "pattern_name": "構造D_予告型",
-      "category": "フォロー動機生成",
-      "content": "来週、12星座の中で\n最も運命が動く星座。\n\n天秤座さんです。\n\n恋愛・仕事・人間関係のどこかで\n大きな波が来ます。\n\n特に水曜日以降は\n直感を信じて動いてください。\n\n準備を整えておくと、\nその波をチャンスに変えられますよ。\n\n明日は牡羊座さんの\n#星座占い",
-      "hashtag": "#星座占い",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
-        "specificity": 8,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.5
-      },
-      "id": "post_20260330_th_003",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
       "pattern_name": "自由型_仕事運注意喚起",
       "category": "仕事運",
       "content": "来週、仕事で\n大きな話が来やすい星座。\n\n獅子座さんと天秤座さんです。\n\n獅子座さんは昇進や抜擢の可能性。\n天秤座さんは予想外の転機が訪れます。\n\nここは自分を信じて進む時です。\n迷わず動いてください。\n\n周りの意見より、\nあなたの直感を優先してね。\n\nこの話、当てはまりそうですか？\n#今日の運勢",
