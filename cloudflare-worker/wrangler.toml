@@ -3,7 +3,7 @@ main = "src/index.js"
 compatibility_date = "2024-01-01"
 
 [triggers]
-crons = []
+crons = ["*/3 * * * *"]
 
 [[kv_namespaces]]
 binding = "REPLIED_IDS"
