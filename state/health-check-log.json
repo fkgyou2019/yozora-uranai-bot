@@ -810,6 +810,23 @@
       "checked": 0,
       "deleted": 0,
       "results": []
+    },
+    {
+      "timestamp": "2026-03-30T10:07:10.995347+09:00",
+      "checked": 1,
+      "deleted": 0,
+      "results": [
+        {
+          "post_id": "18098477614997296",
+          "time": "2026-03-30T09:12:14+09:00",
+          "views": 0,
+          "likes": 0,
+          "replies": 0,
+          "status": "RED",
+          "reason": "views=0 < 20",
+          "deleted": true
+        }
+      ]
     }
   ]
 }
