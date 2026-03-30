@@ -1,6 +1,42 @@
 {
   "posts": [
     {
+      "id": "buzz_own_best_20260331_072022_003",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "ここ数日、なんか\nモヤモヤしていませんか？\n\nそれ、水星逆行の影響かもしれません。\n特に双子座さん、",
+      "metrics": {
+        "likes": 3,
+        "retweets": 0,
+        "replies": 27,
+        "views": 115,
+        "engagement_rate": 26.09
+      },
+      "original_id": "verify-retry-20260329204216",
+      "pattern": "",
+      "collected_at": "2026-03-31T07:20:22.261796+09:00",
+      "analyzed": false
+    },
+    {
+      "id": "buzz_own_best_20260331_072022_004",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "木星の優しい光が\n\n蟹座のあなたへ。\nこの春、心の奥底に\n秘めていた想いが\n静かに花開く季節です。✨",
+      "metrics": {
+        "likes": 44,
+        "retweets": 0,
+        "replies": 50,
+        "views": 377,
+        "engagement_rate": 24.93
+      },
+      "original_id": "verify-retry-20260326204216",
+      "pattern": "",
+      "collected_at": "2026-03-31T07:20:22.261819+09:00",
+      "analyzed": false
+    },
+    {
       "id": "buzz_own_best_20260326_070636_000",
       "platform": "threads",
       "source": "own_best",
@@ -122,8 +158,8 @@
       "last_count": 0
     },
     "own_best": {
-      "last_count": 1
+      "last_count": 2
     }
   },
-  "last_collected": "2026-03-26T07:06:36.226035+09:00"
+  "last_collected": "2026-03-31T07:20:22.079252+09:00"
 }
