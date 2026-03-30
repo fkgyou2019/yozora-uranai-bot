@@ -1,22 +1,22 @@
 {
   "queue": [
     {
-      "pattern_name": "予告型・運命の星座",
+      "pattern_name": "限定型・総合運ランキング（月曜定番シリーズ）",
       "category": "総合運",
-      "content": "来週、12星座の中で\n最も運命が動く星座があります。\n\nそれは…蠍座さんです。\n\n恋愛・仕事・金運のどこかで\n大きな波が来そう。\n\n特に水曜日以降は\n直感を信じて動いてください。\nあなたの感覚が一番のナビゲーターですよ。\n\n蠍座さんですか？\nコメントで教えてくださいね✨\n\n#今週の占い",
+      "content": "12星座中、今週最も運が開く星座。\n\nそれは牡羊座、獅子座、射手座です。\n\n牡羊座さんは新しい出会いが。\n獅子座さんは仕事で抜擢される予感。\n射手座さんは金運が動きやすい時期。\n\nこの3つの星座に共通するのは\n「行動すればするほど運が伸びる」\nということ。迷わず進んでくださいね🔮\n\nあなたの星座は入ってましたか？\nコメントで教えてください✨\n\n#今週の占い",
       "hashtag": "#今週の占い",
       "is_affiliate": false,
       "affiliate_comment": null,
       "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
+        "hook": 9,
+        "usefulness": 9,
         "specificity": 9,
         "tempo": 9,
         "persona_match": 9,
         "mobile_readability": 9,
-        "average": 8.67
+        "average": 9.0
       },
-      "id": "post_20260330_th_003",
+      "id": "post_20260330_th_001",
       "platform": "threads",
       "status": "queued"
     }
