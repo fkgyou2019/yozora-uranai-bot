@@ -359,6 +359,8 @@ def _post_one_inner():
     platform = post.get("platform", "threads")
 
     # マルチアカウント: account_id からアカウント情報を解決
+    if PROJECT_DIR not in sys.path:
+        sys.path.insert(0, PROJECT_DIR)
     from agents.account_manager import (
         get_account, get_credentials, select_next_account,
         record_post as am_record_post, record_error as am_record_error,
