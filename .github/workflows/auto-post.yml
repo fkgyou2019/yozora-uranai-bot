@@ -121,11 +121,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin master || true
           git add state/post-queue.json state/post-history.json state/system-status.json state/performance-data.json state/winning-patterns.json state/metrics.json
           if git diff --cached --quiet; then
             echo "No state changes to commit"
           else
             git commit -m "chore: update post state [skip ci]"
-            git push || (git pull --rebase origin master && git push)
+            # 競合時は自分の変更を優先してマージ（-X ours）
+            git push || (
+              git fetch origin master
+              git merge origin/master -X ours --no-edit
+              git push
+            )
           fi
