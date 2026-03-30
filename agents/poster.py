@@ -487,6 +487,12 @@ def _post_one_inner():
 
         if "posts" not in history:
             history["posts"] = []
+        # ID重複チェック: 同IDが既にhistoryにある場合はIDに _dup を付与して区別
+        existing_ids = {p.get("id") for p in history["posts"]}
+        if post.get("id") in existing_ids:
+            import uuid as _uuid
+            post["id"] = f"{post['id']}_{_uuid.uuid4().hex[:6]}"
+            log("WARN", f"ID重複検出: 新IDで記録 → {post['id']}")
         history["posts"].append(post)
         save_json("state/post-history.json", history)
 

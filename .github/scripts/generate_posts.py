@@ -669,13 +669,15 @@ def main():
     # Phase 5: プラットフォームタグ付け & キュー追加
     # ========================================
     today_str = datetime.now(JST).strftime("%Y%m%d")
+    # 同日複数回生成時のID衝突防止: HHMM を追加して一意性を保証
+    time_str = datetime.now(JST).strftime("%H%M")
     post_count = len(history.get("posts", []))
 
     # X投稿は現在無効（キューに追加しない）
 
     # Threads投稿にプラットフォームタグ
     for i, p in enumerate(threads_posts):
-        p["id"] = f"post_{today_str}_th_{i + 1:03d}"
+        p["id"] = f"post_{today_str}_{time_str}_th_{i + 1:03d}"
         p["platform"] = "threads"
         if not affiliate_enabled:
             p["is_affiliate"] = False
@@ -701,6 +703,7 @@ def main():
     # キューを再構築（既存の非queued投稿は保持）
     non_queued = [p for p in queue.get("queue", []) if p.get("status") != "queued" or p not in interleaved]
     # 重複を避けるため、新規追加分のみinterleaved
+    # 今日生成分（"post_YYYYMMDD_"で始まるもの）のみ除去して再生成
     queue["queue"] = [p for p in queue["queue"] if p.get("id") and not p["id"].startswith(f"post_{today_str}_")]
     queue["queue"].extend(interleaved)
 

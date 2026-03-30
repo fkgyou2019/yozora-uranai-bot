@@ -12,6 +12,26 @@ import sys
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# =========================================================
+# テキスト類似度チェック（Bigram方式）
+# =========================================================
+SIMILARITY_THRESHOLD = 0.65  # 65%以上の類似度で重複判定
+
+
+def bigram_similarity(a, b):
+    """2テキスト間のBigram類似度を計算（0.0〜1.0）"""
+    if not a or not b:
+        return 0.0
+    def make_bigrams(s):
+        return set(s[i:i+2] for i in range(len(s) - 1))
+    sa = make_bigrams(a)
+    sb = make_bigrams(b)
+    if not sa or not sb:
+        return 0.0
+    intersection = len(sa & sb)
+    union = len(sa | sb)
+    return intersection / union if union > 0 else 0.0
+
 
 def load_json(path):
     full = os.path.join(PROJECT_DIR, path)
@@ -246,6 +266,45 @@ def main():
 
     print(f"品質チェック開始: {len(pending)}件")
 
+    # =========================================================
+    # --- 類似度チェック①: 既存投稿履歴との重複検出 ---
+    # post-history.json の直近50件と比較し、65%以上類似なら棄却
+    # =========================================================
+    history = load_json("state/post-history.json")
+    history_texts = []
+    for hp in history.get("posts", [])[-50:]:
+        t = hp.get("content", hp.get("content_preview", ""))
+        if t:
+            history_texts.append(t)
+
+    print(f"  類似度チェック: 既存投稿{len(history_texts)}件と比較")
+    for post in pending:
+        content = post.get("content", "")
+        for existing in history_texts:
+            sim = bigram_similarity(content, existing)
+            if sim >= SIMILARITY_THRESHOLD:
+                issue = f"既存投稿と類似度{sim*100:.0f}%（閾値{SIMILARITY_THRESHOLD*100:.0f}%超）: 「{existing[:20]}...」"
+                post.setdefault("_similarity_issues", []).append(issue)
+                break
+
+    # =========================================================
+    # --- 類似度チェック②: バッチ内の重複検出 ---
+    # 同バッチ内の他投稿と比較し、65%以上類似なら後者を棄却
+    # =========================================================
+    for i, post in enumerate(pending):
+        if post.get("_similarity_issues"):
+            continue  # 既に①で引っかかっている
+        content = post.get("content", "")
+        for j, other in enumerate(pending):
+            if i == j:
+                continue
+            other_content = other.get("content", "")
+            sim = bigram_similarity(content, other_content)
+            if sim >= SIMILARITY_THRESHOLD:
+                issue = f"バッチ内の投稿#{j+1}と類似度{sim*100:.0f}%（重複）"
+                post.setdefault("_similarity_issues", []).append(issue)
+                break
+
     # --- バッチ全体のCTA多様性チェック ---
     cta_emojis = []
     for post in pending:
@@ -276,6 +335,10 @@ def main():
         pid = post.get("id", "?")
         pattern = post.get("pattern_name", "?")
         issues = check_post(post)
+
+        # 類似度issueを追加
+        similarity_issues = post.pop("_similarity_issues", [])
+        issues = similarity_issues + issues
 
         if issues:
             print(f"  ❌ {pid} [{pattern}]")
