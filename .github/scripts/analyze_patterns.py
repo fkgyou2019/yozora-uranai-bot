@@ -163,6 +163,44 @@ def main():
     # 避けるべきパターン（エンゲージメント率が低い）
     avoid = [pr["pattern"] for pr in pattern_ranking if pr["avg_engagement"] < 2.0 and pr["count"] >= 2]
 
+    # ===== 投稿時間帯分析 =====
+    # performance-data.json の posted_at から時間帯別エンゲージメントを集計
+    hourly_stats = defaultdict(lambda: {"count": 0, "total_eng": 0, "total_views": 0})
+    for p in posts:
+        posted_at = p.get("posted_at", "")
+        if not posted_at:
+            continue
+        try:
+            dt = datetime.fromisoformat(posted_at)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=JST)
+            hour = dt.astimezone(JST).hour
+            eng = p.get("metrics", {}).get("engagement_rate", 0)
+            views = p.get("metrics", {}).get("views", 0)
+            hourly_stats[hour]["count"] += 1
+            hourly_stats[hour]["total_eng"] += eng
+            hourly_stats[hour]["total_views"] += views
+        except Exception:
+            continue
+
+    hourly_data = {}
+    for h, s in sorted(hourly_stats.items()):
+        n = s["count"]
+        if n > 0:
+            hourly_data[str(h)] = {
+                "avg_eng": round(s["total_eng"] / n, 2),
+                "avg_views": round(s["total_views"] / n, 0),
+                "count": n,
+            }
+
+    # 上位3時間帯をoptimal_hoursとして抽出（2件以上データがある時間帯を優先）
+    sorted_hours = sorted(
+        [(int(h), v) for h, v in hourly_data.items()],
+        key=lambda x: (x[1]["count"] >= 2, x[1]["avg_eng"]),
+        reverse=True,
+    )
+    optimal_hours = [h for h, _ in sorted_hours[:3]] if sorted_hours else []
+
     # インサイト生成
     insights = []
     if pattern_ranking:
@@ -178,6 +216,8 @@ def main():
                 "has_fear_hook": "恐怖・焦りフック",
             }.get(fr["feature"], fr["feature"])
             insights.append(f"{label}あり → avg eng {fr['avg_engagement']:.1f}%")
+    if optimal_hours:
+        insights.append(f"最適投稿時間帯: {', '.join(str(h)+'時' for h in optimal_hours)}")
     if avoid:
         insights.append(f"避けるべき: {', '.join(avoid)}")
 
@@ -197,6 +237,8 @@ def main():
         "best_posts": best_posts[:5],
         "avoid_patterns": avoid,
         "insights": insights,
+        "hourly_data": hourly_data,
+        "optimal_hours": optimal_hours,
     }
 
     save_json("state/winning-patterns.json", result)
@@ -204,6 +246,8 @@ def main():
     print("\n=== 分析結果 ===")
     for ins in insights:
         print(f"  💡 {ins}")
+    if hourly_data:
+        print(f"\n時間帯別 (上位3時間帯): {', '.join(str(h)+'時' for h in optimal_hours)}")
     print(f"\n信頼度: {confidence}（{len(posts)}件）")
     print("state/winning-patterns.json を更新しました")
 

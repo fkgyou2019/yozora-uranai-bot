@@ -56,9 +56,13 @@ def collect_all_hooks(categories):
 
 def improve_hooks(hook_lines, buzz_analysis):
     """hook-lines.json にバズ分析のフックを追加"""
-    best_hooks = buzz_analysis.get("best_hooks_to_copy", [])
+    # buzz_analyzer.py は "best_hooks_to_adapt" キーを使うため両方に対応
+    best_hooks = (
+        buzz_analysis.get("best_hooks_to_copy", [])
+        or buzz_analysis.get("best_hooks_to_adapt", [])
+    )
     if not best_hooks:
-        print("[INFO] best_hooks_to_copy なし。フック更新スキップ")
+        print("[INFO] best_hooks_to_copy / best_hooks_to_adapt なし。フック更新スキップ")
         return 0, []
 
     categories = hook_lines.get("categories", {})

@@ -115,7 +115,7 @@ def main():
         replies = metrics.get("replies", 0)
         reposts = metrics.get("reposts", 0)
 
-        eng_rate = ((likes + replies) / views * 100) if views > 0 else 0
+        eng_rate = ((likes + replies + reposts) / views * 100) if views > 0 else 0
 
         # テキスト分析
         content = post.get("content", "")

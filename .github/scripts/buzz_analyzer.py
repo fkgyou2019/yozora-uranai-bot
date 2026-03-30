@@ -257,8 +257,10 @@ def merge_to_winning_patterns(analysis, buzz_examples, own_posts):
         }
 
     # 既存パターンの数値を可能な範囲で保持
-    if existing.get("top_patterns"):
-        for k, v in existing["top_patterns"].items():
+    # analyze_patterns.py は top_patterns をリスト形式で書くため isinstance チェック必須
+    existing_tp = existing.get("top_patterns")
+    if existing_tp and isinstance(existing_tp, dict):
+        for k, v in existing_tp.items():
             if k in top_patterns:
                 top_patterns[k]["avg_eng"] = v.get("avg_eng", 0)
                 top_patterns[k]["avg_views"] = v.get("avg_views", 0)
