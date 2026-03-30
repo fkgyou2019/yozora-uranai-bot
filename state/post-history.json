@@ -842,6 +842,52 @@
       "posting_started_at": "2026-03-30T19:07:14.230791+09:00",
       "posted_at": "2026-03-30T19:07:20.446599+09:00",
       "platform_post_id": "18168018007406556"
+    },
+    {
+      "pattern_name": "構造F_告白型_金運",
+      "category": "金運深掘り",
+      "content": "正直に言います。\n\n占い師として\n「これだけは見てほしい」\nと思うことがあります。\n\n今月、金運が下がりやすい\n行動パターンがあって。\n\nそれは「直感に反する決断」です。\n\n不思議なことに、今月だけは\n頭より心で決めた方が\nお金の流れが良くなります。\n#金運",
+      "hashtag": "#金運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260330_th_002",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-30T20:37:15.034414+09:00",
+      "posted_at": "2026-03-30T20:37:21.258829+09:00",
+      "platform_post_id": "17888011257462275"
+    },
+    {
+      "pattern_name": "構造D_予告型",
+      "category": "フォロー動機生成",
+      "content": "来週、12星座の中で\n最も運命が動く星座。\n\n天秤座さんです。\n\n恋愛・仕事・人間関係のどこかで\n大きな波が来ます。\n\n特に水曜日以降は\n直感を信じて動いてください。\n\n準備を整えておくと、\nその波をチャンスに変えられますよ。\n\n明日は牡羊座さんの\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.5
+      },
+      "id": "post_20260330_th_003",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-30T21:37:15.245965+09:00",
+      "posted_at": "2026-03-30T21:37:22.129880+09:00",
+      "platform_post_id": "18398910823148876"
     }
   ]
 }
