@@ -16,6 +16,37 @@ import urllib.parse
 from datetime import datetime, timezone, timedelta
 
 JST = timezone(timedelta(hours=9))
+
+# ---------------------------------------------------------------------------
+# 類似度チェック（重複・類似コンテンツ防止）
+# ---------------------------------------------------------------------------
+
+SIMILARITY_THRESHOLD = 0.60  # 60%以上で類似とみなす
+
+def bigram_similarity(a: str, b: str) -> float:
+    """バイグラムJaccard類似度（0.0〜1.0）"""
+    def make_bigrams(s):
+        s = re.sub(r'\s+', '', s)  # 空白除去
+        return set(s[i:i+2] for i in range(len(s) - 1))
+    sa, sb = make_bigrams(a), make_bigrams(b)
+    if not sa or not sb:
+        return 0.0
+    intersection = len(sa & sb)
+    union = len(sa | sb)
+    return intersection / union if union > 0 else 0.0
+
+
+def is_too_similar_to_recent(content: str, history: dict, n: int = 10) -> tuple:
+    """直近n件の投稿と類似度チェック。類似なら(True, score, similar_content)を返す"""
+    recent_posts = history.get("posts", [])[-n:]
+    for p in reversed(recent_posts):
+        existing = p.get("content", p.get("content_preview", ""))
+        if not existing:
+            continue
+        score = bigram_similarity(content, existing)
+        if score >= SIMILARITY_THRESHOLD:
+            return True, score, existing[:50]
+    return False, 0.0, ""
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # ---------------------------------------------------------------------------
@@ -122,16 +153,24 @@ def threads_post_text(text, user_id, access_token):
 # Claude API: 緊急1件生成
 # ---------------------------------------------------------------------------
 
-def generate_emergency_post(api_key):
+def generate_emergency_post(api_key, recent_contents=None):
     """Claude APIで占い投稿を1件だけ緊急生成"""
     now = datetime.now(JST)
+
+    # 直近投稿を避けるためのヒント
+    avoid_hint = ""
+    if recent_contents:
+        avoid_hint = "\n【直近の投稿（これと被らないようにする）】\n"
+        for i, c in enumerate(recent_contents[-3:], 1):
+            avoid_hint += f"{i}. {c}\n"
+
     prompt = f"""あなたは占いSNSアカウント「よぞら.」のThreads投稿ライターです。
 今すぐ投稿する占い投稿を1件だけ生成してください。
 
 【今日の日付】{now.strftime('%Y年%m月%d日')}
 【ペルソナ】月詠（つくよみ）: 穏やかで親しみやすい。共感的。敬語ベースだが柔らかい。
 【絵文字】🔮✨🌙⭐☀️ を自然に使用（1投稿に2-3個）
-
+{avoid_hint}
 【ルール】
 1. 文字数: 200-300文字
 2. 1行は15-22文字を目安
@@ -141,6 +180,7 @@ def generate_emergency_post(api_key):
 6. 1行目にCTAを置かない
 7. 答えを出し惜しみしない（星座名を明示）
 8. CTAは最後に配置（「🔮を置いた方に〜」系）
+9. 直近の投稿と全く異なるテーマ・星座を選ぶこと
 
 JSON形式で1件だけ返してください:
 {{"content": "投稿本文", "hashtag": "#星座占い"}}
@@ -278,34 +318,51 @@ def main():
 
     log("WARN", "直近15分以内に投稿なし。再投稿を開始します。")
 
-    # ステップ2: キューから1件取り出して投稿
+    # ステップ2: キューから1件取り出して投稿（類似度チェック付き）
     queue = load_json("state/post-queue.json")
+    history = load_json("state/post-history.json")
     pending = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
 
     if pending:
-        post = pending[0]
-        content = post.get("content", "")
-        hashtag = post.get("hashtag", "")
-        full_text = f"{content}\n\n{hashtag}" if hashtag else content
+        # 直近投稿と類似しないものを選ぶ
+        selected_post = None
+        for candidate in pending:
+            cand_content = candidate.get("content", "")
+            is_similar, sim_score, similar_preview = is_too_similar_to_recent(
+                cand_content, history, n=10
+            )
+            if is_similar:
+                log("WARN", f"類似投稿スキップ (score={sim_score:.2f}): {cand_content[:30]}... ← 類似: {similar_preview}")
+            else:
+                selected_post = candidate
+                break
 
-        log("INFO", f"キューから再投稿: {content[:30]}...")
-        try:
-            post_id = threads_post_text(full_text, user_id, access_token)
-            log("INFO", f"再投稿成功: {post_id}")
+        if selected_post is None:
+            log("WARN", "キュー内の全候補が直近投稿と類似 → Claude緊急生成にフォールスルー")
+        else:
+            post = selected_post
+            content = post.get("content", "")
+            hashtag = post.get("hashtag", "")
+            full_text = f"{content}\n\n{hashtag}" if hashtag else content
 
-            # キューから削除
-            post["status"] = "posted"
-            post["posted_at"] = datetime.now(JST).isoformat()
-            post["platform_post_id"] = post_id
-            post["source"] = "post-verify"
-            queue["queue"] = [p for p in queue["queue"] if p.get("id") != post.get("id")]
-            save_json("state/post-queue.json", queue)
+            log("INFO", f"キューから再投稿: {content[:30]}...")
+            try:
+                post_id = threads_post_text(full_text, user_id, access_token)
+                log("INFO", f"再投稿成功: {post_id}")
 
-            record_post_to_history(post_id, content, hashtag)
-            return
-        except Exception as e:
-            log("ERROR", f"キューからの再投稿失敗: {e}")
-            # フォールスルーしてClaude生成を試行
+                # キューから削除
+                post["status"] = "posted"
+                post["posted_at"] = datetime.now(JST).isoformat()
+                post["platform_post_id"] = post_id
+                post["source"] = "post-verify"
+                queue["queue"] = [p for p in queue["queue"] if p.get("id") != post.get("id")]
+                save_json("state/post-queue.json", queue)
+
+                record_post_to_history(post_id, content, hashtag)
+                return
+            except Exception as e:
+                log("ERROR", f"キューからの再投稿失敗: {e}")
+                # フォールスルーしてClaude生成を試行
 
     # ステップ3: キュー空 or キュー投稿失敗 → Claude APIで生成→即投稿
     if not api_key:
@@ -313,7 +370,32 @@ def main():
         sys.exit(1)
 
     log("INFO", "キューが空のためClaude APIで緊急生成...")
-    post_data = generate_emergency_post(api_key)
+
+    # 直近投稿内容を取得（プロンプトに含めて類似回避）
+    history_for_gen = load_json("state/post-history.json")
+    recent_contents = [
+        p.get("content", "")[:80]
+        for p in history_for_gen.get("posts", [])[-5:]
+        if p.get("content")
+    ]
+
+    # 最大2回リトライ（類似度チェック通過まで）
+    post_data = None
+    for gen_attempt in range(2):
+        candidate_data = generate_emergency_post(api_key, recent_contents)
+        if not candidate_data:
+            break
+        cand_content = candidate_data.get("content", "")
+        is_similar, sim_score, similar_preview = is_too_similar_to_recent(
+            cand_content, history_for_gen, n=10
+        )
+        if is_similar and gen_attempt == 0:
+            log("WARN", f"緊急生成が直近投稿と類似 (score={sim_score:.2f}) → 再生成試みます")
+            recent_contents.append(cand_content[:80])  # 再生成時のヒントに
+            continue
+        post_data = candidate_data
+        break
+
     if not post_data:
         log("ERROR", "緊急生成失敗。次回スロットに委ねます。")
         sys.exit(0)

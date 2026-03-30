@@ -76,6 +76,37 @@ jobs:
           X_ACCOUNTS_JSON: ${{ secrets.X_ACCOUNTS_JSON }}
 
       # ========================================
+      # キューが空なら先に補充（朝一スロット対策: poster.py実行前に補充）
+      # ★ これがないと朝の最初のスロットでキューが空→投稿なし→post-verifyが代替投稿
+      # ========================================
+      - name: Pre-fill queue if empty (before posting)
+        run: |
+          REMAINING=$(python -c "
+          import json, os
+          path = 'state/post-queue.json'
+          q = json.load(open(path)) if os.path.exists(path) else {'queue': []}
+          print(len([p for p in q.get('queue', []) if p.get('status') == 'queued']))
+          " 2>/dev/null || echo "0")
+          echo "現在のキュー残: ${REMAINING}件"
+          if [ "$REMAINING" = "0" ]; then
+            echo "キューが空 → ポスト前に生成します"
+            python .github/scripts/generate_posts.py
+            python .github/scripts/quality_check.py || true
+            NEW_REMAINING=$(python -c "
+          import json, os
+          path = 'state/post-queue.json'
+          q = json.load(open(path)) if os.path.exists(path) else {'queue': []}
+          print(len([p for p in q.get('queue', []) if p.get('status') == 'queued']))
+          " 2>/dev/null || echo "0")
+            echo "生成後キュー残: ${NEW_REMAINING}件"
+          else
+            echo "キューに投稿あり → 生成スキップ"
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        continue-on-error: true
+
+      # ========================================
       # 投稿を最優先で実行（タイムラグ解消）
       # ========================================
       - name: Post one from queue (最優先)

@@ -1,0 +1,106 @@
+name: Nightly Queue Generation
+
+on:
+  schedule:
+    # 毎日23:00 JST (14:00 UTC) に翌日分の投稿キューを事前生成
+    - cron: '0 14 * * *'
+  workflow_dispatch:  # 手動実行も可
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly-generate
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state files if missing
+        run: |
+          mkdir -p state config
+          [ ! -f state/post-queue.json ] && echo '{"queue":[]}' > state/post-queue.json
+          [ ! -f state/post-history.json ] && echo '{"posts":[]}' > state/post-history.json
+          [ ! -f state/winning-patterns.json ] && echo '{}' > state/winning-patterns.json
+          [ ! -f state/performance-data.json ] && echo '{"posts":[],"last_updated":null}' > state/performance-data.json
+          true
+
+      - name: Create api-keys.env from secrets
+        run: |
+          cat > config/api-keys.env << EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN=${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
+          EOF
+
+      # ========================================
+      # キュー残量チェック: 翌日分として5件以上確保
+      # ========================================
+      - name: Check queue and generate if needed
+        run: |
+          REMAINING=$(python -c "
+          import json, os
+          path = 'state/post-queue.json'
+          q = json.load(open(path)) if os.path.exists(path) else {'queue': []}
+          print(len([p for p in q.get('queue', []) if p.get('status') == 'queued']))
+          " 2>/dev/null || echo "0")
+          echo "現在のキュー残: ${REMAINING}件"
+
+          # 5件未満なら翌日分を生成
+          if [ "$REMAINING" -lt "5" ]; then
+            echo "キュー不足 → 翌日分を生成します"
+            python .github/scripts/generate_posts.py
+            python .github/scripts/quality_check.py || true
+
+            NEW_REMAINING=$(python -c "
+          import json, os
+          path = 'state/post-queue.json'
+          q = json.load(open(path)) if os.path.exists(path) else {'queue': []}
+          print(len([p for p in q.get('queue', []) if p.get('status') == 'queued']))
+          " 2>/dev/null || echo "0")
+            echo "生成後キュー残: ${NEW_REMAINING}件"
+
+            # それでも3件未満なら再生成（品質チェックで落ちた場合）
+            if [ "$NEW_REMAINING" -lt "3" ]; then
+              echo "品質チェック後も不足 → 再生成"
+              python .github/scripts/generate_posts.py
+              python .github/scripts/quality_check.py || true
+            fi
+          else
+            echo "キュー十分（${REMAINING}件）→ 生成スキップ"
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONIOENCODING: utf-8
+
+      # ========================================
+      # 状態をコミット
+      # ========================================
+      - name: Commit state changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/post-queue.json state/winning-patterns.json || true
+          if git diff --cached --quiet; then
+            echo "No queue changes to commit"
+          else
+            git commit -m "chore: nightly queue generation [skip ci]"
+            git push || (
+              git fetch origin master
+              git merge origin/master -X ours --no-edit
+              git push
+            )
+          fi
