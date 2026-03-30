@@ -1,0 +1,10 @@
+name = "yozora-auto-reply"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[triggers]
+crons = []
+
+[[kv_namespaces]]
+binding = "REPLIED_IDS"
+id = "e761096910494c698d1f4f72a3871414"

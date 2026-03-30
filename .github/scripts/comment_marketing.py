@@ -260,6 +260,7 @@ def main():
 
         random.shuffle(posts)
 
+        skip_no_text = skip_already = skip_own = skip_dedup = skip_irrelevant = 0
         for post in posts:
             if comment_count >= max_comments_per_run:
                 break
@@ -269,14 +270,19 @@ def main():
             username = post.get("username", "")
 
             if not post_id or not post_text:
+                skip_no_text += 1
                 continue
             if post_id in commented_ids:
+                skip_already += 1
                 continue
             if our_username and username == our_username:
+                skip_own += 1
                 continue
             if strict_user_dedup and username in commented_users_this_run:
+                skip_dedup += 1
                 continue
             if not is_relevant_post(post_text):
+                skip_irrelevant += 1
                 continue
 
             print(f"[TARGET] @{username}: {post_text[:60]}...")
@@ -333,6 +339,9 @@ def main():
             except Exception as e:
                 print(f"[ERROR] 予期せぬエラー: {e}")
                 continue
+
+        if skip_no_text + skip_already + skip_own + skip_dedup + skip_irrelevant > 0:
+            print(f"[FILTER] テキストなし:{skip_no_text} 投稿済:{skip_already} 自分:{skip_own} 重複ユーザー:{skip_dedup} 無関係:{skip_irrelevant}")
 
     state["commented_post_ids"] = list(commented_ids)[-2000:]
     state["last_run"] = datetime.now(JST).isoformat()
