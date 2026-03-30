@@ -319,7 +319,9 @@ def _post_one_inner():
     # 安全チェック（3段階）
     if not check_banned_hours(safety):
         return
-    if not check_posting_interval(history, safety):
+    # FORCE_POST=1 の場合は間隔チェックをスキップ（ヘルスチェック後の再投稿用）
+    force_post = os.environ.get("FORCE_POST", "0") == "1"
+    if not force_post and not check_posting_interval(history, safety):
         return
     if not check_daily_limit(status, safety):
         return

@@ -13,7 +13,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
@@ -35,43 +35,85 @@ jobs:
           THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
           EOF
 
-      - name: Run health check
+      # ========================================
+      # Step 1: ヘルスチェック（RED判定 + 削除試行）
+      # ========================================
+      - name: Run health check (detect & delete bad posts)
         run: python .github/scripts/post_health_check.py
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
 
-      - name: Repost if needed
+      # ========================================
+      # Step 2: RED投稿ぶんを即時代替投稿（投稿数を守る）
+      # ★ 削除成否に関わらず実行（pending-deletionsが後で片付ける）
+      # ========================================
+      - name: Repost to replace bad posts (FORCE_POST mode)
         run: |
-          if [ -f state/needs-repost.flag ]; then
-            COUNT=$(cat state/needs-repost.flag)
-            echo "${COUNT}件の再投稿が必要。投稿ワークフローをトリガーします。"
+          if [ ! -f state/needs-repost.flag ]; then
+            echo "再投稿不要（RED判定なし）"
+            exit 0
+          fi
+
+          COUNT=$(cat state/needs-repost.flag)
+          echo "========================================"
+          echo "[REPOST] ${COUNT}件のREDを検出 → 代替投稿を開始"
+          echo "========================================"
+
+          for i in $(seq 1 $COUNT); do
+            echo ""
+            echo "--- [REPOST ${i}/${COUNT}] ---"
+
             # キューが空なら再生成
-            REMAINING=$(python -c "import json; q=json.load(open('state/post-queue.json')) if __import__('os').path.exists('state/post-queue.json') else {'queue':[]}; print(len([p for p in q.get('queue',[]) if p.get('status')=='queued']))")
+            REMAINING=$(python -c "
+          import json, os
+          path = 'state/post-queue.json'
+          q = json.load(open(path)) if os.path.exists(path) else {'queue': []}
+          print(len([p for p in q.get('queue', []) if p.get('status') == 'queued']))
+          ")
+            echo "キュー残: ${REMAINING}件"
+
             if [ "$REMAINING" = "0" ]; then
+              echo "キューが空 → 新規生成します"
               python .github/scripts/generate_posts.py
               python .github/scripts/quality_check.py || true
             fi
-            python agents/poster.py
-            rm -f state/needs-repost.flag
-          else
-            echo "再投稿不要"
-          fi
+
+            # FORCE_POST=1 で投稿間隔チェックをスキップして即時投稿
+            FORCE_POST=1 python agents/poster.py
+
+            # 連続投稿回避（Threadsのスパム判定を防ぐ）
+            if [ "$i" -lt "$COUNT" ]; then
+              echo "次の投稿まで10秒待機..."
+              sleep 10
+            fi
+          done
+
+          rm -f state/needs-repost.flag
+          echo ""
+          echo "========================================"
+          echo "[REPOST] 完了: ${COUNT}件の代替投稿を実行"
+          echo "========================================"
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           PYTHONIOENCODING: utf-8
 
+      # ========================================
+      # Step 3: 状態をコミット
+      # ========================================
       - name: Commit state changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add state/health-check-log.json state/post-queue.json state/post-history.json state/system-status.json state/pending-deletions.json || true
+          git add state/health-check-log.json state/post-queue.json state/post-history.json \
+                  state/system-status.json state/pending-deletions.json \
+                  state/performance-data.json state/winning-patterns.json || true
           if git diff --cached --quiet; then
             echo "No state changes"
           else
-            git commit -m "chore: health check [skip ci]"
+            git commit -m "chore: health check + repost [skip ci]"
             git push || (
               git fetch origin master
               git merge origin/master -X ours --no-edit

@@ -333,13 +333,17 @@ def main():
             with open(pd_path, "w", encoding="utf-8") as f:
                 json.dump(pd, f, ensure_ascii=False, indent=2)
 
+    # RED判定件数（削除成否に関わらずカウント）
+    red_count = sum(1 for r in results if r.get("status") == "RED")
+
     print(f"\n=== 結果 ===")
     print(f"チェック対象: {checked_count}件")
-    print(f"削除: {deleted_count}件")
+    print(f"RED（低パフォーマンス）: {red_count}件")
+    print(f"削除成功: {deleted_count}件 / 削除失敗（レート制限等）: {red_count - deleted_count}件")
 
     # 結果をファイルに保存
     os.makedirs("state", exist_ok=True)
-    check_log_path = "state/health-check-log.json"
+    check_log_path = os.path.join(PROJECT_DIR, "state/health-check-log.json")
     if os.path.exists(check_log_path):
         with open(check_log_path, encoding="utf-8") as f:
             log = json.load(f)
@@ -349,6 +353,7 @@ def main():
     log["checks"].append({
         "timestamp": now.isoformat(),
         "checked": checked_count,
+        "red": red_count,
         "deleted": deleted_count,
         "results": results,
     })
@@ -359,11 +364,16 @@ def main():
     with open(check_log_path, "w", encoding="utf-8") as f:
         json.dump(log, f, ensure_ascii=False, indent=2)
 
-    # 削除があった場合、再投稿フラグファイルを作成
-    if deleted_count > 0:
-        with open("state/needs-repost.flag", "w") as f:
-            f.write(str(deleted_count))
-        print(f"\n再投稿フラグ作成: {deleted_count}件分")
+    # RED判定があれば再投稿フラグを作成
+    # ★ 削除成否に関わらず再投稿する（投稿数という財産を守るため）
+    # ★ 削除失敗分は pending-deletions.json に積み、レート制限リセット後に自動削除
+    if red_count > 0:
+        flag_path = os.path.join(PROJECT_DIR, "state/needs-repost.flag")
+        with open(flag_path, "w") as f:
+            f.write(str(red_count))
+        print(f"\n[REPOST] 再投稿フラグ作成: {red_count}件分")
+        print(f"[REPOST] 削除成功={deleted_count}件 / 削除待ち={red_count - deleted_count}件")
+        print(f"[REPOST] → 代替投稿を即時実行してカウントを維持します")
 
     sys.exit(0)
 
