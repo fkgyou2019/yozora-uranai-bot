@@ -39,7 +39,8 @@
       },
       "id": "post_20260330_th_002",
       "platform": "threads",
-      "status": "queued"
+      "status": "posting",
+      "posting_started_at": "2026-03-30T14:30:10.662474+09:00"
     },
     {
       "pattern_name": "会話誘導型・相互作用",
