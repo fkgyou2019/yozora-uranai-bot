@@ -675,7 +675,33 @@
         "hook_length": 9
       },
       "collected_at": "2026-03-30T18:21:41.827508+09:00"
+    },
+    {
+      "id": "verify-retry-20260329191217",
+      "platform_post_id": "17916087420144959",
+      "posted_at": "2026-03-29T19:12:17.850722+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "🌙 牡羊座さんへ\n\n春の陽射しが心強い\nあなたへの応援メッセージ。\n\n今週は新しい挑戦が\nやってくる",
+      "first_line": "🌙 牡羊座さんへ",
+      "char_count": 183,
+      "metrics": {
+        "views": 66,
+        "likes": 4,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 6.06
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-03-30T20:37:21.332326+09:00"
     }
   ],
-  "last_updated": "2026-03-30T19:07:20.521870+09:00"
+  "last_updated": "2026-03-30T20:37:21.332326+09:00"
 }

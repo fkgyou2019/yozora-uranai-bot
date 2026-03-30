@@ -1,6 +1,6 @@
 {
-  "data_count": 26,
-  "last_analyzed": "2026-03-30T19:07:22.918161+09:00",
+  "data_count": 27,
+  "last_analyzed": "2026-03-30T20:37:23.497907+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
@@ -98,10 +98,10 @@
     },
     {
       "pattern": "",
-      "count": 16,
-      "avg_engagement": 9.28,
-      "avg_views": 316.0,
-      "total_likes": 510,
+      "count": 17,
+      "avg_engagement": 9.09,
+      "avg_views": 302.0,
+      "total_likes": 514,
       "total_replies": 253
     },
     {
