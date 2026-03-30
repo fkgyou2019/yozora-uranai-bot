@@ -27,6 +27,7 @@ from datetime import datetime, timezone, timedelta
 
 sys.stdout.reconfigure(encoding="utf-8")
 JST = timezone(timedelta(hours=9))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # --- 設定 ---
 RED_VIEWS_THRESHOLD = 20
@@ -248,16 +249,43 @@ def main():
                 status = "RED"
                 reason += " + 時刻矛盾"
 
-        # 4. RED判定なら削除
+        # 4. RED判定なら削除（レート制限時は pending-deletions に積む）
+        actually_deleted = False
         if status == "RED":
             print(f"  → 削除実行...")
             try:
                 result = threads_api_delete(pid, token)
                 if result.get("success"):
-                    print(f"  ✅ 削除成功")
+                    print(f"  ✅ 削除成功: {pid}")
                     deleted_count += 1
+                    actually_deleted = True
                 else:
-                    print(f"  ❌ 削除失敗: {result}")
+                    print(f"  ❌ 削除失敗（API応答）: {result}")
+            except urllib.error.HTTPError as e:
+                body = e.read().decode("utf-8", errors="replace")
+                if "rate limit" in body.lower() or e.code == 429 or '"code":613' in body:
+                    print(f"  ⚠ レート制限中 → pending-deletions.json に積む")
+                    # 削除待ちキューに保存（次回ヘルスチェック時に再試行）
+                    pd_path = os.path.join(PROJECT_DIR, "state/pending-deletions.json")
+                    if os.path.exists(pd_path):
+                        with open(pd_path, encoding="utf-8") as f:
+                            pd = json.load(f)
+                    else:
+                        pd = {"pending": []}
+                    # 重複追加しない
+                    existing_ids = {x["post_id"] for x in pd["pending"]}
+                    if pid not in existing_ids:
+                        pd["pending"].append({
+                            "post_id": pid,
+                            "reason": reason,
+                            "queued_at": now.isoformat(),
+                            "text_preview": text[:40],
+                        })
+                        with open(pd_path, "w", encoding="utf-8") as f:
+                            json.dump(pd, f, ensure_ascii=False, indent=2)
+                        print(f"  → pending-deletions.json に追加: {pid}")
+                else:
+                    print(f"  ❌ 削除エラー HTTP {e.code}: {body[:120]}")
             except Exception as e:
                 print(f"  ❌ 削除エラー: {e}")
 
@@ -269,8 +297,41 @@ def main():
             "replies": replies,
             "status": status,
             "reason": reason,
-            "deleted": status == "RED",
+            "deleted": actually_deleted,
         })
+
+    # --- pending-deletions の再試行 ---
+    pd_path = os.path.join(PROJECT_DIR, "state/pending-deletions.json")
+    if os.path.exists(pd_path):
+        with open(pd_path, encoding="utf-8") as f:
+            pd = json.load(f)
+        pending = pd.get("pending", [])
+        if pending:
+            print(f"\n--- pending-deletions 再試行: {len(pending)}件 ---")
+            still_pending = []
+            for item in pending:
+                pid2 = item["post_id"]
+                try:
+                    result = threads_api_delete(pid2, token)
+                    if result.get("success"):
+                        print(f"  ✅ 遅延削除成功: {pid2} ({item['text_preview']}...)")
+                        deleted_count += 1
+                    else:
+                        print(f"  ❌ 遅延削除失敗: {result}")
+                        still_pending.append(item)
+                except urllib.error.HTTPError as e:
+                    body = e.read().decode("utf-8", errors="replace")
+                    if "rate limit" in body.lower() or '"code":613' in body:
+                        print(f"  ⚠ まだレート制限中: {pid2}")
+                        still_pending.append(item)
+                    else:
+                        print(f"  ❌ 削除エラー HTTP {e.code}: {pid2}")
+                except Exception as e:
+                    print(f"  ❌ 削除エラー: {pid2} {e}")
+                    still_pending.append(item)
+            pd["pending"] = still_pending
+            with open(pd_path, "w", encoding="utf-8") as f:
+                json.dump(pd, f, ensure_ascii=False, indent=2)
 
     print(f"\n=== 結果 ===")
     print(f"チェック対象: {checked_count}件")

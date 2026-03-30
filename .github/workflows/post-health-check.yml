@@ -67,11 +67,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin master || true
-          git add state/health-check-log.json state/post-queue.json state/post-history.json state/system-status.json
+          git add state/health-check-log.json state/post-queue.json state/post-history.json state/system-status.json state/pending-deletions.json || true
           if git diff --cached --quiet; then
             echo "No state changes"
           else
             git commit -m "chore: health check [skip ci]"
-            git push || (git pull --rebase origin master && git push)
+            git push || (
+              git fetch origin master
+              git merge origin/master -X ours --no-edit
+              git push
+            )
           fi
