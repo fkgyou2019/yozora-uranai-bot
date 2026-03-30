@@ -263,7 +263,12 @@ def main():
                     print(f"  ❌ 削除失敗（API応答）: {result}")
             except urllib.error.HTTPError as e:
                 body = e.read().decode("utf-8", errors="replace")
-                if "rate limit" in body.lower() or e.code == 429 or '"code":613' in body:
+                if "does not exist" in body or '"error_subcode": 33' in body or '"error_subcode":33' in body:
+                    # 既に削除済み
+                    print(f"  ✅ 既に削除済み: {pid}")
+                    deleted_count += 1
+                    actually_deleted = True
+                elif "rate limit" in body.lower() or e.code == 429 or '"code": 613' in body or '"code":613' in body:
                     print(f"  ⚠ レート制限中 → pending-deletions.json に積む")
                     # 削除待ちキューに保存（次回ヘルスチェック時に再試行）
                     pd_path = os.path.join(PROJECT_DIR, "state/pending-deletions.json")
@@ -321,11 +326,16 @@ def main():
                         still_pending.append(item)
                 except urllib.error.HTTPError as e:
                     body = e.read().decode("utf-8", errors="replace")
-                    if "rate limit" in body.lower() or '"code":613' in body:
+                    if "rate limit" in body.lower() or '"code": 613' in body or '"code":613' in body:
                         print(f"  ⚠ まだレート制限中: {pid2}")
                         still_pending.append(item)
+                    elif "does not exist" in body or '"error_subcode": 33' in body or '"error_subcode":33' in body:
+                        # 既に削除済み（他の手段で削除されたか、期限切れ）→ pending から除去
+                        print(f"  ✅ 既に削除済み（存在しない）: {pid2}")
+                        deleted_count += 1
                     else:
-                        print(f"  ❌ 削除エラー HTTP {e.code}: {pid2}")
+                        print(f"  ❌ 削除エラー HTTP {e.code}: {body[:120]}")
+                        still_pending.append(item)
                 except Exception as e:
                     print(f"  ❌ 削除エラー: {pid2} {e}")
                     still_pending.append(item)
