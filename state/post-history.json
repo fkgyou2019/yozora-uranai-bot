@@ -819,6 +819,29 @@
       "posted_at": "2026-03-30T15:12:20.837929+09:00",
       "platform_post_id": "17919916998122182",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造E_カード選択型",
+      "category": "インタラクティブ占い",
+      "content": "今の自分に引かれるカードを\n1枚選んでください🔮\n\n🌕 月のカード\n⭐ 星のカード\n✨ 光のカード\n\nコメント欄に選んだカードを\n教えてくれたら、\nあなただけの今週のメッセージを\nお届けします。\n\nどのカードに引かれましたか？\n\n#タロット",
+      "hashtag": "#タロット",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260330_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-30T19:07:14.230791+09:00",
+      "posted_at": "2026-03-30T19:07:20.446599+09:00",
+      "platform_post_id": "18168018007406556"
     }
   ]
 }
