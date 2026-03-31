@@ -16,13 +16,16 @@ from datetime import datetime, timezone, timedelta
 JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# リカバリモード: 1日3件・4時間間隔スロット
-# 07:07(朝)→12:07(昼)→20:07(夜) = 5h/8h/11h間隔
-# 実績最強パターン（G/A/B）に絞って質を集中させる
+# 6スロット: 07:07/09:07/12:07/15:07/19:07/21:42 JST
+# 最低間隔2時間以上（07→09=2h, 09→12=3h, 12→15=3h, 15→19=4h, 19→21:42=2h42m）
+# パターンは実績最強（G/A/B/F）を優先。曜日・時間帯別に多様化。
 EXPERIMENT_TIME_SLOTS = [
-    {"hour": 7,  "slot": "朝（6〜9時台）",   "structure": "G", "pattern_hint": "注意喚起+限定型（今日・今週の仕事運警告）"},
-    {"hour": 12, "slot": "午前（10〜12時台）","structure": "A", "pattern_hint": "数字+限定型（12星座中たった○つ・昼向け）"},
-    {"hour": 20, "slot": "夜（19〜21時台）",  "structure": "G", "pattern_hint": "注意喚起+限定型（今夜〜明日への警告・夜向け）"},
+    {"hour": 7,  "slot": "朝（6〜9時台）",     "structure": "G", "pattern_hint": "注意喚起+限定型（今日・今週の仕事運警告）"},
+    {"hour": 9,  "slot": "朝（6〜9時台）",     "structure": "A", "pattern_hint": "数字+限定型（12星座中たった○つ・朝向け）"},
+    {"hour": 12, "slot": "午前（10〜12時台）", "structure": "B", "pattern_hint": "ランキング型（今日・今週のTOP3）"},
+    {"hour": 15, "slot": "午後（13〜15時台）", "structure": "G", "pattern_hint": "注意喚起+限定型（今週後半・今夕の警告）"},
+    {"hour": 19, "slot": "夜（19〜21時台）",   "structure": "F", "pattern_hint": "告白・暴露型（占い師として正直に言います）"},
+    {"hour": 21, "slot": "夜（19〜21時台）",   "structure": "G", "pattern_hint": "注意喚起+限定型（今夜〜明日への最終警告）"},
 ]
 
 

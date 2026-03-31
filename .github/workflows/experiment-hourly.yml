@@ -1,12 +1,15 @@
-name: Recovery Post (1日3件・4時間間隔)
+name: Auto Post (1日6件・最低2時間間隔)
 
 on:
   schedule:
-    # 3スロット: 07:07 / 12:07 / 20:07 JST (UTC = JST - 9h)
-    # 間隔: 07→12 = 5h, 12→20 = 8h, 20→07(翌) = 11h (全て4h以上)
-    - cron: '7 22 * * *'  #  7:07 JST
-    - cron: '7 3 * * *'   # 12:07 JST
-    - cron: '7 11 * * *'  # 20:07 JST
+    # 6スロット: 07:07 / 09:07 / 12:07 / 15:07 / 19:07 / 21:42 JST (UTC = JST - 9h)
+    # 最低間隔2時間以上（07→09=2h, 09→12=3h, 12→15=3h, 15→19=4h, 19→21:42=2h42m）
+    - cron: '7 22 * * *'   #  7:07 JST
+    - cron: '7 0 * * *'    #  9:07 JST
+    - cron: '7 3 * * *'    # 12:07 JST
+    - cron: '7 6 * * *'    # 15:07 JST
+    - cron: '7 10 * * *'   # 19:07 JST
+    - cron: '42 12 * * *'  # 21:42 JST
   workflow_dispatch:
 
 permissions:
@@ -22,7 +25,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Check recovery period (JST 2026-03-31 ~ 2026-04-14)
+      - name: Check active period (JST 2026-03-31 ~ 2026-04-14)
         id: period_check
         run: |
           JST_DATE=$(TZ='Asia/Tokyo' date +%Y-%m-%d)
@@ -97,8 +100,8 @@ jobs:
           print(len([p for p in q.get('queue', []) if p.get('status') == 'queued']))
           " 2>/dev/null || echo "0")
           echo "現在のキュー残: ${REMAINING}件"
-          if [ "$REMAINING" -lt "3" ]; then
-            echo "キュー残${REMAINING}件（3件未満）→ リカバリモードで生成します"
+          if [ "$REMAINING" -lt "6" ]; then
+            echo "キュー残${REMAINING}件（6件未満）→ 生成します"
             EXPERIMENT_MODE=1 python .github/scripts/generate_posts.py
             python .github/scripts/quality_check.py || true
             NEW_REMAINING=$(python -c "

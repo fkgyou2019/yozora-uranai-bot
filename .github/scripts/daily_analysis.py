@@ -332,6 +332,94 @@ def build_report(yesterday_str, collected, deleted_count, now_str):
             )
 
     lines.append("")
+
+    # -------------------------------------------------------------------
+    # 成長トラッカー: パターン別成長曲線サマリー
+    # -------------------------------------------------------------------
+    tracker = load_json("state/post-growth-tracker.json")
+    if tracker and tracker.get("snapshots"):
+        lines.append("## 📈 成長トラッカー（直近72h以内の投稿）")
+
+        # パターン別に速度・ピーク時間を集計
+        pattern_stats = defaultdict(list)
+        slot_stats = defaultdict(list)
+        entries_summary = []
+
+        for pid, entry in tracker["snapshots"].items():
+            hourly = entry.get("hourly", [])
+            if not hourly:
+                continue
+            peak_v = entry.get("peak_velocity", 0)
+            peak_h = entry.get("peak_velocity_hour", "-")
+            latest = hourly[-1]
+            pname = entry.get("pattern_name", "不明") or "不明"
+            slot_h = entry.get("slot_hour", "?")
+            day = entry.get("day_name", "?")
+            fl = entry.get("first_line", "")[:20]
+            v_total = latest.get("views", 0)
+            l_total = latest.get("likes", 0)
+
+            pattern_stats[pname].append({"peak_v": peak_v, "peak_h": peak_h, "views": v_total})
+            slot_stats[slot_h].append({"peak_v": peak_v, "views": v_total})
+
+            entries_summary.append({
+                "pname": pname, "slot_h": slot_h, "day": day,
+                "fl": fl, "peak_v": peak_v, "peak_h": peak_h,
+                "views": v_total, "likes": l_total,
+                "completed": entry.get("completed", False),
+            })
+
+        if entries_summary:
+            # ベロシティTOP3
+            lines.append("### 🚀 ベロシティランキング（閲覧数/時間）")
+            sorted_entries = sorted(entries_summary, key=lambda x: x["peak_v"], reverse=True)
+            lines.append("| # | フック | パターン | 時 | 曜 | ピーク速度 | ピーク時間 | 現在閲覧 |")
+            lines.append("|---|--------|----------|----|----|-----------|----------|---------|")
+            for i, e in enumerate(sorted_entries[:5], 1):
+                comp = "✅" if e["completed"] else "📊"
+                lines.append(
+                    f"| {i}{comp} | {e['fl']} | {e['pname']} | "
+                    f"{e['slot_h']}時 | {e['day']} | "
+                    f"{e['peak_v']:.1f}/h | +{e['peak_h']}h | {e['views']:,} |"
+                )
+            lines.append("")
+
+            # パターン別平均ピーク速度
+            if len(pattern_stats) > 1:
+                lines.append("### 📊 パターン別平均ピーク速度")
+                lines.append("| パターン | 件数 | 平均ピーク速度 | 平均閲覧 |")
+                lines.append("|----------|------|--------------|---------|")
+                for pname, stats in sorted(
+                    pattern_stats.items(),
+                    key=lambda kv: safe_avg([s["peak_v"] for s in kv[1]]),
+                    reverse=True
+                ):
+                    avg_pv = safe_avg([s["peak_v"] for s in stats])
+                    avg_v = safe_avg([s["views"] for s in stats])
+                    lines.append(
+                        f"| {pname} | {len(stats)} | {avg_pv:.1f}/h | {avg_v:,.0f} |"
+                    )
+                lines.append("")
+
+            # 時間帯別平均ピーク速度
+            if len(slot_stats) > 1:
+                lines.append("### 🕐 投稿時間帯別平均ピーク速度")
+                lines.append("| 投稿時刻 | 件数 | 平均ピーク速度 | 平均閲覧 |")
+                lines.append("|---------|------|--------------|---------|")
+                for sh, stats in sorted(
+                    slot_stats.items(),
+                    key=lambda kv: safe_avg([s["peak_v"] for s in kv[1]]),
+                    reverse=True
+                ):
+                    avg_pv = safe_avg([s["peak_v"] for s in stats])
+                    avg_v = safe_avg([s["views"] for s in stats])
+                    lines.append(
+                        f"| {sh}時台 | {len(stats)} | {avg_pv:.1f}/h | {avg_v:,.0f} |"
+                    )
+                lines.append("")
+
+        lines.append("")
+
     return "\n".join(lines)
 
 
