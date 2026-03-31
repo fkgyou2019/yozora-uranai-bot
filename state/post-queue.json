@@ -1,24 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "構造G_注意喚起+限定型_仕事運",
-      "category": "仕事運",
-      "content": "来週、仕事で気をつけた方がいい星座。\n\nたった3つだけです。\n\n獅子座、天秤座、射手座さん。\n\n獅子座は上司との意見が衝突しやすい時期。\n天秤座は決断を急かされる場面が増えます。\n射手座は焦りからのミスに注意が必要。\n\n該当の方、コメントで「気をつけます」と\n教えてくれると嬉しいです🔮\n\n仕事運 #今週の占い",
-      "hashtag": "#今週の占い",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 9,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 9.0
-      },
-      "id": "post_20260331_1907_th_001",
-      "platform": "threads",
-      "status": "queued"
-    }
-  ]
+  "queue": []
 }
