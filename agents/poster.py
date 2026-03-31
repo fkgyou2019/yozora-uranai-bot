@@ -335,6 +335,15 @@ def _post_one_inner():
     now = datetime.now(JST)
     current_hour = now.hour
 
+    # 禁止パターン（実績データ確認済み・投稿直前最終チェック）
+    BANNED_PATTERN_REGEXES = [
+        (r"(木星の優しい光|土星が.*微笑|春の陽射しが心強|応援メッセージ)", "励まし型"),
+        (r"^(ここ数日.*モヤモヤ|なんか.*モヤモヤ|最近.*モヤモヤ)", "共感型フック"),
+        (r"^(今日も頑張|自分を信じ|あなたは大丈夫)", "抽象共感型"),
+    ]
+
+    import re as _re
+
     post = None
     for candidate in pending:
         content = candidate.get("content", "")
@@ -342,9 +351,19 @@ def _post_one_inner():
         if skip_reason:
             log("INFO", f"時間矛盾で除外: {skip_reason} | {content[:25]}...")
             candidate["status"] = "skipped_time"
-        else:
-            post = candidate
-            break
+            continue
+        # 禁止パターンチェック
+        banned_reason = None
+        for pat, label in BANNED_PATTERN_REGEXES:
+            if _re.search(pat, content[:80]):
+                banned_reason = label
+                break
+        if banned_reason:
+            log("INFO", f"禁止パターンで除外: {banned_reason} | {content[:30]}...")
+            candidate["status"] = "skipped_banned"
+            continue
+        post = candidate
+        break
 
     if not post:
         log("INFO", "時間矛盾により投稿可能な投稿なし")
