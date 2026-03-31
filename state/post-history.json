@@ -1003,6 +1003,111 @@
       "posting_started_at": "2026-03-31T15:07:13.814612+09:00",
       "posted_at": "2026-03-31T15:07:19.532258+09:00",
       "platform_post_id": "18007530317853919"
+    },
+    {
+      "pattern_name": "自由型_総合運メッセージ",
+      "category": "総合運",
+      "content": "新しい月が始まる時、\nあなたはどんな気持ちですか？\n\nワクワクですか？\n不安ですか？\n\nどちらでもいいんです。\n\nその感情こそが、\n今月のあなたを\n導く羅針盤になるんですよ。🌙\n\n自分の心に\n素直になってください。\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 7,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.1
+      },
+      "id": "post_20260331_1207_th_004",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T17:13:35.397655+09:00",
+      "posted_at": "2026-03-31T17:13:40.784035+09:00",
+      "platform_post_id": "18087378161212341"
+    },
+    {
+      "pattern_name": "自由型_運勢バイオリズム",
+      "category": "今日の運勢",
+      "content": "3月の終わりから4月にかけて、\nあなたの運のバイオリズムが\n少し変わります。✨\n\nそれは誰にでも起こることで。\n\nただ気づいてる人と\n気づいてない人で、\n過ごし方が大きく変わるんです。\n\nこの時期は、いつもより\nしっかり眠ってください。\n睡眠が、あなたの\n最高の回復薬になります。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260331_1207_th_005",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T17:41:24.865852+09:00",
+      "posted_at": "2026-03-31T17:41:31.446921+09:00",
+      "platform_post_id": "17920478841293142"
+    },
+    {
+      "pattern_name": "構造B_ランキング型_金運",
+      "category": "金運",
+      "content": "【4月の金運が最も跳ねる星座TOP3】\n\n🥉第3位：蟹座さん。\n家計管理を見直すと\n流れが変わります。\n\n🥈第2位：山羊座さん。\n地道な積み重ねが\n急に花開く予感。\n\n🥇第1位：射手座さん。\n今月、大きなお金の\n流れが変わります。\nチャンスを逃さないでください。\n#金運",
+      "hashtag": "#金運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 8,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260331_1207_th_006",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T18:48:10.549226+09:00",
+      "posted_at": "2026-03-31T18:48:15.777005+09:00",
+      "platform_post_id": "18172296484401101"
+    },
+    {
+      "id": "verify-retry-20260331191217",
+      "content": "来週、仕事で気をつけた方がいい星座。\n\nたった3つだけです。\n\n獅子座、天秤座、射手座さん。\n\n獅子座は上司との意見が衝突しやすい時期。\n天秤座は決断を急かされる場面が増えます。\n射手座は焦りからのミスに注意が必要。\n\n該当の方、コメントで「気をつけます」と\n教えてくれると嬉しいです🔮\n\n仕事運 #今週の占い",
+      "hashtag": "#今週の占い",
+      "platform": "threads",
+      "status": "posted",
+      "posted_at": "2026-03-31T19:12:17.675190+09:00",
+      "platform_post_id": "17881010823510208",
+      "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造D_予告型（今夜の重要発表予告）",
+      "category": "仕事運・キャリア",
+      "content": "今夜、12星座の中で最も\n仕事の転機が訪れる星座。\n\n牡羊座・獅子座・射手座の皆さま、\n午後から流れが変わります。\n\n重要な話が舞い込む可能性が高い\nこの時間帯。心の準備を\nしておいた方が◎\n\n明日は獅子座の詳しい運勢を\nお届けします🌙\n\nコメントで教えてください🔮\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "午後（13〜15時台）",
+      "scheduled_hour": 13,
+      "id": "post_20260331_2039_exp_008",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "posting_started_at": "2026-03-31T20:39:26.677183+09:00",
+      "posted_at": "2026-03-31T20:39:31.587044+09:00",
+      "platform_post_id": "17993432135940354"
+    },
+    {
+      "id": "verify-retry-20260331214217",
+      "content": "正直に言います。\n今夜から明日朝にかけて、\n牡羊座・獅子座・射手座の3星座は\n職場で『予想外の提案』が舞い込みます。\n\n占い師として見ると、\nこれ、断った方が楽なんです。\nでも…受けた方が絶対いい。\n\n理由は、4月中旬に\nこの経験が『大きな信頼』に変わるから。\n\n迷ったら、\n深呼吸して『やってみます』と言ってください🍀\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "platform": "threads",
+      "status": "posted",
+      "posted_at": "2026-03-31T21:42:17.004718+09:00",
+      "platform_post_id": "18117310750571115",
+      "source": "post-verify"
     }
   ]
 }
