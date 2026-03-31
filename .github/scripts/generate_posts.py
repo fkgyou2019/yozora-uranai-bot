@@ -55,52 +55,97 @@ def save_json(path, data):
 
 
 def build_learning_block(winning):
-    """学習データからプロンプトブロックを動的構築"""
-    if not winning or winning.get("data_count", 0) < 3:
-        return """【市場分析から導出した勝ちパターン（初期値）】
+    """学習データからプロンプトブロックを動的構築（permanent_rules + auto_analysis を統合）"""
+    lines = []
+
+    # =========================================================
+    # A. permanent_rules（人間が書いた固定ルール・常に参照）
+    # =========================================================
+    perm = winning.get("permanent_rules", {}) if winning else {}
+    if perm:
+        lines.append("【📌 固定ルール（実績データ・人間確認済み）】")
+        must = perm.get("must_use_patterns", [])
+        for m in must:
+            lines.append(f"  ✅ {m}")
+        fixed_avoid = perm.get("avoid_patterns", [])
+        for a in fixed_avoid[:3]:  # 長いので3件まで
+            lines.append(f"  ❌ {a}")
+        hook_rules = perm.get("hook_rules", [])
+        if hook_rules:
+            lines.append("  【フックルール】" + " / ".join(hook_rules[:3]))
+
+    # =========================================================
+    # B. auto_analysis（自動集計データ）
+    # =========================================================
+    count = winning.get("data_count", 0) if winning else 0
+    if not winning or count < 3:
+        if not perm:
+            return """【市場分析から導出した勝ちパターン（初期値）】
 ・ランキング型は10件中3件まで。限定型・緊急型・シリーズ型を混ぜて多様性を確保
 ・フックは「恐怖×期待」型が最強（例: 「○月に人生が変わる星座。」）
 ・数字×限定×具体性の組み合わせが効く（例: 「12星座中、たった2つだけ。」）"""
+        return "\n".join(lines)
 
-    lines = []
     confidence = winning.get("confidence", "low")
-    count = winning.get("data_count", 0)
-    lines.append(f"【自己学習データ（{count}件分析済み・信頼度:{confidence}）】")
+    lines.append(f"\n【📊 自動学習データ（{count}件分析済み・信頼度:{confidence}）】")
 
     # トップパターンの配分指示
     top_patterns = winning.get("top_patterns", [])
     if top_patterns:
-        lines.append("■ パターン配分（10件中の目安）:")
+        lines.append("■ 実績パターン配分（10件中の目安）:")
         for tp in top_patterns[:4]:
-            n = max(1, round(tp["weight"] / 10))
-            lines.append(f"  ・{tp['pattern']}: {n}件（eng率{tp.get('avg_engagement', '?')}%）")
+            n = max(1, round(tp.get("weight", 5) / 10))
+            lines.append(
+                f"  ・{tp['pattern']}: {n}件"
+                f"（eng率{tp.get('avg_engagement','?')}%・閲覧{tp.get('avg_views','?')}）"
+            )
 
     # ベスト投稿の参考
     best = winning.get("best_posts", [])
     if best:
-        lines.append("■ 最もバズった投稿のフック:")
+        lines.append("■ 最もバズった投稿のフック（実績）:")
         for b in best[:3]:
-            lines.append(f"  ・「{b['first_line']}」→ eng率{b['eng_rate']:.1f}%")
+            lines.append(f"  ・「{b['first_line']}」→ eng率{b['eng_rate']:.1f}%・閲覧{b['views']}")
 
     # 特徴ランキング
     features = winning.get("feature_ranking", [])
     if features:
-        lines.append("■ 効果が高い要素:")
+        lines.append("■ 効果が高い要素（実測）:")
         label_map = {
-            "has_ranking": "ランキング形式",
-            "has_number_hook": "数字フック",
-            "has_question": "質問文",
-            "has_cta_emoji": "絵文字CTA",
-            "has_fear_hook": "恐怖・焦りフック",
+            "has_ranking":    "ランキング形式",
+            "has_number_hook":"数字フック",
+            "has_question":   "質問文",
+            "has_cta_emoji":  "絵文字CTA",
+            "has_fear_hook":  "恐怖・焦りフック",
         }
         for fr in features[:4]:
             label = label_map.get(fr["feature"], fr["feature"])
             lines.append(f"  ・{label} → avg eng {fr['avg_engagement']:.1f}%")
 
-    # 避けるべき
-    avoid = winning.get("avoid_patterns", [])
-    if avoid:
-        lines.append(f"■ 避けるべきパターン: {', '.join(avoid)}")
+    # 時間帯×パターン交差分析
+    slot_best = winning.get("auto_analysis", {}).get("slot_best_pattern", {})
+    if slot_best:
+        lines.append("■ 時間帯別・最強パターン（実測）:")
+        for slot, info in slot_best.items():
+            if info.get("sample_count", 0) >= 2:
+                lines.append(
+                    f"  ・{slot} → {info['best_pattern']}"
+                    f"（eng{info['avg_eng']:.1f}%・閲覧{info['avg_views']:.0f}）"
+                )
+
+    # 避けるべき（自動検出分）
+    auto_avoid = winning.get("auto_analysis", {}).get("auto_avoid_patterns", [])
+    if auto_avoid:
+        lines.append(f"■ 自動検出・低パフォーマンス: {len(auto_avoid)}パターン")
+        for a in auto_avoid[:2]:
+            lines.append(f"  ❌ {a}")
+
+    # インサイト
+    insights = winning.get("insights", [])
+    if insights:
+        lines.append("■ AI分析インサイト:")
+        for ins in insights[:3]:
+            lines.append(f"  ・{ins}")
 
     # インサイト
     insights = winning.get("insights", [])
