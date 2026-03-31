@@ -18,7 +18,9 @@
       },
       "id": "post_20260331_1207_th_001",
       "platform": "threads",
-      "status": "queued"
+      "status": "error",
+      "posting_started_at": "2026-03-31T12:13:31.958408+09:00",
+      "error": "THREADS_USER_ID / THREADS_ACCESS_TOKEN が未設定"
     },
     {
       "pattern_name": "自由型_総合運メッセージ",
