@@ -911,6 +911,29 @@
       "posting_started_at": "2026-03-31T07:07:15.713290+09:00",
       "posted_at": "2026-03-31T07:07:21.881189+09:00",
       "platform_post_id": "18097117697084871"
+    },
+    {
+      "pattern_name": "自由型_恋愛深掘り",
+      "category": "恋愛運",
+      "content": "恋愛について、\n知っておくといい話があります。\n\n今月下旬から金星の動きが変わる。\nそれで、恋愛の「ときめき」が\n変わる星座さんが3つあります。\n\n蟹座さん、蠍座さん、魚座さん。\n\nこれまで心が踊らなかったのに\n急に誰かを好きになる。\nそういう変化が起こります。\n\nそれは自然なことです。\n素直に進んでいいんですよ。\n#恋愛運",
+      "hashtag": "#恋愛運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.3
+      },
+      "id": "post_20260330_th_005",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T09:07:14.983747+09:00",
+      "posted_at": "2026-03-31T09:07:20.735442+09:00",
+      "platform_post_id": "18005075171899334"
     }
   ]
 }
