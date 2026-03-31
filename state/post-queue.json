@@ -1,85 +1,42 @@
 {
   "queue": [
     {
-      "pattern_name": "構造C_共感型_仕事運",
+      "pattern_name": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
       "category": "仕事運",
-      "content": "最近、仕事で判断を迷う\nことが増えてませんか？\n\nそれ、水星逆行の影響があります。\n特に双子座・乙女座・射手座は\n今、決断が難しい時期。\n\nでもそれって弱さじゃなくて。\nあなたが責任感を持ってる\n証拠なんです。\n\n来週から徐々に\n心がクリアになっていく。\nそこまで自分を信じてください。\n#今日の運勢",
-      "hashtag": "#今日の運勢",
+      "content": "今週後半、仕事で判断ミスが起きやすい星座。\n\nたった3つだけです。\n\n🔴 牡羊座\n火星の逆行で、いつもより早まった決断に注意。確認作業を二重にしてください。\n\n🔴 蟹座\n水星の影響で、メール・連絡の誤送信が。送信前に一呼吸置いて。\n\n🔴 山羊座\n土星が問い直す時期。過去の判断を見直す機会が。焦らず進めてください。\n\n🍀を置いた方に、今週後半は無事が訪れます。\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "朝（6〜9時台）",
+      "scheduled_hour": 7,
+      "id": "post_20260331_2224_exp_001",
+      "platform": "threads",
       "is_affiliate": false,
       "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
-        "specificity": 8,
-        "tempo": 8,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.3
-      },
-      "id": "post_20260331_1207_th_001",
-      "platform": "threads",
-      "status": "error",
-      "posting_started_at": "2026-03-31T12:13:31.958408+09:00",
-      "error": "THREADS_USER_ID / THREADS_ACCESS_TOKEN が未設定"
-    },
-    {
-      "pattern_name": "自由型_総合運メッセージ",
-      "category": "総合運",
-      "content": "新しい月が始まる時、\nあなたはどんな気持ちですか？\n\nワクワクですか？\n不安ですか？\n\nどちらでもいいんです。\n\nその感情こそが、\n今月のあなたを\n導く羅針盤になるんですよ。🌙\n\n自分の心に\n素直になってください。\n#星座占い",
-      "hashtag": "#星座占い",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 7,
-        "specificity": 7,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.1
-      },
-      "id": "post_20260331_1207_th_004",
-      "platform": "threads",
       "status": "queued"
     },
     {
-      "pattern_name": "自由型_運勢バイオリズム",
-      "category": "今日の運勢",
-      "content": "3月の終わりから4月にかけて、\nあなたの運のバイオリズムが\n少し変わります。✨\n\nそれは誰にでも起こることで。\n\nただ気づいてる人と\n気づいてない人で、\n過ごし方が大きく変わるんです。\n\nこの時期は、いつもより\nしっかり眠ってください。\n睡眠が、あなたの\n最高の回復薬になります。\n#今日の運勢",
-      "hashtag": "#今日の運勢",
+      "pattern_name": "構造A_数字+限定型（12星座中たった○つ・昼向け）",
+      "category": "恋愛運",
+      "content": "12星座中、たった3つだけ。\n\n午後から、恋愛に予期せぬ再会が訪れます。\n\n牡羊座・獅子座・射手座。\n\nこの3つの火の星座には、懐かしい人からのアプローチが。春の終わり、新しい季節への扉が開くかもしれません。今週中に連絡が来たら、迷わず返してください。\n\nあなたの星座は該当していますか？コメントで教えてください🔮",
+      "hashtag": "#恋愛運",
+      "time_slot": "午前（10〜12時台）",
+      "scheduled_hour": 12,
+      "id": "post_20260331_2224_exp_002",
+      "platform": "threads",
       "is_affiliate": false,
       "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
-        "specificity": 8,
-        "tempo": 8,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.3
-      },
-      "id": "post_20260331_1207_th_005",
-      "platform": "threads",
       "status": "queued"
     },
     {
-      "pattern_name": "構造B_ランキング型_金運",
-      "category": "金運",
-      "content": "【4月の金運が最も跳ねる星座TOP3】\n\n🥉第3位：蟹座さん。\n家計管理を見直すと\n流れが変わります。\n\n🥈第2位：山羊座さん。\n地道な積み重ねが\n急に花開く予感。\n\n🥇第1位：射手座さん。\n今月、大きなお金の\n流れが変わります。\nチャンスを逃さないでください。\n#金運",
-      "hashtag": "#金運",
+      "pattern_name": "構造G_注意喚起+限定型（今夜〜明日への警告・夜向け）",
+      "category": "注意喚起型・対人運",
+      "content": "今夜から明日朝、気をつけた方がいい星座。\n\nたった3つだけです。\n\n牡羊座・蟹座・天秤座\n\n🔴 牡羊座さんは、夜の連絡に返信急増。後で後悔しないよう、5分待ってから送ってください。\n\n🔴 蟹座さんは、感情的な判断が走りやすい時間帯。重要な約束は明日の朝に決めた方が吉。\n\n🔴 天秤座さんは、人間関係の誤解が生まれやすい配置。言葉選びを、いつもより丁寧に。\n\n🍀を置いた方に、朝の判断は冴えわたります。\n\nあなたの星座は入っていましたか？コメントで教えてください🔮",
+      "hashtag": "#今日の運勢",
+      "time_slot": "夜（19〜21時台）",
+      "scheduled_hour": 20,
+      "id": "post_20260331_2224_exp_003",
+      "platform": "threads",
       "is_affiliate": false,
       "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 8,
-        "mobile_readability": 9,
-        "average": 8.7
-      },
-      "id": "post_20260331_1207_th_006",
-      "platform": "threads",
       "status": "queued"
     }
   ]

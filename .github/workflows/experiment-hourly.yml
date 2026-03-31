@@ -1,26 +1,12 @@
-name: Experiment Hourly Post (3/31-4/5)
+name: Recovery Post (1日3件・4時間間隔)
 
 on:
   schedule:
-    # 18スロット: 6:07〜23:07 JST (UTC = JST - 9h)
-    - cron: '7 21 * * *'  #  6:07 JST (前日UTC)
-    - cron: '7 22 * * *'  #  7:07 JST (前日UTC)
-    - cron: '7 23 * * *'  #  8:07 JST (前日UTC)
-    - cron: '7 0 * * *'   #  9:07 JST
-    - cron: '7 1 * * *'   # 10:07 JST
-    - cron: '7 2 * * *'   # 11:07 JST
+    # 3スロット: 07:07 / 12:07 / 20:07 JST (UTC = JST - 9h)
+    # 間隔: 07→12 = 5h, 12→20 = 8h, 20→07(翌) = 11h (全て4h以上)
+    - cron: '7 22 * * *'  #  7:07 JST
     - cron: '7 3 * * *'   # 12:07 JST
-    - cron: '7 4 * * *'   # 13:07 JST
-    - cron: '7 5 * * *'   # 14:07 JST
-    - cron: '7 6 * * *'   # 15:07 JST
-    - cron: '7 7 * * *'   # 16:07 JST
-    - cron: '7 8 * * *'   # 17:07 JST
-    - cron: '7 9 * * *'   # 18:07 JST
-    - cron: '7 10 * * *'  # 19:07 JST
     - cron: '7 11 * * *'  # 20:07 JST
-    - cron: '7 12 * * *'  # 21:07 JST
-    - cron: '7 13 * * *'  # 22:07 JST
-    - cron: '7 14 * * *'  # 23:07 JST
   workflow_dispatch:
 
 permissions:
@@ -36,15 +22,15 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Check experiment period (JST 2026-03-31 ~ 2026-04-05)
+      - name: Check recovery period (JST 2026-03-31 ~ 2026-04-14)
         id: period_check
         run: |
           JST_DATE=$(TZ='Asia/Tokyo' date +%Y-%m-%d)
-          if [[ "$JST_DATE" < "2026-03-31" || "$JST_DATE" > "2026-04-05" ]]; then
-            echo "実験期間外 ($JST_DATE)。スキップします。"
+          if [[ "$JST_DATE" < "2026-03-31" || "$JST_DATE" > "2026-04-14" ]]; then
+            echo "稼働期間外 ($JST_DATE)。スキップします。"
             echo "in_period=false" >> $GITHUB_OUTPUT
           else
-            echo "実験期間内 ($JST_DATE)。投稿を実行します。"
+            echo "稼働期間内 ($JST_DATE)。投稿を実行します。"
             echo "in_period=true" >> $GITHUB_OUTPUT
           fi
 
@@ -111,8 +97,8 @@ jobs:
           print(len([p for p in q.get('queue', []) if p.get('status') == 'queued']))
           " 2>/dev/null || echo "0")
           echo "現在のキュー残: ${REMAINING}件"
-          if [ "$REMAINING" -lt "5" ]; then
-            echo "キュー残${REMAINING}件（5件未満）→ 実験モードで生成します"
+          if [ "$REMAINING" -lt "3" ]; then
+            echo "キュー残${REMAINING}件（3件未満）→ リカバリモードで生成します"
             EXPERIMENT_MODE=1 python .github/scripts/generate_posts.py
             python .github/scripts/quality_check.py || true
             NEW_REMAINING=$(python -c "

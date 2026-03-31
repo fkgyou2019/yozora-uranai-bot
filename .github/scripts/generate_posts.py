@@ -16,26 +16,13 @@ from datetime import datetime, timezone, timedelta
 JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# 実験モード: 時間帯別パターン割り当て
+# リカバリモード: 1日3件・4時間間隔スロット
+# 07:07(朝)→12:07(昼)→20:07(夜) = 5h/8h/11h間隔
+# 実績最強パターン（G/A/B）に絞って質を集中させる
 EXPERIMENT_TIME_SLOTS = [
-    {"hour": 6,  "slot": "朝（6〜9時台）",     "structure": "G", "pattern_hint": "注意喚起+限定型（今日・今週の警告系）"},
-    {"hour": 7,  "slot": "朝（6〜9時台）",     "structure": "A", "pattern_hint": "数字+限定型（12星座中たった○つ）"},
-    {"hour": 8,  "slot": "朝（6〜9時台）",     "structure": "G", "pattern_hint": "注意喚起+限定型（今日の運勢警告）"},
-    {"hour": 9,  "slot": "朝（6〜9時台）",     "structure": "B", "pattern_hint": "ランキング型（今日のTOP3）"},
-    {"hour": 10, "slot": "午前（10〜12時台）", "structure": "B", "pattern_hint": "ランキング型（今週のTOP3）"},
-    {"hour": 11, "slot": "午前（10〜12時台）", "structure": "G", "pattern_hint": "注意喚起+限定型（今週後半の注意点）"},
-    {"hour": 12, "slot": "午前（10〜12時台）", "structure": "A", "pattern_hint": "数字+限定型（午後に向けた予言）"},
-    {"hour": 13, "slot": "午後（13〜15時台）", "structure": "D", "pattern_hint": "予告型（今夜の重要発表予告）"},
-    {"hour": 14, "slot": "午後（13〜15時台）", "structure": "G", "pattern_hint": "注意喚起+限定型（今週中に注意が必要な星座）"},
-    {"hour": 15, "slot": "午後（13〜15時台）", "structure": "B", "pattern_hint": "ランキング型（今日の金運・恋愛ランキング）"},
-    {"hour": 16, "slot": "夕方（16〜18時台）", "structure": "A", "pattern_hint": "数字+限定型（今夜が転機になる星座）"},
-    {"hour": 17, "slot": "夕方（16〜18時台）", "structure": "G", "pattern_hint": "注意喚起+限定型（今夜気をつけること）"},
-    {"hour": 18, "slot": "夕方（16〜18時台）", "structure": "C", "pattern_hint": "天文イベント×質問型（今日の星の動き）"},
-    {"hour": 19, "slot": "夜（19〜21時台）",   "structure": "G", "pattern_hint": "注意喚起+限定型（今夜の重要警告・最強版）"},
-    {"hour": 20, "slot": "夜（19〜21時台）",   "structure": "F", "pattern_hint": "告白・暴露型（占い師として正直に言います）"},
-    {"hour": 21, "slot": "夜（19〜21時台）",   "structure": "G", "pattern_hint": "注意喚起+限定型（明日に向けての注意）"},
-    {"hour": 22, "slot": "深夜（22〜0時台）",  "structure": "E", "pattern_hint": "カード選択型（今夜の直感占い）"},
-    {"hour": 23, "slot": "深夜（22〜0時台）",  "structure": "C", "pattern_hint": "天文イベント×質問型（深夜の星座メッセージ）"},
+    {"hour": 7,  "slot": "朝（6〜9時台）",   "structure": "G", "pattern_hint": "注意喚起+限定型（今日・今週の仕事運警告）"},
+    {"hour": 12, "slot": "午前（10〜12時台）","structure": "A", "pattern_hint": "数字+限定型（12星座中たった○つ・昼向け）"},
+    {"hour": 20, "slot": "夜（19〜21時台）",  "structure": "G", "pattern_hint": "注意喚起+限定型（今夜〜明日への警告・夜向け）"},
 ]
 
 
@@ -725,7 +712,7 @@ def main():
     experiment_mode = os.environ.get("EXPERIMENT_MODE", "0") == "1"
 
     pending = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
-    if pending:
+    if len(pending) >= len(EXPERIMENT_TIME_SLOTS):
         print(f"キューに{len(pending)}件残っています。生成スキップ。")
         return
 

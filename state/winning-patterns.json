@@ -15,7 +15,8 @@
       "全投稿にCTA必須: 「🍀を置いた方に〜」または「コメントで教えてください🔮」"
     ],
     "hook_rules": [
-      "1行目は20文字以内",
+      "1行目は12〜15文字以内・意味が完結すること: NG例「今夜から明日朝、」（途切れる）→OK例「今夜から明日、気をつけて。」",
+      "1行目で改行しない: 1行目の文中に改行を入れると意味が分断されリーチが激減（3/31実証済み）",
       "時間軸を必ず含める: 「来週」「今週後半」「今月」「今夜」等",
       "星座名は3行目以内に明示（隠さない）",
       "注意喚起ワード: 「気をつけた方がいい」「大きな話が来やすい」「急に動く」等が高閲覧数"
@@ -217,20 +218,20 @@
       "total_replies": 25
     },
     {
-      "pattern": "その他（推定）",
-      "count": 9,
-      "avg_engagement": 10.76,
-      "avg_views": 171.0,
-      "total_likes": 139,
-      "total_replies": 40
-    },
-    {
       "pattern": "星座別アドバイス型",
       "count": 1,
       "avg_engagement": 10.39,
       "avg_views": 231.0,
       "total_likes": 24,
       "total_replies": 0
+    },
+    {
+      "pattern": "その他（推定）",
+      "count": 10,
+      "avg_engagement": 10.25,
+      "avg_views": 171.0,
+      "total_likes": 149,
+      "total_replies": 40
     },
     {
       "pattern": "天文イベント型（推定）",
@@ -370,8 +371,7 @@
     "ランキング形式あり → avg eng 25.0%",
     "絵文字CTAあり → avg eng 22.9%",
     "数字フックあり → avg eng 21.6%",
-    "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
-    "午前（10〜12時台）: 最強パターン=その他（推定）（eng12.0%・閲覧57）"
+    "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "hourly_data": {
     "7": {
@@ -394,9 +394,9 @@
     },
     "12": {
       "slot": "午前（10〜12時台）",
-      "avg_eng": 3.93,
-      "avg_views": 114.0,
-      "count": 2
+      "avg_eng": 4.53,
+      "avg_views": 134.0,
+      "count": 3
     },
     "14": {
       "slot": "午後（13〜15時台）",
@@ -453,9 +453,9 @@
     20
   ],
   "auto_analysis": {
-    "data_count": 29,
-    "last_analyzed": "2026-03-31T13:17:56.353655+09:00",
-    "confidence": "medium",
+    "data_count": 30,
+    "last_analyzed": "2026-03-31T17:06:23.806302+09:00",
+    "confidence": "high",
     "top_patterns": [
       {
         "pattern": "注意喚起型・仕事運",
@@ -564,20 +564,20 @@
         "total_replies": 25
       },
       {
-        "pattern": "その他（推定）",
-        "count": 9,
-        "avg_engagement": 10.76,
-        "avg_views": 171.0,
-        "total_likes": 139,
-        "total_replies": 40
-      },
-      {
         "pattern": "星座別アドバイス型",
         "count": 1,
         "avg_engagement": 10.39,
         "avg_views": 231.0,
         "total_likes": 24,
         "total_replies": 0
+      },
+      {
+        "pattern": "その他（推定）",
+        "count": 10,
+        "avg_engagement": 10.25,
+        "avg_views": 171.0,
+        "total_likes": 149,
+        "total_replies": 40
       },
       {
         "pattern": "天文イベント型（推定）",
@@ -727,9 +727,9 @@
       },
       "12": {
         "slot": "午前（10〜12時台）",
-        "avg_eng": 3.93,
-        "avg_views": 114.0,
-        "count": 2
+        "avg_eng": 4.53,
+        "avg_views": 134.0,
+        "count": 3
       },
       "14": {
         "slot": "午後（13〜15時台）",
@@ -789,11 +789,11 @@
         "note": ""
       },
       "午前（10〜12時台）": {
-        "best_pattern": "その他（推定）",
-        "avg_eng": 12.04,
-        "avg_views": 57.0,
-        "sample_count": 2,
-        "note": ""
+        "best_pattern": "星座別アドバイス型",
+        "avg_eng": 10.39,
+        "avg_views": 231.0,
+        "sample_count": 1,
+        "note": "※N=1は参考値"
       },
       "夕方（16〜18時台）": {
         "best_pattern": "ランキング型",
@@ -834,11 +834,10 @@
       "ランキング形式あり → avg eng 25.0%",
       "絵文字CTAあり → avg eng 22.9%",
       "数字フックあり → avg eng 21.6%",
-      "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
-      "午前（10〜12時台）: 最強パターン=その他（推定）（eng12.0%・閲覧57）"
+      "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 29,
-  "last_analyzed": "2026-03-31T13:17:56.353655+09:00",
-  "confidence": "medium"
+  "data_count": 30,
+  "last_analyzed": "2026-03-31T17:06:23.806302+09:00",
+  "confidence": "high"
 }
