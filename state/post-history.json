@@ -1026,6 +1026,29 @@
       "posting_started_at": "2026-03-31T17:13:35.397655+09:00",
       "posted_at": "2026-03-31T17:13:40.784035+09:00",
       "platform_post_id": "18087378161212341"
+    },
+    {
+      "pattern_name": "自由型_運勢バイオリズム",
+      "category": "今日の運勢",
+      "content": "3月の終わりから4月にかけて、\nあなたの運のバイオリズムが\n少し変わります。✨\n\nそれは誰にでも起こることで。\n\nただ気づいてる人と\n気づいてない人で、\n過ごし方が大きく変わるんです。\n\nこの時期は、いつもより\nしっかり眠ってください。\n睡眠が、あなたの\n最高の回復薬になります。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260331_1207_th_005",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T17:41:24.865852+09:00",
+      "posted_at": "2026-03-31T17:41:31.446921+09:00",
+      "platform_post_id": "17920478841293142"
     }
   ]
 }
