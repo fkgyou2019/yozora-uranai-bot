@@ -911,6 +911,75 @@
       "posting_started_at": "2026-03-31T07:07:15.713290+09:00",
       "posted_at": "2026-03-31T07:07:21.881189+09:00",
       "platform_post_id": "18097117697084871"
+    },
+    {
+      "pattern_name": "自由型_恋愛深掘り",
+      "category": "恋愛運",
+      "content": "恋愛について、\n知っておくといい話があります。\n\n今月下旬から金星の動きが変わる。\nそれで、恋愛の「ときめき」が\n変わる星座さんが3つあります。\n\n蟹座さん、蠍座さん、魚座さん。\n\nこれまで心が踊らなかったのに\n急に誰かを好きになる。\nそういう変化が起こります。\n\nそれは自然なことです。\n素直に進んでいいんですよ。\n#恋愛運",
+      "hashtag": "#恋愛運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.3
+      },
+      "id": "post_20260330_th_005",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T09:07:14.983747+09:00",
+      "posted_at": "2026-03-31T09:07:20.735442+09:00",
+      "platform_post_id": "18005075171899334"
+    },
+    {
+      "pattern_name": "自由型_水星逆行対策",
+      "category": "運勢サポート",
+      "content": "水星逆行が\n今月いっぱい続きます。\n\nこの時期、コミュニケーションや\n契約事に注意が必要です。\n\n特に双子座さん・乙女座さんは\n何度も確認してください。\n\nただし、これは「悪い時期」\nじゃないんですよ。\n\n見落としていたことに気づける時。\n丁寧に確認する時。\nそういう時期です。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.5
+      },
+      "id": "post_20260330_th_006",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T10:37:16.322718+09:00",
+      "posted_at": "2026-03-31T10:37:23.070412+09:00",
+      "platform_post_id": "17907838770202506"
+    },
+    {
+      "pattern_name": "構造B_ランキング型_総合運TOP5",
+      "category": "月曜定番シリーズ",
+      "content": "【今週の星座ランキング】\n総合運TOP5が決まりました✨\n\n🥉第5位：獅子座さん。\n新しい出会いが訪れやすい週です。\n\n🥈第4位：牡羊座さん。\n仕事での判断力が冴える時期。\n\n🥇第3位：蟹座さん。\n恋愛と金運の両方に追い風。\n\n🥇第2位：射手座さん。\n人間関係に大きな転機が来ます。\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260330_th_007",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T12:07:13.448556+09:00",
+      "posted_at": "2026-03-31T12:07:19.265884+09:00",
+      "platform_post_id": "18098499139970573"
     }
   ]
 }
