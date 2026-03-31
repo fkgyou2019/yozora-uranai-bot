@@ -957,6 +957,29 @@
       "posting_started_at": "2026-03-31T10:37:16.322718+09:00",
       "posted_at": "2026-03-31T10:37:23.070412+09:00",
       "platform_post_id": "17907838770202506"
+    },
+    {
+      "pattern_name": "構造B_ランキング型_総合運TOP5",
+      "category": "月曜定番シリーズ",
+      "content": "【今週の星座ランキング】\n総合運TOP5が決まりました✨\n\n🥉第5位：獅子座さん。\n新しい出会いが訪れやすい週です。\n\n🥈第4位：牡羊座さん。\n仕事での判断力が冴える時期。\n\n🥇第3位：蟹座さん。\n恋愛と金運の両方に追い風。\n\n🥇第2位：射手座さん。\n人間関係に大きな転機が来ます。\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260330_th_007",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T12:07:13.448556+09:00",
+      "posted_at": "2026-03-31T12:07:19.265884+09:00",
+      "platform_post_id": "18098499139970573"
     }
   ]
 }
