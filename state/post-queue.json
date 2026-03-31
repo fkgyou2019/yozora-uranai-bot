@@ -1,3 +1,17 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造F_告白・暴露型（占い師として正直に言います）",
+      "category": "仕事運・対人関係",
+      "content": "正直に言います。\n今夜から明日朝にかけて、\n牡羊座・獅子座・射手座の3星座は\n職場で『予想外の提案』が舞い込みます。\n\n占い師として見ると、\nこれ、断った方が楽なんです。\nでも…受けた方が絶対いい。\n\n理由は、4月中旬に\nこの経験が『大きな信頼』に変わるから。\n\n迷ったら、\n深呼吸して『やってみます』と言ってください🍀\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "time_slot": "夜（19〜21時台）",
+      "scheduled_hour": 20,
+      "id": "post_20260331_2039_exp_015",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued"
+    }
+  ]
 }
