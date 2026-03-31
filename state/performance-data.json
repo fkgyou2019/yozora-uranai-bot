@@ -727,7 +727,33 @@
         "hook_length": 8
       },
       "collected_at": "2026-03-30T21:37:22.321119+09:00"
+    },
+    {
+      "id": "verify-retry-20260330091216",
+      "platform_post_id": "18098477614997296",
+      "posted_at": "2026-03-30T09:12:16.762871+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "12星座中、今週最も運が開く星座。\n\nそれは牡羊座、獅子座、射手座です。\n\n牡羊座さんは新しい出会い",
+      "first_line": "12星座中、今週最も運が開く星座。",
+      "char_count": 179,
+      "metrics": {
+        "views": 22,
+        "likes": 3,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 22.73
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 17
+      },
+      "collected_at": "2026-03-31T10:37:23.241924+09:00"
     }
   ],
-  "last_updated": "2026-03-31T09:07:20.840086+09:00"
+  "last_updated": "2026-03-31T10:37:23.241924+09:00"
 }

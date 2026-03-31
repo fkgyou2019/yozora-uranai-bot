@@ -1,6 +1,6 @@
 {
-  "data_count": 28,
-  "last_analyzed": "2026-03-31T09:07:24.397490+09:00",
+  "data_count": 29,
+  "last_analyzed": "2026-03-31T10:37:25.116977+09:00",
   "confidence": "medium",
   "top_patterns": [
     {
@@ -89,20 +89,20 @@
       "total_replies": 25
     },
     {
+      "pattern": "",
+      "count": 19,
+      "avg_engagement": 10.7,
+      "avg_views": 277.0,
+      "total_likes": 520,
+      "total_replies": 282
+    },
+    {
       "pattern": "星座別アドバイス型",
       "count": 1,
       "avg_engagement": 10.39,
       "avg_views": 231.0,
       "total_likes": 24,
       "total_replies": 0
-    },
-    {
-      "pattern": "",
-      "count": 18,
-      "avg_engagement": 10.04,
-      "avg_views": 291.0,
-      "total_likes": 517,
-      "total_replies": 280
     },
     {
       "pattern": "予告型・フォロー動機",
@@ -126,13 +126,13 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 7,
-      "avg_engagement": 21.4
+      "count": 8,
+      "avg_engagement": 21.57
     },
     {
       "feature": "has_question",
-      "count": 3,
-      "avg_engagement": 13.15
+      "count": 4,
+      "avg_engagement": 15.55
     }
   ],
   "top_hook_styles": [
@@ -226,7 +226,7 @@
     "最強パターン: 注意喚起型・仕事運（eng率42.1%）",
     "ランキング形式あり → avg eng 25.0%",
     "絵文字CTAあり → avg eng 22.9%",
-    "数字フックあり → avg eng 21.4%",
+    "数字フックあり → avg eng 21.6%",
     "最適投稿時間帯: 20時, 7時, 22時"
   ],
   "hourly_data": {
@@ -236,9 +236,9 @@
       "count": 3
     },
     "9": {
-      "avg_eng": 9.73,
-      "avg_views": 1204.0,
-      "count": 2
+      "avg_eng": 14.07,
+      "avg_views": 810.0,
+      "count": 3
     },
     "10": {
       "avg_eng": 12.15,
