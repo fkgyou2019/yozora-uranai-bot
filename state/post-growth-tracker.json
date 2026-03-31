@@ -1,0 +1,538 @@
+{
+  "snapshots": {
+    "verify-retry-20260329071221": {
+      "post_id": "verify-retry-20260329071221",
+      "platform_post_id": "18124573375596822",
+      "posted_at": "2026-03-29T07:12:21.946488+09:00",
+      "pattern_name": "",
+      "slot_hour": 7,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "春分を過ぎた今日、",
+      "content_preview": "春分を過ぎた今日、\nあなたの運気は転機を迎えています✨\n\n牡羊座さんは、新しい環境への\n一歩を踏み出すのに最適な時期です",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260329091219": {
+      "post_id": "verify-retry-20260329091219",
+      "platform_post_id": "17878637304544053",
+      "posted_at": "2026-03-29T09:12:19.738419+09:00",
+      "pattern_name": "",
+      "slot_hour": 9,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "春の新月が心を整える。",
+      "content_preview": "春の新月が心を整える。\n\n牡羊座のあなたへ。\n新しい環境への不安は自然なこと。\nでも今のあなたには、その変化を\nチャンス",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260329104221": {
+      "post_id": "verify-retry-20260329104221",
+      "platform_post_id": "18042434249536684",
+      "posted_at": "2026-03-29T10:42:21.919768+09:00",
+      "pattern_name": "",
+      "slot_hour": 10,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "3月29日の運勢🌙",
+      "content_preview": "3月29日の運勢🌙\n\n牡羊座さんへ\n今日のあなたは、心と行動が\nぴったり一致する日✨\n\nやりたいことが明確に見えて\nいる",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260329121220": {
+      "post_id": "verify-retry-20260329121220",
+      "platform_post_id": "17927371854085864",
+      "posted_at": "2026-03-29T12:12:20.241685+09:00",
+      "pattern_name": "",
+      "slot_hour": 12,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "春の訪れとともに、あなたの",
+      "content_preview": "春の訪れとともに、あなたの\n運気も変わり始めています。✨\n\n3月下旬は、特に射手座と牡羊座の\n皆さまに幸運が訪れやすい時",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260329151219": {
+      "post_id": "verify-retry-20260329151219",
+      "platform_post_id": "18258565663291601",
+      "posted_at": "2026-03-29T15:12:19.371535+09:00",
+      "pattern_name": "",
+      "slot_hour": 15,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "春分を過ぎた今夜✨",
+      "content_preview": "春分を過ぎた今夜✨\n\n牡羊座さんへ。新しい季節の\n扉が開きました。心がざわつく\nことがあっても、それは成長の\n合図なので",
+      "hourly": [
+        {
+          "h": 61,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 219,
+          "likes": 21,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.59,
+          "velocity_views_per_hour": 3.6
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 3.6,
+      "peak_velocity_hour": 61
+    },
+    "verify-retry-20260329191217": {
+      "post_id": "verify-retry-20260329191217",
+      "platform_post_id": "17916087420144959",
+      "posted_at": "2026-03-29T19:12:17.850722+09:00",
+      "pattern_name": "",
+      "slot_hour": 19,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "🌙 牡羊座さんへ",
+      "content_preview": "🌙 牡羊座さんへ\n\n春の陽射しが心強い\nあなたへの応援メッセージ。\n\n今週は新しい挑戦が\nやってくる予感がします。\n少し",
+      "hourly": [
+        {
+          "h": 57,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 73,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.48,
+          "velocity_views_per_hour": 1.3
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 1.3,
+      "peak_velocity_hour": 57
+    },
+    "verify-retry-20260329204216": {
+      "post_id": "verify-retry-20260329204216",
+      "platform_post_id": "18073165205247120",
+      "posted_at": "2026-03-29T20:42:16.108146+09:00",
+      "pattern_name": "",
+      "slot_hour": 20,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "ここ数日、なんか",
+      "content_preview": "ここ数日、なんか\nモヤモヤしていませんか？\n\nそれ、水星逆行の影響かもしれません。\n特に双子座さん、乙女座さん、\n射手座",
+      "hourly": [
+        {
+          "h": 56,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 128,
+          "likes": 3,
+          "replies": 27,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 23.44,
+          "velocity_views_per_hour": 2.3
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 2.3,
+      "peak_velocity_hour": 56
+    },
+    "verify-retry-20260329214218": {
+      "post_id": "verify-retry-20260329214218",
+      "platform_post_id": "18075405623168659",
+      "posted_at": "2026-03-29T21:42:18.732159+09:00",
+      "pattern_name": "",
+      "slot_hour": 21,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "春分を過ぎた今夜、",
+      "content_preview": "春分を過ぎた今夜、\nあなたの運気は変わります。🌙\n\n牡羊座さんは新しい環境への\n一歩を踏み出すタイミング。\n迷いがあって",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260330071217": {
+      "post_id": "verify-retry-20260330071217",
+      "platform_post_id": "17853906015689075",
+      "posted_at": "2026-03-30T07:12:17.965318+09:00",
+      "pattern_name": "",
+      "slot_hour": 7,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "12星座中、たった3つだけ。",
+      "content_preview": "12星座中、たった3つだけ。\n\n今週、全ての運が\n大きく開く星座があります。\n\nそれは…射手座、獅子座、牡羊座です。\n\n",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260330091216": {
+      "post_id": "verify-retry-20260330091216",
+      "platform_post_id": "18098477614997296",
+      "posted_at": "2026-03-30T09:12:16.762871+09:00",
+      "pattern_name": "",
+      "slot_hour": 9,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "12星座中、今週最も運が開く星座。",
+      "content_preview": "12星座中、今週最も運が開く星座。\n\nそれは牡羊座、獅子座、射手座です。\n\n牡羊座さんは新しい出会いが。\n獅子座さんは仕",
+      "hourly": [
+        {
+          "h": 43,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 29,
+          "likes": 4,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.69,
+          "velocity_views_per_hour": 0.7
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 0.7,
+      "peak_velocity_hour": 43
+    },
+    "verify-retry-20260330104220": {
+      "post_id": "verify-retry-20260330104220",
+      "platform_post_id": "18176888980385874",
+      "posted_at": "2026-03-30T10:42:20.772994+09:00",
+      "pattern_name": "",
+      "slot_hour": 10,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "春分を過ぎて、新しい季節へ🌙",
+      "content_preview": "春分を過ぎて、新しい季節へ🌙\n\n双子座さんへ。この時期、あなたの\n周りに新しい人間関係が生まれやすい\n配置になっています",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260330121218": {
+      "post_id": "verify-retry-20260330121218",
+      "platform_post_id": "18098178973817341",
+      "posted_at": "2026-03-30T12:12:18.763885+09:00",
+      "pattern_name": "",
+      "slot_hour": 12,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "月が双子座に移ります✨",
+      "content_preview": "月が双子座に移ります✨\n\n今週は、あなたの「伝える力」が\n一段と輝く時期になります。\nやや控えめだった想いも、\n自然と言",
+      "hourly": [
+        {
+          "h": 40,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 176,
+          "likes": 10,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.68,
+          "velocity_views_per_hour": 4.4
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 4.4,
+      "peak_velocity_hour": 40
+    },
+    "post_20260330_th_003": {
+      "post_id": "post_20260330_th_003",
+      "platform_post_id": "18079659026096099",
+      "posted_at": "2026-03-30T14:33:04.039619+09:00",
+      "pattern_name": "会話誘導型・相互作用",
+      "slot_hour": 14,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "今週、あなたの星座は",
+      "content_preview": "今週、あなたの星座は\nどんな運気でしたか？\n\nよかったら\nコメント欄で教えてくださいね✨\n\nあなたの星座の詳しい運勢や\n",
+      "hourly": [],
+      "completed": true
+    },
+    "post_20260330_th_001": {
+      "post_id": "post_20260330_th_001",
+      "platform_post_id": "18111438103796912",
+      "posted_at": "2026-03-30T14:54:13.296930+09:00",
+      "pattern_name": "予告型・金運シリーズ予定",
+      "slot_hour": 14,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "4月は金運が動く月です。",
+      "content_preview": "4月は金運が動く月です。\n\n特に牡牛座・蟹座・山羊座さんは\n大きな変化が来やすい時期。\n\n今から準備しておくと\nその流れ",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260330151220": {
+      "post_id": "verify-retry-20260330151220",
+      "platform_post_id": "17919916998122182",
+      "posted_at": "2026-03-30T15:12:20.837929+09:00",
+      "pattern_name": "",
+      "slot_hour": 15,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "春の新月があなたを導く✨",
+      "content_preview": "春の新月があなたを導く✨\n\n3月30日、新しい始まりのエネルギー\nが満ちています。特に牡羊座さんは、\nこれからの3ヶ月間",
+      "hourly": [],
+      "completed": true
+    },
+    "post_20260330_th_002": {
+      "post_id": "post_20260330_th_002",
+      "platform_post_id": "17888011257462275",
+      "posted_at": "2026-03-30T20:37:21.258829+09:00",
+      "pattern_name": "構造F_告白型_金運",
+      "slot_hour": 20,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "正直に言います。",
+      "content_preview": "正直に言います。\n\n占い師として\n「これだけは見てほしい」\nと思うことがあります。\n\n今月、金運が下がりやすい\n行動パタ",
+      "hourly": [],
+      "completed": true
+    },
+    "post_20260330_th_004": {
+      "post_id": "post_20260330_th_004",
+      "platform_post_id": "18097117697084871",
+      "posted_at": "2026-03-31T07:07:21.881189+09:00",
+      "pattern_name": "自由型_仕事運注意喚起",
+      "slot_hour": 7,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "来週、仕事で",
+      "content_preview": "来週、仕事で\n大きな話が来やすい星座。\n\n獅子座さんと天秤座さんです。\n\n獅子座さんは昇進や抜擢の可能性。\n天秤座さんは",
+      "hourly": [
+        {
+          "h": 21,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 50,
+          "likes": 8,
+          "replies": 1,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 18.0,
+          "velocity_views_per_hour": 2.4
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 2.4,
+      "peak_velocity_hour": 21
+    },
+    "post_20260330_th_005": {
+      "post_id": "post_20260330_th_005",
+      "platform_post_id": "18005075171899334",
+      "posted_at": "2026-03-31T09:07:20.735442+09:00",
+      "pattern_name": "自由型_恋愛深掘り",
+      "slot_hour": 9,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "恋愛について、",
+      "content_preview": "恋愛について、\n知っておくといい話があります。\n\n今月下旬から金星の動きが変わる。\nそれで、恋愛の「ときめき」が\n変わる",
+      "hourly": [
+        {
+          "h": 19,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 138,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.45,
+          "velocity_views_per_hour": 7.3
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 7.3,
+      "peak_velocity_hour": 19
+    },
+    "post_20260330_th_006": {
+      "post_id": "post_20260330_th_006",
+      "platform_post_id": "17907838770202506",
+      "posted_at": "2026-03-31T10:37:23.070412+09:00",
+      "pattern_name": "自由型_水星逆行対策",
+      "slot_hour": 10,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "水星逆行が",
+      "content_preview": "水星逆行が\n今月いっぱい続きます。\n\nこの時期、コミュニケーションや\n契約事に注意が必要です。\n\n特に双子座さん・乙女座",
+      "hourly": [
+        {
+          "h": 18,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 97,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.03,
+          "velocity_views_per_hour": 5.4
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 5.4,
+      "peak_velocity_hour": 18
+    },
+    "post_20260330_th_007": {
+      "post_id": "post_20260330_th_007",
+      "platform_post_id": "18098499139970573",
+      "posted_at": "2026-03-31T12:07:19.265884+09:00",
+      "pattern_name": "構造B_ランキング型_総合運TOP5",
+      "slot_hour": 12,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "【今週の星座ランキング】",
+      "content_preview": "【今週の星座ランキング】\n総合運TOP5が決まりました✨\n\n🥉第5位：獅子座さん。\n新しい出会いが訪れやすい週です。\n\n",
+      "hourly": [
+        {
+          "h": 16,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 92,
+          "likes": 12,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.04,
+          "velocity_views_per_hour": 5.8
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 5.8,
+      "peak_velocity_hour": 16
+    },
+    "post_20260331_1207_th_001": {
+      "post_id": "post_20260331_1207_th_001",
+      "platform_post_id": "18007530317853919",
+      "posted_at": "2026-03-31T15:07:19.532258+09:00",
+      "pattern_name": "構造C_共感型_仕事運",
+      "slot_hour": 15,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "最近、仕事で判断を迷う",
+      "content_preview": "最近、仕事で判断を迷う\nことが増えてませんか？\n\nそれ、水星逆行の影響があります。\n特に双子座・乙女座・射手座は\n今、決",
+      "hourly": [
+        {
+          "h": 13,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 23,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.35,
+          "velocity_views_per_hour": 1.8
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 1.8,
+      "peak_velocity_hour": 13
+    },
+    "post_20260331_1207_th_004": {
+      "post_id": "post_20260331_1207_th_004",
+      "platform_post_id": "18087378161212341",
+      "posted_at": "2026-03-31T17:13:40.784035+09:00",
+      "pattern_name": "自由型_総合運メッセージ",
+      "slot_hour": 17,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "新しい月が始まる時、",
+      "content_preview": "新しい月が始まる時、\nあなたはどんな気持ちですか？\n\nワクワクですか？\n不安ですか？\n\nどちらでもいいんです。\n\nその感",
+      "hourly": [
+        {
+          "h": 11,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 20,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.0,
+          "velocity_views_per_hour": 1.8
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 1.8,
+      "peak_velocity_hour": 11
+    },
+    "post_20260331_1207_th_005": {
+      "post_id": "post_20260331_1207_th_005",
+      "platform_post_id": "17920478841293142",
+      "posted_at": "2026-03-31T17:41:31.446921+09:00",
+      "pattern_name": "自由型_運勢バイオリズム",
+      "slot_hour": 17,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "3月の終わりから4月にかけて、",
+      "content_preview": "3月の終わりから4月にかけて、\nあなたの運のバイオリズムが\n少し変わります。✨\n\nそれは誰にでも起こることで。\n\nただ気",
+      "hourly": [],
+      "completed": true
+    },
+    "post_20260331_1207_th_006": {
+      "post_id": "post_20260331_1207_th_006",
+      "platform_post_id": "18172296484401101",
+      "posted_at": "2026-03-31T18:48:15.777005+09:00",
+      "pattern_name": "構造B_ランキング型_金運",
+      "slot_hour": 18,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "【4月の金運が最も跳ねる星座TOP3】",
+      "content_preview": "【4月の金運が最も跳ねる星座TOP3】\n\n🥉第3位：蟹座さん。\n家計管理を見直すと\n流れが変わります。\n\n🥈第2位：山羊",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260331191217": {
+      "post_id": "verify-retry-20260331191217",
+      "platform_post_id": "17881010823510208",
+      "posted_at": "2026-03-31T19:12:17.675190+09:00",
+      "pattern_name": "",
+      "slot_hour": 19,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "来週、仕事で気をつけた方がいい星座。",
+      "content_preview": "来週、仕事で気をつけた方がいい星座。\n\nたった3つだけです。\n\n獅子座、天秤座、射手座さん。\n\n獅子座は上司との意見が衝",
+      "hourly": [
+        {
+          "h": 9,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 39,
+          "likes": 2,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.26,
+          "velocity_views_per_hour": 4.3
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 4.3,
+      "peak_velocity_hour": 9
+    },
+    "post_20260331_2039_exp_008": {
+      "post_id": "post_20260331_2039_exp_008",
+      "platform_post_id": "17993432135940354",
+      "posted_at": "2026-03-31T20:39:31.587044+09:00",
+      "pattern_name": "構造D_予告型（今夜の重要発表予告）",
+      "slot_hour": 20,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "今夜、12星座の中で最も",
+      "content_preview": "今夜、12星座の中で最も\n仕事の転機が訪れる星座。\n\n牡羊座・獅子座・射手座の皆さま、\n午後から流れが変わります。\n\n重",
+      "hourly": [
+        {
+          "h": 8,
+          "ts": "2026-04-01T05:00:46.366302+09:00",
+          "views": 64,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.06,
+          "velocity_views_per_hour": 8.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 8.0,
+      "peak_velocity_hour": 8
+    },
+    "verify-retry-20260331214217": {
+      "post_id": "verify-retry-20260331214217",
+      "platform_post_id": "18117310750571115",
+      "posted_at": "2026-03-31T21:42:17.004718+09:00",
+      "pattern_name": "",
+      "slot_hour": 21,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "正直に言います。",
+      "content_preview": "正直に言います。\n今夜から明日朝にかけて、\n牡羊座・獅子座・射手座の3星座は\n職場で『予想外の提案』が舞い込みます。\n\n",
+      "hourly": [],
+      "completed": true
+    }
+  },
+  "last_updated": "2026-04-01T05:00:46.366302+09:00"
+}
