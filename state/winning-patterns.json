@@ -137,13 +137,11 @@
       "reason": "eng率21.3% (3件)"
     },
     {
-      "type": "注意喚起+限定型（構造G）",
-      "effectiveness": "highest",
-      "avg_engagement": "30.8%",
-      "avg_views": 1524,
-      "example": "今週後半、気をつけた方がいい星座。",
-      "frequency": "高頻度（2/10投稿・必須）",
-      "note": "閲覧数2373（全投稿中最高）。注意喚起ワード+時間軸+限定感（たった3つ）+星座名即出しの組み合わせが核心"
+      "pattern": "限定×恐怖型・恋愛",
+      "weight": 11,
+      "avg_engagement": 21.29,
+      "sample_count": 1,
+      "reason": "eng率21.3% (1件)"
     },
     {
       "pattern": "限定型・恐怖×期待",
