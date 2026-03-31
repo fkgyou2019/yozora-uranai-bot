@@ -779,7 +779,33 @@
         "hook_length": 11
       },
       "collected_at": "2026-03-31T15:07:19.607231+09:00"
+    },
+    {
+      "id": "post_20260330_th_003",
+      "platform_post_id": "18398910823148876",
+      "posted_at": "2026-03-30T21:37:22.129880+09:00",
+      "pattern_name": "構造D_予告型",
+      "category": "フォロー動機生成",
+      "content_preview": "来週、12星座の中で\n最も運命が動く星座。\n\n天秤座さんです。\n\n恋愛・仕事・人間関係のどこかで\n大",
+      "first_line": "来週、12星座の中で",
+      "char_count": 130,
+      "metrics": {
+        "views": 439,
+        "likes": 25,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 5.69
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 10
+      },
+      "collected_at": "2026-03-31T23:51:48.458485+09:00"
     }
   ],
-  "last_updated": "2026-03-31T17:36:45.736454+09:00"
+  "last_updated": "2026-03-31T23:51:48.458485+09:00"
 }
