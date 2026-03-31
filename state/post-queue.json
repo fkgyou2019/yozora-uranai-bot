@@ -1,3 +1,24 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "自由型_時間軸×質問",
+      "category": "総合運",
+      "content": "4月が始まる前に\nやっておいた方がいいこと。\n\nそれは「3月を振り返ること」です。\n\n特に獅子座、牡羊座、射手座さんは\n3月の出来事が4月の大きな\nチャンスに繋がる可能性があります。\n\nあの時の決断は正しかった。\nあの人との関係は大切。\n\n3月を肯定してから\n4月を迎えてください。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260331_2038_th_001",
+      "platform": "threads",
+      "status": "queued"
+    }
+  ]
 }

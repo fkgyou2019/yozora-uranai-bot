@@ -1082,6 +1082,29 @@
       "posted_at": "2026-03-31T19:12:17.675190+09:00",
       "platform_post_id": "17881010823510208",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造C_天文イベント×質問型",
+      "category": "総合運",
+      "content": "ここ数日、なんか\n人間関係でモヤモヤしていませんか？\n\nそれ、水星逆行の影響かもしれません。\n特に双子座、乙女座、射手座は\n思わぬすれ違いが起きやすい時期。\n\n自分を責めなくて大丈夫。\nこれは宇宙のリズムの話です。\n来週には落ち着いてきますよ。\n\n今、何か心がもやもやしていますか？\n「そう、モヤモヤしてた」と感じた方は\nコメントで教えてください🌙\n\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260331_2037_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T20:37:37.194926+09:00",
+      "posted_at": "2026-03-31T20:37:42.171106+09:00",
+      "platform_post_id": "18025784474803851"
     }
   ]
 }
