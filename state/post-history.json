@@ -1003,6 +1003,29 @@
       "posting_started_at": "2026-03-31T15:07:13.814612+09:00",
       "posted_at": "2026-03-31T15:07:19.532258+09:00",
       "platform_post_id": "18007530317853919"
+    },
+    {
+      "pattern_name": "自由型_総合運メッセージ",
+      "category": "総合運",
+      "content": "新しい月が始まる時、\nあなたはどんな気持ちですか？\n\nワクワクですか？\n不安ですか？\n\nどちらでもいいんです。\n\nその感情こそが、\n今月のあなたを\n導く羅針盤になるんですよ。🌙\n\n自分の心に\n素直になってください。\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 7,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.1
+      },
+      "id": "post_20260331_1207_th_004",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-03-31T17:13:35.397655+09:00",
+      "posted_at": "2026-03-31T17:13:40.784035+09:00",
+      "platform_post_id": "18087378161212341"
     }
   ]
 }

@@ -18,9 +18,9 @@
       "error_count": 0
     },
     "poster": {
-      "status": "error",
-      "last_run": "2026-03-31T12:13:31.968594+09:00",
-      "error_count": 1
+      "status": "idle",
+      "last_run": "2026-03-31T17:13:40.785693+09:00",
+      "error_count": 0
     },
     "fetcher": {
       "status": "idle",
@@ -33,9 +33,9 @@
       "error_count": 0
     }
   },
-  "daily_post_count": 5,
+  "daily_post_count": 6,
   "daily_post_date": "2026-03-31",
-  "consecutive_errors": 1,
+  "consecutive_errors": 0,
   "max_consecutive_errors": 3,
   "account_statuses": {
     "threads_tsukuyomi_01": {
