@@ -16,6 +16,28 @@ from datetime import datetime, timezone, timedelta
 JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# 実験モード: 時間帯別パターン割り当て
+EXPERIMENT_TIME_SLOTS = [
+    {"hour": 6,  "slot": "朝（6〜9時台）",     "structure": "G", "pattern_hint": "注意喚起+限定型（今日・今週の警告系）"},
+    {"hour": 7,  "slot": "朝（6〜9時台）",     "structure": "A", "pattern_hint": "数字+限定型（12星座中たった○つ）"},
+    {"hour": 8,  "slot": "朝（6〜9時台）",     "structure": "G", "pattern_hint": "注意喚起+限定型（今日の運勢警告）"},
+    {"hour": 9,  "slot": "朝（6〜9時台）",     "structure": "B", "pattern_hint": "ランキング型（今日のTOP3）"},
+    {"hour": 10, "slot": "午前（10〜12時台）", "structure": "B", "pattern_hint": "ランキング型（今週のTOP3）"},
+    {"hour": 11, "slot": "午前（10〜12時台）", "structure": "G", "pattern_hint": "注意喚起+限定型（今週後半の注意点）"},
+    {"hour": 12, "slot": "午前（10〜12時台）", "structure": "A", "pattern_hint": "数字+限定型（午後に向けた予言）"},
+    {"hour": 13, "slot": "午後（13〜15時台）", "structure": "D", "pattern_hint": "予告型（今夜の重要発表予告）"},
+    {"hour": 14, "slot": "午後（13〜15時台）", "structure": "G", "pattern_hint": "注意喚起+限定型（今週中に注意が必要な星座）"},
+    {"hour": 15, "slot": "午後（13〜15時台）", "structure": "B", "pattern_hint": "ランキング型（今日の金運・恋愛ランキング）"},
+    {"hour": 16, "slot": "夕方（16〜18時台）", "structure": "A", "pattern_hint": "数字+限定型（今夜が転機になる星座）"},
+    {"hour": 17, "slot": "夕方（16〜18時台）", "structure": "G", "pattern_hint": "注意喚起+限定型（今夜気をつけること）"},
+    {"hour": 18, "slot": "夕方（16〜18時台）", "structure": "C", "pattern_hint": "天文イベント×質問型（今日の星の動き）"},
+    {"hour": 19, "slot": "夜（19〜21時台）",   "structure": "G", "pattern_hint": "注意喚起+限定型（今夜の重要警告・最強版）"},
+    {"hour": 20, "slot": "夜（19〜21時台）",   "structure": "F", "pattern_hint": "告白・暴露型（占い師として正直に言います）"},
+    {"hour": 21, "slot": "夜（19〜21時台）",   "structure": "G", "pattern_hint": "注意喚起+限定型（明日に向けての注意）"},
+    {"hour": 22, "slot": "深夜（22〜0時台）",  "structure": "E", "pattern_hint": "カード選択型（今夜の直感占い）"},
+    {"hour": 23, "slot": "深夜（22〜0時台）",  "structure": "C", "pattern_hint": "天文イベント×質問型（深夜の星座メッセージ）"},
+]
+
 
 def load_json(path):
     full = os.path.join(PROJECT_DIR, path)
@@ -147,13 +169,15 @@ def build_threads_prompt(ctx, should_generate_affiliate, asp_links):
 
 【🚨 データ実証済み絶対ルール（違反は即不合格）】
 
-■ 絶対禁止（これらは全てeng率0%だった）:
+■ 絶対禁止（実績データで閲覧数36〜165・ER 0〜4%だったパターン）:
 1. 1行目にCTAを置くこと（「コメントで教えて」「星座を書いて」等を冒頭に置くな）
 2. 答えを出し惜しみ・隠す表現（「○つあります」「お伝えします」「個別に教えます」）
 3. 1星座限定の投稿（「蟹座さんへの手紙」等。11/12のユーザーを切り捨てる）
 4. 文字の選択肢型（「A/B/C選んで」はNG。ただし絵文字カード選択型〈構造E〉はOK）
 5. 過去投稿を参照する投稿（「この前の〜」はフォロワーが少ない段階では意味不明）
 6. 「フォローして」「いいねして」等の直接的エンゲージメントベイト
+7. 励まし型【閲覧数平均169・ER 8%: 最低パフォーマンス】: 「木星の優しい光が」「土星が微笑む」「春の陽射しが心強い」「○○座のあなたへ応援を」等、天体名+感情的励ましのみで構成される投稿。具体的な注意喚起・ランキング・予言のない純粋な励ましは禁止。
+8. 抽象的な共感型【閲覧数平均153・ER 8%】: 「今日も頑張りましょう」「自分を信じて」等、星座名も具体的天文イベントも含まない抽象的な感情共有投稿。ただし「天文イベント+質問フック+星座名明示（構造C）」はOK。
 
 ■ ⚠️ バリエーション必須ルール（同じパターンを2件以上連続で生成しない）:
 - 10件生成する場合、構造A(限定型)は最大3件まで
@@ -187,11 +211,12 @@ def build_threads_prompt(ctx, should_generate_affiliate, asp_links):
 ---
 ポイント: 全員が「自分入ってるかな？」と読む構造。
 
-■ 構造C: 共感→答え→CTA型
+■ 構造C: 天文イベント×質問型（共感+具体性の組み合わせ）
 ---
-なんか最近、\\n心がざわざわする人いませんか？\\n\\nそれ、水星逆行の影響かも。\\n特に双子座・乙女座・射手座は\\n影響を受けやすい時期。\\n\\n自分を責めなくて大丈夫。\\n来週から落ち着きます。\\n\\n「🌙」を置いた方に、\\n穏やかな気持ちが届きます。\\n\\n#今日の占い
+ここ数日、なんか\\nモヤモヤしていませんか？\\n\\nそれ、水星逆行の影響かもしれません。\\n特に双子座、乙女座、射手座は\\n強く影響を受けやすい時期。\\n\\n自分を責めなくて大丈夫。\\n今月末には落ち着いてきます。\\n\\n「🌙」を置いた方に、\\n穏やかな気持ちが届きます。\\n\\n#今日の運勢
 ---
-ポイント: 共感→具体的な星座名→CTA。答えを先に出す。
+ポイント: 天文イベント（水星逆行・満月・新月等）を起点に共感を引き出す。抽象的な励ましは禁止。「ここ最近〜していませんか？」という質問フックで星座名を明示。答えを先に出す。
+⚠️ 禁止: 「今日も頑張りましょう」「自分を信じて」等の天体・星座名なし励まし。「木星の優しい光が」「土星が微笑む」系の励まし型はNG。
 
 ■ 構造D: 予告型（フォロー動機を作る）
 ---
@@ -210,6 +235,18 @@ def build_threads_prompt(ctx, should_generate_affiliate, asp_links):
 正直に言います。\\n\\n占い師として\\n「これだけは見てほしい」\\nと思うことがあります。\\n\\n今月、金運が急落しやすい\\n行動パターンがあって。\\n\\nそれは「直感に反する決断」。\\n\\n不思議なことに、今月だけは\\n頭より心で決めた方が\\nお金の流れが良くなる。\\n\\n#金運
 ---
 ポイント: 「正直に言います」「実は」等の告白フックで保存率UP。占い師の本音感を演出。
+
+■ 構造G: 注意喚起+限定型【実績最強: 閲覧数2373・ER 42%】
+---
+今週後半、気をつけた方がいい星座。\\n\\nたった3つだけです。\\n\\n双子座、天秤座、水瓶座さん。\\n\\n双子座は言葉のすれ違いが起きやすい週。\\n天秤座は決断を急かされる場面が来ます。\\n水瓶座は直感より慎重さが吉。\\n\\n該当の方、コメントで「当たった」と\\n教えてくれると嬉しいです🔮\\n\\n今日の運勢 #今週の占い
+---
+ポイント:
+1行目: 「気をつけた方がいい」「急に動く」「見逃せない」等の注意喚起ワード + 時間軸（今週後半・来週・今月）
+2行目: 「たった○つだけです」で限定感を加速
+3行目: 星座名を即出す（隠さない）
+以降: 各星座に1行ずつ具体的な予言（抽象的な励ましNG）
+CTA: 「当たった人はコメント」型 or 「🍀を置いた方に〜」型
+テーマ例: 仕事（昇進・転機）/ 恋愛（本音・決断）/ 金運（急変・臨時収入）/ 対人（すれ違い）
 
 【🔥 Threads用CTA（2種類を交互に使う）】
 
@@ -254,7 +291,7 @@ def build_threads_prompt(ctx, should_generate_affiliate, asp_links):
 2. 各投稿は200-300文字（Threadsの最適値）
 3. 全投稿で会話を誘導するCTAを含める（質問型中心）
 4. トピックタグは末尾に1つだけ
-5. パターン配分（10件必須）: 限定型2件（構造A）、ランキング型1件（構造B）、共感→答え→CTA型1件（構造C）、予告型1件（構造D）、カード選択型1件（構造E・必須）、告白型1件（構造F・必須）、その他3件（自由）
+5. パターン配分（10件必須）: 注意喚起+限定型2件（構造G・必須）、限定型1件（構造A）、ランキング型1件（構造B）、天文イベント×質問型1件（構造C）、予告型1件（構造D）、カード選択型1件（構造E・必須）、告白型1件（構造F・必須）、その他1件（自由）
 6. 使用可能トピックタグ: #今日の運勢 #恋愛運 #金運 #タロット #星座占い #今週の占い
 7. 親しみやすく穏やかなトーン。断定的・煽り的な表現は避ける
 8. 星座には「さん」付けも可（「牡牛座さん」等）
@@ -423,6 +460,168 @@ def build_x_prompt(ctx, should_generate_affiliate, asp_links):
 """
 
 
+def get_structure_template(structure):
+    """構造別テンプレートを返す"""
+    templates = {
+        "G": """注意喚起+限定型:
+1行目: 「今週後半、気をつけた方がいい星座。」「来週、○○が急に動く星座。」（注意喚起+時間軸）
+2行目: 「たった3つだけです。」（限定感）
+3行目: 星座名を即提示
+以降: 各星座に1行ずつ具体予言
+末尾: CTA""",
+        "A": """数字+限定型:
+1行目: 「12星座中、たった3つだけ。」（数字+限定）
+2行目: テーマ提示（今週、恋愛に大きな転機が訪れます。）
+3行目: 星座名を即提示
+以降: 深掘り
+末尾: CTA""",
+        "B": """ランキング型:
+1行目: 「【今日の金運ランキングTOP3】」（【】でタイトル）
+以降: 🥉3位→🥈2位→🥇1位の順
+末尾: CTA""",
+        "C": """天文イベント×質問型:
+1行目: 「ここ数日、〜していませんか？」（質問フック）
+2行目: 天文イベント（水星逆行・満月・新月等）の説明
+3行目: 影響を受ける星座名を明示
+末尾: CTA""",
+        "D": """予告型:
+1行目: 「来週、12星座の中で最も○○が動く星座。」
+2行目: 星座名を即提示
+以降: 詳細予告
+末尾: 「明日はXX座の詳しい運勢をお届けします🌙」""",
+        "E": """カード選択型:
+1行目: 「今の自分に引かれるカードを1枚選んでください🔮」
+以降: 🌕月/⭐星/🌹薔薇 等の絵文字カード選択肢
+末尾: 「コメント欄に選んだカードを教えてくれたら〜」""",
+        "F": """告白・暴露型:
+1行目: 「正直に言います。」「実は〜」
+以降: 占い師の本音・ぶっちゃけトーク
+末尾: 具体的な占い的アドバイス""",
+    }
+    return templates.get(structure, templates["G"])
+
+
+def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block):
+    """実験モード: 特定時間帯×パターン向けの投稿を1件生成するプロンプト"""
+    hour = slot_info["hour"]
+    slot = slot_info["slot"]
+    structure = slot_info["structure"]
+    pattern_hint = slot_info["pattern_hint"]
+
+    return f"""あなたは占いSNSアカウント「よぞら.」のThreads投稿ライターです。
+{hour}時台に投稿する占い投稿を1件だけ生成してください。
+
+【今日の日付】{today}
+【投稿時間帯】{slot}（{hour}:07 JST投稿予定）
+【指定パターン】構造{structure}: {pattern_hint}
+【ペルソナ】月詠（つくよみ）: 穏やかで親しみやすい。敬語ベースだが柔らかい。
+
+{learning_block}
+
+【🚨 絶対禁止】
+- 励まし型: 「木星の優しい光が」「土星が微笑む」系の抽象励まし
+- 1星座限定の投稿（「蟹座さんへ」等）
+- 答えの出し惜しみ（「個別に教えます」等）
+- 1行目にCTAを置く
+
+【✅ 時間帯を活かした表現】
+- {hour}時台らしい時間的文脈を使う（例: 「今夜」「今朝」「午後から」等）
+- ただし矛盾しない範囲で（「今朝」は朝スロットのみ）
+
+【構造{structure}のテンプレート（必ずこの構造で生成）】
+{get_structure_template(structure)}
+
+【ルール】
+1. 文字数: 150-280文字
+2. 1行は8-15文字を目安
+3. 空行で3〜4ブロック
+4. トピックタグは末尾に1つ（#今日の運勢 #恋愛運 #金運 #星座占い #今週の占い から）
+5. CTAは最後に（「🍀を置いた方に〜」または「コメントで教えてください🔮」）
+
+JSON形式で1件返してください:
+{{"pattern_name": "構造{structure}_{pattern_hint}", "category": "カテゴリ", "content": "本文", "hashtag": "#今日の運勢", "time_slot": "{slot}", "scheduled_hour": {hour}}}
+"""
+
+
+def call_claude_api_single(api_key, prompt):
+    """Claude APIを呼び出し、1件のJSONオブジェクトを返す（実験モード用）"""
+    import time as _time
+
+    body = json.dumps({
+        "model": "claude-haiku-4-5-20251001",
+        "max_tokens": 1024,
+        "messages": [{"role": "user", "content": prompt}]
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        "https://api.anthropic.com/v1/messages",
+        data=body,
+        headers={
+            "Content-Type": "application/json",
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
+        },
+        method="POST",
+    )
+
+    result = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+            break
+        except Exception as e:
+            print(f"  Claude API エラー (試行{attempt+1}/3): {e}")
+            if attempt < 2:
+                _time.sleep(5 * (attempt + 1))
+            else:
+                print("ERROR: Claude API 3回失敗。スキップ。")
+                return None
+
+    text = result["content"][0]["text"]
+    # JSON オブジェクト1件を抽出
+    m = re.search(r"\{.*\}", text, re.DOTALL)
+    if not m:
+        print(f"ERROR: JSON抽出失敗")
+        print(text[:300])
+        return None
+
+    try:
+        return json.loads(m.group())
+    except json.JSONDecodeError as e:
+        print(f"ERROR: JSON不正: {e}")
+        print(text[:300])
+        return None
+
+
+def generate_experiment_posts(api_key, today, used_patterns, learning_block):
+    """実験モード: 18スロット分の投稿を1件ずつ生成してリストで返す"""
+    import time as _time
+
+    posts = []
+    print(f"\n--- 実験モード: {len(EXPERIMENT_TIME_SLOTS)}スロット分を生成中 ---")
+
+    for slot_info in EXPERIMENT_TIME_SLOTS:
+        hour = slot_info["hour"]
+        print(f"  [{hour}時台] 構造{slot_info['structure']}: {slot_info['pattern_hint'][:20]}...", end=" ", flush=True)
+        prompt = build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block)
+        post = call_claude_api_single(api_key, prompt)
+
+        if post is not None:
+            post["time_slot"] = slot_info["slot"]
+            post["scheduled_hour"] = hour
+            posts.append(post)
+            print("OK")
+        else:
+            print("SKIP（生成失敗）")
+
+        # rate limit対策
+        _time.sleep(2)
+
+    print(f"  実験モード生成完了: {len(posts)}/{len(EXPERIMENT_TIME_SLOTS)}件")
+    return posts
+
+
 def call_claude_api(api_key, prompt):
     """Claude APIを呼び出し、生成結果のJSON配列を返す"""
     import time as _time
@@ -478,12 +677,17 @@ def main():
     if not queue:
         queue = {"queue": []}
 
+    experiment_mode = os.environ.get("EXPERIMENT_MODE", "0") == "1"
+
     pending = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
     if pending:
         print(f"キューに{len(pending)}件残っています。生成スキップ。")
         return
 
-    print("キューが空のため、Claude APIでThreads用10件を生成します...")
+    if experiment_mode:
+        print("実験モード: 18スロット分の投稿を生成します...")
+    else:
+        print("キューが空のため、Claude APIでThreads用10件を生成します...")
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key:
@@ -529,7 +733,35 @@ def main():
     x_posts = []
 
     # ========================================
-    # Threads用投稿を10件生成
+    # 実験モード: 18スロット分の投稿を個別生成
+    # ========================================
+    if experiment_mode:
+        threads_posts = generate_experiment_posts(api_key, today, used_patterns, learning_block)
+        if not threads_posts:
+            print("ERROR: 実験モード投稿の生成に全て失敗")
+            sys.exit(1)
+
+        today_str = datetime.now(JST).strftime("%Y%m%d")
+        time_str = datetime.now(JST).strftime("%H%M")
+
+        for i, p in enumerate(threads_posts):
+            p["id"] = f"post_{today_str}_{time_str}_exp_{i + 1:03d}"
+            p["platform"] = "threads"
+            p.setdefault("is_affiliate", False)
+            p.setdefault("affiliate_comment", None)
+            p["status"] = "queued"
+
+        # 同日分を削除して新規追加
+        queue["queue"] = [p for p in queue["queue"] if not p.get("id", "").startswith(f"post_{today_str}_")]
+        queue["queue"].extend(threads_posts)
+
+        save_json("state/post-queue.json", queue)
+        print(f"\n実験モード生成完了: {len(threads_posts)}件をキューに追加")
+        print(f"学習データ参照: {winning.get('data_count', 0)}件 (信頼度: {winning.get('confidence', 'none')})")
+        return
+
+    # ========================================
+    # Threads用投稿を10件生成（通常モード）
     # ========================================
     print("\n--- Threads用投稿を生成中 ---")
     threads_prompt = build_threads_prompt(ctx, should_generate_affiliate, asp_links)

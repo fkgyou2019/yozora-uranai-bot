@@ -47,7 +47,9 @@ jobs:
           EOF
 
       # ========================================
-      # キュー残量チェック: 翌日分として5件以上確保
+      # キュー残量チェック: 翌日分を確保
+      # 実験期間（3/31-4/5 JST）: 18件以上確保
+      # 通常モード: 5件以上確保
       # ========================================
       - name: Check queue and generate if needed
         run: |
@@ -59,10 +61,21 @@ jobs:
           " 2>/dev/null || echo "0")
           echo "現在のキュー残: ${REMAINING}件"
 
-          # 5件未満なら翌日分を生成
-          if [ "$REMAINING" -lt "5" ]; then
-            echo "キュー不足 → 翌日分を生成します"
-            python .github/scripts/generate_posts.py
+          # 実験期間判定（JST基準）
+          JST_DATE=$(TZ='Asia/Tokyo' date +%Y-%m-%d)
+          if [[ "$JST_DATE" >= "2026-03-31" && "$JST_DATE" <= "2026-04-05" ]]; then
+            EXPERIMENT_MODE=1
+            THRESHOLD=18
+            echo "実験期間中（${JST_DATE}）: 18件以上確保します"
+          else
+            EXPERIMENT_MODE=0
+            THRESHOLD=5
+            echo "通常モード（${JST_DATE}）: 5件以上確保します"
+          fi
+
+          if [ "$REMAINING" -lt "$THRESHOLD" ]; then
+            echo "キュー不足 → 生成します"
+            EXPERIMENT_MODE=$EXPERIMENT_MODE python .github/scripts/generate_posts.py
             python .github/scripts/quality_check.py || true
 
             NEW_REMAINING=$(python -c "
@@ -73,8 +86,8 @@ jobs:
           " 2>/dev/null || echo "0")
             echo "生成後キュー残: ${NEW_REMAINING}件"
 
-            # それでも3件未満なら再生成（品質チェックで落ちた場合）
-            if [ "$NEW_REMAINING" -lt "3" ]; then
+            # 通常モード時のみ: それでも3件未満なら再生成（品質チェックで落ちた場合）
+            if [ "$EXPERIMENT_MODE" = "0" ] && [ "$NEW_REMAINING" -lt "3" ]; then
               echo "品質チェック後も不足 → 再生成"
               python .github/scripts/generate_posts.py
               python .github/scripts/quality_check.py || true

@@ -1,0 +1,162 @@
+name: Experiment Hourly Post (3/31-4/5)
+
+on:
+  schedule:
+    # 18スロット: 6:07〜23:07 JST (UTC = JST - 9h)
+    - cron: '7 21 * * *'  #  6:07 JST (前日UTC)
+    - cron: '7 22 * * *'  #  7:07 JST (前日UTC)
+    - cron: '7 23 * * *'  #  8:07 JST (前日UTC)
+    - cron: '7 0 * * *'   #  9:07 JST
+    - cron: '7 1 * * *'   # 10:07 JST
+    - cron: '7 2 * * *'   # 11:07 JST
+    - cron: '7 3 * * *'   # 12:07 JST
+    - cron: '7 4 * * *'   # 13:07 JST
+    - cron: '7 5 * * *'   # 14:07 JST
+    - cron: '7 6 * * *'   # 15:07 JST
+    - cron: '7 7 * * *'   # 16:07 JST
+    - cron: '7 8 * * *'   # 17:07 JST
+    - cron: '7 9 * * *'   # 18:07 JST
+    - cron: '7 10 * * *'  # 19:07 JST
+    - cron: '7 11 * * *'  # 20:07 JST
+    - cron: '7 12 * * *'  # 21:07 JST
+    - cron: '7 13 * * *'  # 22:07 JST
+    - cron: '7 14 * * *'  # 23:07 JST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hourly-experiment
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check experiment period (JST 2026-03-31 ~ 2026-04-05)
+        id: period_check
+        run: |
+          JST_DATE=$(TZ='Asia/Tokyo' date +%Y-%m-%d)
+          if [[ "$JST_DATE" < "2026-03-31" || "$JST_DATE" > "2026-04-05" ]]; then
+            echo "実験期間外 ($JST_DATE)。スキップします。"
+            echo "in_period=false" >> $GITHUB_OUTPUT
+          else
+            echo "実験期間内 ($JST_DATE)。投稿を実行します。"
+            echo "in_period=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Checkout repository
+        if: steps.period_check.outputs.in_period == 'true'
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        if: steps.period_check.outputs.in_period == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Initialize state files if missing
+        if: steps.period_check.outputs.in_period == 'true'
+        run: |
+          mkdir -p state config
+          if [ ! -f state/post-queue.json ]; then
+            echo '{"queue":[]}' > state/post-queue.json
+          fi
+          if [ ! -f state/post-history.json ]; then
+            echo '{"posts":[]}' > state/post-history.json
+          fi
+          if [ ! -f state/system-status.json ]; then
+            cat > state/system-status.json << 'EOJSON'
+          {
+            "kill_switch": false,
+            "consecutive_errors": 0,
+            "daily_post_count": 0,
+            "daily_post_date": "",
+            "agents": {
+              "researcher": {"status": "idle", "last_run": null, "error_count": 0},
+              "analyst": {"status": "idle", "last_run": null, "error_count": 0},
+              "writer": {"status": "idle", "last_run": null, "error_count": 0},
+              "poster": {"status": "idle", "last_run": null, "error_count": 0},
+              "fetcher": {"status": "idle", "last_run": null, "error_count": 0},
+              "supervisor": {"status": "idle", "last_run": null, "error_count": 0}
+            }
+          }
+          EOJSON
+          fi
+          [ ! -f state/performance-data.json ] && echo '{"posts":[],"last_updated":null}' > state/performance-data.json
+          [ ! -f state/winning-patterns.json ] && echo '{}' > state/winning-patterns.json
+          true
+
+      - name: Create api-keys.env from secrets
+        if: steps.period_check.outputs.in_period == 'true'
+        run: |
+          cat > config/api-keys.env << EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN=${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
+          EOF
+
+      - name: Pre-fill queue if empty (before posting)
+        if: steps.period_check.outputs.in_period == 'true'
+        run: |
+          REMAINING=$(python -c "
+          import json, os
+          path = 'state/post-queue.json'
+          q = json.load(open(path)) if os.path.exists(path) else {'queue': []}
+          print(len([p for p in q.get('queue', []) if p.get('status') == 'queued']))
+          " 2>/dev/null || echo "0")
+          echo "現在のキュー残: ${REMAINING}件"
+          if [ "$REMAINING" -lt "5" ]; then
+            echo "キュー残${REMAINING}件（5件未満）→ 実験モードで生成します"
+            EXPERIMENT_MODE=1 python .github/scripts/generate_posts.py
+            python .github/scripts/quality_check.py || true
+            NEW_REMAINING=$(python -c "
+          import json, os
+          path = 'state/post-queue.json'
+          q = json.load(open(path)) if os.path.exists(path) else {'queue': []}
+          print(len([p for p in q.get('queue', []) if p.get('status') == 'queued']))
+          " 2>/dev/null || echo "0")
+            echo "生成後キュー残: ${NEW_REMAINING}件"
+          else
+            echo "キューに${REMAINING}件あり → 生成スキップ"
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        continue-on-error: true
+
+      - name: Post one from queue
+        if: steps.period_check.outputs.in_period == 'true'
+        run: python agents/poster.py
+        env:
+          PYTHONIOENCODING: utf-8
+
+      - name: Fetch metrics & analyze (learning loop)
+        if: steps.period_check.outputs.in_period == 'true'
+        run: |
+          python .github/scripts/fetch_metrics.py
+          python .github/scripts/analyze_patterns.py
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        continue-on-error: true
+
+      - name: Commit state changes
+        if: steps.period_check.outputs.in_period == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/post-queue.json state/post-history.json state/system-status.json state/performance-data.json state/winning-patterns.json state/metrics.json
+          if git diff --cached --quiet; then
+            echo "No state changes to commit"
+          else
+            git commit -m "chore: update post state [skip ci]"
+            git push || (
+              git fetch origin master
+              git merge origin/master -X ours --no-edit
+              git push
+            )
+          fi
