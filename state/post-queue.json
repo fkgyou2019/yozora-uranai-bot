@@ -1,3 +1,44 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "限定型（構造A・恋愛運）",
+      "category": "恋愛運",
+      "content": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です。\n\n特に蟹座は3日以内に\n大事な決断を迫られるかも。\nでも大丈夫。あなたの直感こそが\n最高のナビゲーターです。\n\n「🔮」を置いた方だけに、\n今夜良い流れが届きます。\n\n#恋愛運",
+      "hashtag": "#恋愛運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260401_2138_th_001",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "水曜定番タロット（構造自由・1枚引き）",
+      "category": "タロット",
+      "content": "【水曜定番】週の折り返しタロット🔮\n\n今週後半のキーカードを\n1枚引きました。\n\n出たのは「太陽」。\n\nこれは、ここからの3日間で\n「迷いが晴れる」という暗示です。\n\n特に木曜日は\n大事な決断に向き合うのに\n最適な日ですよ。\n\n「☀️」を置いた方に、\n#タロット",
+      "hashtag": "#タロット",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.8
+      },
+      "id": "post_20260401_2138_th_003",
+      "platform": "threads",
+      "status": "queued"
+    }
+  ]
 }

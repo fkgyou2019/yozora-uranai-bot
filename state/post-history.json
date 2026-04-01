@@ -1262,6 +1262,29 @@
       "posting_started_at": "2026-04-01T20:37:12.970755+09:00",
       "posted_at": "2026-04-01T20:37:17.820950+09:00",
       "platform_post_id": "18095583710027046"
+    },
+    {
+      "pattern_name": "構造自由_共感×深掘り質問型",
+      "category": "運勢一般",
+      "content": "最近、新しいことを\n始めたいな…と感じていますか？\n\nそういう気持ちが湧いてくるのは、\nあなたの中で何かが\n準備完了のサインかもしれません。\n\n特に牡羊座さん、獅子座さん、\n射手座さんはその傾向が強い。\n\nあなたの直感、\n本当に大事にしてみてください。\n\n何か新しく始めたことはありますか？\nコメント欄で教えてくださいね🌙\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.1
+      },
+      "id": "post_20260401_2137_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-01T21:37:33.771474+09:00",
+      "posted_at": "2026-04-01T21:37:38.681636+09:00",
+      "platform_post_id": "18105685135717036"
     }
   ]
 }
