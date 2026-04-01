@@ -1216,6 +1216,29 @@
       "posting_started_at": "2026-04-01T15:07:13.044337+09:00",
       "posted_at": "2026-04-01T15:07:21.550619+09:00",
       "platform_post_id": "17952302130118360"
+    },
+    {
+      "pattern_name": "構造自由_共感×深掘り質問型（仕事のストレス）",
+      "category": "仕事運",
+      "content": "仕事で、ちょっと疲れてませんか？\n\n4月は新しい環境が\n多い季節ですから、誰もが\nどこかで力を使ってます。\n\n特に山羊座、蟹座、天秤座さんは\n今月は調整の月になりそう。\n\nそんな時、おすすめなのが\n「夜空を見る」こと。\n星を見つめると、心が\nちょっと軽くなりませんか？\n\nあなたはどんな時に\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 7,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.0
+      },
+      "id": "post_20260401_1907_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-01T19:07:35.971068+09:00",
+      "posted_at": "2026-04-01T19:07:41.911424+09:00",
+      "platform_post_id": "17930381478068314"
     }
   ]
 }

@@ -1,3 +1,84 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造自由_共感×質問型",
+      "category": "運勢全般",
+      "content": "最近、「これで大丈夫かな」って\n不安になることありますか？\n\n4月のはじまりは、\n誰もが少なからず\nそういう気持ちを持つんです。\n\n新しい環境、新しい出発。\n その先が見えないから。\n\nでも占い的には、この不安こそが\n「あなたが成長する合図」\nなんですよ。\n\nあなたの星座なら\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 7,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 7.9
+      },
+      "id": "post_20260401_1908_th_001",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造自由_深掘り質問型",
+      "category": "恋愛運",
+      "content": "4月に入ってから\n「あの人、何か違う」って\n感じたことありますか？\n\nそれは気のせいじゃなくて\n相手も同じ変化を\n感じている可能性があります。\n\n春の新月の影響で\n誰もが少しずつ\n本来の姿に戻るんです。\n\n隠していた気持ちが\n ふっと浮かぶこともある。\n恋愛運 #星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.3
+      },
+      "id": "post_20260401_1908_th_002",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造A_限定型",
+      "category": "恋愛運",
+      "content": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です。\n\n特に蟹座は木曜日以降に\n大事な決断を迫られるかも。\nでも大丈夫。\nあなたの直感こそが\n最高のナビゲーターです。\n\n「🌙」を置いた方に、\n今夜良い流れが届きます。\n恋愛運 #星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260401_1908_th_003",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型②",
+      "category": "恋愛運",
+      "content": "今週、対人関係で注意した方がいい星座。\n\nたった4つだけです。\n\n牡羊座、獅子座、射手座、牡牛座さん。\n\n牡羊座は言いたいことを\n飲み込む時期。\n獅子座は自分の気持ちを\n相手に伝える勇気を。\n射手座はちょっと立ち止まって。\n牡牛座は相手の話をゆっくり聞いて。\n\n「✨」を置いた方に、\n3日以内に良い知らせが届きます。\n恋愛運 #今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.3
+      },
+      "id": "post_20260401_1908_th_004",
+      "platform": "threads",
+      "status": "queued"
+    }
+  ]
 }
