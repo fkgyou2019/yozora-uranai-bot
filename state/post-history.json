@@ -1239,6 +1239,29 @@
       "posting_started_at": "2026-04-01T19:07:35.971068+09:00",
       "posted_at": "2026-04-01T19:07:41.911424+09:00",
       "platform_post_id": "17930381478068314"
+    },
+    {
+      "pattern_name": "構造自由_共感×質問型",
+      "category": "運勢全般",
+      "content": "最近、「これで大丈夫かな」って\n不安になることありますか？\n\n4月のはじまりは、\n誰もが少なからず\nそういう気持ちを持つんです。\n\n新しい環境、新しい出発。\n その先が見えないから。\n\nでも占い的には、この不安こそが\n「あなたが成長する合図」\nなんですよ。\n\nあなたの星座なら\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 7,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 7.9
+      },
+      "id": "post_20260401_1908_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-01T20:37:12.970755+09:00",
+      "posted_at": "2026-04-01T20:37:17.820950+09:00",
+      "platform_post_id": "18095583710027046"
     }
   ]
 }
