@@ -1193,6 +1193,29 @@
       "posting_started_at": "2026-04-01T12:07:14.296448+09:00",
       "posted_at": "2026-04-01T12:07:20.100286+09:00",
       "platform_post_id": "18571979464016806"
+    },
+    {
+      "pattern_name": "構造自由_共感×深掘り質問型",
+      "category": "総合運",
+      "content": "新しい季節、何か\nリセットしたいことありますか？\n\nこの時期って、心が\n変わろうとする信号を\n送ってくる時期なんです。\n\n特に春分を過ぎた今は\n新しい決断が力を持つ時期。\n\n小さなことでいいんです。\n習慣を1つ変えるだけで\n4月の運の流れが\n変わる可能性があります。\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.33
+      },
+      "id": "post_20260401_1208_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-01T15:07:13.044337+09:00",
+      "posted_at": "2026-04-01T15:07:21.550619+09:00",
+      "platform_post_id": "17952302130118360"
     }
   ]
 }

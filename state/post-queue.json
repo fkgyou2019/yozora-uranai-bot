@@ -1,62 +1,62 @@
 {
   "queue": [
     {
-      "pattern_name": "構造自由_共感×深掘り質問型",
-      "category": "総合運",
-      "content": "新しい季節、何か\nリセットしたいことありますか？\n\nこの時期って、心が\n変わろうとする信号を\n送ってくる時期なんです。\n\n特に春分を過ぎた今は\n新しい決断が力を持つ時期。\n\n小さなことでいいんです。\n習慣を1つ変えるだけで\n4月の運の流れが\n変わる可能性があります。\n#今週の占い",
-      "hashtag": "#今週の占い",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
-        "specificity": 8,
-        "tempo": 8,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.33
-      },
-      "id": "post_20260401_1208_th_001",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
-      "pattern_name": "構造G_注意喚起+限定型②",
-      "category": "恋愛運",
-      "content": "週の半ばを過ぎて、\n恋愛ですれ違いやすい星座。\n\nたった4つだけです。\n\n牡羊座、蟹座、天秤座、山羊座さん。\n\n牡羊座は言いたいことを\n少し待つが吉。\n蟹座は相手の気持ちを\n読み取りやすい時期。\n\nそこまで複雑に考えずに、\n素直に向き合ってみてください。\n恋愛運 #今日の運勢",
+      "pattern_name": "構造自由_共感×深掘り質問型（新年度の不安解消）",
+      "category": "運勢",
+      "content": "4月の新年度、\n新しい環境に心が疲れていますか？\n\n占い師として見えるのは、\nそれがとても自然なことだって\nこと。\n\n星の流れからも、今月は\n「適応期間」なんです。\n\n完璧を目指さなくていい。\nゆっくり環境に馴染むペースで、\nあなたは充分やっています。\n\n「✨」を置いた方に、\n#今日の運勢",
       "hashtag": "#今日の運勢",
       "is_affiliate": false,
       "affiliate_comment": null,
       "quality_score": {
-        "hook": 9,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 9,
+        "hook": 7,
+        "usefulness": 7,
+        "specificity": 7,
+        "tempo": 8,
         "persona_match": 9,
         "mobile_readability": 8,
-        "average": 8.67
+        "average": 7.7
       },
-      "id": "post_20260401_1208_th_003",
+      "id": "post_20260401_1508_th_001",
       "platform": "threads",
       "status": "queued"
     },
     {
-      "pattern_name": "構造D_週間予告型",
-      "category": "総合運",
-      "content": "週の折り返しの今日、\n1枚のカードを引いてみました。\n\n出たのは「転換」のカード。\n\nこの後半、\n水瓶座と射手座さんに\n予想外の展開が来そうです。\n\nいい意味の転換です。\n怖がらずに進んでください。\n\n明日は満月についての\n詳しい運勢をお届けします✨\n#星座占い",
+      "pattern_name": "構造自由_運気チェック質問型（4月の幸運サイン）",
+      "category": "運勢",
+      "content": "4月、あなたの運気が上昇している\nサインをご存知ですか？\n\n実は、ここ3つです。\n\n1. 思わぬ人からの連絡\n2. 偶然の再会\n3. 新しいことへの興味\n\nこの3つが今月起きた方は、\nあなたの運命が大きく\n動き始めています。\n\nそのタイミングで\n新しい一歩を踏み出すと、\n#星座占い",
       "hashtag": "#星座占い",
       "is_affiliate": false,
       "affiliate_comment": null,
       "quality_score": {
         "hook": 8,
-        "usefulness": 7,
+        "usefulness": 8,
         "specificity": 8,
         "tempo": 8,
+        "persona_match": 8,
+        "mobile_readability": 8,
+        "average": 8.0
+      },
+      "id": "post_20260401_1508_th_002",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造A_限定型（恋愛転機）",
+      "category": "恋愛運",
+      "content": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です。\n\n特に蟹座さんは3日以内に\n大事な決断を迫られるかも。\nでも大丈夫。あなたの直感こそが\n最高のナビゲーターです。\n\n「🔮」を置いた方だけに、\n今夜良い流れが届きます。\n\n#恋愛運",
+      "hashtag": "#恋愛運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
         "persona_match": 9,
         "mobile_readability": 9,
-        "average": 8.17
+        "average": 9.0
       },
-      "id": "post_20260401_1208_th_004",
+      "id": "post_20260401_1508_th_003",
       "platform": "threads",
       "status": "queued"
     }

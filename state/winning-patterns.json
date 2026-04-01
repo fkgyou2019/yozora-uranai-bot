@@ -24,7 +24,7 @@
     },
     {
       "pattern": "共感×質問型（推定）",
-      "weight": 9,
+      "weight": 8,
       "avg_engagement": 26.09,
       "avg_views": 115.0,
       "sample_count": 1,
@@ -244,8 +244,8 @@
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 35,
-    "last_analyzed": "2026-04-01T12:07:26.685651+09:00",
+    "data_count": 36,
+    "last_analyzed": "2026-04-01T15:07:50.956427+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -266,7 +266,7 @@
       },
       {
         "pattern": "共感×質問型（推定）",
-        "weight": 9,
+        "weight": 8,
         "avg_engagement": 26.09,
         "avg_views": 115.0,
         "sample_count": 1,
@@ -419,6 +419,14 @@
         "total_replies": 0
       },
       {
+        "pattern": "構造C_共感型_仕事運",
+        "count": 1,
+        "avg_engagement": 4.17,
+        "avg_views": 24.0,
+        "total_likes": 1,
+        "total_replies": 0
+      },
+      {
         "pattern": "自由型_恋愛深掘り",
         "count": 1,
         "avg_engagement": 1.45,
@@ -453,8 +461,8 @@
       },
       {
         "feature": "has_question",
-        "count": 5,
-        "avg_engagement": 16.44
+        "count": 6,
+        "avg_engagement": 14.39
       }
     ],
     "top_hook_styles": [
@@ -570,9 +578,9 @@
       },
       "15": {
         "slot": "午後（13〜15時台）",
-        "avg_eng": 9.72,
-        "avg_views": 275.0,
-        "count": 3
+        "avg_eng": 8.33,
+        "avg_views": 212.0,
+        "count": 4
       },
       "17": {
         "slot": "夕方（16〜18時台）",
@@ -668,8 +676,8 @@
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 35,
-  "last_analyzed": "2026-04-01T12:07:26.685651+09:00",
+  "data_count": 36,
+  "last_analyzed": "2026-04-01T15:07:50.956427+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -801,6 +809,14 @@
       "total_replies": 0
     },
     {
+      "pattern": "構造C_共感型_仕事運",
+      "count": 1,
+      "avg_engagement": 4.17,
+      "avg_views": 24.0,
+      "total_likes": 1,
+      "total_replies": 0
+    },
+    {
       "pattern": "自由型_恋愛深掘り",
       "count": 1,
       "avg_engagement": 1.45,
@@ -835,8 +851,8 @@
     },
     {
       "feature": "has_question",
-      "count": 5,
-      "avg_engagement": 16.44
+      "count": 6,
+      "avg_engagement": 14.39
     }
   ],
   "best_posts": [
@@ -924,9 +940,9 @@
     },
     "15": {
       "slot": "午後（13〜15時台）",
-      "avg_eng": 9.72,
-      "avg_views": 275.0,
-      "count": 3
+      "avg_eng": 8.33,
+      "avg_views": 212.0,
+      "count": 4
     },
     "17": {
       "slot": "夕方（16〜18時台）",

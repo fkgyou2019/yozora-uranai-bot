@@ -909,7 +909,33 @@
         "hook_length": 12
       },
       "collected_at": "2026-04-01T12:07:20.169151+09:00"
+    },
+    {
+      "id": "post_20260331_1207_th_001",
+      "platform_post_id": "18007530317853919",
+      "posted_at": "2026-03-31T15:07:19.532258+09:00",
+      "pattern_name": "構造C_共感型_仕事運",
+      "category": "仕事運",
+      "content_preview": "最近、仕事で判断を迷う\nことが増えてませんか？\n\nそれ、水星逆行の影響があります。\n特に双子座・乙女",
+      "first_line": "最近、仕事で判断を迷う",
+      "char_count": 150,
+      "metrics": {
+        "views": 24,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 4.17
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-04-01T15:07:21.625111+09:00"
     }
   ],
-  "last_updated": "2026-04-01T12:07:20.169151+09:00"
+  "last_updated": "2026-04-01T15:07:21.625111+09:00"
 }
