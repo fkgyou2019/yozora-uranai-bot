@@ -935,7 +935,33 @@
         "hook_length": 11
       },
       "collected_at": "2026-04-01T15:07:21.625111+09:00"
+    },
+    {
+      "id": "post_20260331_1207_th_004",
+      "platform_post_id": "18087378161212341",
+      "posted_at": "2026-03-31T17:13:40.784035+09:00",
+      "pattern_name": "自由型_総合運メッセージ",
+      "category": "総合運",
+      "content_preview": "新しい月が始まる時、\nあなたはどんな気持ちですか？\n\nワクワクですか？\n不安ですか？\n\nどちらでもい",
+      "first_line": "新しい月が始まる時、",
+      "char_count": 113,
+      "metrics": {
+        "views": 24,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 10
+      },
+      "collected_at": "2026-04-01T18:55:37.674574+09:00"
     }
   ],
-  "last_updated": "2026-04-01T17:05:48.117566+09:00"
+  "last_updated": "2026-04-01T18:55:37.674574+09:00"
 }
