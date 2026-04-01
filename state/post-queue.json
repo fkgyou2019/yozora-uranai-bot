@@ -1,26 +1,6 @@
 {
   "queue": [
     {
-      "pattern_name": "限定型（構造A・恋愛運）",
-      "category": "恋愛運",
-      "content": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です。\n\n特に蟹座は3日以内に\n大事な決断を迫られるかも。\nでも大丈夫。あなたの直感こそが\n最高のナビゲーターです。\n\n「🔮」を置いた方だけに、\n今夜良い流れが届きます。\n\n#恋愛運",
-      "hashtag": "#恋愛運",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 9,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 9.0
-      },
-      "id": "post_20260401_2138_th_001",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
       "pattern_name": "水曜定番タロット（構造自由・1枚引き）",
       "category": "タロット",
       "content": "【水曜定番】週の折り返しタロット🔮\n\n今週後半のキーカードを\n1枚引きました。\n\n出たのは「太陽」。\n\nこれは、ここからの3日間で\n「迷いが晴れる」という暗示です。\n\n特に木曜日は\n大事な決断に向き合うのに\n最適な日ですよ。\n\n「☀️」を置いた方に、\n#タロット",
@@ -41,16 +21,83 @@
       "status": "queued"
     },
     {
-      "pattern_name": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
-      "category": "仕事運",
-      "content": "今週後半、仕事で判断ミスが出やすい星座。\nたった3つだけです。\n\n🔴牡羊座・双子座・射手座\n\n牡羊座さんは、午後からの急な依頼に焦らず。\n双子座さんは、メール送信前に必ず確認を。\n射手座さんは、重要な決定を金曜に延ばして。\n\n小さな一呼吸が、来週を変えます。\nあなたの星座は当てはまりましたか？🔮\n\n#今週の占い",
-      "hashtag": "#今週の占い",
-      "time_slot": "朝（6〜9時台）",
-      "scheduled_hour": 7,
-      "id": "post_20260402_0114_exp_001",
-      "platform": "threads",
+      "pattern_name": "構造自由_対人運×共感質問型",
+      "category": "恋愛運",
+      "content": "誰かに本当のことが\n言いづらい時期ですよね。\n\n実は今週、対人運が複雑な\n星座が3つあるんです。\n\n双子座、天秤座、水瓶座さん。\n\n風のサイン同士が\nコミュニケーション迷路に\n入りやすい時期かもしれません。\n\nでも安心してください。\n月末には必ずスッキリします。\n#恋愛運",
+      "hashtag": "#恋愛運",
       "is_affiliate": false,
       "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.1
+      },
+      "id": "post_20260402_0707_th_001",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造D_予告型",
+      "category": "運勢",
+      "content": "来週、12星座の中で\n最も運命が動く星座。\n\n蠍座さんです。\n\n恋愛・仕事・金運の\nどこかで大きな波が来ます。\n\n特に水曜日以降は\n直感を信じて動いてください。\n\n明日は牡羊座さんの運勢を\n深掘りしてお届けしますね🌙\n\nあなたは来週、何か変化を\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 8,
+        "mobile_readability": 8,
+        "average": 8.0
+      },
+      "id": "post_20260402_0707_th_002",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造自由_新月メッセージ型",
+      "category": "運勢",
+      "content": "明日の新月は\nあなたの中で何かが\n始まる合図かもしれません🌙\n\n新月は「新しい流れ」\nの象徴です。\n\n特に牡牛座、蟹座、山羊座さんは\n思い切った決断や行動が\nこれからの道を大きく変えます。\n\n怖くても大丈夫。\n新月の力があなたを後押しします。\n\nあなたは何か始めたいことが\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.1
+      },
+      "id": "post_20260402_0707_th_004",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造B_ランキング型（金運爆発）",
+      "category": "金運",
+      "content": "【金運が急上昇する星座TOP3】\n\n🥉第3位：山羊座さん。\n地道な努力が報われる時期です。\n\n🥈第2位：牡牛座さん。\n投資や副業に追い風が吹きます。\n\n🥇第1位：射手座さん。\n今月中に大きなお金の流れが\n変わる予感です。\n臨時収入も近いかもしれません。\n\n「🍀」を置いた方に、\n今週中に嬉しい連絡が届きます。\n金運 #今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260402_0707_th_005",
+      "platform": "threads",
       "status": "queued"
     }
   ]
