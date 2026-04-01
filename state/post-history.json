@@ -1170,6 +1170,29 @@
       "posting_started_at": "2026-04-01T10:37:12.611159+09:00",
       "posted_at": "2026-04-01T10:37:17.076191+09:00",
       "platform_post_id": "18057881525456819"
+    },
+    {
+      "pattern_name": "構造自由_共感質問型",
+      "category": "総合運",
+      "content": "春の季節の変わり目って、\n何か心がざわつきませんか？\n\nこの時期は多くの星座で\n「新しい選択」が迫られます。\n\n迷うのは悪いことじゃなくて、\nあなたが本気で考えている\n証拠だと思うんです。\n\n牡牛座さんは特に、\n5月に向けて準備の時期。\nゆっくり進んで大丈夫ですよ。\n\n今、何か迷ってることありますか？\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.2
+      },
+      "id": "post_20260401_1037_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-01T12:07:14.296448+09:00",
+      "posted_at": "2026-04-01T12:07:20.100286+09:00",
+      "platform_post_id": "18571979464016806"
     }
   ]
 }

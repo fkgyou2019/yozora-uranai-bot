@@ -8,7 +8,7 @@
   "top_patterns": [
     {
       "pattern": "注意喚起型・仕事運",
-      "weight": 15,
+      "weight": 14,
       "avg_engagement": 42.14,
       "avg_views": 674.0,
       "sample_count": 1,
@@ -16,7 +16,7 @@
     },
     {
       "pattern": "ランキング型・金運爆発",
-      "weight": 13,
+      "weight": 12,
       "avg_engagement": 36.18,
       "avg_views": 398.0,
       "sample_count": 1,
@@ -238,19 +238,19 @@
   ],
   "insights": [
     "最強パターン: 注意喚起型・仕事運（eng率42.1%・閲覧674・1件）",
-    "ランキング形式あり → avg eng 25.0%",
+    "ランキング形式あり → avg eng 22.9%",
     "絵文字CTAあり → avg eng 22.9%",
     "数字フックあり → avg eng 19.8%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 33,
-    "last_analyzed": "2026-04-01T10:37:21.507734+09:00",
+    "data_count": 35,
+    "last_analyzed": "2026-04-01T12:07:26.685651+09:00",
     "confidence": "high",
     "top_patterns": [
       {
         "pattern": "注意喚起型・仕事運",
-        "weight": 15,
+        "weight": 14,
         "avg_engagement": 42.14,
         "avg_views": 674.0,
         "sample_count": 1,
@@ -258,7 +258,7 @@
       },
       {
         "pattern": "ランキング型・金運爆発",
-        "weight": 13,
+        "weight": 12,
         "avg_engagement": 36.18,
         "avg_views": 398.0,
         "sample_count": 1,
@@ -363,6 +363,14 @@
         "total_replies": 25
       },
       {
+        "pattern": "構造B_ランキング型_総合運TOP5",
+        "count": 1,
+        "avg_engagement": 14.14,
+        "avg_views": 99.0,
+        "total_likes": 14,
+        "total_replies": 0
+      },
+      {
         "pattern": "星座別アドバイス型",
         "count": 1,
         "avg_engagement": 10.39,
@@ -417,13 +425,21 @@
         "avg_views": 138.0,
         "total_likes": 2,
         "total_replies": 0
+      },
+      {
+        "pattern": "自由型_水星逆行対策",
+        "count": 1,
+        "avg_engagement": 1.02,
+        "avg_views": 98.0,
+        "total_likes": 1,
+        "total_replies": 0
       }
     ],
     "feature_ranking": [
       {
         "feature": "has_ranking",
-        "count": 4,
-        "avg_engagement": 25.04
+        "count": 5,
+        "avg_engagement": 22.86
       },
       {
         "feature": "has_cta_emoji",
@@ -536,15 +552,15 @@
       },
       "10": {
         "slot": "午前（10〜12時台）",
-        "avg_eng": 12.15,
-        "avg_views": 124.0,
-        "count": 3
+        "avg_eng": 9.37,
+        "avg_views": 117.0,
+        "count": 4
       },
       "12": {
         "slot": "午前（10〜12時台）",
-        "avg_eng": 4.53,
-        "avg_views": 134.0,
-        "count": 3
+        "avg_eng": 6.93,
+        "avg_views": 125.0,
+        "count": 4
       },
       "14": {
         "slot": "午後（13〜15時台）",
@@ -604,9 +620,9 @@
         "note": ""
       },
       "午前（10〜12時台）": {
-        "best_pattern": "星座別アドバイス型",
-        "avg_eng": 10.39,
-        "avg_views": 231.0,
+        "best_pattern": "構造B_ランキング型_総合運TOP5",
+        "avg_eng": 14.14,
+        "avg_views": 99.0,
         "sample_count": 1,
         "note": "※N=1は参考値"
       },
@@ -646,14 +662,14 @@
     ],
     "insights": [
       "最強パターン: 注意喚起型・仕事運（eng率42.1%・閲覧674・1件）",
-      "ランキング形式あり → avg eng 25.0%",
+      "ランキング形式あり → avg eng 22.9%",
       "絵文字CTAあり → avg eng 22.9%",
       "数字フックあり → avg eng 19.8%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 33,
-  "last_analyzed": "2026-04-01T10:37:21.507734+09:00",
+  "data_count": 35,
+  "last_analyzed": "2026-04-01T12:07:26.685651+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -729,6 +745,14 @@
       "total_replies": 25
     },
     {
+      "pattern": "構造B_ランキング型_総合運TOP5",
+      "count": 1,
+      "avg_engagement": 14.14,
+      "avg_views": 99.0,
+      "total_likes": 14,
+      "total_replies": 0
+    },
+    {
       "pattern": "星座別アドバイス型",
       "count": 1,
       "avg_engagement": 10.39,
@@ -783,13 +807,21 @@
       "avg_views": 138.0,
       "total_likes": 2,
       "total_replies": 0
+    },
+    {
+      "pattern": "自由型_水星逆行対策",
+      "count": 1,
+      "avg_engagement": 1.02,
+      "avg_views": 98.0,
+      "total_likes": 1,
+      "total_replies": 0
     }
   ],
   "feature_ranking": [
     {
       "feature": "has_ranking",
-      "count": 4,
-      "avg_engagement": 25.04
+      "count": 5,
+      "avg_engagement": 22.86
     },
     {
       "feature": "has_cta_emoji",
@@ -874,15 +906,15 @@
     },
     "10": {
       "slot": "午前（10〜12時台）",
-      "avg_eng": 12.15,
-      "avg_views": 124.0,
-      "count": 3
+      "avg_eng": 9.37,
+      "avg_views": 117.0,
+      "count": 4
     },
     "12": {
       "slot": "午前（10〜12時台）",
-      "avg_eng": 4.53,
-      "avg_views": 134.0,
-      "count": 3
+      "avg_eng": 6.93,
+      "avg_views": 125.0,
+      "count": 4
     },
     "14": {
       "slot": "午後（13〜15時台）",

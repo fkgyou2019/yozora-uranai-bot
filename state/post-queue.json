@@ -1,9 +1,49 @@
 {
   "queue": [
     {
-      "pattern_name": "構造自由_共感質問型",
+      "pattern_name": "構造自由_共感×深掘り質問型",
       "category": "総合運",
-      "content": "春の季節の変わり目って、\n何か心がざわつきませんか？\n\nこの時期は多くの星座で\n「新しい選択」が迫られます。\n\n迷うのは悪いことじゃなくて、\nあなたが本気で考えている\n証拠だと思うんです。\n\n牡牛座さんは特に、\n5月に向けて準備の時期。\nゆっくり進んで大丈夫ですよ。\n\n今、何か迷ってることありますか？\n#星座占い",
+      "content": "新しい季節、何か\nリセットしたいことありますか？\n\nこの時期って、心が\n変わろうとする信号を\n送ってくる時期なんです。\n\n特に春分を過ぎた今は\n新しい決断が力を持つ時期。\n\n小さなことでいいんです。\n習慣を1つ変えるだけで\n4月の運の流れが\n変わる可能性があります。\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.33
+      },
+      "id": "post_20260401_1208_th_001",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型②",
+      "category": "恋愛運",
+      "content": "週の半ばを過ぎて、\n恋愛ですれ違いやすい星座。\n\nたった4つだけです。\n\n牡羊座、蟹座、天秤座、山羊座さん。\n\n牡羊座は言いたいことを\n少し待つが吉。\n蟹座は相手の気持ちを\n読み取りやすい時期。\n\nそこまで複雑に考えずに、\n素直に向き合ってみてください。\n恋愛運 #今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.67
+      },
+      "id": "post_20260401_1208_th_003",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造D_週間予告型",
+      "category": "総合運",
+      "content": "週の折り返しの今日、\n1枚のカードを引いてみました。\n\n出たのは「転換」のカード。\n\nこの後半、\n水瓶座と射手座さんに\n予想外の展開が来そうです。\n\nいい意味の転換です。\n怖がらずに進んでください。\n\n明日は満月についての\n詳しい運勢をお届けします✨\n#星座占い",
       "hashtag": "#星座占い",
       "is_affiliate": false,
       "affiliate_comment": null,
@@ -14,49 +54,9 @@
         "tempo": 8,
         "persona_match": 9,
         "mobile_readability": 9,
-        "average": 8.2
+        "average": 8.17
       },
-      "id": "post_20260401_1037_th_001",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
-      "pattern_name": "構造A_限定型",
-      "category": "恋愛運",
-      "content": "12星座中、たった4つだけ。\n\n今週、恋愛に\n本当の転機が訪れます。\n\n蟹座、蠍座、魚座、牡牛座です。\n\n特に蟹座と蠍座は、\n心の奥底の本音を\n相手に伝えたくなる時期。\n迷わず進んでください。\n\n「🌙」を置いた方に、\n今日中に心が軽くなる出来事が\n届きますように✨\n#恋愛運",
-      "hashtag": "#恋愛運",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.8
-      },
-      "id": "post_20260401_1037_th_002",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
-      "pattern_name": "構造自由_数字フック型",
-      "category": "恋愛運",
-      "content": "恋愛で「3日以内に決断が来そう」\nと感じてる星座、実はいますか？\n\nそれ、牡羊座と射手座さん。\n\n牡羊座は告白か関係の\n深まりかもしれません。\n\n射手座は「今のままでいいのか」\nという問いが心に浮かぶ時期。\n\nどちらも、心の声を\n聞くことが大事です。\n後悔より、動く方が\nあなたらしいですよ。\n#恋愛運",
-      "hashtag": "#恋愛運",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 8,
-        "persona_match": 9,
-        "mobile_readability": 8,
-        "average": 8.4
-      },
-      "id": "post_20260401_1037_th_003",
+      "id": "post_20260401_1208_th_004",
       "platform": "threads",
       "status": "queued"
     }
