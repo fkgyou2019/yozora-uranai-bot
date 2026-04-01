@@ -805,7 +805,59 @@
         "hook_length": 10
       },
       "collected_at": "2026-03-31T23:51:48.458485+09:00"
+    },
+    {
+      "id": "post_20260330_th_004",
+      "platform_post_id": "18097117697084871",
+      "posted_at": "2026-03-31T07:07:21.881189+09:00",
+      "pattern_name": "自由型_仕事運注意喚起",
+      "category": "仕事運",
+      "content_preview": "来週、仕事で\n大きな話が来やすい星座。\n\n獅子座さんと天秤座さんです。\n\n獅子座さんは昇進や抜擢の可",
+      "first_line": "来週、仕事で",
+      "char_count": 149,
+      "metrics": {
+        "views": 50,
+        "likes": 8,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 20.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 6
+      },
+      "collected_at": "2026-04-01T07:53:57.771853+09:00"
+    },
+    {
+      "id": "post_20260330_th_005",
+      "platform_post_id": "18005075171899334",
+      "posted_at": "2026-03-31T09:07:20.735442+09:00",
+      "pattern_name": "自由型_恋愛深掘り",
+      "category": "恋愛運",
+      "content_preview": "恋愛について、\n知っておくといい話があります。\n\n今月下旬から金星の動きが変わる。\nそれで、恋愛の「",
+      "first_line": "恋愛について、",
+      "char_count": 163,
+      "metrics": {
+        "views": 138,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 1.45
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 7
+      },
+      "collected_at": "2026-04-01T09:07:38.111660+09:00"
     }
   ],
-  "last_updated": "2026-03-31T23:51:48.458485+09:00"
+  "last_updated": "2026-04-01T09:07:38.111660+09:00"
 }

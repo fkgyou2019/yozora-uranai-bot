@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>夜空の占い | 成長トラッカー</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --yellow: #d29922;
+      --red: #f85149;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    header h1 { font-size: 18px; font-weight: 700; }
+    header h1 span { color: var(--accent); }
+    .meta { color: var(--muted); font-size: 12px; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .badge-green { background: #1f3a2a; color: var(--green); border: 1px solid #2ea043; }
+    .badge-blue { background: #1a2940; color: var(--accent); border: 1px solid #388bfd; }
+    main { padding: 24px; max-width: 1400px; margin: 0 auto; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+    .chart-wrap { position: relative; height: 320px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th {
+      background: #21262d;
+      color: var(--muted);
+      font-weight: 600;
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #21262d;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #1c2128; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .vel { color: var(--yellow); font-weight: 700; }
+    .hook { color: var(--text); max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .status-tracking { color: var(--accent); font-size: 12px; }
+    .status-completed { color: var(--muted); font-size: 12px; }
+    .completed td { opacity: 0.65; }
+    .refresh-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 32px;
+      padding-bottom: 16px;
+    }
+    .empty { color: var(--muted); text-align: center; padding: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>🌙 夜空の占い | <span>成長トラッカー</span></h1>
+      <div class="meta">投稿後72時間の伸びをモニタリング</div>
+    </div>
+    <div>
+      <div class="badges">
+        <span class="badge badge-blue">📊 追跡中 14件</span>
+        <span class="badge badge-green">✅ 完了 14件</span>
+      </div>
+      <div class="meta" style="margin-top:6px;text-align:right">最終更新: 2026-04-01T09:01:24.379689+09:00</div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 投稿一覧テーブル -->
+    <div class="card">
+      <h2>📋 投稿別パフォーマンス（閲覧数降順）</h2>
+      
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>フック（1行目）</th>
+          <th>パターン</th>
+          <th>投稿時刻</th>
+          <th>閲覧数</th>
+          <th>いいね</th>
+          <th>ER%</th>
+          <th>ピーク速度</th>
+          <th>ピーク時間</th>
+          <th>ステータス</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr class="tracking">
+          <td>1</td>
+          <td class="hook">春分を過ぎた今夜✨</td>
+          <td>不明</td>
+          <td>15時/日</td>
+          <td class="num">219</td>
+          <td class="num">21</td>
+          <td class="num">9.6%</td>
+          <td class="num vel">3.6/h</td>
+          <td class="num">+61h</td>
+          <td class="status-tracking">+65h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>2</td>
+          <td class="hook">月が双子座に移ります✨</td>
+          <td>不明</td>
+          <td>12時/月</td>
+          <td class="num">176</td>
+          <td class="num">10</td>
+          <td class="num">5.7%</td>
+          <td class="num vel">4.4/h</td>
+          <td class="num">+40h</td>
+          <td class="status-tracking">+44h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>3</td>
+          <td class="hook">恋愛について、</td>
+          <td>自由型_恋愛深掘り</td>
+          <td>9時/火</td>
+          <td class="num">138</td>
+          <td class="num">2</td>
+          <td class="num">1.4%</td>
+          <td class="num vel">7.3/h</td>
+          <td class="num">+19h</td>
+          <td class="status-tracking">+23h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>4</td>
+          <td class="hook">ここ数日、なんか</td>
+          <td>不明</td>
+          <td>20時/日</td>
+          <td class="num">128</td>
+          <td class="num">3</td>
+          <td class="num">23.4%</td>
+          <td class="num vel">2.3/h</td>
+          <td class="num">+56h</td>
+          <td class="status-tracking">+60h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>5</td>
+          <td class="hook">水星逆行が</td>
+          <td>自由型_水星逆行対策</td>
+          <td>10時/火</td>
+          <td class="num">98</td>
+          <td class="num">1</td>
+          <td class="num">1.0%</td>
+          <td class="num vel">5.4/h</td>
+          <td class="num">+18h</td>
+          <td class="status-tracking">+22h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>6</td>
+          <td class="hook">【今週の星座ランキング】</td>
+          <td>構造B_ランキング型_総合運TOP5</td>
+          <td>12時/火</td>
+          <td class="num">95</td>
+          <td class="num">12</td>
+          <td class="num">12.6%</td>
+          <td class="num vel">5.8/h</td>
+          <td class="num">+16h</td>
+          <td class="status-tracking">+20h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>7</td>
+          <td class="hook">🌙 牡羊座さんへ</td>
+          <td>不明</td>
+          <td>19時/日</td>
+          <td class="num">73</td>
+          <td class="num">4</td>
+          <td class="num">5.5%</td>
+          <td class="num vel">1.3/h</td>
+          <td class="num">+57h</td>
+          <td class="status-tracking">+61h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>8</td>
+          <td class="hook">今夜、12星座の中で最も</td>
+          <td>構造D_予告型（今夜の重要発表予告）</td>
+          <td>20時/火</td>
+          <td class="num">64</td>
+          <td class="num">9</td>
+          <td class="num">14.1%</td>
+          <td class="num vel">8.0/h</td>
+          <td class="num">+8h</td>
+          <td class="status-tracking">+12h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>9</td>
+          <td class="hook">今週後半、仕事で判断ミスが起きやすい</td>
+          <td>構造G_注意喚起+限定型（今日・今週の仕事運警告）</td>
+          <td>7時/水</td>
+          <td class="num">53</td>
+          <td class="num">2</td>
+          <td class="num">3.8%</td>
+          <td class="num vel">53.0/h</td>
+          <td class="num">+1h</td>
+          <td class="status-tracking">+1h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>10</td>
+          <td class="hook">来週、仕事で</td>
+          <td>自由型_仕事運注意喚起</td>
+          <td>7時/火</td>
+          <td class="num">50</td>
+          <td class="num">8</td>
+          <td class="num">20.0%</td>
+          <td class="num vel">2.4/h</td>
+          <td class="num">+21h</td>
+          <td class="status-tracking">+25h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>11</td>
+          <td class="hook">来週、仕事で気をつけた方がいい星座。</td>
+          <td>不明</td>
+          <td>19時/火</td>
+          <td class="num">39</td>
+          <td class="num">2</td>
+          <td class="num">10.3%</td>
+          <td class="num vel">4.3/h</td>
+          <td class="num">+9h</td>
+          <td class="status-tracking">+13h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>12</td>
+          <td class="hook">12星座中、今週最も運が開く星座。</td>
+          <td>不明</td>
+          <td>9時/月</td>
+          <td class="num">29</td>
+          <td class="num">4</td>
+          <td class="num">20.7%</td>
+          <td class="num vel">0.7/h</td>
+          <td class="num">+43h</td>
+          <td class="status-tracking">+47h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>13</td>
+          <td class="hook">最近、仕事で判断を迷う</td>
+          <td>構造C_共感型_仕事運</td>
+          <td>15時/火</td>
+          <td class="num">23</td>
+          <td class="num">1</td>
+          <td class="num">4.3%</td>
+          <td class="num vel">1.8/h</td>
+          <td class="num">+13h</td>
+          <td class="status-tracking">+17h追跡中</td>
+        </tr>
+        <tr class="tracking">
+          <td>14</td>
+          <td class="hook">新しい月が始まる時、</td>
+          <td>自由型_総合運メッセージ</td>
+          <td>17時/火</td>
+          <td class="num">21</td>
+          <td class="num">1</td>
+          <td class="num">4.8%</td>
+          <td class="num vel">1.8/h</td>
+          <td class="num">+11h</td>
+          <td class="status-tracking">+15h追跡中</td>
+        </tr>
+  </tbody>
+</table>
+    </div>
+
+    <!-- 成長曲線 -->
+    <div class="card">
+      <h2>📈 成長曲線（投稿後 経過時間 × 閲覧数）</h2>
+      <div class="chart-wrap">
+        <canvas id="growthChart"></canvas>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <!-- パターン別ピーク速度 -->
+      <div class="card">
+        <h2>⚡ パターン別 平均ピーク速度（閲覧/h）</h2>
+        <div class="chart-wrap" style="height:260px">
+          <canvas id="patternChart"></canvas>
+        </div>
+      </div>
+
+      <!-- 時間帯別パフォーマンス -->
+      <div class="card">
+        <h2>🕐 投稿時刻別 平均閲覧数</h2>
+        <div class="chart-wrap" style="height:260px">
+          <canvas id="slotChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="refresh-note">このページは毎時30分に自動更新されます（GitHub Actions）</div>
+
+  <script>
+    // ---- 成長曲線チャート ----
+    const growthDatasets = [{"label": "春分を過ぎた今夜✨（15時/日）", "data": [{"x": 61, "y": 219}, {"x": 63, "y": 219}, {"x": 65, "y": 219}], "borderColor": "#9966FF", "backgroundColor": "#9966FF22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "🌙 牡羊座さんへ（19時/日）", "data": [{"x": 57, "y": 73}, {"x": 59, "y": 73}, {"x": 61, "y": 73}], "borderColor": "#FF9F40", "backgroundColor": "#FF9F4022", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "ここ数日、なんか（20時/日）", "data": [{"x": 56, "y": 128}, {"x": 58, "y": 128}, {"x": 60, "y": 128}], "borderColor": "#FF6384", "backgroundColor": "#FF638422", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "12星座中、今週最も運が開く星座。（9時/月）", "data": [{"x": 43, "y": 29}, {"x": 45, "y": 29}, {"x": 47, "y": 29}], "borderColor": "#E7869B", "backgroundColor": "#E7869B22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "月が双子座に移ります✨（12時/月）", "data": [{"x": 40, "y": 176}, {"x": 42, "y": 176}, {"x": 44, "y": 176}], "borderColor": "#5AD8A6", "backgroundColor": "#5AD8A622", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "来週、仕事で（7時/火）", "data": [{"x": 21, "y": 50}, {"x": 23, "y": 50}, {"x": 25, "y": 50}], "borderColor": "#945FB9", "backgroundColor": "#945FB922", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "恋愛について、（9時/火）", "data": [{"x": 19, "y": 138}, {"x": 21, "y": 138}, {"x": 23, "y": 138}], "borderColor": "#FF99C3", "backgroundColor": "#FF99C322", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "水星逆行が（10時/火）", "data": [{"x": 18, "y": 97}, {"x": 20, "y": 98}, {"x": 22, "y": 98}], "borderColor": "#1E9493", "backgroundColor": "#1E949322", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "【今週の星座ランキング】（12時/火）", "data": [{"x": 16, "y": 92}, {"x": 18, "y": 92}, {"x": 20, "y": 95}], "borderColor": "#FAAD14", "backgroundColor": "#FAAD1422", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "最近、仕事で判断を迷う（15時/火）", "data": [{"x": 13, "y": 23}, {"x": 15, "y": 23}, {"x": 17, "y": 23}], "borderColor": "#FF6384", "backgroundColor": "#FF638422", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "新しい月が始まる時、（17時/火）", "data": [{"x": 11, "y": 20}, {"x": 13, "y": 21}, {"x": 15, "y": 21}], "borderColor": "#36A2EB", "backgroundColor": "#36A2EB22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "来週、仕事で気をつけた方がいい星座。（19時/火）", "data": [{"x": 9, "y": 39}, {"x": 11, "y": 39}, {"x": 13, "y": 39}], "borderColor": "#9966FF", "backgroundColor": "#9966FF22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "今夜、12星座の中で最も（20時/火）", "data": [{"x": 8, "y": 64}, {"x": 10, "y": 64}, {"x": 12, "y": 64}], "borderColor": "#FF9F40", "backgroundColor": "#FF9F4022", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "今週後半、仕事で判断ミスが起きやすい（7時/水）", "data": [{"x": 1, "y": 53}], "borderColor": "#C9CBCF", "backgroundColor": "#C9CBCF22", "fill": false, "tension": 0.3, "pointRadius": 3}];
+    if (growthDatasets.length > 0) {
+      new Chart(document.getElementById('growthChart'), {
+        type: 'line',
+        data: { datasets: growthDatasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          parsing: { xAxisKey: 'x', yAxisKey: 'y' },
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: {
+              labels: { color: '#8b949e', font: { size: 11 } },
+              position: 'bottom',
+            },
+            tooltip: {
+              backgroundColor: '#161b22',
+              borderColor: '#30363d',
+              borderWidth: 1,
+              titleColor: '#e6edf3',
+              bodyColor: '#8b949e',
+            }
+          },
+          scales: {
+            x: {
+              type: 'linear',
+              title: { display: true, text: '経過時間（h）', color: '#8b949e' },
+              ticks: { color: '#8b949e' },
+              grid: { color: '#21262d' },
+            },
+            y: {
+              title: { display: true, text: '閲覧数', color: '#8b949e' },
+              ticks: { color: '#8b949e' },
+              grid: { color: '#21262d' },
+            }
+          }
+        }
+      });
+    } else {
+      document.getElementById('growthChart').parentElement.innerHTML =
+        '<p class="empty">データが蓄積されると成長曲線が表示されます</p>';
+    }
+
+    // ---- パターン別棒グラフ ----
+    const patLabels = ["構造G_注意喚起+限定型（今日・今週の仕事運警告）", "構造D_予告型（今夜の重要発表予告）", "自由型_恋愛深掘り", "構造B_ランキング型_総合運TOP5", "自由型_水星逆行対策", "不明", "自由型_仕事運注意喚起", "構造C_共感型_仕事運", "自由型_総合運メッセージ"];
+    const patAvg = [53.0, 8.0, 7.3, 5.8, 5.4, 2.8, 2.4, 1.8, 1.8];
+    const patCounts = [1, 1, 1, 1, 1, 6, 1, 1, 1];
+    if (patLabels.length > 0) {
+      new Chart(document.getElementById('patternChart'), {
+        type: 'bar',
+        data: {
+          labels: patLabels,
+          datasets: [{
+            label: '平均ピーク速度（閲覧/h）',
+            data: patAvg,
+            backgroundColor: ['#58a6ff','#3fb950','#d29922','#f85149','#a371f7','#79c0ff'],
+            borderRadius: 4,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          indexAxis: 'y',
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: '#161b22',
+              borderColor: '#30363d',
+              borderWidth: 1,
+              callbacks: {
+                label: (ctx) => `${ctx.raw}/h（${patCounts[ctx.dataIndex]}件）`
+              }
+            }
+          },
+          scales: {
+            x: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' } },
+            y: { ticks: { color: '#e6edf3' }, grid: { color: '#21262d' } },
+          }
+        }
+      });
+    } else {
+      document.getElementById('patternChart').parentElement.innerHTML =
+        '<p class="empty">データが蓄積されると表示されます</p>';
+    }
+
+    // ---- 時間帯別棒グラフ ----
+    const slotLabels = ["7時", "9時", "10時", "12時", "15時", "17時", "19時", "20時"];
+    const slotViews = [52, 84, 98, 136, 121, 21, 56, 96];
+    if (slotLabels.length > 0) {
+      new Chart(document.getElementById('slotChart'), {
+        type: 'bar',
+        data: {
+          labels: slotLabels,
+          datasets: [{
+            label: '平均閲覧数',
+            data: slotViews,
+            backgroundColor: '#388bfd88',
+            borderColor: '#58a6ff',
+            borderWidth: 1,
+            borderRadius: 4,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: '#161b22',
+              borderColor: '#30363d',
+              borderWidth: 1,
+            }
+          },
+          scales: {
+            x: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' } },
+            y: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' } },
+          }
+        }
+      });
+    } else {
+      document.getElementById('slotChart').parentElement.innerHTML =
+        '<p class="empty">データが蓄積されると表示されます</p>';
+    }
+  </script>
+</body>
+</html>
