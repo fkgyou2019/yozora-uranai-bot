@@ -70,6 +70,21 @@ def fetch_metrics(post_id, access_token):
         return None
 
 
+def fetch_permalink(post_id, access_token):
+    """投稿のThreads URLを取得"""
+    url = (
+        f"https://graph.threads.net/v1.0/{post_id}"
+        f"?fields=permalink"
+        f"&access_token={access_token}"
+    )
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url), timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        return data.get("permalink", "")
+    except Exception:
+        return ""
+
+
 def count_auto_replies(post_id, replied_state):
     """replied-comments.jsonから自動返信数をカウント"""
     # replied_stateはreplied-comments.jsonの内容
@@ -123,9 +138,11 @@ def main():
         if pid not in tracker["snapshots"]:
             content = post.get("content", "")
             first_line = content.split("\n")[0] if content else ""
+            permalink = fetch_permalink(platform_id, access_token)
             tracker["snapshots"][pid] = {
                 "post_id": pid,
                 "platform_post_id": platform_id,
+                "threads_url": permalink,
                 "posted_at": posted_at_str,
                 "pattern_name": post.get("pattern_name", ""),
                 "slot_hour": posted_at.astimezone(JST).hour,
@@ -136,6 +153,7 @@ def main():
                 "hourly": [],
                 "completed": False,
             }
+            print(f"  [新規登録] {first_line[:20]} | URL: {permalink or '取得失敗'}")
 
         entry = tracker["snapshots"][pid]
         if entry.get("completed"):
@@ -204,13 +222,123 @@ def main():
             entry["completed"] = True
 
     tracker["last_updated"] = now.isoformat()
+
+    # 完了済みエントリをアーカイブに移す（完了から7日以上経過したもの）
+    archive_completed(tracker, now)
+
     save_json(TRACKER_FILE, tracker)
 
     # CSV出力（Googleスプレッドシートにインポート可能）
     export_csv(tracker, now)
 
+    # アーカイブCSVにも書き出し（全期間の永続記録）
+    export_archive_csv(now)
+
     print(f"\n成長トラッカー更新: {tracked}件スナップショット取得 / {skipped}件スキップ")
     print(f"追跡中: {sum(1 for e in tracker['snapshots'].values() if not e.get('completed'))}件")
+    print(f"完了済み（tracker内）: {sum(1 for e in tracker['snapshots'].values() if e.get('completed'))}件")
+
+
+ARCHIVE_FILE = "state/growth-archive.json"
+ARCHIVE_AFTER_DAYS = 7  # 完了から何日後にアーカイブするか
+
+
+def archive_completed(tracker, now):
+    """完了済みで一定日数経過したエントリをアーカイブJSONに移動"""
+    archive_path = os.path.join(PROJECT_DIR, ARCHIVE_FILE)
+    archive = {}
+    if os.path.exists(archive_path):
+        with open(archive_path, "r", encoding="utf-8") as f:
+            archive = json.load(f)
+
+    to_remove = []
+    for pid, entry in tracker["snapshots"].items():
+        if not entry.get("completed"):
+            continue
+        try:
+            posted_at = datetime.fromisoformat(entry["posted_at"])
+            if posted_at.tzinfo is None:
+                posted_at = posted_at.replace(tzinfo=JST)
+            days_old = (now - posted_at).total_seconds() / 86400
+            if days_old >= ARCHIVE_AFTER_DAYS:
+                archive[pid] = entry
+                to_remove.append(pid)
+        except Exception:
+            continue
+
+    if to_remove:
+        for pid in to_remove:
+            del tracker["snapshots"][pid]
+        os.makedirs(os.path.dirname(archive_path), exist_ok=True)
+        with open(archive_path, "w", encoding="utf-8") as f:
+            json.dump(archive, f, ensure_ascii=False, indent=2)
+        print(f"アーカイブ: {len(to_remove)}件を growth-archive.json に移動")
+
+
+def export_archive_csv(now):
+    """アーカイブJSON→全期間CSVに書き出し（永続記録）"""
+    import csv
+    archive_path = os.path.join(PROJECT_DIR, ARCHIVE_FILE)
+    if not os.path.exists(archive_path):
+        return
+    with open(archive_path, "r", encoding="utf-8") as f:
+        archive = json.load(f)
+
+    csv_dir = os.path.join(PROJECT_DIR, "state", "reports")
+    os.makedirs(csv_dir, exist_ok=True)
+    csv_path = os.path.join(csv_dir, "growth-all-time.csv")
+
+    fieldnames = ["post_id", "pattern_name", "posted_at", "slot_hour", "day_name",
+                  "first_line", "threads_url", "elapsed_hours", "views", "likes",
+                  "replies", "reposts", "auto_replies", "er_pct",
+                  "velocity_views_per_hour", "peak_velocity", "peak_velocity_hour",
+                  "snapshot_at"]
+
+    existing_keys = set()
+    existing_rows = []
+    if os.path.exists(csv_path):
+        with open(csv_path, "r", encoding="utf-8-sig", newline="") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                key = (row.get("post_id", ""), row.get("elapsed_hours", ""))
+                if key not in existing_keys:
+                    existing_keys.add(key)
+                    existing_rows.append(row)
+
+    new_rows = []
+    for pid, entry in archive.items():
+        for snap in entry.get("hourly", []):
+            key = (pid, str(snap.get("h", "")))
+            if key not in existing_keys:
+                existing_keys.add(key)
+                new_rows.append({
+                    "post_id": pid,
+                    "pattern_name": entry.get("pattern_name", ""),
+                    "posted_at": entry.get("posted_at", ""),
+                    "slot_hour": entry.get("slot_hour", ""),
+                    "day_name": entry.get("day_name", ""),
+                    "first_line": entry.get("first_line", ""),
+                    "threads_url": entry.get("threads_url", ""),
+                    "elapsed_hours": snap.get("h", ""),
+                    "views": snap.get("views", 0),
+                    "likes": snap.get("likes", 0),
+                    "replies": snap.get("replies", 0),
+                    "reposts": snap.get("reposts", 0),
+                    "auto_replies": snap.get("auto_replies", 0),
+                    "er_pct": snap.get("er", 0),
+                    "velocity_views_per_hour": snap.get("velocity_views_per_hour", 0),
+                    "peak_velocity": entry.get("peak_velocity", 0),
+                    "peak_velocity_hour": entry.get("peak_velocity_hour", ""),
+                    "snapshot_at": snap.get("ts", ""),
+                })
+
+    if new_rows:
+        all_rows = existing_rows + new_rows
+        with open(csv_path, "w", encoding="utf-8-sig", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(all_rows)
+        print(f"全期間CSV更新: {csv_path} (+{len(new_rows)}行)")
 
 
 def export_csv(tracker, now):

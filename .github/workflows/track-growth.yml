@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add state/post-growth-tracker.json state/reports/ docs/index.html || true
+          git add state/post-growth-tracker.json state/growth-archive.json state/reports/ docs/index.html || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
