@@ -8,7 +8,7 @@
   "top_patterns": [
     {
       "pattern": "注意喚起型・仕事運",
-      "weight": 14,
+      "weight": 13,
       "avg_engagement": 42.14,
       "avg_views": 674.0,
       "sample_count": 1,
@@ -16,7 +16,7 @@
     },
     {
       "pattern": "ランキング型・金運爆発",
-      "weight": 12,
+      "weight": 11,
       "avg_engagement": 36.18,
       "avg_views": 398.0,
       "sample_count": 1,
@@ -237,25 +237,20 @@
     "【投稿テンプレート採用】【タイトル】→【①星座名+具体予言】【②星座名+具体予言】【③星座名+具体予言】→【準備ポイント（1-2行）】→【🍀CTA】の6ブロック統一：自データ中ランキング型の36.18%エンゲージメント達成構造"
   ],
   "insights": [
-    "【投稿テンプレート採用】【タイトル】→【①星座名+具体予言】【②星座名+具体予言】【③星座名+具体予言】→【準備ポイント（1-2行）】→【🍀CTA】の6ブロック統一：自データ中ランキング型の36.18%エンゲージメント達成構造",
-    "【具体性強化】『心が花開く』→『昇進・抜擢の可能性』など実利的なシナリオに置き換え：予言内容の具体度がいいね数に正の相関（バズ投稿は全て具体的利益明示）",
-    "【星座限定明確化】『12星座中、たった3つだけ。』をテンプレート化し、投稿冒頭に必ず配置：限定感がコメント率を平均20%以上向上させている",
-    "【フック改善】『来週、仕事で～』などの断定型フックを優先採用、『〇月〇日に注意』など時間限定を組み合わせ：データ上42.14%の最高エンゲージメント達成例",
-    "【即実装】全投稿に『🍀を置いた方に○○が届きます』形式のCTA追加：現在CTA付き投稿が平均31.7%、CTA非付き19.9%のエンゲージメント差",
     "最強パターン: 注意喚起型・仕事運（eng率42.1%・閲覧674・1件）",
     "ランキング形式あり → avg eng 22.9%",
-    "絵文字CTAあり → avg eng 22.9%",
+    "絵文字CTAあり → avg eng 21.3%",
     "数字フックあり → avg eng 19.2%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 39,
-    "last_analyzed": "2026-04-02T07:07:26.666271+09:00",
+    "data_count": 40,
+    "last_analyzed": "2026-04-02T08:06:13.972014+09:00",
     "confidence": "high",
     "top_patterns": [
       {
         "pattern": "注意喚起型・仕事運",
-        "weight": 14,
+        "weight": 13,
         "avg_engagement": 42.14,
         "avg_views": 674.0,
         "sample_count": 1,
@@ -263,7 +258,7 @@
       },
       {
         "pattern": "ランキング型・金運爆発",
-        "weight": 12,
+        "weight": 11,
         "avg_engagement": 36.18,
         "avg_views": 398.0,
         "sample_count": 1,
@@ -440,6 +435,14 @@
         "total_replies": 0
       },
       {
+        "pattern": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
+        "count": 1,
+        "avg_engagement": 3.03,
+        "avg_views": 66.0,
+        "total_likes": 2,
+        "total_replies": 0
+      },
+      {
         "pattern": "自由型_恋愛深掘り",
         "count": 1,
         "avg_engagement": 1.45,
@@ -472,8 +475,8 @@
       },
       {
         "feature": "has_cta_emoji",
-        "count": 12,
-        "avg_engagement": 22.85
+        "count": 13,
+        "avg_engagement": 21.32
       },
       {
         "feature": "has_number_hook",
@@ -569,9 +572,9 @@
     "hourly_data": {
       "7": {
         "slot": "朝（6〜9時台）",
-        "avg_eng": 17.47,
-        "avg_views": 224.0,
-        "count": 4
+        "avg_eng": 14.58,
+        "avg_views": 192.0,
+        "count": 5
       },
       "9": {
         "slot": "朝（6〜9時台）",
@@ -692,13 +695,13 @@
     "insights": [
       "最強パターン: 注意喚起型・仕事運（eng率42.1%・閲覧674・1件）",
       "ランキング形式あり → avg eng 22.9%",
-      "絵文字CTAあり → avg eng 22.9%",
+      "絵文字CTAあり → avg eng 21.3%",
       "数字フックあり → avg eng 19.2%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 39,
-  "last_analyzed": "2026-04-02T07:07:26.666271+09:00",
+  "data_count": 40,
+  "last_analyzed": "2026-04-02T08:06:13.972014+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -846,6 +849,14 @@
       "total_replies": 0
     },
     {
+      "pattern": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
+      "count": 1,
+      "avg_engagement": 3.03,
+      "avg_views": 66.0,
+      "total_likes": 2,
+      "total_replies": 0
+    },
+    {
       "pattern": "自由型_恋愛深掘り",
       "count": 1,
       "avg_engagement": 1.45,
@@ -878,8 +889,8 @@
     },
     {
       "feature": "has_cta_emoji",
-      "count": 12,
-      "avg_engagement": 22.85
+      "count": 13,
+      "avg_engagement": 21.32
     },
     {
       "feature": "has_number_hook",
@@ -947,9 +958,9 @@
   "hourly_data": {
     "7": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 17.47,
-      "avg_views": 224.0,
-      "count": 4
+      "avg_eng": 14.58,
+      "avg_views": 192.0,
+      "count": 5
     },
     "9": {
       "slot": "朝（6〜9時台）",

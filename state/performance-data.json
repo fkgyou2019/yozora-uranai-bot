@@ -1013,7 +1013,33 @@
         "hook_length": 12
       },
       "collected_at": "2026-04-01T21:10:21.349059+09:00"
+    },
+    {
+      "id": "post_20260331_2224_exp_001",
+      "platform_post_id": "18000902045872804",
+      "posted_at": "2026-04-01T07:07:20.915351+09:00",
+      "pattern_name": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
+      "category": "仕事運",
+      "content_preview": "今週後半、仕事で判断ミスが起きやすい星座。\n\nたった3つだけです。\n\n🔴 牡羊座\n火星の逆行で、いつ",
+      "first_line": "今週後半、仕事で判断ミスが起きやすい星座。",
+      "char_count": 188,
+      "metrics": {
+        "views": 66,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 3.03
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 21
+      },
+      "collected_at": "2026-04-02T08:06:08.965278+09:00"
     }
   ],
-  "last_updated": "2026-04-02T07:07:20.534509+09:00"
+  "last_updated": "2026-04-02T08:06:08.965278+09:00"
 }
