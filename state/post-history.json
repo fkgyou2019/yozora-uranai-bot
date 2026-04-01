@@ -1124,6 +1124,29 @@
       "posting_started_at": "2026-04-01T07:07:14.791711+09:00",
       "posted_at": "2026-04-01T07:07:20.915351+09:00",
       "platform_post_id": "18000902045872804"
+    },
+    {
+      "pattern_name": "構造C_天文イベント×質問型",
+      "category": "今日の運勢",
+      "content": "ここ数日、なんか\nモヤモヤしていませんか？\n\nそれ、水星逆行の影響かもしれません。\n\n特に双子座、乙女座、射手座は\n強く影響を受けやすい時期。\n\nでも大丈夫。\n自分を責めなくていいですよ。\n今月末には落ち着いていきます。\n\n「🌙」を置いた方に、\n穏やかさが届きます。\n\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260401_0907_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-01T09:07:34.306376+09:00",
+      "posted_at": "2026-04-01T09:07:38.032394+09:00",
+      "platform_post_id": "17883555885493755"
     }
   ]
 }

@@ -1,3 +1,44 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造自由_共感質問型",
+      "category": "運勢",
+      "content": "最近、自分の直感を\n信じられていないなって\n感じることはありませんか？\n\nそんな時こそ、星からの\nメッセージを聞く時なんです。\n\n特に月と太陽の位置は\nあなたの本来の姿を\n教えてくれますよ。\n\nあなたの星座を教えてもらえたら、\nあなただけの本当の声を\nお届けしますね🌙\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 7,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.0
+      },
+      "id": "post_20260401_0908_th_001",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造A_限定型",
+      "category": "恋愛運",
+      "content": "12星座中、たった4つだけ。\n\n今週、恋愛に\n大きな転機が来ます。\n\nそれは…蟹座、蠍座、魚座、\nそして牡牛座です。\n\n特に蟹座と魚座は\n本当の気持ちを伝える時かも。\n怖くても、その先に\n新しい関係が待っていますよ。\n\n「🌙」を置いた方に、\n勇気を後押しする流れが届きます。\n恋愛運 #星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260401_0908_th_002",
+      "platform": "threads",
+      "status": "queued"
+    }
+  ]
 }
