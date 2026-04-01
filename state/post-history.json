@@ -1147,6 +1147,29 @@
       "posting_started_at": "2026-04-01T09:07:34.306376+09:00",
       "posted_at": "2026-04-01T09:07:38.032394+09:00",
       "platform_post_id": "17883555885493755"
+    },
+    {
+      "pattern_name": "構造自由_共感質問型",
+      "category": "運勢",
+      "content": "最近、自分の直感を\n信じられていないなって\n感じることはありませんか？\n\nそんな時こそ、星からの\nメッセージを聞く時なんです。\n\n特に月と太陽の位置は\nあなたの本来の姿を\n教えてくれますよ。\n\nあなたの星座を教えてもらえたら、\nあなただけの本当の声を\nお届けしますね🌙\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 7,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.0
+      },
+      "id": "post_20260401_0908_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-01T10:37:12.611159+09:00",
+      "posted_at": "2026-04-01T10:37:17.076191+09:00",
+      "platform_post_id": "18057881525456819"
     }
   ]
 }
