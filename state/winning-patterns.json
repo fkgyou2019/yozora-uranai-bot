@@ -24,7 +24,7 @@
     },
     {
       "pattern": "共感×質問型（推定）",
-      "weight": 9,
+      "weight": 8,
       "avg_engagement": 26.09,
       "avg_views": 115.0,
       "sample_count": 1,
@@ -240,12 +240,12 @@
     "最強パターン: 注意喚起型・仕事運（eng率42.1%・閲覧674・1件）",
     "ランキング形式あり → avg eng 22.9%",
     "絵文字CTAあり → avg eng 22.9%",
-    "数字フックあり → avg eng 19.8%",
+    "数字フックあり → avg eng 19.2%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 38,
-    "last_analyzed": "2026-04-01T20:37:22.156368+09:00",
+    "data_count": 39,
+    "last_analyzed": "2026-04-01T21:10:26.708954+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -266,7 +266,7 @@
       },
       {
         "pattern": "共感×質問型（推定）",
-        "weight": 9,
+        "weight": 8,
         "avg_engagement": 26.09,
         "avg_views": 115.0,
         "sample_count": 1,
@@ -371,6 +371,14 @@
         "total_replies": 0
       },
       {
+        "pattern": "構造D_予告型（今夜の重要発表予告）",
+        "count": 1,
+        "avg_engagement": 14.1,
+        "avg_views": 78.0,
+        "total_likes": 11,
+        "total_replies": 0
+      },
+      {
         "pattern": "星座別アドバイス型",
         "count": 1,
         "avg_engagement": 10.39,
@@ -464,8 +472,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 9,
-        "avg_engagement": 19.81
+        "count": 10,
+        "avg_engagement": 19.23
       },
       {
         "feature": "has_question",
@@ -610,9 +618,9 @@
       },
       "20": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 20.52,
-        "avg_views": 314.0,
-        "count": 6
+        "avg_eng": 19.6,
+        "avg_views": 280.0,
+        "count": 7
       },
       "21": {
         "slot": "夜（19〜21時台）",
@@ -674,18 +682,18 @@
     "optimal_hours": [
       9,
       21,
-      20
+      22
     ],
     "insights": [
       "最強パターン: 注意喚起型・仕事運（eng率42.1%・閲覧674・1件）",
       "ランキング形式あり → avg eng 22.9%",
       "絵文字CTAあり → avg eng 22.9%",
-      "数字フックあり → avg eng 19.8%",
+      "数字フックあり → avg eng 19.2%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 38,
-  "last_analyzed": "2026-04-01T20:37:22.156368+09:00",
+  "data_count": 39,
+  "last_analyzed": "2026-04-01T21:10:26.708954+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -766,6 +774,14 @@
       "avg_engagement": 14.14,
       "avg_views": 99.0,
       "total_likes": 14,
+      "total_replies": 0
+    },
+    {
+      "pattern": "構造D_予告型（今夜の重要発表予告）",
+      "count": 1,
+      "avg_engagement": 14.1,
+      "avg_views": 78.0,
+      "total_likes": 11,
       "total_replies": 0
     },
     {
@@ -862,8 +878,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 9,
-      "avg_engagement": 19.81
+      "count": 10,
+      "avg_engagement": 19.23
     },
     {
       "feature": "has_question",
@@ -980,9 +996,9 @@
     },
     "20": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 20.52,
-      "avg_views": 314.0,
-      "count": 6
+      "avg_eng": 19.6,
+      "avg_views": 280.0,
+      "count": 7
     },
     "21": {
       "slot": "夜（19〜21時台）",
@@ -1000,6 +1016,6 @@
   "optimal_hours": [
     9,
     21,
-    20
+    22
   ]
 }

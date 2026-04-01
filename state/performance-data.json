@@ -987,7 +987,33 @@
         "hook_length": 18
       },
       "collected_at": "2026-04-01T20:37:17.894842+09:00"
+    },
+    {
+      "id": "post_20260331_2039_exp_008",
+      "platform_post_id": "17993432135940354",
+      "posted_at": "2026-03-31T20:39:31.587044+09:00",
+      "pattern_name": "構造D_予告型（今夜の重要発表予告）",
+      "category": "仕事運・キャリア",
+      "content_preview": "今夜、12星座の中で最も\n仕事の転機が訪れる星座。\n\n牡羊座・獅子座・射手座の皆さま、\n午後から流れ",
+      "first_line": "今夜、12星座の中で最も",
+      "char_count": 141,
+      "metrics": {
+        "views": 78,
+        "likes": 11,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 14.1
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-01T21:10:21.349059+09:00"
     }
   ],
-  "last_updated": "2026-04-01T20:37:17.894842+09:00"
+  "last_updated": "2026-04-01T21:10:21.349059+09:00"
 }
