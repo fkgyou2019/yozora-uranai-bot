@@ -1,18 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "構造F_告白・暴露型（占い師として正直に言います）",
-      "category": "仕事運・人間関係",
-      "content": "正直に言います。\n4月は『新しい環境での本当の評価が決まる月』です。\n\n春の人事異動や新年度スタートで、\nあなたの実力が周囲に\nちゃんと見えるようになります。\n\n今夜から、焦らず丁寧に\n仕事に向き合うこと。\n派手さより『信頼を積み重ねる行動』が\nこの先3ヶ月の運を分けます。\n\nあなたの本気度が試される時期ですよ。🔮\n\n#今日の運勢",
-      "hashtag": "#今日の運勢",
-      "time_slot": "夜（19〜21時台）",
-      "scheduled_hour": 19,
-      "engagement_strategy": "注意喚起型・仕事運パターン（実績eng率42.1%）+ 具体的アドバイス + 時間的文脈（今夜）",
-      "id": "post_20260401_1516_exp_005",
-      "platform": "threads",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "status": "queued"
-    }
-  ]
+  "queue": []
 }
