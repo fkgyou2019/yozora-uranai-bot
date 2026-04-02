@@ -90,7 +90,9 @@ def build_data(entries):
             dt = datetime.fromisoformat(posted_at)
             if dt.tzinfo is None:
                 dt = dt.replace(tzinfo=JST)
-            posted_dt_str = dt.astimezone(JST).strftime("%m/%d %H:%M")
+            dt_jst = dt.astimezone(JST)
+            dow = ["月","火","水","木","金","土","日"][dt_jst.weekday()]
+            posted_dt_str = f"{dt_jst.month}/{dt_jst.day}({dow}){dt_jst.hour}:{dt_jst.minute:02d}"
         except Exception:
             posted_dt_str = posted_at[:10]
 
@@ -186,6 +188,7 @@ def generate_html(data, last_updated, now_str):
     completed     = data["completed_count"]
 
     return f"""<!DOCTYPE html>
+<!-- generated: {now_str} -->
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
