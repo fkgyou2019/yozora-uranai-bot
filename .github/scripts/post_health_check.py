@@ -36,10 +36,8 @@ YELLOW_VIEWS_MAX = 50
 YELLOW_ENG_THRESHOLD = 3.0
 GREEN_VIEWS_MIN = 50
 GREEN_ENG_MIN = 5.0
-CHECK_WINDOW_MINUTES = 360  # 投稿後30-360分（6時間）の投稿を対象
-# 最小チェック年齢: 180分（3時間）。投稿後2〜3時間は削除しない（夕方〜夜の投稿保護）
-MIN_AGE_MINUTES = 180  # 旧30→180: 3時間未満の投稿はチェック対象外
-# 1日3回の自動実行（12:37/17:37/23:37 JST）で8投稿全てをカバーするため6時間に拡張
+# 最小チェック年齢: 180分（3時間）。投稿後3時間未満は削除しない（初速を正確に見るため）
+MIN_AGE_MINUTES = 180  # 3時間未満の投稿はチェック対象外（上限なし＝3時間以降はずっとチェック対象）
 
 # --- DELETE レート制限管理 ---
 # Threads APIのDELETE上限は24時間で約100件
@@ -240,14 +238,10 @@ def main():
             print(f"  投稿 {pid}: タイムスタンプ解析失敗 ts='{ts}' error={e}")
             continue
 
-        # 投稿後MIN_AGE_MINUTES〜CHECK_WINDOW_MINUTESの投稿のみ対象
-        # MIN_AGE_MINUTES=180: 3時間未満の投稿は削除しない（夜の投稿を早期削除から守る）
+        # 投稿後MIN_AGE_MINUTES以降の投稿をチェック（上限なし）
         age_minutes = (now - jst_time).total_seconds() / 60
-        in_window = MIN_AGE_MINUTES <= age_minutes <= CHECK_WINDOW_MINUTES
-        status_mark = "ウィンドウ内 → チェック対象" if in_window else (
-            f"ウィンドウ外(age={age_minutes:.0f}分 < {MIN_AGE_MINUTES}分・まだ新しい)" if age_minutes < MIN_AGE_MINUTES
-            else f"ウィンドウ外(age={age_minutes:.0f}分 > {CHECK_WINDOW_MINUTES}分)"
-        )
+        in_window = age_minutes >= MIN_AGE_MINUTES
+        status_mark = "チェック対象" if in_window else f"対象外(age={age_minutes:.0f}分 < {MIN_AGE_MINUTES}分・まだ新しい)"
         print(f"  投稿 {jst_time.strftime('%H:%M')} JST (age={age_minutes:.0f}分) → {status_mark}")
 
         if not in_window:
