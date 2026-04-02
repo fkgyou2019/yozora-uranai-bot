@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- generated: 2026-04-02 19:21 JST -->
+<!-- generated: 2026-04-02 20:09 JST -->
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -58,6 +58,12 @@
     .tab-content.active{display:block;}
     .empty{color:var(--muted);text-align:center;padding:40px;font-size:13px;}
     .footer{text-align:center;color:var(--muted);font-size:11px;margin-top:28px;padding-bottom:12px;}
+    /* ソート */
+    th.sortable{cursor:pointer;user-select:none;white-space:nowrap;}
+    th.sortable:hover{color:var(--accent);}
+    th.sort-asc .sort-icon::after{content:'▲';margin-left:4px;color:var(--accent);}
+    th.sort-desc .sort-icon::after{content:'▼';margin-left:4px;color:var(--accent);}
+    th.sort-asc .sort-icon,th.sort-desc .sort-icon{font-size:0;}
   </style>
 </head>
 <body>
@@ -68,11 +74,11 @@
   </div>
   <div>
     <div class="badges">
-      <span class="badge badge-blue">📊 追跡中 14件</span>
-      <span class="badge badge-green">✅ 完了 14件</span>
+      <span class="badge badge-blue">📊 追跡中 18件</span>
+      <span class="badge badge-green">✅ 完了 28件</span>
       <span class="badge badge-purple">🕐 毎時30分更新</span>
     </div>
-    <div class="meta" style="margin-top:5px;text-align:right">最終更新: 2026-04-01T09:01:24.379689+09:00</div>
+    <div class="meta" style="margin-top:5px;text-align:right">最終更新: 2026-04-02T20:09:09.921050+09:00</div>
   </div>
 </header>
 
@@ -101,195 +107,306 @@
 <table id="mainTable">
   <thead>
     <tr>
-      <th>#</th><th>投稿日時</th><th>フック（1行目）</th>
-      <th>パターン</th><th>時/曜</th>
-      <th>閲覧</th><th>いいね</th><th>ER%</th>
-      <th>ピーク速度</th><th>ピーク時間</th><th>ステータス</th>
+      <th data-col="0">#</th>
+      <th data-col="1" class="sortable">投稿日時 <span class="sort-icon">⇅</span></th>
+      <th data-col="2">フック（1行目）</th>
+      <th data-col="3" class="sortable">パターン <span class="sort-icon">⇅</span></th>
+      <th data-col="4" class="sortable">時/曜 <span class="sort-icon">⇅</span></th>
+      <th data-col="5" class="sortable">閲覧 <span class="sort-icon">⇅</span></th>
+      <th data-col="6" class="sortable">いいね <span class="sort-icon">⇅</span></th>
+      <th data-col="7" class="sortable">ER% <span class="sort-icon">⇅</span></th>
+      <th data-col="8" class="sortable">ピーク速度 <span class="sort-icon">⇅</span></th>
+      <th data-col="9" class="sortable">ピーク時間 <span class="sort-icon">⇅</span></th>
+      <th data-col="10" class="sortable">ステータス <span class="sort-icon">⇅</span></th>
     </tr>
   </thead>
   <tbody>
 
     <tr class="tracking">
       <td>1</td>
-      <td class="date">3/29(日)15:12</td>
+      <td class="date" data-val="2026-03-29T15:12:19.371535+09:00">3/29(日)15:12</td>
       <td class="hook">春分を過ぎた今夜✨</td>
-      <td>不明</td>
-      <td>15時/日</td>
-      <td class="num">219</td>
-      <td class="num">21</td>
-      <td class="num">9.6%</td>
-      <td class="num vel">3.6/h</td>
-      <td class="num">+61h</td>
-      <td class="status-tracking">📊+65h</td>
+      <td data-val="不明">不明</td>
+      <td data-val="15時/日">15時/日</td>
+      <td class="num" data-val="219">219</td>
+      <td class="num" data-val="21">21</td>
+      <td class="num" data-val="9.59">9.6%</td>
+      <td class="num vel" data-val="3.6">3.6/h</td>
+      <td class="num" data-val="61">61</td>
+      <td class="status-tracking" data-val="📊+65h">📊+65h</td>
     </tr>
     <tr class="tracking">
       <td>2</td>
-      <td class="date">3/30(月)12:12</td>
+      <td class="date" data-val="2026-03-30T12:12:18.763885+09:00">3/30(月)12:12</td>
       <td class="hook">月が双子座に移ります✨</td>
-      <td>不明</td>
-      <td>12時/月</td>
-      <td class="num">176</td>
-      <td class="num">10</td>
-      <td class="num">5.7%</td>
-      <td class="num vel">4.4/h</td>
-      <td class="num">+40h</td>
-      <td class="status-tracking">📊+44h</td>
+      <td data-val="不明">不明</td>
+      <td data-val="12時/月">12時/月</td>
+      <td class="num" data-val="176">176</td>
+      <td class="num" data-val="10">10</td>
+      <td class="num" data-val="5.68">5.7%</td>
+      <td class="num vel" data-val="4.4">4.4/h</td>
+      <td class="num" data-val="40">40</td>
+      <td class="status-tracking" data-val="📊+44h">📊+44h</td>
     </tr>
     <tr class="tracking">
       <td>3</td>
-      <td class="date">3/31(火)9:07</td>
+      <td class="date" data-val="2026-03-31T09:07:20.735442+09:00">3/31(火)9:07</td>
       <td class="hook">恋愛について、</td>
-      <td>自由型_恋愛深掘り</td>
-      <td>9時/火</td>
-      <td class="num">138</td>
-      <td class="num">2</td>
-      <td class="num">1.4%</td>
-      <td class="num vel">7.3/h</td>
-      <td class="num">+19h</td>
-      <td class="status-tracking">📊+23h</td>
+      <td data-val="自由型_恋愛深掘り">自由型_恋愛深掘り</td>
+      <td data-val="9時/火">9時/火</td>
+      <td class="num" data-val="138">138</td>
+      <td class="num" data-val="2">2</td>
+      <td class="num" data-val="1.45">1.4%</td>
+      <td class="num vel" data-val="7.3">7.3/h</td>
+      <td class="num" data-val="19">19</td>
+      <td class="status-tracking" data-val="📊+59h">📊+59h</td>
     </tr>
     <tr class="tracking">
       <td>4</td>
-      <td class="date">3/29(日)20:42</td>
+      <td class="date" data-val="2026-03-29T20:42:16.108146+09:00">3/29(日)20:42</td>
       <td class="hook">ここ数日、なんか</td>
-      <td>不明</td>
-      <td>20時/日</td>
-      <td class="num">128</td>
-      <td class="num">3</td>
-      <td class="num">23.4%</td>
-      <td class="num vel">2.3/h</td>
-      <td class="num">+56h</td>
-      <td class="status-tracking">📊+60h</td>
+      <td data-val="不明">不明</td>
+      <td data-val="20時/日">20時/日</td>
+      <td class="num" data-val="128">128</td>
+      <td class="num" data-val="3">3</td>
+      <td class="num" data-val="23.44">23.4%</td>
+      <td class="num vel" data-val="2.3">2.3/h</td>
+      <td class="num" data-val="56">56</td>
+      <td class="status-tracking" data-val="📊+60h">📊+60h</td>
     </tr>
     <tr class="tracking">
       <td>5</td>
-      <td class="date">3/31(火)10:37</td>
-      <td class="hook">水星逆行が</td>
-      <td>自由型_水星逆行対策</td>
-      <td>10時/火</td>
-      <td class="num">98</td>
-      <td class="num">1</td>
-      <td class="num">1.0%</td>
-      <td class="num vel">5.4/h</td>
-      <td class="num">+18h</td>
-      <td class="status-tracking">📊+22h</td>
+      <td class="date" data-val="2026-03-31T12:07:19.265884+09:00">3/31(火)12:07</td>
+      <td class="hook">【今週の星座ランキング】</td>
+      <td data-val="構造B_ランキング型_総合運TOP5">構造B_ランキング型_総合運TOP5</td>
+      <td data-val="12時/火">12時/火</td>
+      <td class="num" data-val="101">101</td>
+      <td class="num" data-val="14">14</td>
+      <td class="num" data-val="13.86">13.9%</td>
+      <td class="num vel" data-val="5.8">5.8/h</td>
+      <td class="num" data-val="16">16</td>
+      <td class="status-tracking" data-val="📊+56h">📊+56h</td>
     </tr>
     <tr class="tracking">
       <td>6</td>
-      <td class="date">3/31(火)12:07</td>
-      <td class="hook">【今週の星座ランキング】</td>
-      <td>構造B_ランキング型_総合運TOP5</td>
-      <td>12時/火</td>
-      <td class="num">95</td>
-      <td class="num">12</td>
-      <td class="num">12.6%</td>
-      <td class="num vel">5.8/h</td>
-      <td class="num">+16h</td>
-      <td class="status-tracking">📊+20h</td>
+      <td class="date" data-val="2026-03-31T10:37:23.070412+09:00">3/31(火)10:37</td>
+      <td class="hook">水星逆行が</td>
+      <td data-val="自由型_水星逆行対策">自由型_水星逆行対策</td>
+      <td data-val="10時/火">10時/火</td>
+      <td class="num" data-val="99">99</td>
+      <td class="num" data-val="1">1</td>
+      <td class="num" data-val="1.01">1.0%</td>
+      <td class="num vel" data-val="5.4">5.4/h</td>
+      <td class="num" data-val="18">18</td>
+      <td class="status-tracking" data-val="📊+57h">📊+57h</td>
     </tr>
     <tr class="tracking">
       <td>7</td>
-      <td class="date">3/29(日)19:12</td>
-      <td class="hook">🌙 牡羊座さんへ</td>
-      <td>不明</td>
-      <td>19時/日</td>
-      <td class="num">73</td>
-      <td class="num">4</td>
-      <td class="num">5.5%</td>
-      <td class="num vel">1.3/h</td>
-      <td class="num">+57h</td>
-      <td class="status-tracking">📊+61h</td>
+      <td class="date" data-val="2026-03-31T20:39:31.587044+09:00">3/31(火)20:39</td>
+      <td class="hook">今夜、12星座の中で最も</td>
+      <td data-val="構造D_予告型（今夜の重要発表予告）">構造D_予告型（今夜の重要発表予告）</td>
+      <td data-val="20時/火">20時/火</td>
+      <td class="num" data-val="78">78</td>
+      <td class="num" data-val="11">11</td>
+      <td class="num" data-val="14.1">14.1%</td>
+      <td class="num vel" data-val="8.0">8.0/h</td>
+      <td class="num" data-val="8">8</td>
+      <td class="status-tracking" data-val="📊+47h">📊+47h</td>
     </tr>
     <tr class="tracking">
       <td>8</td>
-      <td class="date">3/31(火)20:39</td>
-      <td class="hook">今夜、12星座の中で最も</td>
-      <td>構造D_予告型（今夜の重要発表予告）</td>
-      <td>20時/火</td>
-      <td class="num">64</td>
-      <td class="num">9</td>
-      <td class="num">14.1%</td>
-      <td class="num vel">8.0/h</td>
-      <td class="num">+8h</td>
-      <td class="status-tracking">📊+12h</td>
+      <td class="date" data-val="2026-03-29T19:12:17.850722+09:00">3/29(日)19:12</td>
+      <td class="hook">🌙 牡羊座さんへ</td>
+      <td data-val="不明">不明</td>
+      <td data-val="19時/日">19時/日</td>
+      <td class="num" data-val="73">73</td>
+      <td class="num" data-val="4">4</td>
+      <td class="num" data-val="5.48">5.5%</td>
+      <td class="num vel" data-val="1.3">1.3/h</td>
+      <td class="num" data-val="57">57</td>
+      <td class="status-tracking" data-val="📊+61h">📊+61h</td>
     </tr>
-    <tr class="tracking">
+    <tr class="completed">
       <td>9</td>
-      <td class="date">4/1(水)7:07</td>
+      <td class="date" data-val="2026-04-01T07:07:20.915351+09:00">4/1(水)7:07</td>
       <td class="hook">今週後半、仕事で判断ミスが起きやすい星座</td>
-      <td>構造G_注意喚起+限定型（今日・今週の仕事運警告）</td>
-      <td>7時/水</td>
-      <td class="num">53</td>
-      <td class="num">2</td>
-      <td class="num">3.8%</td>
-      <td class="num vel">53.0/h</td>
-      <td class="num">+1h</td>
-      <td class="status-tracking">📊+1h</td>
+      <td data-val="構造G_注意喚起+限定型（今日・今週の仕事運警告）">構造G_注意喚起+限定型（今日・今週の仕事運警告）</td>
+      <td data-val="7時/水">7時/水</td>
+      <td class="num" data-val="66">66</td>
+      <td class="num" data-val="2">2</td>
+      <td class="num" data-val="3.03">3.0%</td>
+      <td class="num vel" data-val="53.0">53.0/h</td>
+      <td class="num" data-val="1">1</td>
+      <td class="status-completed" data-val="✅完了">✅完了</td>
     </tr>
-    <tr class="tracking">
+    <tr class="completed">
       <td>10</td>
-      <td class="date">3/31(火)7:07</td>
-      <td class="hook">来週、仕事で</td>
-      <td>自由型_仕事運注意喚起</td>
-      <td>7時/火</td>
-      <td class="num">50</td>
-      <td class="num">8</td>
-      <td class="num">20.0%</td>
-      <td class="num vel">2.4/h</td>
-      <td class="num">+21h</td>
-      <td class="status-tracking">📊+25h</td>
+      <td class="date" data-val="2026-04-01T12:07:20.100286+09:00">4/1(水)12:07</td>
+      <td class="hook"><a href="https://www.threads.com/@yozora.uranai/post/DWksitbFPSr" target="_blank" class="post-link">春の季節の変わり目って、 🔗</a></td>
+      <td data-val="構造自由_共感質問型">構造自由_共感質問型</td>
+      <td data-val="12時/水">12時/水</td>
+      <td class="num" data-val="52">52</td>
+      <td class="num" data-val="1">1</td>
+      <td class="num" data-val="1.92">1.9%</td>
+      <td class="num vel" data-val="1.7">1.7/h</td>
+      <td class="num" data-val="31">31</td>
+      <td class="status-completed" data-val="✅完了">✅完了</td>
     </tr>
     <tr class="tracking">
       <td>11</td>
-      <td class="date">3/31(火)19:12</td>
-      <td class="hook">来週、仕事で気をつけた方がいい星座。</td>
-      <td>不明</td>
-      <td>19時/火</td>
-      <td class="num">39</td>
-      <td class="num">2</td>
-      <td class="num">10.3%</td>
-      <td class="num vel">4.3/h</td>
-      <td class="num">+9h</td>
-      <td class="status-tracking">📊+13h</td>
+      <td class="date" data-val="2026-03-31T07:07:21.881189+09:00">3/31(火)7:07</td>
+      <td class="hook">来週、仕事で</td>
+      <td data-val="自由型_仕事運注意喚起">自由型_仕事運注意喚起</td>
+      <td data-val="7時/火">7時/火</td>
+      <td class="num" data-val="50">50</td>
+      <td class="num" data-val="8">8</td>
+      <td class="num" data-val="20.0">20.0%</td>
+      <td class="num vel" data-val="2.4">2.4/h</td>
+      <td class="num" data-val="21">21</td>
+      <td class="status-tracking" data-val="📊+61h">📊+61h</td>
     </tr>
     <tr class="tracking">
       <td>12</td>
-      <td class="date">3/30(月)9:12</td>
-      <td class="hook">12星座中、今週最も運が開く星座。</td>
-      <td>不明</td>
-      <td>9時/月</td>
-      <td class="num">29</td>
-      <td class="num">4</td>
-      <td class="num">20.7%</td>
-      <td class="num vel">0.7/h</td>
-      <td class="num">+43h</td>
-      <td class="status-tracking">📊+47h</td>
+      <td class="date" data-val="2026-03-31T19:12:17.675190+09:00">3/31(火)19:12</td>
+      <td class="hook">来週、仕事で気をつけた方がいい星座。</td>
+      <td data-val="不明">不明</td>
+      <td data-val="19時/火">19時/火</td>
+      <td class="num" data-val="44">44</td>
+      <td class="num" data-val="2">2</td>
+      <td class="num" data-val="9.09">9.1%</td>
+      <td class="num vel" data-val="4.3">4.3/h</td>
+      <td class="num" data-val="9">9</td>
+      <td class="status-tracking" data-val="📊+48h">📊+48h</td>
     </tr>
     <tr class="tracking">
       <td>13</td>
-      <td class="date">3/31(火)15:07</td>
-      <td class="hook">最近、仕事で判断を迷う</td>
-      <td>構造C_共感型_仕事運</td>
-      <td>15時/火</td>
-      <td class="num">23</td>
-      <td class="num">1</td>
-      <td class="num">4.3%</td>
-      <td class="num vel">1.8/h</td>
-      <td class="num">+13h</td>
-      <td class="status-tracking">📊+17h</td>
+      <td class="date" data-val="2026-04-02T09:12:17.700725+09:00">4/2(木)9:12</td>
+      <td class="hook"><a href="https://www.threads.com/@yozora.uranai/post/DWm9Tb3lZhN" target="_blank" class="post-link">最近、恋愛で 🔗</a></td>
+      <td data-val="不明">不明</td>
+      <td data-val="9時/木">9時/木</td>
+      <td class="num" data-val="33">33</td>
+      <td class="num" data-val="0">0</td>
+      <td class="num" data-val="0.0">0.0%</td>
+      <td class="num vel" data-val="3.3">3.3/h</td>
+      <td class="num" data-val="10">10</td>
+      <td class="status-tracking" data-val="📊+10h">📊+10h</td>
     </tr>
     <tr class="tracking">
       <td>14</td>
-      <td class="date">3/31(火)17:13</td>
+      <td class="date" data-val="2026-04-02T12:07:39.402223+09:00">4/2(木)12:07</td>
+      <td class="hook"><a href="https://www.threads.com/@yozora.uranai/post/DWnRX5wFJQ8" target="_blank" class="post-link">春の星の動きを見ていて 🔗</a></td>
+      <td data-val="深掘り共感型_春の転機">深掘り共感型_春の転機</td>
+      <td data-val="12時/木">12時/木</td>
+      <td class="num" data-val="31">31</td>
+      <td class="num" data-val="2">2</td>
+      <td class="num" data-val="6.45">6.5%</td>
+      <td class="num vel" data-val="4.4">4.4/h</td>
+      <td class="num" data-val="7">7</td>
+      <td class="status-tracking" data-val="📊+8h">📊+8h</td>
+    </tr>
+    <tr class="tracking">
+      <td>15</td>
+      <td class="date" data-val="2026-03-30T09:12:16.762871+09:00">3/30(月)9:12</td>
+      <td class="hook">12星座中、今週最も運が開く星座。</td>
+      <td data-val="不明">不明</td>
+      <td data-val="9時/月">9時/月</td>
+      <td class="num" data-val="29">29</td>
+      <td class="num" data-val="4">4</td>
+      <td class="num" data-val="20.69">20.7%</td>
+      <td class="num vel" data-val="0.7">0.7/h</td>
+      <td class="num" data-val="43">43</td>
+      <td class="status-tracking" data-val="📊+47h">📊+47h</td>
+    </tr>
+    <tr class="completed">
+      <td>16</td>
+      <td class="date" data-val="2026-04-01T15:07:21.550619+09:00">4/1(水)15:07</td>
+      <td class="hook"><a href="https://www.threads.com/@yozora.uranai/post/DWlBI-Zklm0" target="_blank" class="post-link">新しい季節、何か 🔗</a></td>
+      <td data-val="構造自由_共感×深掘り質問型">構造自由_共感×深掘り質問型</td>
+      <td data-val="15時/水">15時/水</td>
+      <td class="num" data-val="27">27</td>
+      <td class="num" data-val="0">0</td>
+      <td class="num" data-val="0.0">0.0%</td>
+      <td class="num vel" data-val="1.0">1.0/h</td>
+      <td class="num" data-val="28">28</td>
+      <td class="status-completed" data-val="✅完了">✅完了</td>
+    </tr>
+    <tr class="tracking">
+      <td>17</td>
+      <td class="date" data-val="2026-03-31T15:07:19.532258+09:00">3/31(火)15:07</td>
+      <td class="hook">最近、仕事で判断を迷う</td>
+      <td data-val="構造C_共感型_仕事運">構造C_共感型_仕事運</td>
+      <td data-val="15時/火">15時/火</td>
+      <td class="num" data-val="25">25</td>
+      <td class="num" data-val="1">1</td>
+      <td class="num" data-val="4.0">4.0%</td>
+      <td class="num vel" data-val="1.8">1.8/h</td>
+      <td class="num" data-val="13">13</td>
+      <td class="status-tracking" data-val="📊+53h">📊+53h</td>
+    </tr>
+    <tr class="tracking">
+      <td>18</td>
+      <td class="date" data-val="2026-03-31T17:13:40.784035+09:00">3/31(火)17:13</td>
       <td class="hook">新しい月が始まる時、</td>
-      <td>自由型_総合運メッセージ</td>
-      <td>17時/火</td>
-      <td class="num">21</td>
-      <td class="num">1</td>
-      <td class="num">4.8%</td>
-      <td class="num vel">1.8/h</td>
-      <td class="num">+11h</td>
-      <td class="status-tracking">📊+15h</td>
+      <td data-val="自由型_総合運メッセージ">自由型_総合運メッセージ</td>
+      <td data-val="17時/火">17時/火</td>
+      <td class="num" data-val="24">24</td>
+      <td class="num" data-val="0">0</td>
+      <td class="num" data-val="0.0">0.0%</td>
+      <td class="num vel" data-val="1.8">1.8/h</td>
+      <td class="num" data-val="11">11</td>
+      <td class="status-tracking" data-val="📊+50h">📊+50h</td>
+    </tr>
+    <tr class="completed">
+      <td>19</td>
+      <td class="date" data-val="2026-04-01T09:07:38.032394+09:00">4/1(水)9:07</td>
+      <td class="hook"><a href="https://www.threads.com/@yozora.uranai/post/DWkX-v9FDTv" target="_blank" class="post-link">ここ数日、なんか 🔗</a></td>
+      <td data-val="構造C_天文イベント×質問型">構造C_天文イベント×質問型</td>
+      <td data-val="9時/水">9時/水</td>
+      <td class="num" data-val="24">24</td>
+      <td class="num" data-val="2">2</td>
+      <td class="num" data-val="8.33">8.3%</td>
+      <td class="num vel" data-val="0.7">0.7/h</td>
+      <td class="num" data-val="34">34</td>
+      <td class="status-completed" data-val="✅完了">✅完了</td>
+    </tr>
+    <tr class="tracking">
+      <td>20</td>
+      <td class="date" data-val="2026-04-02T13:07:23.425338+09:00">4/2(木)13:07</td>
+      <td class="hook"><a href="https://www.threads.com/@yozora.uranai/post/DWnYNa_lBCS" target="_blank" class="post-link">4月に入って、何か 🔗</a></td>
+      <td data-val="共感×質問型・春の新しい流れ">共感×質問型・春の新しい流れ</td>
+      <td data-val="13時/木">13時/木</td>
+      <td class="num" data-val="24">24</td>
+      <td class="num" data-val="3">3</td>
+      <td class="num" data-val="12.5">12.5%</td>
+      <td class="num vel" data-val="3.7">3.7/h</td>
+      <td class="num" data-val="6">6</td>
+      <td class="status-tracking" data-val="📊+7h">📊+7h</td>
+    </tr>
+    <tr class="tracking">
+      <td>21</td>
+      <td class="date" data-val="2026-04-02T15:07:43.074257+09:00">4/2(木)15:07</td>
+      <td class="hook"><a href="https://www.threads.com/@yozora.uranai/post/DWnl-p8FH5w" target="_blank" class="post-link">4月中旬の新月、 🔗</a></td>
+      <td data-val="構造C_天文イベント×質問型（新月パワー）">構造C_天文イベント×質問型（新月パワー）</td>
+      <td data-val="15時/木">15時/木</td>
+      <td class="num" data-val="22">22</td>
+      <td class="num" data-val="2">2</td>
+      <td class="num" data-val="9.09">9.1%</td>
+      <td class="num vel" data-val="5.5">5.5/h</td>
+      <td class="num" data-val="4">4</td>
+      <td class="status-tracking" data-val="📊+5h">📊+5h</td>
+    </tr>
+    <tr class="tracking">
+      <td>22</td>
+      <td class="date" data-val="2026-04-02T19:12:21.244135+09:00">4/2(木)19:12</td>
+      <td class="hook"><a href="https://www.threads.com/@yozora.uranai/post/DWoB-ZLkQHv" target="_blank" class="post-link">明日は新月🌑 🔗</a></td>
+      <td data-val="不明">不明</td>
+      <td data-val="19時/木">19時/木</td>
+      <td class="num" data-val="0">0</td>
+      <td class="num" data-val="0">0</td>
+      <td class="num" data-val="0">0.0%</td>
+      <td class="num vel" data-val="0.0">0.0/h</td>
+      <td class="num" data-val="0">0</td>
+      <td class="status-tracking" data-val="📊+0h">📊+0h</td>
     </tr>
   </tbody>
 </table>
@@ -377,8 +494,63 @@ function filterTable() {
 // 初期カウント表示
 window.addEventListener('DOMContentLoaded', filterTable);
 
+// ---- テーブルソート ----
+(function() {
+  let sortCol = -1, sortAsc = true;
+  const numCols = new Set([5,6,7,8,9]); // 数値列のインデックス
+
+  function sortTable(colIdx) {
+    const table = document.getElementById('mainTable');
+    const ths = table.querySelectorAll('thead th');
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    if (sortCol === colIdx) {
+      sortAsc = !sortAsc;
+    } else {
+      sortCol = colIdx;
+      sortAsc = false; // 数値列は最初に降順
+    }
+
+    // ヘッダーのアイコン更新
+    ths.forEach((th, i) => {
+      th.classList.remove('sort-asc','sort-desc');
+      if (i === colIdx) th.classList.add(sortAsc ? 'sort-asc' : 'sort-desc');
+    });
+
+    rows.sort((a, b) => {
+      const tdsA = a.querySelectorAll('td');
+      const tdsB = b.querySelectorAll('td');
+      if (!tdsA[colIdx] || !tdsB[colIdx]) return 0;
+      const rawA = tdsA[colIdx].dataset.val ?? tdsA[colIdx].textContent.trim();
+      const rawB = tdsB[colIdx].dataset.val ?? tdsB[colIdx].textContent.trim();
+      let cmp;
+      if (numCols.has(colIdx)) {
+        cmp = parseFloat(rawA) - parseFloat(rawB);
+      } else {
+        cmp = rawA.localeCompare(rawB, 'ja');
+      }
+      return sortAsc ? cmp : -cmp;
+    });
+
+    rows.forEach(r => tbody.appendChild(r));
+
+    // #列を振り直し
+    rows.forEach((r, i) => {
+      const td = r.querySelector('td:first-child');
+      if (td) td.textContent = i + 1;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('#mainTable th.sortable').forEach(th => {
+      th.addEventListener('click', () => sortTable(parseInt(th.dataset.col)));
+    });
+  });
+})();
+
 // ---- 成長曲線チャート ----
-const growthDatasets = [{"label": "春分を過ぎた今夜✨（15時/日）", "data": [{"x": 61, "y": 219}, {"x": 63, "y": 219}, {"x": 65, "y": 219}], "borderColor": "#9966FF", "backgroundColor": "#9966FF22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "🌙 牡羊座さんへ（19時/日）", "data": [{"x": 57, "y": 73}, {"x": 59, "y": 73}, {"x": 61, "y": 73}], "borderColor": "#FF9F40", "backgroundColor": "#FF9F4022", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "ここ数日、なんか（20時/日）", "data": [{"x": 56, "y": 128}, {"x": 58, "y": 128}, {"x": 60, "y": 128}], "borderColor": "#C9CBCF", "backgroundColor": "#C9CBCF22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "12星座中、今週最も運が開く星座。（9時/月）", "data": [{"x": 43, "y": 29}, {"x": 45, "y": 29}, {"x": 47, "y": 29}], "borderColor": "#5AD8A6", "backgroundColor": "#5AD8A622", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "月が双子座に移ります✨（12時/月）", "data": [{"x": 40, "y": 176}, {"x": 42, "y": 176}, {"x": 44, "y": 176}], "borderColor": "#F6BD16", "backgroundColor": "#F6BD1622", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "来週、仕事で（7時/火）", "data": [{"x": 21, "y": 50}, {"x": 23, "y": 50}, {"x": 25, "y": 50}], "borderColor": "#1E9493", "backgroundColor": "#1E949322", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "恋愛について、（9時/火）", "data": [{"x": 19, "y": 138}, {"x": 21, "y": 138}, {"x": 23, "y": 138}], "borderColor": "#FAAD14", "backgroundColor": "#FAAD1422", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "水星逆行が（10時/火）", "data": [{"x": 18, "y": 97}, {"x": 20, "y": 98}, {"x": 22, "y": 98}], "borderColor": "#E7869B", "backgroundColor": "#E7869B22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "【今週の星座ランキング】（12時/火）", "data": [{"x": 16, "y": 92}, {"x": 18, "y": 92}, {"x": 20, "y": 95}], "borderColor": "#3fb950", "backgroundColor": "#3fb95022", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "最近、仕事で判断を迷う（15時/火）", "data": [{"x": 13, "y": 23}, {"x": 15, "y": 23}, {"x": 17, "y": 23}], "borderColor": "#FF6384", "backgroundColor": "#FF638422", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "新しい月が始まる時、（17時/火）", "data": [{"x": 11, "y": 20}, {"x": 13, "y": 21}, {"x": 15, "y": 21}], "borderColor": "#36A2EB", "backgroundColor": "#36A2EB22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "来週、仕事で気をつけた方がいい星座。（19時/火）", "data": [{"x": 9, "y": 39}, {"x": 11, "y": 39}, {"x": 13, "y": 39}], "borderColor": "#9966FF", "backgroundColor": "#9966FF22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "今夜、12星座の中で最も（20時/火）", "data": [{"x": 8, "y": 64}, {"x": 10, "y": 64}, {"x": 12, "y": 64}], "borderColor": "#FF9F40", "backgroundColor": "#FF9F4022", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "今週後半、仕事で判断ミスが起きやすい星座（7時/水）", "data": [{"x": 1, "y": 53}], "borderColor": "#7BC8A4", "backgroundColor": "#7BC8A422", "fill": false, "tension": 0.3, "pointRadius": 3}];
+const growthDatasets = [{"label": "春分を過ぎた今夜✨（15時/日）", "data": [{"x": 61, "y": 219}, {"x": 63, "y": 219}, {"x": 65, "y": 219}], "borderColor": "#9966FF", "backgroundColor": "#9966FF22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "🌙 牡羊座さんへ（19時/日）", "data": [{"x": 57, "y": 73}, {"x": 59, "y": 73}, {"x": 61, "y": 73}], "borderColor": "#FF9F40", "backgroundColor": "#FF9F4022", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "ここ数日、なんか（20時/日）", "data": [{"x": 56, "y": 128}, {"x": 58, "y": 128}, {"x": 60, "y": 128}], "borderColor": "#C9CBCF", "backgroundColor": "#C9CBCF22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "12星座中、今週最も運が開く星座。（9時/月）", "data": [{"x": 43, "y": 29}, {"x": 45, "y": 29}, {"x": 47, "y": 29}], "borderColor": "#5AD8A6", "backgroundColor": "#5AD8A622", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "月が双子座に移ります✨（12時/月）", "data": [{"x": 40, "y": 176}, {"x": 42, "y": 176}, {"x": 44, "y": 176}], "borderColor": "#F6BD16", "backgroundColor": "#F6BD1622", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "来週、仕事で（7時/火）", "data": [{"x": 21, "y": 50}, {"x": 23, "y": 50}, {"x": 25, "y": 50}, {"x": 60, "y": 50}, {"x": 61, "y": 50}], "borderColor": "#1E9493", "backgroundColor": "#1E949322", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "恋愛について、（9時/火）", "data": [{"x": 19, "y": 138}, {"x": 21, "y": 138}, {"x": 23, "y": 138}, {"x": 58, "y": 138}, {"x": 59, "y": 138}], "borderColor": "#FAAD14", "backgroundColor": "#FAAD1422", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "水星逆行が（10時/火）", "data": [{"x": 18, "y": 97}, {"x": 20, "y": 98}, {"x": 22, "y": 98}, {"x": 56, "y": 99}, {"x": 57, "y": 99}], "borderColor": "#E7869B", "backgroundColor": "#E7869B22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "【今週の星座ランキング】（12時/火）", "data": [{"x": 16, "y": 92}, {"x": 18, "y": 92}, {"x": 20, "y": 95}, {"x": 55, "y": 101}, {"x": 56, "y": 101}], "borderColor": "#3fb950", "backgroundColor": "#3fb95022", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "最近、仕事で判断を迷う（15時/火）", "data": [{"x": 13, "y": 23}, {"x": 15, "y": 23}, {"x": 17, "y": 23}, {"x": 52, "y": 25}, {"x": 53, "y": 25}], "borderColor": "#FF6384", "backgroundColor": "#FF638422", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "新しい月が始まる時、（17時/火）", "data": [{"x": 11, "y": 20}, {"x": 13, "y": 21}, {"x": 15, "y": 21}, {"x": 50, "y": 24}], "borderColor": "#36A2EB", "backgroundColor": "#36A2EB22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "来週、仕事で気をつけた方がいい星座。（19時/火）", "data": [{"x": 9, "y": 39}, {"x": 11, "y": 39}, {"x": 13, "y": 39}, {"x": 48, "y": 44}], "borderColor": "#9966FF", "backgroundColor": "#9966FF22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "今夜、12星座の中で最も（20時/火）", "data": [{"x": 8, "y": 64}, {"x": 10, "y": 64}, {"x": 12, "y": 64}, {"x": 46, "y": 78}, {"x": 47, "y": 78}], "borderColor": "#FF9F40", "backgroundColor": "#FF9F4022", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "最近、恋愛で（9時/木）", "data": [{"x": 10, "y": 33}], "borderColor": "#FAAD14", "backgroundColor": "#FAAD1422", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "春の星の動きを見ていて（12時/木）", "data": [{"x": 7, "y": 31}, {"x": 8, "y": 31}], "borderColor": "#FF6384", "backgroundColor": "#FF638422", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "4月に入って、何か（13時/木）", "data": [{"x": 6, "y": 22}, {"x": 7, "y": 24}], "borderColor": "#36A2EB", "backgroundColor": "#36A2EB22", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "4月中旬の新月、（15時/木）", "data": [{"x": 4, "y": 22}, {"x": 5, "y": 22}], "borderColor": "#FFCE56", "backgroundColor": "#FFCE5622", "fill": false, "tension": 0.3, "pointRadius": 3}, {"label": "明日は新月🌑（19時/木）", "data": [{"x": 0, "y": 0}], "borderColor": "#FF9F40", "backgroundColor": "#FF9F4022", "fill": false, "tension": 0.3, "pointRadius": 3}];
 if (growthDatasets.length > 0) {
   new Chart(document.getElementById('growthChart'), {
     type: 'line',
@@ -402,9 +574,9 @@ if (growthDatasets.length > 0) {
 }
 
 // ---- パターン別棒グラフ ----
-const patLabels = ["構造G_注意喚起+限定型（今日・今週の仕事運警告）", "構造D_予告型（今夜の重要発表予告）", "自由型_恋愛深掘り", "構造B_ランキング型_総合運TOP5", "自由型_水星逆行対策", "不明", "自由型_仕事運注意喚起", "構造C_共感型_仕事運", "自由型_総合運メッセージ"];
-const patAvg    = [53.0, 8.0, 7.3, 5.8, 5.4, 2.8, 2.4, 1.8, 1.8];
-const patCounts = [1, 1, 1, 1, 1, 6, 1, 1, 1];
+const patLabels = ["構造G_注意喚起+限定型（今日・今週の仕事運警告）", "構造D_予告型（今夜の重要発表予告）", "自由型_恋愛深掘り", "構造B_ランキング型_総合運TOP5", "構造C_天文イベント×質問型（新月パワー）", "自由型_水星逆行対策", "深掘り共感型_春の転機", "共感×質問型・春の新しい流れ", "不明", "自由型_仕事運注意喚起", "構造C_共感型_仕事運", "自由型_総合運メッセージ", "構造自由_共感質問型", "構造自由_共感×深掘り質問型", "構造C_天文イベント×質問型"];
+const patAvg    = [53.0, 8.0, 7.3, 5.8, 5.5, 5.4, 4.4, 3.7, 2.5, 2.4, 1.8, 1.8, 1.7, 1.0, 0.7];
+const patCounts = [1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, 1, 1, 1, 1];
 if (patLabels.length > 0) {
   new Chart(document.getElementById('patternChart'), {
     type: 'bar',
@@ -432,8 +604,8 @@ if (patLabels.length > 0) {
 }
 
 // ---- 時間帯別棒グラフ ----
-const slotLabels  = ["7時", "9時", "10時", "12時", "15時", "17時", "19時", "20時"];
-const slotViews   = [52, 84, 98, 136, 121, 21, 56, 96];
+const slotLabels  = ["7時", "9時", "10時", "12時", "13時", "15時", "17時", "19時", "20時"];
+const slotViews   = [58, 56, 99, 90, 24, 73, 24, 39, 103];
 if (slotLabels.length > 0) {
   new Chart(document.getElementById('slotChart'), {
     type: 'bar',
