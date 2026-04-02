@@ -1,3 +1,24 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造G_注意喚起+限定型（恋愛本音）",
+      "category": "恋愛運",
+      "content": "4月、本音を伝えやすい星座。\n\nたった3つです。\n\n蟹座さん、蠍座さん、魚座さん。\n\n蟹座さんはパートナーへの\n想いが自然に言葉になる時期。\n蠍座さんは隠してた気持ちが\n動き出します。\n魚座さんは素直さが最高の武器。\n\nこの時期の言葉は\n相手の心を大きく動かします。\n恋愛運 #星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260402_2137_th_003",
+      "platform": "threads",
+      "status": "queued"
+    }
+  ]
 }
