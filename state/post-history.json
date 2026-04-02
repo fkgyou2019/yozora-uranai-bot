@@ -1548,6 +1548,52 @@
       "posting_started_at": "2026-04-03T07:07:14.646430+09:00",
       "posted_at": "2026-04-03T07:07:20.260528+09:00",
       "platform_post_id": "18073730057204524"
+    },
+    {
+      "pattern_name": "構造C_天文イベント×質問型",
+      "category": "今日の運勢",
+      "content": "最近、人間関係で\nモヤモヤしていませんか？\n\nそれ、水星逆行が影響している\nかもしれません。\n\n特に双子座、乙女座、\n射手座さんは心当たりがあるはず。\nでも大丈夫。これは一時的な現象です。\n\n今月末には自然と解けていきます。\n自分を責めなくて大丈夫ですよ。\n\n「🌙」を置いた方に、\n穏やかな気持ちが届きます。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260403_0807_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-03T08:07:39.691294+09:00",
+      "posted_at": "2026-04-03T08:07:45.021579+09:00",
+      "platform_post_id": "17883587382490251"
+    },
+    {
+      "pattern_name": "構造C_天文イベント質問型②",
+      "category": "恋愛運",
+      "content": "春の新月に向けて、\n恋愛で心が揺らいでいませんか？\n\nそれは自然なことです。\n新しい季節の始まりだから。\n\n特に獅子座、蠍座、魚座さんは\n心の声を聞くタイミングが来ています。\n\nこれは試練ではなく、\nあなたが本当に求めるものを\n見つめ直すチャンスです。\n\nあなたの星座は\n当てはまっていましたか？\n#恋愛運",
+      "hashtag": "#恋愛運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260403_0807_th_002",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-03T08:07:55.115126+09:00",
+      "posted_at": "2026-04-03T08:07:59.537950+09:00",
+      "platform_post_id": "17982664169812457"
     }
   ]
 }
