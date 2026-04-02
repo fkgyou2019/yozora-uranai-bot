@@ -1525,6 +1525,29 @@
       "posted_at": "2026-04-02T21:42:16.247419+09:00",
       "platform_post_id": "18122751265593664",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型②",
+      "category": "注意喚起×限定",
+      "content": "来週、仕事で大きな話が\n来やすい星座。\n\nたった2つだけです。\n\n獅子座と天秤座さん。\n\n獅子座は昇進や抜擢の可能性。\n天秤座は予想外の転機が訪れます。\n\nここは自分を信じる時。\n迷わず進んでください。\n\n「🍀」を置いた方に、\n今週中に嬉しい連絡が届きます。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260403_0237_th_003",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-03T07:07:14.646430+09:00",
+      "posted_at": "2026-04-03T07:07:20.260528+09:00",
+      "platform_post_id": "18073730057204524"
     }
   ]
 }
