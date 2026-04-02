@@ -38,6 +38,11 @@ GREEN_VIEWS_MIN = 50
 GREEN_ENG_MIN = 5.0
 # 最小チェック年齢: 180分（3時間）。投稿後3時間未満は削除しない（初速を正確に見るため）
 MIN_AGE_MINUTES = 180  # 3時間未満の投稿はチェック対象外（上限なし＝3時間以降はずっとチェック対象）
+# 12時間経過後の「財産価値なし」判定
+LONG_AGE_MINUTES = 720        # 12時間
+LONG_AGE_VIEWS_MAX = 100      # 12h後もviews≤100
+LONG_AGE_LIKES_MAX = 10       # 12h後もlikes≤10
+LONG_AGE_REPLIES_MUST = 0     # 12h後もreplies=0
 
 # --- DELETE レート制限管理 ---
 # Threads APIのDELETE上限は24時間で約100件
@@ -163,9 +168,16 @@ def check_time_content_mismatch(post_text, posted_hour):
     return mismatches
 
 
-def evaluate_post(views, likes, replies):
+def evaluate_post(views, likes, replies, age_minutes=0):
     """RED / YELLOW / GREEN を判定"""
     engagement = ((likes + replies) / views * 100) if views > 0 else 0
+
+    # 12時間経過後の「財産価値なし」判定（最優先）
+    if (age_minutes >= LONG_AGE_MINUTES
+            and views <= LONG_AGE_VIEWS_MAX
+            and likes <= LONG_AGE_LIKES_MAX
+            and replies <= LONG_AGE_REPLIES_MUST):
+        return "RED", f"12h経過でviews={views}≤{LONG_AGE_VIEWS_MAX}, likes={likes}≤{LONG_AGE_LIKES_MAX}, replies=0"
 
     if views < RED_VIEWS_THRESHOLD:
         return "RED", f"views={views} < {RED_VIEWS_THRESHOLD}"
@@ -262,7 +274,7 @@ def main():
         likes = metrics.get("likes", 0)
         replies = metrics.get("replies", 0)
 
-        status, reason = evaluate_post(views, likes, replies)
+        status, reason = evaluate_post(views, likes, replies, age_minutes)
         print(f"  views={views} likes={likes} replies={replies}")
         print(f"  判定: {status} ({reason})")
 
