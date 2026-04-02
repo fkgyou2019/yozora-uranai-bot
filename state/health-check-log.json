@@ -925,6 +925,24 @@
       "red": 0,
       "deleted": 0,
       "results": []
+    },
+    {
+      "timestamp": "2026-04-02T11:37:11.823500+09:00",
+      "checked": 1,
+      "red": 1,
+      "deleted": 1,
+      "results": [
+        {
+          "post_id": "17900385369411275",
+          "time": "2026-04-02T07:07:17+09:00",
+          "views": 48,
+          "likes": 9,
+          "replies": 10,
+          "status": "RED",
+          "reason": "views=48, eng=39.6% + 時刻矛盾",
+          "deleted": true
+        }
+      ]
     }
   ]
 }
