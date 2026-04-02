@@ -143,10 +143,17 @@ def render_table(rows):
 <table id="mainTable">
   <thead>
     <tr>
-      <th>#</th><th>投稿日時</th><th>フック（1行目）</th>
-      <th>パターン</th><th>時/曜</th>
-      <th>閲覧</th><th>いいね</th><th>ER%</th>
-      <th>ピーク速度</th><th>ピーク時間</th><th>ステータス</th>
+      <th data-col="0">#</th>
+      <th data-col="1" class="sortable">投稿日時 <span class="sort-icon">⇅</span></th>
+      <th data-col="2">フック（1行目）</th>
+      <th data-col="3" class="sortable">パターン <span class="sort-icon">⇅</span></th>
+      <th data-col="4" class="sortable">時/曜 <span class="sort-icon">⇅</span></th>
+      <th data-col="5" class="sortable">閲覧 <span class="sort-icon">⇅</span></th>
+      <th data-col="6" class="sortable">いいね <span class="sort-icon">⇅</span></th>
+      <th data-col="7" class="sortable">ER% <span class="sort-icon">⇅</span></th>
+      <th data-col="8" class="sortable">ピーク速度 <span class="sort-icon">⇅</span></th>
+      <th data-col="9" class="sortable">ピーク時間 <span class="sort-icon">⇅</span></th>
+      <th data-col="10" class="sortable">ステータス <span class="sort-icon">⇅</span></th>
     </tr>
   </thead>
   <tbody>
@@ -157,19 +164,20 @@ def render_table(rows):
             hook_cell = f'<a href="{r["url"]}" target="_blank" class="post-link">{r["fl"]} 🔗</a>'
         else:
             hook_cell = r["fl"]
+        # data-val に数値ソート用の生値を埋め込む
         html += f"""
     <tr class="{cls}">
       <td>{i}</td>
-      <td class="date">{r['posted_at']}</td>
+      <td class="date" data-val="{r['posted_at_raw']}">{r['posted_at']}</td>
       <td class="hook">{hook_cell}</td>
-      <td>{r['pname']}</td>
-      <td>{r['slot']}</td>
-      <td class="num">{r['views']:,}</td>
-      <td class="num">{r['likes']}</td>
-      <td class="num">{r['er']:.1f}%</td>
-      <td class="num vel">{r['peak_v']:.1f}/h</td>
-      <td class="num">+{r['peak_h']}h</td>
-      <td class="status-{cls}">{r['status']}</td>
+      <td data-val="{r['pname']}">{r['pname']}</td>
+      <td data-val="{r['slot']}">{r['slot']}</td>
+      <td class="num" data-val="{r['views']}">{r['views']:,}</td>
+      <td class="num" data-val="{r['likes']}">{r['likes']}</td>
+      <td class="num" data-val="{r['er']}">{r['er']:.1f}%</td>
+      <td class="num vel" data-val="{r['peak_v']}">{r['peak_v']:.1f}/h</td>
+      <td class="num" data-val="{r['peak_h']}">{r['peak_h']}</td>
+      <td class="status-{cls}" data-val="{r['status']}">{r['status']}</td>
     </tr>"""
     html += "\n  </tbody>\n</table>"
     return html
@@ -247,6 +255,12 @@ def generate_html(data, last_updated, now_str):
     .tab-content.active{{display:block;}}
     .empty{{color:var(--muted);text-align:center;padding:40px;font-size:13px;}}
     .footer{{text-align:center;color:var(--muted);font-size:11px;margin-top:28px;padding-bottom:12px;}}
+    /* ソート */
+    th.sortable{{cursor:pointer;user-select:none;white-space:nowrap;}}
+    th.sortable:hover{{color:var(--accent);}}
+    th.sort-asc .sort-icon::after{{content:'▲';margin-left:4px;color:var(--accent);}}
+    th.sort-desc .sort-icon::after{{content:'▼';margin-left:4px;color:var(--accent);}}
+    th.sort-asc .sort-icon,th.sort-desc .sort-icon{{font-size:0;}}
   </style>
 </head>
 <body>
@@ -370,6 +384,61 @@ function filterTable() {{
 
 // 初期カウント表示
 window.addEventListener('DOMContentLoaded', filterTable);
+
+// ---- テーブルソート ----
+(function() {{
+  let sortCol = -1, sortAsc = true;
+  const numCols = new Set([5,6,7,8,9]); // 数値列のインデックス
+
+  function sortTable(colIdx) {{
+    const table = document.getElementById('mainTable');
+    const ths = table.querySelectorAll('thead th');
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    if (sortCol === colIdx) {{
+      sortAsc = !sortAsc;
+    }} else {{
+      sortCol = colIdx;
+      sortAsc = false; // 数値列は最初に降順
+    }}
+
+    // ヘッダーのアイコン更新
+    ths.forEach((th, i) => {{
+      th.classList.remove('sort-asc','sort-desc');
+      if (i === colIdx) th.classList.add(sortAsc ? 'sort-asc' : 'sort-desc');
+    }});
+
+    rows.sort((a, b) => {{
+      const tdsA = a.querySelectorAll('td');
+      const tdsB = b.querySelectorAll('td');
+      if (!tdsA[colIdx] || !tdsB[colIdx]) return 0;
+      const rawA = tdsA[colIdx].dataset.val ?? tdsA[colIdx].textContent.trim();
+      const rawB = tdsB[colIdx].dataset.val ?? tdsB[colIdx].textContent.trim();
+      let cmp;
+      if (numCols.has(colIdx)) {{
+        cmp = parseFloat(rawA) - parseFloat(rawB);
+      }} else {{
+        cmp = rawA.localeCompare(rawB, 'ja');
+      }}
+      return sortAsc ? cmp : -cmp;
+    }});
+
+    rows.forEach(r => tbody.appendChild(r));
+
+    // #列を振り直し
+    rows.forEach((r, i) => {{
+      const td = r.querySelector('td:first-child');
+      if (td) td.textContent = i + 1;
+    }});
+  }}
+
+  document.addEventListener('DOMContentLoaded', function() {{
+    document.querySelectorAll('#mainTable th.sortable').forEach(th => {{
+      th.addEventListener('click', () => sortTable(parseInt(th.dataset.col)));
+    }});
+  }});
+}})();
 
 // ---- 成長曲線チャート ----
 const growthDatasets = {growth_json};
