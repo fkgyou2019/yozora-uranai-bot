@@ -1,16 +1,63 @@
 {
   "queue": [
     {
-      "pattern_name": "構造G_注意喚起+限定型（今夜〜明日への最終警告）",
-      "category": "仕事運",
-      "content": "明日朝、仕事で大きな話が動く星座。\n気をつけた方がいいのはたった3つです。\n\n🔴牡羊座・獅子座・射手座\n\n牡羊座さんは、返信や報告のタイミング。\n獅子座さんは、判断を急かされたら一呼吸。\n射手座さんは、言葉選びが運を左右します。\n\n今夜のうちに心の準備を整えておくと、\n明朝の判断が変わりますよ。\n\n#今週の占い",
-      "hashtag": "#今週の占い",
-      "time_slot": "夜（19〜21時台）",
-      "scheduled_hour": 21,
-      "id": "post_20260402_1845_exp_006",
-      "platform": "threads",
+      "pattern_name": "構造C_天文イベント×質問型（新月パワー）",
+      "category": "共感×質問型・新月",
+      "content": "明日は新月🌑\n\n何か新しく始めたいことが\nありませんか？\n\n新月は「始まりの日」。\n\n特に牡羊座、蟹座、\n天秤座、山羊座さんは\n強く新月エネルギーを\n受け取れる時期です。\n\nこの日に決めたこと、\n始めたことは\n思った以上に実現しやすい。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
       "is_affiliate": false,
       "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.3
+      },
+      "id": "post_20260402_1907_th_001",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型（木曜定番）",
+      "category": "注意喚起型・今週後半",
+      "content": "今週後半、気をつけた方がいい\n星座がたった3つあります。\n\n双子座、天秤座、水瓶座さんです。\n\n双子座は言葉のすれ違いが\n起きやすい時期。\n\n天秤座は決断を急かされるような\n場面が来そうです。\n\n水瓶座は直感より慎重さが\n吉となる週。\n\n該当する方、当たってたら\n今週の占い #今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260402_1907_th_002",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型（仕事運・転機）",
+      "category": "注意喚起型・仕事運",
+      "content": "来週、仕事で大きな話が\n来やすい星座。\n\nたった2つだけです。\n\n獅子座と天秤座さんです。\n\n獅子座さんは昇進や\n抜擢の可能性。\n\n天秤座さんは予想外の転機が\n訪れるかもしれません。\n\nここは自分を信じる時。\n迷わず進んでください。\n仕事運 #今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 9.0
+      },
+      "id": "post_20260402_1907_th_004",
+      "platform": "threads",
       "status": "queued"
     }
   ]
