@@ -1039,7 +1039,33 @@
         "hook_length": 21
       },
       "collected_at": "2026-04-02T08:06:08.965278+09:00"
+    },
+    {
+      "id": "post_20260401_0907_th_001",
+      "platform_post_id": "17883555885493755",
+      "posted_at": "2026-04-01T09:07:38.032394+09:00",
+      "pattern_name": "構造C_天文イベント×質問型",
+      "category": "今日の運勢",
+      "content_preview": "ここ数日、なんか\nモヤモヤしていませんか？\n\nそれ、水星逆行の影響かもしれません。\n\n特に双子座、乙",
+      "first_line": "ここ数日、なんか",
+      "char_count": 141,
+      "metrics": {
+        "views": 24,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 8.33
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-04-02T10:37:19.820296+09:00"
     }
   ],
-  "last_updated": "2026-04-02T09:07:36.630081+09:00"
+  "last_updated": "2026-04-02T10:37:19.820296+09:00"
 }

@@ -32,7 +32,7 @@
     },
     {
       "pattern": "ランキング型",
-      "weight": 7,
+      "weight": 6,
       "avg_engagement": 21.32,
       "avg_views": 254.0,
       "sample_count": 3,
@@ -40,7 +40,7 @@
     },
     {
       "pattern": "限定×恐怖型・恋愛",
-      "weight": 7,
+      "weight": 6,
       "avg_engagement": 21.29,
       "avg_views": 559.0,
       "sample_count": 1,
@@ -239,13 +239,13 @@
   "insights": [
     "最強パターン: 注意喚起型・仕事運（eng率42.1%・閲覧674・1件）",
     "ランキング形式あり → avg eng 22.9%",
-    "絵文字CTAあり → avg eng 21.3%",
+    "絵文字CTAあり → avg eng 20.4%",
     "数字フックあり → avg eng 19.2%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 40,
-    "last_analyzed": "2026-04-02T09:07:40.987022+09:00",
+    "data_count": 41,
+    "last_analyzed": "2026-04-02T10:37:23.826873+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -274,7 +274,7 @@
       },
       {
         "pattern": "ランキング型",
-        "weight": 7,
+        "weight": 6,
         "avg_engagement": 21.32,
         "avg_views": 254.0,
         "sample_count": 3,
@@ -282,7 +282,7 @@
       },
       {
         "pattern": "限定×恐怖型・恋愛",
-        "weight": 7,
+        "weight": 6,
         "avg_engagement": 21.29,
         "avg_views": 559.0,
         "sample_count": 1,
@@ -395,6 +395,14 @@
         "total_replies": 40
       },
       {
+        "pattern": "構造C_天文イベント×質問型",
+        "count": 1,
+        "avg_engagement": 8.33,
+        "avg_views": 24.0,
+        "total_likes": 2,
+        "total_replies": 0
+      },
+      {
         "pattern": "天文イベント型（推定）",
         "count": 7,
         "avg_engagement": 7.84,
@@ -475,8 +483,8 @@
       },
       {
         "feature": "has_cta_emoji",
-        "count": 13,
-        "avg_engagement": 21.32
+        "count": 14,
+        "avg_engagement": 20.39
       },
       {
         "feature": "has_number_hook",
@@ -485,8 +493,8 @@
       },
       {
         "feature": "has_question",
-        "count": 7,
-        "avg_engagement": 12.34
+        "count": 8,
+        "avg_engagement": 11.84
       }
     ],
     "top_hook_styles": [
@@ -578,9 +586,9 @@
       },
       "9": {
         "slot": "朝（6〜9時台）",
-        "avg_eng": 10.91,
-        "avg_views": 642.0,
-        "count": 4
+        "avg_eng": 10.4,
+        "avg_views": 519.0,
+        "count": 5
       },
       "10": {
         "slot": "午前（10〜12時台）",
@@ -695,13 +703,13 @@
     "insights": [
       "最強パターン: 注意喚起型・仕事運（eng率42.1%・閲覧674・1件）",
       "ランキング形式あり → avg eng 22.9%",
-      "絵文字CTAあり → avg eng 21.3%",
+      "絵文字CTAあり → avg eng 20.4%",
       "数字フックあり → avg eng 19.2%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 40,
-  "last_analyzed": "2026-04-02T09:07:40.987022+09:00",
+  "data_count": 41,
+  "last_analyzed": "2026-04-02T10:37:23.826873+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -809,6 +817,14 @@
       "total_replies": 40
     },
     {
+      "pattern": "構造C_天文イベント×質問型",
+      "count": 1,
+      "avg_engagement": 8.33,
+      "avg_views": 24.0,
+      "total_likes": 2,
+      "total_replies": 0
+    },
+    {
       "pattern": "天文イベント型（推定）",
       "count": 7,
       "avg_engagement": 7.84,
@@ -889,8 +905,8 @@
     },
     {
       "feature": "has_cta_emoji",
-      "count": 13,
-      "avg_engagement": 21.32
+      "count": 14,
+      "avg_engagement": 20.39
     },
     {
       "feature": "has_number_hook",
@@ -899,8 +915,8 @@
     },
     {
       "feature": "has_question",
-      "count": 7,
-      "avg_engagement": 12.34
+      "count": 8,
+      "avg_engagement": 11.84
     }
   ],
   "best_posts": [
@@ -964,9 +980,9 @@
     },
     "9": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 10.91,
-      "avg_views": 642.0,
-      "count": 4
+      "avg_eng": 10.4,
+      "avg_views": 519.0,
+      "count": 5
     },
     "10": {
       "slot": "午前（10〜12時台）",
