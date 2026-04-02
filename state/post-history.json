@@ -1433,6 +1433,29 @@
       "posting_started_at": "2026-04-02T13:07:17.824683+09:00",
       "posted_at": "2026-04-02T13:07:23.425338+09:00",
       "platform_post_id": "18126742753575670"
+    },
+    {
+      "pattern_name": "構造C_天文イベント×質問型（新月パワー）",
+      "category": "新月の影響",
+      "content": "4月中旬の新月、\n何かに「決心」する予定ですか？\n\n新月のパワーは\n「始まりと決断」を応援します。\n\n特に双子座、乙女座、\n水瓶座さんは、この新月の\nタイミングが最高のチャンス。\n\nやりたかったこと、\nこれからしっかり\n進めていってくださいね。\n\n「🌙」を置いた方に、\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260402_1507_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-02T15:07:36.980650+09:00",
+      "posted_at": "2026-04-02T15:07:43.074257+09:00",
+      "platform_post_id": "18095335661083093"
     }
   ]
 }

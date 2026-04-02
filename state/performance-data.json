@@ -1091,7 +1091,33 @@
         "hook_length": 12
       },
       "collected_at": "2026-04-02T12:07:39.475658+09:00"
+    },
+    {
+      "id": "post_20260401_1208_th_001",
+      "platform_post_id": "17952302130118360",
+      "posted_at": "2026-04-01T15:07:21.550619+09:00",
+      "pattern_name": "構造自由_共感×深掘り質問型",
+      "category": "総合運",
+      "content_preview": "新しい季節、何か\nリセットしたいことありますか？\n\nこの時期って、心が\n変わろうとする信号を\n送って",
+      "first_line": "新しい季節、何か",
+      "char_count": 140,
+      "metrics": {
+        "views": 27,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-04-02T15:07:43.153463+09:00"
     }
   ],
-  "last_updated": "2026-04-02T14:53:58.404465+09:00"
+  "last_updated": "2026-04-02T15:07:43.153463+09:00"
 }
