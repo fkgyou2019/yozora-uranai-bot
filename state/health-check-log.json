@@ -1305,6 +1305,104 @@
           "deleted": false
         }
       ]
+    },
+    {
+      "timestamp": "2026-04-02T20:31:21.176399+09:00",
+      "checked": 9,
+      "red": 3,
+      "deleted": 3,
+      "results": [
+        {
+          "post_id": "18095335661083093",
+          "time": "2026-04-02T15:07:40+09:00",
+          "views": 22,
+          "likes": 2,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=22, eng=9.1%",
+          "deleted": false
+        },
+        {
+          "post_id": "18126742753575670",
+          "time": "2026-04-02T13:07:21+09:00",
+          "views": 24,
+          "likes": 3,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=24, eng=12.5%",
+          "deleted": false
+        },
+        {
+          "post_id": "17882187453499996",
+          "time": "2026-04-02T12:07:37+09:00",
+          "views": 31,
+          "likes": 2,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=31, eng=6.5%",
+          "deleted": false
+        },
+        {
+          "post_id": "17993432135940354",
+          "time": "2026-03-31T20:39:29+09:00",
+          "views": 78,
+          "likes": 11,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=78, eng=14.1%",
+          "deleted": false
+        },
+        {
+          "post_id": "18025784474803851",
+          "time": "2026-03-31T20:37:40+09:00",
+          "views": 18,
+          "likes": 1,
+          "replies": 0,
+          "status": "RED",
+          "reason": "12h経過でviews=18≤100, likes=1≤10, replies=0",
+          "deleted": true
+        },
+        {
+          "post_id": "17881010823510208",
+          "time": "2026-03-31T19:12:15+09:00",
+          "views": 44,
+          "likes": 2,
+          "replies": 2,
+          "status": "GREEN",
+          "reason": "views=44, eng=9.1%",
+          "deleted": false
+        },
+        {
+          "post_id": "18087378161212341",
+          "time": "2026-03-31T17:13:38+09:00",
+          "views": 24,
+          "likes": 0,
+          "replies": 0,
+          "status": "RED",
+          "reason": "12h経過でviews=24≤100, likes=0≤10, replies=0",
+          "deleted": true
+        },
+        {
+          "post_id": "18007530317853919",
+          "time": "2026-03-31T15:07:17+09:00",
+          "views": 25,
+          "likes": 1,
+          "replies": 0,
+          "status": "RED",
+          "reason": "12h経過でviews=25≤100, likes=1≤10, replies=0",
+          "deleted": true
+        },
+        {
+          "post_id": "18112616920742580",
+          "time": "2026-03-31T12:15:12+09:00",
+          "views": 127,
+          "likes": 18,
+          "replies": 12,
+          "status": "GREEN",
+          "reason": "views=127, eng=23.6%",
+          "deleted": false
+        }
+      ]
     }
   ]
 }
