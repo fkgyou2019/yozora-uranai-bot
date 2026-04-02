@@ -453,6 +453,17 @@
           "auto_replies": 0,
           "er": 20.0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 65,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 50,
+          "likes": 8,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -517,6 +528,17 @@
         {
           "h": 59,
           "ts": "2026-04-02T20:09:09.921050+09:00",
+          "views": 138,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.45,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 63,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
           "views": 138,
           "likes": 2,
           "replies": 0,
@@ -608,7 +630,7 @@
           "velocity_views_per_hour": 0.0
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 5.4,
       "peak_velocity_hour": 18
     },
@@ -670,6 +692,17 @@
         {
           "h": 56,
           "ts": "2026-04-02T20:09:09.921050+09:00",
+          "views": 101,
+          "likes": 14,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.86,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 60,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
           "views": 101,
           "likes": 14,
           "replies": 0,
@@ -750,7 +783,7 @@
           "velocity_views_per_hour": 0.0
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 1.8,
       "peak_velocity_hour": 13
     },
@@ -905,6 +938,17 @@
           "auto_replies": 0,
           "er": 9.09,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 53,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 44,
+          "likes": 2,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.09,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -980,6 +1024,17 @@
         {
           "h": 48,
           "ts": "2026-04-02T20:59:56.905009+09:00",
+          "views": 78,
+          "likes": 11,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.1,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 52,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
           "views": 78,
           "likes": 11,
           "replies": 0,
@@ -1301,6 +1356,17 @@
           "auto_replies": 0,
           "er": 6.45,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 32,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.25,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -1340,6 +1406,17 @@
           "auto_replies": 0,
           "er": 12.5,
           "velocity_views_per_hour": 2.0
+        },
+        {
+          "h": 11,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 26,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.38,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -1379,6 +1456,17 @@
           "auto_replies": 0,
           "er": 9.09,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 9,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 25,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.0,
+          "velocity_views_per_hour": 0.8
         }
       ],
       "completed": false,
@@ -1446,6 +1534,17 @@
           "auto_replies": 0,
           "er": 10.0,
           "velocity_views_per_hour": 10.0
+        },
+        {
+          "h": 5,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 11,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.09,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -1474,12 +1573,51 @@
           "auto_replies": 0,
           "er": 0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 4,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 42,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.29,
+          "velocity_views_per_hour": 10.5
         }
       ],
       "completed": false,
-      "peak_velocity": 0.0,
-      "peak_velocity_hour": 0
+      "peak_velocity": 10.5,
+      "peak_velocity_hour": 4
+    },
+    "verify-retry-20260402214216": {
+      "post_id": "verify-retry-20260402214216",
+      "platform_post_id": "18122751265593664",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWoTIcKFapf",
+      "posted_at": "2026-04-02T21:42:16.247419+09:00",
+      "pattern_name": "",
+      "slot_hour": 21,
+      "day_of_week": 3,
+      "day_name": "木",
+      "first_line": "明日4月3日は新月ですね🌙✨",
+      "content_preview": "明日4月3日は新月ですね🌙✨\n\nこの時期、特に願い事が\n叶いやすい星座があるんです。\n\n蟹座、蠍座、魚座さん。\n水のエレ",
+      "hourly": [
+        {
+          "h": 3,
+          "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 111,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.9,
+          "velocity_views_per_hour": 37.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 37.0,
+      "peak_velocity_hour": 3
     }
   },
-  "last_updated": "2026-04-02T20:59:56.905009+09:00"
+  "last_updated": "2026-04-03T00:45:13.160974+09:00"
 }
