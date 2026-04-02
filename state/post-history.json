@@ -1387,6 +1387,29 @@
       "posting_started_at": "2026-04-02T11:37:15.182779+09:00",
       "posted_at": "2026-04-02T11:37:20.830022+09:00",
       "platform_post_id": "18455434750105148"
+    },
+    {
+      "pattern_name": "深掘り共感型_春の転機",
+      "category": "共感型",
+      "content": "春の星の動きを見ていて\n気になることがあります。\n\n4月は「新しい決断の月」。\n\n牡羊座、牡牛座、双子座さんは\n特に環境の変化を感じやすい時期。\n\n不安になることもあるかもしれません。\nでもそれって、実は\n良い変化が来ているサイン。\n\n当たってた人、コメント欄で\n教えてくださいませんか？🌙\n\n#恋愛運",
+      "hashtag": "#恋愛運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.1
+      },
+      "id": "post_20260402_1207_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-02T12:07:33.552644+09:00",
+      "posted_at": "2026-04-02T12:07:39.402223+09:00",
+      "platform_post_id": "17882187453499996"
     }
   ]
 }

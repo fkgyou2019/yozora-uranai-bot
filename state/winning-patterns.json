@@ -244,8 +244,8 @@
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 41,
-    "last_analyzed": "2026-04-02T10:37:23.826873+09:00",
+    "data_count": 42,
+    "last_analyzed": "2026-04-02T12:07:41.327452+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -451,6 +451,14 @@
         "total_replies": 0
       },
       {
+        "pattern": "構造自由_共感質問型",
+        "count": 1,
+        "avg_engagement": 1.92,
+        "avg_views": 52.0,
+        "total_likes": 1,
+        "total_replies": 0
+      },
+      {
         "pattern": "自由型_恋愛深掘り",
         "count": 1,
         "avg_engagement": 1.45,
@@ -493,8 +501,8 @@
       },
       {
         "feature": "has_question",
-        "count": 8,
-        "avg_engagement": 11.84
+        "count": 9,
+        "avg_engagement": 10.73
       }
     ],
     "top_hook_styles": [
@@ -598,9 +606,9 @@
       },
       "12": {
         "slot": "午前（10〜12時台）",
-        "avg_eng": 6.93,
-        "avg_views": 125.0,
-        "count": 4
+        "avg_eng": 5.93,
+        "avg_views": 111.0,
+        "count": 5
       },
       "14": {
         "slot": "午後（13〜15時台）",
@@ -708,8 +716,8 @@
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 41,
-  "last_analyzed": "2026-04-02T10:37:23.826873+09:00",
+  "data_count": 42,
+  "last_analyzed": "2026-04-02T12:07:41.327452+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -873,6 +881,14 @@
       "total_replies": 0
     },
     {
+      "pattern": "構造自由_共感質問型",
+      "count": 1,
+      "avg_engagement": 1.92,
+      "avg_views": 52.0,
+      "total_likes": 1,
+      "total_replies": 0
+    },
+    {
       "pattern": "自由型_恋愛深掘り",
       "count": 1,
       "avg_engagement": 1.45,
@@ -915,8 +931,8 @@
     },
     {
       "feature": "has_question",
-      "count": 8,
-      "avg_engagement": 11.84
+      "count": 9,
+      "avg_engagement": 10.73
     }
   ],
   "best_posts": [
@@ -992,9 +1008,9 @@
     },
     "12": {
       "slot": "午前（10〜12時台）",
-      "avg_eng": 6.93,
-      "avg_views": 125.0,
-      "count": 4
+      "avg_eng": 5.93,
+      "avg_views": 111.0,
+      "count": 5
     },
     "14": {
       "slot": "午後（13〜15時台）",
