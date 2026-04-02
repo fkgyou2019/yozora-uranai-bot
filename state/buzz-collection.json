@@ -1,6 +1,42 @@
 {
   "posts": [
     {
+      "id": "buzz_own_best_20260403_070551_000",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "今週後半、気をつけた方がいい星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座さん。\n\n双子座",
+      "metrics": {
+        "likes": 297,
+        "retweets": 0,
+        "replies": 165,
+        "views": 2373,
+        "engagement_rate": 19.47
+      },
+      "original_id": "verify-retry-20260326091217",
+      "pattern": "注意喚起+限定型（推定）",
+      "collected_at": "2026-04-03T07:05:51.498485+09:00",
+      "analyzed": false
+    },
+    {
+      "id": "buzz_own_best_20260403_070551_003",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "来週、12星座の中で\n最も恋愛が動く星座。\n\n蟹座さんです。\n\n新しい出会いか、\n既存の関係の深まり",
+      "metrics": {
+        "likes": 53,
+        "retweets": 0,
+        "replies": 0,
+        "views": 767,
+        "engagement_rate": 6.91
+      },
+      "original_id": "post_20260324_th_002",
+      "pattern": "予告型・フォロー動機",
+      "collected_at": "2026-04-03T07:05:51.498507+09:00",
+      "analyzed": false
+    },
+    {
       "id": "buzz_own_best_20260331_072022_003",
       "platform": "threads",
       "source": "own_best",
@@ -158,8 +194,8 @@
       "last_count": 0
     },
     "own_best": {
-      "last_count": 0
+      "last_count": 2
     }
   },
-  "last_collected": "2026-04-02T07:23:00.547270+09:00"
+  "last_collected": "2026-04-03T07:05:51.408419+09:00"
 }
