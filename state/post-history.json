@@ -1341,6 +1341,75 @@
       "posted_at": "2026-04-02T09:12:17.700725+09:00",
       "platform_post_id": "17987088506793188",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造自由_深掘り共感型",
+      "category": "仕事運・共感",
+      "content": "4月は「新しい環境への\n適応の月」です。\n\n職場が変わった方、\n新しいプロジェクトが始まった方は\n特にそう感じるかもしれません。\n\n獅子座さん、山羊座さんは\nこの時期が得意な星座。\n\n一方、蟹座さんや魚座さんは\nペースをゆっくりめにすることで\n上手くいきやすいです。\n\n「✨」を置いた方に、\n仕事運 #今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 8,
+        "mobile_readability": 8,
+        "average": 8.0
+      },
+      "id": "post_20260402_0908_th_002",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-02T10:37:13.563908+09:00",
+      "posted_at": "2026-04-02T10:37:19.744788+09:00",
+      "platform_post_id": "18107461456678157"
+    },
+    {
+      "pattern_name": "構造D_予告型",
+      "category": "総合運",
+      "content": "来週、12星座の中で\n最も運命が動く星座。\n\n蠍座さんです。\n\n恋愛・仕事・金運のどれかで\n大きな転機が訪れやすい時期。\n\n特に月曜日以降は\n直感を大切にしてください。\n\n明日は金運が急上昇する\n星座を深掘りしてお届けしますね✨\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 7,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 8,
+        "mobile_readability": 9,
+        "average": 8.0
+      },
+      "id": "post_20260402_1037_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-02T11:37:15.182779+09:00",
+      "posted_at": "2026-04-02T11:37:20.830022+09:00",
+      "platform_post_id": "18455434750105148"
+    },
+    {
+      "pattern_name": "深掘り共感型_春の転機",
+      "category": "共感型",
+      "content": "春の星の動きを見ていて\n気になることがあります。\n\n4月は「新しい決断の月」。\n\n牡羊座、牡牛座、双子座さんは\n特に環境の変化を感じやすい時期。\n\n不安になることもあるかもしれません。\nでもそれって、実は\n良い変化が来ているサイン。\n\n当たってた人、コメント欄で\n教えてくださいませんか？🌙\n\n#恋愛運",
+      "hashtag": "#恋愛運",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.1
+      },
+      "id": "post_20260402_1207_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-02T12:07:33.552644+09:00",
+      "posted_at": "2026-04-02T12:07:39.402223+09:00",
+      "platform_post_id": "17882187453499996"
     }
   ]
 }

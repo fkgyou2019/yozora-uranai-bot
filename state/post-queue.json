@@ -1,42 +1,62 @@
 {
   "queue": [
     {
-      "pattern_name": "構造自由_共感質問型",
-      "category": "運勢",
-      "content": "最近、自分の直感を\n信じられていないなって\n感じることはありませんか？\n\nそんな時こそ、星からの\nメッセージを聞く時なんです。\n\n特に月と太陽の位置は\nあなたの本来の姿を\n教えてくれますよ。\n\nあなたの星座を教えてもらえたら、\nあなただけの本当の声を\nお届けしますね🌙\n#今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 7,
-        "specificity": 7,
-        "tempo": 8,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.0
-      },
-      "id": "post_20260401_0908_th_001",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
-      "pattern_name": "構造A_限定型",
-      "category": "恋愛運",
-      "content": "12星座中、たった4つだけ。\n\n今週、恋愛に\n大きな転機が来ます。\n\nそれは…蟹座、蠍座、魚座、\nそして牡牛座です。\n\n特に蟹座と魚座は\n本当の気持ちを伝える時かも。\n怖くても、その先に\n新しい関係が待っていますよ。\n\n「🌙」を置いた方に、\n勇気を後押しする流れが届きます。\n恋愛運 #星座占い",
+      "pattern_name": "共感×質問型・春の新しい流れ",
+      "category": "運勢全般",
+      "content": "4月に入って、何か\n新しい予感を感じていませんか？\n\nそれ、とても正しい感覚です。\n\n新月が新しい始まりをもたらす今、\n特に牡羊座、獅子座、射手座さんには\n大切な流れが来ています。\n\nこれまでの「慣れ」を手放すことで、\n新しい道が開きますよ。\n\n今の直感を信じてくださいね。\n\n新月の力があなたを\n今日の運勢 #星座占い",
       "hashtag": "#星座占い",
       "is_affiliate": false,
       "affiliate_comment": null,
       "quality_score": {
-        "hook": 9,
+        "hook": 8,
         "usefulness": 8,
-        "specificity": 9,
+        "specificity": 8,
         "tempo": 8,
         "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.7
+        "mobile_readability": 8,
+        "average": 8.1
       },
-      "id": "post_20260401_0908_th_002",
+      "id": "post_20260402_1208_th_001",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "注意喚起+限定型・恋愛",
+      "category": "恋愛運",
+      "content": "今週、本音が出やすい星座。\n\nたった4つだけです。\n\n牡羊座、獅子座、射手座、牡牛座さん。\n\n牡羊座は言いたいことを\nずっと我慢していたのでは？\n獅子座も射手座も、\n相手に本気で向き合う時期です。\n\n恐れずに話してみてください。\nきっと相手も受け止めますよ🌙\n\nこのメッセージが\n恋愛運 #今週の占い",
+      "hashtag": "#今週の占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.2
+      },
+      "id": "post_20260402_1208_th_003",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "ランキング型・対人運急上昇",
+      "category": "対人運",
+      "content": "【人間関係が温かくなる星座TOP3】\n\n🥉第3位：天秤座さん。\n新しい友人関係が広がります。\n\n🥈第2位：水瓶座さん。\nずっと気になっていた人と\n距離が近づく予感です。\n\n🥇第1位：蟹座さん。\n今週は周りからの信頼が\n急速に深まる時期ですよ。\n\n「🌟」を置いた方に、\n温かい言葉が届きます。\n今日の運勢 #星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 8,
+        "mobile_readability": 8,
+        "average": 8.0
+      },
+      "id": "post_20260402_1208_th_004",
       "platform": "threads",
       "status": "queued"
     }
