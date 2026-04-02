@@ -464,6 +464,17 @@
           "auto_replies": 0,
           "er": 20.0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 69,
+          "ts": "2026-04-03T04:37:01.974483+09:00",
+          "views": 50,
+          "likes": 8,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -539,6 +550,17 @@
         {
           "h": 63,
           "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 138,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.45,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 67,
+          "ts": "2026-04-03T04:37:01.974483+09:00",
           "views": 138,
           "likes": 2,
           "replies": 0,
@@ -703,6 +725,17 @@
         {
           "h": 60,
           "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 101,
+          "likes": 14,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.86,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 64,
+          "ts": "2026-04-03T04:37:01.974483+09:00",
           "views": 101,
           "likes": 14,
           "replies": 0,
@@ -949,6 +982,17 @@
           "auto_replies": 0,
           "er": 9.09,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 57,
+          "ts": "2026-04-03T04:37:01.974483+09:00",
+          "views": 44,
+          "likes": 2,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.09,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -1035,6 +1079,17 @@
         {
           "h": 52,
           "ts": "2026-04-03T00:45:13.160974+09:00",
+          "views": 78,
+          "likes": 11,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.1,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 55,
+          "ts": "2026-04-03T04:37:01.974483+09:00",
           "views": 78,
           "likes": 11,
           "replies": 0,
@@ -1369,7 +1424,7 @@
           "velocity_views_per_hour": 0.2
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 4.4,
       "peak_velocity_hour": 7
     },
@@ -1419,7 +1474,7 @@
           "velocity_views_per_hour": 0.5
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 3.7,
       "peak_velocity_hour": 6
     },
@@ -1467,6 +1522,17 @@
           "auto_replies": 0,
           "er": 8.0,
           "velocity_views_per_hour": 0.8
+        },
+        {
+          "h": 13,
+          "ts": "2026-04-03T04:37:01.974483+09:00",
+          "views": 25,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -1545,6 +1611,17 @@
           "auto_replies": 0,
           "er": 9.09,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 9,
+          "ts": "2026-04-03T04:37:01.974483+09:00",
+          "views": 12,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.33,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -1584,6 +1661,17 @@
           "auto_replies": 0,
           "er": 14.29,
           "velocity_views_per_hour": 10.5
+        },
+        {
+          "h": 7,
+          "ts": "2026-04-03T04:37:01.974483+09:00",
+          "views": 43,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.95,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -1612,6 +1700,17 @@
           "auto_replies": 0,
           "er": 0.9,
           "velocity_views_per_hour": 37.0
+        },
+        {
+          "h": 6,
+          "ts": "2026-04-03T04:37:01.974483+09:00",
+          "views": 112,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.89,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -1619,5 +1718,5 @@
       "peak_velocity_hour": 3
     }
   },
-  "last_updated": "2026-04-03T00:45:13.160974+09:00"
+  "last_updated": "2026-04-03T04:37:01.974483+09:00"
 }
