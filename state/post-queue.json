@@ -1,29 +1,9 @@
 {
   "queue": [
     {
-      "pattern_name": "構造G_注意喚起+限定型（木曜定番）",
-      "category": "注意喚起型・今週後半",
-      "content": "今週後半、気をつけた方がいい\n星座がたった3つあります。\n\n双子座、天秤座、水瓶座さんです。\n\n双子座は言葉のすれ違いが\n起きやすい時期。\n\n天秤座は決断を急かされるような\n場面が来そうです。\n\n水瓶座は直感より慎重さが\n吉となる週。\n\n該当する方、当たってたら\n今週の占い #今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 9,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 9.0
-      },
-      "id": "post_20260402_1907_th_002",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
-      "pattern_name": "構造G_注意喚起+限定型（仕事運・転機）",
-      "category": "注意喚起型・仕事運",
-      "content": "来週、仕事で大きな話が\n来やすい星座。\n\nたった2つだけです。\n\n獅子座と天秤座さんです。\n\n獅子座さんは昇進や\n抜擢の可能性。\n\n天秤座さんは予想外の転機が\n訪れるかもしれません。\n\nここは自分を信じる時。\n迷わず進んでください。\n仕事運 #今週の占い",
+      "pattern_name": "注意喚起+限定型（木曜定番シリーズ）",
+      "category": "構造G",
+      "content": "今週後半、気をつけた方がいい星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座さん。\n\n牡羊座は衝動的な決断を避けた方が吉。\n獅子座は対人関係でのすれ違いが起きやすい時期。\n射手座は焦らず、慎重さが運を引き寄せます。\n\nあなたの星座は入ってましたか？\nコメントで教えてくださいね🔮\n\n今週の占い #今日の運勢",
       "hashtag": "#今週の占い",
       "is_affiliate": false,
       "affiliate_comment": null,
@@ -36,7 +16,27 @@
         "mobile_readability": 9,
         "average": 9.0
       },
-      "id": "post_20260402_1907_th_004",
+      "id": "post_20260402_2037_th_001",
+      "platform": "threads",
+      "status": "queued"
+    },
+    {
+      "pattern_name": "共感×質問型（新月パワー）",
+      "category": "構造C",
+      "content": "明日、新月です。\nここまで頑張ってきたのに\nうまくいかなかった…\nそういう気持ちになってませんか？\n\n新月は「リセットの時」です。\n特に牡羊座、獅子座、射手座は\nこの流れを上手に使える時期。\n\n過去を手放して、\n新しい決断を心がけてください。\n\n「🔮」を置いた方に、\n4月中旬に大きな転機が訪れます。\n\n今日の運勢 #星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260402_2037_th_002",
       "platform": "threads",
       "status": "queued"
     }
