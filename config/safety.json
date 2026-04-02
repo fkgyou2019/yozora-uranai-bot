@@ -19,10 +19,10 @@
     "note": "generate_posts.pyで実装。0.45超で類似と判定し除外"
   },
   "posting_safety": {
-    "min_interval_seconds": 1200,
-    "max_posts_per_day": 10,
+    "min_interval_seconds": 7200,
+    "max_posts_per_day": 8,
     "max_posts_per_day_x": 5,
-    "max_posts_per_day_threads": 5,
+    "max_posts_per_day_threads": 8,
     "max_affiliate_posts_per_day": 2,
     "affiliate_enabled": false,
     "affiliate_note": "ASP登録完了後にtrueに変更。asp-links.jsonのaffiliate_urlも実URLに差替えること",

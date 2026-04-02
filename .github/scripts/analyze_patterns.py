@@ -147,7 +147,10 @@ def main():
             "content_preview": p.get("content_preview", ""),
         })
 
-    best_posts.sort(key=lambda x: x["eng_rate"], reverse=True)
+    # 閲覧数×ER複合スコア（財産価値を正しく評価）
+    for bp in best_posts:
+        bp["_score"] = bp["views"] * (1 + bp["eng_rate"] / 100)
+    best_posts.sort(key=lambda x: x["_score"], reverse=True)
 
     # =====================================================================
     # 3. パターン別ランキング
@@ -163,7 +166,10 @@ def main():
             "total_likes":    s["total_likes"],
             "total_replies":  s["total_replies"],
         })
-    pattern_ranking.sort(key=lambda x: x["avg_engagement"], reverse=True)
+    # 閲覧数×ER複合スコアで評価
+    for pr in pattern_ranking:
+        pr["_score"] = pr["avg_views"] * (1 + pr["avg_engagement"] / 100)
+    pattern_ranking.sort(key=lambda x: x["_score"], reverse=True)
 
     # 特徴別
     feature_ranking = []

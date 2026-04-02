@@ -90,7 +90,7 @@ jobs:
           echo "現在のキュー残: ${REMAINING}件"
           if [ "$REMAINING" = "0" ]; then
             echo "キューが空 → ポスト前に生成します"
-            python .github/scripts/generate_posts.py
+            EXPERIMENT_MODE=1 python .github/scripts/generate_posts.py
             python .github/scripts/quality_check.py || true
             NEW_REMAINING=$(python -c "
           import json, os
@@ -127,7 +127,7 @@ jobs:
         continue-on-error: true
 
       - name: Generate posts if queue is empty
-        run: python .github/scripts/generate_posts.py
+        run: EXPERIMENT_MODE=1 python .github/scripts/generate_posts.py
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         continue-on-error: true
@@ -141,7 +141,7 @@ jobs:
           REMAINING=$(python -c "import json; q=json.load(open('state/post-queue.json')); print(len([p for p in q.get('queue',[]) if p.get('status')=='queued']))")
           if [ "$REMAINING" = "0" ]; then
             echo "品質チェック後にキューが空。再生成します..."
-            python .github/scripts/generate_posts.py
+            EXPERIMENT_MODE=1 python .github/scripts/generate_posts.py
             python .github/scripts/quality_check.py || true
           fi
         env:
