@@ -1,43 +1,16 @@
 {
   "queue": [
     {
-      "pattern_name": "注意喚起+限定型_木曜定番",
-      "category": "構造G",
-      "content": "今週後半、気をつけた方がいい星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座さん。\n\n双子座は言葉のすれ違いが\n起きやすい週。\n天秤座は決断を急かされます。\n水瓶座は直感より慎重さが吉。\n\n該当の方、当たってたら\nコメント教えてくれませんか？🔮\n\n#今日の運勢",
-      "hashtag": "#今日の運勢",
+      "pattern_name": "構造G_注意喚起+限定型（今夜〜明日への最終警告）",
+      "category": "仕事運",
+      "content": "明日朝、仕事で大きな話が動く星座。\n気をつけた方がいいのはたった3つです。\n\n🔴牡羊座・獅子座・射手座\n\n牡羊座さんは、返信や報告のタイミング。\n獅子座さんは、判断を急かされたら一呼吸。\n射手座さんは、言葉選びが運を左右します。\n\n今夜のうちに心の準備を整えておくと、\n明朝の判断が変わりますよ。\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "夜（19〜21時台）",
+      "scheduled_hour": 21,
+      "id": "post_20260402_1845_exp_006",
+      "platform": "threads",
       "is_affiliate": false,
       "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 9,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 9.0
-      },
-      "id": "post_20260402_1608_th_001",
-      "platform": "threads",
-      "status": "queued"
-    },
-    {
-      "pattern_name": "注意喚起+限定型_仕事運",
-      "category": "構造G",
-      "content": "来週、仕事で大きな話が\n来やすい星座。\n\n獅子座と天秤座です。\n\n獅子座は昇進や抜擢の\n可能性があります。\n天秤座は予想外の転機。\n\nここは自分を信じる時。\n迷わず進んでください。\n\n「🍀」を置いた方に、\n今週中に嬉しい連絡が届きます。\n#今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 9,
-        "usefulness": 9,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 9.0
-      },
-      "id": "post_20260402_1608_th_003",
-      "platform": "threads",
       "status": "queued"
     }
   ]
