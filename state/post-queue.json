@@ -1,24 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "構造C_天文イベント×質問型【新月願い事】",
-      "category": "新月願い事",
-      "content": "明日4月3日は新月ですね🌙✨\n\nこの時期、特に願い事が\n叶いやすい星座があるんです。\n\n蟹座、蠍座、魚座さん。\n水のエレメント3星座は\n新月の力を最大限受け取れます。\n\n寝る前に、心からの願いを\n1つ思い浮かべてみてください。\n\nその願いが\n次の満月までに形になる。\nそんな予感がします。\n#今日の運勢",
-      "hashtag": "#今日の運勢",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 9,
-        "specificity": 8,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.7
-      },
-      "id": "post_20260402_2138_th_001",
-      "platform": "threads",
-      "status": "queued"
-    }
-  ]
+  "queue": []
 }
