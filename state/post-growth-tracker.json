@@ -1081,6 +1081,17 @@
           "auto_replies": 0,
           "er": 8.89,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 71,
+          "ts": "2026-04-03T18:40:06.089333+09:00",
+          "views": 45,
+          "likes": 2,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.89,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -1218,6 +1229,17 @@
           "auto_replies": 0,
           "er": 13.58,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 70,
+          "ts": "2026-04-03T18:40:06.089333+09:00",
+          "views": 81,
+          "likes": 11,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.58,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -1909,6 +1931,17 @@
           "auto_replies": 0,
           "er": 0.87,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 20,
+          "ts": "2026-04-03T18:40:06.089333+09:00",
+          "views": 115,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.87,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -1993,6 +2026,17 @@
           "auto_replies": 0,
           "er": 11.29,
           "velocity_views_per_hour": 121.8
+        },
+        {
+          "h": 8,
+          "ts": "2026-04-03T18:40:06.089333+09:00",
+          "views": 708,
+          "likes": 74,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.16,
+          "velocity_views_per_hour": 55.2
         }
       ],
       "completed": false,
@@ -2021,6 +2065,17 @@
           "auto_replies": 0,
           "er": 0.0,
           "velocity_views_per_hour": 3.0
+        },
+        {
+          "h": 7,
+          "ts": "2026-04-03T18:40:06.089333+09:00",
+          "views": 12,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -2054,7 +2109,35 @@
       "content_preview": "今のあなたに引かれるカードを\n1枚選んでください🔮\n\n🌕 月のカード\n⭐ 星のカード  \n🌹 薔薇のカード\n\nコメント欄",
       "hourly": [],
       "completed": true
+    },
+    "verify-retry-20260403151220": {
+      "post_id": "verify-retry-20260403151220",
+      "platform_post_id": "18099032104806293",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWqLTbklvWC",
+      "posted_at": "2026-04-03T15:12:20.298638+09:00",
+      "pattern_name": "",
+      "slot_hour": 15,
+      "day_of_week": 4,
+      "day_name": "金",
+      "first_line": "明日4月4日、",
+      "content_preview": "明日4月4日、\n仕事で大きな動きがある星座。\n\nたった3つだけです。\n\n蟹座は\n上司からの評価が\n急に変わる日。\n昇進話",
+      "hourly": [
+        {
+          "h": 3,
+          "ts": "2026-04-03T18:40:06.089333+09:00",
+          "views": 140,
+          "likes": 5,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.43,
+          "velocity_views_per_hour": 46.7
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 46.7,
+      "peak_velocity_hour": 3
     }
   },
-  "last_updated": "2026-04-03T14:56:20.804021+09:00"
+  "last_updated": "2026-04-03T18:40:06.089333+09:00"
 }
