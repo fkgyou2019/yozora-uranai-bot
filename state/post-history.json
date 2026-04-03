@@ -1733,6 +1733,30 @@
       "posting_started_at": "2026-04-04T00:06:24.302588+09:00",
       "posted_at": "2026-04-04T00:06:30.590061+09:00",
       "platform_post_id": "17882996253506705"
+    },
+    {
+      "pattern_name": "予告型（構造D）",
+      "category": "総合運",
+      "content": "来週、12星座の中で\n最も運命が動く星座。\n\n蠍座さんです。\n\n恋愛・仕事・金運のどこかで\n大きな波が来る予感がします。\n\n特に水曜日以降は\n直感を信じて動いてくださいね。\n\n明日は牡羊座さんの\n詳しい運勢をお届けしますね🔮\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 8,
+        "mobile_readability": 9,
+        "average": 8.1
+      },
+      "id": "post_20260403_2237_th_003",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-04T00:57:04.038756+09:00",
+      "posted_at": "2026-04-04T00:57:08.785326+09:00",
+      "platform_post_id": "17903305314403239",
+      "is_repost": true
     }
   ]
 }
