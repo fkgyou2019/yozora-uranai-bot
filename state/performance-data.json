@@ -1117,7 +1117,33 @@
         "hook_length": 8
       },
       "collected_at": "2026-04-02T15:07:43.153463+09:00"
+    },
+    {
+      "id": "verify-retry-20260402214216",
+      "platform_post_id": "18122751265593664",
+      "posted_at": "2026-04-02T21:42:16.247419+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "明日4月3日は新月ですね🌙✨\n\nこの時期、特に願い事が\n叶いやすい星座があるんです。\n\n蟹座、蠍座、",
+      "first_line": "明日4月3日は新月ですね🌙✨",
+      "char_count": 151,
+      "metrics": {
+        "views": 118,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.85
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 14
+      },
+      "collected_at": "2026-04-04T00:06:30.665804+09:00"
     }
   ],
-  "last_updated": "2026-04-03T21:37:14.339751+09:00"
+  "last_updated": "2026-04-04T00:06:30.665804+09:00"
 }
