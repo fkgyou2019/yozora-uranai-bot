@@ -1647,6 +1647,29 @@
       "posted_at": "2026-04-03T12:12:17.046172+09:00",
       "platform_post_id": "18321507376267249",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造E_カード選択型",
+      "category": "タロット",
+      "content": "今のあなたに引かれるカードを\n1枚選んでください🔮\n\n🌕 月のカード\n⭐ 星のカード  \n🌹 薔薇のカード\n\nコメント欄に選んだカードを\n教えてくれたら、あなただけの\n今週のメッセージをお届けします。\n\n選んだ瞬間のあなたの直感が\n最高のナビゲーターです✨\n\n#タロット",
+      "hashtag": "#タロット",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.8
+      },
+      "id": "post_20260403_1307_th_002",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-03T13:07:40.428238+09:00",
+      "posted_at": "2026-04-03T13:07:45.898268+09:00",
+      "platform_post_id": "17953358547109503"
     }
   ]
 }
