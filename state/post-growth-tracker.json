@@ -1953,6 +1953,50 @@
           "auto_replies": 0,
           "er": 0.87,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 26,
+          "ts": "2026-04-04T00:05:26.112560+09:00",
+          "views": 118,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.85,
+          "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 28,
+          "ts": "2026-04-04T02:06:22.131358+09:00",
+          "views": 118,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.85,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 31,
+          "ts": "2026-04-04T04:52:37.101113+09:00",
+          "views": 119,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.84,
+          "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 33,
+          "ts": "2026-04-04T07:00:11.544501+09:00",
+          "views": 119,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.84,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -2059,11 +2103,55 @@
           "auto_replies": 0,
           "er": 10.96,
           "velocity_views_per_hour": 75.0
+        },
+        {
+          "h": 13,
+          "ts": "2026-04-04T00:05:26.112560+09:00",
+          "views": 1269,
+          "likes": 121,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.93,
+          "velocity_views_per_hour": 137.0
+        },
+        {
+          "h": 15,
+          "ts": "2026-04-04T02:06:22.131358+09:00",
+          "views": 1365,
+          "likes": 134,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.18,
+          "velocity_views_per_hour": 48.0
+        },
+        {
+          "h": 18,
+          "ts": "2026-04-04T04:52:37.101113+09:00",
+          "views": 1420,
+          "likes": 137,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.0,
+          "velocity_views_per_hour": 18.3
+        },
+        {
+          "h": 20,
+          "ts": "2026-04-04T07:00:11.544501+09:00",
+          "views": 1455,
+          "likes": 140,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.97,
+          "velocity_views_per_hour": 17.5
         }
       ],
       "completed": false,
-      "peak_velocity": 121.8,
-      "peak_velocity_hour": 4
+      "peak_velocity": 137.0,
+      "peak_velocity_hour": 13
     },
     "verify-retry-20260403104218": {
       "post_id": "verify-retry-20260403104218",
@@ -2109,9 +2197,20 @@
           "auto_replies": 0,
           "er": 7.69,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 13,
+          "ts": "2026-04-04T00:05:26.112560+09:00",
+          "views": 18,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.56,
+          "velocity_views_per_hour": 1.7
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 3.0,
       "peak_velocity_hour": 4
     },
@@ -2176,6 +2275,50 @@
           "auto_replies": 0,
           "er": 6.29,
           "velocity_views_per_hour": 1.5
+        },
+        {
+          "h": 8,
+          "ts": "2026-04-04T00:05:26.112560+09:00",
+          "views": 148,
+          "likes": 5,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.08,
+          "velocity_views_per_hour": 1.7
+        },
+        {
+          "h": 10,
+          "ts": "2026-04-04T02:06:22.131358+09:00",
+          "views": 148,
+          "likes": 5,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.08,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 13,
+          "ts": "2026-04-04T04:52:37.101113+09:00",
+          "views": 150,
+          "likes": 5,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.0,
+          "velocity_views_per_hour": 0.7
+        },
+        {
+          "h": 15,
+          "ts": "2026-04-04T07:00:11.544501+09:00",
+          "views": 150,
+          "likes": 5,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -2206,7 +2349,7 @@
           "velocity_views_per_hour": 5.0
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 5.0,
       "peak_velocity_hour": 1
     },
@@ -2223,7 +2366,168 @@
       "content_preview": "4月中旬、突然の\nお金が入る星座。\n\nたった3つだけです。\n\n獅子座は\n予想外の臨時収入が\n舞い込む時期。✨\n\n山羊座は",
       "hourly": [],
       "completed": true
+    },
+    "verify-retry-20260403214217": {
+      "post_id": "verify-retry-20260403214217",
+      "platform_post_id": "18206202949328127",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWq37h_ETdn",
+      "posted_at": "2026-04-03T21:42:17.252216+09:00",
+      "pattern_name": "",
+      "slot_hour": 21,
+      "day_of_week": 4,
+      "day_name": "金",
+      "first_line": "今週後半、",
+      "content_preview": "今週後半、\n人間関係が\n大きく動く星座。\n\nたった3つだけです。\n\n双子座は\n新しい出会いや\n再会がきっかけで\n運が開く",
+      "hourly": [
+        {
+          "h": 2,
+          "ts": "2026-04-04T00:05:26.112560+09:00",
+          "views": 36,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.11,
+          "velocity_views_per_hour": 18.0
+        },
+        {
+          "h": 4,
+          "ts": "2026-04-04T02:06:22.131358+09:00",
+          "views": 37,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.81,
+          "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 7,
+          "ts": "2026-04-04T04:52:37.101113+09:00",
+          "views": 39,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.26,
+          "velocity_views_per_hour": 0.7
+        },
+        {
+          "h": 9,
+          "ts": "2026-04-04T07:00:11.544501+09:00",
+          "views": 39,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.26,
+          "velocity_views_per_hour": 0.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 18.0,
+      "peak_velocity_hour": 2
+    },
+    "post_20260403_2237_th_001": {
+      "post_id": "post_20260403_2237_th_001",
+      "platform_post_id": "17882996253506705",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWrIbxKibJk",
+      "posted_at": "2026-04-04T00:06:30.590061+09:00",
+      "pattern_name": "共感×具体アドバイス型",
+      "slot_hour": 0,
+      "day_of_week": 5,
+      "day_name": "土",
+      "first_line": "春になると",
+      "content_preview": "春になると\n「新しく始めたい気持ち」になりますよね。\n\nそれ、誰もが感じる宇宙のサイン。\n特に牡羊座、蟹座、天秤座、山羊",
+      "hourly": [
+        {
+          "h": 1,
+          "ts": "2026-04-04T02:06:22.131358+09:00",
+          "views": 77,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.6,
+          "velocity_views_per_hour": 77.0
+        },
+        {
+          "h": 4,
+          "ts": "2026-04-04T04:52:37.101113+09:00",
+          "views": 90,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.22,
+          "velocity_views_per_hour": 4.3
+        },
+        {
+          "h": 6,
+          "ts": "2026-04-04T07:00:11.544501+09:00",
+          "views": 91,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.2,
+          "velocity_views_per_hour": 0.5
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 77.0,
+      "peak_velocity_hour": 1
+    },
+    "post_20260403_2237_th_003": {
+      "post_id": "post_20260403_2237_th_003",
+      "platform_post_id": "17903305314403239",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWrOO0hEUPU",
+      "posted_at": "2026-04-04T00:57:08.785326+09:00",
+      "pattern_name": "予告型（構造D）",
+      "slot_hour": 0,
+      "day_of_week": 5,
+      "day_name": "土",
+      "first_line": "来週、12星座の中で",
+      "content_preview": "来週、12星座の中で\n最も運命が動く星座。\n\n蠍座さんです。\n\n恋愛・仕事・金運のどこかで\n大きな波が来る予感がします。",
+      "hourly": [
+        {
+          "h": 1,
+          "ts": "2026-04-04T02:06:22.131358+09:00",
+          "views": 5,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.0,
+          "velocity_views_per_hour": 5.0
+        },
+        {
+          "h": 3,
+          "ts": "2026-04-04T04:52:37.101113+09:00",
+          "views": 11,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.0,
+          "velocity_views_per_hour": 3.0
+        },
+        {
+          "h": 6,
+          "ts": "2026-04-04T07:00:11.544501+09:00",
+          "views": 15,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.0,
+          "velocity_views_per_hour": 1.3
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 5.0,
+      "peak_velocity_hour": 1
     }
   },
-  "last_updated": "2026-04-03T21:03:15.040333+09:00"
+  "last_updated": "2026-04-04T07:00:11.544501+09:00"
 }

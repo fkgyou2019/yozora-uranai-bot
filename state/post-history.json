@@ -1710,6 +1710,76 @@
       "posted_at": "2026-04-03T21:42:17.252216+09:00",
       "platform_post_id": "18206202949328127",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "共感×具体アドバイス型",
+      "category": "総合運",
+      "content": "春になると\n「新しく始めたい気持ち」になりますよね。\n\nそれ、誰もが感じる宇宙のサイン。\n特に牡羊座、蟹座、天秤座、山羊座さんは\nその影響を強く受けています。\n\nでもね、焦る必要はないんです。\n準備ができるまで待つのもOK。\n\n大事なのは「タイミング」です。\n今月末に向けて、ゆっくり\n準備を整えてみてください。\n\n「✨」を置いた方に、\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.3
+      },
+      "id": "post_20260403_2237_th_001",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-04T00:06:24.302588+09:00",
+      "posted_at": "2026-04-04T00:06:30.590061+09:00",
+      "platform_post_id": "17882996253506705"
+    },
+    {
+      "pattern_name": "予告型（構造D）",
+      "category": "総合運",
+      "content": "来週、12星座の中で\n最も運命が動く星座。\n\n蠍座さんです。\n\n恋愛・仕事・金運のどこかで\n大きな波が来る予感がします。\n\n特に水曜日以降は\n直感を信じて動いてくださいね。\n\n明日は牡羊座さんの\n詳しい運勢をお届けしますね🔮\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 8,
+        "specificity": 8,
+        "tempo": 8,
+        "persona_match": 8,
+        "mobile_readability": 9,
+        "average": 8.1
+      },
+      "id": "post_20260403_2237_th_003",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-04T00:57:04.038756+09:00",
+      "posted_at": "2026-04-04T00:57:08.785326+09:00",
+      "platform_post_id": "17903305314403239",
+      "is_repost": true
+    },
+    {
+      "pattern_name": "週末開運アクション（構造G・金曜定番）",
+      "category": "開運アクション",
+      "content": "【金曜定番】週末の開運アクション。\n\n今週末、運を上向きにするなら\nこの3つをやってみてください。\n\n1つ目：新月に願いを書く。\n手書きで、気持ちを込めてです。\n\n2つ目：部屋の南側を掃除する。\nここが「火」の方位。\n運気がぐんと上がります。\n\n3つ目：好きな香りを身につける。\n香りは一番直感に近い。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260403_2237_th_004",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-04T07:07:14.487511+09:00",
+      "posted_at": "2026-04-04T07:07:21.761406+09:00",
+      "platform_post_id": "18124320751607615"
     }
   ]
 }

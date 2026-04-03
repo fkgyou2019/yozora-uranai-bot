@@ -53,8 +53,17 @@
       "key_changes": [
         "インサイト5件追加"
       ]
+    },
+    {
+      "date": "2026-04-04",
+      "hooks_added": 0,
+      "insights_added": 5,
+      "source_posts_analyzed": 160,
+      "key_changes": [
+        "インサイト5件追加"
+      ]
     }
   ],
-  "total_improvements": 6,
-  "last_improved": "2026-04-03T07:06:27.543690+09:00"
+  "total_improvements": 7,
+  "last_improved": "2026-04-04T07:01:04.843341+09:00"
 }
