@@ -30,19 +30,33 @@ JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # --- 設定 ---
-RED_VIEWS_THRESHOLD = 10          # 旧20→10: 投稿後数時間での閾値を緩和（早期削除防止）
-RED_ZERO_ENGAGEMENT_VIEWS = 30    # 旧20→30: いいね0・コメント0の判定も30views以上に引き上げ
+# Phase 1: 3h+ 初速不振
+RED_VIEWS_THRESHOLD = 10          # views < 10 → 到達ゼロ = 即削除
+RED_ZERO_ENGAGEMENT_VIEWS = 30    # views≥30 かつ likes=0 かつ replies=0 → ゾンビ投稿
+
 YELLOW_VIEWS_MAX = 50
 YELLOW_ENG_THRESHOLD = 3.0
 GREEN_VIEWS_MIN = 50
 GREEN_ENG_MIN = 5.0
-# 最小チェック年齢: 180分（3時間）。投稿後3時間未満は削除しない（初速を正確に見るため）
-MIN_AGE_MINUTES = 180  # 3時間未満の投稿はチェック対象外（上限なし＝3時間以降はずっとチェック対象）
-# 12時間経過後の「財産価値なし」判定
-LONG_AGE_MINUTES = 720        # 12時間
-LONG_AGE_VIEWS_MAX = 100      # 12h後もviews≤100
-LONG_AGE_LIKES_MAX = 10       # 12h後もlikes≤10
-LONG_AGE_REPLIES_MUST = 0     # 12h後もreplies=0
+
+# 最小チェック年齢: 180分（3時間未満はスキップ）
+MIN_AGE_MINUTES = 180
+
+# Phase 2: 12h+ 中間評価（ゼロ共感・低閲覧のみ削除）
+MID_AGE_MINUTES = 720         # 12時間
+MID_AGE_VIEWS_MAX = 50        # views≤50
+MID_AGE_LIKES_MAX = 0         # likes=0
+MID_AGE_REPLIES_MAX = 0       # replies=0
+
+# Phase 3: 24h+ 終了判定（共感ほぼゼロ）
+LONG_AGE_MINUTES = 1440       # 24時間（旧:12h → 24hに延長）
+LONG_AGE_VIEWS_MAX = 100      # views≤100
+LONG_AGE_LIKES_MAX = 3        # likes≤3（旧:≤10 → 緩和。likes≥4は財産候補として保護）
+LONG_AGE_REPLIES_MAX = 0      # replies=0
+
+# 時刻矛盾保護しきい値: likes≥3 or replies≥1 なら時刻矛盾でも削除しない
+TIME_MISMATCH_PROTECT_LIKES = 3
+TIME_MISMATCH_PROTECT_REPLIES = 1
 
 # --- DELETE レート制限管理 ---
 # Threads APIのDELETE上限は24時間で約100件
@@ -169,16 +183,30 @@ def check_time_content_mismatch(post_text, posted_hour):
 
 
 def evaluate_post(views, likes, replies, age_minutes=0):
-    """RED / YELLOW / GREEN を判定"""
+    """RED / YELLOW / GREEN を判定
+
+    削除フェーズ:
+      Phase 1 (3h+):  views < 10  /  views≥30 かつ likes=0 かつ replies=0
+      Phase 2 (12h+): views≤50 かつ likes=0 かつ replies=0
+      Phase 3 (24h+): views≤100 かつ likes≤3 かつ replies=0
+    """
     engagement = ((likes + replies) / views * 100) if views > 0 else 0
 
-    # 12時間経過後の「財産価値なし」判定（最優先）
+    # Phase 3: 24h+ 終了判定（財産にならない確定）
     if (age_minutes >= LONG_AGE_MINUTES
             and views <= LONG_AGE_VIEWS_MAX
             and likes <= LONG_AGE_LIKES_MAX
-            and replies <= LONG_AGE_REPLIES_MUST):
-        return "RED", f"12h経過でviews={views}≤{LONG_AGE_VIEWS_MAX}, likes={likes}≤{LONG_AGE_LIKES_MAX}, replies=0"
+            and replies <= LONG_AGE_REPLIES_MAX):
+        return "RED", f"24h経過でviews={views}≤{LONG_AGE_VIEWS_MAX}, likes={likes}≤{LONG_AGE_LIKES_MAX}, replies=0"
 
+    # Phase 2: 12h+ 中間評価（低閲覧かつゼロ共感のみ）
+    if (age_minutes >= MID_AGE_MINUTES
+            and views <= MID_AGE_VIEWS_MAX
+            and likes <= MID_AGE_LIKES_MAX
+            and replies <= MID_AGE_REPLIES_MAX):
+        return "RED", f"12h経過でviews={views}≤{MID_AGE_VIEWS_MAX}, likes=0, replies=0"
+
+    # Phase 1: 初速不振
     if views < RED_VIEWS_THRESHOLD:
         return "RED", f"views={views} < {RED_VIEWS_THRESHOLD}"
 
@@ -289,7 +317,10 @@ def main():
         if mismatches:
             for mm in mismatches:
                 print(f"  ⚠ 時刻矛盾: {mm}")
-            if status != "RED":
+            # likes≥3 or replies≥1 の場合は時刻矛盾でも削除しない（高エンゲ投稿保護）
+            if likes >= TIME_MISMATCH_PROTECT_LIKES or replies >= TIME_MISMATCH_PROTECT_REPLIES:
+                print(f"  → 時刻矛盾あるが高エンゲ（likes={likes}, replies={replies}）→ 保護")
+            elif status != "RED":
                 status = "RED"
                 reason += " + 時刻矛盾"
 
