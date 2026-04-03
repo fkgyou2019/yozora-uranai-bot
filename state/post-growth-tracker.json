@@ -590,6 +590,17 @@
           "auto_replies": 0,
           "er": 1.45,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 71,
+          "ts": "2026-04-03T09:01:37.761136+09:00",
+          "views": 139,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.44,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -776,6 +787,17 @@
           "auto_replies": 0,
           "er": 13.86,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 68,
+          "ts": "2026-04-03T09:01:37.761136+09:00",
+          "views": 102,
+          "likes": 14,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.73,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -1037,6 +1059,17 @@
           "auto_replies": 0,
           "er": 9.09,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 61,
+          "ts": "2026-04-03T09:01:37.761136+09:00",
+          "views": 45,
+          "likes": 2,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.89,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -1152,6 +1185,17 @@
           "auto_replies": 0,
           "er": 14.1,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 60,
+          "ts": "2026-04-03T09:01:37.761136+09:00",
+          "views": 79,
+          "likes": 11,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.92,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -1601,7 +1645,7 @@
           "velocity_views_per_hour": 0.0
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 5.5,
       "peak_velocity_hour": 4
     },
@@ -1701,7 +1745,7 @@
           "velocity_views_per_hour": 0.0
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 10.0,
       "peak_velocity_hour": 1
     },
@@ -1760,6 +1804,17 @@
           "auto_replies": 0,
           "er": 13.95,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-03T09:01:37.761136+09:00",
+          "views": 44,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.64,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -1810,12 +1865,65 @@
           "auto_replies": 0,
           "er": 0.89,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 11,
+          "ts": "2026-04-03T09:01:37.761136+09:00",
+          "views": 113,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.88,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
       "peak_velocity": 37.0,
       "peak_velocity_hour": 3
+    },
+    "post_20260403_0237_th_003": {
+      "post_id": "post_20260403_0237_th_003",
+      "platform_post_id": "18073730057204524",
+      "threads_url": "",
+      "posted_at": "2026-04-03T07:07:20.260528+09:00",
+      "pattern_name": "構造G_注意喚起+限定型②",
+      "slot_hour": 7,
+      "day_of_week": 4,
+      "day_name": "金",
+      "first_line": "来週、仕事で大きな話が",
+      "content_preview": "来週、仕事で大きな話が\n来やすい星座。\n\nたった2つだけです。\n\n獅子座と天秤座さん。\n\n獅子座は昇進や抜擢の可能性。\n",
+      "hourly": [],
+      "completed": true
+    },
+    "post_20260403_0807_th_001": {
+      "post_id": "post_20260403_0807_th_001",
+      "platform_post_id": "17883587382490251",
+      "threads_url": "",
+      "posted_at": "2026-04-03T08:07:45.021579+09:00",
+      "pattern_name": "構造C_天文イベント×質問型",
+      "slot_hour": 8,
+      "day_of_week": 4,
+      "day_name": "金",
+      "first_line": "最近、人間関係で",
+      "content_preview": "最近、人間関係で\nモヤモヤしていませんか？\n\nそれ、水星逆行が影響している\nかもしれません。\n\n特に双子座、乙女座、\n射",
+      "hourly": [],
+      "completed": true
+    },
+    "post_20260403_0807_th_002": {
+      "post_id": "post_20260403_0807_th_002",
+      "platform_post_id": "17982664169812457",
+      "threads_url": "",
+      "posted_at": "2026-04-03T08:07:59.537950+09:00",
+      "pattern_name": "構造C_天文イベント質問型②",
+      "slot_hour": 8,
+      "day_of_week": 4,
+      "day_name": "金",
+      "first_line": "春の新月に向けて、",
+      "content_preview": "春の新月に向けて、\n恋愛で心が揺らいでいませんか？\n\nそれは自然なことです。\n新しい季節の始まりだから。\n\n特に獅子座、",
+      "hourly": [],
+      "completed": true
     }
   },
-  "last_updated": "2026-04-03T07:04:36.575541+09:00"
+  "last_updated": "2026-04-03T09:01:37.761136+09:00"
 }
