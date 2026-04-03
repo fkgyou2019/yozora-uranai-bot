@@ -1757,6 +1757,29 @@
       "posted_at": "2026-04-04T00:57:08.785326+09:00",
       "platform_post_id": "17903305314403239",
       "is_repost": true
+    },
+    {
+      "pattern_name": "週末開運アクション（構造G・金曜定番）",
+      "category": "開運アクション",
+      "content": "【金曜定番】週末の開運アクション。\n\n今週末、運を上向きにするなら\nこの3つをやってみてください。\n\n1つ目：新月に願いを書く。\n手書きで、気持ちを込めてです。\n\n2つ目：部屋の南側を掃除する。\nここが「火」の方位。\n運気がぐんと上がります。\n\n3つ目：好きな香りを身につける。\n香りは一番直感に近い。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.7
+      },
+      "id": "post_20260403_2237_th_004",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-04T07:07:14.487511+09:00",
+      "posted_at": "2026-04-04T07:07:21.761406+09:00",
+      "platform_post_id": "18124320751607615"
     }
   ]
 }
