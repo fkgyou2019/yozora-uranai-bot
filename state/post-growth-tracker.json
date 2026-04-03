@@ -1942,6 +1942,17 @@
           "auto_replies": 0,
           "er": 0.87,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 23,
+          "ts": "2026-04-03T21:03:15.040333+09:00",
+          "views": 115,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.87,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -2037,6 +2048,17 @@
           "auto_replies": 0,
           "er": 11.16,
           "velocity_views_per_hour": 55.2
+        },
+        {
+          "h": 10,
+          "ts": "2026-04-03T21:03:15.040333+09:00",
+          "views": 858,
+          "likes": 89,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.96,
+          "velocity_views_per_hour": 75.0
         }
       ],
       "completed": false,
@@ -2076,6 +2098,17 @@
           "auto_replies": 0,
           "er": 0.0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 10,
+          "ts": "2026-04-03T21:03:15.040333+09:00",
+          "views": 13,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 7.69,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -2132,12 +2165,65 @@
           "auto_replies": 0,
           "er": 6.43,
           "velocity_views_per_hour": 46.7
+        },
+        {
+          "h": 5,
+          "ts": "2026-04-03T21:03:15.040333+09:00",
+          "views": 143,
+          "likes": 5,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.29,
+          "velocity_views_per_hour": 1.5
         }
       ],
       "completed": false,
       "peak_velocity": 46.7,
       "peak_velocity_hour": 3
+    },
+    "verify-retry-20260403191218": {
+      "post_id": "verify-retry-20260403191218",
+      "platform_post_id": "18091393885912989",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWqmxJlFK0C",
+      "posted_at": "2026-04-03T19:12:18.858819+09:00",
+      "pattern_name": "",
+      "slot_hour": 19,
+      "day_of_week": 4,
+      "day_name": "金",
+      "first_line": "4月中旬、恋愛で思わぬ幸運が訪れる星座。",
+      "content_preview": "4月中旬、恋愛で思わぬ幸運が訪れる星座。\n\nたった3つだけです。\n\n牡羊座は\n新しい恋の芽が\n予想外の場所から\n花開く時",
+      "hourly": [
+        {
+          "h": 1,
+          "ts": "2026-04-03T21:03:15.040333+09:00",
+          "views": 5,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.0,
+          "velocity_views_per_hour": 5.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 5.0,
+      "peak_velocity_hour": 1
+    },
+    "verify-retry-20260403204218": {
+      "post_id": "verify-retry-20260403204218",
+      "platform_post_id": "17929197558248634",
+      "threads_url": "",
+      "posted_at": "2026-04-03T20:42:18.467316+09:00",
+      "pattern_name": "",
+      "slot_hour": 20,
+      "day_of_week": 4,
+      "day_name": "金",
+      "first_line": "4月中旬、突然の",
+      "content_preview": "4月中旬、突然の\nお金が入る星座。\n\nたった3つだけです。\n\n獅子座は\n予想外の臨時収入が\n舞い込む時期。✨\n\n山羊座は",
+      "hourly": [],
+      "completed": true
     }
   },
-  "last_updated": "2026-04-03T18:40:06.089333+09:00"
+  "last_updated": "2026-04-03T21:03:15.040333+09:00"
 }
