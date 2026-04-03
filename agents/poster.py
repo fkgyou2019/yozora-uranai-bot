@@ -78,12 +78,19 @@ def update_agent_status(agent, status_str):
 
 
 def check_posting_interval(history, safety):
-    """最低投稿間隔のチェック（safety.jsonの設定値を使用）"""
+    """最低投稿間隔のチェック（safety.jsonの設定値を使用）
+    ※ is_repost=True の再投稿（ヘルスチェック補填）はスキップして、
+       通常スケジュール投稿の間隔計算に影響させない。
+    """
     min_interval = safety.get("posting_safety", {}).get("min_interval_seconds", 7200)
     posts = history.get("posts", [])
     if not posts:
         return True
-    last = posts[-1]
+    # is_repost=True の補填投稿は間隔計算の基準にしない
+    regular_posts = [p for p in posts if not p.get("is_repost")]
+    if not regular_posts:
+        return True
+    last = regular_posts[-1]
     last_time = datetime.fromisoformat(last.get("posted_at", "2000-01-01T00:00:00"))
     if last_time.tzinfo is None:
         last_time = last_time.replace(tzinfo=JST)
@@ -503,6 +510,9 @@ def _post_one_inner():
         post["platform_post_id"] = post_id
         if account_id:
             post["account_id"] = account_id
+        # FORCE_POST=1（ヘルスチェック補填）はis_repostフラグで通常間隔チェックから除外
+        if os.environ.get("FORCE_POST", "0") == "1":
+            post["is_repost"] = True
 
         if "posts" not in history:
             history["posts"] = []
