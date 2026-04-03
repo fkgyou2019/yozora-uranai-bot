@@ -1604,6 +1604,29 @@
       "posted_at": "2026-04-03T09:13:42.192629+09:00",
       "platform_post_id": "18042942947685433",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型②",
+      "category": "注意喚起",
+      "content": "今月後半、急に動く星座。\n\nたった4つだけです。\n\n牡牛座、蟹座、蠍座、山羊座さん。\n\n牡牛座は仕事で大きな話が来やすい。\n蟹座は人間関係が急展開します。\n蠍座は本当にやりたいことが\n見えてくる時期。\n山羊座は決断を迫られます。\n\n動きが速くなるのは良いサイン。\n焦らず、自分のペースで\n進んでください。\n#星座占い",
+      "hashtag": "#星座占い",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 9,
+        "usefulness": 8,
+        "specificity": 9,
+        "tempo": 8,
+        "persona_match": 9,
+        "mobile_readability": 8,
+        "average": 8.5
+      },
+      "id": "post_20260403_1007_th_002",
+      "platform": "threads",
+      "status": "posted",
+      "posting_started_at": "2026-04-03T10:07:40.201336+09:00",
+      "posted_at": "2026-04-03T10:07:46.032397+09:00",
+      "platform_post_id": "18005602103719265"
     }
   ]
 }

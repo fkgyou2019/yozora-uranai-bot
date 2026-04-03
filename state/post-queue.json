@@ -1,3 +1,24 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造X_金曜定番開運アクション",
+      "category": "金運",
+      "content": "【金曜定番】\n週末の開運アクション3つ。\n\n①夜寝る前に、今週起こった\nいいことを3つ思い出す。\n脳が「いい週」と認識します。\n\n②朝日を浴びる。\n3分でいいので。\nあなたのエネルギーがリセット。\n\n③大事な連絡は\n14時から16時の間にする。\nこの時間帯は運気が味方です。\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "quality_score": {
+        "hook": 8,
+        "usefulness": 9,
+        "specificity": 9,
+        "tempo": 9,
+        "persona_match": 9,
+        "mobile_readability": 9,
+        "average": 8.83
+      },
+      "id": "post_20260403_1007_th_003",
+      "platform": "threads",
+      "status": "queued"
+    }
+  ]
 }
