@@ -19,7 +19,7 @@
     },
     "poster": {
       "status": "idle",
-      "last_run": "2026-04-03T08:07:59.540058+09:00",
+      "last_run": "2026-04-03T13:07:45.901522+09:00",
       "error_count": 0
     },
     "fetcher": {
@@ -33,7 +33,7 @@
       "error_count": 0
     }
   },
-  "daily_post_count": 3,
+  "daily_post_count": 12,
   "daily_post_date": "2026-04-03",
   "consecutive_errors": 0,
   "max_consecutive_errors": 3,
