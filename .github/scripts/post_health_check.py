@@ -241,10 +241,11 @@ def main():
     now = datetime.now(JST)
     print(f"ヘルスチェック開始: {now.strftime('%Y-%m-%d %H:%M JST')}")
 
-    # 最新投稿を取得
+    # 最新投稿を取得（72h以内の投稿をカバーするため25件取得）
+    # limit=10だと1日12件投稿時に古い投稿が未チェックになる問題を修正
     try:
         data = threads_api_get(
-            f"{uid}/threads?fields=id,text,timestamp&limit=10", token
+            f"{uid}/threads?fields=id,text,timestamp&limit=25", token
         )
     except Exception as e:
         print(f"ERROR: 投稿一覧取得失敗: {e}")
