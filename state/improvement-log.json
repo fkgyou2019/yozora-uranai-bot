@@ -62,8 +62,18 @@
       "key_changes": [
         "インサイト5件追加"
       ]
+    },
+    {
+      "date": "2026-04-05",
+      "hooks_added": 4,
+      "insights_added": 5,
+      "source_posts_analyzed": 220,
+      "key_changes": [
+        "フック4件追加 (断言・確信: 4)",
+        "インサイト5件追加"
+      ]
     }
   ],
-  "total_improvements": 7,
-  "last_improved": "2026-04-04T07:01:04.843341+09:00"
+  "total_improvements": 8,
+  "last_improved": "2026-04-05T06:57:15.270078+09:00"
 }
