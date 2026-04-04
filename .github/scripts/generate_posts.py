@@ -561,8 +561,12 @@ def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block
 - 1行目にCTAを置く
 
 【✅ 時間帯を活かした表現】
-- {hour}時台らしい時間的文脈を使う（例: 「今夜」「今朝」「午後から」等）
-- ただし矛盾しない範囲で（「今朝」は朝スロットのみ）
+- {hour}時台らしい時間的文脈を使う
+- 使用可能な時間表現（厳守）:
+  ・7〜9時台 → 「今朝」「今日」「今週」のみ。「今夜」禁止
+  ・10〜15時台 → 「今日」「今週」「今月」のみ。「今夜」「今朝」禁止
+  ・19〜21時台 → 「今夜」「今日」「今週」OK
+- 「今夜○時までに」は19時以降スロットのみ使用可
 
 【構造{structure}のテンプレート（必ずこの構造で生成）】
 {get_structure_template(structure)}
@@ -837,8 +841,9 @@ def main():
     from difflib import SequenceMatcher
     import re as _re
 
-    recent_texts = [p.get("content", "") for p in history.get("posts", [])[-20:]]
-    recent_first_lines = [p.get("content", "").split("\n")[0] for p in history.get("posts", [])[-20:]]
+    # 直近50件に拡大（旧20件では5回以上同じフックが使われていた問題の対策）
+    recent_texts = [p.get("content", "") for p in history.get("posts", [])[-50:]]
+    recent_first_lines = [p.get("content", "").split("\n")[0] for p in history.get("posts", [])[-50:]]
 
     def extract_structure(text):
         """投稿の構造パターンを抽出（数字や星座名を正規化）"""
@@ -869,6 +874,11 @@ def main():
             if not is_similar:
                 struct = extract_structure(first_line)
                 for rfl in local_first_lines:
+                    # フック1行目が完全一致（旧50件内）→ 即除外
+                    if first_line.strip() and first_line.strip() == rfl.strip():
+                        print(f"  ⚠ [{platform_label}] フック1行目完全一致で除外: {first_line[:30]}...")
+                        is_similar = True
+                        break
                     if SequenceMatcher(None, struct, extract_structure(rfl)).ratio() > 0.7:
                         print(f"  ⚠ [{platform_label}] フック構造重複で除外: {first_line[:30]}...")
                         is_similar = True
