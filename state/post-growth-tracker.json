@@ -2008,6 +2008,17 @@
           "auto_replies": 0,
           "er": 0.83,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 40,
+          "ts": "2026-04-04T14:35:29.390592+09:00",
+          "views": 120,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.83,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -2169,6 +2180,17 @@
           "auto_replies": 0,
           "er": 9.89,
           "velocity_views_per_hour": 15.5
+        },
+        {
+          "h": 28,
+          "ts": "2026-04-04T14:35:29.390592+09:00",
+          "views": 1507,
+          "likes": 144,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.89,
+          "velocity_views_per_hour": 3.5
         }
       ],
       "completed": false,
@@ -2352,6 +2374,17 @@
           "auto_replies": 0,
           "er": 5.96,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 23,
+          "ts": "2026-04-04T14:35:29.390592+09:00",
+          "views": 159,
+          "likes": 6,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.29,
+          "velocity_views_per_hour": 1.3
         }
       ],
       "completed": false,
@@ -2466,6 +2499,17 @@
           "auto_replies": 0,
           "er": 10.0,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 16,
+          "ts": "2026-04-04T14:35:29.390592+09:00",
+          "views": 41,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.76,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -2527,6 +2571,17 @@
           "auto_replies": 0,
           "er": 2.15,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 14,
+          "ts": "2026-04-04T14:35:29.390592+09:00",
+          "views": 101,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.98,
+          "velocity_views_per_hour": 1.3
         }
       ],
       "completed": false,
@@ -2590,7 +2645,7 @@
           "velocity_views_per_hour": 0.5
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 5.0,
       "peak_velocity_hour": 1
     },
@@ -2616,12 +2671,107 @@
           "auto_replies": 0,
           "er": 0.0,
           "velocity_views_per_hour": 22.0
+        },
+        {
+          "h": 7,
+          "ts": "2026-04-04T14:35:29.390592+09:00",
+          "views": 25,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.0,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
       "peak_velocity": 22.0,
       "peak_velocity_hour": 1
+    },
+    "verify-retry-20260404091215": {
+      "post_id": "verify-retry-20260404091215",
+      "platform_post_id": "18001288982913369",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWsG5LSAFtL",
+      "posted_at": "2026-04-04T09:12:15.392364+09:00",
+      "pattern_name": "",
+      "slot_hour": 9,
+      "day_of_week": 5,
+      "day_name": "土",
+      "first_line": "今週、本音が出やすい星座。",
+      "content_preview": "今週、本音が出やすい星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座さん。\n\n牡羊座は相手に思いを伝えやすい週。",
+      "hourly": [
+        {
+          "h": 5,
+          "ts": "2026-04-04T14:35:29.390592+09:00",
+          "views": 23,
+          "likes": 3,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.04,
+          "velocity_views_per_hour": 4.6
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 4.6,
+      "peak_velocity_hour": 5
+    },
+    "verify-retry-20260404104220": {
+      "post_id": "verify-retry-20260404104220",
+      "platform_post_id": "18094030168888967",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWsRMuzDeBB",
+      "posted_at": "2026-04-04T10:42:20.418637+09:00",
+      "pattern_name": "",
+      "slot_hour": 10,
+      "day_of_week": 5,
+      "day_name": "土",
+      "first_line": "今週後半、金運が急変する星座。",
+      "content_preview": "今週後半、金運が急変する星座。\n\nたった2つだけです。\n\n牡牛座と山羊座さん。\n\n牡牛座は木曜以降、\n予期しない収入が舞",
+      "hourly": [
+        {
+          "h": 3,
+          "ts": "2026-04-04T14:35:29.390592+09:00",
+          "views": 335,
+          "likes": 45,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.03,
+          "velocity_views_per_hour": 111.7
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 111.7,
+      "peak_velocity_hour": 3
+    },
+    "verify-retry-20260404121214": {
+      "post_id": "verify-retry-20260404121214",
+      "platform_post_id": "17946462765141888",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWsbfXrgIkr",
+      "posted_at": "2026-04-04T12:12:14.068866+09:00",
+      "pattern_name": "",
+      "slot_hour": 12,
+      "day_of_week": 5,
+      "day_name": "土",
+      "first_line": "今週後半、仕事で気をつけた方がいい星座。",
+      "content_preview": "今週後半、仕事で気をつけた方がいい星座。\nたった3つだけです。\n\n▼牡羊座\n午後からの会議で、勢いで決めてしまわないこと",
+      "hourly": [
+        {
+          "h": 2,
+          "ts": "2026-04-04T14:35:29.390592+09:00",
+          "views": 8,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.5,
+          "velocity_views_per_hour": 4.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 4.0,
+      "peak_velocity_hour": 2
     }
   },
-  "last_updated": "2026-04-04T08:58:18.383536+09:00"
+  "last_updated": "2026-04-04T14:35:29.390592+09:00"
 }
