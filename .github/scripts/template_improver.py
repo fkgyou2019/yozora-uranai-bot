@@ -65,6 +65,19 @@ def improve_hooks(hook_lines, buzz_analysis):
         print("[INFO] best_hooks_to_copy / best_hooks_to_adapt なし。フック更新スキップ")
         return 0, []
 
+    # buzz-analysis のカテゴリ名 → hook-lines.json のカテゴリ名 マッピング
+    # buzz_analyzer.py が生成する複合カテゴリ名を hook-lines.json の既存カテゴリに変換
+    CATEGORY_MAP = {
+        "ランキング型×スピリチュアルCTA":  "断言・確信",
+        "数字インパクト型×限定型":         "数字インパクト",
+        "断定型×スピリチュアル昇華":        "断言・確信",
+        "ランキング型×時間軸強化":          "緊急・限定感",
+        "複合絵文字CTA":                   "断言・確信",
+        "暴露・告白型":                     "暴露・ぶっちゃけ",
+        "注意喚起+限定型":                  "緊急・限定感",
+        "共感×質問型":                     "質問・参加型",
+    }
+
     categories = hook_lines.get("categories", {})
     all_existing = collect_all_hooks(categories)
     added_count = 0
@@ -79,10 +92,20 @@ def improve_hooks(hook_lines, buzz_analysis):
         if not adapted or not category:
             continue
 
-        # カテゴリが存在しない場合はスキップ
-        if category not in categories:
-            print(f"[WARN] カテゴリ '{category}' が hook-lines.json に存在しません。スキップ")
-            continue
+        # カテゴリマッピング適用（buzz-analysis名 → hook-lines名）
+        mapped = CATEGORY_MAP.get(category, category)
+        if mapped not in categories:
+            # フォールバック: 部分一致で最も近いカテゴリを探す
+            fallback = next((k for k in categories if any(w in category for w in k.split("・"))), None)
+            if fallback:
+                mapped = fallback
+            elif "断言・確信" in categories:
+                mapped = "断言・確信"
+            else:
+                print(f"[WARN] カテゴリ '{category}' のマッピング先が見つかりません。スキップ")
+                continue
+            print(f"[INFO] カテゴリマッピング: '{category}' → '{mapped}'")
+        category = mapped
 
         # 重複チェック（全カテゴリ横断）
         if is_duplicate(adapted, all_existing):

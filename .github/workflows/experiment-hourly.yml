@@ -90,6 +90,31 @@ jobs:
           THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
           EOF
 
+      - name: Flush non-experiment posts from queue
+        if: steps.period_check.outputs.in_period == 'true'
+        run: |
+          python -c "
+          import json, os
+          VALID_STRUCTURES = {'G', 'A', 'B', 'C', 'F'}
+          path = 'state/post-queue.json'
+          q = json.load(open(path, encoding='utf-8')) if os.path.exists(path) else {'queue': []}
+          before = len([p for p in q.get('queue', []) if p.get('status') == 'queued'])
+          def is_experiment(p):
+              pattern = p.get('pattern_name', '')
+              for s in VALID_STRUCTURES:
+                  if f'構造{s}' in pattern:
+                      return True
+              return False
+          q['queue'] = [p for p in q.get('queue', []) if p.get('status') != 'queued' or is_experiment(p)]
+          after = len([p for p in q.get('queue', []) if p.get('status') == 'queued'])
+          flushed = before - after
+          if flushed > 0:
+              json.dump(q, open(path, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+              print(f'[FLUSH] 非実験投稿 {flushed}件を削除 (残{after}件)')
+          else:
+              print(f'[FLUSH] フラッシュ不要 (キュー残{after}件はすべて実験パターン)')
+          "
+
       - name: Pre-fill queue if empty (before posting)
         if: steps.period_check.outputs.in_period == 'true'
         run: |

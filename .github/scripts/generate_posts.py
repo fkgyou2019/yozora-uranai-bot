@@ -22,6 +22,7 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__
 EXPERIMENT_TIME_SLOTS = [
     {"hour": 7,  "slot": "朝（6〜9時台）",     "structure": "G", "pattern_hint": "注意喚起+限定型（今日・今週の仕事運警告）"},
     {"hour": 9,  "slot": "朝（6〜9時台）",     "structure": "A", "pattern_hint": "数字+限定型（12星座中たった○つ・朝向け）"},
+    {"hour": 10, "slot": "午前（10〜12時台）", "structure": "G", "pattern_hint": "注意喚起+限定型②（今月・今週後半の動く星座）"},  # 4/3実績: v=1507 最強スロット
     {"hour": 12, "slot": "午前（10〜12時台）", "structure": "B", "pattern_hint": "ランキング型（今日・今週のTOP3）"},
     {"hour": 15, "slot": "午後（13〜15時台）", "structure": "G", "pattern_hint": "注意喚起+限定型（今週後半・今夕の警告）"},
     {"hour": 19, "slot": "夜（19〜21時台）",   "structure": "F", "pattern_hint": "告白・暴露型（占い師として正直に言います）"},
