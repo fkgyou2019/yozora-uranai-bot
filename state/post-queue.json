@@ -1,24 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "注意喚起+限定型（構造G・恋愛）",
-      "category": "恋愛運",
-      "content": "今週、本音が出やすい星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座さん。\n\n牡羊座は相手に思いを伝えやすい週。\n獅子座は言いたかったことが言える。\nでも射手座さんは、言う前に\n深呼吸してから。OK？\n\n大事なのは「タイミング」です。\n焦らなくて大丈夫ですよ。\n\n「🔮」を置いた方に、\n恋愛運 #星座占い",
-      "hashtag": "#星座占い",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "quality_score": {
-        "hook": 8,
-        "usefulness": 8,
-        "specificity": 9,
-        "tempo": 9,
-        "persona_match": 9,
-        "mobile_readability": 9,
-        "average": 8.7
-      },
-      "id": "post_20260403_2237_th_005",
-      "platform": "threads",
-      "status": "queued"
-    }
-  ]
+  "queue": []
 }
