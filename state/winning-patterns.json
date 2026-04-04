@@ -7,6 +7,14 @@
   },
   "top_patterns": [
     {
+      "pattern": "構造G_注意喚起+限定型②",
+      "weight": 5,
+      "avg_engagement": 9.89,
+      "avg_views": 1507.0,
+      "sample_count": 1,
+      "reason": "eng率9.9%・閲覧1507（1件）"
+    },
+    {
       "pattern": "注意喚起+限定型（推定）",
       "weight": 5,
       "avg_engagement": 14.28,
@@ -37,14 +45,6 @@
       "avg_views": 767.0,
       "sample_count": 1,
       "reason": "eng率6.9%・閲覧767（1件）"
-    },
-    {
-      "pattern": "限定×恐怖型・恋愛",
-      "weight": 6,
-      "avg_engagement": 21.29,
-      "avg_views": 559.0,
-      "sample_count": 1,
-      "reason": "eng率21.3%・閲覧559（1件）"
     }
   ],
   "rules": {
@@ -233,17 +233,25 @@
     "【中優先】改行を1行8～15文字に統一：現在は1行16～20文字で読みづらい。バズ投稿事例『第1位：牡牛座。』『大きなお金の流れが来ます。』のように短い改行でスキャン性向上。保存性が上がるため、リーチ増加見込み"
   ],
   "insights": [
-    "最強パターン: 注意喚起+限定型（推定）（eng率14.3%・閲覧1208・2件）",
+    "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 22.9%",
     "絵文字CTAあり → avg eng 20.4%",
     "数字フックあり → avg eng 17.6%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 44,
-    "last_analyzed": "2026-04-04T09:07:20.836215+09:00",
+    "data_count": 45,
+    "last_analyzed": "2026-04-04T10:37:57.948211+09:00",
     "confidence": "high",
     "top_patterns": [
+      {
+        "pattern": "構造G_注意喚起+限定型②",
+        "weight": 5,
+        "avg_engagement": 9.89,
+        "avg_views": 1507.0,
+        "sample_count": 1,
+        "reason": "eng率9.9%・閲覧1507（1件）"
+      },
       {
         "pattern": "注意喚起+限定型（推定）",
         "weight": 5,
@@ -275,17 +283,18 @@
         "avg_views": 767.0,
         "sample_count": 1,
         "reason": "eng率6.9%・閲覧767（1件）"
-      },
-      {
-        "pattern": "限定×恐怖型・恋愛",
-        "weight": 6,
-        "avg_engagement": 21.29,
-        "avg_views": 559.0,
-        "sample_count": 1,
-        "reason": "eng率21.3%・閲覧559（1件）"
       }
     ],
     "pattern_ranking": [
+      {
+        "pattern": "構造G_注意喚起+限定型②",
+        "count": 1,
+        "avg_engagement": 9.89,
+        "avg_views": 1507.0,
+        "total_likes": 144,
+        "total_replies": 5,
+        "_score": 1656.0423
+      },
       {
         "pattern": "注意喚起+限定型（推定）",
         "count": 2,
@@ -529,6 +538,11 @@
         "avg_engagement": 17.56
       },
       {
+        "feature": "has_fear_hook",
+        "count": 1,
+        "avg_engagement": 9.89
+      },
+      {
         "feature": "has_question",
         "count": 10,
         "avg_engagement": 9.66
@@ -539,6 +553,11 @@
         "style": "注意喚起+限定型（推定）",
         "example": "今週後半、気をつけた方がいい星座。",
         "avg_eng": 19.47
+      },
+      {
+        "style": "構造G_注意喚起+限定型②",
+        "example": "今月後半、急に動く星座。",
+        "avg_eng": 9.89
       },
       {
         "style": "注意喚起型・仕事運",
@@ -554,11 +573,6 @@
         "style": "予告型・フォロー動機",
         "example": "来週、12星座の中で",
         "avg_eng": 6.91
-      },
-      {
-        "style": "限定×恐怖型・恋愛",
-        "example": "12星座中、たった3つだけ。",
-        "avg_eng": 21.29
       }
     ],
     "best_posts": [
@@ -572,6 +586,17 @@
         "first_line": "今週後半、気をつけた方がいい星座。",
         "content_preview": "今週後半、気をつけた方がいい星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座さん。\n\n双子座",
         "_score": 2835.0231000000003
+      },
+      {
+        "id": "post_20260403_1007_th_002",
+        "pattern": "構造G_注意喚起+限定型②",
+        "eng_rate": 9.89,
+        "views": 1507,
+        "likes": 144,
+        "replies": 5,
+        "first_line": "今月後半、急に動く星座。",
+        "content_preview": "今月後半、急に動く星座。\n\nたった4つだけです。\n\n牡牛座、蟹座、蠍座、山羊座さん。\n\n牡牛座は仕事",
+        "_score": 1656.0423
       },
       {
         "id": "post_20260324_011",
@@ -605,17 +630,6 @@
         "first_line": "来週、12星座の中で",
         "content_preview": "来週、12星座の中で\n最も恋愛が動く星座。\n\n蟹座さんです。\n\n新しい出会いか、\n既存の関係の深まり",
         "_score": 819.9997
-      },
-      {
-        "id": "post_20260323_008",
-        "pattern": "限定×恐怖型・恋愛",
-        "eng_rate": 21.29,
-        "views": 559,
-        "likes": 57,
-        "replies": 62,
-        "first_line": "12星座中、たった3つだけ。",
-        "content_preview": "12星座中、たった3つだけ。\n\n今週、恋の流れが\nドラマティックに変わる星座があります。\n\nそれは蟹",
-        "_score": 678.0110999999999
       }
     ],
     "auto_avoid_patterns": [],
@@ -634,9 +648,9 @@
       },
       "10": {
         "slot": "午前（10〜12時台）",
-        "avg_eng": 9.37,
-        "avg_views": 117.0,
-        "count": 4
+        "avg_eng": 9.47,
+        "avg_views": 395.0,
+        "count": 5
       },
       "12": {
         "slot": "午前（10〜12時台）",
@@ -739,21 +753,30 @@
     },
     "optimal_hours": [
       9,
-      21,
-      22
+      10,
+      21
     ],
     "insights": [
-      "最強パターン: 注意喚起+限定型（推定）（eng率14.3%・閲覧1208・2件）",
+      "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 22.9%",
       "絵文字CTAあり → avg eng 20.4%",
       "数字フックあり → avg eng 17.6%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 44,
-  "last_analyzed": "2026-04-04T09:07:20.836215+09:00",
+  "data_count": 45,
+  "last_analyzed": "2026-04-04T10:37:57.948211+09:00",
   "confidence": "high",
   "pattern_ranking": [
+    {
+      "pattern": "構造G_注意喚起+限定型②",
+      "count": 1,
+      "avg_engagement": 9.89,
+      "avg_views": 1507.0,
+      "total_likes": 144,
+      "total_replies": 5,
+      "_score": 1656.0423
+    },
     {
       "pattern": "注意喚起+限定型（推定）",
       "count": 2,
@@ -997,6 +1020,11 @@
       "avg_engagement": 17.56
     },
     {
+      "feature": "has_fear_hook",
+      "count": 1,
+      "avg_engagement": 9.89
+    },
+    {
       "feature": "has_question",
       "count": 10,
       "avg_engagement": 9.66
@@ -1013,6 +1041,17 @@
       "first_line": "今週後半、気をつけた方がいい星座。",
       "content_preview": "今週後半、気をつけた方がいい星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座さん。\n\n双子座",
       "_score": 2835.0231000000003
+    },
+    {
+      "id": "post_20260403_1007_th_002",
+      "pattern": "構造G_注意喚起+限定型②",
+      "eng_rate": 9.89,
+      "views": 1507,
+      "likes": 144,
+      "replies": 5,
+      "first_line": "今月後半、急に動く星座。",
+      "content_preview": "今月後半、急に動く星座。\n\nたった4つだけです。\n\n牡牛座、蟹座、蠍座、山羊座さん。\n\n牡牛座は仕事",
+      "_score": 1656.0423
     },
     {
       "id": "post_20260324_011",
@@ -1046,17 +1085,6 @@
       "first_line": "来週、12星座の中で",
       "content_preview": "来週、12星座の中で\n最も恋愛が動く星座。\n\n蟹座さんです。\n\n新しい出会いか、\n既存の関係の深まり",
       "_score": 819.9997
-    },
-    {
-      "id": "post_20260323_008",
-      "pattern": "限定×恐怖型・恋愛",
-      "eng_rate": 21.29,
-      "views": 559,
-      "likes": 57,
-      "replies": 62,
-      "first_line": "12星座中、たった3つだけ。",
-      "content_preview": "12星座中、たった3つだけ。\n\n今週、恋の流れが\nドラマティックに変わる星座があります。\n\nそれは蟹",
-      "_score": 678.0110999999999
     }
   ],
   "hourly_data": {
@@ -1074,9 +1102,9 @@
     },
     "10": {
       "slot": "午前（10〜12時台）",
-      "avg_eng": 9.37,
-      "avg_views": 117.0,
-      "count": 4
+      "avg_eng": 9.47,
+      "avg_views": 395.0,
+      "count": 5
     },
     "12": {
       "slot": "午前（10〜12時台）",
@@ -1135,7 +1163,7 @@
   },
   "optimal_hours": [
     9,
-    21,
-    22
+    10,
+    21
   ]
 }
