@@ -275,15 +275,15 @@ JSON形式で1件だけ返してください:
 # state更新
 # ---------------------------------------------------------------------------
 
-def record_post_to_history(post_id, content, hashtag=""):
-    """投稿成功をhistory/queueに記録"""
+def record_post_to_history(post_id, content, hashtag="", pattern_name=""):
+    """投稿成功をhistory/queueに記録（緊急生成のみ使用。キュー投稿はフルpostオブジェクトで直接保存）"""
     now = datetime.now(JST)
 
     # post-history.json に追加
     history = load_json("state/post-history.json")
     if "posts" not in history:
         history["posts"] = []
-    history["posts"].append({
+    entry = {
         "id": f"verify-retry-{now.strftime('%Y%m%d%H%M%S')}",
         "content": content,
         "hashtag": hashtag,
@@ -292,7 +292,10 @@ def record_post_to_history(post_id, content, hashtag=""):
         "posted_at": now.isoformat(),
         "platform_post_id": post_id,
         "source": "post-verify",
-    })
+    }
+    if pattern_name:
+        entry["pattern_name"] = pattern_name
+    history["posts"].append(entry)
     save_json("state/post-history.json", history)
 
     # system-status.json 更新
@@ -369,7 +372,7 @@ def main():
                 post_id = threads_post_text(full_text, user_id, access_token)
                 log("INFO", f"再投稿成功: {post_id}")
 
-                # キューから削除
+                # キューから削除・history更新（pattern_name等のフィールドを保持）
                 post["status"] = "posted"
                 post["posted_at"] = datetime.now(JST).isoformat()
                 post["platform_post_id"] = post_id
@@ -377,7 +380,21 @@ def main():
                 queue["queue"] = [p for p in queue["queue"] if p.get("id") != post.get("id")]
                 save_json("state/post-queue.json", queue)
 
-                record_post_to_history(post_id, content, hashtag)
+                # フルpostオブジェクトをhistoryに保存（pattern_nameを失わないため）
+                history = load_json("state/post-history.json")
+                if "posts" not in history:
+                    history["posts"] = []
+                history["posts"].append(post)
+                save_json("state/post-history.json", history)
+                # system-status更新
+                status_data = load_json("state/system-status.json")
+                today_str = datetime.now(JST).strftime("%Y-%m-%d")
+                if status_data.get("daily_post_date") != today_str:
+                    status_data["daily_post_count"] = 0
+                    status_data["daily_post_date"] = today_str
+                status_data["daily_post_count"] = status_data.get("daily_post_count", 0) + 1
+                status_data["consecutive_errors"] = 0
+                save_json("state/system-status.json", status_data)
                 return
             except Exception as e:
                 log("ERROR", f"キューからの再投稿失敗: {e}")
@@ -427,7 +444,9 @@ def main():
     try:
         post_id = threads_post_text(full_text, user_id, access_token)
         log("INFO", f"緊急投稿成功: {post_id}")
-        record_post_to_history(post_id, content, hashtag)
+        # pattern_nameをpost_dataから取得（緊急生成分にもセット）
+        pattern_name = post_data.get("pattern_name", "緊急生成_verify")
+        record_post_to_history(post_id, content, hashtag, pattern_name=pattern_name)
     except Exception as e:
         log("ERROR", f"緊急投稿失敗: {e}")
         sys.exit(1)
