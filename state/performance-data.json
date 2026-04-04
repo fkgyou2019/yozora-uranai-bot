@@ -1221,7 +1221,33 @@
         "hook_length": 5
       },
       "collected_at": "2026-04-04T23:23:07.276412+09:00"
+    },
+    {
+      "id": "post_20260403_2237_th_001",
+      "platform_post_id": "17882996253506705",
+      "posted_at": "2026-04-04T00:06:30.590061+09:00",
+      "pattern_name": "共感×具体アドバイス型",
+      "category": "総合運",
+      "content_preview": "春になると\n「新しく始めたい気持ち」になりますよね。\n\nそれ、誰もが感じる宇宙のサイン。\n特に牡羊座",
+      "first_line": "春になると",
+      "char_count": 175,
+      "metrics": {
+        "views": 103,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 1.94
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 5
+      },
+      "collected_at": "2026-04-05T06:58:34.625588+09:00"
     }
   ],
-  "last_updated": "2026-04-04T23:23:07.276412+09:00"
+  "last_updated": "2026-04-05T06:58:34.625588+09:00"
 }
