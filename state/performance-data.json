@@ -1169,7 +1169,33 @@
         "hook_length": 12
       },
       "collected_at": "2026-04-04T10:37:44.897183+09:00"
+    },
+    {
+      "id": "verify-retry-20260403151220",
+      "platform_post_id": "18099032104806293",
+      "posted_at": "2026-04-03T15:12:20.298638+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "明日4月4日、\n仕事で大きな動きがある星座。\n\nたった3つだけです。\n\n蟹座は\n上司からの評価が\n急",
+      "first_line": "明日4月4日、",
+      "char_count": 168,
+      "metrics": {
+        "views": 160,
+        "likes": 6,
+        "replies": 4,
+        "reposts": 0,
+        "engagement_rate": 6.25
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 7
+      },
+      "collected_at": "2026-04-04T15:16:07.869138+09:00"
     }
   ],
-  "last_updated": "2026-04-04T15:07:45.347362+09:00"
+  "last_updated": "2026-04-04T15:16:07.869138+09:00"
 }

@@ -24,7 +24,7 @@
     },
     {
       "pattern": "注意喚起型・仕事運",
-      "weight": 13,
+      "weight": 12,
       "avg_engagement": 42.14,
       "avg_views": 674.0,
       "sample_count": 1,
@@ -235,13 +235,13 @@
   "insights": [
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 22.9%",
-    "絵文字CTAあり → avg eng 20.4%",
-    "数字フックあり → avg eng 17.6%",
+    "絵文字CTAあり → avg eng 19.4%",
+    "数字フックあり → avg eng 16.6%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 45,
-    "last_analyzed": "2026-04-04T15:07:51.902637+09:00",
+    "data_count": 46,
+    "last_analyzed": "2026-04-04T15:16:14.725180+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -262,7 +262,7 @@
       },
       {
         "pattern": "注意喚起型・仕事運",
-        "weight": 13,
+        "weight": 12,
         "avg_engagement": 42.14,
         "avg_views": 674.0,
         "sample_count": 1,
@@ -404,6 +404,15 @@
         "_score": 173.2914
       },
       {
+        "pattern": "数字+限定型（推定）",
+        "count": 1,
+        "avg_engagement": 6.25,
+        "avg_views": 160.0,
+        "total_likes": 6,
+        "total_replies": 4,
+        "_score": 170.0
+      },
+      {
         "pattern": "共感×質問型（推定）",
         "count": 1,
         "avg_engagement": 26.09,
@@ -529,13 +538,13 @@
       },
       {
         "feature": "has_cta_emoji",
-        "count": 14,
-        "avg_engagement": 20.39
+        "count": 15,
+        "avg_engagement": 19.45
       },
       {
         "feature": "has_number_hook",
-        "count": 11,
-        "avg_engagement": 17.56
+        "count": 12,
+        "avg_engagement": 16.62
       },
       {
         "feature": "has_fear_hook",
@@ -666,9 +675,9 @@
       },
       "15": {
         "slot": "午後（13〜15時台）",
-        "avg_eng": 6.67,
-        "avg_views": 175.0,
-        "count": 5
+        "avg_eng": 6.6,
+        "avg_views": 172.0,
+        "count": 6
       },
       "17": {
         "slot": "夕方（16〜18時台）",
@@ -759,13 +768,13 @@
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 22.9%",
-      "絵文字CTAあり → avg eng 20.4%",
-      "数字フックあり → avg eng 17.6%",
+      "絵文字CTAあり → avg eng 19.4%",
+      "数字フックあり → avg eng 16.6%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 45,
-  "last_analyzed": "2026-04-04T15:07:51.902637+09:00",
+  "data_count": 46,
+  "last_analyzed": "2026-04-04T15:16:14.725180+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -884,6 +893,15 @@
       "total_likes": 78,
       "total_replies": 50,
       "_score": 173.2914
+    },
+    {
+      "pattern": "数字+限定型（推定）",
+      "count": 1,
+      "avg_engagement": 6.25,
+      "avg_views": 160.0,
+      "total_likes": 6,
+      "total_replies": 4,
+      "_score": 170.0
     },
     {
       "pattern": "共感×質問型（推定）",
@@ -1011,13 +1029,13 @@
     },
     {
       "feature": "has_cta_emoji",
-      "count": 14,
-      "avg_engagement": 20.39
+      "count": 15,
+      "avg_engagement": 19.45
     },
     {
       "feature": "has_number_hook",
-      "count": 11,
-      "avg_engagement": 17.56
+      "count": 12,
+      "avg_engagement": 16.62
     },
     {
       "feature": "has_fear_hook",
@@ -1120,9 +1138,9 @@
     },
     "15": {
       "slot": "午後（13〜15時台）",
-      "avg_eng": 6.67,
-      "avg_views": 175.0,
-      "count": 5
+      "avg_eng": 6.6,
+      "avg_views": 172.0,
+      "count": 6
     },
     "17": {
       "slot": "夕方（16〜18時台）",
