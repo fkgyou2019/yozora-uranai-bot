@@ -99,15 +99,20 @@ jobs:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
 
       # --- 朝: フルレポート ---
-      - name: Fetch metrics & generate PDCA report
+      - name: Fetch metrics & analyze patterns
         if: steps.runtype.outputs.type == 'full_report'
         run: |
           python .github/scripts/fetch_metrics.py
           python .github/scripts/analyze_patterns.py
-          python .github/scripts/pdca_report.py
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        continue-on-error: true
+
+      - name: PDCA health check
+        if: steps.runtype.outputs.type == 'full_report'
+        run: python .github/scripts/pdca_check.py
+        continue-on-error: true
 
       - name: Commit reports
         run: |

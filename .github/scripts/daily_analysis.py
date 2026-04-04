@@ -15,8 +15,11 @@ import urllib.error
 from datetime import datetime, timezone, timedelta
 from collections import defaultdict
 
+sys.stdout.reconfigure(encoding="utf-8")
 JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+EXPERIMENT_STRUCTURES = {"G", "A", "B", "C", "F"}
 
 # 時間帯定義
 TIME_SLOTS = [
@@ -61,6 +64,11 @@ def safe_avg(values):
     if not values:
         return 0.0
     return sum(values) / len(values)
+
+
+def is_experiment_post(post):
+    pattern = post.get("pattern_name", "")
+    return any(f"構造{s}" in pattern for s in EXPERIMENT_STRUCTURES)
 
 
 # ---------------------------------------------------------------------------
@@ -165,7 +173,7 @@ def calc_er(views, likes, replies, reposts):
 # Markdown レポート生成
 # ---------------------------------------------------------------------------
 
-def build_report(yesterday_str, collected, deleted_count, now_str):
+def build_report(yesterday_str, collected, deleted_count, now_str, prev_summary=None, hc_delete_reasons=None, experiment_rate=None):
     """
     collected: list of dict {
         post, metrics, time_slot, er
@@ -198,14 +206,32 @@ def build_report(yesterday_str, collected, deleted_count, now_str):
     else:
         total_views = avg_views = avg_likes = avg_er = 0
 
+    # 前日比較
+    delta_views_str = ""
+    delta_er_str = ""
+    if prev_summary:
+        prev_avg_views = prev_summary.get("avg_views", 0)
+        prev_avg_er = prev_summary.get("avg_er", 0)
+        if prev_avg_views > 0 and avg_views > 0:
+            dv = avg_views - prev_avg_views
+            sign_v = "+" if dv >= 0 else ""
+            delta_views_str = f"（前日比: {sign_v}{dv:,.1f}）"
+        if prev_avg_er > 0 and avg_er > 0:
+            de = avg_er - prev_avg_er
+            sign_e = "+" if de >= 0 else ""
+            delta_er_str = f"（前日比: {sign_e}{de:.2f}%）"
+
     lines.append("| 指標 | 値 |")
     lines.append("|------|-----|")
     lines.append(f"| 投稿数 | {total_posts}件 |")
     lines.append(f"| 総閲覧数 | {total_views:,} |")
-    lines.append(f"| 平均閲覧数 | {avg_views:,.1f} |")
+    lines.append(f"| 平均閲覧数 | {avg_views:,.1f} {delta_views_str} |")
     lines.append(f"| 平均いいね | {avg_likes:.1f} |")
-    lines.append(f"| 平均ER% | {avg_er:.2f}% |")
+    lines.append(f"| 平均ER% | {avg_er:.2f}% {delta_er_str} |")
     lines.append(f"| 削除済み投稿 | {deleted_count}件 |")
+    if experiment_rate is not None:
+        exp_icon = "✅" if experiment_rate >= 80 else "⚠️" if experiment_rate >= 50 else "❌"
+        lines.append(f"| EXPERIMENT遵守率 | {exp_icon} {experiment_rate:.0f}% |")
     lines.append("")
 
     # -------------------------------------------------------------------
@@ -334,6 +360,18 @@ def build_report(yesterday_str, collected, deleted_count, now_str):
     lines.append("")
 
     # -------------------------------------------------------------------
+    # 削除理由内訳（HC logから）
+    # -------------------------------------------------------------------
+    if hc_delete_reasons:
+        lines.append("## 🗑️ 削除済み投稿の内訳")
+        reason_counts = defaultdict(int)
+        for reason in hc_delete_reasons:
+            reason_counts[reason] += 1
+        for reason, cnt in sorted(reason_counts.items(), key=lambda x: -x[1]):
+            lines.append(f"- {reason}: {cnt}件")
+        lines.append("")
+
+    # -------------------------------------------------------------------
     # 成長トラッカー: パターン別成長曲線サマリー
     # -------------------------------------------------------------------
     tracker = load_json("state/post-growth-tracker.json")
@@ -445,6 +483,21 @@ def main():
     # post-history.json 読み込み
     history = load_json("state/post-history.json")
 
+    # HC log読み込み（削除理由内訳用）
+    hc_log = load_json("state/health-check-log.json")
+
+    # 前日のJSON結果を読み込み（前日比較用）
+    prev_date_str = (yesterday - timedelta(days=1)).strftime("%Y-%m-%d")
+    prev_json_path = os.path.join(PROJECT_DIR, "state", "reports", f"{prev_date_str}.json")
+    prev_summary = None
+    if os.path.exists(prev_json_path):
+        with open(prev_json_path, "r", encoding="utf-8") as f:
+            prev_data = json.load(f)
+        prev_summary = prev_data.get("summary", None)
+        print(f"前日JSON読み込み完了: {prev_date_str}", flush=True)
+    else:
+        print(f"前日JSONなし（初回 or 欠損）: {prev_date_str}", flush=True)
+
     # 前日投稿を取得
     yesterday_posts = get_yesterday_posts(history)
     print(f"前日の投稿: {len(yesterday_posts)}件", flush=True)
@@ -495,8 +548,38 @@ def main():
 
     print(f"\n取得完了: {len(collected)}件 / 削除済み: {deleted_count}件", flush=True)
 
+    # EXPERIMENT遵守率計算
+    exp_posts_yd = [p for p in yesterday_posts if is_experiment_post(p)]
+    experiment_rate = (len(exp_posts_yd) / len(yesterday_posts) * 100) if yesterday_posts else None
+    if experiment_rate is not None:
+        print(f"EXPERIMENT遵守率: {experiment_rate:.0f}% ({len(exp_posts_yd)}/{len(yesterday_posts)}件)", flush=True)
+
+    # HC logから削除理由内訳を取得
+    hc_delete_reasons = []
+    for check in hc_log.get("checks", []):
+        ts = check.get("timestamp", "")
+        if ts[:10] != yesterday_str:
+            continue
+        for r in check.get("results", []):
+            if r.get("deleted"):
+                reason = r.get("reason", "不明")
+                # 短縮
+                if "24h" in reason:
+                    hc_delete_reasons.append("24h経過・低パフォーマンス")
+                elif "12h" in reason:
+                    hc_delete_reasons.append("12h経過・低パフォーマンス")
+                elif "時刻矛盾" in reason:
+                    hc_delete_reasons.append("時刻矛盾")
+                else:
+                    hc_delete_reasons.append(reason[:30])
+
     # Markdown レポート生成
-    report_content = build_report(yesterday_str, collected, deleted_count, now_str)
+    report_content = build_report(
+        yesterday_str, collected, deleted_count, now_str,
+        prev_summary=prev_summary,
+        hc_delete_reasons=hc_delete_reasons if hc_delete_reasons else None,
+        experiment_rate=experiment_rate,
+    )
 
     # 保存先ディレクトリ作成
     reports_dir = os.path.join(PROJECT_DIR, "state", "reports")
@@ -507,6 +590,46 @@ def main():
         f.write(report_content)
 
     print(f"\nレポート生成完了: {report_path}", flush=True)
+
+    # 構造化JSON保存（前日比較・PDCA連携用）
+    total_views_json = sum(c["metrics"]["views"] for c in collected) if collected else 0
+    avg_views_json = total_views_json / len(collected) if collected else 0
+    avg_er_json = safe_avg([c["er"] for c in collected]) if collected else 0
+
+    # パターン別集計
+    pattern_summary = defaultdict(lambda: {"views": [], "er": [], "count": 0})
+    for c in collected:
+        pname = c["post"].get("pattern_name", "不明")
+        pattern_summary[pname]["views"].append(c["metrics"]["views"])
+        pattern_summary[pname]["er"].append(c["er"])
+        pattern_summary[pname]["count"] += 1
+
+    json_data = {
+        "date": yesterday_str,
+        "generated_at": now_str,
+        "summary": {
+            "posts_total": len(yesterday_posts),
+            "posts_measured": len(collected),
+            "posts_deleted": deleted_count,
+            "total_views": total_views_json,
+            "avg_views": round(avg_views_json, 1),
+            "avg_er": round(avg_er_json, 2),
+            "experiment_rate": round(experiment_rate, 1) if experiment_rate is not None else None,
+        },
+        "patterns": {
+            pname: {
+                "count": v["count"],
+                "avg_views": round(safe_avg(v["views"]), 1),
+                "avg_er": round(safe_avg(v["er"]), 2),
+            }
+            for pname, v in pattern_summary.items()
+        },
+        "delete_reasons": hc_delete_reasons,
+    }
+    json_path = os.path.join(reports_dir, f"{yesterday_str}.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(json_data, f, ensure_ascii=False, indent=2)
+    print(f"JSON保存完了: {json_path}", flush=True)
 
     # GitHub Actions のサマリーとして表示
     print("\n" + "=" * 60, flush=True)
