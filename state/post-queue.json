@@ -1,3 +1,17 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
+      "category": "仕事運",
+      "content": "今週後半、仕事で気をつけた方がいい星座。\nたった3つだけです。\n\n▼牡羊座\n午後からの会議で、勢いで決めてしまわないこと。\n\n▼獅子座\nメールの誤送信に注意。確認は2回以上。\n\n▼射手座\n締め切り直前の変更依頼が来そう。余裕をもって。\n\n朝の時間を活かして、今日中に対策を立てておくと\nいいですよ。🔮\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "朝（6〜9時台）",
+      "scheduled_hour": 7,
+      "id": "post_20260404_1208_exp_001",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued"
+    }
+  ]
 }
