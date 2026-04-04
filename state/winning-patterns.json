@@ -240,8 +240,8 @@
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 46,
-    "last_analyzed": "2026-04-04T21:37:18.714984+09:00",
+    "data_count": 47,
+    "last_analyzed": "2026-04-04T23:23:11.932185+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -404,15 +404,6 @@
         "_score": 173.2914
       },
       {
-        "pattern": "数字+限定型（推定）",
-        "count": 1,
-        "avg_engagement": 6.25,
-        "avg_views": 160.0,
-        "total_likes": 6,
-        "total_replies": 4,
-        "_score": 170.0
-      },
-      {
         "pattern": "共感×質問型（推定）",
         "count": 1,
         "avg_engagement": 26.09,
@@ -438,6 +429,15 @@
         "total_likes": 14,
         "total_replies": 0,
         "_score": 112.9986
+      },
+      {
+        "pattern": "数字+限定型（推定）",
+        "count": 2,
+        "avg_engagement": 8.0,
+        "avg_views": 100.0,
+        "total_likes": 10,
+        "total_replies": 4,
+        "_score": 108.0
       },
       {
         "pattern": "自由型_水星逆行対策",
@@ -705,9 +705,9 @@
       },
       "21": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 5.38,
-        "avg_views": 320.0,
-        "count": 5
+        "avg_eng": 6.11,
+        "avg_views": 274.0,
+        "count": 6
       },
       "22": {
         "slot": "深夜（22〜0時台）",
@@ -763,7 +763,7 @@
     "optimal_hours": [
       9,
       10,
-      21
+      22
     ],
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
@@ -773,8 +773,8 @@
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 46,
-  "last_analyzed": "2026-04-04T21:37:18.714984+09:00",
+  "data_count": 47,
+  "last_analyzed": "2026-04-04T23:23:11.932185+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -895,15 +895,6 @@
       "_score": 173.2914
     },
     {
-      "pattern": "数字+限定型（推定）",
-      "count": 1,
-      "avg_engagement": 6.25,
-      "avg_views": 160.0,
-      "total_likes": 6,
-      "total_replies": 4,
-      "_score": 170.0
-    },
-    {
       "pattern": "共感×質問型（推定）",
       "count": 1,
       "avg_engagement": 26.09,
@@ -929,6 +920,15 @@
       "total_likes": 14,
       "total_replies": 0,
       "_score": 112.9986
+    },
+    {
+      "pattern": "数字+限定型（推定）",
+      "count": 2,
+      "avg_engagement": 8.0,
+      "avg_views": 100.0,
+      "total_likes": 10,
+      "total_replies": 4,
+      "_score": 108.0
     },
     {
       "pattern": "自由型_水星逆行対策",
@@ -1168,9 +1168,9 @@
     },
     "21": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 5.38,
-      "avg_views": 320.0,
-      "count": 5
+      "avg_eng": 6.11,
+      "avg_views": 274.0,
+      "count": 6
     },
     "22": {
       "slot": "深夜（22〜0時台）",
@@ -1182,6 +1182,6 @@
   "optimal_hours": [
     9,
     10,
-    21
+    22
   ]
 }

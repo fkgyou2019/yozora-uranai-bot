@@ -1195,7 +1195,33 @@
         "hook_length": 7
       },
       "collected_at": "2026-04-04T15:16:07.869138+09:00"
+    },
+    {
+      "id": "verify-retry-20260403214217",
+      "platform_post_id": "18206202949328127",
+      "posted_at": "2026-04-03T21:42:17.252216+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "今週後半、\n人間関係が\n大きく動く星座。\n\nたった3つだけです。\n\n双子座は\n新しい出会いや\n再会が",
+      "first_line": "今週後半、",
+      "char_count": 154,
+      "metrics": {
+        "views": 41,
+        "likes": 4,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 9.76
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 5
+      },
+      "collected_at": "2026-04-04T23:23:07.276412+09:00"
     }
   ],
-  "last_updated": "2026-04-04T21:37:11.535111+09:00"
+  "last_updated": "2026-04-04T23:23:07.276412+09:00"
 }
