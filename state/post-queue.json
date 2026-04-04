@@ -1,3 +1,17 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造B_ランキング型（今日・今週のTOP3）",
+      "category": "金運",
+      "content": "【今日の金運ランキングTOP3】\n\n🥉3位 射手座\n午後から思わぬ出費が。\n焦らず判断してくださいね。\n\n🥈2位 牡牛座\n小さな幸運が重なる一日。\nお財布を見直すなら今です。\n\n🥇1位 獅子座\n金星が味方する時間帯。\n大切な決断に後押しあり。\n直感を信じて🍀\n\n#金運",
+      "hashtag": "#金運",
+      "time_slot": "午前（10〜12時台）",
+      "scheduled_hour": 12,
+      "id": "post_20260404_2038_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued"
+    }
+  ]
 }
