@@ -1,3 +1,17 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造G_注意喚起+限定型（今週の仕事運警告）",
+      "category": "仕事運",
+      "content": "今週後半、仕事で判断ミスが起きやすい星座。\nたった3つだけです。\n\n🔴双子座\n水星の逆行影響で、メール送信前の確認が必須。\n\n🔴天秤座\n金星が揺らぐ時期。提案の決定は週末まで待つと◎\n\n🔴水瓶座\n土星からの警告。重要な契約は木曜までに。\n\n思い当たることがあれば、コメントで教えてください🔮\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "朝（6〜9時台）",
+      "scheduled_hour": 7,
+      "id": "post_20260405_2038_exp_001",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued"
+    }
+  ]
 }
