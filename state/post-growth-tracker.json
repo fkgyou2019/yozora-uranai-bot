@@ -1,44 +1,5 @@
 {
   "snapshots": {
-    "verify-retry-20260329091219": {
-      "post_id": "verify-retry-20260329091219",
-      "platform_post_id": "17878637304544053",
-      "posted_at": "2026-03-29T09:12:19.738419+09:00",
-      "pattern_name": "",
-      "slot_hour": 9,
-      "day_of_week": 6,
-      "day_name": "日",
-      "first_line": "春の新月が心を整える。",
-      "content_preview": "春の新月が心を整える。\n\n牡羊座のあなたへ。\n新しい環境への不安は自然なこと。\nでも今のあなたには、その変化を\nチャンス",
-      "hourly": [],
-      "completed": true
-    },
-    "verify-retry-20260329104221": {
-      "post_id": "verify-retry-20260329104221",
-      "platform_post_id": "18042434249536684",
-      "posted_at": "2026-03-29T10:42:21.919768+09:00",
-      "pattern_name": "",
-      "slot_hour": 10,
-      "day_of_week": 6,
-      "day_name": "日",
-      "first_line": "3月29日の運勢🌙",
-      "content_preview": "3月29日の運勢🌙\n\n牡羊座さんへ\n今日のあなたは、心と行動が\nぴったり一致する日✨\n\nやりたいことが明確に見えて\nいる",
-      "hourly": [],
-      "completed": true
-    },
-    "verify-retry-20260329121220": {
-      "post_id": "verify-retry-20260329121220",
-      "platform_post_id": "17927371854085864",
-      "posted_at": "2026-03-29T12:12:20.241685+09:00",
-      "pattern_name": "",
-      "slot_hour": 12,
-      "day_of_week": 6,
-      "day_name": "日",
-      "first_line": "春の訪れとともに、あなたの",
-      "content_preview": "春の訪れとともに、あなたの\n運気も変わり始めています。✨\n\n3月下旬は、特に射手座と牡羊座の\n皆さまに幸運が訪れやすい時",
-      "hourly": [],
-      "completed": true
-    },
     "verify-retry-20260329151219": {
       "post_id": "verify-retry-20260329151219",
       "platform_post_id": "18258565663291601",
@@ -2105,6 +2066,17 @@
           "auto_replies": 0,
           "er": 0.83,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 65,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 121,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.83,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -2376,6 +2348,17 @@
           "auto_replies": 0,
           "er": 9.93,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 52,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 1512,
+          "likes": 145,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.92,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -2669,6 +2652,17 @@
           "auto_replies": 0,
           "er": 6.21,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 47,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 162,
+          "likes": 6,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.17,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -2893,6 +2887,17 @@
           "auto_replies": 0,
           "er": 9.52,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 41,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 44,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.09,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -3064,6 +3069,17 @@
           "auto_replies": 0,
           "er": 1.94,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 38,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 105,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.9,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -3315,7 +3331,7 @@
           "velocity_views_per_hour": 0.5
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 4.6,
       "peak_velocity_hour": 5
     },
@@ -3440,6 +3456,17 @@
           "auto_replies": 0,
           "er": 15.17,
           "velocity_views_per_hour": 7.0
+        },
+        {
+          "h": 28,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 680,
+          "likes": 101,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.15,
+          "velocity_views_per_hour": 2.3
         }
       ],
       "completed": false,
@@ -3569,7 +3596,7 @@
           "velocity_views_per_hour": 1.0
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 4.0,
       "peak_velocity_hour": 2
     },
@@ -3683,6 +3710,17 @@
           "auto_replies": 0,
           "er": 17.95,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 23,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 43,
+          "likes": 2,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 16.28,
+          "velocity_views_per_hour": 0.7
         }
       ],
       "completed": false,
@@ -3805,6 +3843,17 @@
           "auto_replies": 0,
           "er": 31.48,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 18,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 57,
+          "likes": 17,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 29.82,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -3888,6 +3937,17 @@
           "auto_replies": 0,
           "er": 18.75,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 17,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 20,
+          "likes": 3,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.0,
+          "velocity_views_per_hour": 0.7
         }
       ],
       "completed": false,
@@ -3916,12 +3976,79 @@
           "auto_replies": 0,
           "er": 3.64,
           "velocity_views_per_hour": 55.0
+        },
+        {
+          "h": 7,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 85,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.71,
+          "velocity_views_per_hour": 5.0
         }
       ],
       "completed": false,
       "peak_velocity": 55.0,
       "peak_velocity_hour": 1
+    },
+    "post_20260405_0909_exp_006": {
+      "post_id": "post_20260405_0909_exp_006",
+      "platform_post_id": "18124639981523108",
+      "threads_url": "",
+      "posted_at": "2026-04-05T09:12:17.805608+09:00",
+      "pattern_name": "構造F_告白・暴露型（占い師として正直に言います）",
+      "slot_hour": 9,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "正直に言います。",
+      "content_preview": "正直に言います。\n今週後半、動きたくなる星座ほど\n落とし穴があるんです。\n\n木星の角度から見ると、\n牡羊座・獅子座・射手",
+      "hourly": [],
+      "completed": true
+    },
+    "post_20260405_1038_exp_001": {
+      "post_id": "post_20260405_1038_exp_001",
+      "platform_post_id": "17893235259308097",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWu1_KpDUI9",
+      "posted_at": "2026-04-05T10:42:17.920539+09:00",
+      "pattern_name": "構造G_注意喚起+限定型（今週の仕事運警告）",
+      "slot_hour": 10,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "今週後半、仕事で判断ミスが起きやすい星座。",
+      "content_preview": "今週後半、仕事で判断ミスが起きやすい星座。\nたった3つだけです。\n\n🔴双子座\n水星の逆行影響で、メールや報告の誤送信に注",
+      "hourly": [
+        {
+          "h": 4,
+          "ts": "2026-04-05T15:02:43.569216+09:00",
+          "views": 13,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 7.69,
+          "velocity_views_per_hour": 3.2
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 3.2,
+      "peak_velocity_hour": 4
+    },
+    "verify-retry-20260405121218": {
+      "post_id": "verify-retry-20260405121218",
+      "platform_post_id": "18076601897423160",
+      "threads_url": "",
+      "posted_at": "2026-04-05T12:12:18.317394+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 12,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "明日からの週初め、",
+      "content_preview": "明日からの週初め、\n恋愛で急展開がある星座。\nたった3つだけです。\n\n▼牡牛座\n月曜日、\n予期せぬ連絡から\n関係が動く予",
+      "hourly": [],
+      "completed": true
     }
   },
-  "last_updated": "2026-04-05T08:55:32.402037+09:00"
+  "last_updated": "2026-04-05T15:02:43.569216+09:00"
 }
