@@ -1861,6 +1861,22 @@
       "platform_post_id": "17953112544103350",
       "source": "post-verify",
       "pattern_name": "緊急生成_verify"
+    },
+    {
+      "pattern_name": "構造F_告白・暴露型（占い師として正直に言います）",
+      "category": "週間運勢",
+      "content": "正直に言います。\n今週後半、動きたくなる星座ほど\n落とし穴があるんです。\n\n木星の角度から見ると、\n牡羊座・獅子座・射手座は\n勢いで決断しやすい配置。\n\nでも、土星は「ちょっと待って」と\n囁いています。\n\n今夜中に一度、立ち止まる時間を\n作ってみてください。\n判断が変わりますよ。🔮\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "夜（19〜21時台）",
+      "scheduled_hour": 19,
+      "id": "post_20260405_0909_exp_006",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "posted_at": "2026-04-05T09:12:17.805608+09:00",
+      "platform_post_id": "18124639981523108",
+      "source": "post-verify"
     }
   ]
 }
