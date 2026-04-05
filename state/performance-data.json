@@ -1247,7 +1247,33 @@
         "hook_length": 5
       },
       "collected_at": "2026-04-05T06:58:34.625588+09:00"
+    },
+    {
+      "id": "verify-retry-20260404104220",
+      "platform_post_id": "18094030168888967",
+      "posted_at": "2026-04-04T10:42:20.418637+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "今週後半、金運が急変する星座。\n\nたった2つだけです。\n\n牡牛座と山羊座さん。\n\n牡牛座は木曜以降、",
+      "first_line": "今週後半、金運が急変する星座。",
+      "char_count": 149,
+      "metrics": {
+        "views": 680,
+        "likes": 101,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 15.15
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 15
+      },
+      "collected_at": "2026-04-05T12:07:49.155447+09:00"
     }
   ],
-  "last_updated": "2026-04-05T10:37:48.993946+09:00"
+  "last_updated": "2026-04-05T12:07:49.155447+09:00"
 }
