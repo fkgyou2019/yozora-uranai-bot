@@ -201,8 +201,8 @@ def generate_emergency_post(api_key, recent_contents=None):
 6. CTAは必ず最後に配置（「🔮を置いた方に今夜良い知らせが届きます」「🍀を置いた方に今週中に嬉しい連絡が届きます」等）
 7. 直近の投稿と全く異なるテーマ・星座を選ぶこと
 
-JSON形式で1件だけ返してください:
-{{"content": "投稿本文", "hashtag": "#今週の占い"}}
+JSON形式で1件だけ返してください（pattern_nameは使用した構造名を入れること）:
+{{"pattern_name": "構造G_注意喚起+限定型", "content": "投稿本文", "hashtag": "#今週の占い"}}
 """
 
     body = json.dumps({
