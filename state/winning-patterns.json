@@ -24,7 +24,7 @@
     },
     {
       "pattern": "注意喚起型・仕事運",
-      "weight": 12,
+      "weight": 11,
       "avg_engagement": 42.14,
       "avg_views": 674.0,
       "sample_count": 1,
@@ -32,7 +32,7 @@
     },
     {
       "pattern": "限定型・恐怖×期待",
-      "weight": 6,
+      "weight": 5,
       "avg_engagement": 20.13,
       "avg_views": 745.0,
       "sample_count": 1,
@@ -237,14 +237,14 @@
   ],
   "insights": [
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
-    "ランキング形式あり → avg eng 22.9%",
+    "ランキング形式あり → avg eng 23.8%",
     "絵文字CTAあり → avg eng 18.2%",
-    "数字フックあり → avg eng 16.6%",
+    "数字フックあり → avg eng 17.5%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 50,
-    "last_analyzed": "2026-04-05T20:37:55.655887+09:00",
+    "data_count": 51,
+    "last_analyzed": "2026-04-05T20:47:08.178916+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -265,7 +265,7 @@
       },
       {
         "pattern": "注意喚起型・仕事運",
-        "weight": 12,
+        "weight": 11,
         "avg_engagement": 42.14,
         "avg_views": 674.0,
         "sample_count": 1,
@@ -273,7 +273,7 @@
       },
       {
         "pattern": "限定型・恐怖×期待",
-        "weight": 6,
+        "weight": 5,
         "avg_engagement": 20.13,
         "avg_views": 745.0,
         "sample_count": 1,
@@ -470,6 +470,15 @@
         "_score": 88.998
       },
       {
+        "pattern": "ランキング型（推定）",
+        "count": 1,
+        "avg_engagement": 28.33,
+        "avg_views": 60.0,
+        "total_likes": 17,
+        "total_replies": 0,
+        "_score": 76.998
+      },
+      {
         "pattern": "励まし型【禁止】（推定）",
         "count": 1,
         "avg_engagement": 6.06,
@@ -545,8 +554,8 @@
     "feature_ranking": [
       {
         "feature": "has_ranking",
-        "count": 5,
-        "avg_engagement": 22.86
+        "count": 6,
+        "avg_engagement": 23.77
       },
       {
         "feature": "has_cta_emoji",
@@ -555,8 +564,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 12,
-        "avg_engagement": 16.62
+        "count": 13,
+        "avg_engagement": 17.52
       },
       {
         "feature": "has_fear_hook",
@@ -717,9 +726,9 @@
       },
       "20": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 19.6,
-        "avg_views": 280.0,
-        "count": 7
+        "avg_eng": 20.69,
+        "avg_views": 252.0,
+        "count": 8
       },
       "21": {
         "slot": "夜（19〜21時台）",
@@ -785,14 +794,14 @@
     ],
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
-      "ランキング形式あり → avg eng 22.9%",
+      "ランキング形式あり → avg eng 23.8%",
       "絵文字CTAあり → avg eng 18.2%",
-      "数字フックあり → avg eng 16.6%",
+      "数字フックあり → avg eng 17.5%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 50,
-  "last_analyzed": "2026-04-05T20:37:55.655887+09:00",
+  "data_count": 51,
+  "last_analyzed": "2026-04-05T20:47:08.178916+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -976,6 +985,15 @@
       "_score": 88.998
     },
     {
+      "pattern": "ランキング型（推定）",
+      "count": 1,
+      "avg_engagement": 28.33,
+      "avg_views": 60.0,
+      "total_likes": 17,
+      "total_replies": 0,
+      "_score": 76.998
+    },
+    {
       "pattern": "励まし型【禁止】（推定）",
       "count": 1,
       "avg_engagement": 6.06,
@@ -1051,8 +1069,8 @@
   "feature_ranking": [
     {
       "feature": "has_ranking",
-      "count": 5,
-      "avg_engagement": 22.86
+      "count": 6,
+      "avg_engagement": 23.77
     },
     {
       "feature": "has_cta_emoji",
@@ -1061,8 +1079,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 12,
-      "avg_engagement": 16.62
+      "count": 13,
+      "avg_engagement": 17.52
     },
     {
       "feature": "has_fear_hook",
@@ -1195,9 +1213,9 @@
     },
     "20": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 19.6,
-      "avg_views": 280.0,
-      "count": 7
+      "avg_eng": 20.69,
+      "avg_views": 252.0,
+      "count": 8
     },
     "21": {
       "slot": "夜（19〜21時台）",

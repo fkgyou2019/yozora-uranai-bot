@@ -1299,7 +1299,33 @@
         "hook_length": 18
       },
       "collected_at": "2026-04-05T15:48:25.027299+09:00"
+    },
+    {
+      "id": "verify-retry-20260404204215",
+      "platform_post_id": "18116504362646895",
+      "posted_at": "2026-04-04T20:42:15.806547+09:00",
+      "pattern_name": "",
+      "category": "",
+      "content_preview": "【今日の金運ランキングTOP3】\n\n🥉3位 射手座\n午後から思わぬ出費が。\n焦らず判断してくださいね",
+      "first_line": "【今日の金運ランキングTOP3】",
+      "char_count": 134,
+      "metrics": {
+        "views": 60,
+        "likes": 17,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 28.33
+      },
+      "features": {
+        "has_ranking": true,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 16
+      },
+      "collected_at": "2026-04-05T20:47:01.152727+09:00"
     }
   ],
-  "last_updated": "2026-04-05T20:37:50.512134+09:00"
+  "last_updated": "2026-04-05T20:47:01.152727+09:00"
 }
