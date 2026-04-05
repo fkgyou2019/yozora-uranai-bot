@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "id": "buzz_own_best_20260405_065644_001",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "今月後半、急に動く星座。\n\nたった4つだけです。\n\n牡牛座、蟹座、蠍座、山羊座さん。\n\n牡牛座は仕事",
+      "metrics": {
+        "likes": 144,
+        "retweets": 0,
+        "replies": 5,
+        "views": 1507,
+        "engagement_rate": 9.89
+      },
+      "original_id": "post_20260403_1007_th_002",
+      "pattern": "構造G_注意喚起+限定型②",
+      "collected_at": "2026-04-05T06:56:44.326639+09:00",
+      "analyzed": false
+    },
+    {
       "id": "buzz_own_best_20260403_070551_000",
       "platform": "threads",
       "source": "own_best",
@@ -194,8 +212,8 @@
       "last_count": 0
     },
     "own_best": {
-      "last_count": 0
+      "last_count": 1
     }
   },
-  "last_collected": "2026-04-04T07:00:33.036297+09:00"
+  "last_collected": "2026-04-05T06:56:44.244203+09:00"
 }
