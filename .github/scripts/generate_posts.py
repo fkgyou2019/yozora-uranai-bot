@@ -500,11 +500,16 @@ def get_structure_template(structure):
     """構造別テンプレートを返す"""
     templates = {
         "G": """注意喚起+限定型:
-1行目: 「今週後半、気をつけた方がいい星座。」「来週、○○が急に動く星座。」（注意喚起+時間軸）
+1行目【フック】: 15文字以内で完結させること（超重要）
+  勝ちフック例（v=1514）: 「今月後半、急に動く星座。」（12字）
+  勝ちフック例（v=681）: 「今週後半、金運が急変する星座。」（15字）
+  NG例（v=18）: 「今週後半、仕事で判断ミスが起きやすい星座。」（21字・長すぎ）
+  推奨キーワード: 「急に動く」「急変する」「急上昇する」「大きく動く」「ガラッと変わる」
+  避けるべき: 「気をつけた方がいい」「判断ミスが起きやすい」（ネガティブ・重い・長い）
 2行目: 「たった3つだけです。」（限定感）
-3行目: 星座名を即提示
-以降: 各星座に1行ずつ具体予言
-末尾: CTA""",
+3行目: 星座名を即提示（名前リストを一気に）
+以降: 各星座に1〜2行ずつ具体的な出来事の予言（「〜になります」「〜が来ます」）
+末尾: CTA（🍀/🔮絵文字CTA）""",
         "A": """数字+限定型:
 1行目: 「12星座中、たった3つだけ。」（数字+限定）
 2行目: テーマ提示（今週、恋愛に大きな転機が訪れます。）
@@ -577,6 +582,7 @@ def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block
 3. 空行で3〜4ブロック
 4. トピックタグは末尾に1つ（#今日の運勢 #恋愛運 #金運 #星座占い #今週の占い から）
 5. CTAは最後に（「🍀を置いた方に〜」または「コメントで教えてください🔮」）
+6. 【最重要】1行目（フック）は必ず15文字以内。16文字以上は閲覧数が激減する実績あり
 
 JSON形式で1件返してください:
 {{"pattern_name": "構造{structure}_{pattern_hint}", "category": "カテゴリ", "content": "本文", "hashtag": "#今日の運勢", "time_slot": "{slot}", "scheduled_hour": {hour}}}
@@ -650,6 +656,10 @@ def generate_experiment_posts(api_key, today, used_patterns, learning_block):
         if post is not None:
             post["time_slot"] = slot_info["slot"]
             post["scheduled_hour"] = hour
+            # フック長チェック（実験モード）
+            first_line = post.get("content", "").split("\n")[0].strip()
+            if len(first_line) > 15:
+                print(f" ⚠フック長{len(first_line)}字>15字: 「{first_line[:20]}」", end=" ")
             posts.append(post)
             print("OK")
         else:
@@ -908,6 +918,47 @@ def main():
 
     # X用は現在無効
     threads_posts = filter_similar(threads_posts, "Threads")
+
+    # ========================================
+    # Phase 3.5: フック品質チェック（15字以内ルール）＆テーマローテーション
+    # ========================================
+    THEME_KEYWORDS = {
+        "仕事": ["仕事", "職場", "転職", "昇進", "キャリア", "副業", "判断"],
+        "恋愛": ["恋愛", "恋", "恋人", "片思い", "結婚", "出会い", "関係"],
+        "金運": ["金運", "金", "お金", "収入", "財布", "投資", "給料"],
+        "総合運": ["運気", "運勢", "開運", "幸運", "チャンス", "転機", "動く", "変わる"],
+    }
+
+    def detect_theme(text):
+        for theme, keywords in THEME_KEYWORDS.items():
+            if any(kw in text for kw in keywords):
+                return theme
+        return "その他"
+
+    # 当日投稿済みのテーマカウント
+    today_str_check = datetime.now(JST).strftime("%Y-%m-%d")
+    today_posted = [p for p in history.get("posts", []) if p.get("posted_at", "")[:10] == today_str_check]
+    today_themes = [detect_theme(p.get("content", "")) for p in today_posted]
+
+    hook_checked = []
+    for p in threads_posts:
+        content = p.get("content", "")
+        first_line = content.split("\n")[0].strip()
+        hook_len = len(first_line)
+
+        # フック長チェック（警告のみ・除外はしない）
+        if hook_len > 15:
+            print(f"  ⚠ フック長超過 ({hook_len}字>15字): 「{first_line[:25]}」")
+
+        # テーマローテーション: 当日すでに2件以上同テーマがあれば警告
+        theme = detect_theme(content)
+        same_theme_count = today_themes.count(theme)
+        if same_theme_count >= 2 and theme != "その他":
+            print(f"  ⚠ テーマ重複: 「{theme}」は本日すでに{same_theme_count}件 → 多様性に注意")
+
+        hook_checked.append(p)
+
+    threads_posts = hook_checked
 
     # ========================================
     # Phase 4: 時間帯別最適配置（プラットフォーム別）
