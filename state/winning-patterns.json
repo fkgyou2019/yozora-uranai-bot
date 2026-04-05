@@ -237,8 +237,8 @@
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 51,
-    "last_analyzed": "2026-04-06T07:07:56.977490+09:00",
+    "data_count": 52,
+    "last_analyzed": "2026-04-06T08:53:05.963948+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -435,6 +435,15 @@
         "total_likes": 14,
         "total_replies": 0,
         "_score": 112.9986
+      },
+      {
+        "pattern": "緊急生成_verify",
+        "count": 1,
+        "avg_engagement": 5.66,
+        "avg_views": 106.0,
+        "total_likes": 6,
+        "total_replies": 0,
+        "_score": 111.9996
       },
       {
         "pattern": "共感×具体アドバイス型",
@@ -666,9 +675,9 @@
       },
       "7": {
         "slot": "朝（6〜9時台）",
-        "avg_eng": 14.58,
-        "avg_views": 192.0,
-        "count": 5
+        "avg_eng": 13.1,
+        "avg_views": 178.0,
+        "count": 6
       },
       "9": {
         "slot": "朝（6〜9時台）",
@@ -794,8 +803,8 @@
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 51,
-  "last_analyzed": "2026-04-06T07:07:56.977490+09:00",
+  "data_count": 52,
+  "last_analyzed": "2026-04-06T08:53:05.963948+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -950,6 +959,15 @@
       "total_likes": 14,
       "total_replies": 0,
       "_score": 112.9986
+    },
+    {
+      "pattern": "緊急生成_verify",
+      "count": 1,
+      "avg_engagement": 5.66,
+      "avg_views": 106.0,
+      "total_likes": 6,
+      "total_replies": 0,
+      "_score": 111.9996
     },
     {
       "pattern": "共感×具体アドバイス型",
@@ -1153,9 +1171,9 @@
     },
     "7": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 14.58,
-      "avg_views": 192.0,
-      "count": 5
+      "avg_eng": 13.1,
+      "avg_views": 178.0,
+      "count": 6
     },
     "9": {
       "slot": "朝（6〜9時台）",
