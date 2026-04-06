@@ -96,7 +96,7 @@ jobs:
         run: |
           python -c "
           import json, os
-          VALID_STRUCTURES = {'G', 'A', 'B', 'C', 'F'}
+          VALID_STRUCTURES = {'G', 'F'}  # 再現性テスト期間: G(固定レシピ)×5 + F×2 のみ
           path = 'state/post-queue.json'
           q = json.load(open(path, encoding='utf-8')) if os.path.exists(path) else {'queue': []}
           before = len([p for p in q.get('queue', []) if p.get('status') == 'queued'])
