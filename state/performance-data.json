@@ -1533,7 +1533,33 @@
         "hook_length": 14
       },
       "collected_at": "2026-04-07T07:07:48.167416+09:00"
+    },
+    {
+      "id": "verify-retry-20260407071220",
+      "platform_post_id": "18420061363125309",
+      "posted_at": "2026-04-07T07:12:20.743672+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "4月中盤、恋愛で \n思わぬ展開が来やすい星座。\n\nたった3つだけです。\n\n🔮蟹座\n金星が感情を深める",
+      "first_line": "4月中盤、恋愛で ",
+      "char_count": 173,
+      "metrics": {
+        "views": 112,
+        "likes": 18,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 17.86
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-07T08:54:53.883844+09:00"
     }
   ],
-  "last_updated": "2026-04-07T08:02:58.121302+09:00"
+  "last_updated": "2026-04-07T08:54:53.883844+09:00"
 }
