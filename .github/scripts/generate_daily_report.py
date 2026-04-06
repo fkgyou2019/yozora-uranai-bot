@@ -4,25 +4,25 @@
 state/daily-report.json を生成するスクリプト。
 experiment-hourly.yml の commit ステップ前に毎回呼ばれ、当日データを最新状態に保つ。
 
-Claudeが「報告してください」と言われたら
-  cat state/daily-report.json
-の1コマンドで即座に読めるようにする。
+「報告してください」→ daily-report.json を読むだけで即完了。
+
+各投稿に: 閲覧数・いいね数・ER・コメント数・パターン・フック を含める。
 """
 
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone, timedelta
-from collections import defaultdict
 
 sys.stdout.reconfigure(encoding="utf-8")
 JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-HOOK_LIMIT = 15          # 15字以内ルール
-SUCCESS_VIEWS = 500      # 再現性テスト成功基準
-REPRO_TARGET = "G"       # 再現性テスト対象構造
-REPRO_START = "2026-04-06"  # テスト開始日
+HOOK_LIMIT   = 15    # フック15字以内ルール
+SUCCESS_VIEWS = 500  # 再現性テスト成功基準 v≥500
+REPRO_TARGET = "G"   # 再現性テスト対象構造
+REPRO_START  = "2026-04-06"
 
 
 def load_json(rel):
@@ -41,123 +41,148 @@ def save_json(rel, data):
 
 
 def get_first_line(content):
-    for line in content.split("\n"):
+    for line in (content or "").split("\n"):
         s = line.strip()
         if s:
             return s
     return ""
 
 
+def extract_struct(pattern_name):
+    m = re.search(r"構造([A-Z])", pattern_name)
+    return m.group(1) if m else "?"
+
+
 def main():
-    now = datetime.now(JST)
+    now   = datetime.now(JST)
     today = now.strftime("%Y-%m-%d")
 
-    history = load_json("state/post-history.json")
-    hc_log  = load_json("state/health-check-log.json")
+    history  = load_json("state/post-history.json")
+    perf     = load_json("state/performance-data.json")
+    hc_log   = load_json("state/health-check-log.json")
 
-    # ── 今日の投稿 ──────────────────────────────────────────────────
+    # ── performance-data を platform_post_id でインデックス化 ────────
+    perf_map = {}
+    for p in perf.get("posts", []):
+        pid = p.get("platform_post_id", "")
+        if pid:
+            perf_map[pid] = p
+
+    # ── 今日の投稿を post-history から取得 ──────────────────────────
     today_posts = [
         p for p in history.get("posts", [])
         if p.get("posted_at", "")[:10] == today
     ]
     today_posts.sort(key=lambda p: p.get("posted_at", ""))
 
-    posts_out = []
+    posts_out  = []
     violations = []
     views_list = []
 
     for p in today_posts:
-        content = p.get("content", "")
-        hook = get_first_line(content)
-        hook_len = len(hook)
-        hook_ok = hook_len <= HOOK_LIMIT and hook_len > 0
-        v = p.get("views", 0) or 0
-        l = p.get("likes", 0) or 0
-        pattern = p.get("pattern_name", "UNKNOWN")
-        # 構造名抽出（例: 構造G_xxx → G）
-        struct = "?"
-        import re
-        m = re.search(r"構造([A-Z])", pattern)
-        if m:
-            struct = m.group(1)
+        content     = p.get("content", "")
+        pattern     = p.get("pattern_name", "UNKNOWN")
+        platform_id = p.get("platform_post_id", "")
 
-        # 投稿時刻からhourを取得
+        # フック
+        hook     = get_first_line(content)
+        hook_len = len(hook)
+        hook_ok  = 0 < hook_len <= HOOK_LIMIT
+
+        # 投稿時刻 → hour
         posted_at = p.get("posted_at", "")
         try:
-            dt = datetime.fromisoformat(posted_at)
+            dt   = datetime.fromisoformat(posted_at)
             if dt.tzinfo is None:
                 dt = dt.replace(tzinfo=JST)
             hour = dt.astimezone(JST).hour
         except Exception:
             hour = p.get("scheduled_hour", "?")
 
-        if not hook_ok and hook_len > 0:
-            violations.append(f"{hour}時: {hook_len}字「{hook[:20]}」")
+        # metrics（performance-data から取得）
+        pd = perf_map.get(platform_id, {})
+        m  = pd.get("metrics", {})
+        views    = m.get("views",    0) or 0
+        likes    = m.get("likes",    0) or 0
+        replies  = m.get("replies",  0) or 0
+        reposts  = m.get("reposts",  0) or 0
+        er       = m.get("engagement_rate", 0) or 0
+        measured = views > 0  # True = 閲覧数取得済み
 
-        views_list.append(v)
+        # フック違反
+        if not hook_ok and hook_len > 0:
+            violations.append(f"{hour}時: {hook_len}字「{hook[:25]}」")
+
+        views_list.append(views)
         posts_out.append({
             "hour":     hour,
-            "struct":   struct,
-            "hook":     hook[:30],
+            "struct":   extract_struct(pattern),
+            "pattern":  pattern,
+            "hook":     hook[:40],
             "hook_len": hook_len,
             "hook_ok":  hook_ok,
-            "views":    v,
-            "likes":    l,
+            "views":    views,
+            "likes":    likes,
+            "comments": replies,
+            "reposts":  reposts,
+            "er":       round(er, 2),
+            "measured": measured,
         })
 
     # ── サマリー ─────────────────────────────────────────────────────
-    total = len(posts_out)
-    hook_ok_count = sum(1 for p in posts_out if p["hook_ok"])
-    total_views = sum(views_list)
-    avg_views = round(total_views / total, 1) if total else 0
-    best = max(posts_out, key=lambda p: p["views"]) if posts_out else {}
+    total        = len(posts_out)
+    measured_cnt = sum(1 for p in posts_out if p["measured"])
+    hook_ok_cnt  = sum(1 for p in posts_out if p["hook_ok"])
+    total_views  = sum(p["views"] for p in posts_out)
+    avg_views    = round(total_views / measured_cnt, 1) if measured_cnt else 0
+    best         = max(posts_out, key=lambda p: p["views"]) if posts_out else {}
 
-    # ── 再現性テスト進捗（構造G・v≥500） ──────────────────────────
+    # ── 再現性テスト進捗（構造G・v≥500・計測済みのみ） ─────────────
     repro_start_dt = datetime.fromisoformat(REPRO_START).replace(tzinfo=JST)
-    days_elapsed = (now.date() - repro_start_dt.date()).days + 1
+    days_elapsed   = (now.date() - repro_start_dt.date()).days + 1
 
-    # 直近35件の構造Gをpost-history全体から収集
-    all_g_posts = [
+    all_g = [
         p for p in history.get("posts", [])
         if f"構造{REPRO_TARGET}" in p.get("pattern_name", "")
         and p.get("posted_at", "") >= REPRO_START
     ]
-    g_total = len(all_g_posts)
-    # v>0 のもの（閲覧数取得済み）だけで成功率を計算
-    g_measured = [p for p in all_g_posts if (p.get("views", 0) or 0) > 0]
-    g_success  = sum(1 for p in g_measured if (p.get("views", 0) or 0) >= SUCCESS_VIEWS)
-    g_rate     = round(g_success / len(g_measured) * 100, 1) if g_measured else 0
+    g_total    = len(all_g)
+    # 計測済み: platform_post_id が perf_map にある && views > 0
+    g_measured = [
+        p for p in all_g
+        if (perf_map.get(p.get("platform_post_id",""), {})
+                    .get("metrics", {}).get("views", 0) or 0) > 0
+    ]
+    g_success  = sum(
+        1 for p in g_measured
+        if (perf_map.get(p.get("platform_post_id",""), {})
+                    .get("metrics", {}).get("views", 0) or 0) >= SUCCESS_VIEWS
+    )
+    g_rate = round(g_success / len(g_measured) * 100, 1) if g_measured else 0
 
     if g_total == 0:
         repro_status = "未開始"
-    elif len(g_measured) == 0:
-        repro_status = f"計測待ち（{g_total}件投稿済み・閲覧数取得待ち）"
+    elif not g_measured:
+        repro_status = f"計測待ち（{g_total}件投稿済み）"
     elif g_rate >= 70:
-        repro_status = "SUCCESS: 再現性確認"
+        repro_status = f"SUCCESS: 再現性確認（{g_success}/{len(g_measured)}件）"
     elif g_rate >= 30:
-        repro_status = f"テスト中（計測済み{len(g_measured)}件）"
+        repro_status = f"テスト中（{g_success}/{len(g_measured)}件成功）"
     else:
-        repro_status = f"WARNING: 成功率低下（計測済み{len(g_measured)}件）"
+        repro_status = f"WARNING: 成功率低下（{g_success}/{len(g_measured)}件）"
 
     # ── HC サマリー ───────────────────────────────────────────────
-    hc_checks = [
-        c for c in hc_log.get("checks", [])
-        if c.get("timestamp", "")[:10] == today
-    ]
-    hc_runs    = len(hc_checks)
-    hc_deleted = sum(
-        1 for c in hc_checks
-        for r in c.get("results", [])
-        if r.get("deleted")
-    )
+    hc_checks  = [c for c in hc_log.get("checks", []) if c.get("timestamp", "")[:10] == today]
+    hc_deleted = sum(1 for c in hc_checks for r in c.get("results", []) if r.get("deleted"))
 
     # ── 1行サマリー ───────────────────────────────────────────────
     one_line = (
-        f"{total}件投稿"
-        f" | フック{hook_ok_count}/{total}件OK({len(violations)}件違反)"
-        f" | 平均v={avg_views}"
-        f" | 構造G再現性{g_success}/{g_total}件({g_rate}%)"
-        f" | HC={hc_runs}回({hc_deleted}件削除)"
+        f"{today} | {total}件投稿 ({measured_cnt}件計測済み)"
+        f" | フックOK {hook_ok_cnt}/{total}件"
+        + (f" | 違反: {', '.join(violations)}" if violations else "")
+        + (f" | 平均v={avg_views}" if measured_cnt else " | 閲覧数取得待ち")
+        + f" | 構造G再現性: {repro_status}"
+        + (f" | HC削除: {hc_deleted}件" if hc_deleted else "")
     )
 
     # ── 出力 ──────────────────────────────────────────────────────
@@ -167,14 +192,16 @@ def main():
         "one_line":     one_line,
         "posts":        posts_out,
         "summary": {
-            "total":           total,
-            "hook_ok":         hook_ok_count,
-            "hook_violations": len(violations),
-            "violations":      violations,
-            "total_views":     total_views,
-            "avg_views":       avg_views,
-            "best_hook":       best.get("hook", ""),
-            "best_views":      best.get("views", 0),
+            "total":            total,
+            "measured":         measured_cnt,
+            "hook_ok":          hook_ok_cnt,
+            "hook_violations":  len(violations),
+            "violations":       violations,
+            "total_views":      total_views,
+            "avg_views":        avg_views,
+            "best_hook":        best.get("hook", ""),
+            "best_views":       best.get("views", 0),
+            "best_er":          best.get("er", 0),
         },
         "reproducibility_test": {
             "target":           f"構造{REPRO_TARGET}",
@@ -188,7 +215,7 @@ def main():
             "status":           repro_status,
         },
         "hc": {
-            "runs":    hc_runs,
+            "runs":    len(hc_checks),
             "deleted": hc_deleted,
         },
     }
