@@ -15,6 +15,14 @@
       "reason": "eng率9.9%・閲覧1507（1件）"
     },
     {
+      "pattern": "構造G_注意喚起+限定型",
+      "weight": 5,
+      "avg_engagement": 8.91,
+      "avg_views": 1290.0,
+      "sample_count": 1,
+      "reason": "eng率8.9%・閲覧1290（1件）"
+    },
+    {
       "pattern": "注意喚起+限定型（推定）",
       "weight": 5,
       "avg_engagement": 14.28,
@@ -37,14 +45,6 @@
       "avg_views": 745.0,
       "sample_count": 1,
       "reason": "eng率20.1%・閲覧745（1件）"
-    },
-    {
-      "pattern": "予告型・フォロー動機",
-      "weight": 5,
-      "avg_engagement": 6.91,
-      "avg_views": 767.0,
-      "sample_count": 1,
-      "reason": "eng率6.9%・閲覧767（1件）"
     }
   ],
   "rules": {
@@ -233,12 +233,12 @@
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
     "絵文字CTAあり → avg eng 18.2%",
-    "数字フックあり → avg eng 17.5%",
+    "数字フックあり → avg eng 16.9%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 54,
-    "last_analyzed": "2026-04-06T21:37:56.205175+09:00",
+    "data_count": 55,
+    "last_analyzed": "2026-04-07T00:12:31.567747+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -248,6 +248,14 @@
         "avg_views": 1507.0,
         "sample_count": 1,
         "reason": "eng率9.9%・閲覧1507（1件）"
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型",
+        "weight": 5,
+        "avg_engagement": 8.91,
+        "avg_views": 1290.0,
+        "sample_count": 1,
+        "reason": "eng率8.9%・閲覧1290（1件）"
       },
       {
         "pattern": "注意喚起+限定型（推定）",
@@ -272,14 +280,6 @@
         "avg_views": 745.0,
         "sample_count": 1,
         "reason": "eng率20.1%・閲覧745（1件）"
-      },
-      {
-        "pattern": "予告型・フォロー動機",
-        "weight": 5,
-        "avg_engagement": 6.91,
-        "avg_views": 767.0,
-        "sample_count": 1,
-        "reason": "eng率6.9%・閲覧767（1件）"
       }
     ],
     "pattern_ranking": [
@@ -291,6 +291,15 @@
         "total_likes": 144,
         "total_replies": 5,
         "_score": 1656.0423
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型",
+        "count": 1,
+        "avg_engagement": 8.91,
+        "avg_views": 1290.0,
+        "total_likes": 107,
+        "total_replies": 8,
+        "_score": 1404.9389999999999
       },
       {
         "pattern": "注意喚起+限定型（推定）",
@@ -585,8 +594,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 13,
-        "avg_engagement": 17.52
+        "count": 14,
+        "avg_engagement": 16.91
       },
       {
         "feature": "has_fear_hook",
@@ -611,6 +620,11 @@
         "avg_eng": 9.89
       },
       {
+        "style": "構造G_注意喚起+限定型",
+        "example": "明日からの1週間、",
+        "avg_eng": 8.91
+      },
+      {
         "style": "注意喚起型・仕事運",
         "example": "来週、仕事で大きな話が",
         "avg_eng": 42.14
@@ -619,11 +633,6 @@
         "style": "限定型・恐怖×期待",
         "example": "12星座中、たった3つだけ。",
         "avg_eng": 20.13
-      },
-      {
-        "style": "予告型・フォロー動機",
-        "example": "来週、12星座の中で",
-        "avg_eng": 6.91
       }
     ],
     "best_posts": [
@@ -650,6 +659,17 @@
         "_score": 1656.0423
       },
       {
+        "id": "verify-retry-20260405214216",
+        "pattern": "構造G_注意喚起+限定型",
+        "eng_rate": 8.91,
+        "views": 1290,
+        "likes": 107,
+        "replies": 8,
+        "first_line": "明日からの1週間、",
+        "content_preview": "明日からの1週間、\n恋愛で大切な決断が\n迫る星座。\n\nたった3つだけです。\n\n🔮蟹座\n金星が強まる時",
+        "_score": 1404.9389999999999
+      },
+      {
         "id": "post_20260324_011",
         "pattern": "注意喚起型・仕事運",
         "eng_rate": 42.14,
@@ -670,17 +690,6 @@
         "first_line": "12星座中、たった3つだけ。",
         "content_preview": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です",
         "_score": 894.9685000000001
-      },
-      {
-        "id": "post_20260324_th_002",
-        "pattern": "予告型・フォロー動機",
-        "eng_rate": 6.91,
-        "views": 767,
-        "likes": 53,
-        "replies": 0,
-        "first_line": "来週、12星座の中で",
-        "content_preview": "来週、12星座の中で\n最も恋愛が動く星座。\n\n蟹座さんです。\n\n新しい出会いか、\n既存の関係の深まり",
-        "_score": 819.9997
       }
     ],
     "auto_avoid_patterns": [],
@@ -753,9 +762,9 @@
       },
       "21": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 6.11,
-        "avg_views": 274.0,
-        "count": 6
+        "avg_eng": 6.51,
+        "avg_views": 419.0,
+        "count": 7
       },
       "22": {
         "slot": "深夜（22〜0時台）",
@@ -811,18 +820,18 @@
     "optimal_hours": [
       9,
       10,
-      22
+      21
     ],
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
       "絵文字CTAあり → avg eng 18.2%",
-      "数字フックあり → avg eng 17.5%",
+      "数字フックあり → avg eng 16.9%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 54,
-  "last_analyzed": "2026-04-06T21:37:56.205175+09:00",
+  "data_count": 55,
+  "last_analyzed": "2026-04-07T00:12:31.567747+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -833,6 +842,15 @@
       "total_likes": 144,
       "total_replies": 5,
       "_score": 1656.0423
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型",
+      "count": 1,
+      "avg_engagement": 8.91,
+      "avg_views": 1290.0,
+      "total_likes": 107,
+      "total_replies": 8,
+      "_score": 1404.9389999999999
     },
     {
       "pattern": "注意喚起+限定型（推定）",
@@ -1127,8 +1145,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 13,
-      "avg_engagement": 17.52
+      "count": 14,
+      "avg_engagement": 16.91
     },
     {
       "feature": "has_fear_hook",
@@ -1165,6 +1183,17 @@
       "_score": 1656.0423
     },
     {
+      "id": "verify-retry-20260405214216",
+      "pattern": "構造G_注意喚起+限定型",
+      "eng_rate": 8.91,
+      "views": 1290,
+      "likes": 107,
+      "replies": 8,
+      "first_line": "明日からの1週間、",
+      "content_preview": "明日からの1週間、\n恋愛で大切な決断が\n迫る星座。\n\nたった3つだけです。\n\n🔮蟹座\n金星が強まる時",
+      "_score": 1404.9389999999999
+    },
+    {
       "id": "post_20260324_011",
       "pattern": "注意喚起型・仕事運",
       "eng_rate": 42.14,
@@ -1185,17 +1214,6 @@
       "first_line": "12星座中、たった3つだけ。",
       "content_preview": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です",
       "_score": 894.9685000000001
-    },
-    {
-      "id": "post_20260324_th_002",
-      "pattern": "予告型・フォロー動機",
-      "eng_rate": 6.91,
-      "views": 767,
-      "likes": 53,
-      "replies": 0,
-      "first_line": "来週、12星座の中で",
-      "content_preview": "来週、12星座の中で\n最も恋愛が動く星座。\n\n蟹座さんです。\n\n新しい出会いか、\n既存の関係の深まり",
-      "_score": 819.9997
     }
   ],
   "hourly_data": {
@@ -1267,9 +1285,9 @@
     },
     "21": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 6.11,
-      "avg_views": 274.0,
-      "count": 6
+      "avg_eng": 6.51,
+      "avg_views": 419.0,
+      "count": 7
     },
     "22": {
       "slot": "深夜（22〜0時台）",
@@ -1281,6 +1299,6 @@
   "optimal_hours": [
     9,
     10,
-    22
+    21
   ]
 }
