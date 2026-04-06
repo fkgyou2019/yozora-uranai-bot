@@ -4003,6 +4003,17 @@
           "auto_replies": 0,
           "er": 15.04,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 66,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
+          "views": 685,
+          "likes": 101,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.04,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -4400,6 +4411,17 @@
           "auto_replies": 0,
           "er": 12.96,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 61,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
+          "views": 54,
+          "likes": 2,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.96,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -4669,6 +4691,17 @@
         {
           "h": 54,
           "ts": "2026-04-07T03:08:07.100808+09:00",
+          "views": 66,
+          "likes": 17,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 25.76,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 56,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
           "views": 66,
           "likes": 17,
           "replies": 0,
@@ -4978,6 +5011,17 @@
         {
           "h": 43,
           "ts": "2026-04-07T03:08:07.100808+09:00",
+          "views": 110,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.45,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 45,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
           "views": 110,
           "likes": 6,
           "replies": 0,
@@ -5300,6 +5344,17 @@
           "auto_replies": 0,
           "er": 21.21,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 38,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
+          "views": 33,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 21.21,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5431,6 +5486,17 @@
         {
           "h": 32,
           "ts": "2026-04-07T03:08:07.100808+09:00",
+          "views": 178,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.93,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 34,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
           "views": 178,
           "likes": 7,
           "replies": 0,
@@ -5681,6 +5747,17 @@
           "auto_replies": 0,
           "er": 8.9,
           "velocity_views_per_hour": 0.8
+        },
+        {
+          "h": 31,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
+          "views": 1294,
+          "likes": 107,
+          "replies": 8,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.89,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -5700,7 +5777,7 @@
       "content_preview": "今週、対人関係で\n気をつけた方がいい星座。\n\nたった3つだけです。\n\n🌙乙女座\n水星逆行の影響で、\n言葉の誤解が生じやす",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 2
+      "api_fail_count": 3
     },
     "verify-retry-20260406091219": {
       "post_id": "verify-retry-20260406091219",
@@ -5715,7 +5792,7 @@
       "content_preview": "今週、金銭トラブルが起きやすい星座。\nたった3つだけです。\n\n🔴牡羊座\n火星が家計を揺らす時期。\n衝動買いは控えて。\n\n",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 2
+      "api_fail_count": 3
     },
     "verify-retry-20260406104219": {
       "post_id": "verify-retry-20260406104219",
@@ -5730,7 +5807,7 @@
       "content_preview": "今週後半、仕事で大きな動きがある星座。\n\nたった3つだけです。\n\n🔮双子座\n水星が順行に。\n停滞していた企画が\n急展開す",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 2
+      "api_fail_count": 3
     },
     "verify-retry-20260406121229": {
       "post_id": "verify-retry-20260406121229",
@@ -5787,6 +5864,17 @@
           "auto_replies": 0,
           "er": 12.12,
           "velocity_views_per_hour": 1.7
+        },
+        {
+          "h": 16,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
+          "views": 99,
+          "likes": 12,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.12,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5848,6 +5936,17 @@
           "auto_replies": 0,
           "er": 2.42,
           "velocity_views_per_hour": 1.7
+        },
+        {
+          "h": 13,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
+          "views": 207,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.42,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5867,7 +5966,7 @@
       "content_preview": "今週、金銭感覚がズレやすい星座。\n\nたった3つだけです。\n\n🔮牡羊座\n火星の影響で衝動買い。\n欲しいものは\n3日待ってか",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 2
+      "api_fail_count": 3
     },
     "verify-retry-20260406204221": {
       "post_id": "verify-retry-20260406204221",
@@ -5891,6 +5990,17 @@
           "auto_replies": 0,
           "er": 10.64,
           "velocity_views_per_hour": 7.8
+        },
+        {
+          "h": 8,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
+          "views": 47,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.64,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5919,6 +6029,17 @@
           "auto_replies": 0,
           "er": 0.71,
           "velocity_views_per_hour": 28.0
+        },
+        {
+          "h": 7,
+          "ts": "2026-04-07T05:08:18.422529+09:00",
+          "views": 140,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.71,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5926,5 +6047,5 @@
       "peak_velocity_hour": 5
     }
   },
-  "last_updated": "2026-04-07T03:08:07.100808+09:00"
+  "last_updated": "2026-04-07T05:08:18.422529+09:00"
 }
