@@ -1,0 +1,100 @@
+{
+  "date": "2026-04-06",
+  "generated_at": "2026-04-06T21:55:25+09:00",
+  "one_line": "7件投稿 | フック3/7件OK(4件違反) | 平均v=0.0 | 構造G再現性0/7件(0%) | HC=14回(2件削除)",
+  "posts": [
+    {
+      "hour": 7,
+      "struct": "G",
+      "hook": "今週、対人関係で",
+      "hook_len": 8,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0
+    },
+    {
+      "hour": 9,
+      "struct": "G",
+      "hook": "今週、金銭トラブルが起きやすい星座。",
+      "hook_len": 18,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0
+    },
+    {
+      "hour": 10,
+      "struct": "G",
+      "hook": "今週後半、仕事で大きな動きがある星座。",
+      "hook_len": 19,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0
+    },
+    {
+      "hour": 12,
+      "struct": "G",
+      "hook": "明日からの3日間、恋愛で急展開が起きやすい星座。",
+      "hook_len": 24,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0
+    },
+    {
+      "hour": 15,
+      "struct": "G",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0
+    },
+    {
+      "hour": 19,
+      "struct": "G",
+      "hook": "今週、金銭感覚がズレやすい星座。",
+      "hook_len": 16,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0
+    },
+    {
+      "hour": 20,
+      "struct": "G",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "hook_ok": 3,
+    "hook_violations": 4,
+    "violations": [
+      "9時: 18字「今週、金銭トラブルが起きやすい星座。」",
+      "10時: 19字「今週後半、仕事で大きな動きがある星座。」",
+      "12時: 24字「明日からの3日間、恋愛で急展開が起きやす」",
+      "19時: 16字「今週、金銭感覚がズレやすい星座。」"
+    ],
+    "total_views": 0,
+    "avg_views": 0.0,
+    "best_hook": "今週、対人関係で",
+    "best_views": 0
+  },
+  "reproducibility_test": {
+    "target": "構造G",
+    "start_date": "2026-04-06",
+    "days_elapsed": 1,
+    "total_posts": 7,
+    "measured_posts": 0,
+    "success_posts": 0,
+    "success_rate": 0,
+    "success_criteria": "v>=500",
+    "status": "計測待ち（7件投稿済み・閲覧数取得待ち）"
+  },
+  "hc": {
+    "runs": 14,
+    "deleted": 2
+  }
+}
