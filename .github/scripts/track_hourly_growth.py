@@ -171,8 +171,14 @@ def main():
         # メトリクス取得
         metrics = fetch_metrics(platform_id, access_token)
         if metrics is None:
-            print(f"  [SKIP] {pid}: API取得失敗（削除済みの可能性）")
-            entry["completed"] = True
+            fail_count = entry.get("api_fail_count", 0) + 1
+            entry["api_fail_count"] = fail_count
+            # 72h超 or 3回連続失敗かつ24h超 のみ完了扱い（初回失敗で削除と判定しない）
+            if elapsed_hours >= TRACK_HOURS or (fail_count >= 3 and elapsed_hours >= 24):
+                print(f"  [SKIP] {pid}: API取得失敗{fail_count}回（完了扱い）")
+                entry["completed"] = True
+            else:
+                print(f"  [WARN] {pid}: API取得失敗{fail_count}回（次回再試行）")
             continue
 
         v = metrics.get("views", 0)

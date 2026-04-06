@@ -53,12 +53,28 @@ def extract_struct(pattern_name):
     return m.group(1) if m else "?"
 
 
+def get_latest_metrics(tracker_snap):
+    """growth-tracker スナップショットから最新メトリクスを取得"""
+    hourly = tracker_snap.get("hourly", [])
+    if not hourly:
+        return {}
+    latest = hourly[-1]
+    views   = latest.get("views", 0) or 0
+    likes   = latest.get("likes", 0) or 0
+    replies = latest.get("replies", 0) or 0
+    reposts = latest.get("reposts", 0) or 0
+    er      = latest.get("er", 0) or 0
+    return {"views": views, "likes": likes, "replies": replies,
+            "reposts": reposts, "engagement_rate": er}
+
+
 def main():
     now   = datetime.now(JST)
     today = now.strftime("%Y-%m-%d")
 
     history  = load_json("state/post-history.json")
     perf     = load_json("state/performance-data.json")
+    tracker  = load_json("state/post-growth-tracker.json")
     hc_log   = load_json("state/health-check-log.json")
 
     # ── performance-data を platform_post_id でインデックス化 ────────
@@ -67,6 +83,9 @@ def main():
         pid = p.get("platform_post_id", "")
         if pid:
             perf_map[pid] = p
+
+    # ── growth-tracker を post_id でインデックス化（優先参照） ────────
+    tracker_map = tracker.get("snapshots", {})
 
     # ── 今日の投稿を post-history から取得 ──────────────────────────
     today_posts = [
@@ -99,9 +118,14 @@ def main():
         except Exception:
             hour = p.get("scheduled_hour", "?")
 
-        # metrics（performance-data から取得）
-        pd = perf_map.get(platform_id, {})
-        m  = pd.get("metrics", {})
+        # metrics（growth-tracker 優先 → performance-data フォールバック）
+        post_id = p.get("id", "")
+        tracker_snap = tracker_map.get(post_id, {})
+        if tracker_snap.get("hourly"):
+            m = get_latest_metrics(tracker_snap)
+        else:
+            pd = perf_map.get(platform_id, {})
+            m  = pd.get("metrics", {})
         views    = m.get("views",    0) or 0
         likes    = m.get("likes",    0) or 0
         replies  = m.get("replies",  0) or 0
@@ -147,17 +171,16 @@ def main():
         and p.get("posted_at", "") >= REPRO_START
     ]
     g_total    = len(all_g)
-    # 計測済み: platform_post_id が perf_map にある && views > 0
-    g_measured = [
-        p for p in all_g
-        if (perf_map.get(p.get("platform_post_id",""), {})
-                    .get("metrics", {}).get("views", 0) or 0) > 0
-    ]
-    g_success  = sum(
-        1 for p in g_measured
-        if (perf_map.get(p.get("platform_post_id",""), {})
-                    .get("metrics", {}).get("views", 0) or 0) >= SUCCESS_VIEWS
-    )
+    # 計測済み: growth-tracker優先 → perf_map フォールバック、views > 0
+    def get_views_for(p):
+        snap = tracker_map.get(p.get("id", ""), {})
+        if snap.get("hourly"):
+            return get_latest_metrics(snap).get("views", 0) or 0
+        return (perf_map.get(p.get("platform_post_id", ""), {})
+                        .get("metrics", {}).get("views", 0) or 0)
+
+    g_measured = [p for p in all_g if get_views_for(p) > 0]
+    g_success  = sum(1 for p in g_measured if get_views_for(p) >= SUCCESS_VIEWS)
     g_rate = round(g_success / len(g_measured) * 100, 1) if g_measured else 0
 
     if g_total == 0:

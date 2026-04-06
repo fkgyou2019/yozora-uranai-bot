@@ -91,7 +91,7 @@ def main():
         if not platform_id:
             continue
 
-        # 投稿から24h以上経過しているかチェック
+        # 投稿から1h以上経過しているかチェック
         posted_at = post.get("posted_at", "")
         if not posted_at:
             continue
@@ -100,7 +100,7 @@ def main():
             if post_time.tzinfo is None:
                 post_time = post_time.replace(tzinfo=JST)
             elapsed_hours = (now - post_time).total_seconds() / 3600
-            if elapsed_hours < 24:
+            if elapsed_hours < 1:
                 continue
         except Exception:
             continue
