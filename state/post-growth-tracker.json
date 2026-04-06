@@ -196,19 +196,6 @@
       "peak_velocity": 0.7,
       "peak_velocity_hour": 43
     },
-    "verify-retry-20260330104220": {
-      "post_id": "verify-retry-20260330104220",
-      "platform_post_id": "18176888980385874",
-      "posted_at": "2026-03-30T10:42:20.772994+09:00",
-      "pattern_name": "",
-      "slot_hour": 10,
-      "day_of_week": 0,
-      "day_name": "月",
-      "first_line": "春分を過ぎて、新しい季節へ🌙",
-      "content_preview": "春分を過ぎて、新しい季節へ🌙\n\n双子座さんへ。この時期、あなたの\n周りに新しい人間関係が生まれやすい\n配置になっています",
-      "hourly": [],
-      "completed": true
-    },
     "verify-retry-20260330121218": {
       "post_id": "verify-retry-20260330121218",
       "platform_post_id": "18098178973817341",
@@ -257,45 +244,6 @@
       "completed": false,
       "peak_velocity": 4.4,
       "peak_velocity_hour": 40
-    },
-    "post_20260330_th_003": {
-      "post_id": "post_20260330_th_003",
-      "platform_post_id": "18079659026096099",
-      "posted_at": "2026-03-30T14:33:04.039619+09:00",
-      "pattern_name": "会話誘導型・相互作用",
-      "slot_hour": 14,
-      "day_of_week": 0,
-      "day_name": "月",
-      "first_line": "今週、あなたの星座は",
-      "content_preview": "今週、あなたの星座は\nどんな運気でしたか？\n\nよかったら\nコメント欄で教えてくださいね✨\n\nあなたの星座の詳しい運勢や\n",
-      "hourly": [],
-      "completed": true
-    },
-    "post_20260330_th_001": {
-      "post_id": "post_20260330_th_001",
-      "platform_post_id": "18111438103796912",
-      "posted_at": "2026-03-30T14:54:13.296930+09:00",
-      "pattern_name": "予告型・金運シリーズ予定",
-      "slot_hour": 14,
-      "day_of_week": 0,
-      "day_name": "月",
-      "first_line": "4月は金運が動く月です。",
-      "content_preview": "4月は金運が動く月です。\n\n特に牡牛座・蟹座・山羊座さんは\n大きな変化が来やすい時期。\n\n今から準備しておくと\nその流れ",
-      "hourly": [],
-      "completed": true
-    },
-    "verify-retry-20260330151220": {
-      "post_id": "verify-retry-20260330151220",
-      "platform_post_id": "17919916998122182",
-      "posted_at": "2026-03-30T15:12:20.837929+09:00",
-      "pattern_name": "",
-      "slot_hour": 15,
-      "day_of_week": 0,
-      "day_name": "月",
-      "first_line": "春の新月があなたを導く✨",
-      "content_preview": "春の新月があなたを導く✨\n\n3月30日、新しい始まりのエネルギー\nが満ちています。特に牡羊座さんは、\nこれからの3ヶ月間",
-      "hourly": [],
-      "completed": true
     },
     "post_20260330_th_002": {
       "post_id": "post_20260330_th_002",
@@ -3202,6 +3150,17 @@
           "auto_replies": 0,
           "er": 8.51,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 65,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 48,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.33,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -3483,6 +3442,17 @@
           "auto_replies": 0,
           "er": 1.85,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 63,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 109,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.83,
+          "velocity_views_per_hour": 0.1
         }
       ],
       "completed": false,
@@ -3969,6 +3939,17 @@
           "auto_replies": 0,
           "er": 15.08,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 52,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 684,
+          "likes": 101,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.06,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -4322,6 +4303,17 @@
           "auto_replies": 0,
           "er": 13.73,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 48,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 52,
+          "likes": 2,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.46,
+          "velocity_views_per_hour": 0.1
         }
       ],
       "completed": false,
@@ -4554,6 +4546,17 @@
           "auto_replies": 0,
           "er": 27.87,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 42,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 63,
+          "likes": 17,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 26.98,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -4819,6 +4822,17 @@
           "auto_replies": 0,
           "er": 5.66,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 32,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 107,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.61,
+          "velocity_views_per_hour": 0.1
         }
       ],
       "completed": false,
@@ -4962,7 +4976,7 @@
           "velocity_views_per_hour": 0.0
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 3.2,
       "peak_velocity_hour": 4
     },
@@ -5090,6 +5104,17 @@
           "auto_replies": 0,
           "er": 25.93,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 24,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 29,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 24.14,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -5184,6 +5209,17 @@
           "auto_replies": 0,
           "er": 4.02,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 20,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 175,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.0,
+          "velocity_views_per_hour": 0.1
         }
       ],
       "completed": false,
@@ -5278,6 +5314,17 @@
           "auto_replies": 0,
           "er": 6.67,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 18,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 16,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.25,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -5361,6 +5408,17 @@
           "auto_replies": 0,
           "er": 11.38,
           "velocity_views_per_hour": 55.0
+        },
+        {
+          "h": 17,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 1052,
+          "likes": 100,
+          "replies": 6,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.08,
+          "velocity_views_per_hour": 33.3
         }
       ],
       "completed": false,
@@ -5380,7 +5438,91 @@
       "content_preview": "今週、対人関係で\n気をつけた方がいい星座。\n\nたった3つだけです。\n\n🌙乙女座\n水星逆行の影響で、\n言葉の誤解が生じやす",
       "hourly": [],
       "completed": true
+    },
+    "verify-retry-20260406091219": {
+      "post_id": "verify-retry-20260406091219",
+      "platform_post_id": "18541994854070898",
+      "threads_url": "",
+      "posted_at": "2026-04-06T09:12:19.321775+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 9,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "今週、金銭トラブルが起きやすい星座。",
+      "content_preview": "今週、金銭トラブルが起きやすい星座。\nたった3つだけです。\n\n🔴牡羊座\n火星が家計を揺らす時期。\n衝動買いは控えて。\n\n",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260406104219": {
+      "post_id": "verify-retry-20260406104219",
+      "platform_post_id": "18060708218414549",
+      "threads_url": "",
+      "posted_at": "2026-04-06T10:42:19.511720+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 10,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "今週後半、仕事で大きな動きがある星座。",
+      "content_preview": "今週後半、仕事で大きな動きがある星座。\n\nたった3つだけです。\n\n🔮双子座\n水星が順行に。\n停滞していた企画が\n急展開す",
+      "hourly": [],
+      "completed": true
+    },
+    "verify-retry-20260406121229": {
+      "post_id": "verify-retry-20260406121229",
+      "platform_post_id": "18096949751080821",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWxlFc9lYFc",
+      "posted_at": "2026-04-06T12:12:29.410272+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 12,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "明日からの3日間、恋愛で急展開が起きやすい星座。",
+      "content_preview": "明日からの3日間、恋愛で急展開が起きやすい星座。\n\nたった3つだけです。\n\n💕蟹座\n月が感情を高める時期。\n告白や関係の",
+      "hourly": [
+        {
+          "h": 3,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 65,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.85,
+          "velocity_views_per_hour": 21.7
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 21.7,
+      "peak_velocity_hour": 3
+    },
+    "verify-retry-20260406151237": {
+      "post_id": "verify-retry-20260406151237",
+      "platform_post_id": "18202970938339524",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWx5uKZEagE",
+      "posted_at": "2026-04-06T15:12:37.341516+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 15,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "明日からの3日間、",
+      "content_preview": "明日からの3日間、\n体調の変化に注意した方がいい星座。\n\nたった3つだけです。\n\n🌙乙女座\n水星が逆行の影響。\n睡眠不足",
+      "hourly": [
+        {
+          "h": 0,
+          "ts": "2026-04-06T15:21:47.985318+09:00",
+          "views": 0,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0,
+          "velocity_views_per_hour": 0.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 0.0,
+      "peak_velocity_hour": 0
     }
   },
-  "last_updated": "2026-04-06T09:00:17.361122+09:00"
+  "last_updated": "2026-04-06T15:21:47.985318+09:00"
 }
