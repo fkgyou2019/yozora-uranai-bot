@@ -48,7 +48,7 @@ jobs:
 
       # ========================================
       # キュー残量チェック: 翌日分を確保
-      # 実験期間（3/31-4/5 JST）: 18件以上確保
+      # 再現性テスト期間（4/6-4/30 JST）: 7件以上確保（構造G×5+F×2）
       # 通常モード: 5件以上確保
       # ========================================
       - name: Check queue and generate if needed
@@ -61,12 +61,12 @@ jobs:
           " 2>/dev/null || echo "0")
           echo "現在のキュー残: ${REMAINING}件"
 
-          # 実験期間判定（JST基準）
+          # 実験期間判定（JST基準）- bash [[]] では <= が使えないため < で比較
           JST_DATE=$(TZ='Asia/Tokyo' date +%Y-%m-%d)
-          if [[ "$JST_DATE" >= "2026-03-31" && "$JST_DATE" <= "2026-04-05" ]]; then
+          if [[ "$JST_DATE" > "2026-04-05" && "$JST_DATE" < "2026-05-01" ]]; then
             EXPERIMENT_MODE=1
-            THRESHOLD=18
-            echo "実験期間中（${JST_DATE}）: 18件以上確保します"
+            THRESHOLD=7
+            echo "再現性テスト期間中（${JST_DATE}）: 7件以上確保します"
           else
             EXPERIMENT_MODE=0
             THRESHOLD=5
