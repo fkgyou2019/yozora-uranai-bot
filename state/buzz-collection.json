@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "id": "buzz_own_best_20260407_070351_002",
+      "platform": "threads",
+      "source": "own_best",
+      "username": "self",
+      "content": "明日からの1週間、\n恋愛で大切な決断が\n迫る星座。\n\nたった3つだけです。\n\n🔮蟹座\n金星が強まる時",
+      "metrics": {
+        "likes": 107,
+        "retweets": 0,
+        "replies": 8,
+        "views": 1290,
+        "engagement_rate": 8.91
+      },
+      "original_id": "verify-retry-20260405214216",
+      "pattern": "構造G_注意喚起+限定型",
+      "collected_at": "2026-04-07T07:03:51.155963+09:00",
+      "analyzed": false
+    },
+    {
       "id": "buzz_own_best_20260405_065644_001",
       "platform": "threads",
       "source": "own_best",
@@ -212,8 +230,8 @@
       "last_count": 0
     },
     "own_best": {
-      "last_count": 0
+      "last_count": 1
     }
   },
-  "last_collected": "2026-04-06T06:57:55.742771+09:00"
+  "last_collected": "2026-04-07T07:03:51.061451+09:00"
 }

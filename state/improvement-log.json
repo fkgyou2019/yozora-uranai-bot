@@ -82,8 +82,18 @@
         "フック5件追加 (断言・確信: 4, 数字インパクト: 1)",
         "インサイト5件追加"
       ]
+    },
+    {
+      "date": "2026-04-07",
+      "hooks_added": 5,
+      "insights_added": 5,
+      "source_posts_analyzed": 348,
+      "key_changes": [
+        "フック5件追加 (断言・確信: 4, 質問・参加型: 1)",
+        "インサイト5件追加"
+      ]
     }
   ],
-  "total_improvements": 9,
-  "last_improved": "2026-04-06T06:58:28.486080+09:00"
+  "total_improvements": 10,
+  "last_improved": "2026-04-07T07:04:25.292938+09:00"
 }
