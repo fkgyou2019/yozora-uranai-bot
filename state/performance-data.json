@@ -1377,7 +1377,33 @@
         "hook_length": 20
       },
       "collected_at": "2026-04-06T15:07:57.733859+09:00"
+    },
+    {
+      "id": "post_20260405_1907_exp_006",
+      "platform_post_id": "18101412478751524",
+      "posted_at": "2026-04-05T19:07:54.374984+09:00",
+      "pattern_name": "構造F_告白・暴露型（占い師として正直に言います）",
+      "category": "週間運勢・注意喚起",
+      "content_preview": "正直に言います。\n今週後半、火星の影響が強まって\n焦りやすくなる星座が3つあります。\n\n牡羊座・獅子",
+      "first_line": "正直に言います。",
+      "char_count": 170,
+      "metrics": {
+        "views": 178,
+        "likes": 7,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 3.93
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-04-06T19:20:15.745117+09:00"
     }
   ],
-  "last_updated": "2026-04-06T19:07:50.596131+09:00"
+  "last_updated": "2026-04-06T19:20:15.745117+09:00"
 }
