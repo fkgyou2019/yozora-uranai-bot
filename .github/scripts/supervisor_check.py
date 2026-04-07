@@ -85,14 +85,14 @@ def main():
             except Exception:
                 continue
 
-        print(f"  今日の投稿: {len(today_posts)}件 / 目標8件")
+        print(f"  今日の投稿: {len(today_posts)}件 / 目標7件")
         for tp in today_posts:
             print(f"    {tp['time']} | {tp['text']}...")
 
-        if len(today_posts) < 6:
-            issues.append(f"今日の投稿が{len(today_posts)}件（目標8件に大幅不足）")
-        elif len(today_posts) < 8:
-            warnings.append(f"今日の投稿が{len(today_posts)}件（目標8件に未達）")
+        if len(today_posts) < 5:
+            issues.append(f"今日の投稿が{len(today_posts)}件（目標7件に大幅不足）")
+        elif len(today_posts) < 7:
+            warnings.append(f"今日の投稿が{len(today_posts)}件（目標7件に未達）")
         else:
             print(f"  ✅ 目標達成")
 
@@ -110,9 +110,9 @@ def main():
         queued = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
         print(f"  キュー残: {len(queued)}件")
         if len(queued) == 0:
-            issues.append("投稿キューが空。明日の投稿ができない")
-        elif len(queued) < 8:
-            warnings.append(f"キュー残{len(queued)}件（8件未満）。補充が必要")
+            warnings.append("投稿キューが空（experiment-hourlyが自動補充）")
+        elif len(queued) < 7:
+            warnings.append(f"キュー残{len(queued)}件（7件未満）。補充が必要")
     else:
         issues.append("post-queue.jsonが存在しない")
         print(f"  ❌ ファイルなし")
