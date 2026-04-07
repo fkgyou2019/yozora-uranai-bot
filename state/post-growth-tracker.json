@@ -579,92 +579,6 @@
       "peak_velocity": 5.8,
       "peak_velocity_hour": 16
     },
-    "post_20260331_1207_th_004": {
-      "post_id": "post_20260331_1207_th_004",
-      "platform_post_id": "18087378161212341",
-      "posted_at": "2026-03-31T17:13:40.784035+09:00",
-      "pattern_name": "自由型_総合運メッセージ",
-      "slot_hour": 17,
-      "day_of_week": 1,
-      "day_name": "火",
-      "first_line": "新しい月が始まる時、",
-      "content_preview": "新しい月が始まる時、\nあなたはどんな気持ちですか？\n\nワクワクですか？\n不安ですか？\n\nどちらでもいいんです。\n\nその感",
-      "hourly": [
-        {
-          "h": 11,
-          "ts": "2026-04-01T05:00:46.366302+09:00",
-          "views": 20,
-          "likes": 1,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 5.0,
-          "velocity_views_per_hour": 1.8
-        },
-        {
-          "h": 13,
-          "ts": "2026-04-01T07:06:09.073537+09:00",
-          "views": 21,
-          "likes": 1,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 4.76,
-          "velocity_views_per_hour": 0.5
-        },
-        {
-          "h": 15,
-          "ts": "2026-04-01T09:01:24.379689+09:00",
-          "views": 21,
-          "likes": 1,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 4.76,
-          "velocity_views_per_hour": 0.0
-        },
-        {
-          "h": 50,
-          "ts": "2026-04-02T19:31:23.383891+09:00",
-          "views": 24,
-          "likes": 0,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 0.0,
-          "velocity_views_per_hour": 0.1
-        }
-      ],
-      "completed": true,
-      "peak_velocity": 1.8,
-      "peak_velocity_hour": 11
-    },
-    "post_20260331_1207_th_005": {
-      "post_id": "post_20260331_1207_th_005",
-      "platform_post_id": "17920478841293142",
-      "posted_at": "2026-03-31T17:41:31.446921+09:00",
-      "pattern_name": "自由型_運勢バイオリズム",
-      "slot_hour": 17,
-      "day_of_week": 1,
-      "day_name": "火",
-      "first_line": "3月の終わりから4月にかけて、",
-      "content_preview": "3月の終わりから4月にかけて、\nあなたの運のバイオリズムが\n少し変わります。✨\n\nそれは誰にでも起こることで。\n\nただ気",
-      "hourly": [],
-      "completed": true
-    },
-    "post_20260331_1207_th_006": {
-      "post_id": "post_20260331_1207_th_006",
-      "platform_post_id": "18172296484401101",
-      "posted_at": "2026-03-31T18:48:15.777005+09:00",
-      "pattern_name": "構造B_ランキング型_金運",
-      "slot_hour": 18,
-      "day_of_week": 1,
-      "day_name": "火",
-      "first_line": "【4月の金運が最も跳ねる星座TOP3】",
-      "content_preview": "【4月の金運が最も跳ねる星座TOP3】\n\n🥉第3位：蟹座さん。\n家計管理を見直すと\n流れが変わります。\n\n🥈第2位：山羊",
-      "hourly": [],
-      "completed": true
-    },
     "verify-retry-20260331191217": {
       "post_id": "verify-retry-20260331191217",
       "platform_post_id": "17881010823510208",
@@ -4644,6 +4558,17 @@
           "auto_replies": 0,
           "er": 25.37,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 70,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 67,
+          "likes": 17,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 25.37,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -4997,6 +4922,17 @@
           "auto_replies": 0,
           "er": 5.41,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 60,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 111,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.41,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5356,6 +5292,17 @@
           "auto_replies": 0,
           "er": 20.59,
           "velocity_views_per_hour": 0.1
+        },
+        {
+          "h": 52,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 34,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.59,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5538,6 +5485,17 @@
           "auto_replies": 0,
           "er": 3.91,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 48,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 179,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.91,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5825,6 +5783,17 @@
           "auto_replies": 0,
           "er": 8.87,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 45,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 1297,
+          "likes": 107,
+          "replies": 8,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.87,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5975,6 +5944,17 @@
           "auto_replies": 0,
           "er": 11.88,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 31,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 101,
+          "likes": 12,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.88,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -6080,6 +6060,17 @@
           "auto_replies": 0,
           "er": 2.39,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 28,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 210,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.38,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -6098,8 +6089,8 @@
       "first_line": "今週、金銭感覚がズレやすい星座。",
       "content_preview": "今週、金銭感覚がズレやすい星座。\n\nたった3つだけです。\n\n🔮牡羊座\n火星の影響で衝動買い。\n欲しいものは\n3日待ってか",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 6
+      "completed": true,
+      "api_fail_count": 7
     },
     "verify-retry-20260406204221": {
       "post_id": "verify-retry-20260406204221",
@@ -6167,6 +6158,17 @@
           "auto_replies": 0,
           "er": 9.62,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 22,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 53,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.43,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -6239,6 +6241,17 @@
           "auto_replies": 0,
           "er": 0.69,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 21,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 146,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.68,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -6278,6 +6291,17 @@
           "auto_replies": 0,
           "er": 12.23,
           "velocity_views_per_hour": 44.0
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 470,
+          "likes": 46,
+          "replies": 7,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.28,
+          "velocity_views_per_hour": 18.8
         }
       ],
       "completed": false,
@@ -6297,7 +6321,7 @@
       "content_preview": "明日からの3日間、\n金銭トラブルが\n起きやすい星座。\n\nたった2つだけです。\n\n🔮獅子座\n木星の影響で\n衝動買いに注意。",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 1
+      "api_fail_count": 2
     },
     "verify-retry-20260407104217": {
       "post_id": "verify-retry-20260407104217",
@@ -6321,6 +6345,17 @@
           "auto_replies": 0,
           "er": 5.96,
           "velocity_views_per_hour": 37.8
+        },
+        {
+          "h": 8,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 166,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.42,
+          "velocity_views_per_hour": 3.8
         }
       ],
       "completed": false,
@@ -6349,6 +6384,17 @@
           "auto_replies": 0,
           "er": 5.33,
           "velocity_views_per_hour": 75.0
+        },
+        {
+          "h": 7,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 169,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.33,
+          "velocity_views_per_hour": 3.8
         }
       ],
       "completed": false,
@@ -6368,7 +6414,7 @@
       "content_preview": "正直に言います。\n今夜、あなたが決断しようとしていることは\n1週間待った方がいい。\n\n水星の逆行影響が強い時期。\nコミュ",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 1
+      "api_fail_count": 2
     },
     "post_20260407_1507_exp_007": {
       "post_id": "post_20260407_1507_exp_007",
@@ -6397,7 +6443,78 @@
       "completed": false,
       "peak_velocity": 0.0,
       "peak_velocity_hour": 0
+    },
+    "post_20260407_1507_exp_006": {
+      "post_id": "post_20260407_1507_exp_006",
+      "platform_post_id": "18082313834619082",
+      "threads_url": "",
+      "posted_at": "2026-04-07T15:07:57.084028+09:00",
+      "pattern_name": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "slot_hour": 15,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "正直に言います。",
+      "content_preview": "正直に言います。\n\n今夜、水星が逆行を終える\nタイミング。ここから1週間で\n「動きが止まってた案件」が\n急に進む星座が3",
+      "hourly": [],
+      "completed": false,
+      "api_fail_count": 1
+    },
+    "post_20260407_1854_exp_007": {
+      "post_id": "post_20260407_1854_exp_007",
+      "platform_post_id": "18101665340298940",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DW039uklEQF",
+      "posted_at": "2026-04-07T18:54:59.685845+09:00",
+      "pattern_name": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "slot_hour": 18,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "実は、4月後半に",
+      "content_preview": "実は、4月後半に\n「動きたくない」と感じる\nあなたが1番運が動く。\n\n星読み師の本音です。\n停滞は準備期間。\n今夜の決断",
+      "hourly": [
+        {
+          "h": 0,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 0,
+          "likes": 1,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0,
+          "velocity_views_per_hour": 0.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 0.0,
+      "peak_velocity_hour": 0
+    },
+    "verify-retry-20260407191222": {
+      "post_id": "verify-retry-20260407191222",
+      "platform_post_id": "18461969212096443",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DW0584cFdkH",
+      "posted_at": "2026-04-07T19:12:22.416120+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 19,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "4月後半、金運が急落する星座。",
+      "content_preview": "4月後半、金運が急落する星座。\nたった2つだけです。\n\n牡牛座・獅子座は\n金銭判断が曇りやすい時期。\n\n牡牛座は衝動買い",
+      "hourly": [
+        {
+          "h": 0,
+          "ts": "2026-04-07T19:16:46.263226+09:00",
+          "views": 0,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0,
+          "velocity_views_per_hour": 0.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 0.0,
+      "peak_velocity_hour": 0
     }
   },
-  "last_updated": "2026-04-07T15:07:43.375522+09:00"
+  "last_updated": "2026-04-07T19:16:46.263226+09:00"
 }

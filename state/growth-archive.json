@@ -294,5 +294,91 @@
     "completed": true,
     "peak_velocity": 1.8,
     "peak_velocity_hour": 13
+  },
+  "post_20260331_1207_th_004": {
+    "post_id": "post_20260331_1207_th_004",
+    "platform_post_id": "18087378161212341",
+    "posted_at": "2026-03-31T17:13:40.784035+09:00",
+    "pattern_name": "自由型_総合運メッセージ",
+    "slot_hour": 17,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "新しい月が始まる時、",
+    "content_preview": "新しい月が始まる時、\nあなたはどんな気持ちですか？\n\nワクワクですか？\n不安ですか？\n\nどちらでもいいんです。\n\nその感",
+    "hourly": [
+      {
+        "h": 11,
+        "ts": "2026-04-01T05:00:46.366302+09:00",
+        "views": 20,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 5.0,
+        "velocity_views_per_hour": 1.8
+      },
+      {
+        "h": 13,
+        "ts": "2026-04-01T07:06:09.073537+09:00",
+        "views": 21,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 4.76,
+        "velocity_views_per_hour": 0.5
+      },
+      {
+        "h": 15,
+        "ts": "2026-04-01T09:01:24.379689+09:00",
+        "views": 21,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 4.76,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 50,
+        "ts": "2026-04-02T19:31:23.383891+09:00",
+        "views": 24,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 0.1
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 1.8,
+    "peak_velocity_hour": 11
+  },
+  "post_20260331_1207_th_005": {
+    "post_id": "post_20260331_1207_th_005",
+    "platform_post_id": "17920478841293142",
+    "posted_at": "2026-03-31T17:41:31.446921+09:00",
+    "pattern_name": "自由型_運勢バイオリズム",
+    "slot_hour": 17,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "3月の終わりから4月にかけて、",
+    "content_preview": "3月の終わりから4月にかけて、\nあなたの運のバイオリズムが\n少し変わります。✨\n\nそれは誰にでも起こることで。\n\nただ気",
+    "hourly": [],
+    "completed": true
+  },
+  "post_20260331_1207_th_006": {
+    "post_id": "post_20260331_1207_th_006",
+    "platform_post_id": "18172296484401101",
+    "posted_at": "2026-03-31T18:48:15.777005+09:00",
+    "pattern_name": "構造B_ランキング型_金運",
+    "slot_hour": 18,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "【4月の金運が最も跳ねる星座TOP3】",
+    "content_preview": "【4月の金運が最も跳ねる星座TOP3】\n\n🥉第3位：蟹座さん。\n家計管理を見直すと\n流れが変わります。\n\n🥈第2位：山羊",
+    "hourly": [],
+    "completed": true
   }
 }
