@@ -250,12 +250,12 @@
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
     "絵文字CTAあり → avg eng 17.5%",
-    "数字フックあり → avg eng 13.7%",
+    "数字フックあり → avg eng 13.2%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 65,
-    "last_analyzed": "2026-04-07T21:38:07.072900+09:00",
+    "data_count": 67,
+    "last_analyzed": "2026-04-08T01:36:42.050878+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -392,12 +392,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型",
-        "count": 9,
-        "avg_engagement": 9.05,
-        "avg_views": 253.0,
-        "total_likes": 175,
+        "count": 11,
+        "avg_engagement": 8.57,
+        "avg_views": 240.0,
+        "total_likes": 199,
         "total_replies": 10,
-        "_score": 275.8965
+        "_score": 260.56800000000004
       },
       {
         "pattern": "数字+限定型（推定）",
@@ -629,8 +629,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 23,
-        "avg_engagement": 13.74
+        "count": 25,
+        "avg_engagement": 13.15
       },
       {
         "feature": "has_fear_hook",
@@ -791,15 +791,15 @@
       },
       "20": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 19.55,
-        "avg_views": 230.0,
-        "count": 9
+        "avg_eng": 18.27,
+        "avg_views": 239.0,
+        "count": 10
       },
       "21": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 5.79,
-        "avg_views": 384.0,
-        "count": 8
+        "avg_eng": 5.82,
+        "avg_views": 345.0,
+        "count": 9
       },
       "22": {
         "slot": "深夜（22〜0時台）",
@@ -861,12 +861,12 @@
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
       "絵文字CTAあり → avg eng 17.5%",
-      "数字フックあり → avg eng 13.7%",
+      "数字フックあり → avg eng 13.2%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 65,
-  "last_analyzed": "2026-04-07T21:38:07.072900+09:00",
+  "data_count": 67,
+  "last_analyzed": "2026-04-08T01:36:42.050878+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -961,12 +961,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "count": 9,
-      "avg_engagement": 9.05,
-      "avg_views": 253.0,
-      "total_likes": 175,
+      "count": 11,
+      "avg_engagement": 8.57,
+      "avg_views": 240.0,
+      "total_likes": 199,
       "total_replies": 10,
-      "_score": 275.8965
+      "_score": 260.56800000000004
     },
     {
       "pattern": "数字+限定型（推定）",
@@ -1198,8 +1198,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 23,
-      "avg_engagement": 13.74
+      "count": 25,
+      "avg_engagement": 13.15
     },
     {
       "feature": "has_fear_hook",
@@ -1332,15 +1332,15 @@
     },
     "20": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 19.55,
-      "avg_views": 230.0,
-      "count": 9
+      "avg_eng": 18.27,
+      "avg_views": 239.0,
+      "count": 10
     },
     "21": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 5.79,
-      "avg_views": 384.0,
-      "count": 8
+      "avg_eng": 5.82,
+      "avg_views": 345.0,
+      "count": 9
     },
     "22": {
       "slot": "深夜（22〜0時台）",

@@ -1689,7 +1689,59 @@
         "hook_length": 15
       },
       "collected_at": "2026-04-07T20:37:47.181888+09:00"
+    },
+    {
+      "id": "verify-retry-20260407204219",
+      "platform_post_id": "18149705332462016",
+      "posted_at": "2026-04-07T20:42:19.278094+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n恋愛で「選択を迫られる」星座。\nたった2つだけです。\n\n蟹座・蠍座は\n曖昧な関係",
+      "first_line": "明日からの3日間、",
+      "char_count": 169,
+      "metrics": {
+        "views": 324,
+        "likes": 22,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 6.79
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-08T01:36:36.868807+09:00"
+    },
+    {
+      "id": "verify-retry-20260407214220",
+      "platform_post_id": "17908000635200918",
+      "posted_at": "2026-04-07T21:42:20.923458+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの5日間、\n仕事で「予想外の話」が\n舞い込みやすい星座。\n\nたった2つだけです。\n\n双子座・",
+      "first_line": "明日からの5日間、",
+      "char_count": 178,
+      "metrics": {
+        "views": 33,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 6.06
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-08T01:36:36.868807+09:00"
     }
   ],
-  "last_updated": "2026-04-07T21:37:48.147710+09:00"
+  "last_updated": "2026-04-08T01:36:36.868807+09:00"
 }
