@@ -1,7 +1,7 @@
 {
   "date": "2026-04-07",
-  "generated_at": "2026-04-07T08:55:00+09:00",
-  "one_line": "2026-04-07 | 1件投稿 (1件計測済み) | フックOK 1/1件 | 平均v=112.0 | 構造G再現性: WARNING: 成功率低下（0/4件）",
+  "generated_at": "2026-04-07T15:07:17+09:00",
+  "one_line": "2026-04-07 | 6件投稿 (4件計測済み) | フックOK 5/6件 | 違反: 15時: 20字「実は、4月後半に動く星座が3つあります。」 | 平均v=93.5 | 構造G再現性: WARNING: 成功率低下（0/7件） | HC削除: 1件",
   "posts": [
     {
       "hour": 7,
@@ -11,38 +11,110 @@
       "hook_len": 8,
       "hook_ok": true,
       "views": 112,
-      "likes": 18,
+      "likes": 19,
       "comments": 2,
       "reposts": 0,
-      "er": 17.86,
+      "er": 18.75,
       "measured": true
+    },
+    {
+      "hour": 9,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 7,
+      "likes": 1,
+      "comments": 0,
+      "reposts": 0,
+      "er": 14.29,
+      "measured": true
+    },
+    {
+      "hour": 10,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "4月中旬、対人関係で",
+      "hook_len": 10,
+      "hook_ok": true,
+      "views": 105,
+      "likes": 5,
+      "comments": 0,
+      "reposts": 0,
+      "er": 4.76,
+      "measured": true
+    },
+    {
+      "hour": 12,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 150,
+      "likes": 8,
+      "comments": 0,
+      "reposts": 0,
+      "er": 5.33,
+      "measured": true
+    },
+    {
+      "hour": 13,
+      "struct": "F",
+      "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "hook": "正直に言います。",
+      "hook_len": 8,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 15,
+      "struct": "F",
+      "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "hook": "実は、4月後半に動く星座が3つあります。",
+      "hook_len": 20,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
     }
   ],
   "summary": {
-    "total": 1,
-    "measured": 1,
-    "hook_ok": 1,
-    "hook_violations": 0,
-    "violations": [],
-    "total_views": 112,
-    "avg_views": 112.0,
-    "best_hook": "4月中盤、恋愛で",
-    "best_views": 112,
-    "best_er": 17.86
+    "total": 6,
+    "measured": 4,
+    "hook_ok": 5,
+    "hook_violations": 1,
+    "violations": [
+      "15時: 20字「実は、4月後半に動く星座が3つあります。」"
+    ],
+    "total_views": 374,
+    "avg_views": 93.5,
+    "best_hook": "明日からの3日間、",
+    "best_views": 150,
+    "best_er": 5.33
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 2,
-    "total_posts": 8,
-    "measured_posts": 4,
+    "total_posts": 11,
+    "measured_posts": 7,
     "success_posts": 0,
     "success_rate": 0.0,
     "success_criteria": "v>=500",
-    "status": "WARNING: 成功率低下（0/4件）"
+    "status": "WARNING: 成功率低下（0/7件）"
   },
   "hc": {
-    "runs": 3,
-    "deleted": 0
+    "runs": 7,
+    "deleted": 1
   }
 }
