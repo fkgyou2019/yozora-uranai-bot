@@ -141,5 +141,158 @@
     "content_preview": "正直に言います。\n\n占い師として\n「これだけは見てほしい」\nと思うことがあります。\n\n今月、金運が下がりやすい\n行動パタ",
     "hourly": [],
     "completed": true
+  },
+  "post_20260330_th_006": {
+    "post_id": "post_20260330_th_006",
+    "platform_post_id": "17907838770202506",
+    "posted_at": "2026-03-31T10:37:23.070412+09:00",
+    "pattern_name": "自由型_水星逆行対策",
+    "slot_hour": 10,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "水星逆行が",
+    "content_preview": "水星逆行が\n今月いっぱい続きます。\n\nこの時期、コミュニケーションや\n契約事に注意が必要です。\n\n特に双子座さん・乙女座",
+    "hourly": [
+      {
+        "h": 18,
+        "ts": "2026-04-01T05:00:46.366302+09:00",
+        "views": 97,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.03,
+        "velocity_views_per_hour": 5.4
+      },
+      {
+        "h": 20,
+        "ts": "2026-04-01T07:06:09.073537+09:00",
+        "views": 98,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.02,
+        "velocity_views_per_hour": 0.5
+      },
+      {
+        "h": 22,
+        "ts": "2026-04-01T09:01:24.379689+09:00",
+        "views": 98,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.02,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 56,
+        "ts": "2026-04-02T19:31:23.383891+09:00",
+        "views": 99,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.01,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 57,
+        "ts": "2026-04-02T20:09:09.921050+09:00",
+        "views": 99,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.01,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 58,
+        "ts": "2026-04-02T20:59:56.905009+09:00",
+        "views": 99,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.01,
+        "velocity_views_per_hour": 0.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 5.4,
+    "peak_velocity_hour": 18
+  },
+  "post_20260331_1207_th_001": {
+    "post_id": "post_20260331_1207_th_001",
+    "platform_post_id": "18007530317853919",
+    "posted_at": "2026-03-31T15:07:19.532258+09:00",
+    "pattern_name": "構造C_共感型_仕事運",
+    "slot_hour": 15,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "最近、仕事で判断を迷う",
+    "content_preview": "最近、仕事で判断を迷う\nことが増えてませんか？\n\nそれ、水星逆行の影響があります。\n特に双子座・乙女座・射手座は\n今、決",
+    "hourly": [
+      {
+        "h": 13,
+        "ts": "2026-04-01T05:00:46.366302+09:00",
+        "views": 23,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 4.35,
+        "velocity_views_per_hour": 1.8
+      },
+      {
+        "h": 15,
+        "ts": "2026-04-01T07:06:09.073537+09:00",
+        "views": 23,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 4.35,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 17,
+        "ts": "2026-04-01T09:01:24.379689+09:00",
+        "views": 23,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 4.35,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 52,
+        "ts": "2026-04-02T19:31:23.383891+09:00",
+        "views": 25,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 4.0,
+        "velocity_views_per_hour": 0.1
+      },
+      {
+        "h": 53,
+        "ts": "2026-04-02T20:09:09.921050+09:00",
+        "views": 25,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 4.0,
+        "velocity_views_per_hour": 0.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 1.8,
+    "peak_velocity_hour": 13
   }
 }
