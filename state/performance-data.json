@@ -1611,7 +1611,33 @@
         "hook_length": 10
       },
       "collected_at": "2026-04-07T12:07:46.657535+09:00"
+    },
+    {
+      "id": "verify-retry-20260407121219",
+      "platform_post_id": "17864897070668812",
+      "posted_at": "2026-04-07T12:12:19.474748+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n対人トラブルが起きやすい星座。\n\nたった2つだけです。\n\n🔮牡羊座\n火星の影響で",
+      "first_line": "明日からの3日間、",
+      "char_count": 139,
+      "metrics": {
+        "views": 150,
+        "likes": 8,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 5.33
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-07T15:07:57.159623+09:00"
     }
   ],
-  "last_updated": "2026-04-07T12:07:46.657535+09:00"
+  "last_updated": "2026-04-07T15:07:57.159623+09:00"
 }
