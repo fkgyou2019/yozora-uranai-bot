@@ -2100,6 +2100,23 @@
       "platform_post_id": "17864897070668812",
       "source": "post-verify",
       "pattern_name": "構造G_注意喚起+限定型"
+    },
+    {
+      "pattern_name": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "category": "運勢・注意喚起",
+      "content": "正直に言います。\n今夜、あなたが決断しようとしていることは\n1週間待った方がいい。\n\n水星の逆行影響が強い時期。\nコミュニケーションの齟齬や\n情報の不足が起きやすいんです。\n\n特に恋愛・仕事の決定は\n4月中旬以降が吉。\n\n焦る気持ちは分かりますが\n占い師として、ここは冷静に。\n\n📌 今週は「様子見」が正解です\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "夜（19〜21時台）",
+      "scheduled_hour": 19,
+      "id": "post_20260407_1307_exp_006",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "posting_started_at": "2026-04-07T13:07:52.780490+09:00",
+      "posted_at": "2026-04-07T13:07:59.630741+09:00",
+      "platform_post_id": "18072992783220815",
+      "is_repost": true
     }
   ]
 }
