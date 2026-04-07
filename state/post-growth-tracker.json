@@ -4025,6 +4025,17 @@
           "auto_replies": 0,
           "er": 15.04,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 70,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
+          "views": 685,
+          "likes": 101,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.04,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -4444,6 +4455,17 @@
           "auto_replies": 0,
           "er": 12.96,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 65,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
+          "views": 55,
+          "likes": 2,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.73,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -4735,6 +4757,17 @@
         {
           "h": 58,
           "ts": "2026-04-07T07:02:34.420841+09:00",
+          "views": 66,
+          "likes": 17,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 25.76,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 60,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
           "views": 66,
           "likes": 17,
           "replies": 0,
@@ -5066,6 +5099,17 @@
         {
           "h": 47,
           "ts": "2026-04-07T07:02:34.420841+09:00",
+          "views": 110,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.45,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 49,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
           "views": 110,
           "likes": 6,
           "replies": 0,
@@ -5410,6 +5454,17 @@
           "auto_replies": 0,
           "er": 21.21,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 41,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
+          "views": 33,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 21.21,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5563,6 +5618,17 @@
         {
           "h": 35,
           "ts": "2026-04-07T07:02:34.420841+09:00",
+          "views": 178,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.93,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 37,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
           "views": 178,
           "likes": 7,
           "replies": 0,
@@ -5835,6 +5901,17 @@
           "auto_replies": 0,
           "er": 8.89,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 35,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
+          "views": 1294,
+          "likes": 107,
+          "replies": 8,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.89,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5853,8 +5930,8 @@
       "first_line": "今週、対人関係で",
       "content_preview": "今週、対人関係で\n気をつけた方がいい星座。\n\nたった3つだけです。\n\n🌙乙女座\n水星逆行の影響で、\n言葉の誤解が生じやす",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 4
+      "completed": true,
+      "api_fail_count": 5
     },
     "verify-retry-20260406091219": {
       "post_id": "verify-retry-20260406091219",
@@ -5869,7 +5946,7 @@
       "content_preview": "今週、金銭トラブルが起きやすい星座。\nたった3つだけです。\n\n🔴牡羊座\n火星が家計を揺らす時期。\n衝動買いは控えて。\n\n",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 4
+      "api_fail_count": 5
     },
     "verify-retry-20260406104219": {
       "post_id": "verify-retry-20260406104219",
@@ -5884,7 +5961,7 @@
       "content_preview": "今週後半、仕事で大きな動きがある星座。\n\nたった3つだけです。\n\n🔮双子座\n水星が順行に。\n停滞していた企画が\n急展開す",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 4
+      "api_fail_count": 5
     },
     "verify-retry-20260406121229": {
       "post_id": "verify-retry-20260406121229",
@@ -5956,6 +6033,17 @@
         {
           "h": 18,
           "ts": "2026-04-07T07:02:34.420841+09:00",
+          "views": 99,
+          "likes": 12,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.12,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 20,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
           "views": 99,
           "likes": 12,
           "replies": 0,
@@ -6046,6 +6134,17 @@
           "auto_replies": 0,
           "er": 2.42,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 17,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
+          "views": 207,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.42,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -6065,7 +6164,7 @@
       "content_preview": "今週、金銭感覚がズレやすい星座。\n\nたった3つだけです。\n\n🔮牡羊座\n火星の影響で衝動買い。\n欲しいものは\n3日待ってか",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 4
+      "api_fail_count": 5
     },
     "verify-retry-20260406204221": {
       "post_id": "verify-retry-20260406204221",
@@ -6110,6 +6209,17 @@
           "reposts": 0,
           "auto_replies": 0,
           "er": 10.42,
+          "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
+          "views": 49,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.2,
           "velocity_views_per_hour": 0.5
         }
       ],
@@ -6161,12 +6271,51 @@
           "auto_replies": 0,
           "er": 0.71,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 11,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
+          "views": 141,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.71,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
       "peak_velocity": 28.0,
       "peak_velocity_hour": 5
+    },
+    "verify-retry-20260407071220": {
+      "post_id": "verify-retry-20260407071220",
+      "platform_post_id": "18420061363125309",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DWznjahEd8m",
+      "posted_at": "2026-04-07T07:12:20.743672+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 7,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "4月中盤、恋愛で ",
+      "content_preview": "4月中盤、恋愛で \n思わぬ展開が来やすい星座。\n\nたった3つだけです。\n\n🔮蟹座\n金星が感情を深める。\n片思いなら\n勇気",
+      "hourly": [
+        {
+          "h": 1,
+          "ts": "2026-04-07T09:02:20.020828+09:00",
+          "views": 112,
+          "likes": 19,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 18.75,
+          "velocity_views_per_hour": 112.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 112.0,
+      "peak_velocity_hour": 1
     }
   },
-  "last_updated": "2026-04-07T07:02:34.420841+09:00"
+  "last_updated": "2026-04-07T09:02:20.020828+09:00"
 }
