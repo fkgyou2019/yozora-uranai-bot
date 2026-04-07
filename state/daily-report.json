@@ -1,7 +1,7 @@
 {
   "date": "2026-04-07",
-  "generated_at": "2026-04-07T15:07:17+09:00",
-  "one_line": "2026-04-07 | 6件投稿 (4件計測済み) | フックOK 5/6件 | 違反: 15時: 20字「実は、4月後半に動く星座が3つあります。」 | 平均v=93.5 | 構造G再現性: WARNING: 成功率低下（0/7件） | HC削除: 1件",
+  "generated_at": "2026-04-07T15:10:32+09:00",
+  "one_line": "2026-04-07 | 6件投稿 (4件計測済み) | フックOK 6/6件 | 平均v=171.0 | 構造G再現性: WARNING: 成功率低下（0/7件） | HC削除: 1件",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "4月中盤、恋愛で",
       "hook_len": 8,
       "hook_ok": true,
-      "views": 112,
-      "likes": 19,
-      "comments": 2,
+      "views": 376,
+      "likes": 39,
+      "comments": 7,
       "reposts": 0,
-      "er": 18.75,
+      "er": 12.23,
       "measured": true
     },
     {
@@ -38,11 +38,11 @@
       "hook": "4月中旬、対人関係で",
       "hook_len": 10,
       "hook_ok": true,
-      "views": 105,
-      "likes": 5,
+      "views": 151,
+      "likes": 9,
       "comments": 0,
       "reposts": 0,
-      "er": 4.76,
+      "er": 5.96,
       "measured": true
     },
     {
@@ -76,10 +76,10 @@
     {
       "hour": 15,
       "struct": "F",
-      "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
-      "hook": "実は、4月後半に動く星座が3つあります。",
-      "hook_len": 20,
-      "hook_ok": false,
+      "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "hook": "正直に言います。",
+      "hook_len": 8,
+      "hook_ok": true,
       "views": 0,
       "likes": 0,
       "comments": 0,
@@ -91,16 +91,14 @@
   "summary": {
     "total": 6,
     "measured": 4,
-    "hook_ok": 5,
-    "hook_violations": 1,
-    "violations": [
-      "15時: 20字「実は、4月後半に動く星座が3つあります。」"
-    ],
-    "total_views": 374,
-    "avg_views": 93.5,
-    "best_hook": "明日からの3日間、",
-    "best_views": 150,
-    "best_er": 5.33
+    "hook_ok": 6,
+    "hook_violations": 0,
+    "violations": [],
+    "total_views": 684,
+    "avg_views": 171.0,
+    "best_hook": "4月中盤、恋愛で",
+    "best_views": 376,
+    "best_er": 12.23
   },
   "reproducibility_test": {
     "target": "構造G",
