@@ -22,3 +22,12 @@ Thumbs.db
 # Temp
 *.tmp
 *.bak
+
+# Cloudflare
+.wrangler/
+
+# Node
+node_modules/
+.next/
+apps/*/node_modules/
+apps/*/.next/
