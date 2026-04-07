@@ -1,7 +1,7 @@
 {
   "date": "2026-04-07",
-  "generated_at": "2026-04-07T18:55:05+09:00",
-  "one_line": "2026-04-07 | 7件投稿 (4件計測済み) | フックOK 7/7件 | 平均v=171.0 | 構造G再現性: テスト中（1/2件成功・6件判定待ち） | HC削除: 1件",
+  "generated_at": "2026-04-07T21:11:20+09:00",
+  "one_line": "2026-04-07 | 9件投稿 (4件計測済み) | フックOK 9/9件 | 平均v=203.0 | 構造G再現性: テスト中（1/3件成功・6件判定待ち） | HC削除: 1件",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "4月中盤、恋愛で",
       "hook_len": 8,
       "hook_ok": true,
-      "views": 376,
-      "likes": 39,
+      "views": 470,
+      "likes": 46,
       "comments": 7,
       "reposts": 0,
-      "er": 12.23,
+      "er": 11.28,
       "measured": true
     },
     {
@@ -38,11 +38,11 @@
       "hook": "4月中旬、対人関係で",
       "hook_len": 10,
       "hook_ok": true,
-      "views": 151,
+      "views": 166,
       "likes": 9,
       "comments": 0,
       "reposts": 0,
-      "er": 5.96,
+      "er": 5.42,
       "measured": true
     },
     {
@@ -52,8 +52,8 @@
       "hook": "明日からの3日間、",
       "hook_len": 9,
       "hook_ok": true,
-      "views": 150,
-      "likes": 8,
+      "views": 169,
+      "likes": 9,
       "comments": 0,
       "reposts": 0,
       "er": 5.33,
@@ -95,6 +95,34 @@
       "hook_len": 8,
       "hook_ok": true,
       "views": 0,
+      "likes": 1,
+      "comments": 2,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 19,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "4月後半、金運が急落する星座。",
+      "hook_len": 15,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 2,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 20,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 0,
       "likes": 0,
       "comments": 0,
       "reposts": 0,
@@ -103,32 +131,32 @@
     }
   ],
   "summary": {
-    "total": 7,
+    "total": 9,
     "measured": 4,
-    "hook_ok": 7,
+    "hook_ok": 9,
     "hook_violations": 0,
     "violations": [],
-    "total_views": 684,
-    "avg_views": 171.0,
+    "total_views": 812,
+    "avg_views": 203.0,
     "best_hook": "4月中盤、恋愛で",
-    "best_views": 376,
-    "best_er": 12.23
+    "best_views": 470,
+    "best_er": 11.28
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 2,
-    "total_posts": 11,
-    "judged_posts": 5,
+    "total_posts": 13,
+    "judged_posts": 7,
     "pending_posts": 6,
-    "measured_posts": 2,
+    "measured_posts": 3,
     "success_posts": 1,
-    "success_rate": 50.0,
+    "success_rate": 33.3,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（1/2件成功・6件判定待ち）"
+    "status": "テスト中（1/3件成功・6件判定待ち）"
   },
   "hc": {
-    "runs": 11,
+    "runs": 14,
     "deleted": 1
   }
 }
