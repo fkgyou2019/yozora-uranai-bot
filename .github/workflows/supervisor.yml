@@ -3,7 +3,7 @@ name: Supervisor (全体監視)
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 22 * * *'  # 毎日 07:30 JST（1日の終わりに全体確認）
+    - cron: '30 14 * * *'  # 毎日 23:30 JST（1日の終わりに全体確認）
 
 permissions:
   contents: write

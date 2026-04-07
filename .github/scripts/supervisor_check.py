@@ -89,12 +89,19 @@ def main():
         for tp in today_posts:
             print(f"    {tp['time']} | {tp['text']}...")
 
-        if len(today_posts) < 5:
-            issues.append(f"今日の投稿が{len(today_posts)}件（目標7件に大幅不足）")
-        elif len(today_posts) < 7:
-            warnings.append(f"今日の投稿が{len(today_posts)}件（目標7件に未達）")
+        # 22:00 JST以降のみ投稿数不足を重大問題として判定（それ以前は日中で投稿継続中）
+        if now.hour >= 22:
+            if len(today_posts) < 5:
+                issues.append(f"今日の投稿が{len(today_posts)}件（目標7件に大幅不足）")
+            elif len(today_posts) < 7:
+                warnings.append(f"今日の投稿が{len(today_posts)}件（目標7件に未達）")
+            else:
+                print(f"  ✅ 目標達成")
         else:
-            print(f"  ✅ 目標達成")
+            if len(today_posts) >= 7:
+                print(f"  ✅ 目標達成")
+            else:
+                print(f"  ℹ️  {now.strftime('%H:%M')}時点で{len(today_posts)}件（日中投稿継続中、22:00以降に最終判定）")
 
     except Exception as e:
         issues.append(f"投稿一覧取得失敗: {e}")
