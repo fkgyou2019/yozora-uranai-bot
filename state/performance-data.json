@@ -1559,7 +1559,33 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-07T08:54:53.883844+09:00"
+    },
+    {
+      "id": "verify-retry-20260407091219",
+      "platform_post_id": "17998009379749854",
+      "posted_at": "2026-04-07T09:12:19.445397+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n金銭トラブルが\n起きやすい星座。\n\nたった2つだけです。\n\n🔮獅子座\n木星の影響",
+      "first_line": "明日からの3日間、",
+      "char_count": 148,
+      "metrics": {
+        "views": 7,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 14.29
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-07T10:37:46.638601+09:00"
     }
   ],
-  "last_updated": "2026-04-07T09:07:52.389152+09:00"
+  "last_updated": "2026-04-07T10:37:46.638601+09:00"
 }

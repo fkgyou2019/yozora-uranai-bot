@@ -254,8 +254,8 @@
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 60,
-    "last_analyzed": "2026-04-07T09:08:30.313315+09:00",
+    "data_count": 61,
+    "last_analyzed": "2026-04-07T10:38:02.576456+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -383,12 +383,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型",
-        "count": 5,
-        "avg_engagement": 10.35,
-        "avg_views": 351.0,
-        "total_likes": 147,
+        "count": 6,
+        "avg_engagement": 11.0,
+        "avg_views": 294.0,
+        "total_likes": 148,
         "total_replies": 10,
-        "_score": 387.32849999999996
+        "_score": 326.34000000000003
       },
       {
         "pattern": "ランキング型",
@@ -620,8 +620,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 18,
-        "avg_engagement": 15.53
+        "count": 19,
+        "avg_engagement": 15.46
       },
       {
         "feature": "has_fear_hook",
@@ -734,9 +734,9 @@
       },
       "9": {
         "slot": "朝（6〜9時台）",
-        "avg_eng": 10.4,
-        "avg_views": 519.0,
-        "count": 5
+        "avg_eng": 11.05,
+        "avg_views": 433.0,
+        "count": 6
       },
       "10": {
         "slot": "午前（10〜12時台）",
@@ -844,8 +844,8 @@
       }
     },
     "optimal_hours": [
-      9,
       10,
+      9,
       21
     ],
     "insights": [
@@ -856,8 +856,8 @@
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 60,
-  "last_analyzed": "2026-04-07T09:08:30.313315+09:00",
+  "data_count": 61,
+  "last_analyzed": "2026-04-07T10:38:02.576456+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -943,12 +943,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "count": 5,
-      "avg_engagement": 10.35,
-      "avg_views": 351.0,
-      "total_likes": 147,
+      "count": 6,
+      "avg_engagement": 11.0,
+      "avg_views": 294.0,
+      "total_likes": 148,
       "total_replies": 10,
-      "_score": 387.32849999999996
+      "_score": 326.34000000000003
     },
     {
       "pattern": "ランキング型",
@@ -1180,8 +1180,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 18,
-      "avg_engagement": 15.53
+      "count": 19,
+      "avg_engagement": 15.46
     },
     {
       "feature": "has_fear_hook",
@@ -1266,9 +1266,9 @@
     },
     "9": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 10.4,
-      "avg_views": 519.0,
-      "count": 5
+      "avg_eng": 11.05,
+      "avg_views": 433.0,
+      "count": 6
     },
     "10": {
       "slot": "午前（10〜12時台）",
@@ -1332,8 +1332,8 @@
     }
   },
   "optimal_hours": [
-    9,
     10,
+    9,
     21
   ]
 }
