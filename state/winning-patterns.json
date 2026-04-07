@@ -250,12 +250,12 @@
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
     "絵文字CTAあり → avg eng 17.5%",
-    "数字フックあり → avg eng 14.5%",
+    "数字フックあり → avg eng 13.7%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 63,
-    "last_analyzed": "2026-04-07T19:08:05.352340+09:00",
+    "data_count": 65,
+    "last_analyzed": "2026-04-07T20:37:54.004342+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -392,12 +392,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型",
-        "count": 8,
-        "avg_engagement": 9.51,
-        "avg_views": 252.0,
-        "total_likes": 161,
+        "count": 9,
+        "avg_engagement": 9.05,
+        "avg_views": 253.0,
+        "total_likes": 175,
         "total_replies": 10,
-        "_score": 275.9652
+        "_score": 275.8965
       },
       {
         "pattern": "数字+限定型（推定）",
@@ -517,6 +517,15 @@
         "_score": 88.998
       },
       {
+        "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+        "count": 1,
+        "avg_engagement": 6.76,
+        "avg_views": 74.0,
+        "total_likes": 3,
+        "total_replies": 2,
+        "_score": 79.00240000000001
+      },
+      {
         "pattern": "ランキング型（推定）",
         "count": 1,
         "avg_engagement": 28.33,
@@ -620,8 +629,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 21,
-        "avg_engagement": 14.47
+        "count": 23,
+        "avg_engagement": 13.74
       },
       {
         "feature": "has_fear_hook",
@@ -770,15 +779,15 @@
       },
       "18": {
         "slot": "夕方（16〜18時台）",
-        "avg_eng": 31.65,
-        "avg_views": 139.0,
-        "count": 1
+        "avg_eng": 19.2,
+        "avg_views": 106.0,
+        "count": 2
       },
       "19": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 6.36,
-        "avg_views": 96.0,
-        "count": 3
+        "avg_eng": 6.1,
+        "avg_views": 138.0,
+        "count": 4
       },
       "20": {
         "slot": "夜（19〜21時台）",
@@ -852,12 +861,12 @@
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
       "絵文字CTAあり → avg eng 17.5%",
-      "数字フックあり → avg eng 14.5%",
+      "数字フックあり → avg eng 13.7%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 63,
-  "last_analyzed": "2026-04-07T19:08:05.352340+09:00",
+  "data_count": 65,
+  "last_analyzed": "2026-04-07T20:37:54.004342+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -952,12 +961,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "count": 8,
-      "avg_engagement": 9.51,
-      "avg_views": 252.0,
-      "total_likes": 161,
+      "count": 9,
+      "avg_engagement": 9.05,
+      "avg_views": 253.0,
+      "total_likes": 175,
       "total_replies": 10,
-      "_score": 275.9652
+      "_score": 275.8965
     },
     {
       "pattern": "数字+限定型（推定）",
@@ -1077,6 +1086,15 @@
       "_score": 88.998
     },
     {
+      "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "count": 1,
+      "avg_engagement": 6.76,
+      "avg_views": 74.0,
+      "total_likes": 3,
+      "total_replies": 2,
+      "_score": 79.00240000000001
+    },
+    {
       "pattern": "ランキング型（推定）",
       "count": 1,
       "avg_engagement": 28.33,
@@ -1180,8 +1198,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 21,
-      "avg_engagement": 14.47
+      "count": 23,
+      "avg_engagement": 13.74
     },
     {
       "feature": "has_fear_hook",
@@ -1302,15 +1320,15 @@
     },
     "18": {
       "slot": "夕方（16〜18時台）",
-      "avg_eng": 31.65,
-      "avg_views": 139.0,
-      "count": 1
+      "avg_eng": 19.2,
+      "avg_views": 106.0,
+      "count": 2
     },
     "19": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 6.36,
-      "avg_views": 96.0,
-      "count": 3
+      "avg_eng": 6.1,
+      "avg_views": 138.0,
+      "count": 4
     },
     "20": {
       "slot": "夜（19〜21時台）",

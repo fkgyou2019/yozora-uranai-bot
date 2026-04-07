@@ -1637,7 +1637,59 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-07T15:07:57.159623+09:00"
+    },
+    {
+      "id": "post_20260407_1854_exp_007",
+      "platform_post_id": "18101665340298940",
+      "posted_at": "2026-04-07T18:54:59.685845+09:00",
+      "pattern_name": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "category": "運勢・真実暴露",
+      "content_preview": "実は、4月後半に\n「動きたくない」と感じる\nあなたが1番運が動く。\n\n星読み師の本音です。\n停滞は準",
+      "first_line": "実は、4月後半に",
+      "char_count": 141,
+      "metrics": {
+        "views": 74,
+        "likes": 3,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 6.76
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-04-07T20:37:47.181888+09:00"
+    },
+    {
+      "id": "verify-retry-20260407191222",
+      "platform_post_id": "18461969212096443",
+      "posted_at": "2026-04-07T19:12:22.416120+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "4月後半、金運が急落する星座。\nたった2つだけです。\n\n牡牛座・獅子座は\n金銭判断が曇りやすい時期。",
+      "first_line": "4月後半、金運が急落する星座。",
+      "char_count": 160,
+      "metrics": {
+        "views": 262,
+        "likes": 14,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 5.34
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 15
+      },
+      "collected_at": "2026-04-07T20:37:47.181888+09:00"
     }
   ],
-  "last_updated": "2026-04-07T19:07:48.667956+09:00"
+  "last_updated": "2026-04-07T20:37:47.181888+09:00"
 }
