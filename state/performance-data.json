@@ -1585,7 +1585,33 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-07T10:37:46.638601+09:00"
+    },
+    {
+      "id": "verify-retry-20260407104217",
+      "platform_post_id": "18156057514396887",
+      "posted_at": "2026-04-07T10:42:17.381750+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "4月中旬、対人関係で\nすれ違いが起きやすい星座。\n\nたった2つだけです。\n\n🔮双子座\n水星の逆行影響",
+      "first_line": "4月中旬、対人関係で",
+      "char_count": 166,
+      "metrics": {
+        "views": 105,
+        "likes": 5,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 4.76
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 10
+      },
+      "collected_at": "2026-04-07T12:07:46.657535+09:00"
     }
   ],
-  "last_updated": "2026-04-07T10:37:46.638601+09:00"
+  "last_updated": "2026-04-07T12:07:46.657535+09:00"
 }
