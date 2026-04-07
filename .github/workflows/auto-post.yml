@@ -13,7 +13,29 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # ========================================
+  # 実験期間チェック（4/6-4/30はexperiment-hourly.ymlに委譲）
+  # ========================================
+  check-period:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.check.outputs.skip }}
+    steps:
+      - name: Check if experiment period (2026-04-06 to 2026-04-30)
+        id: check
+        run: |
+          JST_DATE=$(TZ='Asia/Tokyo' date +%Y-%m-%d)
+          if [[ "$JST_DATE" > "2026-04-05" && "$JST_DATE" < "2026-05-01" ]]; then
+            echo "🔬 実験期間中（${JST_DATE}）: experiment-hourly.yml に投稿を委譲します。このワークフローはスキップします。"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "実験期間外（${JST_DATE}）: 通常投稿を実行します。"
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
   post:
+    needs: check-period
+    if: needs.check-period.outputs.skip != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
