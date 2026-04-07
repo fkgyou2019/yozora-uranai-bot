@@ -393,5 +393,43 @@
     "content_preview": "正直に言います。\n今夜から明日朝にかけて、\n牡羊座・獅子座・射手座の3星座は\n職場で『予想外の提案』が舞い込みます。\n\n",
     "hourly": [],
     "completed": true
+  },
+  "post_20260331_2224_exp_001": {
+    "post_id": "post_20260331_2224_exp_001",
+    "platform_post_id": "18000902045872804",
+    "posted_at": "2026-04-01T07:07:20.915351+09:00",
+    "pattern_name": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
+    "slot_hour": 7,
+    "day_of_week": 2,
+    "day_name": "水",
+    "first_line": "今週後半、仕事で判断ミスが起きやすい星座。",
+    "content_preview": "今週後半、仕事で判断ミスが起きやすい星座。\n\nたった3つだけです。\n\n🔴 牡羊座\n火星の逆行で、いつもより早まった決断に",
+    "hourly": [
+      {
+        "h": 1,
+        "ts": "2026-04-01T09:01:24.379689+09:00",
+        "views": 53,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 3.77,
+        "velocity_views_per_hour": 53.0
+      },
+      {
+        "h": 36,
+        "ts": "2026-04-02T19:31:23.383891+09:00",
+        "views": 66,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 3.03,
+        "velocity_views_per_hour": 0.4
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 53.0,
+    "peak_velocity_hour": 1
   }
 }

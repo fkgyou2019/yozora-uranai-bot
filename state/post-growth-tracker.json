@@ -864,44 +864,6 @@
       "peak_velocity": 8.0,
       "peak_velocity_hour": 8
     },
-    "post_20260331_2224_exp_001": {
-      "post_id": "post_20260331_2224_exp_001",
-      "platform_post_id": "18000902045872804",
-      "posted_at": "2026-04-01T07:07:20.915351+09:00",
-      "pattern_name": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
-      "slot_hour": 7,
-      "day_of_week": 2,
-      "day_name": "水",
-      "first_line": "今週後半、仕事で判断ミスが起きやすい星座。",
-      "content_preview": "今週後半、仕事で判断ミスが起きやすい星座。\n\nたった3つだけです。\n\n🔴 牡羊座\n火星の逆行で、いつもより早まった決断に",
-      "hourly": [
-        {
-          "h": 1,
-          "ts": "2026-04-01T09:01:24.379689+09:00",
-          "views": 53,
-          "likes": 2,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 3.77,
-          "velocity_views_per_hour": 53.0
-        },
-        {
-          "h": 36,
-          "ts": "2026-04-02T19:31:23.383891+09:00",
-          "views": 66,
-          "likes": 2,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 3.03,
-          "velocity_views_per_hour": 0.4
-        }
-      ],
-      "completed": true,
-      "peak_velocity": 53.0,
-      "peak_velocity_hour": 1
-    },
     "post_20260401_0907_th_001": {
       "post_id": "post_20260401_0907_th_001",
       "platform_post_id": "17883555885493755",
@@ -5356,6 +5318,17 @@
           "auto_replies": 0,
           "er": 18.42,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 64,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 39,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 17.95,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -5582,6 +5555,17 @@
           "auto_replies": 0,
           "er": 3.83,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 60,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 184,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.8,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -5913,6 +5897,17 @@
           "auto_replies": 0,
           "er": 8.83,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 57,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 1304,
+          "likes": 107,
+          "replies": 8,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.82,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -6107,6 +6102,17 @@
           "auto_replies": 0,
           "er": 12.04,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 43,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 109,
+          "likes": 13,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.93,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -6256,6 +6262,17 @@
           "auto_replies": 0,
           "er": 2.3,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 40,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 218,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.29,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -6387,6 +6404,17 @@
           "auto_replies": 0,
           "er": 8.2,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 34,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 62,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.06,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -6503,6 +6531,17 @@
           "auto_replies": 0,
           "er": 0.64,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 33,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 157,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.64,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -6586,6 +6625,17 @@
           "auto_replies": 0,
           "er": 9.85,
           "velocity_views_per_hour": 4.0
+        },
+        {
+          "h": 24,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 594,
+          "likes": 51,
+          "replies": 7,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.76,
+          "velocity_views_per_hour": 1.7
         }
       ],
       "completed": false,
@@ -6605,7 +6655,7 @@
       "content_preview": "明日からの3日間、\n金銭トラブルが\n起きやすい星座。\n\nたった2つだけです。\n\n🔮獅子座\n木星の影響で\n衝動買いに注意。",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 5
+      "api_fail_count": 6
     },
     "verify-retry-20260407104217": {
       "post_id": "verify-retry-20260407104217",
@@ -6673,6 +6723,17 @@
           "auto_replies": 0,
           "er": 4.71,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 20,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 193,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.66,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -6745,6 +6806,17 @@
           "auto_replies": 0,
           "er": 4.79,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 19,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 191,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.71,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -6764,7 +6836,7 @@
       "content_preview": "正直に言います。\n今夜、あなたが決断しようとしていることは\n1週間待った方がいい。\n\n水星の逆行影響が強い時期。\nコミュ",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 5
+      "api_fail_count": 6
     },
     "post_20260407_1507_exp_007": {
       "post_id": "post_20260407_1507_exp_007",
@@ -6807,7 +6879,7 @@
       "content_preview": "正直に言います。\n\n今夜、水星が逆行を終える\nタイミング。ここから1週間で\n「動きが止まってた案件」が\n急に進む星座が3",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 4
+      "api_fail_count": 5
     },
     "post_20260407_1854_exp_007": {
       "post_id": "post_20260407_1854_exp_007",
@@ -6864,6 +6936,17 @@
           "auto_replies": 0,
           "er": 4.84,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 129,
+          "likes": 4,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.65,
+          "velocity_views_per_hour": 2.5
         }
       ],
       "completed": false,
@@ -6925,6 +7008,17 @@
           "auto_replies": 0,
           "er": 4.2,
           "velocity_views_per_hour": 3.0
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 360,
+          "likes": 15,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.17,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -6975,6 +7069,17 @@
           "auto_replies": 0,
           "er": 7.16,
           "velocity_views_per_hour": 3.5
+        },
+        {
+          "h": 10,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 375,
+          "likes": 26,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.93,
+          "velocity_views_per_hour": 13.0
         }
       ],
       "completed": false,
@@ -7025,12 +7130,51 @@
           "auto_replies": 0,
           "er": 5.71,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 9,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 39,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.13,
+          "velocity_views_per_hour": 2.0
         }
       ],
       "completed": false,
       "peak_velocity": 14.5,
       "peak_velocity_hour": 2
+    },
+    "post_20260408_0708_exp_007": {
+      "post_id": "post_20260408_0708_exp_007",
+      "platform_post_id": "18169041037369934",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DW2MVtdku9h",
+      "posted_at": "2026-04-08T07:12:15.483666+09:00",
+      "pattern_name": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "slot_hour": 7,
+      "day_of_week": 2,
+      "day_name": "水",
+      "first_line": "実は、4月後半に向けて",
+      "content_preview": "実は、4月後半に向けて\n動きが止まる星座がいるんです。\n\n水星の逆行が影響していて\n連絡ミスや判断の迷いが\n増えやすい時",
+      "hourly": [
+        {
+          "h": 0,
+          "ts": "2026-04-08T07:24:16.750102+09:00",
+          "views": 0,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0,
+          "velocity_views_per_hour": 0.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 0.0,
+      "peak_velocity_hour": 0
     }
   },
-  "last_updated": "2026-04-08T05:08:25.552600+09:00"
+  "last_updated": "2026-04-08T07:24:16.750102+09:00"
 }
