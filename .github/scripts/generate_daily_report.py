@@ -19,10 +19,11 @@ sys.stdout.reconfigure(encoding="utf-8")
 JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-HOOK_LIMIT   = 15    # フック15字以内ルール
-SUCCESS_VIEWS = 500  # 再現性テスト成功基準 v≥500
-REPRO_TARGET = "G"   # 再現性テスト対象構造
-REPRO_START  = "2026-04-06"
+HOOK_LIMIT    = 15   # フック15字以内ルール
+SUCCESS_VIEWS = 200  # 再現性テスト成功基準 v≥200（上位30%=良い投稿）
+REPRO_TARGET  = "G"  # 再現性テスト対象構造
+REPRO_START   = "2026-04-06"
+REPRO_JUDGE_H = 24   # 判定タイミング: 投稿から24h経過後のみ計測対象
 
 
 def load_json(rel):
@@ -161,7 +162,7 @@ def main():
     avg_views    = round(total_views / measured_cnt, 1) if measured_cnt else 0
     best         = max(posts_out, key=lambda p: p["views"]) if posts_out else {}
 
-    # ── 再現性テスト進捗（構造G・v≥500・計測済みのみ） ─────────────
+    # ── 再現性テスト進捗（構造G・v≥200・投稿24h経過後のみ判定） ──────
     repro_start_dt = datetime.fromisoformat(REPRO_START).replace(tzinfo=JST)
     days_elapsed   = (now.date() - repro_start_dt.date()).days + 1
 
@@ -170,8 +171,8 @@ def main():
         if f"構造{REPRO_TARGET}" in p.get("pattern_name", "")
         and p.get("posted_at", "") >= REPRO_START
     ]
-    g_total    = len(all_g)
-    # 計測済み: growth-tracker優先 → perf_map フォールバック、views > 0
+    g_total = len(all_g)
+
     def get_views_for(p):
         snap = tracker_map.get(p.get("id", ""), {})
         if snap.get("hourly"):
@@ -179,20 +180,34 @@ def main():
         return (perf_map.get(p.get("platform_post_id", ""), {})
                         .get("metrics", {}).get("views", 0) or 0)
 
-    g_measured = [p for p in all_g if get_views_for(p) > 0]
+    def is_24h_elapsed(p):
+        try:
+            pt = datetime.fromisoformat(p.get("posted_at", ""))
+            if pt.tzinfo is None:
+                pt = pt.replace(tzinfo=JST)
+            return (now - pt).total_seconds() >= REPRO_JUDGE_H * 3600
+        except Exception:
+            return False
+
+    # 24h経過済みの投稿のみを判定対象とする
+    g_judged  = [p for p in all_g if is_24h_elapsed(p)]
+    g_measured = [p for p in g_judged if get_views_for(p) > 0]
     g_success  = sum(1 for p in g_measured if get_views_for(p) >= SUCCESS_VIEWS)
     g_rate = round(g_success / len(g_measured) * 100, 1) if g_measured else 0
+    g_pending  = len(all_g) - len(g_judged)  # 24h未満の投稿数
 
     if g_total == 0:
         repro_status = "未開始"
+    elif not g_judged:
+        repro_status = f"判定待ち（全{g_total}件が24h未満）"
     elif not g_measured:
-        repro_status = f"計測待ち（{g_total}件投稿済み）"
+        repro_status = f"計測待ち（{len(g_judged)}件が24h経過・views取得中）"
     elif g_rate >= 70:
         repro_status = f"SUCCESS: 再現性確認（{g_success}/{len(g_measured)}件）"
     elif g_rate >= 30:
-        repro_status = f"テスト中（{g_success}/{len(g_measured)}件成功）"
+        repro_status = f"テスト中（{g_success}/{len(g_measured)}件成功・{g_pending}件判定待ち）"
     else:
-        repro_status = f"WARNING: 成功率低下（{g_success}/{len(g_measured)}件）"
+        repro_status = f"WARNING: 成功率低下（{g_success}/{len(g_measured)}件・{g_pending}件判定待ち）"
 
     # ── HC サマリー ───────────────────────────────────────────────
     hc_checks  = [c for c in hc_log.get("checks", []) if c.get("timestamp", "")[:10] == today]
@@ -231,10 +246,12 @@ def main():
             "start_date":       REPRO_START,
             "days_elapsed":     days_elapsed,
             "total_posts":      g_total,
+            "judged_posts":     len(g_judged),
+            "pending_posts":    g_pending,
             "measured_posts":   len(g_measured),
             "success_posts":    g_success,
             "success_rate":     g_rate,
-            "success_criteria": f"v>={SUCCESS_VIEWS}",
+            "success_criteria": f"v>={SUCCESS_VIEWS} (24h後判定)",
             "status":           repro_status,
         },
         "hc": {
