@@ -5329,6 +5329,17 @@
           "auto_replies": 0,
           "er": 17.95,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 65,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 39,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 17.95,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5566,6 +5577,17 @@
           "auto_replies": 0,
           "er": 3.8,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 61,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 184,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.8,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -5908,6 +5930,17 @@
           "auto_replies": 0,
           "er": 8.82,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 59,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 1304,
+          "likes": 107,
+          "replies": 8,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.82,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -6113,6 +6146,17 @@
           "auto_replies": 0,
           "er": 11.93,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 44,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 109,
+          "likes": 13,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.93,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -6273,6 +6317,17 @@
           "auto_replies": 0,
           "er": 2.29,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 41,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 218,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.29,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -6415,6 +6470,17 @@
           "auto_replies": 0,
           "er": 8.06,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 36,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 62,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.06,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -6542,6 +6608,17 @@
           "auto_replies": 0,
           "er": 0.64,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 35,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 157,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.64,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -6636,6 +6713,17 @@
           "auto_replies": 0,
           "er": 9.76,
           "velocity_views_per_hour": 1.7
+        },
+        {
+          "h": 25,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 596,
+          "likes": 51,
+          "replies": 7,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.73,
+          "velocity_views_per_hour": 2.0
         }
       ],
       "completed": false,
@@ -6655,7 +6743,7 @@
       "content_preview": "明日からの3日間、\n金銭トラブルが\n起きやすい星座。\n\nたった2つだけです。\n\n🔮獅子座\n木星の影響で\n衝動買いに注意。",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 6
+      "api_fail_count": 7
     },
     "verify-retry-20260407104217": {
       "post_id": "verify-retry-20260407104217",
@@ -6733,6 +6821,17 @@
           "reposts": 0,
           "auto_replies": 0,
           "er": 4.66,
+          "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 22,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 195,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.62,
           "velocity_views_per_hour": 1.0
         }
       ],
@@ -6817,6 +6916,17 @@
           "auto_replies": 0,
           "er": 4.71,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 20,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 192,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.69,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -6836,7 +6946,7 @@
       "content_preview": "正直に言います。\n今夜、あなたが決断しようとしていることは\n1週間待った方がいい。\n\n水星の逆行影響が強い時期。\nコミュ",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 6
+      "api_fail_count": 7
     },
     "post_20260407_1507_exp_007": {
       "post_id": "post_20260407_1507_exp_007",
@@ -6879,7 +6989,7 @@
       "content_preview": "正直に言います。\n\n今夜、水星が逆行を終える\nタイミング。ここから1週間で\n「動きが止まってた案件」が\n急に進む星座が3",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 5
+      "api_fail_count": 6
     },
     "post_20260407_1854_exp_007": {
       "post_id": "post_20260407_1854_exp_007",
@@ -6947,6 +7057,17 @@
           "auto_replies": 0,
           "er": 4.65,
           "velocity_views_per_hour": 2.5
+        },
+        {
+          "h": 14,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 130,
+          "likes": 4,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.62,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -7019,6 +7140,17 @@
           "auto_replies": 0,
           "er": 4.17,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 13,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 361,
+          "likes": 15,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.16,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -7080,6 +7212,17 @@
           "auto_replies": 0,
           "er": 6.93,
           "velocity_views_per_hour": 13.0
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 386,
+          "likes": 26,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.74,
+          "velocity_views_per_hour": 5.5
         }
       ],
       "completed": false,
@@ -7141,6 +7284,17 @@
           "auto_replies": 0,
           "er": 5.13,
           "velocity_views_per_hour": 2.0
+        },
+        {
+          "h": 11,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 39,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.13,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -7169,12 +7323,23 @@
           "auto_replies": 0,
           "er": 0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 1,
+          "ts": "2026-04-08T09:05:30.668048+09:00",
+          "views": 46,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.17,
+          "velocity_views_per_hour": 46.0
         }
       ],
       "completed": false,
-      "peak_velocity": 0.0,
-      "peak_velocity_hour": 0
+      "peak_velocity": 46.0,
+      "peak_velocity_hour": 1
     }
   },
-  "last_updated": "2026-04-08T07:24:16.750102+09:00"
+  "last_updated": "2026-04-08T09:05:30.668048+09:00"
 }
