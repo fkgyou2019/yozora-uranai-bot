@@ -1845,7 +1845,33 @@
         "hook_length": 7
       },
       "collected_at": "2026-04-08T15:08:42.186295+09:00"
+    },
+    {
+      "id": "verify-retry-20260408191220",
+      "platform_post_id": "18176576800382684",
+      "posted_at": "2026-04-08T19:12:20.212786+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "4月中旬、仕事で大きな動きがある星座。\n\nたった2つだけです。\n\n牡羊座・獅子座は\n火星が強まること",
+      "first_line": "4月中旬、仕事で大きな動きがある星座。",
+      "char_count": 159,
+      "metrics": {
+        "views": 21,
+        "likes": 4,
+        "replies": 4,
+        "reposts": 0,
+        "engagement_rate": 38.1
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 19
+      },
+      "collected_at": "2026-04-08T23:55:41.141576+09:00"
     }
   ],
-  "last_updated": "2026-04-08T18:55:12.060893+09:00"
+  "last_updated": "2026-04-08T23:55:41.141576+09:00"
 }

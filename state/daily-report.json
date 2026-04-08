@@ -1,7 +1,7 @@
 {
   "date": "2026-04-08",
-  "generated_at": "2026-04-08T18:55:17+09:00",
-  "one_line": "2026-04-08 | 5件投稿 (4件計測済み) | フックOK 5/5件 | 平均v=249.0 | 構造G再現性: WARNING: 成功率低下（2/7件・6件判定待ち）",
+  "generated_at": "2026-04-08T23:55:46+09:00",
+  "one_line": "2026-04-08 | 8件投稿 (4件計測済み) | フックOK 5/8件 | 違反: 19時: 19字「4月中旬、仕事で大きな動きがある星座。」, 20時: 21字「今週末、感情的な決断は避けた方がいい星座。」, 21時: 20字「今週、人間関係で誤解が生まれやすい星座。」 | 平均v=369.2 | 構造G再現性: テスト中（6/10件成功・6件判定待ち） | HC削除: 1件",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "実は、4月後半に向けて",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 63,
-      "likes": 1,
+      "views": 73,
+      "likes": 3,
       "comments": 0,
       "reposts": 0,
-      "er": 1.59,
+      "er": 4.11,
       "measured": true
     },
     {
@@ -24,11 +24,11 @@
       "hook": "実は、4月中旬までに",
       "hook_len": 10,
       "hook_ok": true,
-      "views": 117,
-      "likes": 11,
+      "views": 135,
+      "likes": 12,
       "comments": 0,
       "reposts": 0,
-      "er": 9.4,
+      "er": 8.89,
       "measured": true
     },
     {
@@ -38,11 +38,11 @@
       "hook": "4月中旬、人間関係で",
       "hook_len": 10,
       "hook_ok": true,
-      "views": 626,
-      "likes": 33,
-      "comments": 18,
+      "views": 1014,
+      "likes": 47,
+      "comments": 24,
       "reposts": 0,
-      "er": 8.15,
+      "er": 7.0,
       "measured": true
     },
     {
@@ -52,11 +52,11 @@
       "hook": "4月中旬以降、",
       "hook_len": 7,
       "hook_ok": true,
-      "views": 190,
-      "likes": 18,
-      "comments": 11,
+      "views": 255,
+      "likes": 22,
+      "comments": 13,
       "reposts": 0,
-      "er": 15.26,
+      "er": 13.73,
       "measured": true
     },
     {
@@ -72,35 +72,81 @@
       "reposts": 0,
       "er": 0,
       "measured": false
+    },
+    {
+      "hour": 19,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "4月中旬、仕事で大きな動きがある星座。",
+      "hook_len": 19,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 20,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "今週末、感情的な決断は避けた方がいい星座。",
+      "hook_len": 21,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 21,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "今週、人間関係で誤解が生まれやすい星座。",
+      "hook_len": 20,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
     }
   ],
   "summary": {
-    "total": 5,
+    "total": 8,
     "measured": 4,
     "hook_ok": 5,
-    "hook_violations": 0,
-    "violations": [],
-    "total_views": 996,
-    "avg_views": 249.0,
+    "hook_violations": 3,
+    "violations": [
+      "19時: 19字「4月中旬、仕事で大きな動きがある星座。」",
+      "20時: 21字「今週末、感情的な決断は避けた方がいい星座。」",
+      "21時: 20字「今週、人間関係で誤解が生まれやすい星座。」"
+    ],
+    "total_views": 1477,
+    "avg_views": 369.2,
     "best_hook": "4月中旬、人間関係で",
-    "best_views": 626,
-    "best_er": 8.15
+    "best_views": 1014,
+    "best_er": 7.0
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 3,
-    "total_posts": 17,
-    "judged_posts": 11,
+    "total_posts": 20,
+    "judged_posts": 14,
     "pending_posts": 6,
-    "measured_posts": 7,
-    "success_posts": 2,
-    "success_rate": 28.6,
+    "measured_posts": 10,
+    "success_posts": 6,
+    "success_rate": 60.0,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "WARNING: 成功率低下（2/7件・6件判定待ち）"
+    "status": "テスト中（6/10件成功・6件判定待ち）"
   },
   "hc": {
-    "runs": 12,
-    "deleted": 0
+    "runs": 17,
+    "deleted": 1
   }
 }
