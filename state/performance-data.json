@@ -1871,7 +1871,33 @@
         "hook_length": 19
       },
       "collected_at": "2026-04-08T23:55:41.141576+09:00"
+    },
+    {
+      "id": "verify-retry-20260409071218",
+      "platform_post_id": "18147875245471303",
+      "posted_at": "2026-04-09T07:12:18.415086+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "今週後半、恋愛で勘違いが生まれやすい星座。\n\nたった2つだけです。\n\n双子座・天秤座は\n金星と水星の",
+      "first_line": "今週後半、恋愛で勘違いが生まれやすい星座。",
+      "char_count": 183,
+      "metrics": {
+        "views": 49,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 21
+      },
+      "collected_at": "2026-04-09T08:55:51.003915+09:00"
     }
   ],
-  "last_updated": "2026-04-09T08:10:15.775042+09:00"
+  "last_updated": "2026-04-09T08:55:51.003915+09:00"
 }

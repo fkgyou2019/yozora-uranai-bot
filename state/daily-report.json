@@ -1,17 +1,34 @@
 {
   "date": "2026-04-09",
-  "generated_at": "2026-04-09T01:44:15+09:00",
-  "one_line": "2026-04-09 | 0件投稿 (0件計測済み) | フックOK 0/0件 | 閲覧数取得待ち | 構造G再現性: テスト中（6/10件成功・6件判定待ち）",
-  "posts": [],
+  "generated_at": "2026-04-09T08:56:00+09:00",
+  "one_line": "2026-04-09 | 1件投稿 (0件計測済み) | フックOK 0/1件 | 違反: 7時: 21字「今週後半、恋愛で勘違いが生まれやすい星座。」 | 閲覧数取得待ち | 構造G再現性: テスト中（6/10件成功・7件判定待ち） | HC削除: 1件",
+  "posts": [
+    {
+      "hour": 7,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "今週後半、恋愛で勘違いが生まれやすい星座。",
+      "hook_len": 21,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    }
+  ],
   "summary": {
-    "total": 0,
+    "total": 1,
     "measured": 0,
     "hook_ok": 0,
-    "hook_violations": 0,
-    "violations": [],
+    "hook_violations": 1,
+    "violations": [
+      "7時: 21字「今週後半、恋愛で勘違いが生まれやすい星座。」"
+    ],
     "total_views": 0,
     "avg_views": 0,
-    "best_hook": "",
+    "best_hook": "今週後半、恋愛で勘違いが生まれやすい星座。",
     "best_views": 0,
     "best_er": 0
   },
@@ -19,17 +36,17 @@
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 4,
-    "total_posts": 20,
+    "total_posts": 21,
     "judged_posts": 14,
-    "pending_posts": 6,
+    "pending_posts": 7,
     "measured_posts": 10,
     "success_posts": 6,
     "success_rate": 60.0,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（6/10件成功・6件判定待ち）"
+    "status": "テスト中（6/10件成功・7件判定待ち）"
   },
   "hc": {
-    "runs": 1,
-    "deleted": 0
+    "runs": 4,
+    "deleted": 1
   }
 }
