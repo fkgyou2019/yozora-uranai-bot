@@ -543,5 +543,33 @@
     "content_preview": "仕事で、ちょっと疲れてませんか？\n\n4月は新しい環境が\n多い季節ですから、誰もが\nどこかで力を使ってます。\n\n特に山羊座",
     "hourly": [],
     "completed": true
+  },
+  "post_20260401_1908_th_001": {
+    "post_id": "post_20260401_1908_th_001",
+    "platform_post_id": "18095583710027046",
+    "threads_url": "",
+    "posted_at": "2026-04-01T20:37:17.820950+09:00",
+    "pattern_name": "構造自由_共感×質問型",
+    "slot_hour": 20,
+    "day_of_week": 2,
+    "day_name": "水",
+    "first_line": "最近、「これで大丈夫かな」って",
+    "content_preview": "最近、「これで大丈夫かな」って\n不安になることありますか？\n\n4月のはじまりは、\n誰もが少なからず\nそういう気持ちを持つ",
+    "hourly": [],
+    "completed": true
+  },
+  "post_20260401_2137_th_001": {
+    "post_id": "post_20260401_2137_th_001",
+    "platform_post_id": "18105685135717036",
+    "threads_url": "",
+    "posted_at": "2026-04-01T21:37:38.681636+09:00",
+    "pattern_name": "構造自由_共感×深掘り質問型",
+    "slot_hour": 21,
+    "day_of_week": 2,
+    "day_name": "水",
+    "first_line": "最近、新しいことを",
+    "content_preview": "最近、新しいことを\n始めたいな…と感じていますか？\n\nそういう気持ちが湧いてくるのは、\nあなたの中で何かが\n準備完了のサ",
+    "hourly": [],
+    "completed": true
   }
 }
