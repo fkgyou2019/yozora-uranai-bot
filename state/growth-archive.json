@@ -529,5 +529,19 @@
     "completed": true,
     "peak_velocity": 1.0,
     "peak_velocity_hour": 28
+  },
+  "post_20260401_1907_th_001": {
+    "post_id": "post_20260401_1907_th_001",
+    "platform_post_id": "17930381478068314",
+    "threads_url": "",
+    "posted_at": "2026-04-01T19:07:41.911424+09:00",
+    "pattern_name": "構造自由_共感×深掘り質問型（仕事のストレス）",
+    "slot_hour": 19,
+    "day_of_week": 2,
+    "day_name": "水",
+    "first_line": "仕事で、ちょっと疲れてませんか？",
+    "content_preview": "仕事で、ちょっと疲れてませんか？\n\n4月は新しい環境が\n多い季節ですから、誰もが\nどこかで力を使ってます。\n\n特に山羊座",
+    "hourly": [],
+    "completed": true
   }
 }
