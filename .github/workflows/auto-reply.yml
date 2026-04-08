@@ -3,14 +3,14 @@ name: Auto Reply to Comments
 on:
   schedule:
     # 投稿スケジュールの30分後に返信チェック（1日8回）
-    - cron: '17 22 * * *'  # JST 07:37
-    - cron: '17 0 * * *'   # JST 09:37
-    - cron: '47 1 * * *'   # JST 11:07
-    - cron: '17 3 * * *'   # JST 12:37
-    - cron: '17 6 * * *'   # JST 15:37
-    - cron: '17 10 * * *'  # JST 19:37
-    - cron: '47 11 * * *'  # JST 21:07
-    - cron: '47 12 * * *'  # JST 22:07
+    - cron: '37 22 * * *'  # JST 07:37
+    - cron: '37 0 * * *'   # JST 09:37
+    - cron: '7 2 * * *'    # JST 11:07
+    - cron: '37 3 * * *'   # JST 12:37
+    - cron: '37 6 * * *'   # JST 15:37
+    - cron: '37 10 * * *'  # JST 19:37
+    - cron: '7 12 * * *'   # JST 21:07
+    - cron: '7 13 * * *'   # JST 22:07
   workflow_dispatch:
 
 permissions:

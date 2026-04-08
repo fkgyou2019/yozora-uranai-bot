@@ -10,7 +10,7 @@ on:
     - cron: '12 6 * * *'    # JST 15:12
     - cron: '12 10 * * *'   # JST 19:12
     - cron: '42 11 * * *'   # JST 20:42
-    - cron: '42 12 * * *'   # JST 21:42
+    - cron: '47 12 * * *'   # JST 21:47
   workflow_dispatch:  # 手動実行も可能
 
 concurrency:
