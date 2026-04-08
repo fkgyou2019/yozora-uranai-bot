@@ -1,7 +1,7 @@
 {
   "date": "2026-04-08",
-  "generated_at": "2026-04-08T15:08:52+09:00",
-  "one_line": "2026-04-08 | 4件投稿 (4件計測済み) | フックOK 4/4件 | 平均v=244.8 | 構造G再現性: WARNING: 成功率低下（2/7件・5件判定待ち）",
+  "generated_at": "2026-04-08T15:13:02+09:00",
+  "one_line": "2026-04-08 | 4件投稿 (4件計測済み) | フックOK 4/4件 | 平均v=249.0 | 構造G再現性: WARNING: 成功率低下（2/7件・5件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "実は、4月後半に向けて",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 46,
+      "views": 63,
       "likes": 1,
       "comments": 0,
       "reposts": 0,
-      "er": 2.17,
+      "er": 1.59,
       "measured": true
     },
     {
@@ -66,8 +66,8 @@
     "hook_ok": 4,
     "hook_violations": 0,
     "violations": [],
-    "total_views": 979,
-    "avg_views": 244.8,
+    "total_views": 996,
+    "avg_views": 249.0,
     "best_hook": "4月中旬、人間関係で",
     "best_views": 626,
     "best_er": 8.15
