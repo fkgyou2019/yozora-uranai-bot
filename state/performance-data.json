@@ -1741,7 +1741,33 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-08T01:36:36.868807+09:00"
+    },
+    {
+      "id": "post_20260408_0708_exp_007",
+      "platform_post_id": "18169041037369934",
+      "posted_at": "2026-04-08T07:12:15.483666+09:00",
+      "pattern_name": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "category": "運勢",
+      "content_preview": "実は、4月後半に向けて\n動きが止まる星座がいるんです。\n\n水星の逆行が影響していて\n連絡ミスや判断の",
+      "first_line": "実は、4月後半に向けて",
+      "char_count": 133,
+      "metrics": {
+        "views": 46,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 2.17
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-04-08T09:00:58.604363+09:00"
     }
   ],
-  "last_updated": "2026-04-08T08:08:37.693888+09:00"
+  "last_updated": "2026-04-08T09:00:58.604363+09:00"
 }

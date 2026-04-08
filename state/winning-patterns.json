@@ -237,7 +237,9 @@
       "why_it_works": "自分の投稿（22%エンゲージメント）を22%→40%へ引き上げるための完全改造版。各星座説明に『昇進』『異動』など職場での具体的な利益を明記、メダル絵文字で視認性向上、CTA統一で+18-20%"
     }
   ],
-  "avoid_patterns": [],
+  "avoid_patterns": [
+    "【avg_views:60・ER:4.5%・2件】構造F_告白・暴露型②（実は〜という真実を伝えます）"
+  ],
   "actionable_improvements": [
     "全投稿に『🍀を置いた方に○○が届きます』形式の絵文字CTAを必須化。現在40%の実装率を100%へ。バズ投稿のコメント数（261-2784）が大幅に高いのはこの要素が決定的",
     "フックを『たった3つだけ』『12星座中』など数字インパクト型に統一。自分の高エンゲージメント投稿（42.14%）も断定型フックだが、さらに限定感を数字化することで+10-15%の向上が見込める",
@@ -249,12 +251,13 @@
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
     "絵文字CTAあり → avg eng 17.5%",
-    "数字フックあり → avg eng 13.2%",
-    "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
+    "数字フックあり → avg eng 12.7%",
+    "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
+    "自動検出・低パフォーマンスパターン: 1件"
   ],
   "auto_analysis": {
-    "data_count": 67,
-    "last_analyzed": "2026-04-08T08:08:46.920145+09:00",
+    "data_count": 68,
+    "last_analyzed": "2026-04-08T09:01:03.953921+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -516,15 +519,6 @@
         "_score": 88.998
       },
       {
-        "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
-        "count": 1,
-        "avg_engagement": 6.76,
-        "avg_views": 74.0,
-        "total_likes": 3,
-        "total_replies": 2,
-        "_score": 79.00240000000001
-      },
-      {
         "pattern": "ランキング型（推定）",
         "count": 1,
         "avg_engagement": 28.33,
@@ -550,6 +544,15 @@
         "total_likes": 2,
         "total_replies": 0,
         "_score": 67.9998
+      },
+      {
+        "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+        "count": 2,
+        "avg_engagement": 4.46,
+        "avg_views": 60.0,
+        "total_likes": 4,
+        "total_replies": 2,
+        "_score": 62.676
       },
       {
         "pattern": "自由型_仕事運注意喚起",
@@ -628,8 +631,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 25,
-        "avg_engagement": 13.15
+        "count": 26,
+        "avg_engagement": 12.73
       },
       {
         "feature": "has_fear_hook",
@@ -726,7 +729,9 @@
         "_score": 894.9685000000001
       }
     ],
-    "auto_avoid_patterns": [],
+    "auto_avoid_patterns": [
+      "【avg_views:60・ER:4.5%・2件】構造F_告白・暴露型②（実は〜という真実を伝えます）"
+    ],
     "hourly_data": {
       "0": {
         "slot": "深夜（22〜0時台）",
@@ -736,9 +741,9 @@
       },
       "7": {
         "slot": "朝（6〜9時台）",
-        "avg_eng": 13.78,
-        "avg_views": 169.0,
-        "count": 7
+        "avg_eng": 12.33,
+        "avg_views": 153.0,
+        "count": 8
       },
       "9": {
         "slot": "朝（6〜9時台）",
@@ -860,12 +865,13 @@
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
       "絵文字CTAあり → avg eng 17.5%",
-      "数字フックあり → avg eng 13.2%",
-      "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
+      "数字フックあり → avg eng 12.7%",
+      "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
+      "自動検出・低パフォーマンスパターン: 1件"
     ]
   },
-  "data_count": 67,
-  "last_analyzed": "2026-04-08T08:08:46.920145+09:00",
+  "data_count": 68,
+  "last_analyzed": "2026-04-08T09:01:03.953921+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1085,15 +1091,6 @@
       "_score": 88.998
     },
     {
-      "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
-      "count": 1,
-      "avg_engagement": 6.76,
-      "avg_views": 74.0,
-      "total_likes": 3,
-      "total_replies": 2,
-      "_score": 79.00240000000001
-    },
-    {
       "pattern": "ランキング型（推定）",
       "count": 1,
       "avg_engagement": 28.33,
@@ -1119,6 +1116,15 @@
       "total_likes": 2,
       "total_replies": 0,
       "_score": 67.9998
+    },
+    {
+      "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "count": 2,
+      "avg_engagement": 4.46,
+      "avg_views": 60.0,
+      "total_likes": 4,
+      "total_replies": 2,
+      "_score": 62.676
     },
     {
       "pattern": "自由型_仕事運注意喚起",
@@ -1197,8 +1203,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 25,
-      "avg_engagement": 13.15
+      "count": 26,
+      "avg_engagement": 12.73
     },
     {
       "feature": "has_fear_hook",
@@ -1277,9 +1283,9 @@
     },
     "7": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 13.78,
-      "avg_views": 169.0,
-      "count": 7
+      "avg_eng": 12.33,
+      "avg_views": 153.0,
+      "count": 8
     },
     "9": {
       "slot": "朝（6〜9時台）",
