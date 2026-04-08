@@ -1767,7 +1767,85 @@
         "hook_length": 11
       },
       "collected_at": "2026-04-08T09:00:58.604363+09:00"
+    },
+    {
+      "id": "post_20260408_0900_exp_007",
+      "platform_post_id": "17952516507108598",
+      "posted_at": "2026-04-08T09:12:16.803325+09:00",
+      "pattern_name": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "category": "恋愛運",
+      "content_preview": "実は、4月中旬までに\n動く人が多いんです。\n\n星の配置を見ると、\n牡羊座・獅子座・射手座は\n「やっぱ",
+      "first_line": "実は、4月中旬までに",
+      "char_count": 150,
+      "metrics": {
+        "views": 117,
+        "likes": 11,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 9.4
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 10
+      },
+      "collected_at": "2026-04-08T15:08:42.186295+09:00"
+    },
+    {
+      "id": "verify-retry-20260408104220",
+      "platform_post_id": "18063648737676957",
+      "posted_at": "2026-04-08T10:42:20.768441+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "4月中旬、人間関係で\n予期しない別れが近い星座。\n\nたった2つだけです。\n\n蟹座・魚座は\n金星の角度",
+      "first_line": "4月中旬、人間関係で",
+      "char_count": 170,
+      "metrics": {
+        "views": 626,
+        "likes": 33,
+        "replies": 18,
+        "reposts": 0,
+        "engagement_rate": 8.15
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 10
+      },
+      "collected_at": "2026-04-08T15:08:42.186295+09:00"
+    },
+    {
+      "id": "verify-retry-20260408121221",
+      "platform_post_id": "18192408178319641",
+      "posted_at": "2026-04-08T12:12:21.267029+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "4月中旬以降、\n金銭感覚が変わる星座。\n\nたった2つだけです。\n\n牡牛座・山羊座は\n金星が逆向きにな",
+      "first_line": "4月中旬以降、",
+      "char_count": 146,
+      "metrics": {
+        "views": 190,
+        "likes": 18,
+        "replies": 11,
+        "reposts": 0,
+        "engagement_rate": 15.26
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 7
+      },
+      "collected_at": "2026-04-08T15:08:42.186295+09:00"
     }
   ],
-  "last_updated": "2026-04-08T09:00:58.604363+09:00"
+  "last_updated": "2026-04-08T15:08:42.186295+09:00"
 }
