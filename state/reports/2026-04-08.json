@@ -1,0 +1,28 @@
+{
+  "date": "2026-04-08",
+  "generated_at": "2026-04-09 08:55",
+  "summary": {
+    "posts_total": 8,
+    "posts_measured": 4,
+    "posts_deleted": 4,
+    "total_views": 2179,
+    "avg_views": 544.8,
+    "avg_er": 12.86,
+    "experiment_rate": 100.0
+  },
+  "patterns": {
+    "構造F_告白・暴露型②（実は〜という真実を伝えます）": {
+      "count": 1,
+      "avg_views": 156.0,
+      "avg_er": 7.69
+    },
+    "構造G_注意喚起+限定型": {
+      "count": 3,
+      "avg_views": 674.3,
+      "avg_er": 14.58
+    }
+  },
+  "delete_reasons": [
+    "24h経過・低パフォーマンス"
+  ]
+}
