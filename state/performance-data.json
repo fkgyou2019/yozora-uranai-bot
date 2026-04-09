@@ -2053,7 +2053,33 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-10T00:11:28.656723+09:00"
+    },
+    {
+      "id": "verify-retry-20260410071219",
+      "platform_post_id": "18080202854412022",
+      "posted_at": "2026-04-10T07:12:19.972830+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n仕事で思わぬチャンスが\n舞い込む星座。\n\nたった3つだけです。\n\n牡牛座・乙女座",
+      "first_line": "明日からの3日間、",
+      "char_count": 168,
+      "metrics": {
+        "views": 142,
+        "likes": 15,
+        "replies": 6,
+        "reposts": 0,
+        "engagement_rate": 14.79
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-10T08:26:05.125114+09:00"
     }
   ],
-  "last_updated": "2026-04-10T01:51:58.043080+09:00"
+  "last_updated": "2026-04-10T08:26:05.125114+09:00"
 }
