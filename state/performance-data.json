@@ -2001,7 +2001,59 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-09T17:07:20.795593+09:00"
+    },
+    {
+      "id": "post_20260409_1922_exp_006",
+      "platform_post_id": "18153700807458925",
+      "posted_at": "2026-04-09T20:42:16.679722+09:00",
+      "pattern_name": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "category": "運気・開運",
+      "content_preview": "正直に言います。\n\n今夜、金星が牡羊座に入ります。\nこれは「行動する人」だけが\n恩恵を受ける星の動き",
+      "first_line": "正直に言います。",
+      "char_count": 143,
+      "metrics": {
+        "views": 253,
+        "likes": 10,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 3.95
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-04-10T00:11:28.656723+09:00"
+    },
+    {
+      "id": "verify-retry-20260409214223",
+      "platform_post_id": "18071127317275781",
+      "posted_at": "2026-04-09T21:42:23.763317+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの5日間、\n恋愛で動きが出やすい星座。\n\nたった3つだけです。\n\n蟹座・蠍座・魚座は\n金星と",
+      "first_line": "明日からの5日間、",
+      "char_count": 180,
+      "metrics": {
+        "views": 333,
+        "likes": 45,
+        "replies": 30,
+        "reposts": 0,
+        "engagement_rate": 22.52
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-10T00:11:28.656723+09:00"
     }
   ],
-  "last_updated": "2026-04-09T19:22:12.076806+09:00"
+  "last_updated": "2026-04-10T00:11:28.656723+09:00"
 }
