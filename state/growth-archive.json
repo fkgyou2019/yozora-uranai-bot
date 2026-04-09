@@ -999,5 +999,19 @@
     "completed": true,
     "peak_velocity": 10.5,
     "peak_velocity_hour": 4
+  },
+  "post_20260403_0237_th_003": {
+    "post_id": "post_20260403_0237_th_003",
+    "platform_post_id": "18073730057204524",
+    "threads_url": "",
+    "posted_at": "2026-04-03T07:07:20.260528+09:00",
+    "pattern_name": "構造G_注意喚起+限定型②",
+    "slot_hour": 7,
+    "day_of_week": 4,
+    "day_name": "金",
+    "first_line": "来週、仕事で大きな話が",
+    "content_preview": "来週、仕事で大きな話が\n来やすい星座。\n\nたった2つだけです。\n\n獅子座と天秤座さん。\n\n獅子座は昇進や抜擢の可能性。\n",
+    "hourly": [],
+    "completed": true
   }
 }
