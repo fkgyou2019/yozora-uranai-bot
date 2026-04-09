@@ -827,5 +827,105 @@
     "completed": true,
     "peak_velocity": 5.5,
     "peak_velocity_hour": 4
+  },
+  "post_20260402_1556_exp_005": {
+    "post_id": "post_20260402_1556_exp_005",
+    "platform_post_id": "18158134195449538",
+    "threads_url": "",
+    "posted_at": "2026-04-02T15:56:57.182090+09:00",
+    "pattern_name": "構造F_告白・暴露型（占い師として正直に言います）",
+    "slot_hour": 15,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "正直に言います。今夜から週末にかけて、",
+    "content_preview": "正直に言います。今夜から週末にかけて、\n仕事で『予想外の話』が舞い込む星の配置なんです。\n\n多くの人は焦ってしまうんです",
+    "hourly": [],
+    "completed": true
+  },
+  "post_20260402_1607_th_002": {
+    "post_id": "post_20260402_1607_th_002",
+    "platform_post_id": "18083688824363888",
+    "threads_url": "",
+    "posted_at": "2026-04-02T16:07:45.651634+09:00",
+    "pattern_name": "構造B_ランキング型（金運TOP3）",
+    "slot_hour": 16,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "【金運が急上昇する星座TOP3】",
+    "content_preview": "【金運が急上昇する星座TOP3】\n\n🥉第3位：牡牛座。\n地道な努力が報われる時期です。\n\n🥈第2位：蟹座。\n投資や副業に",
+    "hourly": [],
+    "completed": true
+  },
+  "verify-retry-20260402191221": {
+    "post_id": "verify-retry-20260402191221",
+    "platform_post_id": "18104168587926337",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWoB-ZLkQHv",
+    "posted_at": "2026-04-02T19:12:21.244135+09:00",
+    "pattern_name": "",
+    "slot_hour": 19,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "明日は新月🌑",
+    "content_preview": "明日は新月🌑\n\n何か新しく始めたいことが\nありませんか？\n\n新月は「始まりの日」。\n\n特に牡羊座、蟹座、\n天秤座、山羊座",
+    "hourly": [
+      {
+        "h": 0,
+        "ts": "2026-04-02T19:31:23.383891+09:00",
+        "views": 0,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 1,
+        "ts": "2026-04-02T20:59:56.905009+09:00",
+        "views": 10,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 10.0,
+        "velocity_views_per_hour": 10.0
+      },
+      {
+        "h": 5,
+        "ts": "2026-04-03T00:45:13.160974+09:00",
+        "views": 11,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 9.09,
+        "velocity_views_per_hour": 0.2
+      },
+      {
+        "h": 9,
+        "ts": "2026-04-03T04:37:01.974483+09:00",
+        "views": 12,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 8.33,
+        "velocity_views_per_hour": 0.2
+      },
+      {
+        "h": 11,
+        "ts": "2026-04-03T07:04:36.575541+09:00",
+        "views": 12,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 8.33,
+        "velocity_views_per_hour": 0.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 10.0,
+    "peak_velocity_hour": 1
   }
 }
