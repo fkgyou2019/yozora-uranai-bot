@@ -599,5 +599,233 @@
     "content_preview": "【水曜定番】週の折り返しタロット🔮\n\n今週後半のキーカードを\n1枚引きました。\n\n出たのは「太陽」。\n\nこれは、ここから",
     "hourly": [],
     "completed": true
+  },
+  "verify-retry-20260402091217": {
+    "post_id": "verify-retry-20260402091217",
+    "platform_post_id": "17987088506793188",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWm9Tb3lZhN",
+    "posted_at": "2026-04-02T09:12:17.700725+09:00",
+    "pattern_name": "",
+    "slot_hour": 9,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "最近、恋愛で",
+    "content_preview": "最近、恋愛で\n「正解が分からない」と\n感じていませんか？\n\nそういう時期、実は誰にでもあります。\n\n特に今月は、新月が2",
+    "hourly": [
+      {
+        "h": 10,
+        "ts": "2026-04-02T19:31:23.383891+09:00",
+        "views": 33,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 3.3
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 3.3,
+    "peak_velocity_hour": 10
+  },
+  "post_20260402_0908_th_002": {
+    "post_id": "post_20260402_0908_th_002",
+    "platform_post_id": "18107461456678157",
+    "threads_url": "",
+    "posted_at": "2026-04-02T10:37:19.744788+09:00",
+    "pattern_name": "構造自由_深掘り共感型",
+    "slot_hour": 10,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "4月は「新しい環境への",
+    "content_preview": "4月は「新しい環境への\n適応の月」です。\n\n職場が変わった方、\n新しいプロジェクトが始まった方は\n特にそう感じるかもしれ",
+    "hourly": [],
+    "completed": true
+  },
+  "post_20260402_1037_th_001": {
+    "post_id": "post_20260402_1037_th_001",
+    "platform_post_id": "18455434750105148",
+    "threads_url": "",
+    "posted_at": "2026-04-02T11:37:20.830022+09:00",
+    "pattern_name": "構造D_予告型",
+    "slot_hour": 11,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "来週、12星座の中で",
+    "content_preview": "来週、12星座の中で\n最も運命が動く星座。\n\n蠍座さんです。\n\n恋愛・仕事・金運のどれかで\n大きな転機が訪れやすい時期。",
+    "hourly": [],
+    "completed": true
+  },
+  "post_20260402_1207_th_001": {
+    "post_id": "post_20260402_1207_th_001",
+    "platform_post_id": "17882187453499996",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWnRX5wFJQ8",
+    "posted_at": "2026-04-02T12:07:39.402223+09:00",
+    "pattern_name": "深掘り共感型_春の転機",
+    "slot_hour": 12,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "春の星の動きを見ていて",
+    "content_preview": "春の星の動きを見ていて\n気になることがあります。\n\n4月は「新しい決断の月」。\n\n牡羊座、牡牛座、双子座さんは\n特に環境",
+    "hourly": [
+      {
+        "h": 7,
+        "ts": "2026-04-02T19:31:23.383891+09:00",
+        "views": 31,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 6.45,
+        "velocity_views_per_hour": 4.4
+      },
+      {
+        "h": 8,
+        "ts": "2026-04-02T20:09:09.921050+09:00",
+        "views": 31,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 6.45,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 12,
+        "ts": "2026-04-03T00:45:13.160974+09:00",
+        "views": 32,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 6.25,
+        "velocity_views_per_hour": 0.2
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 4.4,
+    "peak_velocity_hour": 7
+  },
+  "post_20260402_1208_th_001": {
+    "post_id": "post_20260402_1208_th_001",
+    "platform_post_id": "18126742753575670",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWnYNa_lBCS",
+    "posted_at": "2026-04-02T13:07:23.425338+09:00",
+    "pattern_name": "共感×質問型・春の新しい流れ",
+    "slot_hour": 13,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "4月に入って、何か",
+    "content_preview": "4月に入って、何か\n新しい予感を感じていませんか？\n\nそれ、とても正しい感覚です。\n\n新月が新しい始まりをもたらす今、\n",
+    "hourly": [
+      {
+        "h": 6,
+        "ts": "2026-04-02T19:31:23.383891+09:00",
+        "views": 22,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 13.64,
+        "velocity_views_per_hour": 3.7
+      },
+      {
+        "h": 7,
+        "ts": "2026-04-02T20:09:09.921050+09:00",
+        "views": 24,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 12.5,
+        "velocity_views_per_hour": 2.0
+      },
+      {
+        "h": 11,
+        "ts": "2026-04-03T00:45:13.160974+09:00",
+        "views": 26,
+        "likes": 4,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 15.38,
+        "velocity_views_per_hour": 0.5
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 3.7,
+    "peak_velocity_hour": 6
+  },
+  "post_20260402_1507_th_001": {
+    "post_id": "post_20260402_1507_th_001",
+    "platform_post_id": "18095335661083093",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWnl-p8FH5w",
+    "posted_at": "2026-04-02T15:07:43.074257+09:00",
+    "pattern_name": "構造C_天文イベント×質問型（新月パワー）",
+    "slot_hour": 15,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "4月中旬の新月、",
+    "content_preview": "4月中旬の新月、\n何かに「決心」する予定ですか？\n\n新月のパワーは\n「始まりと決断」を応援します。\n\n特に双子座、乙女座",
+    "hourly": [
+      {
+        "h": 4,
+        "ts": "2026-04-02T19:31:23.383891+09:00",
+        "views": 22,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 9.09,
+        "velocity_views_per_hour": 5.5
+      },
+      {
+        "h": 5,
+        "ts": "2026-04-02T20:09:09.921050+09:00",
+        "views": 22,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 9.09,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 9,
+        "ts": "2026-04-03T00:45:13.160974+09:00",
+        "views": 25,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 8.0,
+        "velocity_views_per_hour": 0.8
+      },
+      {
+        "h": 13,
+        "ts": "2026-04-03T04:37:01.974483+09:00",
+        "views": 25,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 8.0,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 15,
+        "ts": "2026-04-03T07:04:36.575541+09:00",
+        "views": 25,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 8.0,
+        "velocity_views_per_hour": 0.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 5.5,
+    "peak_velocity_hour": 4
   }
 }
