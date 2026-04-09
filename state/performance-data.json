@@ -1975,7 +1975,33 @@
         "hook_length": 17
       },
       "collected_at": "2026-04-09T15:09:12.925503+09:00"
+    },
+    {
+      "id": "verify-retry-20260409151218",
+      "platform_post_id": "18080857112386738",
+      "posted_at": "2026-04-09T15:12:18.435190+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n体調の変化に気をつけた方がいい星座。\n\nたった3つだけです。\n\n双子座・天秤座・",
+      "first_line": "明日からの3日間、",
+      "char_count": 180,
+      "metrics": {
+        "views": 118,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.85
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-09T17:07:20.795593+09:00"
     }
   ],
-  "last_updated": "2026-04-09T15:12:31.481773+09:00"
+  "last_updated": "2026-04-09T17:07:20.795593+09:00"
 }
