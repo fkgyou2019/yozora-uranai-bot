@@ -1,7 +1,7 @@
 {
   "date": "2026-04-09",
-  "generated_at": "2026-04-09T08:56:00+09:00",
-  "one_line": "2026-04-09 | 1件投稿 (0件計測済み) | フックOK 0/1件 | 違反: 7時: 21字「今週後半、恋愛で勘違いが生まれやすい星座。」 | 閲覧数取得待ち | 構造G再現性: テスト中（6/10件成功・7件判定待ち） | HC削除: 1件",
+  "generated_at": "2026-04-09T15:09:21+09:00",
+  "one_line": "2026-04-09 | 4件投稿 (4件計測済み) | フックOK 1/4件 | 違反: 7時: 21字「今週後半、恋愛で勘違いが生まれやすい星座。」, 10時: 21字「明日からの仕事運、気をつけた方がいい星座。」, 12時: 17字「今週、恋愛で新しい展開がある星座。」 | 平均v=129.5 | 構造G再現性: テスト中（8/12件成功・8件判定待ち） | HC削除: 2件",
   "posts": [
     {
       "hour": 7,
@@ -10,43 +10,87 @@
       "hook": "今週後半、恋愛で勘違いが生まれやすい星座。",
       "hook_len": 21,
       "hook_ok": false,
-      "views": 0,
+      "views": 49,
       "likes": 0,
       "comments": 0,
       "reposts": 0,
       "er": 0,
-      "measured": false
+      "measured": true
+    },
+    {
+      "hour": 9,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 191,
+      "likes": 21,
+      "comments": 12,
+      "reposts": 0,
+      "er": 17.28,
+      "measured": true
+    },
+    {
+      "hour": 10,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの仕事運、気をつけた方がいい星座。",
+      "hook_len": 21,
+      "hook_ok": false,
+      "views": 89,
+      "likes": 6,
+      "comments": 2,
+      "reposts": 0,
+      "er": 8.99,
+      "measured": true
+    },
+    {
+      "hour": 12,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "今週、恋愛で新しい展開がある星座。",
+      "hook_len": 17,
+      "hook_ok": false,
+      "views": 189,
+      "likes": 24,
+      "comments": 26,
+      "reposts": 0,
+      "er": 26.46,
+      "measured": true
     }
   ],
   "summary": {
-    "total": 1,
-    "measured": 0,
-    "hook_ok": 0,
-    "hook_violations": 1,
+    "total": 4,
+    "measured": 4,
+    "hook_ok": 1,
+    "hook_violations": 3,
     "violations": [
-      "7時: 21字「今週後半、恋愛で勘違いが生まれやすい星座。」"
+      "7時: 21字「今週後半、恋愛で勘違いが生まれやすい星座。」",
+      "10時: 21字「明日からの仕事運、気をつけた方がいい星座。」",
+      "12時: 17字「今週、恋愛で新しい展開がある星座。」"
     ],
-    "total_views": 0,
-    "avg_views": 0,
-    "best_hook": "今週後半、恋愛で勘違いが生まれやすい星座。",
-    "best_views": 0,
-    "best_er": 0
+    "total_views": 518,
+    "avg_views": 129.5,
+    "best_hook": "明日からの3日間、",
+    "best_views": 191,
+    "best_er": 17.28
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 4,
-    "total_posts": 21,
-    "judged_posts": 14,
-    "pending_posts": 7,
-    "measured_posts": 10,
-    "success_posts": 6,
-    "success_rate": 60.0,
+    "total_posts": 24,
+    "judged_posts": 16,
+    "pending_posts": 8,
+    "measured_posts": 12,
+    "success_posts": 8,
+    "success_rate": 66.7,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（6/10件成功・7件判定待ち）"
+    "status": "テスト中（8/12件成功・8件判定待ち）"
   },
   "hc": {
-    "runs": 4,
-    "deleted": 1
+    "runs": 8,
+    "deleted": 2
   }
 }

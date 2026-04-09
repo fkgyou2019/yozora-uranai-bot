@@ -1897,7 +1897,85 @@
         "hook_length": 21
       },
       "collected_at": "2026-04-09T08:55:51.003915+09:00"
+    },
+    {
+      "id": "verify-retry-20260409091220",
+      "platform_post_id": "17943024495011326",
+      "posted_at": "2026-04-09T09:12:20.347061+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n金銭トラブルが起きやすい星座。\n\nたった3つだけです。\n\n牡羊座・獅子座・射手座",
+      "first_line": "明日からの3日間、",
+      "char_count": 150,
+      "metrics": {
+        "views": 191,
+        "likes": 21,
+        "replies": 12,
+        "reposts": 0,
+        "engagement_rate": 17.28
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-09T15:09:12.925503+09:00"
+    },
+    {
+      "id": "verify-retry-20260409104219",
+      "platform_post_id": "17944941462158909",
+      "posted_at": "2026-04-09T10:42:19.574835+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの仕事運、気をつけた方がいい星座。\n\nたった3つだけです。\n\n蟹座・蠍座・魚座は\n水星の位置",
+      "first_line": "明日からの仕事運、気をつけた方がいい星座。",
+      "char_count": 168,
+      "metrics": {
+        "views": 89,
+        "likes": 6,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 8.99
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 21
+      },
+      "collected_at": "2026-04-09T15:09:12.925503+09:00"
+    },
+    {
+      "id": "verify-retry-20260409121219",
+      "platform_post_id": "17919657873325294",
+      "posted_at": "2026-04-09T12:12:19.490997+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "今週、恋愛で新しい展開がある星座。\n\nたった3つだけです。\n\n牡牛座・乙女座・山羊座は\n金星が有利な",
+      "first_line": "今週、恋愛で新しい展開がある星座。",
+      "char_count": 160,
+      "metrics": {
+        "views": 189,
+        "likes": 24,
+        "replies": 26,
+        "reposts": 0,
+        "engagement_rate": 26.46
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 17
+      },
+      "collected_at": "2026-04-09T15:09:12.925503+09:00"
     }
   ],
-  "last_updated": "2026-04-09T08:55:51.003915+09:00"
+  "last_updated": "2026-04-09T15:09:12.925503+09:00"
 }
