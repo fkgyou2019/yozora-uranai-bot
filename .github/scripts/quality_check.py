@@ -269,6 +269,27 @@ def check_post(post):
     return issues
 
 
+def is_format_issue(issue: str) -> bool:
+    """フォーマット系の問題かどうか判定（True=警告のみ・投稿は通す）
+
+    【致命的=拒否】: Bot文句・ペルソナ違反・エンゲベイト・答え出し惜しみ・
+                    1星座限定・禁止パターン・類似重複・URL(X)・時間矛盾
+    【フォーマット=警告のみ】: 行長・行数・文字数・ブロック数・フック長・
+                              絵文字数・ハッシュタグ有無・タグ数
+    """
+    format_keywords = [
+        "文字数",           # 文字数不足/超過
+        "が長すぎ",         # 行の長さ（「行4が長すぎ」「フックが長すぎ」等）
+        "縦長すぎ",         # 総行数超過
+        "ブロック",         # ブロック分割
+        "絵文字多すぎ",     # 絵文字数
+        "ハッシュタグが含まれていない",  # ハッシュタグなし
+        "トピックタグが多すぎ",          # タグ多すぎ
+        "ハッシュタグが多すぎ",          # タグ多すぎ
+    ]
+    return any(kw in issue for kw in format_keywords)
+
+
 def main():
     queue = load_json("state/post-queue.json")
     if not queue:
@@ -356,12 +377,26 @@ def main():
         issues = similarity_issues + issues
 
         if issues:
-            print(f"  ❌ {pid} [{pattern}]")
-            for issue in issues:
-                print(f"     → {issue}")
-            post["status"] = "rejected"
-            post["rejection_reasons"] = issues
-            failed += 1
+            fatal   = [i for i in issues if not is_format_issue(i)]
+            warnings = [i for i in issues if is_format_issue(i)]
+
+            if fatal:
+                # コンテンツ品質違反 → 拒否
+                print(f"  ❌ {pid} [{pattern}]")
+                for i in fatal:
+                    print(f"     → {i}")
+                for w in warnings:
+                    print(f"     ⚠ {w}")
+                post["status"] = "rejected"
+                post["rejection_reasons"] = fatal
+                failed += 1
+            else:
+                # フォーマット警告のみ → 合格（警告を記録して通す）
+                print(f"  ✅ {pid} [{pattern}] (⚠ フォーマット警告{len(warnings)}件)")
+                for w in warnings:
+                    print(f"     ⚠ {w}")
+                post["quality_warnings"] = warnings
+                passed += 1
         else:
             print(f"  ✅ {pid} [{pattern}]")
             passed += 1
