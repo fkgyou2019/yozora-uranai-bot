@@ -1,0 +1,29 @@
+{
+  "date": "2026-04-09",
+  "generated_at": "2026-04-10 08:56",
+  "summary": {
+    "posts_total": 8,
+    "posts_measured": 6,
+    "posts_deleted": 2,
+    "total_views": 1860,
+    "avg_views": 310.0,
+    "avg_er": 13.27,
+    "experiment_rate": 100.0
+  },
+  "patterns": {
+    "構造G_注意喚起+限定型": {
+      "count": 5,
+      "avg_views": 316.8,
+      "avg_er": 15.05
+    },
+    "構造F_告白・暴露型①（占い師として正直に言います）": {
+      "count": 1,
+      "avg_views": 276.0,
+      "avg_er": 4.35
+    }
+  },
+  "delete_reasons": [
+    "24h経過・低パフォーマンス",
+    "views=58だがlikes=0, replies=0"
+  ]
+}
