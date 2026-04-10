@@ -80,6 +80,107 @@
       "quality_warnings": [
         "ハッシュタグが含まれていない[threads]"
       ]
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+      "category": "運気変動",
+      "content": "今週、ガラッと変わる星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけない好機が舞い込みます。迷わず動いてください。\n\n獅子座さんは、人間関係が一気に広がる週。新しい縁が運を連れてきます。\n\n射手座さんは、仕事運が急上昇。これまでの努力が花開く時が来ました。\n\nあなたの星座は入ってましたか？コメントで教えてください🔮",
+      "hashtag": "#今週の占い",
+      "time_slot": "朝（6〜9時台）",
+      "scheduled_hour": 7,
+      "id": "post_20260411_0037_exp_001",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "行4が長すぎ: 34文字「牡羊座さんは、思いがけない好機が舞い込み...」（最大25文字）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+      "category": "星座占い",
+      "content": "今月後半、急上昇する星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけない好機が舞い込みます。躊躇せず動いてください。\n\n獅子座さんは、周囲からの評価が急に変わります。あなたの本当の価値が見える時です。\n\n射手座さんは、新しい縁が次々と広がります。このチャンスを大事にしてくださいね。\n\n🍀を置いた方に、今週中に嬉しい連絡が届きます。\n\n#今月の運勢",
+      "hashtag": "#今月の運勢",
+      "time_slot": "午前（10〜12時台）",
+      "scheduled_hour": 10,
+      "id": "post_20260411_0037_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "行4が長すぎ: 35文字「牡羊座さんは、思いがけない好機が舞い込み...」（最大25文字）[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
+      "category": "星座占い・運勢",
+      "content": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけない好機が飛び込んできます。迷わず行動することが鍵になりますよ。\n\n獅子座さんは、人間関係が大きく動く週。新しいご縁が広がっていきそうです。\n\n射手座さんは、仕事面で嬉しい転機が。今週後半、その流れに乗ることが大切です。\n\n🍀を置いた方に、今週中に嬉しい連絡が届きます。\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "午後（12〜15時台）",
+      "scheduled_hour": 12,
+      "character_count": 212,
+      "hook_length": 13,
+      "id": "post_20260411_0037_exp_004",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "行4が長すぎ: 43文字「牡羊座さんは、思いがけない好機が飛び込ん...」（最大25文字）[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）",
+      "category": "星座運勢",
+      "content": "今週後半、ガラッと変わる星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけない好機が舞い込みます。立ち止まらず前に進んでください。\n\n獅子座さんは、人間関係で嬉しい転機が訪れます。新しい縁が広がる予感です。\n\n射手座さんは、仕事運が急上昇。やってみたかったことが動き始めます。\n\nあなたの星座は入ってましたか？コメントで教えてください🔮\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "午後（13〜15時台）",
+      "scheduled_hour": 15,
+      "id": "post_20260411_0037_exp_005",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "行4が長すぎ: 39文字「牡羊座さんは、思いがけない好機が舞い込み...」（最大25文字）[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "category": "週間運勢",
+      "content": "正直に言います。\n\n今週後半、星の配置が\nかなり急変する星座が\n3つあります。\n\n火星と金星の角度が\n急峻になるせいで、\n予定変更や突発的な\nチャンスが舞い込む\nタイプの変化です。\n\n占い師として見ると、\nこれは避けられない流れ。\nむしろ乗っかった方が\n吉です。\n\n柔軟性を今夜のうちに\n整えておくといいですよ。🔮",
+      "hashtag": "#今週の占い",
+      "time_slot": "夜（19〜21時台）",
+      "scheduled_hour": 19,
+      "id": "post_20260411_0037_exp_006",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "縦長すぎ: 19行（最大16行）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "category": "恋愛運・人間関係",
+      "content": "実は、春の恋愛は\n「焦り」が一番の敵です。\n\n今夜、あなたが\n誰かへの想いを\n急いで伝えたくなったら\n一呼吸置いてください。\n\n金星が示すのは\n「丁寧さの方が\n心を動かす」という真実。\n\n4月後半に向けて\n ゆっくり伝える方が\n確実に実ります。\n\n焦らず、ていねいに。\nそれが春の恋の正解です🌙\n\nあなたはどう感じますか？\nコメントで教えてください🔮",
+      "hashtag": "#恋愛運",
+      "time_slot": "夜（19〜21時台）",
+      "scheduled_hour": 21,
+      "id": "post_20260411_0037_exp_007",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "縦長すぎ: 21行（最大16行）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
     }
   ]
 }
