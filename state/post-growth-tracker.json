@@ -1806,20 +1806,6 @@
       "peak_velocity": 46.7,
       "peak_velocity_hour": 3
     },
-    "verify-retry-20260403204218": {
-      "post_id": "verify-retry-20260403204218",
-      "platform_post_id": "17929197558248634",
-      "threads_url": "",
-      "posted_at": "2026-04-03T20:42:18.467316+09:00",
-      "pattern_name": "",
-      "slot_hour": 20,
-      "day_of_week": 4,
-      "day_name": "金",
-      "first_line": "4月中旬、突然の",
-      "content_preview": "4月中旬、突然の\nお金が入る星座。\n\nたった3つだけです。\n\n獅子座は\n予想外の臨時収入が\n舞い込む時期。✨\n\n山羊座は",
-      "hourly": [],
-      "completed": true
-    },
     "verify-retry-20260403214217": {
       "post_id": "verify-retry-20260403214217",
       "platform_post_id": "18206202949328127",
@@ -8009,6 +7995,17 @@
           "auto_replies": 0,
           "er": 7.14,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 62,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 168,
+          "likes": 12,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 7.14,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -8180,6 +8177,17 @@
           "auto_replies": 0,
           "er": 7.35,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 60,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 1745,
+          "likes": 76,
+          "replies": 52,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 7.34,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -8344,6 +8352,17 @@
         {
           "h": 55,
           "ts": "2026-04-10T19:17:24.115692+09:00",
+          "views": 325,
+          "likes": 27,
+          "replies": 15,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.92,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 59,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
           "views": 325,
           "likes": 27,
           "replies": 15,
@@ -8526,6 +8545,17 @@
           "auto_replies": 0,
           "er": 18.0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 52,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 50,
+          "likes": 5,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 18.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -8701,6 +8731,17 @@
           "auto_replies": 0,
           "er": 25.09,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 38,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 291,
+          "likes": 37,
+          "replies": 36,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 25.09,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -8799,6 +8840,17 @@
         {
           "h": 32,
           "ts": "2026-04-10T19:17:24.115692+09:00",
+          "views": 111,
+          "likes": 6,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 7.21,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 36,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
           "views": 111,
           "likes": 6,
           "replies": 2,
@@ -8911,6 +8963,17 @@
           "auto_replies": 0,
           "er": 22.0,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 35,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 546,
+          "likes": 58,
+          "replies": 61,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 21.79,
+          "velocity_views_per_hour": 1.2
         }
       ],
       "completed": false,
@@ -9005,6 +9068,17 @@
           "auto_replies": 0,
           "er": 1.31,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 32,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 153,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.31,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -9103,6 +9177,17 @@
           "auto_replies": 0,
           "er": 4.64,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 26,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 280,
+          "likes": 13,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.64,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -9186,6 +9271,17 @@
           "auto_replies": 0,
           "er": 19.27,
           "velocity_views_per_hour": 2.5
+        },
+        {
+          "h": 25,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 567,
+          "likes": 63,
+          "replies": 52,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.28,
+          "velocity_views_per_hour": 4.2
         }
       ],
       "completed": false,
@@ -9247,6 +9343,17 @@
           "auto_replies": 0,
           "er": 13.86,
           "velocity_views_per_hour": 3.8
+        },
+        {
+          "h": 16,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 205,
+          "likes": 19,
+          "replies": 10,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.15,
+          "velocity_views_per_hour": 0.8
         }
       ],
       "completed": false,
@@ -9285,6 +9392,17 @@
           "reposts": 0,
           "auto_replies": 0,
           "er": 30.5,
+          "velocity_views_per_hour": 2.8
+        },
+        {
+          "h": 14,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 152,
+          "likes": 30,
+          "replies": 14,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 28.95,
           "velocity_views_per_hour": 2.8
         }
       ],
@@ -9325,6 +9443,17 @@
           "auto_replies": 0,
           "er": 25.4,
           "velocity_views_per_hour": 1.5
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 66,
+          "likes": 16,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 27.27,
+          "velocity_views_per_hour": 0.8
         }
       ],
       "completed": false,
@@ -9363,6 +9492,17 @@
           "reposts": 0,
           "auto_replies": 0,
           "er": 2.96,
+          "velocity_views_per_hour": 1.5
+        },
+        {
+          "h": 11,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 209,
+          "likes": 6,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.83,
           "velocity_views_per_hour": 1.5
         }
       ],
@@ -9403,6 +9543,17 @@
           "auto_replies": 0,
           "er": 34.48,
           "velocity_views_per_hour": 7.2
+        },
+        {
+          "h": 8,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 29,
+          "likes": 6,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 34.48,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -9431,12 +9582,79 @@
           "auto_replies": 0,
           "er": 0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 4,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 87,
+          "likes": 14,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 16.09,
+          "velocity_views_per_hour": 21.8
         }
       ],
       "completed": false,
-      "peak_velocity": 0.0,
-      "peak_velocity_hour": 0
+      "peak_velocity": 21.8,
+      "peak_velocity_hour": 4
+    },
+    "post_20260410_1522_exp_002": {
+      "post_id": "post_20260410_1522_exp_002",
+      "platform_post_id": "17908396959392026",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DW8yn_KkWOg",
+      "posted_at": "2026-04-10T20:42:14.912294+09:00",
+      "pattern_name": "構造G_注意喚起+限定型②（今週急変する・朝向け）",
+      "slot_hour": 20,
+      "day_of_week": 4,
+      "day_name": "金",
+      "first_line": "今週、ガラッと変わる星座。",
+      "content_preview": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけない好機が舞い込み",
+      "hourly": [
+        {
+          "h": 2,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 154,
+          "likes": 23,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 17.53,
+          "velocity_views_per_hour": 77.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 77.0,
+      "peak_velocity_hour": 2
+    },
+    "post_20260410_2107_exp_001": {
+      "post_id": "post_20260410_2107_exp_001",
+      "platform_post_id": "18086762426014003",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DW85fnQiWyA",
+      "posted_at": "2026-04-10T21:42:16.095550+09:00",
+      "pattern_name": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+      "slot_hour": 21,
+      "day_of_week": 4,
+      "day_name": "金",
+      "first_line": "今週、ガラッと変わる星座。",
+      "content_preview": "今週、ガラッと変わる星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、予想外のチャンスが舞い込みま",
+      "hourly": [
+        {
+          "h": 1,
+          "ts": "2026-04-10T23:21:29.495835+09:00",
+          "views": 67,
+          "likes": 11,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 16.42,
+          "velocity_views_per_hour": 67.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 67.0,
+      "peak_velocity_hour": 1
     }
   },
-  "last_updated": "2026-04-10T19:17:24.115692+09:00"
+  "last_updated": "2026-04-10T23:21:29.495835+09:00"
 }
