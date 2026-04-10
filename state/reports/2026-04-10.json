@@ -1,0 +1,41 @@
+{
+  "date": "2026-04-10",
+  "generated_at": "2026-04-11 08:54",
+  "summary": {
+    "posts_total": 8,
+    "posts_measured": 8,
+    "posts_deleted": 0,
+    "total_views": 1041,
+    "avg_views": 130.1,
+    "avg_er": 19.47,
+    "experiment_rate": 100.0
+  },
+  "patterns": {
+    "構造G_注意喚起+限定型": {
+      "count": 1,
+      "avg_views": 206.0,
+      "avg_er": 14.08
+    },
+    "構造G_注意喚起+限定型①（今日・今週急に動く星座）": {
+      "count": 3,
+      "avg_views": 114.0,
+      "avg_er": 19.31
+    },
+    "構造G_注意喚起+限定型②（今週急変する・朝向け）": {
+      "count": 2,
+      "avg_views": 124.0,
+      "avg_er": 22.27
+    },
+    "構造G_注意喚起+限定型③（今月・今週後半急上昇）": {
+      "count": 1,
+      "avg_views": 214.0,
+      "avg_er": 3.74
+    },
+    "構造G_注意喚起+限定型④（今日・今週大きく動く）": {
+      "count": 1,
+      "avg_views": 31.0,
+      "avg_er": 35.48
+    }
+  },
+  "delete_reasons": []
+}
