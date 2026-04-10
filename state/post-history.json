@@ -2408,6 +2408,25 @@
       "posted_at": "2026-04-10T09:12:18.258672+09:00",
       "platform_post_id": "17977240856844511",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型②（今週急変する・朝向け）",
+      "category": "今週の運勢",
+      "content": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけない好機が舞い込みます。動きの早さが運を引き寄せます。\n\n獅子座さんは、人間関係に嬉しい転機が。周囲からの信頼が一気に高まる週です。\n\n射手座さんは、金運が上昇気流に。新しいチャンスの扉が開きやすくなっています。\n\nあなたの星座は入ってましたか？コメントで教えてください🔮\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "朝（6〜9時台）",
+      "scheduled_hour": 9,
+      "id": "post_20260410_0858_exp_002",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "行4が長すぎ: 38文字「牡羊座さんは、思いがけない好機が舞い込み...」（最大25文字）[threads]"
+      ],
+      "posted_at": "2026-04-10T10:42:20.136347+09:00",
+      "platform_post_id": "18580610227019825",
+      "source": "post-verify"
     }
   ]
 }
