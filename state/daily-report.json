@@ -1,7 +1,7 @@
 {
   "date": "2026-04-10",
-  "generated_at": "2026-04-10T17:12:08+09:00",
-  "one_line": "2026-04-10 | 5件投稿 (4件計測済み) | フックOK 5/5件 | 平均v=142.8 | 構造G再現性: テスト中（10/18件成功・7件判定待ち）",
+  "generated_at": "2026-04-10T19:15:34+09:00",
+  "one_line": "2026-04-10 | 6件投稿 (4件計測済み) | フックOK 6/6件 | 平均v=142.8 | 構造G再現性: テスト中（10/18件成功・7件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -72,12 +72,26 @@
       "reposts": 0,
       "er": 0,
       "measured": false
+    },
+    {
+      "hour": 19,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+      "hook": "今週、ガラッと変わる星座。",
+      "hook_len": 13,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
     }
   ],
   "summary": {
-    "total": 5,
+    "total": 6,
     "measured": 4,
-    "hook_ok": 5,
+    "hook_ok": 6,
     "hook_violations": 0,
     "violations": [],
     "total_views": 571,
@@ -90,8 +104,8 @@
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 5,
-    "total_posts": 32,
-    "judged_posts": 25,
+    "total_posts": 33,
+    "judged_posts": 26,
     "pending_posts": 7,
     "measured_posts": 18,
     "success_posts": 10,
@@ -100,7 +114,7 @@
     "status": "テスト中（10/18件成功・7件判定待ち）"
   },
   "hc": {
-    "runs": 10,
+    "runs": 12,
     "deleted": 0
   }
 }
