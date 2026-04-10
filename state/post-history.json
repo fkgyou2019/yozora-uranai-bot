@@ -2523,6 +2523,25 @@
       "posted_at": "2026-04-10T21:42:16.095550+09:00",
       "platform_post_id": "18086762426014003",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型②（今週急変する・朝向け）",
+      "category": "今週の運勢",
+      "content": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、ここからの動きが加速します。迷っていたことが決まる暗示。\n\n獅子座さんは、嬉しい転機が訪れます。人間関係が一変するかも。\n\n射手座さんは、好機が来ます。準備してきたことが花開く週になりそう。\n\nあなたの星座は入ってましたか？コメントで教えてください🔮\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "朝（6〜9時台）",
+      "scheduled_hour": 9,
+      "id": "post_20260410_2107_exp_002",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "行4が長すぎ: 35文字「牡羊座さんは、ここからの動きが加速します...」（最大25文字）[threads]"
+      ],
+      "posted_at": "2026-04-11T07:12:17.156990+09:00",
+      "platform_post_id": "18092736902168131",
+      "source": "post-verify"
     }
   ]
 }
