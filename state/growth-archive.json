@@ -1186,5 +1186,66 @@
     "content_preview": "4月中旬、突然の\nお金が入る星座。\n\nたった3つだけです。\n\n獅子座は\n予想外の臨時収入が\n舞い込む時期。✨\n\n山羊座は",
     "hourly": [],
     "completed": true
+  },
+  "post_20260403_2237_th_003": {
+    "post_id": "post_20260403_2237_th_003",
+    "platform_post_id": "17903305314403239",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWrOO0hEUPU",
+    "posted_at": "2026-04-04T00:57:08.785326+09:00",
+    "pattern_name": "予告型（構造D）",
+    "slot_hour": 0,
+    "day_of_week": 5,
+    "day_name": "土",
+    "first_line": "来週、12星座の中で",
+    "content_preview": "来週、12星座の中で\n最も運命が動く星座。\n\n蠍座さんです。\n\n恋愛・仕事・金運のどこかで\n大きな波が来る予感がします。",
+    "hourly": [
+      {
+        "h": 1,
+        "ts": "2026-04-04T02:06:22.131358+09:00",
+        "views": 5,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 5.0
+      },
+      {
+        "h": 3,
+        "ts": "2026-04-04T04:52:37.101113+09:00",
+        "views": 11,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 3.0
+      },
+      {
+        "h": 6,
+        "ts": "2026-04-04T07:00:11.544501+09:00",
+        "views": 15,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 1.3
+      },
+      {
+        "h": 8,
+        "ts": "2026-04-04T08:58:18.383536+09:00",
+        "views": 16,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 0.5
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 5.0,
+    "peak_velocity_hour": 1
   }
 }
