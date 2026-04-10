@@ -1144,5 +1144,33 @@
     "content_preview": "今のあなたに引かれるカードを\n1枚選んでください🔮\n\n🌕 月のカード\n⭐ 星のカード  \n🌹 薔薇のカード\n\nコメント欄",
     "hourly": [],
     "completed": true
+  },
+  "verify-retry-20260403191218": {
+    "post_id": "verify-retry-20260403191218",
+    "platform_post_id": "18091393885912989",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWqmxJlFK0C",
+    "posted_at": "2026-04-03T19:12:18.858819+09:00",
+    "pattern_name": "",
+    "slot_hour": 19,
+    "day_of_week": 4,
+    "day_name": "金",
+    "first_line": "4月中旬、恋愛で思わぬ幸運が訪れる星座。",
+    "content_preview": "4月中旬、恋愛で思わぬ幸運が訪れる星座。\n\nたった3つだけです。\n\n牡羊座は\n新しい恋の芽が\n予想外の場所から\n花開く時",
+    "hourly": [
+      {
+        "h": 1,
+        "ts": "2026-04-03T21:03:15.040333+09:00",
+        "views": 5,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 5.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 5.0,
+    "peak_velocity_hour": 1
   }
 }
