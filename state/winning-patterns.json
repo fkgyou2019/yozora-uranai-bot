@@ -238,8 +238,8 @@
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 84,
-    "last_analyzed": "2026-04-10T19:15:34.267722+09:00",
+    "data_count": 85,
+    "last_analyzed": "2026-04-10T21:08:06.923738+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -447,15 +447,6 @@
         "_score": 173.2914
       },
       {
-        "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
-        "count": 1,
-        "avg_engagement": 29.23,
-        "avg_views": 130.0,
-        "total_likes": 26,
-        "total_replies": 12,
-        "_score": 167.999
-      },
-      {
         "pattern": "共感×質問型（推定）",
         "count": 1,
         "avg_engagement": 26.09,
@@ -481,6 +472,15 @@
         "total_likes": 2,
         "total_replies": 0,
         "_score": 140.001
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+        "count": 2,
+        "avg_engagement": 28.08,
+        "avg_views": 91.0,
+        "total_likes": 40,
+        "total_replies": 12,
+        "_score": 116.55279999999999
       },
       {
         "pattern": "構造B_ランキング型_総合運TOP5",
@@ -663,8 +663,8 @@
       },
       {
         "feature": "has_question",
-        "count": 13,
-        "avg_engagement": 11.07
+        "count": 14,
+        "avg_engagement": 12.2
       },
       {
         "feature": "has_fear_hook",
@@ -814,9 +814,9 @@
       },
       "19": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 12.5,
-        "avg_views": 114.0,
-        "count": 5
+        "avg_eng": 14.91,
+        "avg_views": 104.0,
+        "count": 6
       },
       "20": {
         "slot": "夜（19〜21時台）",
@@ -894,8 +894,8 @@
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 84,
-  "last_analyzed": "2026-04-10T19:15:34.267722+09:00",
+  "data_count": 85,
+  "last_analyzed": "2026-04-10T21:08:06.923738+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1061,15 +1061,6 @@
       "_score": 173.2914
     },
     {
-      "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
-      "count": 1,
-      "avg_engagement": 29.23,
-      "avg_views": 130.0,
-      "total_likes": 26,
-      "total_replies": 12,
-      "_score": 167.999
-    },
-    {
       "pattern": "共感×質問型（推定）",
       "count": 1,
       "avg_engagement": 26.09,
@@ -1095,6 +1086,15 @@
       "total_likes": 2,
       "total_replies": 0,
       "_score": 140.001
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+      "count": 2,
+      "avg_engagement": 28.08,
+      "avg_views": 91.0,
+      "total_likes": 40,
+      "total_replies": 12,
+      "_score": 116.55279999999999
     },
     {
       "pattern": "構造B_ランキング型_総合運TOP5",
@@ -1277,8 +1277,8 @@
     },
     {
       "feature": "has_question",
-      "count": 13,
-      "avg_engagement": 11.07
+      "count": 14,
+      "avg_engagement": 12.2
     },
     {
       "feature": "has_fear_hook",
@@ -1400,9 +1400,9 @@
     },
     "19": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 12.5,
-      "avg_views": 114.0,
-      "count": 5
+      "avg_eng": 14.91,
+      "avg_views": 104.0,
+      "count": 6
     },
     "20": {
       "slot": "夜（19〜21時台）",
