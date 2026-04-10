@@ -1,7 +1,7 @@
 {
   "date": "2026-04-10",
-  "generated_at": "2026-04-10T15:22:22+09:00",
-  "one_line": "2026-04-10 | 5件投稿 (4件計測済み) | フックOK 5/5件 | 平均v=135.2 | 構造G再現性: テスト中（10/18件成功・7件判定待ち）",
+  "generated_at": "2026-04-10T16:07:00+09:00",
+  "one_line": "2026-04-10 | 5件投稿 (4件計測済み) | フックOK 5/5件 | 平均v=142.8 | 構造G再現性: テスト中（10/18件成功・7件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "明日からの3日間、",
       "hook_len": 9,
       "hook_ok": true,
-      "views": 157,
-      "likes": 15,
-      "comments": 6,
+      "views": 187,
+      "likes": 18,
+      "comments": 10,
       "reposts": 0,
-      "er": 13.38,
+      "er": 14.97,
       "measured": true
     },
     {
@@ -67,8 +67,8 @@
       "hook_len": 13,
       "hook_ok": true,
       "views": 0,
-      "likes": 0,
-      "comments": 0,
+      "likes": 1,
+      "comments": 2,
       "reposts": 0,
       "er": 0,
       "measured": false
@@ -80,8 +80,8 @@
     "hook_ok": 5,
     "hook_violations": 0,
     "violations": [],
-    "total_views": 541,
-    "avg_views": 135.2,
+    "total_views": 571,
+    "avg_views": 142.8,
     "best_hook": "今月後半、急上昇する星座。",
     "best_views": 197,
     "best_er": 2.54
