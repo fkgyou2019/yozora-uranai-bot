@@ -1,7 +1,7 @@
 {
   "date": "2026-04-11",
-  "generated_at": "2026-04-11T17:04:23+09:00",
-  "one_line": "2026-04-11 | 6件投稿 (5件計測済み) | フックOK 6/6件 | 平均v=44.2 | 構造G再現性: テスト中（13/24件成功・8件判定待ち）",
+  "generated_at": "2026-04-11T20:47:10+09:00",
+  "one_line": "2026-04-11 | 8件投稿 (6件計測済み) | フックOK 8/8件 | 平均v=70.7 | 構造G再現性: テスト中（13/26件成功・8件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "今週、ガラッと変わる星座。",
       "hook_len": 13,
       "hook_ok": true,
-      "views": 37,
+      "views": 40,
       "likes": 8,
       "comments": 0,
       "reposts": 0,
-      "er": 21.62,
+      "er": 20.0,
       "measured": true
     },
     {
@@ -24,11 +24,11 @@
       "hook": "今月、急上昇する星座。",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 59,
-      "likes": 11,
+      "views": 63,
+      "likes": 12,
       "comments": 0,
       "reposts": 0,
-      "er": 18.64,
+      "er": 19.05,
       "measured": true
     },
     {
@@ -38,11 +38,11 @@
       "hook": "今週、ガラッと変わる星座。",
       "hook_len": 13,
       "hook_ok": true,
-      "views": 35,
-      "likes": 8,
+      "views": 42,
+      "likes": 9,
       "comments": 0,
       "reposts": 0,
-      "er": 22.86,
+      "er": 21.43,
       "measured": true
     },
     {
@@ -66,11 +66,11 @@
       "hook": "今週後半、ガラッと変わる星座。",
       "hook_len": 15,
       "hook_ok": true,
-      "views": 8,
-      "likes": 4,
+      "views": 82,
+      "likes": 17,
       "comments": 0,
       "reposts": 0,
-      "er": 50.0,
+      "er": 20.73,
       "measured": true
     },
     {
@@ -80,41 +80,69 @@
       "hook": "今月後半、急上昇する星座。",
       "hook_len": 13,
       "hook_ok": true,
-      "views": 82,
-      "likes": 17,
-      "comments": 12,
+      "views": 122,
+      "likes": 23,
+      "comments": 16,
       "reposts": 0,
-      "er": 35.37,
+      "er": 31.97,
       "measured": true
+    },
+    {
+      "hour": 19,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+      "hook": "今週、ガラッと変わる星座。",
+      "hook_len": 13,
+      "hook_ok": true,
+      "views": 75,
+      "likes": 14,
+      "comments": 0,
+      "reposts": 0,
+      "er": 18.67,
+      "measured": true
+    },
+    {
+      "hour": 20,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+      "hook": "今月、急上昇する星座。",
+      "hook_len": 11,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
     }
   ],
   "summary": {
-    "total": 6,
-    "measured": 5,
-    "hook_ok": 6,
+    "total": 8,
+    "measured": 6,
+    "hook_ok": 8,
     "hook_violations": 0,
     "violations": [],
-    "total_views": 221,
-    "avg_views": 44.2,
+    "total_views": 424,
+    "avg_views": 70.7,
     "best_hook": "今月後半、急上昇する星座。",
-    "best_views": 82,
-    "best_er": 35.37
+    "best_views": 122,
+    "best_er": 31.97
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 6,
-    "total_posts": 40,
-    "judged_posts": 32,
+    "total_posts": 42,
+    "judged_posts": 34,
     "pending_posts": 8,
-    "measured_posts": 24,
+    "measured_posts": 26,
     "success_posts": 13,
-    "success_rate": 54.2,
+    "success_rate": 50.0,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（13/24件成功・8件判定待ち）"
+    "status": "テスト中（13/26件成功・8件判定待ち）"
   },
   "hc": {
-    "runs": 11,
+    "runs": 14,
     "deleted": 0
   }
 }

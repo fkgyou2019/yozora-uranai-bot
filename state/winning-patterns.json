@@ -224,12 +224,12 @@
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
     "絵文字CTAあり → avg eng 17.4%",
-    "質問文あり → avg eng 14.3%",
+    "質問文あり → avg eng 14.5%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 92,
-    "last_analyzed": "2026-04-11T17:04:23.418398+09:00",
+    "data_count": 93,
+    "last_analyzed": "2026-04-11T20:47:10.053374+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -483,12 +483,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
-        "count": 3,
-        "avg_engagement": 23.42,
-        "avg_views": 89.0,
-        "total_likes": 52,
+        "count": 4,
+        "avg_engagement": 22.24,
+        "avg_views": 86.0,
+        "total_likes": 66,
         "total_replies": 12,
-        "_score": 109.8438
+        "_score": 105.12639999999999
       },
       {
         "pattern": "共感×具体アドバイス型",
@@ -657,8 +657,8 @@
       },
       {
         "feature": "has_question",
-        "count": 20,
-        "avg_engagement": 14.28
+        "count": 21,
+        "avg_engagement": 14.49
       },
       {
         "feature": "has_number_hook",
@@ -813,9 +813,9 @@
       },
       "19": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 14.91,
-        "avg_views": 104.0,
-        "count": 6
+        "avg_eng": 15.44,
+        "avg_views": 100.0,
+        "count": 7
       },
       "20": {
         "slot": "夜（19〜21時台）",
@@ -889,12 +889,12 @@
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
       "絵文字CTAあり → avg eng 17.4%",
-      "質問文あり → avg eng 14.3%",
+      "質問文あり → avg eng 14.5%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 92,
-  "last_analyzed": "2026-04-11T17:04:23.418398+09:00",
+  "data_count": 93,
+  "last_analyzed": "2026-04-11T20:47:10.053374+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1106,12 +1106,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
-      "count": 3,
-      "avg_engagement": 23.42,
-      "avg_views": 89.0,
-      "total_likes": 52,
+      "count": 4,
+      "avg_engagement": 22.24,
+      "avg_views": 86.0,
+      "total_likes": 66,
       "total_replies": 12,
-      "_score": 109.8438
+      "_score": 105.12639999999999
     },
     {
       "pattern": "共感×具体アドバイス型",
@@ -1280,8 +1280,8 @@
     },
     {
       "feature": "has_question",
-      "count": 20,
-      "avg_engagement": 14.28
+      "count": 21,
+      "avg_engagement": 14.49
     },
     {
       "feature": "has_number_hook",
@@ -1408,9 +1408,9 @@
     },
     "19": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 14.91,
-      "avg_views": 104.0,
-      "count": 6
+      "avg_eng": 15.44,
+      "avg_views": 100.0,
+      "count": 7
     },
     "20": {
       "slot": "夜（19〜21時台）",

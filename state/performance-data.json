@@ -2391,7 +2391,33 @@
         "hook_length": 13
       },
       "collected_at": "2026-04-11T17:03:21.385412+09:00"
+    },
+    {
+      "id": "post_20260411_1542_exp_001",
+      "platform_post_id": "17934280257209334",
+      "posted_at": "2026-04-11T19:12:13.460377+09:00",
+      "pattern_name": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+      "category": "運勢",
+      "content_preview": "今週、ガラッと変わる星座。\nたった3つだけです。\n\n獅子座、射手座、水瓶座\n\n獅子座さんは、予想外の",
+      "first_line": "今週、ガラッと変わる星座。",
+      "char_count": 178,
+      "metrics": {
+        "views": 75,
+        "likes": 14,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 18.67
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-04-11T20:47:01.277503+09:00"
     }
   ],
-  "last_updated": "2026-04-11T17:03:21.385412+09:00"
+  "last_updated": "2026-04-11T20:47:01.277503+09:00"
 }
