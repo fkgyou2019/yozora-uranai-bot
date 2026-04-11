@@ -1562,5 +1562,33 @@
     "completed": true,
     "peak_velocity": 4.0,
     "peak_velocity_hour": 2
+  },
+  "verify-retry-20260404191217": {
+    "post_id": "verify-retry-20260404191217",
+    "platform_post_id": "18097068269061383",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWtLj6hkcFf",
+    "posted_at": "2026-04-04T19:12:17.902991+09:00",
+    "pattern_name": "",
+    "slot_hour": 19,
+    "day_of_week": 5,
+    "day_name": "土",
+    "first_line": "今月、恋愛に思わぬ転機が来やすい星座。",
+    "content_preview": "今月、恋愛に思わぬ転機が来やすい星座。\n\nたった2つだけです。\n\n▼蟹座\n4月中旬、過去の人物から\n思いがけない連絡が。",
+    "hourly": [
+      {
+        "h": 1,
+        "ts": "2026-04-04T20:49:07.163230+09:00",
+        "views": 2,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 50.0,
+        "velocity_views_per_hour": 2.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 2.0,
+    "peak_velocity_hour": 1
   }
 }
