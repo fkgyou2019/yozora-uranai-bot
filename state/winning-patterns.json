@@ -24,7 +24,7 @@
     },
     {
       "pattern": "注意喚起型・仕事運",
-      "weight": 8,
+      "weight": 7,
       "avg_engagement": 42.14,
       "avg_views": 674.0,
       "sample_count": 1,
@@ -224,12 +224,12 @@
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
     "絵文字CTAあり → avg eng 16.7%",
-    "質問文あり → avg eng 13.9%",
+    "質問文あり → avg eng 14.3%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 90,
-    "last_analyzed": "2026-04-11T14:44:28.738649+09:00",
+    "data_count": 91,
+    "last_analyzed": "2026-04-11T15:42:35.705821+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -250,7 +250,7 @@
       },
       {
         "pattern": "注意喚起型・仕事運",
-        "weight": 8,
+        "weight": 7,
         "avg_engagement": 42.14,
         "avg_views": 674.0,
         "sample_count": 1,
@@ -572,6 +572,15 @@
         "_score": 60.0
       },
       {
+        "pattern": "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）",
+        "count": 1,
+        "avg_engagement": 20.83,
+        "avg_views": 48.0,
+        "total_likes": 10,
+        "total_replies": 0,
+        "_score": 57.9984
+      },
+      {
         "pattern": "構造自由_共感質問型",
         "count": 1,
         "avg_engagement": 1.92,
@@ -648,8 +657,8 @@
       },
       {
         "feature": "has_question",
-        "count": 19,
-        "avg_engagement": 13.94
+        "count": 20,
+        "avg_engagement": 14.28
       },
       {
         "feature": "has_number_hook",
@@ -780,9 +789,9 @@
       },
       "14": {
         "slot": "午後（13〜15時台）",
-        "avg_eng": 20.13,
-        "avg_views": 745.0,
-        "count": 1
+        "avg_eng": 20.48,
+        "avg_views": 396.0,
+        "count": 2
       },
       "15": {
         "slot": "午後（13〜15時台）",
@@ -872,20 +881,20 @@
       }
     },
     "optimal_hours": [
+      14,
       10,
-      21,
-      22
+      21
     ],
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
       "絵文字CTAあり → avg eng 16.7%",
-      "質問文あり → avg eng 13.9%",
+      "質問文あり → avg eng 14.3%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 90,
-  "last_analyzed": "2026-04-11T14:44:28.738649+09:00",
+  "data_count": 91,
+  "last_analyzed": "2026-04-11T15:42:35.705821+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1186,6 +1195,15 @@
       "_score": 60.0
     },
     {
+      "pattern": "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）",
+      "count": 1,
+      "avg_engagement": 20.83,
+      "avg_views": 48.0,
+      "total_likes": 10,
+      "total_replies": 0,
+      "_score": 57.9984
+    },
+    {
       "pattern": "構造自由_共感質問型",
       "count": 1,
       "avg_engagement": 1.92,
@@ -1262,8 +1280,8 @@
     },
     {
       "feature": "has_question",
-      "count": 19,
-      "avg_engagement": 13.94
+      "count": 20,
+      "avg_engagement": 14.28
     },
     {
       "feature": "has_number_hook",
@@ -1366,9 +1384,9 @@
     },
     "14": {
       "slot": "午後（13〜15時台）",
-      "avg_eng": 20.13,
-      "avg_views": 745.0,
-      "count": 1
+      "avg_eng": 20.48,
+      "avg_views": 396.0,
+      "count": 2
     },
     "15": {
       "slot": "午後（13〜15時台）",
@@ -1414,8 +1432,8 @@
     }
   },
   "optimal_hours": [
+    14,
     10,
-    21,
-    22
+    21
   ]
 }
