@@ -2677,6 +2677,25 @@
       "posted_at": "2026-04-11T20:42:14.844553+09:00",
       "platform_post_id": "17947085781134904",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+      "category": "運勢",
+      "content": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけない好機が舞い込みます。迷わず動いてください。\n\n獅子座さんは、人間関係が一気に広がる予感。新しい出会いが運気を変えます。\n\n射手座さんは、仕事や創作で急に評価が上がります。この流れを大切にしてね。\n\nあなたの星座は入ってましたか？コメントで教えてください🔮\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "朝（6〜9時台）",
+      "scheduled_hour": 7,
+      "id": "post_20260411_2047_exp_001",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "行4が長すぎ: 34文字「牡羊座さんは、思いがけない好機が舞い込み...」（最大25文字）[threads]"
+      ],
+      "posted_at": "2026-04-11T21:42:15.445086+09:00",
+      "platform_post_id": "18074487623537819",
+      "source": "post-verify"
     }
   ]
 }
