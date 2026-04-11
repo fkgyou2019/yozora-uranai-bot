@@ -21,7 +21,7 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__
 # PDCA変更(2026-04-11): 19時をF型→H型（よぞら.の声）、21:42をF型→I型（問いかけ）
 # 目的: 構造G×4（閲覧数最大化）+ H×1（キャラクター確立・ストック型）+ F×1（告白型）+ I×1（対話型・双方向関係構築）
 EXPERIMENT_TIME_SLOTS = [
-    {"hour": 8,  "slot": "朝（8〜9時台）",     "structure": "G", "pattern_hint": "注意喚起+限定型①（今日・今週急に動く星座）"},
+    {"hour": 8,  "slot": "朝（8〜9時台）",     "structure": "G", "pattern_hint": "注意喚起+限定型①（日付指定フック必須: 「4/12、急に動く星座。」形式）"},
     {"hour": 10, "slot": "午前（10〜12時台）", "structure": "G", "pattern_hint": "注意喚起+限定型②（今月・今週後半急上昇）"},  # 最強スロット: v=1507実績
     {"hour": 12, "slot": "午後（12〜15時台）", "structure": "G", "pattern_hint": "注意喚起+限定型③（今日・今週大きく動く）"},
     {"hour": 15, "slot": "午後（13〜15時台）", "structure": "G", "pattern_hint": "注意喚起+限定型④（今週後半ガラッと変わる）"},
@@ -647,6 +647,12 @@ def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block
     structure = slot_info["structure"]
     pattern_hint = slot_info["pattern_hint"]
 
+    # 今日の月/日を「4/12」形式で取得（朝スロット用の日付フック）
+    from datetime import datetime as _dt, timezone as _tz, timedelta as _td
+    _jst = _tz(_td(hours=9))
+    _now = _dt.now(_jst)
+    date_label = f"{_now.month}/{_now.day}"  # 例: 「4/12」
+
     return f"""あなたは占いSNSアカウント「よぞら.」のThreads投稿ライターです。
 {hour}時台に投稿する占い投稿を1件だけ生成してください。
 
@@ -654,6 +660,17 @@ def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block
 【投稿時間帯】{slot}（{hour}:07 JST投稿予定）
 【指定パターン】構造{structure}: {pattern_hint}
 【ペルソナ】月詠（つくよみ）: 穏やかで親しみやすい。敬語ベースだが柔らかい。
+{f"""
+【⭐ 朝スロット限定ルール（8時台）】
+フック（1行目）は「今週」「今月」ではなく、必ず「{date_label}」（今日の日付）を使うこと。
+理由: 朝イチの投稿は「今日だけの特別感」が最も響く。「今週」は他のスロットと被る。
+推奨フック例:
+  ・「{date_label}、急に動く星座。」      → ★最推奨（日付×限定）
+  ・「{date_label}、運命が変わる星座。」
+  ・「{date_label}、注目の星座。」
+  ・「{date_label}、ラッキーな星座。」
+※ 15文字以内厳守。日付を使えば自動的に鮮度が生まれ、翌日以降に使い回しにくくなるメリットもあり。
+""" if hour == 8 else ""}
 
 {learning_block}
 
