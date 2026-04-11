@@ -1247,5 +1247,66 @@
     "completed": true,
     "peak_velocity": 5.0,
     "peak_velocity_hour": 1
+  },
+  "post_20260403_2237_th_004": {
+    "post_id": "post_20260403_2237_th_004",
+    "platform_post_id": "18124320751607615",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWr4mEMEkxr",
+    "posted_at": "2026-04-04T07:07:21.761406+09:00",
+    "pattern_name": "週末開運アクション（構造G・金曜定番）",
+    "slot_hour": 7,
+    "day_of_week": 5,
+    "day_name": "土",
+    "first_line": "【金曜定番】週末の開運アクション。",
+    "content_preview": "【金曜定番】週末の開運アクション。\n\n今週末、運を上向きにするなら\nこの3つをやってみてください。\n\n1つ目：新月に願い",
+    "hourly": [
+      {
+        "h": 1,
+        "ts": "2026-04-04T08:58:18.383536+09:00",
+        "views": 22,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 22.0
+      },
+      {
+        "h": 7,
+        "ts": "2026-04-04T14:35:29.390592+09:00",
+        "views": 25,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 0.5
+      },
+      {
+        "h": 9,
+        "ts": "2026-04-04T17:05:29.259811+09:00",
+        "views": 27,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 1.0
+      },
+      {
+        "h": 11,
+        "ts": "2026-04-04T19:03:22.348673+09:00",
+        "views": 27,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 0.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 22.0,
+    "peak_velocity_hour": 1
   }
 }
