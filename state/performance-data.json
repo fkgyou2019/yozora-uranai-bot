@@ -2261,7 +2261,85 @@
         "hook_length": 13
       },
       "collected_at": "2026-04-11T00:37:25.125318+09:00"
+    },
+    {
+      "id": "post_20260410_2107_exp_002",
+      "platform_post_id": "18092736902168131",
+      "posted_at": "2026-04-11T07:12:17.156990+09:00",
+      "pattern_name": "構造G_注意喚起+限定型②（今週急変する・朝向け）",
+      "category": "今週の運勢",
+      "content_preview": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、ここか",
+      "first_line": "今週、ガラッと変わる星座。",
+      "char_count": 180,
+      "metrics": {
+        "views": 37,
+        "likes": 8,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 21.62
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-04-11T14:14:57.542445+09:00"
+    },
+    {
+      "id": "post_20260410_2107_exp_003",
+      "platform_post_id": "18389562640087018",
+      "posted_at": "2026-04-11T09:12:14.771254+09:00",
+      "pattern_name": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+      "category": "星座運勢",
+      "content_preview": "今月、急上昇する星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、仕事で思わぬ",
+      "first_line": "今月、急上昇する星座。",
+      "char_count": 171,
+      "metrics": {
+        "views": 59,
+        "likes": 11,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 18.64
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-04-11T14:14:57.542445+09:00"
+    },
+    {
+      "id": "post_20260410_2107_exp_004",
+      "platform_post_id": "17881753044520266",
+      "posted_at": "2026-04-11T10:42:15.913850+09:00",
+      "pattern_name": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
+      "category": "運勢・開運",
+      "content_preview": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、週半ば",
+      "first_line": "今週、ガラッと変わる星座。",
+      "char_count": 175,
+      "metrics": {
+        "views": 35,
+        "likes": 8,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 22.86
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-04-11T14:14:57.542445+09:00"
     }
   ],
-  "last_updated": "2026-04-11T08:02:56.181067+09:00"
+  "last_updated": "2026-04-11T14:14:57.542445+09:00"
 }
