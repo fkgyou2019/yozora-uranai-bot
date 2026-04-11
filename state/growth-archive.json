@@ -1308,5 +1308,259 @@
     "completed": true,
     "peak_velocity": 22.0,
     "peak_velocity_hour": 1
+  },
+  "verify-retry-20260404091215": {
+    "post_id": "verify-retry-20260404091215",
+    "platform_post_id": "18001288982913369",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWsG5LSAFtL",
+    "posted_at": "2026-04-04T09:12:15.392364+09:00",
+    "pattern_name": "",
+    "slot_hour": 9,
+    "day_of_week": 5,
+    "day_name": "土",
+    "first_line": "今週、本音が出やすい星座。",
+    "content_preview": "今週、本音が出やすい星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座さん。\n\n牡羊座は相手に思いを伝えやすい週。",
+    "hourly": [
+      {
+        "h": 5,
+        "ts": "2026-04-04T14:35:29.390592+09:00",
+        "views": 23,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 13.04,
+        "velocity_views_per_hour": 4.6
+      },
+      {
+        "h": 7,
+        "ts": "2026-04-04T17:05:29.259811+09:00",
+        "views": 25,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 12.0,
+        "velocity_views_per_hour": 1.0
+      },
+      {
+        "h": 9,
+        "ts": "2026-04-04T19:03:22.348673+09:00",
+        "views": 25,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 12.0,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 11,
+        "ts": "2026-04-04T20:49:07.163230+09:00",
+        "views": 25,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 12.0,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 13,
+        "ts": "2026-04-04T23:07:26.105615+09:00",
+        "views": 27,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 11.11,
+        "velocity_views_per_hour": 1.0
+      },
+      {
+        "h": 15,
+        "ts": "2026-04-05T00:54:20.355476+09:00",
+        "views": 27,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 11.11,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 17,
+        "ts": "2026-04-05T02:57:23.269324+09:00",
+        "views": 27,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 11.11,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 19,
+        "ts": "2026-04-05T04:51:36.904948+09:00",
+        "views": 27,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 11.11,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 21,
+        "ts": "2026-04-05T06:54:00.245969+09:00",
+        "views": 27,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 11.11,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 23,
+        "ts": "2026-04-05T08:55:32.402037+09:00",
+        "views": 28,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 10.71,
+        "velocity_views_per_hour": 0.5
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 4.6,
+    "peak_velocity_hour": 5
+  },
+  "verify-retry-20260404121214": {
+    "post_id": "verify-retry-20260404121214",
+    "platform_post_id": "17946462765141888",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DWsbfXrgIkr",
+    "posted_at": "2026-04-04T12:12:14.068866+09:00",
+    "pattern_name": "",
+    "slot_hour": 12,
+    "day_of_week": 5,
+    "day_name": "土",
+    "first_line": "今週後半、仕事で気をつけた方がいい星座。",
+    "content_preview": "今週後半、仕事で気をつけた方がいい星座。\nたった3つだけです。\n\n▼牡羊座\n午後からの会議で、勢いで決めてしまわないこと",
+    "hourly": [
+      {
+        "h": 2,
+        "ts": "2026-04-04T14:35:29.390592+09:00",
+        "views": 8,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 12.5,
+        "velocity_views_per_hour": 4.0
+      },
+      {
+        "h": 4,
+        "ts": "2026-04-04T17:05:29.259811+09:00",
+        "views": 12,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 8.33,
+        "velocity_views_per_hour": 2.0
+      },
+      {
+        "h": 6,
+        "ts": "2026-04-04T19:03:22.348673+09:00",
+        "views": 13,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 15.38,
+        "velocity_views_per_hour": 0.5
+      },
+      {
+        "h": 8,
+        "ts": "2026-04-04T20:49:07.163230+09:00",
+        "views": 13,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 15.38,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 10,
+        "ts": "2026-04-04T23:07:26.105615+09:00",
+        "views": 13,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 15.38,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 12,
+        "ts": "2026-04-05T00:54:20.355476+09:00",
+        "views": 14,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 14.29,
+        "velocity_views_per_hour": 0.5
+      },
+      {
+        "h": 14,
+        "ts": "2026-04-05T02:57:23.269324+09:00",
+        "views": 14,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 14.29,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 16,
+        "ts": "2026-04-05T04:51:36.904948+09:00",
+        "views": 14,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 14.29,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 18,
+        "ts": "2026-04-05T06:54:00.245969+09:00",
+        "views": 14,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 14.29,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 20,
+        "ts": "2026-04-05T08:55:32.402037+09:00",
+        "views": 16,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 12.5,
+        "velocity_views_per_hour": 1.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 4.0,
+    "peak_velocity_hour": 2
   }
 }
