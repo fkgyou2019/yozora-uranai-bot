@@ -223,13 +223,13 @@
   "insights": [
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
-    "絵文字CTAあり → avg eng 16.7%",
+    "絵文字CTAあり → avg eng 17.4%",
     "質問文あり → avg eng 14.3%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
   ],
   "auto_analysis": {
-    "data_count": 91,
-    "last_analyzed": "2026-04-11T15:42:35.705821+09:00",
+    "data_count": 92,
+    "last_analyzed": "2026-04-11T17:04:23.418398+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -437,15 +437,6 @@
         "_score": 145.0035
       },
       {
-        "pattern": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
-        "count": 2,
-        "avg_engagement": 10.59,
-        "avg_views": 128.0,
-        "total_likes": 16,
-        "total_replies": 0,
-        "_score": 141.5552
-      },
-      {
         "pattern": "構造F_告白・暴露型②（実は〜という真actual真実を伝えます）",
         "count": 1,
         "avg_engagement": 0.71,
@@ -462,6 +453,15 @@
         "total_likes": 2,
         "total_replies": 0,
         "_score": 140.001
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+        "count": 3,
+        "avg_engagement": 18.85,
+        "avg_views": 113.0,
+        "total_likes": 33,
+        "total_replies": 12,
+        "_score": 134.3005
       },
       {
         "pattern": "構造B_ランキング型_総合運TOP5",
@@ -652,8 +652,8 @@
       },
       {
         "feature": "has_cta_emoji",
-        "count": 29,
-        "avg_engagement": 16.72
+        "count": 30,
+        "avg_engagement": 17.35
       },
       {
         "feature": "has_question",
@@ -795,9 +795,9 @@
       },
       "15": {
         "slot": "午後（13〜15時台）",
-        "avg_eng": 11.06,
-        "avg_views": 132.0,
-        "count": 11
+        "avg_eng": 13.09,
+        "avg_views": 128.0,
+        "count": 12
       },
       "17": {
         "slot": "夕方（16〜18時台）",
@@ -888,13 +888,13 @@
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
-      "絵文字CTAあり → avg eng 16.7%",
+      "絵文字CTAあり → avg eng 17.4%",
       "質問文あり → avg eng 14.3%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）"
     ]
   },
-  "data_count": 91,
-  "last_analyzed": "2026-04-11T15:42:35.705821+09:00",
+  "data_count": 92,
+  "last_analyzed": "2026-04-11T17:04:23.418398+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1060,15 +1060,6 @@
       "_score": 145.0035
     },
     {
-      "pattern": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
-      "count": 2,
-      "avg_engagement": 10.59,
-      "avg_views": 128.0,
-      "total_likes": 16,
-      "total_replies": 0,
-      "_score": 141.5552
-    },
-    {
       "pattern": "構造F_告白・暴露型②（実は〜という真actual真実を伝えます）",
       "count": 1,
       "avg_engagement": 0.71,
@@ -1085,6 +1076,15 @@
       "total_likes": 2,
       "total_replies": 0,
       "_score": 140.001
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+      "count": 3,
+      "avg_engagement": 18.85,
+      "avg_views": 113.0,
+      "total_likes": 33,
+      "total_replies": 12,
+      "_score": 134.3005
     },
     {
       "pattern": "構造B_ランキング型_総合運TOP5",
@@ -1275,8 +1275,8 @@
     },
     {
       "feature": "has_cta_emoji",
-      "count": 29,
-      "avg_engagement": 16.72
+      "count": 30,
+      "avg_engagement": 17.35
     },
     {
       "feature": "has_question",
@@ -1390,9 +1390,9 @@
     },
     "15": {
       "slot": "午後（13〜15時台）",
-      "avg_eng": 11.06,
-      "avg_views": 132.0,
-      "count": 11
+      "avg_eng": 13.09,
+      "avg_views": 128.0,
+      "count": 12
     },
     "17": {
       "slot": "夕方（16〜18時台）",

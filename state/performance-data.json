@@ -2365,7 +2365,33 @@
         "hook_length": 15
       },
       "collected_at": "2026-04-11T15:42:25.885692+09:00"
+    },
+    {
+      "id": "post_20260411_0037_exp_003",
+      "platform_post_id": "18431907898184059",
+      "posted_at": "2026-04-11T15:12:15.974701+09:00",
+      "pattern_name": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+      "category": "星座占い",
+      "content_preview": "今月後半、急上昇する星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけ",
+      "first_line": "今月後半、急上昇する星座。",
+      "char_count": 190,
+      "metrics": {
+        "views": 82,
+        "likes": 17,
+        "replies": 12,
+        "reposts": 0,
+        "engagement_rate": 35.37
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-04-11T17:03:21.385412+09:00"
     }
   ],
-  "last_updated": "2026-04-11T15:42:25.885692+09:00"
+  "last_updated": "2026-04-11T17:03:21.385412+09:00"
 }
