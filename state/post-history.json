@@ -2561,6 +2561,25 @@
       "posted_at": "2026-04-11T09:12:14.771254+09:00",
       "platform_post_id": "18389562640087018",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
+      "category": "運勢・開運",
+      "content": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、週半ばから思いがけない好機が。チャンスを逃さないでね。\n\n獅子座さんは、人間関係が大きく動く予感。嬉しい転機が訪れそうです。\n\n射手座さんは、仕事運が急上昇。新しい扉が開きますよ。\n\nあなたの星座は入ってましたか？コメントで教えてください🔮\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "午後（12〜15時台）",
+      "scheduled_hour": 12,
+      "id": "post_20260410_2107_exp_004",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "行4が長すぎ: 34文字「牡羊座さんは、週半ばから思いがけない好機...」（最大25文字）[threads]"
+      ],
+      "posted_at": "2026-04-11T10:42:15.913850+09:00",
+      "platform_post_id": "17881753044520266",
+      "source": "post-verify"
     }
   ]
 }
