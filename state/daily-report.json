@@ -1,7 +1,7 @@
 {
   "date": "2026-04-12",
-  "generated_at": "2026-04-12T17:33:34+09:00",
-  "one_line": "2026-04-12 | 6件投稿 (3件計測済み) | フックOK 6/6件 | 平均v=22.0 | 構造G再現性: テスト中（13/32件成功・7件判定待ち）",
+  "generated_at": "2026-04-12T20:51:51+09:00",
+  "one_line": "2026-04-12 | 8件投稿 (6件計測済み) | フックOK 7/8件 | 違反: 19時: 22字「実は、今夜の月が教えてくれることがあります。」 | 平均v=48.5 | 構造G再現性: テスト中（13/34件成功・6件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "今週、ガラッと変わる星座。",
       "hook_len": 13,
       "hook_ok": true,
-      "views": 37,
-      "likes": 9,
+      "views": 46,
+      "likes": 11,
       "comments": 2,
       "reposts": 0,
-      "er": 29.73,
+      "er": 28.26,
       "measured": true
     },
     {
@@ -24,11 +24,11 @@
       "hook": "今月、急上昇する星座。",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 13,
+      "views": 17,
       "likes": 3,
       "comments": 2,
       "reposts": 0,
-      "er": 38.46,
+      "er": 29.41,
       "measured": true
     },
     {
@@ -52,11 +52,11 @@
       "hook": "4/12、ガラッと変わる星座。",
       "hook_len": 15,
       "hook_ok": true,
-      "views": 16,
-      "likes": 5,
-      "comments": 4,
+      "views": 23,
+      "likes": 6,
+      "comments": 5,
       "reposts": 0,
-      "er": 56.25,
+      "er": 47.83,
       "measured": true
     },
     {
@@ -66,12 +66,12 @@
       "hook": "今夜、ガラッと変わる星座。",
       "hook_len": 13,
       "hook_ok": true,
-      "views": 0,
-      "likes": 0,
-      "comments": 0,
+      "views": 31,
+      "likes": 5,
+      "comments": 5,
       "reposts": 0,
-      "er": 0,
-      "measured": false
+      "er": 32.26,
+      "measured": true
     },
     {
       "hour": 17,
@@ -79,6 +79,34 @@
       "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
       "hook": "正直に言います。",
       "hook_len": 8,
+      "hook_ok": true,
+      "views": 156,
+      "likes": 4,
+      "comments": 0,
+      "reposts": 0,
+      "er": 2.56,
+      "measured": true
+    },
+    {
+      "hour": 19,
+      "struct": "F",
+      "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "hook": "実は、今夜の月が教えてくれることがあります。",
+      "hook_len": 22,
+      "hook_ok": false,
+      "views": 18,
+      "likes": 2,
+      "comments": 0,
+      "reposts": 0,
+      "er": 11.11,
+      "measured": true
+    },
+    {
+      "hour": 20,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型①（日付指定フック必須: 「4/12、急に動く星座。」形式）",
+      "hook": "4/12、急に動く星座。",
+      "hook_len": 12,
       "hook_ok": true,
       "views": 0,
       "likes": 0,
@@ -89,32 +117,34 @@
     }
   ],
   "summary": {
-    "total": 6,
-    "measured": 3,
-    "hook_ok": 6,
-    "hook_violations": 0,
-    "violations": [],
-    "total_views": 66,
-    "avg_views": 22.0,
-    "best_hook": "今週、ガラッと変わる星座。",
-    "best_views": 37,
-    "best_er": 29.73
+    "total": 8,
+    "measured": 6,
+    "hook_ok": 7,
+    "hook_violations": 1,
+    "violations": [
+      "19時: 22字「実は、今夜の月が教えてくれることがあります。」"
+    ],
+    "total_views": 291,
+    "avg_views": 48.5,
+    "best_hook": "正直に言います。",
+    "best_views": 156,
+    "best_er": 2.56
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 7,
-    "total_posts": 47,
-    "judged_posts": 40,
-    "pending_posts": 7,
-    "measured_posts": 32,
+    "total_posts": 48,
+    "judged_posts": 42,
+    "pending_posts": 6,
+    "measured_posts": 34,
     "success_posts": 13,
-    "success_rate": 40.6,
+    "success_rate": 38.2,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（13/32件成功・7件判定待ち）"
+    "status": "テスト中（13/34件成功・6件判定待ち）"
   },
   "hc": {
-    "runs": 11,
+    "runs": 14,
     "deleted": 0
   }
 }

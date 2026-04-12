@@ -2573,7 +2573,59 @@
         "hook_length": 13
       },
       "collected_at": "2026-04-12T16:51:07.118304+09:00"
+    },
+    {
+      "id": "post_20260411_2047_exp_006",
+      "platform_post_id": "17930535708069411",
+      "posted_at": "2026-04-12T17:33:26.776299+09:00",
+      "pattern_name": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "category": "週間運勢",
+      "content_preview": "正直に言います。\n\n今夜、牡羊座と獅子座は\n『やりすぎ』の傾向が出ています。\n\n勢いで決断したり、\n",
+      "first_line": "正直に言います。",
+      "char_count": 151,
+      "metrics": {
+        "views": 179,
+        "likes": 5,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 2.79
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-04-12T20:51:27.114325+09:00"
+    },
+    {
+      "id": "post_20260411_2047_exp_007",
+      "platform_post_id": "17993524481938653",
+      "posted_at": "2026-04-12T19:12:15.135372+09:00",
+      "pattern_name": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "category": "星座運勢・人間関係",
+      "content_preview": "実は、今夜の月が教えてくれることがあります。\n\n4月中旬に向けて、あなたが「我慢していた本音」を言う",
+      "first_line": "実は、今夜の月が教えてくれることがあります。",
+      "char_count": 206,
+      "metrics": {
+        "views": 19,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 10.53
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 22
+      },
+      "collected_at": "2026-04-12T20:51:27.114325+09:00"
     }
   ],
-  "last_updated": "2026-04-12T17:33:26.852799+09:00"
+  "last_updated": "2026-04-12T20:51:27.114325+09:00"
 }
