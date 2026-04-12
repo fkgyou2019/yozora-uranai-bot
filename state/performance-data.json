@@ -2495,7 +2495,59 @@
         "hook_length": 13
       },
       "collected_at": "2026-04-12T09:04:57.299558+09:00"
+    },
+    {
+      "id": "post_20260411_2047_exp_003",
+      "platform_post_id": "17959174952934358",
+      "posted_at": "2026-04-12T09:12:15.384453+09:00",
+      "pattern_name": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+      "category": "運気変動",
+      "content_preview": "今月、急上昇する星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、この週末か",
+      "first_line": "今月、急上昇する星座。",
+      "char_count": 190,
+      "metrics": {
+        "views": 13,
+        "likes": 3,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 38.46
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-04-12T15:16:44.488623+09:00"
+    },
+    {
+      "id": "post_20260411_2047_exp_004",
+      "platform_post_id": "18094765537886675",
+      "posted_at": "2026-04-12T12:12:14.687795+09:00",
+      "pattern_name": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
+      "category": "運勢・変化",
+      "content_preview": "4/12、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、仕",
+      "first_line": "4/12、ガラッと変わる星座。",
+      "char_count": 191,
+      "metrics": {
+        "views": 16,
+        "likes": 5,
+        "replies": 4,
+        "reposts": 0,
+        "engagement_rate": 56.25
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 15
+      },
+      "collected_at": "2026-04-12T15:16:44.488623+09:00"
     }
   ],
-  "last_updated": "2026-04-12T09:04:57.299558+09:00"
+  "last_updated": "2026-04-12T15:16:44.488623+09:00"
 }
