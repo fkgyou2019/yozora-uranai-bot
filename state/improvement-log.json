@@ -141,8 +141,18 @@
         "フック1件追加 (断言・確信: 1)",
         "インサイト5件追加"
       ]
+    },
+    {
+      "date": "2026-04-13",
+      "hooks_added": 4,
+      "insights_added": 5,
+      "source_posts_analyzed": 879,
+      "key_changes": [
+        "フック4件追加 (断言・確信: 3, 数字インパクト: 1)",
+        "インサイト5件追加"
+      ]
     }
   ],
-  "total_improvements": 15,
-  "last_improved": "2026-04-12T06:59:33.881761+09:00"
+  "total_improvements": 16,
+  "last_improved": "2026-04-13T07:02:37.213620+09:00"
 }
