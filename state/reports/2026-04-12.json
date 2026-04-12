@@ -1,0 +1,51 @@
+{
+  "date": "2026-04-12",
+  "generated_at": "2026-04-13 08:54",
+  "summary": {
+    "posts_total": 9,
+    "posts_measured": 8,
+    "posts_deleted": 1,
+    "total_views": 546,
+    "avg_views": 68.2,
+    "avg_er": 22.8,
+    "experiment_rate": 88.9
+  },
+  "patterns": {
+    "構造G_注意喚起+限定型②（今週急変する・朝向け）": {
+      "count": 1,
+      "avg_views": 49.0,
+      "avg_er": 28.57
+    },
+    "構造G_注意喚起+限定型③（今月・今週後半急上昇）": {
+      "count": 1,
+      "avg_views": 20.0,
+      "avg_er": 25.0
+    },
+    "構造G_注意喚起+限定型④（今日・今週大きく動く）": {
+      "count": 1,
+      "avg_views": 28.0,
+      "avg_er": 39.29
+    },
+    "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）": {
+      "count": 1,
+      "avg_views": 34.0,
+      "avg_er": 29.41
+    },
+    "構造F_告白・暴露型①（占い師として正直に言います）": {
+      "count": 1,
+      "avg_views": 210.0,
+      "avg_er": 2.38
+    },
+    "構造F_告白・暴露型②（実は〜という真実を伝えます）": {
+      "count": 1,
+      "avg_views": 28.0,
+      "avg_er": 10.71
+    },
+    "構造G_注意喚起+限定型①（日付指定フック必須: 「4/12、急に動く星座。」形式）": {
+      "count": 2,
+      "avg_views": 88.5,
+      "avg_er": 23.52
+    }
+  },
+  "delete_reasons": []
+}
