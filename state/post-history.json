@@ -2770,6 +2770,28 @@
       "posted_at": "2026-04-12T12:12:14.687795+09:00",
       "platform_post_id": "18094765537886675",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）",
+      "category": "星座運勢",
+      "content": "今夜、ガラッと変わる星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけない好機が舞い込みます。迷わず動いてください。\n\n獅子座さんは、人間関係が急展開。嬉しい再会や新しいご縁が生まれやすい時期です。\n\n射手座さんは、仕事運が急上昇。今までの頑張りが評価される瞬間が来ます。\n\n🍀を置いた方に、今週中に嬉しい連絡が届きます。\n\n#今週の占い",
+      "hashtag": "#今週の占い",
+      "time_slot": "午後（13〜15時台）",
+      "scheduled_hour": 15,
+      "character_count": 198,
+      "hook_length": 13,
+      "engagement_prediction": "高（フック実績v=1514参照、限定型+ポジティブ変化で推定eng率16-18%）",
+      "id": "post_20260411_2047_exp_005",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "行4が長すぎ: 34文字「牡羊座さんは、思いがけない好機が舞い込み...」（最大25文字）[threads]"
+      ],
+      "posted_at": "2026-04-12T15:12:15.164226+09:00",
+      "platform_post_id": "17860994628623184",
+      "source": "post-verify"
     }
   ]
 }
