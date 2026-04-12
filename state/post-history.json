@@ -2715,6 +2715,25 @@
       "posted_at": "2026-04-12T07:12:17.059769+09:00",
       "platform_post_id": "17912600529368920",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+      "category": "運気変動",
+      "content": "今月、急上昇する星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、この週末から新しい話題が舞い込みます。思わぬ好機が来ます。\n\n獅子座さんは、人間関係が急に広がる時期。嬉しい出会いが増えていきます。\n\n射手座さんは、仕事や創作で認められやすくなります。これまでの努力が花開くタイミングです。\n\n🍀を置いた方に、今週中に嬉しい連絡が届きます。\n\n#今月の占い",
+      "hashtag": "#今月の占い",
+      "time_slot": "午前（10〜12時台）",
+      "scheduled_hour": 10,
+      "id": "post_20260411_2047_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "行4が長すぎ: 36文字「牡羊座さんは、この週末から新しい話題が舞...」（最大25文字）[threads]"
+      ],
+      "posted_at": "2026-04-12T09:12:15.384453+09:00",
+      "platform_post_id": "17959174952934358",
+      "source": "post-verify"
     }
   ]
 }
