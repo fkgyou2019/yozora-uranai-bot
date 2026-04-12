@@ -1,0 +1,80 @@
+name: Regenerate Slot (Sheets再作成リクエスト対応)
+
+# GASからの再作成チェックボックス操作で発火
+on:
+  repository_dispatch:
+    types: [regenerate-slot]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: regenerate-slot-${{ github.event.client_payload.slot }}
+  cancel-in-progress: true  # 同一スロットの二重実行を防止
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install anthropic gspread google-auth
+
+      - name: Create api-keys.env
+        run: |
+          mkdir -p config
+          cat > config/api-keys.env << EOF
+          ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
+          THREADS_ACCESS_TOKEN=${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}
+          EOF
+
+      - name: Initialize state files if missing
+        run: |
+          mkdir -p state
+          [ ! -f state/post-queue.json ]    && echo '{"queue":[]}' > state/post-queue.json
+          [ ! -f state/post-history.json ]  && echo '{"posts":[]}' > state/post-history.json
+          [ ! -f state/winning-patterns.json ] && echo '{}' > state/winning-patterns.json
+          true
+
+      - name: Regenerate slot
+        run: |
+          echo "スロット${{ github.event.client_payload.slot }} を再生成します"
+          echo "メモ: ${{ github.event.client_payload.memo }}"
+          echo "対象日: ${{ github.event.client_payload.date }}"
+          python .github/scripts/regenerate_slot.py \
+            --slot "${{ github.event.client_payload.slot }}" \
+            --memo "${{ github.event.client_payload.memo }}" \
+            --date "${{ github.event.client_payload.date }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
+          PYTHONIOENCODING: utf-8
+
+      - name: Commit updated queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/post-queue.json || true
+          if git diff --cached --quiet; then
+            echo "キュー変更なし"
+          else
+            git commit -m "chore: regenerate slot ${{ github.event.client_payload.slot }} [skip ci]"
+            git push || (
+              git fetch origin master
+              git merge origin/master -X ours --no-edit
+              git push
+            )
+          fi

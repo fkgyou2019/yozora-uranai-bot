@@ -29,6 +29,10 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install dependencies
+        run: |
+          pip install gspread google-auth || true
+
       - name: Initialize state files if missing
         run: |
           mkdir -p state config
@@ -98,6 +102,17 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PYTHONIOENCODING: utf-8
+
+      # ========================================
+      # Googleスプレッドシートにレビュー用データを書き込む
+      # GOOGLE_SHEETS_CREDENTIALS が設定されていない場合はスキップ（エラーにしない）
+      # ========================================
+      - name: Write posts to Google Sheets (review dashboard)
+        run: python .github/scripts/write_to_sheets.py || true
+        env:
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
+          PYTHONIOENCODING: utf-8
+        continue-on-error: true
 
       # ========================================
       # 状態をコミット

@@ -150,6 +150,7 @@ jobs:
         run: python agents/poster.py
         env:
           PYTHONIOENCODING: utf-8
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
 
       - name: Fetch metrics & analyze (learning loop)
         if: steps.period_check.outputs.in_period == 'true'

@@ -341,6 +341,39 @@ def _post_one_inner():
     if not check_daily_limit(status, safety):
         return
 
+    # ========================================
+    # Googleスプレッドシート承認チェック
+    # GOOGLE_SHEETS_CREDENTIALS が設定されている場合のみ有効
+    # 未設定の場合は従来通り投稿許可（フォールバック）
+    # ========================================
+    sheets_enabled = bool(os.environ.get("GOOGLE_SHEETS_CREDENTIALS"))
+    sheets_approved_slot = None  # 承認済みスロット番号（Sheets有効時）
+
+    if sheets_enabled:
+        try:
+            _agent_dir = os.path.join(PROJECT_DIR, "agents")
+            if _agent_dir not in sys.path:
+                sys.path.insert(0, _agent_dir)
+            from shared.sheets_client import is_slot_approved, get_current_slot_num, get_approved_content
+            current_slot = get_current_slot_num()
+            if current_slot is not None:
+                if is_slot_approved(current_slot):
+                    sheets_approved_slot = current_slot
+                    log("INFO", f"[Sheets] スロット{current_slot} ✅ 承認済み → 投稿許可")
+                    # Sheetsに再生成後の最新コンテンツがあれば取得
+                    sheets_content = get_approved_content(current_slot)
+                else:
+                    log("INFO", f"[Sheets] スロット{current_slot} ⏳ 未承認 → 本日スキップ")
+                    return
+            else:
+                log("INFO", f"[Sheets] 現在時刻({datetime.now(JST).strftime('%H:%M')})はスロット外 → Sheetsチェックスキップ")
+                sheets_content = None
+        except Exception as e:
+            log("WARN", f"[Sheets] 承認チェックエラー（フォールバック投稿許可）: {e}")
+            sheets_content = None
+    else:
+        sheets_content = None
+
     # キューから次の投稿を取得（時間矛盾チェック付き）
     pending = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
     if not pending:
@@ -379,6 +412,12 @@ def _post_one_inner():
             continue
         post = candidate
         break
+
+    # Sheetsで再生成された内容があれば、キューの内容を上書き（再作成機能の反映）
+    if post is not None and sheets_enabled and sheets_content:
+        if sheets_content.strip() != post.get("content", "").strip():
+            log("INFO", f"[Sheets] 再生成コンテンツをキューに反映: {sheets_content[:30]}...")
+            post["content"] = sheets_content
 
     if not post:
         log("INFO", "時間矛盾により投稿可能な投稿なし")
