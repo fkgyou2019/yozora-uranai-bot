@@ -2547,7 +2547,33 @@
         "hook_length": 15
       },
       "collected_at": "2026-04-12T15:16:44.488623+09:00"
+    },
+    {
+      "id": "post_20260411_2047_exp_005",
+      "platform_post_id": "17860994628623184",
+      "posted_at": "2026-04-12T15:12:15.164226+09:00",
+      "pattern_name": "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）",
+      "category": "星座運勢",
+      "content_preview": "今夜、ガラッと変わる星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけ",
+      "first_line": "今夜、ガラッと変わる星座。",
+      "char_count": 184,
+      "metrics": {
+        "views": 17,
+        "likes": 4,
+        "replies": 3,
+        "reposts": 0,
+        "engagement_rate": 41.18
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-04-12T16:51:07.118304+09:00"
     }
   ],
-  "last_updated": "2026-04-12T15:16:44.488623+09:00"
+  "last_updated": "2026-04-12T16:51:07.118304+09:00"
 }
