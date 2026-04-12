@@ -1,7 +1,7 @@
 {
   "date": "2026-04-12",
-  "generated_at": "2026-04-12T16:51:20+09:00",
-  "one_line": "2026-04-12 | 5件投稿 (3件計測済み) | フックOK 5/5件 | 平均v=22.0 | 構造G再現性: テスト中（13/32件成功・7件判定待ち）",
+  "generated_at": "2026-04-12T17:33:34+09:00",
+  "one_line": "2026-04-12 | 6件投稿 (3件計測済み) | フックOK 6/6件 | 平均v=22.0 | 構造G再現性: テスト中（13/32件成功・7件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -72,12 +72,26 @@
       "reposts": 0,
       "er": 0,
       "measured": false
+    },
+    {
+      "hour": 17,
+      "struct": "F",
+      "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "hook": "正直に言います。",
+      "hook_len": 8,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
     }
   ],
   "summary": {
-    "total": 5,
+    "total": 6,
     "measured": 3,
-    "hook_ok": 5,
+    "hook_ok": 6,
     "hook_violations": 0,
     "violations": [],
     "total_views": 66,
@@ -100,7 +114,7 @@
     "status": "テスト中（13/32件成功・7件判定待ち）"
   },
   "hc": {
-    "runs": 9,
+    "runs": 11,
     "deleted": 0
   }
 }
