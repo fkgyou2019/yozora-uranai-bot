@@ -105,6 +105,14 @@ def check_posting_interval(history, safety):
 def check_time_contradiction(content, current_hour):
     """投稿内容と現在時刻の矛盾をチェック。矛盾があれば理由を返す"""
     import re
+    # 【再発防止】「M/D、」形式の日付フックが今日の日付と一致しない場合は除外
+    # 例: 4/12生成の「4/12、急に動く星座。」が4/13に投稿されるのを防ぐ
+    m_date = re.search(r'(\d{1,2})/(\d{1,2})[、,]', content)
+    if m_date:
+        post_month, post_day = int(m_date.group(1)), int(m_date.group(2))
+        today_now = datetime.now(JST)
+        if post_month != today_now.month or post_day != today_now.day:
+            return f"日付フック「{m_date.group(1)}/{m_date.group(2)}、」が今日({today_now.month}/{today_now.day})と不一致 → 自動除外"
     # 「今夜○時までに」が○時以降
     m = re.search(r'今夜(\d+)時まで', content)
     if m and current_hour >= int(m.group(1)):

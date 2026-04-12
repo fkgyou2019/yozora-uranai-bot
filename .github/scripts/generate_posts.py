@@ -693,11 +693,13 @@ def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block
     structure = slot_info["structure"]
     pattern_hint = slot_info["pattern_hint"]
 
-    # 今日の月/日を「4/12」形式で取得（朝スロット用の日付フック）
+    # 夜間生成（20時以降）は翌日の日付を使う（翌朝スロット用）
+    # 例: 23:05生成 → 翌日08:07投稿用に「4/13」と正しく設定
     from datetime import datetime as _dt, timezone as _tz, timedelta as _td
     _jst = _tz(_td(hours=9))
     _now = _dt.now(_jst)
-    date_label = f"{_now.month}/{_now.day}"  # 例: 「4/12」
+    _target = _now + _td(days=1) if _now.hour >= 20 else _now
+    date_label = f"{_target.month}/{_target.day}"  # 例: 「4/13」
 
     return f"""あなたは占いSNSアカウント「よぞら.」のThreads投稿ライターです。
 {hour}時台に投稿する占い投稿を1件だけ生成してください。
@@ -923,8 +925,12 @@ def main():
 
     used_patterns = [p.get("pattern_name", "") for p in history.get("posts", [])[-15:]]
     now = datetime.now(JST)
-    today = now.strftime("%Y年%m月%d日(%a)")
-    weekday = now.weekday()
+    # 夜間生成（20時以降）は翌日の投稿を生成するため、日付を翌日に設定
+    # 例: 23:05に実行 → 翌朝08:07スロットに「4/13、急に動く星座。」と正しく出る
+    from datetime import timedelta as _td_main
+    target_date = now + _td_main(days=1) if now.hour >= 20 else now
+    today = target_date.strftime("%Y年%m月%d日(%a)")
+    weekday = target_date.weekday()
 
     series_map = {
         0: "【月曜定番】今週の星座ランキング（総合運TOP5）。毎週月曜に発表する定番シリーズ。",
