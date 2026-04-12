@@ -9492,6 +9492,17 @@
           "auto_replies": 0,
           "er": 4.63,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 69,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 281,
+          "likes": 13,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.63,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -9751,6 +9762,17 @@
           "auto_replies": 0,
           "er": 19.9,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 68,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 578,
+          "likes": 63,
+          "replies": 52,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 19.9,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -9988,6 +10010,17 @@
           "auto_replies": 0,
           "er": 13.94,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 58,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 208,
+          "likes": 19,
+          "replies": 10,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.94,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -10196,6 +10229,17 @@
         {
           "h": 54,
           "ts": "2026-04-12T15:14:34.325528+09:00",
+          "views": 156,
+          "likes": 31,
+          "replies": 14,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 28.85,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 56,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
           "views": 156,
           "likes": 31,
           "replies": 14,
@@ -10418,6 +10462,17 @@
           "auto_replies": 0,
           "er": 26.47,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 55,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 68,
+          "likes": 16,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 26.47,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -10626,6 +10681,17 @@
         {
           "h": 51,
           "ts": "2026-04-12T15:14:34.325528+09:00",
+          "views": 216,
+          "likes": 6,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.7,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 53,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
           "views": 216,
           "likes": 6,
           "replies": 2,
@@ -10848,6 +10914,17 @@
           "auto_replies": 0,
           "er": 34.38,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 50,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 32,
+          "likes": 7,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 34.38,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -11052,6 +11129,17 @@
           "auto_replies": 0,
           "er": 14.89,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 46,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 96,
+          "likes": 14,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.58,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -11245,6 +11333,17 @@
           "auto_replies": 0,
           "er": 17.11,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 45,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 189,
+          "likes": 26,
+          "replies": 6,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 16.93,
+          "velocity_views_per_hour": 0.7
         }
       ],
       "completed": false,
@@ -11438,6 +11537,17 @@
           "auto_replies": 0,
           "er": 13.86,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 44,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 102,
+          "likes": 14,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.73,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -11587,6 +11697,17 @@
           "auto_replies": 0,
           "er": 19.05,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 34,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 44,
+          "likes": 8,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 18.18,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -11725,6 +11846,17 @@
           "auto_replies": 0,
           "er": 19.7,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 32,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 68,
+          "likes": 13,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 19.12,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -11863,6 +11995,17 @@
           "auto_replies": 0,
           "er": 20.37,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 31,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 55,
+          "likes": 11,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.0,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -12016,6 +12159,17 @@
           "auto_replies": 0,
           "er": 20.45,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 27,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 89,
+          "likes": 18,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.22,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -12143,6 +12297,17 @@
           "auto_replies": 0,
           "er": 26.8,
           "velocity_views_per_hour": 0.1
+        },
+        {
+          "h": 26,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 156,
+          "likes": 25,
+          "replies": 16,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 26.28,
+          "velocity_views_per_hour": 1.5
         }
       ],
       "completed": false,
@@ -12248,6 +12413,17 @@
           "auto_replies": 0,
           "er": 16.67,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 22,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 126,
+          "likes": 21,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 16.67,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -12353,6 +12529,17 @@
           "auto_replies": 0,
           "er": 19.58,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 21,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 144,
+          "likes": 25,
+          "replies": 3,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 19.44,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -12447,6 +12634,17 @@
           "auto_replies": 0,
           "er": 15.12,
           "velocity_views_per_hour": 0.2
+        },
+        {
+          "h": 20,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 88,
+          "likes": 11,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.77,
+          "velocity_views_per_hour": 0.7
         }
       ],
       "completed": false,
@@ -12486,6 +12684,17 @@
           "auto_replies": 0,
           "er": 29.73,
           "velocity_views_per_hour": 1.9
+        },
+        {
+          "h": 10,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 43,
+          "likes": 10,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 27.91,
+          "velocity_views_per_hour": 3.0
         }
       ],
       "completed": false,
@@ -12514,6 +12723,17 @@
           "auto_replies": 0,
           "er": 38.46,
           "velocity_views_per_hour": 2.2
+        },
+        {
+          "h": 8,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 15,
+          "likes": 3,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 33.33,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -12533,7 +12753,7 @@
       "content_preview": "🔮 4/12の12星座\n\n牡羊座　動いた分だけ、返ってくる。\n牡牛座　焦らず待つのが、今日の正解。\n双子座　気になるあの",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 1
+      "api_fail_count": 2
     },
     "post_20260411_2047_exp_004": {
       "post_id": "post_20260411_2047_exp_004",
@@ -12557,6 +12777,17 @@
           "auto_replies": 0,
           "er": 56.25,
           "velocity_views_per_hour": 5.3
+        },
+        {
+          "h": 5,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 20,
+          "likes": 5,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 50.0,
+          "velocity_views_per_hour": 2.0
         }
       ],
       "completed": false,
@@ -12585,12 +12816,51 @@
           "auto_replies": 0,
           "er": 0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 2,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 22,
+          "likes": 4,
+          "replies": 3,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 31.82,
+          "velocity_views_per_hour": 11.0
         }
       ],
       "completed": false,
-      "peak_velocity": 0.0,
+      "peak_velocity": 11.0,
+      "peak_velocity_hour": 2
+    },
+    "post_20260411_2047_exp_006": {
+      "post_id": "post_20260411_2047_exp_006",
+      "platform_post_id": "17930535708069411",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXBmm95lFdO",
+      "posted_at": "2026-04-12T17:33:26.776299+09:00",
+      "pattern_name": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "slot_hour": 17,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "正直に言います。",
+      "content_preview": "正直に言います。\n\n今夜、牡羊座と獅子座は\n『やりすぎ』の傾向が出ています。\n\n勢いで決断したり、\n相手の話を聞かずに進",
+      "hourly": [
+        {
+          "h": 0,
+          "ts": "2026-04-12T18:08:48.354057+09:00",
+          "views": 67,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.99,
+          "velocity_views_per_hour": 67.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 67.0,
       "peak_velocity_hour": 0
     }
   },
-  "last_updated": "2026-04-12T15:14:34.325528+09:00"
+  "last_updated": "2026-04-12T18:08:48.354057+09:00"
 }
