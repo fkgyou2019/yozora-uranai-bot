@@ -2677,7 +2677,241 @@
         "hook_length": 12
       },
       "collected_at": "2026-04-12T23:27:54.448929+09:00"
+    },
+    {
+      "id": "post_20260412_2327_exp_003",
+      "platform_post_id": "18457207264109941",
+      "posted_at": "2026-04-13T07:12:17.255491+09:00",
+      "pattern_name": "構造G_注意喚起+限定型③（今日・今週大きく動く）",
+      "category": "星座占い",
+      "content_preview": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いが",
+      "first_line": "今週、ガラッと変わる星座。",
+      "char_count": 184,
+      "metrics": {
+        "views": 26,
+        "likes": 4,
+        "replies": 4,
+        "reposts": 0,
+        "engagement_rate": 30.77
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-04-13T15:34:30.020135+09:00"
+    },
+    {
+      "id": "post_20260413_0000_exp_001",
+      "platform_post_id": "17871944580474953",
+      "posted_at": "2026-04-13T10:42:15.278481+09:00",
+      "pattern_name": "構造G_注意喚起+限定型①（日付指定フック必須）",
+      "category": "星座占い・運勢",
+      "content_preview": "4/13、急に動く星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、朝の決断が",
+      "first_line": "4/13、急に動く星座。",
+      "char_count": 189,
+      "metrics": {
+        "views": 85,
+        "likes": 15,
+        "replies": 4,
+        "reposts": 0,
+        "engagement_rate": 22.35
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": true,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-13T15:34:30.020135+09:00"
+    },
+    {
+      "id": "post_20260413_0000_exp_002",
+      "platform_post_id": "18084982460034939",
+      "posted_at": "2026-04-13T12:12:16.534340+09:00",
+      "pattern_name": "構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
+      "category": "日運",
+      "content_preview": "🔮 4/13の12星座\n\n牡羊座　今日の直感は、ちゃんと当たってる。\n牡牛座　焦らず待つのが、最高の",
+      "first_line": "🔮 4/13の12星座",
+      "char_count": 269,
+      "metrics": {
+        "views": 30,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-04-13T15:34:30.020135+09:00"
+    },
+    {
+      "id": "post_20260413_0000_exp_003",
+      "platform_post_id": "18090689090236414",
+      "posted_at": "2026-04-13T13:07:23.772432+09:00",
+      "pattern_name": "構造G_注意喚起+限定型③（今日・今週大きく動く）",
+      "category": "星座占い",
+      "content_preview": "今週、ガラッと変わる星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、仕事で思",
+      "first_line": "今週、ガラッと変わる星座。",
+      "char_count": 168,
+      "metrics": {
+        "views": 110,
+        "likes": 19,
+        "replies": 11,
+        "reposts": 0,
+        "engagement_rate": 27.27
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-04-13T15:34:30.020135+09:00"
+    },
+    {
+      "id": "post_20260413_0000_exp_004",
+      "platform_post_id": "18096474833282603",
+      "posted_at": "2026-04-13T15:12:15.523075+09:00",
+      "pattern_name": "構造G_注意喚起+限定型④（今週後半ガラッと変わる）",
+      "category": "星座占い",
+      "content_preview": "今週後半、ガラッと変わる星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思い",
+      "first_line": "今週後半、ガラッと変わる星座。",
+      "char_count": 180,
+      "metrics": {
+        "views": 106,
+        "likes": 19,
+        "replies": 14,
+        "reposts": 0,
+        "engagement_rate": 31.13
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 15
+      },
+      "collected_at": "2026-04-13T16:30:04.694120+09:00"
+    },
+    {
+      "id": "post_20260413_1534_exp_001",
+      "platform_post_id": "18100046671980506",
+      "posted_at": "2026-04-13T16:08:36.492648+09:00",
+      "pattern_name": "構造G_注意喚起+限定型①（日付指定フック必須）",
+      "category": "星座占い・運勢",
+      "content_preview": "4/13、急に動く星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、朝のうちに",
+      "first_line": "4/13、急に動く星座。",
+      "char_count": 181,
+      "metrics": {
+        "views": 139,
+        "likes": 26,
+        "replies": 12,
+        "reposts": 0,
+        "engagement_rate": 27.34
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": true,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-13T18:22:07.111088+09:00"
+    },
+    {
+      "id": "post_20260413_1822_exp_003",
+      "platform_post_id": "17878819314559817",
+      "posted_at": "2026-04-13T19:12:16.065027+09:00",
+      "pattern_name": "構造G_注意喚起+限定型③（今日・今週大きく動く）",
+      "category": "星座占い",
+      "content_preview": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いが",
+      "first_line": "今週、ガラッと変わる星座。",
+      "char_count": 177,
+      "metrics": {
+        "views": 20,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 15.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-04-14T00:05:40.521189+09:00"
+    },
+    {
+      "id": "post_20260413_2005_exp_001",
+      "platform_post_id": "18157688203446034",
+      "posted_at": "2026-04-13T20:42:17.043211+09:00",
+      "pattern_name": "構造G_注意喚起+限定型①（日付指定フック必須: 「4/14、急に動く星座。」形式）",
+      "category": "星座占い",
+      "content_preview": "4/14、急に動く星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんへ。朝の決断",
+      "first_line": "4/14、急に動く星座。",
+      "char_count": 184,
+      "metrics": {
+        "views": 136,
+        "likes": 19,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 15.44
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": true,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-14T00:05:40.521189+09:00"
+    },
+    {
+      "id": "post_20260413_2005_exp_002",
+      "platform_post_id": "18098448544832637",
+      "posted_at": "2026-04-13T21:42:16.705954+09:00",
+      "pattern_name": "構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
+      "category": "日運占い",
+      "content_preview": "🔮 4/14の12星座\n\n牡羊座　今日の一歩が、新しい扉を開く。\n牡牛座　焦らず待つのが、最高の選択",
+      "first_line": "🔮 4/14の12星座",
+      "char_count": 276,
+      "metrics": {
+        "views": 59,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 5.08
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-04-14T00:05:40.521189+09:00"
     }
   ],
-  "last_updated": "2026-04-13T07:03:47.266262+09:00"
+  "last_updated": "2026-04-14T01:45:44.902866+09:00"
 }
