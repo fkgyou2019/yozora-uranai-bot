@@ -2911,7 +2911,33 @@
         "hook_length": 11
       },
       "collected_at": "2026-04-14T00:05:40.521189+09:00"
+    },
+    {
+      "id": "post_20260414_0252_exp_001",
+      "platform_post_id": "18094151456274006",
+      "posted_at": "2026-04-14T07:12:17.784174+09:00",
+      "pattern_name": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+      "category": "全星座占い",
+      "content_preview": "🔮 4/14の12星座\n\n牡羊座　今日の勢いは、誰にも止められない。\n牡牛座　焦らず待つが、正解の日",
+      "first_line": "🔮 4/14の12星座",
+      "char_count": 262,
+      "metrics": {
+        "views": 52,
+        "likes": 5,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 9.62
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-04-14T08:31:32.019587+09:00"
     }
   ],
-  "last_updated": "2026-04-14T01:45:44.902866+09:00"
+  "last_updated": "2026-04-14T08:31:32.019587+09:00"
 }
