@@ -2033,5 +2033,20 @@
     "hourly": [],
     "completed": true,
     "api_fail_count": 6
+  },
+  "verify-retry-20260406191220": {
+    "post_id": "verify-retry-20260406191220",
+    "platform_post_id": "17858138562588127",
+    "threads_url": "",
+    "posted_at": "2026-04-06T19:12:20.493933+09:00",
+    "pattern_name": "構造G_注意喚起+限定型",
+    "slot_hour": 19,
+    "day_of_week": 0,
+    "day_name": "月",
+    "first_line": "今週、金銭感覚がズレやすい星座。",
+    "content_preview": "今週、金銭感覚がズレやすい星座。\n\nたった3つだけです。\n\n🔮牡羊座\n火星の影響で衝動買い。\n欲しいものは\n3日待ってか",
+    "hourly": [],
+    "completed": true,
+    "api_fail_count": 7
   }
 }
