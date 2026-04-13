@@ -239,11 +239,18 @@ def is_slot_approved(slot_num: int, date_str: str = None) -> bool:
             if str(row[COL["slot"] - 1]) == str(slot_num):
                 status = row[COL["status"] - 1]
                 approve_val = row[COL["approve"] - 1]
-                # ステータスが approved OR チェックボックスがTRUE
-                return status == "approved" or approve_val in ("TRUE", "true")
+                # デフォルト投稿許可。H列（再作成🔄）がTRUEの場合のみブロック
+                if approve_val in ("TRUE", "true") and COL.get("regen"):
+                    # 再作成チェックがONなら投稿ブロック（再生成待ち）
+                    regen_val = row[COL["regen"] - 1] if len(row) >= COL["regen"] else ""
+                    if regen_val in ("TRUE", "true"):
+                        print(f"[SHEETS] スロット{slot_num} 再作成🔄ON → 投稿ブロック")
+                        return False
+                return True  # pending_review / approved どちらも投稿許可
 
-        print(f"[SHEETS] スロット{slot_num} が {date_str} シートに見つからない → スキップ")
-        return False
+        # シートにスロットが見つからない場合もデフォルト許可
+        print(f"[SHEETS] スロット{slot_num} が {date_str} シートに見つからない → デフォルト許可")
+        return True
 
     except gspread.WorksheetNotFound:
         print(f"[SHEETS] シート {date_str} が存在しない → フォールバック許可")
