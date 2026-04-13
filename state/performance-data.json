@@ -2833,7 +2833,85 @@
         "hook_length": 12
       },
       "collected_at": "2026-04-13T18:22:07.111088+09:00"
+    },
+    {
+      "id": "post_20260413_1822_exp_003",
+      "platform_post_id": "17878819314559817",
+      "posted_at": "2026-04-13T19:12:16.065027+09:00",
+      "pattern_name": "構造G_注意喚起+限定型③（今日・今週大きく動く）",
+      "category": "星座占い",
+      "content_preview": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いが",
+      "first_line": "今週、ガラッと変わる星座。",
+      "char_count": 177,
+      "metrics": {
+        "views": 20,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 15.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 13
+      },
+      "collected_at": "2026-04-14T00:05:40.521189+09:00"
+    },
+    {
+      "id": "post_20260413_2005_exp_001",
+      "platform_post_id": "18157688203446034",
+      "posted_at": "2026-04-13T20:42:17.043211+09:00",
+      "pattern_name": "構造G_注意喚起+限定型①（日付指定フック必須: 「4/14、急に動く星座。」形式）",
+      "category": "星座占い",
+      "content_preview": "4/14、急に動く星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんへ。朝の決断",
+      "first_line": "4/14、急に動く星座。",
+      "char_count": 184,
+      "metrics": {
+        "views": 136,
+        "likes": 19,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 15.44
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": true,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-14T00:05:40.521189+09:00"
+    },
+    {
+      "id": "post_20260413_2005_exp_002",
+      "platform_post_id": "18098448544832637",
+      "posted_at": "2026-04-13T21:42:16.705954+09:00",
+      "pattern_name": "構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
+      "category": "日運占い",
+      "content_preview": "🔮 4/14の12星座\n\n牡羊座　今日の一歩が、新しい扉を開く。\n牡牛座　焦らず待つのが、最高の選択",
+      "first_line": "🔮 4/14の12星座",
+      "char_count": 276,
+      "metrics": {
+        "views": 59,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 5.08
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-04-14T00:05:40.521189+09:00"
     }
   ],
-  "last_updated": "2026-04-13T20:05:48.122217+09:00"
+  "last_updated": "2026-04-14T00:05:40.521189+09:00"
 }
