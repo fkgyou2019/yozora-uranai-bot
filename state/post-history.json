@@ -2993,6 +2993,29 @@
       "posted_at": "2026-04-13T15:12:15.523075+09:00",
       "platform_post_id": "18096474833282603",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型①（日付指定フック必須）",
+      "category": "星座占い・運勢",
+      "content": "4/13、急に動く星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、朝のうちに重要な決断が来ます。迷わずGOサインを。\n\n獅子座さんは、予期しない好機が舞い込みます。チャンスの波に乗ってください。\n\n射手座さんは、人間関係で嬉しい展開が。新しい繋がりが生まれる日になります。\n\n🍀を置いた方に、今週中に嬉しい連絡が届きます。\n\n#今日の運勢",
+      "hashtag": "#今日の運勢",
+      "time_slot": "朝（8〜9時台）",
+      "scheduled_hour": 8,
+      "character_count": 176,
+      "hook_length": 12,
+      "validation": "✅ フック12字以内 / ✅ 朝専用『4/13』使用 / ✅ 3座列挙 / ✅ ポジティブ表現 / ✅ CTA末尾配置 / ✅ 176字（150-280範囲内）",
+      "id": "post_20260413_1534_exp_001",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "行4が長すぎ: 32文字「牡羊座さんは、朝のうちに重要な決断が来ま...」（最大25文字）[threads]"
+      ],
+      "posting_started_at": "2026-04-13T16:08:32.063546+09:00",
+      "posted_at": "2026-04-13T16:08:36.492648+09:00",
+      "platform_post_id": "18100046671980506",
+      "is_repost": true
     }
   ]
 }
