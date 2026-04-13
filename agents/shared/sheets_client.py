@@ -195,6 +195,15 @@ def write_posts_to_sheet(posts: list, date_str: str = None) -> bool:
 
     if rows:
         sheet.append_rows(rows, value_input_option="USER_ENTERED")
+        # データ行のスタイルリセット（黒文字・背景なし）
+        last_row = len(rows) + 1  # ヘッダー行分+1
+        sheet.format(f"A2:J{last_row}", {
+            "backgroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0},
+            "textFormat": {
+                "foregroundColor": {"red": 0.0, "green": 0.0, "blue": 0.0},
+                "bold": False
+            }
+        })
 
     print(f"[SHEETS] ✅ 書き込み完了: {len(rows)}件 → {date_str}")
     return True
