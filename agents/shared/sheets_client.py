@@ -171,6 +171,7 @@ def write_posts_to_sheet(posts: list, date_str: str = None) -> bool:
         return False
 
     print(f"[SHEETS] {date_str} に {len(posts)}件書き込み開始")
+    ss = client.open_by_key(SPREADSHEET_ID)
     sheet = _get_or_create_sheet(client, date_str)
 
     # 既存データ行をクリア（ヘッダー保持）
@@ -195,7 +196,7 @@ def write_posts_to_sheet(posts: list, date_str: str = None) -> bool:
 
     if rows:
         sheet.append_rows(rows, value_input_option="USER_ENTERED")
-        # データ行のスタイルリセット（黒文字・背景なし）
+        # データ行のスタイルリセット（黒文字・白背景）
         last_row = len(rows) + 1  # ヘッダー行分+1
         sheet.format(f"A2:J{last_row}", {
             "backgroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0},
@@ -204,6 +205,8 @@ def write_posts_to_sheet(posts: list, date_str: str = None) -> bool:
                 "bold": False
             }
         })
+        # チェックボックス再適用（行削除→再追加で消えるため毎回実行）
+        _apply_checkbox_format(ss, sheet)
 
     print(f"[SHEETS] ✅ 書き込み完了: {len(rows)}件 → {date_str}")
     return True
