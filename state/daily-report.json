@@ -1,7 +1,7 @@
 {
   "date": "2026-04-13",
-  "generated_at": "2026-04-13T16:30:13+09:00",
-  "one_line": "2026-04-13 | 7件投稿 (5件計測済み) | フックOK 7/7件 | 平均v=77.2 | 構造G再現性: テスト中（13/39件成功・7件判定待ち） | HC削除: 2件",
+  "generated_at": "2026-04-13T18:22:12+09:00",
+  "one_line": "2026-04-13 | 8件投稿 (5件計測済み) | フックOK 8/8件 | 平均v=77.2 | 構造G再現性: テスト中（13/39件成功・7件判定待ち） | HC削除: 2件",
   "posts": [
     {
       "hour": 7,
@@ -100,12 +100,26 @@
       "reposts": 0,
       "er": 0,
       "measured": false
+    },
+    {
+      "hour": 18,
+      "struct": "J",
+      "pattern": "構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
+      "hook": "🔮 4/13の12星座",
+      "hook_len": 11,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
     }
   ],
   "summary": {
-    "total": 7,
+    "total": 8,
     "measured": 5,
-    "hook_ok": 7,
+    "hook_ok": 8,
     "hook_violations": 0,
     "violations": [],
     "total_views": 386,
@@ -128,7 +142,7 @@
     "status": "テスト中（13/39件成功・7件判定待ち）"
   },
   "hc": {
-    "runs": 8,
+    "runs": 9,
     "deleted": 2
   }
 }

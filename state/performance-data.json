@@ -2807,7 +2807,33 @@
         "hook_length": 15
       },
       "collected_at": "2026-04-13T16:30:04.694120+09:00"
+    },
+    {
+      "id": "post_20260413_1534_exp_001",
+      "platform_post_id": "18100046671980506",
+      "posted_at": "2026-04-13T16:08:36.492648+09:00",
+      "pattern_name": "構造G_注意喚起+限定型①（日付指定フック必須）",
+      "category": "星座占い・運勢",
+      "content_preview": "4/13、急に動く星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、朝のうちに",
+      "first_line": "4/13、急に動く星座。",
+      "char_count": 181,
+      "metrics": {
+        "views": 139,
+        "likes": 26,
+        "replies": 12,
+        "reposts": 0,
+        "engagement_rate": 27.34
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": true,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-13T18:22:07.111088+09:00"
     }
   ],
-  "last_updated": "2026-04-13T16:30:04.694120+09:00"
+  "last_updated": "2026-04-13T18:22:07.111088+09:00"
 }
