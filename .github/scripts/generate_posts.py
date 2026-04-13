@@ -16,18 +16,24 @@ from datetime import datetime, timezone, timedelta
 JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# 7スロット: 08:07/10:07/12:07/15:07/19:07/21:07/21:42 JST
-# PDCA変更(2026-04-10): 07:07廃止・09:07廃止（1時間インターバルで10:07が常にスキップされていた）→08:07に統合
-# PDCA変更(2026-04-11): 19時をF型→H型（よぞら.の声）、21:42をF型→I型（問いかけ）
-# 目的: 構造G×4（閲覧数最大化）+ H×1（キャラクター確立・ストック型）+ F×1（告白型）+ I×1（対話型・双方向関係構築）
+# 7スロット: 06:07/07:07/08:07/09:37/12:07/18:07/20:07 JST
+# 2026-04-14確定: ゴールデンタイム完全対応版
+# 朝ゴールデン(6〜8:59)×3 + 第2ゴールデン(9〜9:59)×1 + 昼(12〜12:59)×1 + 夕方(18〜18:59)×1 + 夜(20〜20:59)×1
 EXPERIMENT_TIME_SLOTS = [
-    {"hour": 8,  "slot": "朝（8〜9時台）",     "structure": "G", "pattern_hint": "注意喚起+限定型①（日付指定フック必須: 「4/12、急に動く星座。」形式）"},
-    {"hour": 10, "slot": "午前（10〜12時台）", "structure": "J", "pattern_hint": "全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）"},  # バズ狙い最強スロット
-    {"hour": 12, "slot": "午後（12〜15時台）", "structure": "G", "pattern_hint": "注意喚起+限定型③（今日・今週大きく動く）"},
-    {"hour": 15, "slot": "午後（13〜15時台）", "structure": "G", "pattern_hint": "注意喚起+限定型④（今週後半ガラッと変わる）"},
-    {"hour": 19, "slot": "夜（19〜21時台）",   "structure": "H", "pattern_hint": "よぞら.の声・哲学型（占い師としての視点・ストック型コンテンツ）"},
-    {"hour": 21, "slot": "夜（21:07）",        "structure": "F", "pattern_hint": "告白・暴露型（占い師として正直に言います）"},
-    {"hour": 21, "slot": "夜（21:42）",        "structure": "I", "pattern_hint": "問いかけ・対話型（フォロワーとの双方向関係構築）"},
+    {"hour": 6,  "minute": 7,  "slot": "めざまし型（06:07）",        "structure": "J",
+     "pattern_hint": "全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）"},
+    {"hour": 7,  "minute": 7,  "slot": "天体根拠型（07:07）",        "structure": "C",
+     "pattern_hint": "天体根拠型（今日の月の動き・天体イベントを根拠にした占い・通勤開始・信頼感・全員ターゲット）"},
+    {"hour": 8,  "minute": 7,  "slot": "しいたけ共感型（08:07）",    "structure": "H",
+     "pattern_hint": "しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）"},
+    {"hour": 9,  "minute": 37, "slot": "仕事アドバイス型（09:37）",  "structure": "G",
+     "pattern_hint": "天体根拠×仕事アドバイス型（今日の仕事運・仕事迷子ターゲット・仕事開始後のひと息）"},
+    {"hour": 12, "minute": 7,  "slot": "スピ×ラッキー型（12:07）",  "structure": "F",
+     "pattern_hint": "スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）"},
+    {"hour": 18, "minute": 7,  "slot": "哲学深掘り型（18:07）",      "structure": "H",
+     "pattern_hint": "しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）"},
+    {"hour": 20, "minute": 7,  "slot": "夜恋愛型（20:07）",          "structure": "G",
+     "pattern_hint": "天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）"},
 ]
 
 
@@ -701,24 +707,25 @@ def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block
     _target = _now + _td(days=1) if _now.hour >= 20 else _now
     date_label = f"{_target.month}/{_target.day}"  # 例: 「4/13」
 
+    minute = slot_info.get("minute", 7)
     return f"""あなたは占いSNSアカウント「よぞら.」のThreads投稿ライターです。
 {hour}時台に投稿する占い投稿を1件だけ生成してください。
 
 【今日の日付】{today}
-【投稿時間帯】{slot}（{hour}:07 JST投稿予定）
+【投稿時間帯】{slot}（{hour:02d}:{minute:02d} JST投稿予定）
 【指定パターン】構造{structure}: {pattern_hint}
 【ペルソナ】月詠（つくよみ）: 穏やかで親しみやすい。敬語ベースだが柔らかい。
 {f"""
-【⭐ 朝スロット限定ルール（8時台）】
+【⭐ 午前スロット限定ルール（9時台・G型）】
 フック（1行目）は「今週」「今月」ではなく、必ず「{date_label}」（今日の日付）を使うこと。
-理由: 朝イチの投稿は「今日だけの特別感」が最も響く。「今週」は他のスロットと被る。
+理由: 朝〜午前の投稿は「今日だけの特別感」が最も響く。「今週」は夜のスロットと被る。
 推奨フック例:
   ・「{date_label}、急に動く星座。」      → ★最推奨（日付×限定）
   ・「{date_label}、運命が変わる星座。」
-  ・「{date_label}、注目の星座。」
-  ・「{date_label}、ラッキーな星座。」
+  ・「{date_label}、仕事運が急変する星座。」
+  ・「{date_label}、チャンスをつかむ星座。」
 ※ 15文字以内厳守。日付を使えば自動的に鮮度が生まれ、翌日以降に使い回しにくくなるメリットもあり。
-""" if hour == 8 else ""}
+""" if hour == 9 and structure == "G" else ""}
 
 {learning_block}
 
@@ -729,13 +736,13 @@ def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block
 - 1行目にCTAを置く
 
 【✅ 時間帯を活かした表現】
-{f"""- {hour}時台らしい時間的文脈を使う（構造G/F/Bなど時間依存の場合）
+{f"""- {hour}時台らしい時間的文脈を使う（構造G/C/F/Bなど時間依存の場合）
 - 使用可能な時間表現（厳守）:
-  ・8〜9時台 → 「今朝」「今日」「今週」のみ。「今夜」禁止
-  ・10〜15時台 → 「今日」「今週」「今月」のみ。「今夜」「今朝」禁止
-  ・19〜21時台 → 「今夜」「今日」「今週」OK
-- 「今夜○時までに」は19時以降スロットのみ使用可""" if slot_info["structure"] not in ("H", "I", "J") else f"""- 構造{slot_info["structure"]}は特殊型のため時間矛盾を起こしやすい表現は使わない
-{f'- 構造Jのフック1行目は必ず「🔮 {date_label}の12星座」とする（日付固定）' if slot_info['structure'] == 'J' else '- 構造H/Iは「今週」「今月」等の時限表現を避ける'}"""}
+  ・6〜9時台  → 「今朝」「今日」「今週」のみ。「今夜」禁止
+  ・12〜15時台 → 「今日」「今週」「今月」のみ。「今夜」「今朝」禁止
+  ・18〜21時台 → 「今夜」「今日」「今週」OK
+- 「今夜○時までに」は18時以降スロットのみ使用可""" if slot_info["structure"] not in ("H", "I", "J") else f"""- 構造{slot_info["structure"]}は特殊型のため時間矛盾を起こしやすい表現は使わない
+{f'- 構造Jのフック1行目は必ず「🔮 {date_label}の12星座」とする（日付固定）' if slot_info['structure'] == 'J' else '- 構造H/Iは「今週」「今月」等の時限表現を避ける（ストック型・時限コンテンツ禁止）'}"""}
 
 【構造{structure}のテンプレート（必ずこの構造で生成）】
 {get_structure_template(structure)}
@@ -749,7 +756,7 @@ def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block
 6. 【最重要】1行目（フック）は必ず15文字以内。16文字以上は閲覧数が激減する実績あり
 
 JSON形式で1件返してください:
-{{"pattern_name": "構造{structure}_{pattern_hint}", "category": "カテゴリ", "content": "本文", "hashtag": "#今日の運勢", "time_slot": "{slot}", "scheduled_hour": {hour}}}
+{{"pattern_name": "構造{structure}_{pattern_hint}", "category": "カテゴリ", "content": "本文", "hashtag": "#今日の運勢", "time_slot": "{slot}", "scheduled_hour": {hour}, "scheduled_minute": {minute}}}
 """
 
 

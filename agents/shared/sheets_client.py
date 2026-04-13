@@ -42,15 +42,15 @@ HEADERS = [
     "スコア", "チェック詳細", "承認✅", "再作成🔄", "修正メモ", "ステータス"
 ]
 
-# スロット番号 → 設定マッピング
+# スロット番号 → 設定マッピング（2026-04-14確定: ゴールデンタイム最適化7スロット）
 SLOT_MAP = {
-    1: {"hour": 8,  "time": "08:07"},
-    2: {"hour": 10, "time": "10:07"},
-    3: {"hour": 12, "time": "12:07"},
-    4: {"hour": 15, "time": "15:07"},
-    5: {"hour": 19, "time": "19:07"},
-    6: {"hour": 21, "time": "21:07", "minute_max": 29},
-    7: {"hour": 21, "time": "21:42", "minute_min": 30},
+    1: {"hour": 6,  "time": "06:07"},   # 朝ゴールデン先頭・めざまし型
+    2: {"hour": 7,  "time": "07:07"},   # 朝ゴールデン中心・天体根拠型
+    3: {"hour": 8,  "time": "08:07"},   # 朝ゴールデン末尾・しいたけ共感型
+    4: {"hour": 9,  "time": "09:37"},   # 第2ゴールデン・仕事アドバイス型
+    5: {"hour": 12, "time": "12:07"},   # 昼休み・スピ×ラッキー型
+    6: {"hour": 18, "time": "18:07"},   # 夕方ゴールデン・哲学深掘り型
+    7: {"hour": 20, "time": "20:07"},   # 夜ゴールデン・夜恋愛型
 }
 
 
@@ -328,21 +328,21 @@ def get_current_slot_num() -> int | None:
     """
     現在時刻から実行中のスロット番号（1〜7）を返す。
     一致するスロットがない場合は None。
+    スロット: 06:07/07:07/08:07/09:37/12:07/18:07/20:07 JST
     """
     now = datetime.now(JST)
     h, m = now.hour, now.minute
-    if h == 8:  return 1
-    if h == 9:  return 1  # 遅延対応
-    if h == 10: return 2
-    if h == 11: return 2
-    if h == 12: return 3
-    if h == 13: return 3
-    if h == 15: return 4
-    if h == 16: return 4
-    if h == 19: return 5
-    if h == 20: return 5
-    if h == 21: return 6 if m < 30 else 7
-    if h == 22: return 7
+    if h == 6:  return 1
+    if h == 7:  return 2
+    if h == 8:  return 3
+    if h == 9:  return 4   # 09:37
+    if h == 10: return 4   # 遅延対応
+    if h == 12: return 5
+    if h == 13: return 5   # 遅延対応
+    if h == 18: return 6
+    if h == 19: return 6   # 遅延対応
+    if h == 20: return 7
+    if h == 21: return 7   # 遅延対応
     return None
 
 

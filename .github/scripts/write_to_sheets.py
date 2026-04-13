@@ -20,30 +20,31 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__
 sys.path.insert(0, PROJECT_DIR)
 
 # スロット番号マッピング（scheduled_hour + time_slot から判定）
+# 2026-04-14確定: ゴールデンタイム最適化7スロット
 SLOT_NUMBER_MAP = {
-    "朝（8〜9時台）":     1,
-    "午前（10〜12時台）": 2,
-    "午後（12〜15時台）": 3,
-    "午後（13〜15時台）": 4,
-    "夜（19〜21時台）":   5,
-    "夜（21:07）":        6,
-    "夜（21:42）":        7,
+    "めざまし型（06:07）":        1,
+    "天体根拠型（07:07）":        2,
+    "しいたけ共感型（08:07）":    3,
+    "仕事アドバイス型（09:37）":  4,
+    "スピ×ラッキー型（12:07）":  5,
+    "哲学深掘り型（18:07）":      6,
+    "夜恋愛型（20:07）":          7,
 }
 
-SLOT_TIME_MAP = {1: "08:07", 2: "10:07", 3: "12:07", 4: "15:07",
-                 5: "19:07", 6: "21:07", 7: "21:42"}
+SLOT_TIME_MAP = {1: "06:07", 2: "07:07", 3: "08:07", 4: "09:37",
+                 5: "12:07", 6: "18:07", 7: "20:07"}
 
 SLOT_TARGET_MAP = {
-    1: "①②③全員",
-    2: "①②③全員",
+    1: "全員",
+    2: "全員",
     3: "①恋愛迷子",
-    4: "②仕事・人生",
+    4: "②仕事迷子",
     5: "③スピ好き",
     6: "②③",
     7: "①恋愛迷子",
 }
 
-SLOT_DIRECTION_MAP = {1: "A", 2: "B", 3: "C", 4: "B", 5: "A", 6: "C", 7: "B"}
+SLOT_DIRECTION_MAP = {1: "J", 2: "C", 3: "H", 4: "G", 5: "F", 6: "H", 7: "G"}
 
 
 def load_json(path):
@@ -62,16 +63,13 @@ def get_slot_num(post: dict) -> int:
 
     # フォールバック: scheduled_hour で判定
     hour = post.get("scheduled_hour", -1)
-    if hour == 8:  return 1
-    if hour == 10: return 2
-    if hour == 12: return 3
-    if hour == 15: return 4
-    if hour == 19: return 5
-    if hour == 21:
-        # time_slot の文字列で区別
-        if "21:07" in time_slot or "21:07" in post.get("id", ""):
-            return 6
-        return 7  # デフォルトは21:42
+    if hour == 6:  return 1
+    if hour == 7:  return 2
+    if hour == 8:  return 3
+    if hour == 9:  return 4   # 09:37
+    if hour == 12: return 5
+    if hour == 18: return 6
+    if hour == 20: return 7
 
     return 0  # 不明
 

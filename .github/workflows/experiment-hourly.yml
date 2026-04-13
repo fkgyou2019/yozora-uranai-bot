@@ -1,17 +1,17 @@
-name: Auto Post (1日6件・最低2時間間隔)
+name: Auto Post (1日7件・ゴールデンタイム最適化)
 
 on:
   schedule:
-    # 7スロット: 08:07 / 10:07 / 12:07 / 15:07 / 19:07 / 21:07 / 21:42 JST (UTC = JST - 9h)
-    # PDCA変更(2026-04-10): 07:07廃止(avg164)→08:07に移動、21:07追加(21時avg295=2位)
+    # 7スロット: 06:07 / 07:07 / 08:07 / 09:37 / 12:07 / 18:07 / 20:07 JST (UTC = JST - 9h)
+    # 2026-04-14確定: ゴールデンタイム完全対応版
     # ※ GitHub Actionsのcronは最大15分遅延あり。post-verifyが実際の投稿を担保する
-    - cron: '7 23 * * *'   #  8:07 JST (旧07:07→08:07に変更。早朝より朝通勤帯)
-    - cron: '7 1 * * *'    # 10:07 JST (最強スロット avg623)
-    - cron: '7 3 * * *'    # 12:07 JST
-    - cron: '7 6 * * *'    # 15:07 JST
-    - cron: '7 10 * * *'   # 19:07 JST
-    - cron: '7 12 * * *'   # 21:07 JST (追加: 21時avg295=2位)
-    - cron: '42 12 * * *'  # 21:42 JST
+    - cron: '7 21 * * *'   #  6:07 JST (朝ゴールデン先頭・めざまし型)
+    - cron: '7 22 * * *'   #  7:07 JST (朝ゴールデン中心・通勤開始・天体根拠型)
+    - cron: '7 23 * * *'   #  8:07 JST (朝ゴールデン末尾・通勤ピーク・しいたけ共感型)
+    - cron: '37 0 * * *'   #  9:37 JST (第2ゴールデン内・仕事アドバイス型)
+    - cron: '7 3 * * *'    # 12:07 JST (昼休み・スピ×ラッキー型)
+    - cron: '7 9 * * *'    # 18:07 JST (夕方ゴールデン・哲学深掘り型)
+    - cron: '7 11 * * *'   # 20:07 JST (夜ゴールデン・夜恋愛型)
   workflow_dispatch:
 
 permissions:
@@ -97,7 +97,7 @@ jobs:
         run: |
           python -c "
           import json, os
-          VALID_STRUCTURES = {'G', 'F'}  # 再現性テスト期間: G(固定レシピ)×5 + F×2 のみ
+          VALID_STRUCTURES = {'G', 'H', 'C', 'F', 'J'}  # 新7スロット対応: J/C/H/G/F の全コンテンツタイプを許可
           path = 'state/post-queue.json'
           q = json.load(open(path, encoding='utf-8')) if os.path.exists(path) else {'queue': []}
           before = len([p for p in q.get('queue', []) if p.get('status') == 'queued'])
