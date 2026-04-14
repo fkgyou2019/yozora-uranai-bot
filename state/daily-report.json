@@ -1,7 +1,7 @@
 {
   "date": "2026-04-14",
-  "generated_at": "2026-04-14T09:09:41+09:00",
-  "one_line": "2026-04-14 | 1件投稿 (1件計測済み) | フックOK 1/1件 | 平均v=56.0 | 構造G再現性: テスト中（13/42件成功・6件判定待ち）",
+  "generated_at": "2026-04-14T15:13:39+09:00",
+  "one_line": "2026-04-14 | 6件投稿 (3件計測済み) | フックOK 4/6件 | 違反: 10時: 20字「実は、昼休みが最強の運気リセットタイム。」, 15時: 20字「迷いながら進む人ほど、星は応援している。」 | 平均v=95.0 | 構造G再現性: テスト中（14/45件成功・5件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -16,35 +16,108 @@
       "reposts": 0,
       "er": 8.93,
       "measured": true
+    },
+    {
+      "hour": 9,
+      "struct": "J",
+      "pattern": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+      "hook": "🔮 4/14の12星座",
+      "hook_len": 11,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 10,
+      "struct": "F",
+      "pattern": "構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
+      "hook": "実は、昼休みが最強の運気リセットタイム。",
+      "hook_len": 20,
+      "hook_ok": false,
+      "views": 14,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": true
+    },
+    {
+      "hour": 12,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明後日から、人間関係が",
+      "hook_len": 11,
+      "hook_ok": true,
+      "views": 215,
+      "likes": 21,
+      "comments": 0,
+      "reposts": 0,
+      "er": 9.77,
+      "measured": true
+    },
+    {
+      "hour": 15,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 15,
+      "struct": "H",
+      "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "hook": "迷いながら進む人ほど、星は応援している。",
+      "hook_len": 20,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
     }
   ],
   "summary": {
-    "total": 1,
-    "measured": 1,
-    "hook_ok": 1,
-    "hook_violations": 0,
-    "violations": [],
-    "total_views": 56,
-    "avg_views": 56.0,
-    "best_hook": "🔮 4/14の12星座",
-    "best_views": 56,
-    "best_er": 8.93
+    "total": 6,
+    "measured": 3,
+    "hook_ok": 4,
+    "hook_violations": 2,
+    "violations": [
+      "10時: 20字「実は、昼休みが最強の運気リセットタイム。」",
+      "15時: 20字「迷いながら進む人ほど、星は応援している。」"
+    ],
+    "total_views": 285,
+    "avg_views": 95.0,
+    "best_hook": "明後日から、人間関係が",
+    "best_views": 215,
+    "best_er": 9.77
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 9,
-    "total_posts": 56,
-    "judged_posts": 50,
-    "pending_posts": 6,
-    "measured_posts": 42,
-    "success_posts": 13,
-    "success_rate": 31.0,
+    "total_posts": 58,
+    "judged_posts": 53,
+    "pending_posts": 5,
+    "measured_posts": 45,
+    "success_posts": 14,
+    "success_rate": 31.1,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（13/42件成功・6件判定待ち）"
+    "status": "テスト中（14/45件成功・5件判定待ち）"
   },
   "hc": {
-    "runs": 5,
+    "runs": 8,
     "deleted": 0
   }
 }
