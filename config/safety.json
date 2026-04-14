@@ -27,8 +27,8 @@
     "affiliate_enabled": false,
     "affiliate_note": "ASP登録完了後にtrueに変更。asp-links.jsonのaffiliate_urlも実URLに差替えること",
     "duplicate_check": true,
-    "banned_hours": [0, 1, 2, 3, 4, 5, 6],
-    "note": "2時間以上間隔 / 1日8件上限 / 深夜0-6時は投稿禁止（0時追加: 4/4に0:06・0:57投稿が発生した反省）",
+    "banned_hours": [0, 1, 2, 3, 4, 5],
+    "note": "2時間以上間隔 / 1日8件上限 / 深夜0-5時は投稿禁止。6時はゴールデンタイムスロット(06:07)のため除外",
     "platform_rules": {
       "x": {
         "max_chars": 280,

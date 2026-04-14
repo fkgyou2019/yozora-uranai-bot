@@ -151,6 +151,7 @@ jobs:
         env:
           PYTHONIOENCODING: utf-8
           GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
+          SCHEDULED_POST: "1"
 
       - name: Fetch metrics & analyze (learning loop)
         if: steps.period_check.outputs.in_period == 'true'

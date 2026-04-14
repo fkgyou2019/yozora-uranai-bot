@@ -346,22 +346,29 @@ def main():
     pending = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
 
     if pending:
-        # scheduled_hour チェック + 直近投稿と類似しないものを選ぶ
+        # 最近傍スロット選択: scheduled_hour が現在時刻に最も近い候補を優先
+        # verify_postは投稿スロット+15分後に起動するため、その時刻スロットが最優先
         now_jst = datetime.now(JST)
         current_hour = now_jst.hour
-        selected_post = None
+        eligible_with_diff = []
         for candidate in pending:
-            # scheduled_hour チェック: 指定時間帯の前後2時間以内のみ投稿可
             sched_h = candidate.get("scheduled_hour", -1)
-            if sched_h >= 0:
-                time_diff = current_hour - sched_h
-                if time_diff < 0:
-                    log("INFO", f"未来スロットのためスキップ: scheduled_hour={sched_h:02d}:00, 現在={current_hour:02d}:00")
-                    continue
-                if time_diff > 2:
-                    log("INFO", f"時間切れスロットのためスキップ: scheduled_hour={sched_h:02d}:00, 現在={current_hour:02d}:00 (+{time_diff}h)")
-                    continue
+            if sched_h < 0:
+                eligible_with_diff.append((99, candidate))
+                continue
+            diff = current_hour - sched_h
+            if diff < 0:
+                log("INFO", f"未来スロットのためスキップ: slot={sched_h:02d}:00, 現在={current_hour:02d}:00")
+                continue
+            if diff > 2:
+                log("INFO", f"時間切れスロットのためスキップ: slot={sched_h:02d}:00 (+{diff}h)")
+                continue
+            eligible_with_diff.append((diff, candidate))
+        # diff昇順ソート（現在時刻に最も近いスロット優先）
+        eligible_with_diff.sort(key=lambda x: x[0])
 
+        selected_post = None
+        for _, candidate in eligible_with_diff:
             cand_content = candidate.get("content", "")
             is_similar, sim_score, similar_preview = is_too_similar_to_recent(
                 cand_content, history, n=10

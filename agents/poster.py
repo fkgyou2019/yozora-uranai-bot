@@ -335,8 +335,10 @@ def _post_one_inner():
     if not check_banned_hours(safety):
         return
     # FORCE_POST=1 の場合は間隔チェックをスキップ（ヘルスチェック後の再投稿用）
+    # SCHEDULED_POST=1 の場合も間隔チェックをスキップ（cronスケジュール投稿用：07:07等の60分間隔スロット対応）
     force_post = os.environ.get("FORCE_POST", "0") == "1"
-    if not force_post and not check_posting_interval(history, safety):
+    scheduled_post = os.environ.get("SCHEDULED_POST", "0") == "1"
+    if not force_post and not scheduled_post and not check_posting_interval(history, safety):
         return
     if not check_daily_limit(status, safety):
         return
@@ -392,25 +394,37 @@ def _post_one_inner():
 
     import re as _re
 
-    post = None
+    # ============================================================
+    # 最近傍スロット選択: scheduled_hour が現在時刻に最も近い候補を優先
+    # FORCE_POST=1 or SCHEDULED_POST=1 の場合は時間制限を緩和
+    # ============================================================
+    eligible_with_diff = []
     for candidate in pending:
-        content = candidate.get("content", "")
+        sched_h = candidate.get("scheduled_hour", -1)
+        if sched_h < 0:
+            # scheduled_hour なし → 優先度最低として追加
+            eligible_with_diff.append((99, candidate))
+            continue
+        if force_post or scheduled_post:
+            # FORCE/SCHEDULED時は未来スロットも含め全候補を追加（最近傍順）
+            diff = abs(current_hour - sched_h)
+            eligible_with_diff.append((diff, candidate))
+        else:
+            diff = current_hour - sched_h
+            if diff < 0:
+                log("INFO", f"未来スロットのためスキップ: slot={sched_h:02d}:00, 現在={current_hour:02d}:00")
+                continue
+            if diff > 2:
+                log("INFO", f"時間切れスロットのためスキップ: slot={sched_h:02d}:00 (+{diff}h)")
+                continue
+            eligible_with_diff.append((diff, candidate))
 
-        # ============================================================
-        # scheduled_hour チェック（FORCE_POST=1 の場合はスキップ）
-        # scheduled_hour が設定されたキューアイテムは、指定時間帯以外に投稿しない
-        # - 未来スロット（current_hour < scheduled_hour）: スキップ
-        # - 2時間以上前のスロット（time_diff > 2）: スキップ（stale）
-        # ============================================================
-        scheduled_hour = candidate.get("scheduled_hour", -1)
-        if scheduled_hour >= 0 and not force_post:
-            time_diff = current_hour - scheduled_hour
-            if time_diff < 0:
-                log("INFO", f"未来スロットのためスキップ: scheduled_hour={scheduled_hour:02d}:00, 現在={current_hour:02d}:00 | {content[:20]}")
-                continue
-            if time_diff > 2:
-                log("INFO", f"時間切れスロットのためスキップ: scheduled_hour={scheduled_hour:02d}:00, 現在={current_hour:02d}:00 (+{time_diff}h) | {content[:20]}")
-                continue
+    # diff昇順ソート（現在時刻に最も近いスロット優先）
+    eligible_with_diff.sort(key=lambda x: x[0])
+
+    post = None
+    for _, candidate in eligible_with_diff:
+        content = candidate.get("content", "")
 
         skip_reason = check_time_contradiction(content, current_hour)
         if skip_reason:
