@@ -3119,7 +3119,59 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-14T21:10:48.244194+09:00"
+    },
+    {
+      "id": "post_20260414_1758_exp_002",
+      "platform_post_id": "18087928706339573",
+      "posted_at": "2026-04-14T20:42:18.823035+09:00",
+      "pattern_name": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+      "category": "恋愛運",
+      "content_preview": "今週後半、恋が動く星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n【牡羊座】\n月が恋愛ゾ",
+      "first_line": "今週後半、恋が動く星座。",
+      "char_count": 222,
+      "metrics": {
+        "views": 141,
+        "likes": 18,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 12.77
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-15T00:54:13.662056+09:00"
+    },
+    {
+      "id": "post_20260414_2110_exp_007",
+      "platform_post_id": "18134944531536883",
+      "posted_at": "2026-04-14T21:42:18.842964+09:00",
+      "pattern_name": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+      "category": "恋愛運",
+      "content_preview": "今週後半、恋が動く星座。\nたった3つだけです。\n\n牡牛座、獅子座、射手座\n\n牡牛座さんは、来週初め急",
+      "first_line": "今週後半、恋が動く星座。",
+      "char_count": 190,
+      "metrics": {
+        "views": 134,
+        "likes": 19,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 14.18
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-15T00:54:13.662056+09:00"
     }
   ],
-  "last_updated": "2026-04-14T21:10:48.244194+09:00"
+  "last_updated": "2026-04-15T00:54:13.662056+09:00"
 }
