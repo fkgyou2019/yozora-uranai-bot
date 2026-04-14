@@ -330,7 +330,8 @@ def main():
         if status == "RED":
             delete_today = load_delete_count_today(rate_file)
             if delete_today >= MAX_DELETES_PER_DAY:
-                print(f"  ⚠ 本日の削除上限到達 → pending-deletions.json に積む")
+                # 日次上限到達 → pendingに積むだけ（削除APIは呼ばない）
+                print(f"  ⚠ 本日の削除上限到達({MAX_DELETES_PER_DAY}件) → pending-deletions.json に積む")
                 pd_path = os.path.join(PROJECT_DIR, "state/pending-deletions.json")
                 pd = json.load(open(pd_path, encoding="utf-8")) if os.path.exists(pd_path) else {"pending": []}
                 existing_ids = {x["post_id"] for x in pd["pending"]}
@@ -339,48 +340,49 @@ def main():
                     with open(pd_path, "w", encoding="utf-8") as f:
                         json.dump(pd, f, ensure_ascii=False, indent=2)
             else:
+                # 上限未達 → 削除実行
                 print(f"  → 削除実行（本日 {delete_today+1}/{MAX_DELETES_PER_DAY}件目）...")
-            try:
-                result = threads_api_delete(pid, token)
-                if result.get("success"):
-                    total = record_delete(rate_file)
-                    print(f"  ✅ 削除成功: {pid} (本日累計 {total}/{MAX_DELETES_PER_DAY}件)")
-                    deleted_count += 1
-                    actually_deleted = True
-                else:
-                    print(f"  ❌ 削除失敗（API応答）: {result}")
-            except urllib.error.HTTPError as e:
-                body = e.read().decode("utf-8", errors="replace")
-                if "does not exist" in body or '"error_subcode": 33' in body or '"error_subcode":33' in body:
-                    # 既に削除済み
-                    print(f"  ✅ 既に削除済み: {pid}")
-                    deleted_count += 1
-                    actually_deleted = True
-                elif "rate limit" in body.lower() or e.code == 429 or '"code": 613' in body or '"code":613' in body:
-                    print(f"  ⚠ レート制限中 → pending-deletions.json に積む")
-                    # 削除待ちキューに保存（次回ヘルスチェック時に再試行）
-                    pd_path = os.path.join(PROJECT_DIR, "state/pending-deletions.json")
-                    if os.path.exists(pd_path):
-                        with open(pd_path, encoding="utf-8") as f:
-                            pd = json.load(f)
+                try:
+                    result = threads_api_delete(pid, token)
+                    if result.get("success"):
+                        total = record_delete(rate_file)
+                        print(f"  ✅ 削除成功: {pid} (本日累計 {total}/{MAX_DELETES_PER_DAY}件)")
+                        deleted_count += 1
+                        actually_deleted = True
                     else:
-                        pd = {"pending": []}
-                    # 重複追加しない
-                    existing_ids = {x["post_id"] for x in pd["pending"]}
-                    if pid not in existing_ids:
-                        pd["pending"].append({
-                            "post_id": pid,
-                            "reason": reason,
-                            "queued_at": now.isoformat(),
-                            "text_preview": text[:40],
-                        })
-                        with open(pd_path, "w", encoding="utf-8") as f:
-                            json.dump(pd, f, ensure_ascii=False, indent=2)
-                        print(f"  → pending-deletions.json に追加: {pid}")
-                else:
-                    print(f"  ❌ 削除エラー HTTP {e.code}: {body[:120]}")
-            except Exception as e:
-                print(f"  ❌ 削除エラー: {e}")
+                        print(f"  ❌ 削除失敗（API応答）: {result}")
+                except urllib.error.HTTPError as e:
+                    body = e.read().decode("utf-8", errors="replace")
+                    if "does not exist" in body or '"error_subcode": 33' in body or '"error_subcode":33' in body:
+                        # 既に削除済み
+                        print(f"  ✅ 既に削除済み: {pid}")
+                        deleted_count += 1
+                        actually_deleted = True
+                    elif "rate limit" in body.lower() or e.code == 429 or '"code": 613' in body or '"code":613' in body:
+                        print(f"  ⚠ レート制限中 → pending-deletions.json に積む")
+                        # 削除待ちキューに保存（次回ヘルスチェック時に再試行）
+                        pd_path = os.path.join(PROJECT_DIR, "state/pending-deletions.json")
+                        if os.path.exists(pd_path):
+                            with open(pd_path, encoding="utf-8") as f:
+                                pd = json.load(f)
+                        else:
+                            pd = {"pending": []}
+                        # 重複追加しない
+                        existing_ids = {x["post_id"] for x in pd["pending"]}
+                        if pid not in existing_ids:
+                            pd["pending"].append({
+                                "post_id": pid,
+                                "reason": reason,
+                                "queued_at": now.isoformat(),
+                                "text_preview": text[:40],
+                            })
+                            with open(pd_path, "w", encoding="utf-8") as f:
+                                json.dump(pd, f, ensure_ascii=False, indent=2)
+                            print(f"  → pending-deletions.json に追加: {pid}")
+                    else:
+                        print(f"  ❌ 削除エラー HTTP {e.code}: {body[:120]}")
+                except Exception as e:
+                    print(f"  ❌ 削除エラー: {e}")
 
         results.append({
             "post_id": pid,
