@@ -1,7 +1,7 @@
 {
   "date": "2026-04-14",
-  "generated_at": "2026-04-14T15:23:31+09:00",
-  "one_line": "2026-04-14 | 7件投稿 (3件計測済み) | フックOK 4/7件 | 違反: 10時: 20字「実は、昼休みが最強の運気リセットタイム。」, 15時: 20字「迷いながら進む人ほど、星は応援している。」, 15時: 33字「占いを求める人の9割は、答えじゃなく「決断の許可」」 | 平均v=95.0 | 構造G再現性: テスト中（14/45件成功・5件判定待ち）",
+  "generated_at": "2026-04-14T17:58:42+09:00",
+  "one_line": "2026-04-14 | 8件投稿 (4件計測済み) | フックOK 4/8件 | 違反: 10時: 20字「実は、昼休みが最強の運気リセットタイム。」, 15時: 20字「迷いながら進む人ほど、星は応援している。」, 15時: 33字「占いを求める人の9割は、答えじゃなく「決断の許可」」, 17時: 21字「占いは迷った時の地図じゃなく、鏡だと思う。」 | 平均v=103.5 | 構造G再現性: テスト中（15/46件成功・4件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "🔮 4/14の12星座",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 56,
-      "likes": 5,
+      "views": 68,
+      "likes": 7,
       "comments": 0,
       "reposts": 0,
-      "er": 8.93,
+      "er": 10.29,
       "measured": true
     },
     {
@@ -52,11 +52,11 @@
       "hook": "明後日から、人間関係が",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 215,
+      "views": 222,
       "likes": 21,
       "comments": 0,
       "reposts": 0,
-      "er": 9.77,
+      "er": 9.46,
       "measured": true
     },
     {
@@ -67,7 +67,7 @@
       "hook_len": 9,
       "hook_ok": true,
       "views": 0,
-      "likes": 0,
+      "likes": 4,
       "comments": 0,
       "reposts": 0,
       "er": 0,
@@ -94,6 +94,20 @@
       "hook": "占いを求める人の9割は、答えじゃなく「決断の許可」を欲しがってる。",
       "hook_len": 33,
       "hook_ok": false,
+      "views": 110,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": true
+    },
+    {
+      "hour": 17,
+      "struct": "H",
+      "pattern": "構造H_しいたけ式深掘り哲学型",
+      "hook": "占いは迷った時の地図じゃなく、鏡だと思う。",
+      "hook_len": 21,
+      "hook_ok": false,
       "views": 0,
       "likes": 0,
       "comments": 0,
@@ -103,36 +117,37 @@
     }
   ],
   "summary": {
-    "total": 7,
-    "measured": 3,
+    "total": 8,
+    "measured": 4,
     "hook_ok": 4,
-    "hook_violations": 3,
+    "hook_violations": 4,
     "violations": [
       "10時: 20字「実は、昼休みが最強の運気リセットタイム。」",
       "15時: 20字「迷いながら進む人ほど、星は応援している。」",
-      "15時: 33字「占いを求める人の9割は、答えじゃなく「決断の許可」」"
+      "15時: 33字「占いを求める人の9割は、答えじゃなく「決断の許可」」",
+      "17時: 21字「占いは迷った時の地図じゃなく、鏡だと思う。」"
     ],
-    "total_views": 285,
-    "avg_views": 95.0,
+    "total_views": 414,
+    "avg_views": 103.5,
     "best_hook": "明後日から、人間関係が",
-    "best_views": 215,
-    "best_er": 9.77
+    "best_views": 222,
+    "best_er": 9.46
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 9,
     "total_posts": 58,
-    "judged_posts": 53,
-    "pending_posts": 5,
-    "measured_posts": 45,
-    "success_posts": 14,
-    "success_rate": 31.1,
+    "judged_posts": 54,
+    "pending_posts": 4,
+    "measured_posts": 46,
+    "success_posts": 15,
+    "success_rate": 32.6,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（14/45件成功・5件判定待ち）"
+    "status": "テスト中（15/46件成功・4件判定待ち）"
   },
   "hc": {
-    "runs": 9,
+    "runs": 11,
     "deleted": 0
   }
 }

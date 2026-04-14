@@ -2989,7 +2989,85 @@
         "hook_length": 11
       },
       "collected_at": "2026-04-14T15:13:34.232533+09:00"
+    },
+    {
+      "id": "verify-retry-20260414151221",
+      "platform_post_id": "18099436867825007",
+      "posted_at": "2026-04-14T15:12:21.508040+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n金運が急上昇する星座。\n\nたった2つだけです。\n\n🔮射手座\n思わぬ臨時収入の暗示",
+      "first_line": "明日からの3日間、",
+      "char_count": 196,
+      "metrics": {
+        "views": 395,
+        "likes": 48,
+        "replies": 4,
+        "reposts": 0,
+        "engagement_rate": 13.16
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-14T17:58:36.569489+09:00"
+    },
+    {
+      "id": "post_20260414_0831_exp_006",
+      "platform_post_id": "17911967757181811",
+      "posted_at": "2026-04-14T15:13:34.153206+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の日常・哲学",
+      "content_preview": "迷いながら進む人ほど、星は応援している。\n\n仕事を辞めたいと相談してくれる人は多い。でも占い師として",
+      "first_line": "迷いながら進む人ほど、星は応援している。",
+      "char_count": 194,
+      "metrics": {
+        "views": 78,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 1.28
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 20
+      },
+      "collected_at": "2026-04-14T17:58:36.569489+09:00"
+    },
+    {
+      "id": "post_20260414_1522_exp_001",
+      "platform_post_id": "17942012121179032",
+      "posted_at": "2026-04-14T15:22:34.361431+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の思考",
+      "content_preview": "占いを求める人の9割は、答えじゃなく「決断の許可」を欲しがってる。\n\n仕事で迷った時、恋愛で揺れた時",
+      "first_line": "占いを求める人の9割は、答えじゃなく「決断の許可」を欲しがっ",
+      "char_count": 198,
+      "metrics": {
+        "views": 110,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 33
+      },
+      "collected_at": "2026-04-14T17:58:36.569489+09:00"
     }
   ],
-  "last_updated": "2026-04-14T15:22:34.444648+09:00"
+  "last_updated": "2026-04-14T17:58:36.569489+09:00"
 }
