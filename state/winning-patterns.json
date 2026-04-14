@@ -252,7 +252,7 @@
   ],
   "auto_analysis": {
     "data_count": 113,
-    "last_analyzed": "2026-04-14T08:31:37.714392+09:00",
+    "last_analyzed": "2026-04-14T09:09:41.649396+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -997,7 +997,7 @@
     ]
   },
   "data_count": 113,
-  "last_analyzed": "2026-04-14T08:31:37.714392+09:00",
+  "last_analyzed": "2026-04-14T09:09:41.649396+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {

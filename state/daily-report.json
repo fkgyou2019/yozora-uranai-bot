@@ -1,7 +1,7 @@
 {
   "date": "2026-04-14",
-  "generated_at": "2026-04-14T08:31:37+09:00",
-  "one_line": "2026-04-14 | 1件投稿 (1件計測済み) | フックOK 1/1件 | 平均v=52.0 | 構造G再現性: テスト中（13/42件成功・6件判定待ち）",
+  "generated_at": "2026-04-14T09:09:41+09:00",
+  "one_line": "2026-04-14 | 1件投稿 (1件計測済み) | フックOK 1/1件 | 平均v=56.0 | 構造G再現性: テスト中（13/42件成功・6件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "🔮 4/14の12星座",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 52,
+      "views": 56,
       "likes": 5,
       "comments": 0,
       "reposts": 0,
-      "er": 9.62,
+      "er": 8.93,
       "measured": true
     }
   ],
@@ -24,11 +24,11 @@
     "hook_ok": 1,
     "hook_violations": 0,
     "violations": [],
-    "total_views": 52,
-    "avg_views": 52.0,
+    "total_views": 56,
+    "avg_views": 56.0,
     "best_hook": "🔮 4/14の12星座",
-    "best_views": 52,
-    "best_er": 9.62
+    "best_views": 56,
+    "best_er": 8.93
   },
   "reproducibility_test": {
     "target": "構造G",
@@ -44,7 +44,7 @@
     "status": "テスト中（13/42件成功・6件判定待ち）"
   },
   "hc": {
-    "runs": 4,
+    "runs": 5,
     "deleted": 0
   }
 }
