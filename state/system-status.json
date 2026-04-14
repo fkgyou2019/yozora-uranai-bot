@@ -1,5 +1,5 @@
 {
-  "kill_switch": true,
+  "kill_switch": false,
   "last_run": null,
   "agents": {
     "researcher": {

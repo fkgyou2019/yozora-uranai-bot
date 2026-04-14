@@ -811,14 +811,17 @@ def call_claude_api_single(api_key, prompt):
         return None
 
 
-def generate_experiment_posts(api_key, today, used_patterns, learning_block):
-    """実験モード: 18スロット分の投稿を1件ずつ生成してリストで返す"""
+def generate_experiment_posts(api_key, today, used_patterns, learning_block, slots_to_generate=None):
+    """実験モード: 指定スロット分の投稿を1件ずつ生成してリストで返す"""
     import time as _time
 
-    posts = []
-    print(f"\n--- 実験モード: {len(EXPERIMENT_TIME_SLOTS)}スロット分を生成中 ---")
+    if slots_to_generate is None:
+        slots_to_generate = EXPERIMENT_TIME_SLOTS
 
-    for slot_info in EXPERIMENT_TIME_SLOTS:
+    posts = []
+    print(f"\n--- 実験モード: {len(slots_to_generate)}スロット分を生成中 ---")
+
+    for slot_info in slots_to_generate:
         hour = slot_info["hour"]
         print(f"  [{hour}時台] 構造{slot_info['structure']}: {slot_info['pattern_hint'][:20]}...", end=" ", flush=True)
         prompt = build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block)
@@ -839,7 +842,7 @@ def generate_experiment_posts(api_key, today, used_patterns, learning_block):
         # rate limit対策
         _time.sleep(2)
 
-    print(f"  実験モード生成完了: {len(posts)}/{len(EXPERIMENT_TIME_SLOTS)}件")
+    print(f"  実験モード生成完了: {len(posts)}/{len(slots_to_generate)}件")
     return posts
 
 
@@ -958,16 +961,38 @@ def main():
     x_posts = []
 
     # ========================================
-    # 実験モード: 18スロット分の投稿を個別生成
+    # 実験モード: 7スロット分の投稿を個別生成
     # ========================================
     if experiment_mode:
-        threads_posts = generate_experiment_posts(api_key, today, used_patterns, learning_block)
+        today_str = datetime.now(JST).strftime("%Y%m%d")
+        time_str = datetime.now(JST).strftime("%H%M")
+
+        # 当日すでにqueuedのスロット時間を確認（投稿済み・キュー済みの重複生成を防止）
+        existing_queued_hours = {
+            p.get("scheduled_hour")
+            for p in queue.get("queue", [])
+            if p.get("status") == "queued" and p.get("id", "").startswith(f"post_{today_str}_")
+        }
+        # 投稿済み（posted/error）のスロット時間も除外（再生成による二重投稿を防止）
+        existing_posted_hours = {
+            p.get("scheduled_hour")
+            for p in queue.get("queue", [])
+            if p.get("status") in ("posted", "error") and p.get("id", "").startswith(f"post_{today_str}_")
+        }
+        skip_hours = existing_queued_hours | existing_posted_hours
+
+        # まだキューにないスロットのみ生成
+        slots_to_generate = [s for s in EXPERIMENT_TIME_SLOTS if s["hour"] not in skip_hours]
+
+        if not slots_to_generate:
+            print(f"全スロット生成済み（queued:{len(existing_queued_hours)}件 / posted:{len(existing_posted_hours)}件）。スキップ。")
+            return
+
+        print(f"生成対象: {len(slots_to_generate)}スロット（スキップ: {len(skip_hours)}件）")
+        threads_posts = generate_experiment_posts(api_key, today, used_patterns, learning_block, slots_to_generate)
         if not threads_posts:
             print("ERROR: 実験モード投稿の生成に全て失敗")
             sys.exit(1)
-
-        today_str = datetime.now(JST).strftime("%Y%m%d")
-        time_str = datetime.now(JST).strftime("%H%M")
 
         for i, p in enumerate(threads_posts):
             p["id"] = f"post_{today_str}_{time_str}_exp_{i + 1:03d}"
@@ -976,8 +1001,11 @@ def main():
             p.setdefault("affiliate_comment", None)
             p["status"] = "queued"
 
-        # 同日分を削除して新規追加
-        queue["queue"] = [p for p in queue["queue"] if not p.get("id", "").startswith(f"post_{today_str}_")]
+        # 当日分のqueuedのみ削除（posted/error等は保持 → 二重投稿防止）
+        queue["queue"] = [
+            p for p in queue["queue"]
+            if not (p.get("id", "").startswith(f"post_{today_str}_") and p.get("status") == "queued")
+        ]
         queue["queue"].extend(threads_posts)
 
         save_json("state/post-queue.json", queue)
