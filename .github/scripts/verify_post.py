@@ -334,11 +334,11 @@ def main():
     log("INFO", "最新投稿を確認中...")
     latest = fetch_latest_thread(user_id, access_token)
 
-    if is_recent_post(latest, minutes=15):
-        log("INFO", "OK: 直近15分以内に投稿あり。再投稿不要。")
+    if is_recent_post(latest, minutes=30):
+        log("INFO", "OK: 直近30分以内に投稿あり。再投稿不要。")
         return
 
-    log("WARN", "直近15分以内に投稿なし。再投稿を開始します。")
+    log("WARN", "直近30分以内に投稿なし。再投稿を開始します。")
 
     # ステップ2: キューから1件取り出して投稿（類似度チェック付き）
     queue = load_json("state/post-queue.json")
