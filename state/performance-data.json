@@ -3067,7 +3067,59 @@
         "hook_length": 33
       },
       "collected_at": "2026-04-14T17:58:36.569489+09:00"
+    },
+    {
+      "id": "post_20260414_1758_exp_001",
+      "platform_post_id": "18321127822283439",
+      "posted_at": "2026-04-14T17:58:36.488651+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型",
+      "category": "占い師の視点・内省モード",
+      "content_preview": "占いは迷った時の地図じゃなく、鏡だと思う。\n\n仕事の選択肢で悩んでいる人から相談をもらう度に気づくの",
+      "first_line": "占いは迷った時の地図じゃなく、鏡だと思う。",
+      "char_count": 234,
+      "metrics": {
+        "views": 16,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 21
+      },
+      "collected_at": "2026-04-14T21:10:48.244194+09:00"
+    },
+    {
+      "id": "verify-retry-20260414191222",
+      "platform_post_id": "18108711364894696",
+      "posted_at": "2026-04-14T19:12:22.207747+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n金銭判断を誤りやすい星座。\n\nたった2つだけ要注意です。\n\n【牡牛座】\n衝動買い",
+      "first_line": "明日からの3日間、",
+      "char_count": 178,
+      "metrics": {
+        "views": 136,
+        "likes": 7,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 5.15
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-14T21:10:48.244194+09:00"
     }
   ],
-  "last_updated": "2026-04-14T17:58:36.569489+09:00"
+  "last_updated": "2026-04-14T21:10:48.244194+09:00"
 }

@@ -1,7 +1,7 @@
 {
   "date": "2026-04-14",
-  "generated_at": "2026-04-14T17:58:42+09:00",
-  "one_line": "2026-04-14 | 8件投稿 (4件計測済み) | フックOK 4/8件 | 違反: 10時: 20字「実は、昼休みが最強の運気リセットタイム。」, 15時: 20字「迷いながら進む人ほど、星は応援している。」, 15時: 33字「占いを求める人の9割は、答えじゃなく「決断の許可」」, 17時: 21字「占いは迷った時の地図じゃなく、鏡だと思う。」 | 平均v=103.5 | 構造G再現性: テスト中（15/46件成功・4件判定待ち）",
+  "generated_at": "2026-04-14T21:11:03+09:00",
+  "one_line": "2026-04-14 | 10件投稿 (8件計測済み) | フックOK 6/10件 | 違反: 10時: 20字「実は、昼休みが最強の運気リセットタイム。」, 15時: 20字「迷いながら進む人ほど、星は応援している。」, 15時: 33字「占いを求める人の9割は、答えじゃなく「決断の許可」」, 17時: 21字「占いは迷った時の地図じゃなく、鏡だと思う。」 | 平均v=149.8 | 構造G再現性: テスト中（15/48件成功・4件判定待ち） | HC削除: 2件",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "🔮 4/14の12星座",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 68,
+      "views": 72,
       "likes": 7,
       "comments": 0,
       "reposts": 0,
-      "er": 10.29,
+      "er": 9.72,
       "measured": true
     },
     {
@@ -38,7 +38,7 @@
       "hook": "実は、昼休みが最強の運気リセットタイム。",
       "hook_len": 20,
       "hook_ok": false,
-      "views": 14,
+      "views": 19,
       "likes": 0,
       "comments": 0,
       "reposts": 0,
@@ -52,11 +52,11 @@
       "hook": "明後日から、人間関係が",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 222,
-      "likes": 21,
+      "views": 288,
+      "likes": 36,
       "comments": 0,
       "reposts": 0,
-      "er": 9.46,
+      "er": 12.5,
       "measured": true
     },
     {
@@ -66,12 +66,12 @@
       "hook": "明日からの3日間、",
       "hook_len": 9,
       "hook_ok": true,
-      "views": 0,
-      "likes": 4,
-      "comments": 0,
+      "views": 532,
+      "likes": 72,
+      "comments": 4,
       "reposts": 0,
-      "er": 0,
-      "measured": false
+      "er": 14.29,
+      "measured": true
     },
     {
       "hour": 15,
@@ -80,12 +80,12 @@
       "hook": "迷いながら進む人ほど、星は応援している。",
       "hook_len": 20,
       "hook_ok": false,
-      "views": 0,
-      "likes": 0,
+      "views": 81,
+      "likes": 1,
       "comments": 0,
       "reposts": 0,
-      "er": 0,
-      "measured": false
+      "er": 1.23,
+      "measured": true
     },
     {
       "hour": 15,
@@ -108,6 +108,34 @@
       "hook": "占いは迷った時の地図じゃなく、鏡だと思う。",
       "hook_len": 21,
       "hook_ok": false,
+      "views": 16,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": true
+    },
+    {
+      "hour": 19,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 80,
+      "likes": 7,
+      "comments": 0,
+      "reposts": 0,
+      "er": 8.75,
+      "measured": true
+    },
+    {
+      "hour": 20,
+      "struct": "G",
+      "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+      "hook": "今週後半、恋が動く星座。",
+      "hook_len": 12,
+      "hook_ok": true,
       "views": 0,
       "likes": 0,
       "comments": 0,
@@ -117,9 +145,9 @@
     }
   ],
   "summary": {
-    "total": 8,
-    "measured": 4,
-    "hook_ok": 4,
+    "total": 10,
+    "measured": 8,
+    "hook_ok": 6,
     "hook_violations": 4,
     "violations": [
       "10時: 20字「実は、昼休みが最強の運気リセットタイム。」",
@@ -127,27 +155,27 @@
       "15時: 33字「占いを求める人の9割は、答えじゃなく「決断の許可」」",
       "17時: 21字「占いは迷った時の地図じゃなく、鏡だと思う。」"
     ],
-    "total_views": 414,
-    "avg_views": 103.5,
-    "best_hook": "明後日から、人間関係が",
-    "best_views": 222,
-    "best_er": 9.46
+    "total_views": 1198,
+    "avg_views": 149.8,
+    "best_hook": "明日からの3日間、",
+    "best_views": 532,
+    "best_er": 14.29
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 9,
-    "total_posts": 58,
-    "judged_posts": 54,
+    "total_posts": 60,
+    "judged_posts": 56,
     "pending_posts": 4,
-    "measured_posts": 46,
+    "measured_posts": 48,
     "success_posts": 15,
-    "success_rate": 32.6,
+    "success_rate": 31.2,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（15/46件成功・4件判定待ち）"
+    "status": "テスト中（15/48件成功・4件判定待ち）"
   },
   "hc": {
-    "runs": 11,
-    "deleted": 0
+    "runs": 15,
+    "deleted": 2
   }
 }
