@@ -340,6 +340,18 @@ def main():
 
     log("WARN", "直近30分以内に投稿なし。再投稿を開始します。")
 
+    # ────────────────────────────────────────────
+    # 遅延クロン対策: 2時間以内に来るべきスロットがなければスキップ
+    # GitHub Actions が3h以上遅延した場合、スロット窓を外れているため
+    # 緊急生成・再投稿をせず静かに終了する（余分な投稿を防ぐ）
+    # ────────────────────────────────────────────
+    _SCHEDULED_HOURS = [6, 7, 8, 9, 12, 18, 20]  # 7スロット確定リスト
+    _now_jst_late = datetime.now(JST)
+    _cur_h = _now_jst_late.hour
+    if not any(0 <= _cur_h - h <= 2 for h in _SCHEDULED_HOURS):
+        log("INFO", f"[LATE CRON SKIP] 現在{_cur_h}時台 - 直近2h以内に対象スロットなし。遅延クロン判定でスキップ")
+        return
+
     # ステップ2: キューから1件取り出して投稿（類似度チェック付き）
     queue = load_json("state/post-queue.json")
     history = load_json("state/post-history.json")

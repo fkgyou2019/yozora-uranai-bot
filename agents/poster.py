@@ -405,9 +405,20 @@ def _post_one_inner():
             # scheduled_hour なし → 優先度最低として追加
             eligible_with_diff.append((99, candidate))
             continue
-        if force_post or scheduled_post:
-            # FORCE/SCHEDULED時は未来スロットも含め全候補を追加（最近傍順）
+        if force_post:
+            # FORCE時のみ未来スロット含む全候補を最近傍順（緊急投稿用）
             diff = abs(current_hour - sched_h)
+            eligible_with_diff.append((diff, candidate))
+        elif scheduled_post:
+            # SCHEDULED時は通常モードと同じ窓チェック（遅延クロン対策）
+            # abs()をやめ、未来スロット・3h以上の遅延は skip → 誤時刻投稿を防ぐ
+            diff = current_hour - sched_h
+            if diff < 0:
+                log("INFO", f"未来スロットのためスキップ: slot={sched_h:02d}:00, 現在={current_hour:02d}:00")
+                continue
+            if diff > 2:
+                log("INFO", f"時間切れスロットのためスキップ: slot={sched_h:02d}:00 (+{diff}h)")
+                continue
             eligible_with_diff.append((diff, candidate))
         else:
             diff = current_hour - sched_h
