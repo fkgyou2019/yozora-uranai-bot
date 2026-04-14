@@ -982,10 +982,21 @@ def main():
         skip_hours = existing_queued_hours | existing_posted_hours
 
         # まだキューにないスロットのみ生成
-        slots_to_generate = [s for s in EXPERIMENT_TIME_SLOTS if s["hour"] not in skip_hours]
+        _now_hour = datetime.now(JST).hour
+        _generating_for_tomorrow = (_now_hour >= 20)  # 20時以降は翌日分生成
+
+        if not _generating_for_tomorrow:
+            # 今日分生成: 現在時刻より後のスロットのみ（過去スロットは投稿不可なので生成しない）
+            slots_to_generate = [
+                s for s in EXPERIMENT_TIME_SLOTS
+                if s["hour"] not in skip_hours and s["hour"] > _now_hour
+            ]
+        else:
+            # 翌日分生成: 全スロット対象
+            slots_to_generate = [s for s in EXPERIMENT_TIME_SLOTS if s["hour"] not in skip_hours]
 
         if not slots_to_generate:
-            print(f"全スロット生成済み（queued:{len(existing_queued_hours)}件 / posted:{len(existing_posted_hours)}件）。スキップ。")
+            print(f"生成対象スロットなし（queued:{len(existing_queued_hours)}件 / posted:{len(existing_posted_hours)}件 / 過去スロット除外済み）。スキップ。")
             return
 
         print(f"生成対象: {len(slots_to_generate)}スロット（スキップ: {len(skip_hours)}件）")
