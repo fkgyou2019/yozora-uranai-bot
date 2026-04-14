@@ -1,35 +1,64 @@
 {
   "date": "2026-04-15",
-  "generated_at": "2026-04-15T00:54:21+09:00",
-  "one_line": "2026-04-15 | 0件投稿 (0件計測済み) | フックOK 0/0件 | 閲覧数取得待ち | 構造G再現性: テスト中（15/48件成功・5件判定待ち） | HC削除: 1件",
-  "posts": [],
+  "generated_at": "2026-04-15T08:31:11+09:00",
+  "one_line": "2026-04-15 | 2件投稿 (1件計測済み) | フックOK 2/2件 | 平均v=64.0 | 構造G再現性: テスト中（15/48件成功・6件判定待ち） | HC削除: 2件",
+  "posts": [
+    {
+      "hour": 7,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 64,
+      "likes": 6,
+      "comments": 0,
+      "reposts": 0,
+      "er": 9.38,
+      "measured": true
+    },
+    {
+      "hour": 8,
+      "struct": "H",
+      "pattern": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "hook": "朝の電車の中で、",
+      "hook_len": 8,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    }
+  ],
   "summary": {
-    "total": 0,
-    "measured": 0,
-    "hook_ok": 0,
+    "total": 2,
+    "measured": 1,
+    "hook_ok": 2,
     "hook_violations": 0,
     "violations": [],
-    "total_views": 0,
-    "avg_views": 0,
-    "best_hook": "",
-    "best_views": 0,
-    "best_er": 0
+    "total_views": 64,
+    "avg_views": 64.0,
+    "best_hook": "明日からの3日間、",
+    "best_views": 64,
+    "best_er": 9.38
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 10,
-    "total_posts": 61,
+    "total_posts": 62,
     "judged_posts": 56,
-    "pending_posts": 5,
+    "pending_posts": 6,
     "measured_posts": 48,
     "success_posts": 15,
     "success_rate": 31.2,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（15/48件成功・5件判定待ち）"
+    "status": "テスト中（15/48件成功・6件判定待ち）"
   },
   "hc": {
-    "runs": 1,
-    "deleted": 1
+    "runs": 4,
+    "deleted": 2
   }
 }
