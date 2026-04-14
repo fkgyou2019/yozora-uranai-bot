@@ -346,9 +346,22 @@ def main():
     pending = [p for p in queue.get("queue", []) if p.get("status") == "queued"]
 
     if pending:
-        # 直近投稿と類似しないものを選ぶ
+        # scheduled_hour チェック + 直近投稿と類似しないものを選ぶ
+        now_jst = datetime.now(JST)
+        current_hour = now_jst.hour
         selected_post = None
         for candidate in pending:
+            # scheduled_hour チェック: 指定時間帯の前後2時間以内のみ投稿可
+            sched_h = candidate.get("scheduled_hour", -1)
+            if sched_h >= 0:
+                time_diff = current_hour - sched_h
+                if time_diff < 0:
+                    log("INFO", f"未来スロットのためスキップ: scheduled_hour={sched_h:02d}:00, 現在={current_hour:02d}:00")
+                    continue
+                if time_diff > 2:
+                    log("INFO", f"時間切れスロットのためスキップ: scheduled_hour={sched_h:02d}:00, 現在={current_hour:02d}:00 (+{time_diff}h)")
+                    continue
+
             cand_content = candidate.get("content", "")
             is_similar, sim_score, similar_preview = is_too_similar_to_recent(
                 cand_content, history, n=10

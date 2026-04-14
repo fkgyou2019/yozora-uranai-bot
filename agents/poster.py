@@ -395,6 +395,23 @@ def _post_one_inner():
     post = None
     for candidate in pending:
         content = candidate.get("content", "")
+
+        # ============================================================
+        # scheduled_hour チェック（FORCE_POST=1 の場合はスキップ）
+        # scheduled_hour が設定されたキューアイテムは、指定時間帯以外に投稿しない
+        # - 未来スロット（current_hour < scheduled_hour）: スキップ
+        # - 2時間以上前のスロット（time_diff > 2）: スキップ（stale）
+        # ============================================================
+        scheduled_hour = candidate.get("scheduled_hour", -1)
+        if scheduled_hour >= 0 and not force_post:
+            time_diff = current_hour - scheduled_hour
+            if time_diff < 0:
+                log("INFO", f"未来スロットのためスキップ: scheduled_hour={scheduled_hour:02d}:00, 現在={current_hour:02d}:00 | {content[:20]}")
+                continue
+            if time_diff > 2:
+                log("INFO", f"時間切れスロットのためスキップ: scheduled_hour={scheduled_hour:02d}:00, 現在={current_hour:02d}:00 (+{time_diff}h) | {content[:20]}")
+                continue
+
         skip_reason = check_time_contradiction(content, current_hour)
         if skip_reason:
             log("INFO", f"時間矛盾で除外: {skip_reason} | {content[:25]}...")
