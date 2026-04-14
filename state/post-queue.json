@@ -1,24 +1,3 @@
 {
-  "queue": [
-    {
-      "pattern_name": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
-      "category": "恋愛運",
-      "content": "今週後半、恋が急に動く星座。\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんへ：月が示すのは、新しい関係への一歩。相手からの連絡が増えるかもしれません。\n\n獅子座さんへ：心が満たされる出会いの暗示。今夜、ふと気になる人との距離が縮まります。\n\n射手座さんへ：恋の迷いが晴れる時期です。素直な気持ちが通じやすくなっています。\n\nあなたの星座は入ってましたか？コメントで教えてください🔮\n\n#恋愛運",
-      "hashtag": "#恋愛運",
-      "time_slot": "夜恋愛型（20:07）",
-      "scheduled_hour": 20,
-      "scheduled_minute": 7,
-      "id": "post_20260414_0831_exp_007",
-      "platform": "threads",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "status": "queued",
-      "quality_warnings": [
-        "行4が長すぎ: 43文字「牡羊座さんへ：月が示すのは、新しい関係へ...」（最大25文字）[threads]"
-      ],
-      "quality_score": 8.0,
-      "regenerated": true,
-      "regen_memo": ""
-    }
-  ]
+  "queue": []
 }
