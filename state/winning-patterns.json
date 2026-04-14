@@ -279,14 +279,14 @@
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
     "恐怖・焦りフックあり → avg eng 21.1%",
-    "絵文字CTAあり → avg eng 20.4%",
+    "絵文字CTAあり → avg eng 20.0%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
     "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
     "自動検出・低パフォーマンスパターン: 3件"
   ],
   "auto_analysis": {
-    "data_count": 118,
-    "last_analyzed": "2026-04-14T17:58:42.921242+09:00",
+    "data_count": 120,
+    "last_analyzed": "2026-04-14T21:11:03.178985+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -441,12 +441,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型",
-        "count": 23,
-        "avg_engagement": 11.72,
-        "avg_views": 226.0,
-        "total_likes": 435,
+        "count": 24,
+        "avg_engagement": 11.45,
+        "avg_views": 222.0,
+        "total_likes": 442,
         "total_replies": 123,
-        "_score": 252.4872
+        "_score": 247.419
       },
       {
         "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
@@ -773,6 +773,15 @@
         "_score": 24.0
       },
       {
+        "pattern": "構造H_しいたけ式深掘り哲学型",
+        "count": 1,
+        "avg_engagement": 0.0,
+        "avg_views": 16.0,
+        "total_likes": 0,
+        "total_replies": 0,
+        "_score": 16.0
+      },
+      {
         "pattern": "構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
         "count": 1,
         "avg_engagement": 0.0,
@@ -795,13 +804,13 @@
       },
       {
         "feature": "has_cta_emoji",
-        "count": 42,
-        "avg_engagement": 20.38
+        "count": 43,
+        "avg_engagement": 20.02
       },
       {
         "feature": "has_number_hook",
-        "count": 45,
-        "avg_engagement": 14.62
+        "count": 46,
+        "avg_engagement": 14.42
       },
       {
         "feature": "has_question",
@@ -955,9 +964,9 @@
       },
       "17": {
         "slot": "夕方（16〜18時台）",
-        "avg_eng": 8.03,
-        "avg_views": 254.0,
-        "count": 3
+        "avg_eng": 6.02,
+        "avg_views": 194.0,
+        "count": 4
       },
       "18": {
         "slot": "夕方（16〜18時台）",
@@ -967,9 +976,9 @@
       },
       "19": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 14.85,
-        "avg_views": 82.0,
-        "count": 9
+        "avg_eng": 13.88,
+        "avg_views": 87.0,
+        "count": 10
       },
       "20": {
         "slot": "夜（19〜21時台）",
@@ -1043,14 +1052,14 @@
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
       "恐怖・焦りフックあり → avg eng 21.1%",
-      "絵文字CTAあり → avg eng 20.4%",
+      "絵文字CTAあり → avg eng 20.0%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
       "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
       "自動検出・低パフォーマンスパターン: 3件"
     ]
   },
-  "data_count": 118,
-  "last_analyzed": "2026-04-14T17:58:42.921242+09:00",
+  "data_count": 120,
+  "last_analyzed": "2026-04-14T21:11:03.178985+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1163,12 +1172,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "count": 23,
-      "avg_engagement": 11.72,
-      "avg_views": 226.0,
-      "total_likes": 435,
+      "count": 24,
+      "avg_engagement": 11.45,
+      "avg_views": 222.0,
+      "total_likes": 442,
       "total_replies": 123,
-      "_score": 252.4872
+      "_score": 247.419
     },
     {
       "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
@@ -1495,6 +1504,15 @@
       "_score": 24.0
     },
     {
+      "pattern": "構造H_しいたけ式深掘り哲学型",
+      "count": 1,
+      "avg_engagement": 0.0,
+      "avg_views": 16.0,
+      "total_likes": 0,
+      "total_replies": 0,
+      "_score": 16.0
+    },
+    {
       "pattern": "構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
       "count": 1,
       "avg_engagement": 0.0,
@@ -1517,13 +1535,13 @@
     },
     {
       "feature": "has_cta_emoji",
-      "count": 42,
-      "avg_engagement": 20.38
+      "count": 43,
+      "avg_engagement": 20.02
     },
     {
       "feature": "has_number_hook",
-      "count": 45,
-      "avg_engagement": 14.62
+      "count": 46,
+      "avg_engagement": 14.42
     },
     {
       "feature": "has_question",
@@ -1645,9 +1663,9 @@
     },
     "17": {
       "slot": "夕方（16〜18時台）",
-      "avg_eng": 8.03,
-      "avg_views": 254.0,
-      "count": 3
+      "avg_eng": 6.02,
+      "avg_views": 194.0,
+      "count": 4
     },
     "18": {
       "slot": "夕方（16〜18時台）",
@@ -1657,9 +1675,9 @@
     },
     "19": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 14.85,
-      "avg_views": 82.0,
-      "count": 9
+      "avg_eng": 13.88,
+      "avg_views": 87.0,
+      "count": 10
     },
     "20": {
       "slot": "夜（19〜21時台）",
