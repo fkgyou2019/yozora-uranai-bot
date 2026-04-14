@@ -5575,21 +5575,6 @@
       "peak_velocity": 112.0,
       "peak_velocity_hour": 1
     },
-    "verify-retry-20260407091219": {
-      "post_id": "verify-retry-20260407091219",
-      "platform_post_id": "17998009379749854",
-      "threads_url": "",
-      "posted_at": "2026-04-07T09:12:19.445397+09:00",
-      "pattern_name": "構造G_注意喚起+限定型",
-      "slot_hour": 9,
-      "day_of_week": 1,
-      "day_name": "火",
-      "first_line": "明日からの3日間、",
-      "content_preview": "明日からの3日間、\n金銭トラブルが\n起きやすい星座。\n\nたった2つだけです。\n\n🔮獅子座\n木星の影響で\n衝動買いに注意。",
-      "hourly": [],
-      "completed": true,
-      "api_fail_count": 8
-    },
     "verify-retry-20260407104217": {
       "post_id": "verify-retry-20260407104217",
       "platform_post_id": "18156057514396887",
@@ -6042,21 +6027,6 @@
       "peak_velocity": 75.0,
       "peak_velocity_hour": 2
     },
-    "post_20260407_1307_exp_006": {
-      "post_id": "post_20260407_1307_exp_006",
-      "platform_post_id": "18072992783220815",
-      "threads_url": "",
-      "posted_at": "2026-04-07T13:07:59.630741+09:00",
-      "pattern_name": "構造F_告白・暴露型①（占い師として正直に言います）",
-      "slot_hour": 13,
-      "day_of_week": 1,
-      "day_name": "火",
-      "first_line": "正直に言います。",
-      "content_preview": "正直に言います。\n今夜、あなたが決断しようとしていることは\n1週間待った方がいい。\n\n水星の逆行影響が強い時期。\nコミュ",
-      "hourly": [],
-      "completed": true,
-      "api_fail_count": 8
-    },
     "post_20260407_1507_exp_007": {
       "post_id": "post_20260407_1507_exp_007",
       "platform_post_id": "18018750737662874",
@@ -6084,21 +6054,6 @@
       "completed": false,
       "peak_velocity": 0.0,
       "peak_velocity_hour": 0
-    },
-    "post_20260407_1507_exp_006": {
-      "post_id": "post_20260407_1507_exp_006",
-      "platform_post_id": "18082313834619082",
-      "threads_url": "",
-      "posted_at": "2026-04-07T15:07:57.084028+09:00",
-      "pattern_name": "構造F_告白・暴露型①（占い師として正直に言います）",
-      "slot_hour": 15,
-      "day_of_week": 1,
-      "day_name": "火",
-      "first_line": "正直に言います。",
-      "content_preview": "正直に言います。\n\n今夜、水星が逆行を終える\nタイミング。ここから1週間で\n「動きが止まってた案件」が\n急に進む星座が3",
-      "hourly": [],
-      "completed": true,
-      "api_fail_count": 7
     },
     "post_20260407_1854_exp_007": {
       "post_id": "post_20260407_1854_exp_007",
@@ -13700,6 +13655,17 @@
           "auto_replies": 0,
           "er": 16.67,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 68,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 132,
+          "likes": 22,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 16.67,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -13948,6 +13914,17 @@
           "auto_replies": 0,
           "er": 19.18,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 66,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 146,
+          "likes": 25,
+          "replies": 3,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 19.18,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -14185,6 +14162,17 @@
           "auto_replies": 0,
           "er": 13.98,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 65,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 93,
+          "likes": 11,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.98,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -14367,6 +14355,17 @@
           "auto_replies": 0,
           "er": 28.0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 56,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 50,
+          "likes": 12,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 28.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -14531,6 +14530,17 @@
         {
           "h": 47,
           "ts": "2026-04-14T09:02:10.771595+09:00",
+          "views": 20,
+          "likes": 3,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 25.0,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 54,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
           "views": 20,
           "likes": 3,
           "replies": 2,
@@ -14724,6 +14734,17 @@
           "auto_replies": 0,
           "er": 39.29,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 51,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 28,
+          "likes": 6,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 39.29,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -14895,6 +14916,17 @@
           "auto_replies": 0,
           "er": 29.41,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 48,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 34,
+          "likes": 5,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 29.41,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -15055,6 +15087,17 @@
           "auto_replies": 0,
           "er": 2.79,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 45,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 215,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.79,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -15204,6 +15247,17 @@
           "auto_replies": 0,
           "er": 13.33,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 44,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 30,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.33,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -15335,6 +15389,17 @@
         {
           "h": 36,
           "ts": "2026-04-14T09:02:10.771595+09:00",
+          "views": 27,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 22.22,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 42,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
           "views": 27,
           "likes": 6,
           "replies": 0,
@@ -15480,6 +15545,17 @@
           "auto_replies": 0,
           "er": 22.29,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 41,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 157,
+          "likes": 33,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 22.29,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -15563,6 +15639,17 @@
           "auto_replies": 0,
           "er": 25.0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 32,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 32,
+          "likes": 4,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 25.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -15581,8 +15668,8 @@
       "first_line": "正直に言います。",
       "content_preview": "正直に言います。\n\n今夜から明日朝にかけて、\n火星が「やり直したい気持ち」を\n強くざわつかせています。\n\n過去の決断を後",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 5
+      "completed": true,
+      "api_fail_count": 6
     },
     "post_20260413_0000_exp_001": {
       "post_id": "post_20260413_0000_exp_001",
@@ -15650,6 +15737,17 @@
           "auto_replies": 0,
           "er": 21.43,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 28,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 100,
+          "likes": 17,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 21.0,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -15668,8 +15766,8 @@
       "first_line": "🔮 4/13の12星座",
       "content_preview": "🔮 4/13の12星座\n\n牡羊座　今日の直感は、ちゃんと当たってる。\n牡牛座　焦らず待つのが、最高の選択肢。\n双子座　言",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 5
+      "completed": true,
+      "api_fail_count": 6
     },
     "post_20260413_0000_exp_003": {
       "post_id": "post_20260413_0000_exp_003",
@@ -15737,6 +15835,17 @@
           "auto_replies": 0,
           "er": 25.0,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 26,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 184,
+          "likes": 28,
+          "replies": 17,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 24.46,
+          "velocity_views_per_hour": 0.6
         }
       ],
       "completed": false,
@@ -15809,6 +15918,17 @@
           "auto_replies": 0,
           "er": 25.44,
           "velocity_views_per_hour": 2.0
+        },
+        {
+          "h": 24,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 292,
+          "likes": 48,
+          "replies": 26,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 25.34,
+          "velocity_views_per_hour": 0.7
         }
       ],
       "completed": false,
@@ -15881,6 +16001,17 @@
           "auto_replies": 0,
           "er": 19.22,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 23,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 267,
+          "likes": 31,
+          "replies": 18,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 18.35,
+          "velocity_views_per_hour": 1.7
         }
       ],
       "completed": false,
@@ -15900,7 +16031,7 @@
       "content_preview": "🔮 4/13の12星座\n\n牡羊座　今日の決断が、後々嬉しくなる。\n牡牛座　待ってた答えが、やっと見える。\n双子座　声をか",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 4
+      "api_fail_count": 5
     },
     "post_20260413_1822_exp_003": {
       "post_id": "post_20260413_1822_exp_003",
@@ -15957,6 +16088,17 @@
           "auto_replies": 0,
           "er": 13.64,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 20,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 24,
+          "likes": 3,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.5,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -16018,6 +16160,17 @@
           "auto_replies": 0,
           "er": 15.28,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 18,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 148,
+          "likes": 20,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.86,
+          "velocity_views_per_hour": 0.7
         }
       ],
       "completed": false,
@@ -16068,6 +16221,17 @@
           "auto_replies": 0,
           "er": 6.67,
           "velocity_views_per_hour": 1.8
+        },
+        {
+          "h": 17,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 76,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.58,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
@@ -16096,12 +16260,150 @@
           "auto_replies": 0,
           "er": 8.93,
           "velocity_views_per_hour": 56.0
+        },
+        {
+          "h": 8,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 68,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.29,
+          "velocity_views_per_hour": 1.7
         }
       ],
       "completed": false,
       "peak_velocity": 56.0,
       "peak_velocity_hour": 1
+    },
+    "post_20260414_0831_exp_001": {
+      "post_id": "post_20260414_0831_exp_001",
+      "platform_post_id": "18144766513492461",
+      "threads_url": "",
+      "posted_at": "2026-04-14T09:12:18.683196+09:00",
+      "pattern_name": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+      "slot_hour": 9,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "🔮 4/14の12星座",
+      "content_preview": "🔮 4/14の12星座\n\n牡羊座　勇気を出した分、扉が開く。\n牡牛座　焦らず進めば、道は広がる。\n双子座　気になる話題が",
+      "hourly": [],
+      "completed": false,
+      "api_fail_count": 1
+    },
+    "post_20260414_0831_exp_005": {
+      "post_id": "post_20260414_0831_exp_005",
+      "platform_post_id": "17867081964526298",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXGBJFlDgPq",
+      "posted_at": "2026-04-14T10:42:15.509203+09:00",
+      "pattern_name": "構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
+      "slot_hour": 10,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "実は、昼休みが最強の運気リセットタイム。",
+      "content_preview": "実は、昼休みが最強の運気リセットタイム。\n\n今日のあなたに必要なのは\n白いハンカチと、青いボールペン。\n\nこの2つを持っ",
+      "hourly": [
+        {
+          "h": 4,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 14,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.0,
+          "velocity_views_per_hour": 3.5
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 3.5,
+      "peak_velocity_hour": 4
+    },
+    "verify-retry-20260414121218": {
+      "post_id": "verify-retry-20260414121218",
+      "platform_post_id": "18003415103859916",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXGLcn_lNbs",
+      "posted_at": "2026-04-14T12:12:18.744952+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 12,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "明後日から、人間関係が",
+      "content_preview": "明後日から、人間関係が\n急に動く星座がある。\n\n12星座中、\nたった3つだけ。\n\n獅子座\n思わぬ人から\nお誘いが来やすい",
+      "hourly": [
+        {
+          "h": 3,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 222,
+          "likes": 21,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.46,
+          "velocity_views_per_hour": 74.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 74.0,
+      "peak_velocity_hour": 3
+    },
+    "verify-retry-20260414151221": {
+      "post_id": "verify-retry-20260414151221",
+      "platform_post_id": "18099436867825007",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXGgDGfFoYd",
+      "posted_at": "2026-04-14T15:12:21.508040+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 15,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "明日からの3日間、",
+      "content_preview": "明日からの3日間、\n金運が急上昇する星座。\n\nたった2つだけです。\n\n🔮射手座\n思わぬ臨時収入の暗示。\nお金の流れが変わ",
+      "hourly": [
+        {
+          "h": 0,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 0,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0,
+          "velocity_views_per_hour": 0.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 0.0,
+      "peak_velocity_hour": 0
+    },
+    "post_20260414_0831_exp_006": {
+      "post_id": "post_20260414_0831_exp_006",
+      "platform_post_id": "17911967757181811",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXGgMAiFXKa",
+      "posted_at": "2026-04-14T15:13:34.153206+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "slot_hour": 15,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "迷いながら進む人ほど、星は応援している。",
+      "content_preview": "迷いながら進む人ほど、星は応援している。\n\n仕事を辞めたいと相談してくれる人は多い。でも占い師として感じるのは、その迷い",
+      "hourly": [
+        {
+          "h": 0,
+          "ts": "2026-04-14T15:22:14.365973+09:00",
+          "views": 0,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0,
+          "velocity_views_per_hour": 0.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 0.0,
+      "peak_velocity_hour": 0
     }
   },
-  "last_updated": "2026-04-14T09:02:10.771595+09:00"
+  "last_updated": "2026-04-14T15:22:14.365973+09:00"
 }
