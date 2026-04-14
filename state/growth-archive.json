@@ -2188,5 +2188,100 @@
     "peak_velocity": 14.5,
     "peak_velocity_hour": 2,
     "api_fail_count": 3
+  },
+  "post_20260408_0708_exp_007": {
+    "post_id": "post_20260408_0708_exp_007",
+    "platform_post_id": "18169041037369934",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DW2MVtdku9h",
+    "posted_at": "2026-04-08T07:12:15.483666+09:00",
+    "pattern_name": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+    "slot_hour": 7,
+    "day_of_week": 2,
+    "day_name": "水",
+    "first_line": "実は、4月後半に向けて",
+    "content_preview": "実は、4月後半に向けて\n動きが止まる星座がいるんです。\n\n水星の逆行が影響していて\n連絡ミスや判断の迷いが\n増えやすい時",
+    "hourly": [
+      {
+        "h": 0,
+        "ts": "2026-04-08T07:24:16.750102+09:00",
+        "views": 0,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 1,
+        "ts": "2026-04-08T09:05:30.668048+09:00",
+        "views": 46,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 2.17,
+        "velocity_views_per_hour": 46.0
+      },
+      {
+        "h": 7,
+        "ts": "2026-04-08T15:09:30.350544+09:00",
+        "views": 63,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.59,
+        "velocity_views_per_hour": 2.8
+      },
+      {
+        "h": 12,
+        "ts": "2026-04-08T19:18:12.947117+09:00",
+        "views": 73,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 4.11,
+        "velocity_views_per_hour": 2.0
+      },
+      {
+        "h": 16,
+        "ts": "2026-04-08T23:58:15.336158+09:00",
+        "views": 79,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 3.8,
+        "velocity_views_per_hour": 1.5
+      },
+      {
+        "h": 21,
+        "ts": "2026-04-09T04:48:20.401768+09:00",
+        "views": 84,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 3.57,
+        "velocity_views_per_hour": 1.0
+      },
+      {
+        "h": 24,
+        "ts": "2026-04-09T07:26:07.043118+09:00",
+        "views": 86,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 3.49,
+        "velocity_views_per_hour": 0.7
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 46.0,
+    "peak_velocity_hour": 1,
+    "api_fail_count": 3
   }
 }
