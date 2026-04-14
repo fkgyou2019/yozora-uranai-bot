@@ -1,0 +1,44 @@
+{
+  "date": "2026-04-13",
+  "generated_at": "2026-04-14 09:08",
+  "summary": {
+    "posts_total": 11,
+    "posts_measured": 8,
+    "posts_deleted": 3,
+    "total_views": 1093,
+    "avg_views": 136.6,
+    "avg_er": 18.96,
+    "experiment_rate": 72.7
+  },
+  "patterns": {
+    "構造G_注意喚起+限定型③（今日・今週大きく動く）": {
+      "count": 3,
+      "avg_views": 78.0,
+      "avg_er": 21.21
+    },
+    "構造G_注意喚起+限定型①（日付指定フック必須）": {
+      "count": 2,
+      "avg_views": 176.5,
+      "avg_er": 20.32
+    },
+    "構造G_注意喚起+限定型④（今週後半ガラッと変わる）": {
+      "count": 1,
+      "avg_views": 287.0,
+      "avg_er": 25.44
+    },
+    "構造G_注意喚起+限定型①（日付指定フック必須: 「4/14、急に動く星座。」形式）": {
+      "count": 1,
+      "avg_views": 144.0,
+      "avg_er": 15.28
+    },
+    "構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）": {
+      "count": 1,
+      "avg_views": 75.0,
+      "avg_er": 6.67
+    }
+  },
+  "delete_reasons": [
+    "時刻矛盾",
+    "views=30だがlikes=0, replies=0"
+  ]
+}
