@@ -33,7 +33,10 @@
       "is_affiliate": false,
       "affiliate_comment": null,
       "status": "queued",
-      "quality_warnings": [],
+      "quality_warnings": [
+        "行2が長すぎ: 51文字「占い師をしていて気づいたことがあります。...」（最大25文字）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ],
       "quality_score": 8.0,
       "regenerated": true,
       "regen_memo": ""
@@ -68,7 +71,9 @@
       "is_affiliate": false,
       "affiliate_comment": null,
       "status": "queued",
-      "quality_warnings": [],
+      "quality_warnings": [
+        "行4が長すぎ: 38文字「双子座さんは、あの人からの連絡が今夜〜明...」（最大25文字）[threads]"
+      ],
       "quality_score": 8.0,
       "regenerated": true,
       "regen_memo": ""
