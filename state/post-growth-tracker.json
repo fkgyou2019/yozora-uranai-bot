@@ -15554,6 +15554,17 @@
           "auto_replies": 0,
           "er": 22.22,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 71,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 27,
+          "likes": 6,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 22.22,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -15758,6 +15769,17 @@
           "auto_replies": 0,
           "er": 22.29,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 70,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 157,
+          "likes": 33,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 22.29,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -15900,6 +15922,17 @@
         {
           "h": 56,
           "ts": "2026-04-15T15:17:12.902338+09:00",
+          "views": 32,
+          "likes": 4,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 25.0,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 60,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
           "views": 32,
           "likes": 4,
           "replies": 4,
@@ -16060,6 +16093,17 @@
           "auto_replies": 0,
           "er": 20.39,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 57,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 103,
+          "likes": 17,
+          "replies": 4,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.39,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -16213,6 +16257,17 @@
           "auto_replies": 0,
           "er": 24.46,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 54,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 184,
+          "likes": 28,
+          "replies": 17,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 24.46,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -16351,6 +16406,17 @@
           "auto_replies": 0,
           "er": 25.0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 52,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 296,
+          "likes": 48,
+          "replies": 26,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 25.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -16482,6 +16548,17 @@
         {
           "h": 47,
           "ts": "2026-04-15T15:17:12.902338+09:00",
+          "views": 268,
+          "likes": 31,
+          "replies": 18,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 18.28,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 51,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
           "views": 268,
           "likes": 31,
           "replies": 18,
@@ -16704,6 +16781,17 @@
           "auto_replies": 0,
           "er": 14.1,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 47,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 156,
+          "likes": 20,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.1,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -16820,6 +16908,17 @@
           "auto_replies": 0,
           "er": 5.95,
           "velocity_views_per_hour": 0.6
+        },
+        {
+          "h": 46,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 84,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.95,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -16907,6 +17006,17 @@
         {
           "h": 32,
           "ts": "2026-04-15T15:17:12.902338+09:00",
+          "views": 73,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.59,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 36,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
           "views": 73,
           "likes": 7,
           "replies": 0,
@@ -17052,6 +17162,17 @@
           "auto_replies": 0,
           "er": 12.71,
           "velocity_views_per_hour": 0.8
+        },
+        {
+          "h": 31,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 354,
+          "likes": 45,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.71,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -17135,6 +17256,17 @@
           "auto_replies": 0,
           "er": 13.59,
           "velocity_views_per_hour": 5.2
+        },
+        {
+          "h": 28,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 828,
+          "likes": 107,
+          "replies": 5,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.53,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -17222,7 +17354,8 @@
       ],
       "completed": false,
       "peak_velocity": 20.2,
-      "peak_velocity_hour": 4
+      "peak_velocity_hour": 4,
+      "api_fail_count": 1
     },
     "post_20260414_1522_exp_001": {
       "post_id": "post_20260414_1522_exp_001",
@@ -17236,8 +17369,8 @@
       "first_line": "占いを求める人の9割は、答えじゃなく「決断の許可」を欲しがってる。",
       "content_preview": "占いを求める人の9割は、答えじゃなく「決断の許可」を欲しがってる。\n\n仕事で迷った時、恋愛で揺れた時。\nそんな時に人は星",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 5
+      "completed": true,
+      "api_fail_count": 6
     },
     "post_20260414_1758_exp_001": {
       "post_id": "post_20260414_1758_exp_001",
@@ -17299,7 +17432,7 @@
       "completed": false,
       "peak_velocity": 16.0,
       "peak_velocity_hour": 1,
-      "api_fail_count": 1
+      "api_fail_count": 2
     },
     "verify-retry-20260414191222": {
       "post_id": "verify-retry-20260414191222",
@@ -17367,6 +17500,17 @@
           "auto_replies": 0,
           "er": 5.19,
           "velocity_views_per_hour": 0.4
+        },
+        {
+          "h": 24,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 156,
+          "likes": 8,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.13,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -17428,6 +17572,17 @@
           "auto_replies": 0,
           "er": 12.88,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 23,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 166,
+          "likes": 23,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.86,
+          "velocity_views_per_hour": 0.6
         }
       ],
       "completed": false,
@@ -17489,6 +17644,17 @@
           "auto_replies": 0,
           "er": 14.29,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 22,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 163,
+          "likes": 24,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.72,
+          "velocity_views_per_hour": 0.4
         }
       ],
       "completed": false,
@@ -17528,6 +17694,17 @@
           "auto_replies": 0,
           "er": 6.11,
           "velocity_views_per_hour": 8.4
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 137,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.57,
+          "velocity_views_per_hour": 1.5
         }
       ],
       "completed": false,
@@ -17547,7 +17724,7 @@
       "content_preview": "朝の電車の中で、\nあの人のLINEを何度も\n読み直してしまう瞬間ってありますよね。\n\n占い師として気づいたことがあります",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 1
+      "api_fail_count": 2
     },
     "post_20260414_2110_exp_004": {
       "post_id": "post_20260414_2110_exp_004",
@@ -17571,6 +17748,17 @@
           "auto_replies": 0,
           "er": 13.56,
           "velocity_views_per_hour": 29.5
+        },
+        {
+          "h": 10,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 192,
+          "likes": 24,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.5,
+          "velocity_views_per_hour": 3.8
         }
       ],
       "completed": false,
@@ -17599,6 +17787,17 @@
           "auto_replies": 0,
           "er": 9.09,
           "velocity_views_per_hour": 8.2
+        },
+        {
+          "h": 9,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 39,
+          "likes": 3,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 7.69,
+          "velocity_views_per_hour": 1.2
         }
       ],
       "completed": false,
@@ -17627,12 +17826,79 @@
           "auto_replies": 0,
           "er": 2.38,
           "velocity_views_per_hour": 14.0
+        },
+        {
+          "h": 7,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 43,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.33,
+          "velocity_views_per_hour": 0.2
         }
       ],
       "completed": false,
       "peak_velocity": 14.0,
       "peak_velocity_hour": 3
+    },
+    "post_20260414_2110_exp_006": {
+      "post_id": "post_20260414_2110_exp_006",
+      "platform_post_id": "17953387610962035",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXJYu17FEAs",
+      "posted_at": "2026-04-15T18:06:06.419389+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "slot_hour": 18,
+      "day_of_week": 2,
+      "day_name": "水",
+      "first_line": "占いが当たるより、自分が変わることの方が大事だと気づいた。",
+      "content_preview": "占いが当たるより、自分が変わることの方が大事だと気づいた。\n\n仕事で迷っている人ほど、答えを求めてしまう。でも星が教える",
+      "hourly": [
+        {
+          "h": 1,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 14,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.29,
+          "velocity_views_per_hour": 14.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 14.0,
+      "peak_velocity_hour": 1
+    },
+    "post_20260415_0053_exp_006": {
+      "post_id": "post_20260415_0053_exp_006",
+      "platform_post_id": "18208984495336595",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXJgTSGFerb",
+      "posted_at": "2026-04-15T19:12:15.610077+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子+スピ好きターゲット・退勤後）",
+      "slot_hour": 19,
+      "day_of_week": 2,
+      "day_name": "水",
+      "first_line": "仕事で迷うのは、",
+      "content_preview": "仕事で迷うのは、\n本当は良い兆候だと思ってる。\n\n占い師として気づいたことがある。\nキャリアに迷う人ほど、\n次のステージ",
+      "hourly": [
+        {
+          "h": 0,
+          "ts": "2026-04-15T19:44:54.121045+09:00",
+          "views": 4,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0.0,
+          "velocity_views_per_hour": 4.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 4.0,
+      "peak_velocity_hour": 0
     }
   },
-  "last_updated": "2026-04-15T15:17:12.902338+09:00"
+  "last_updated": "2026-04-15T19:44:54.121045+09:00"
 }
