@@ -235,15 +235,15 @@
   "insights": [
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
-    "恐怖・焦りフックあり → avg eng 20.0%",
     "絵文字CTAあり → avg eng 19.7%",
+    "恐怖・焦りフックあり → avg eng 19.5%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
     "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
     "自動検出・低パフォーマンスパターン: 3件"
   ],
   "auto_analysis": {
-    "data_count": 128,
-    "last_analyzed": "2026-04-15T21:07:34.439506+09:00",
+    "data_count": 130,
+    "last_analyzed": "2026-04-15T23:59:13.521683+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -379,6 +379,15 @@
         "_score": 308.1528
       },
       {
+        "pattern": "構造G_注意喚起+限定型②（天体根拠×夜の恋愛感情型）",
+        "count": 1,
+        "avg_engagement": 22.97,
+        "avg_views": 222.0,
+        "total_likes": 40,
+        "total_replies": 11,
+        "_score": 272.9934
+      },
+      {
         "pattern": "数字+限定型（推定）",
         "count": 4,
         "avg_engagement": 11.68,
@@ -452,12 +461,12 @@
       },
       {
         "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
-        "count": 2,
-        "avg_engagement": 13.47,
-        "avg_views": 138.0,
-        "total_likes": 37,
+        "count": 3,
+        "avg_engagement": 14.44,
+        "avg_views": 128.0,
+        "total_likes": 55,
         "total_replies": 0,
-        "_score": 156.5886
+        "_score": 146.4832
       },
       {
         "pattern": "共感×質問型（推定）",
@@ -782,14 +791,14 @@
         "avg_engagement": 23.77
       },
       {
-        "feature": "has_fear_hook",
-        "count": 7,
-        "avg_engagement": 19.99
-      },
-      {
         "feature": "has_cta_emoji",
         "count": 44,
         "avg_engagement": 19.72
+      },
+      {
+        "feature": "has_fear_hook",
+        "count": 8,
+        "avg_engagement": 19.54
       },
       {
         "feature": "has_number_hook",
@@ -798,8 +807,8 @@
       },
       {
         "feature": "has_question",
-        "count": 37,
-        "avg_engagement": 12.95
+        "count": 39,
+        "avg_engagement": 13.3
       }
     ],
     "top_hook_styles": [
@@ -966,15 +975,15 @@
       },
       "20": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 17.34,
-        "avg_views": 201.0,
-        "count": 16
+        "avg_eng": 17.67,
+        "avg_views": 202.0,
+        "count": 17
       },
       "21": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 10.16,
-        "avg_views": 258.0,
-        "count": 15
+        "avg_eng": 10.54,
+        "avg_views": 249.0,
+        "count": 16
       },
       "22": {
         "slot": "深夜（22〜0時台）",
@@ -1035,15 +1044,15 @@
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
-      "恐怖・焦りフックあり → avg eng 20.0%",
       "絵文字CTAあり → avg eng 19.7%",
+      "恐怖・焦りフックあり → avg eng 19.5%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
       "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
       "自動検出・低パフォーマンスパターン: 3件"
     ]
   },
-  "data_count": 128,
-  "last_analyzed": "2026-04-15T21:07:34.439506+09:00",
+  "data_count": 130,
+  "last_analyzed": "2026-04-15T23:59:13.521683+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1137,6 +1146,15 @@
       "_score": 308.1528
     },
     {
+      "pattern": "構造G_注意喚起+限定型②（天体根拠×夜の恋愛感情型）",
+      "count": 1,
+      "avg_engagement": 22.97,
+      "avg_views": 222.0,
+      "total_likes": 40,
+      "total_replies": 11,
+      "_score": 272.9934
+    },
+    {
       "pattern": "数字+限定型（推定）",
       "count": 4,
       "avg_engagement": 11.68,
@@ -1210,12 +1228,12 @@
     },
     {
       "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
-      "count": 2,
-      "avg_engagement": 13.47,
-      "avg_views": 138.0,
-      "total_likes": 37,
+      "count": 3,
+      "avg_engagement": 14.44,
+      "avg_views": 128.0,
+      "total_likes": 55,
       "total_replies": 0,
-      "_score": 156.5886
+      "_score": 146.4832
     },
     {
       "pattern": "共感×質問型（推定）",
@@ -1540,14 +1558,14 @@
       "avg_engagement": 23.77
     },
     {
-      "feature": "has_fear_hook",
-      "count": 7,
-      "avg_engagement": 19.99
-    },
-    {
       "feature": "has_cta_emoji",
       "count": 44,
       "avg_engagement": 19.72
+    },
+    {
+      "feature": "has_fear_hook",
+      "count": 8,
+      "avg_engagement": 19.54
     },
     {
       "feature": "has_number_hook",
@@ -1556,8 +1574,8 @@
     },
     {
       "feature": "has_question",
-      "count": 37,
-      "avg_engagement": 12.95
+      "count": 39,
+      "avg_engagement": 13.3
     }
   ],
   "best_posts": [
@@ -1692,15 +1710,15 @@
     },
     "20": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 17.34,
-      "avg_views": 201.0,
-      "count": 16
+      "avg_eng": 17.67,
+      "avg_views": 202.0,
+      "count": 17
     },
     "21": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 10.16,
-      "avg_views": 258.0,
-      "count": 15
+      "avg_eng": 10.54,
+      "avg_views": 249.0,
+      "count": 16
     },
     "22": {
       "slot": "深夜（22〜0時台）",

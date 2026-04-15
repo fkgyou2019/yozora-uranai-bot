@@ -1,7 +1,7 @@
 {
   "date": "2026-04-15",
-  "generated_at": "2026-04-15T21:07:34+09:00",
-  "one_line": "2026-04-15 | 8件投稿 (6件計測済み) | フックOK 7/8件 | 違反: 18時: 29字「占いが当たるより、自分が変わることの方が大事だと気」 | 平均v=71.5 | 構造G再現性: テスト中（17/52件成功・5件判定待ち） | HC削除: 3件",
+  "generated_at": "2026-04-15T23:59:13+09:00",
+  "one_line": "2026-04-15 | 9件投稿 (8件計測済み) | フックOK 8/9件 | 違反: 18時: 29字「占いが当たるより、自分が変わることの方が大事だと気」 | 平均v=95.1 | 構造G再現性: テスト中（17/53件成功・5件判定待ち） | HC削除: 3件",
   "posts": [
     {
       "hour": 7,
@@ -108,43 +108,57 @@
       "hook": "今週後半、恋が急変する星座。",
       "hook_len": 14,
       "hook_ok": true,
-      "views": 0,
-      "likes": 0,
+      "views": 222,
+      "likes": 40,
+      "comments": 11,
+      "reposts": 0,
+      "er": 22.97,
+      "measured": true
+    },
+    {
+      "hour": 21,
+      "struct": "G",
+      "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+      "hook": "今週後半、恋が急に動く星座。",
+      "hook_len": 14,
+      "hook_ok": true,
+      "views": 110,
+      "likes": 18,
       "comments": 0,
       "reposts": 0,
-      "er": 0,
-      "measured": false
+      "er": 16.36,
+      "measured": true
     }
   ],
   "summary": {
-    "total": 8,
-    "measured": 6,
-    "hook_ok": 7,
+    "total": 9,
+    "measured": 8,
+    "hook_ok": 8,
     "hook_violations": 1,
     "violations": [
       "18時: 29字「占いが当たるより、自分が変わることの方が大事だと気」"
     ],
-    "total_views": 429,
-    "avg_views": 71.5,
-    "best_hook": "4/15、仕事で急に動く星座。",
-    "best_views": 192,
-    "best_er": 12.5
+    "total_views": 761,
+    "avg_views": 95.1,
+    "best_hook": "今週後半、恋が急変する星座。",
+    "best_views": 222,
+    "best_er": 22.97
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 10,
-    "total_posts": 65,
-    "judged_posts": 60,
+    "total_posts": 66,
+    "judged_posts": 61,
     "pending_posts": 5,
-    "measured_posts": 52,
+    "measured_posts": 53,
     "success_posts": 17,
-    "success_rate": 32.7,
+    "success_rate": 32.1,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（17/52件成功・5件判定待ち）"
+    "status": "テスト中（17/53件成功・5件判定待ち）"
   },
   "hc": {
-    "runs": 15,
+    "runs": 18,
     "deleted": 3
   }
 }

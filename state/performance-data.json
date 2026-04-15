@@ -3327,7 +3327,59 @@
         "hook_length": 8
       },
       "collected_at": "2026-04-15T21:07:26.340474+09:00"
+    },
+    {
+      "id": "post_20260415_0053_exp_007",
+      "platform_post_id": "18231724927308081",
+      "posted_at": "2026-04-15T20:42:15.005664+09:00",
+      "pattern_name": "構造G_注意喚起+限定型②（天体根拠×夜の恋愛感情型）",
+      "category": "恋愛運",
+      "content_preview": "今週後半、恋が急変する星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座\n\n双子座さんは、あの",
+      "first_line": "今週後半、恋が急変する星座。",
+      "char_count": 197,
+      "metrics": {
+        "views": 222,
+        "likes": 40,
+        "replies": 11,
+        "reposts": 0,
+        "engagement_rate": 22.97
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 14
+      },
+      "collected_at": "2026-04-15T23:59:01.252999+09:00"
+    },
+    {
+      "id": "post_20260415_2106_exp_006",
+      "platform_post_id": "17992727876780002",
+      "posted_at": "2026-04-15T21:42:19.793551+09:00",
+      "pattern_name": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+      "category": "恋愛運",
+      "content_preview": "今週後半、恋が急に動く星座。\nたった3つだけです。\n\n双子座、天秤座、水瓶座\n\n双子座さんは、ふとし",
+      "first_line": "今週後半、恋が急に動く星座。",
+      "char_count": 214,
+      "metrics": {
+        "views": 110,
+        "likes": 18,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 16.36
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": true,
+        "hook_length": 14
+      },
+      "collected_at": "2026-04-15T23:59:01.252999+09:00"
     }
   ],
-  "last_updated": "2026-04-15T21:07:26.340474+09:00"
+  "last_updated": "2026-04-15T23:59:01.252999+09:00"
 }
