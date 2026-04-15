@@ -2298,5 +2298,35 @@
     "hourly": [],
     "completed": true,
     "api_fail_count": 7
+  },
+  "verify-retry-20260408204217": {
+    "post_id": "verify-retry-20260408204217",
+    "platform_post_id": "18099100369989957",
+    "threads_url": "",
+    "posted_at": "2026-04-08T20:42:17.526505+09:00",
+    "pattern_name": "構造G_注意喚起+限定型",
+    "slot_hour": 20,
+    "day_of_week": 2,
+    "day_name": "水",
+    "first_line": "今週末、感情的な決断は避けた方がいい星座。",
+    "content_preview": "今週末、感情的な決断は避けた方がいい星座。\n\nたった3つだけです。\n\n蟹座・蠍座・魚座は\n月が感情の領域を強めることで\n",
+    "hourly": [],
+    "completed": true,
+    "api_fail_count": 7
+  },
+  "verify-retry-20260408214222": {
+    "post_id": "verify-retry-20260408214222",
+    "platform_post_id": "17860645863566746",
+    "threads_url": "",
+    "posted_at": "2026-04-08T21:42:22.215752+09:00",
+    "pattern_name": "構造G_注意喚起+限定型",
+    "slot_hour": 21,
+    "day_of_week": 2,
+    "day_name": "水",
+    "first_line": "今週、人間関係で誤解が生まれやすい星座。",
+    "content_preview": "今週、人間関係で誤解が生まれやすい星座。\n\nたった3つだけです。\n\n牡牛座・乙女座・山羊座は\n金星の角度が変わることで\n",
+    "hourly": [],
+    "completed": true,
+    "api_fail_count": 7
   }
 }
