@@ -1,254 +1,6 @@
 {
   "checks": [
     {
-      "timestamp": "2026-04-10T08:55:11.924064+09:00",
-      "checked": 24,
-      "red": 0,
-      "deleted": 0,
-      "results": [
-        {
-          "post_id": "18071127317275781",
-          "time": "2026-04-09T21:42:20+09:00",
-          "views": 516,
-          "likes": 55,
-          "replies": 44,
-          "status": "GREEN",
-          "reason": "views=516, eng=19.2%",
-          "deleted": false
-        },
-        {
-          "post_id": "18153700807458925",
-          "time": "2026-04-09T20:42:14+09:00",
-          "views": 276,
-          "likes": 12,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=276, eng=4.3%",
-          "deleted": false
-        },
-        {
-          "post_id": "18080857112386738",
-          "time": "2026-04-09T15:12:16+09:00",
-          "views": 150,
-          "likes": 2,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=150, eng=1.3%",
-          "deleted": false
-        },
-        {
-          "post_id": "17919657873325294",
-          "time": "2026-04-09T12:12:16+09:00",
-          "views": 531,
-          "likes": 58,
-          "replies": 61,
-          "status": "GREEN",
-          "reason": "views=531, eng=22.4%",
-          "deleted": false
-        },
-        {
-          "post_id": "17944941462158909",
-          "time": "2026-04-09T10:42:17+09:00",
-          "views": 110,
-          "likes": 6,
-          "replies": 2,
-          "status": "GREEN",
-          "reason": "views=110, eng=7.3%",
-          "deleted": false
-        },
-        {
-          "post_id": "17943024495011326",
-          "time": "2026-04-09T09:12:18+09:00",
-          "views": 274,
-          "likes": 35,
-          "replies": 34,
-          "status": "GREEN",
-          "reason": "views=274, eng=25.2%",
-          "deleted": false
-        },
-        {
-          "post_id": "18176576800382684",
-          "time": "2026-04-08T19:12:17+09:00",
-          "views": 48,
-          "likes": 5,
-          "replies": 4,
-          "status": "GREEN",
-          "reason": "views=48, eng=18.8%",
-          "deleted": false
-        },
-        {
-          "post_id": "18192408178319641",
-          "time": "2026-04-08T12:12:18+09:00",
-          "views": 325,
-          "likes": 27,
-          "replies": 15,
-          "status": "GREEN",
-          "reason": "views=325, eng=12.9%",
-          "deleted": false
-        },
-        {
-          "post_id": "18063648737676957",
-          "time": "2026-04-08T10:42:18+09:00",
-          "views": 1740,
-          "likes": 76,
-          "replies": 52,
-          "status": "GREEN",
-          "reason": "views=1740, eng=7.4%",
-          "deleted": false
-        },
-        {
-          "post_id": "17952516507108598",
-          "time": "2026-04-08T09:12:14+09:00",
-          "views": 168,
-          "likes": 12,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=168, eng=7.1%",
-          "deleted": false
-        },
-        {
-          "post_id": "18149705332462016",
-          "time": "2026-04-07T20:42:17+09:00",
-          "views": 468,
-          "likes": 28,
-          "replies": 2,
-          "status": "GREEN",
-          "reason": "views=468, eng=6.4%",
-          "deleted": false
-        },
-        {
-          "post_id": "18461969212096443",
-          "time": "2026-04-07T19:12:19+09:00",
-          "views": 400,
-          "likes": 15,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=400, eng=3.8%",
-          "deleted": false
-        },
-        {
-          "post_id": "18101665340298940",
-          "time": "2026-04-07T18:54:57+09:00",
-          "views": 157,
-          "likes": 4,
-          "replies": 2,
-          "status": "GREEN",
-          "reason": "views=157, eng=3.8%",
-          "deleted": false
-        },
-        {
-          "post_id": "17864897070668812",
-          "time": "2026-04-07T12:12:17+09:00",
-          "views": 216,
-          "likes": 9,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=216, eng=4.2%",
-          "deleted": false
-        },
-        {
-          "post_id": "18156057514396887",
-          "time": "2026-04-07T10:42:15+09:00",
-          "views": 214,
-          "likes": 9,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=214, eng=4.2%",
-          "deleted": false
-        },
-        {
-          "post_id": "18420061363125309",
-          "time": "2026-04-07T07:12:18+09:00",
-          "views": 617,
-          "likes": 51,
-          "replies": 7,
-          "status": "GREEN",
-          "reason": "views=617, eng=9.4%",
-          "deleted": false
-        },
-        {
-          "post_id": "18143137846495311",
-          "time": "2026-04-06T21:42:12+09:00",
-          "views": 172,
-          "likes": 1,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=172, eng=0.6%",
-          "deleted": false
-        },
-        {
-          "post_id": "18116905924725961",
-          "time": "2026-04-06T20:42:19+09:00",
-          "views": 78,
-          "likes": 5,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=78, eng=6.4%",
-          "deleted": false
-        },
-        {
-          "post_id": "18202970938339524",
-          "time": "2026-04-06T15:12:35+09:00",
-          "views": 232,
-          "likes": 5,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=232, eng=2.2%",
-          "deleted": false
-        },
-        {
-          "post_id": "18096949751080821",
-          "time": "2026-04-06T12:12:16+09:00",
-          "views": 123,
-          "likes": 14,
-          "replies": 1,
-          "status": "GREEN",
-          "reason": "views=123, eng=12.2%",
-          "deleted": false
-        },
-        {
-          "post_id": "17956527237097769",
-          "time": "2026-04-05T21:42:15+09:00",
-          "views": 1316,
-          "likes": 107,
-          "replies": 8,
-          "status": "GREEN",
-          "reason": "views=1316, eng=8.7%",
-          "deleted": false
-        },
-        {
-          "post_id": "18101412478751524",
-          "time": "2026-04-05T19:07:52+09:00",
-          "views": 195,
-          "likes": 7,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=195, eng=3.6%",
-          "deleted": false
-        },
-        {
-          "post_id": "18112986847743013",
-          "time": "2026-04-05T15:05:52+09:00",
-          "views": 49,
-          "likes": 7,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=49, eng=14.3%",
-          "deleted": false
-        },
-        {
-          "post_id": "17953112544103350",
-          "time": "2026-04-05T07:12:15+09:00",
-          "views": 125,
-          "likes": 6,
-          "replies": 0,
-          "status": "GREEN",
-          "reason": "views=125, eng=4.8%",
-          "deleted": false
-        }
-      ]
-    },
-    {
       "timestamp": "2026-04-10T10:07:13.823973+09:00",
       "checked": 23,
       "red": 0,
@@ -24256,6 +24008,264 @@
           "replies": 0,
           "status": "GREEN",
           "reason": "views=205, eng=11.7%",
+          "deleted": false
+        },
+        {
+          "post_id": "18076035509530575",
+          "time": "2026-04-15T07:12:19+09:00",
+          "views": 144,
+          "likes": 9,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=144, eng=6.2%",
+          "deleted": false
+        },
+        {
+          "post_id": "18134944531536883",
+          "time": "2026-04-14T21:42:16+09:00",
+          "views": 171,
+          "likes": 24,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=171, eng=14.0%",
+          "deleted": false
+        },
+        {
+          "post_id": "18087928706339573",
+          "time": "2026-04-14T20:42:16+09:00",
+          "views": 176,
+          "likes": 24,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=176, eng=13.6%",
+          "deleted": false
+        },
+        {
+          "post_id": "18108711364894696",
+          "time": "2026-04-14T19:12:19+09:00",
+          "views": 159,
+          "likes": 8,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=159, eng=5.0%",
+          "deleted": false
+        },
+        {
+          "post_id": "18099436867825007",
+          "time": "2026-04-14T15:12:19+09:00",
+          "views": 830,
+          "likes": 107,
+          "replies": 6,
+          "status": "GREEN",
+          "reason": "views=830, eng=13.6%",
+          "deleted": false
+        },
+        {
+          "post_id": "18003415103859916",
+          "time": "2026-04-14T12:12:16+09:00",
+          "views": 356,
+          "likes": 45,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=356, eng=12.6%",
+          "deleted": false
+        },
+        {
+          "post_id": "18094151456274006",
+          "time": "2026-04-14T07:12:15+09:00",
+          "views": 74,
+          "likes": 7,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=74, eng=9.5%",
+          "deleted": false
+        },
+        {
+          "post_id": "18098448544832637",
+          "time": "2026-04-13T21:42:14+09:00",
+          "views": 84,
+          "likes": 5,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=84, eng=6.0%",
+          "deleted": false
+        },
+        {
+          "post_id": "18157688203446034",
+          "time": "2026-04-13T20:42:14+09:00",
+          "views": 156,
+          "likes": 20,
+          "replies": 2,
+          "status": "GREEN",
+          "reason": "views=156, eng=14.1%",
+          "deleted": false
+        },
+        {
+          "post_id": "18100046671980506",
+          "time": "2026-04-13T16:08:34+09:00",
+          "views": 269,
+          "likes": 31,
+          "replies": 18,
+          "status": "GREEN",
+          "reason": "views=269, eng=18.2%",
+          "deleted": false
+        },
+        {
+          "post_id": "18096474833282603",
+          "time": "2026-04-13T15:12:13+09:00",
+          "views": 296,
+          "likes": 48,
+          "replies": 26,
+          "status": "GREEN",
+          "reason": "views=296, eng=25.0%",
+          "deleted": false
+        },
+        {
+          "post_id": "18090689090236414",
+          "time": "2026-04-13T13:07:22+09:00",
+          "views": 184,
+          "likes": 28,
+          "replies": 17,
+          "status": "GREEN",
+          "reason": "views=184, eng=24.5%",
+          "deleted": false
+        },
+        {
+          "post_id": "17871944580474953",
+          "time": "2026-04-13T10:42:13+09:00",
+          "views": 103,
+          "likes": 17,
+          "replies": 4,
+          "status": "GREEN",
+          "reason": "views=103, eng=20.4%",
+          "deleted": false
+        },
+        {
+          "post_id": "18457207264109941",
+          "time": "2026-04-13T07:12:14+09:00",
+          "views": 32,
+          "likes": 4,
+          "replies": 4,
+          "status": "GREEN",
+          "reason": "views=32, eng=25.0%",
+          "deleted": false
+        },
+        {
+          "post_id": "18313455607276862",
+          "time": "2026-04-12T21:42:15+09:00",
+          "views": 157,
+          "likes": 33,
+          "replies": 2,
+          "status": "GREEN",
+          "reason": "views=157, eng=22.3%",
+          "deleted": false
+        },
+        {
+          "post_id": "18112731067701447",
+          "time": "2026-04-12T20:42:13+09:00",
+          "views": 27,
+          "likes": 6,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=27, eng=22.2%",
+          "deleted": false
+        },
+        {
+          "post_id": "17993524481938653",
+          "time": "2026-04-12T19:12:12+09:00",
+          "views": 30,
+          "likes": 4,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=30, eng=13.3%",
+          "deleted": false
+        },
+        {
+          "post_id": "17930535708069411",
+          "time": "2026-04-12T17:33:24+09:00",
+          "views": 215,
+          "likes": 6,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=215, eng=2.8%",
+          "deleted": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-04-16T02:47:35.289974+09:00",
+      "checked": 25,
+      "red": 0,
+      "deleted": 0,
+      "results": [
+        {
+          "post_id": "17992727876780002",
+          "time": "2026-04-15T21:42:17+09:00",
+          "views": 145,
+          "likes": 24,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=145, eng=16.6%",
+          "deleted": false
+        },
+        {
+          "post_id": "18231724927308081",
+          "time": "2026-04-15T20:42:13+09:00",
+          "views": 275,
+          "likes": 46,
+          "replies": 11,
+          "status": "GREEN",
+          "reason": "views=275, eng=20.7%",
+          "deleted": false
+        },
+        {
+          "post_id": "18208984495336595",
+          "time": "2026-04-15T19:12:13+09:00",
+          "views": 14,
+          "likes": 0,
+          "replies": 0,
+          "status": "YELLOW",
+          "reason": "views=14, eng=0.0% < 3.0%",
+          "deleted": false
+        },
+        {
+          "post_id": "17953387610962035",
+          "time": "2026-04-15T18:06:04+09:00",
+          "views": 20,
+          "likes": 2,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=20, eng=10.0%",
+          "deleted": false
+        },
+        {
+          "post_id": "18066950315331186",
+          "time": "2026-04-15T12:12:13+09:00",
+          "views": 47,
+          "likes": 1,
+          "replies": 0,
+          "status": "YELLOW",
+          "reason": "views=47, eng=2.1% < 3.0%",
+          "deleted": false
+        },
+        {
+          "post_id": "18524848153077168",
+          "time": "2026-04-15T10:42:13+09:00",
+          "views": 45,
+          "likes": 3,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=45, eng=6.7%",
+          "deleted": false
+        },
+        {
+          "post_id": "18081807851103909",
+          "time": "2026-04-15T09:10:08+09:00",
+          "views": 208,
+          "likes": 24,
+          "replies": 0,
+          "status": "GREEN",
+          "reason": "views=208, eng=11.5%",
           "deleted": false
         },
         {
