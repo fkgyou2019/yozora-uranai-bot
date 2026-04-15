@@ -3379,7 +3379,33 @@
         "hook_length": 14
       },
       "collected_at": "2026-04-15T23:59:01.252999+09:00"
+    },
+    {
+      "id": "verify-retry-20260416071218",
+      "platform_post_id": "17896993080287187",
+      "posted_at": "2026-04-16T07:12:18.405420+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "今週、金銭トラブルが起きやすい星座。\n\nたった3つだけです。\n\n牡牛座、蟹座、山羊座\n\n牡牛座さんは",
+      "first_line": "今週、金銭トラブルが起きやすい星座。",
+      "char_count": 192,
+      "metrics": {
+        "views": 30,
+        "likes": 3,
+        "replies": 8,
+        "reposts": 0,
+        "engagement_rate": 36.67
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 18
+      },
+      "collected_at": "2026-04-16T08:30:04.396209+09:00"
     }
   ],
-  "last_updated": "2026-04-15T23:59:01.252999+09:00"
+  "last_updated": "2026-04-16T08:30:04.396209+09:00"
 }
