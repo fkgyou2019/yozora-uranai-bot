@@ -3416,6 +3416,26 @@
       "posted_at": "2026-04-15T18:06:06.419389+09:00",
       "platform_post_id": "17953387610962035",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子+スピ好きターゲット・退勤後）",
+      "category": "占い師の内省・哲学",
+      "content": "仕事で迷うのは、\n本当は良い兆候だと思ってる。\n\n占い師として気づいたことがある。\nキャリアに迷う人ほど、\n次のステージへ向かう前の準備期間にいる。\n\n迷いながら動く。\nその揺らぎの中に、\n自分の本当の軸が見えてくる。\n\nあなたの迷いは、\n実は羅針盤が回転してるだけ。\n\nあなたにとって、\n「迷い」はどんな存在ですか？",
+      "hashtag": "#星座占い",
+      "time_slot": "哲学深掘り型（18:07）",
+      "scheduled_hour": 18,
+      "scheduled_minute": 7,
+      "id": "post_20260415_0053_exp_006",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ],
+      "posted_at": "2026-04-15T19:12:15.610077+09:00",
+      "platform_post_id": "18208984495336595",
+      "source": "post-verify"
     }
   ]
 }
