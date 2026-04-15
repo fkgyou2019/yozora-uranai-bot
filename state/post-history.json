@@ -3436,6 +3436,29 @@
       "posted_at": "2026-04-15T19:12:15.610077+09:00",
       "platform_post_id": "18208984495336595",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造G_注意喚起+限定型②（天体根拠×夜の恋愛感情型）",
+      "category": "恋愛運",
+      "content": "今週後半、恋が急変する星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座\n\n双子座さんは、あの人からの連絡が今夜〜明日中に。既読スルーが解ける予感です。\n\n天秤座さんは、関係が一歩進む動きが。告白のタイミング、今週末がチャンスです。\n\n水瓶座さんは、すれ違いが解消される星の配置。話し合いで心が通じ合う瞬間が来ます。\n\nあなたの星座は入ってましたか？コメントで教えてください🔮\n\n#恋愛運",
+      "hashtag": "#恋愛運",
+      "time_slot": "夜恋愛型（20:07）",
+      "scheduled_hour": 20,
+      "scheduled_minute": 7,
+      "id": "post_20260415_0053_exp_007",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "行4が長すぎ: 38文字「双子座さんは、あの人からの連絡が今夜〜明...」（最大25文字）[threads]"
+      ],
+      "quality_score": 8.0,
+      "regenerated": true,
+      "regen_memo": "",
+      "posted_at": "2026-04-15T20:42:15.005664+09:00",
+      "platform_post_id": "18231724927308081",
+      "source": "post-verify"
     }
   ]
 }
