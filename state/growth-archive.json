@@ -2328,5 +2328,45 @@
     "hourly": [],
     "completed": true,
     "api_fail_count": 7
+  },
+  "verify-retry-20260409071218": {
+    "post_id": "verify-retry-20260409071218",
+    "platform_post_id": "18147875245471303",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DW4xI7sktcC",
+    "posted_at": "2026-04-09T07:12:18.415086+09:00",
+    "pattern_name": "構造G_注意喚起+限定型",
+    "slot_hour": 7,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "今週後半、恋愛で勘違いが生まれやすい星座。",
+    "content_preview": "今週後半、恋愛で勘違いが生まれやすい星座。\n\nたった2つだけです。\n\n双子座・天秤座は\n金星と水星の角度が\n「相手が自分",
+    "hourly": [
+      {
+        "h": 0,
+        "ts": "2026-04-09T07:26:07.043118+09:00",
+        "views": 0,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 1,
+        "ts": "2026-04-09T09:01:21.678359+09:00",
+        "views": 49,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 49.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 49.0,
+    "peak_velocity_hour": 1,
+    "api_fail_count": 5
   }
 }
