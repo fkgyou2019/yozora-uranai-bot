@@ -3275,7 +3275,59 @@
         "hook_length": 14
       },
       "collected_at": "2026-04-15T15:14:08.991503+09:00"
+    },
+    {
+      "id": "post_20260414_2110_exp_006",
+      "platform_post_id": "17953387610962035",
+      "posted_at": "2026-04-15T18:06:06.419389+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の日常・内省",
+      "content_preview": "占いが当たるより、自分が変わることの方が大事だと気づいた。\n\n仕事で迷っている人ほど、答えを求めてし",
+      "first_line": "占いが当たるより、自分が変わることの方が大事だと気づいた。",
+      "char_count": 196,
+      "metrics": {
+        "views": 14,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 14.29
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 29
+      },
+      "collected_at": "2026-04-15T21:07:26.340474+09:00"
+    },
+    {
+      "id": "post_20260415_0053_exp_006",
+      "platform_post_id": "18208984495336595",
+      "posted_at": "2026-04-15T19:12:15.610077+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子+スピ好きターゲット・退勤後）",
+      "category": "占い師の内省・哲学",
+      "content_preview": "仕事で迷うのは、\n本当は良い兆候だと思ってる。\n\n占い師として気づいたことがある。\nキャリアに迷う人",
+      "first_line": "仕事で迷うのは、",
+      "char_count": 159,
+      "metrics": {
+        "views": 7,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-04-15T21:07:26.340474+09:00"
     }
   ],
-  "last_updated": "2026-04-15T17:59:19.171528+09:00"
+  "last_updated": "2026-04-15T21:07:26.340474+09:00"
 }
