@@ -1,0 +1,39 @@
+{
+  "date": "2026-04-14",
+  "generated_at": "2026-04-15 09:08",
+  "summary": {
+    "posts_total": 11,
+    "posts_measured": 7,
+    "posts_deleted": 4,
+    "total_views": 1758,
+    "avg_views": 251.1,
+    "avg_er": 9.95,
+    "experiment_rate": 54.5
+  },
+  "patterns": {
+    "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）": {
+      "count": 1,
+      "avg_views": 73.0,
+      "avg_er": 9.59
+    },
+    "構造G_注意喚起+限定型": {
+      "count": 3,
+      "avg_views": 428.7,
+      "avg_er": 10.47
+    },
+    "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）": {
+      "count": 1,
+      "avg_views": 86.0,
+      "avg_er": 1.16
+    },
+    "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）": {
+      "count": 2,
+      "avg_views": 156.5,
+      "avg_er": 13.73
+    }
+  },
+  "delete_reasons": [
+    "views=110だがlikes=0, replies=0",
+    "24h経過・低パフォーマンス"
+  ]
+}
