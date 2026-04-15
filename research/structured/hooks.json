@@ -1,0 +1,175 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-04-16",
+  "source": "hooks_by_type.txt",
+  "description": "占いSNS投稿のフック1行目 系統別辞書",
+  "metrics_schema": {
+    "sample_n": "観測されたサンプル数",
+    "avg_impressions": "平均インプレッション数",
+    "avg_likes": "平均いいね数",
+    "avg_comments": "平均コメント数",
+    "avg_reposts": "平均リポスト数",
+    "avg_saves": "平均保存数",
+    "avg_er": "平均エンゲージメント率（%）",
+    "priority_score": "優先度スコア（0.0-1.0）"
+  },
+  "categories": {
+    "注目緊急系": {
+      "description": "投稿を止めさせる。通知感を演出",
+      "use_case": "開運日告知・警告系・新機能告知",
+      "items": [
+        { "id": "hook_kinkyu_001", "text": "※見逃し厳禁", "char_count": 6, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_002", "text": "緊急！！！！", "char_count": 6, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_003", "text": "今すぐ確認してください", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_004", "text": "保存必須です", "char_count": 6, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_005", "text": "知らないと損します", "char_count": 9, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_006", "text": "要注意です", "char_count": 5, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_007", "text": "【重要】○○座の方へ", "char_count": 10, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_008", "text": "これ、絶対見ておいて", "char_count": 10, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_009", "text": "この投稿、明日消すかも", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_010", "text": "【拡散希望】", "char_count": 6, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_011", "text": "今日中に読んでください", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_012", "text": "時間がない人へ", "char_count": 7, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kinkyu_013", "text": "【警告】○○な人は注意", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } }
+      ]
+    },
+    "感情共感系": {
+      "description": "自己投影を誘導。保存率が最も高い系統",
+      "use_case": "慰め系・自己肯定系・共感投稿",
+      "items": [
+        { "id": "hook_kyokan_001", "text": "今辛いあなたへ", "char_count": 7, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_002", "text": "心が折れそうなあなたへ", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_003", "text": "迷っているあなたへ", "char_count": 9, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_004", "text": "頑張りすぎているあなたへ", "char_count": 12, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_005", "text": "疲れているあなたへ", "char_count": 9, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_006", "text": "孤独を感じているあなたへ", "char_count": 12, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_007", "text": "なんとなくうまくいかないあなたへ", "char_count": 16, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_008", "text": "最近、眠れていないあなたへ", "char_count": 13, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_009", "text": "誰にも言えない悩みを抱えているあなたへ", "char_count": 19, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_010", "text": "変わりたいと思っているあなたへ", "char_count": 15, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_011", "text": "自分を責めているあなたへ", "char_count": 12, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_012", "text": "一歩が踏み出せないあなたへ", "char_count": 13, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kyokan_013", "text": "頑張っても報われないと感じているあなたへ", "char_count": 20, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } }
+      ]
+    },
+    "期待好奇心系": {
+      "description": "先を読ませる。リール動画冒頭3秒にも有効",
+      "use_case": "予言系・予測系・タイプ診断",
+      "items": [
+        { "id": "hook_kitai_001", "text": "3日以内に起きる奇跡", "char_count": 10, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_002", "text": "今年の後半、あなたに起きること", "char_count": 15, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_003", "text": "あなたが知らないあなたの才能", "char_count": 14, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_004", "text": "今すぐ見てほしい運勢", "char_count": 10, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_005", "text": "信じられないくらい当たる占い", "char_count": 14, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_006", "text": "誕生日でわかる本当のあなた", "char_count": 13, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_007", "text": "直感で選んだカードが教えること", "char_count": 15, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_008", "text": "あなたが生まれた月に秘められた意味", "char_count": 17, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_009", "text": "星座でわかるあなたの運命の人", "char_count": 14, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_010", "text": "タロットが見せた2026年のあなた", "char_count": 16, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_011", "text": "あなたの名前が示す才能", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kitai_012", "text": "運命の人と出会う月がわかる", "char_count": 13, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } }
+      ]
+    },
+    "数字具体性系": {
+      "description": "バーナム効果を具体性で補強。数字は3・5・7・12が効果的",
+      "use_case": "ランキング・リスト型投稿・タイプ分類",
+      "items": [
+        { "id": "hook_suji_001", "text": "12星座別・今月のラッキーアクション", "char_count": 17, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_suji_002", "text": "5つの前兆（○○が起きる時の）", "char_count": 15, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_suji_003", "text": "3日以内に起きること", "char_count": 10, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_suji_004", "text": "7つの兆候（運気が上がる前の）", "char_count": 15, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_suji_005", "text": "星座×血液型576通り", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_suji_006", "text": "1位～12位ランキング", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_suji_007", "text": "12年に1度の転機", "char_count": 9, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_suji_008", "text": "100人中○人が当てはまる", "char_count": 12, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_suji_009", "text": "3分でわかるあなたのタイプ", "char_count": 13, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_suji_010", "text": "今月の運勢TOP3", "char_count": 10, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } }
+      ]
+    },
+    "断言逆張り系": {
+      "description": "業界内の常識を覆す。Threadsで特にバズりやすい",
+      "use_case": "暴露系・業界裏話・逆説",
+      "items": [
+        { "id": "hook_dangen_001", "text": "売れている占い師が絶対ヤラない事3つ", "char_count": 18, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_dangen_002", "text": "占い師が言わない本音", "char_count": 10, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_dangen_003", "text": "実は占い当たる人の共通点", "char_count": 12, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_dangen_004", "text": "無料占いは○○な人には効かない", "char_count": 15, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_dangen_005", "text": "運のいい人は絶対にやらない○○", "char_count": 15, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_dangen_006", "text": "占いを信じない人ほど○○が起こる", "char_count": 16, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_dangen_007", "text": "当たる占い師の見分け方", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_dangen_008", "text": "恋愛で幸せになる人は○○をしない", "char_count": 16, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_dangen_009", "text": "運気が下がる人の特徴", "char_count": 10, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_dangen_010", "text": "ダメな占い師の3つの特徴", "char_count": 12, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } }
+      ]
+    },
+    "疑問問いかけ系": {
+      "description": "脳の「謎解きしたい」習性を刺激。5W1Hのうち1つを隠す",
+      "use_case": "タロット問いかけ・診断系・自己分析",
+      "items": [
+        { "id": "hook_gimon_001", "text": "彼の気持ち、本当に知りたいですか？", "char_count": 17, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_002", "text": "あの人はあなたのことをどう思っているのか", "char_count": 20, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_003", "text": "なぜか連絡が来なくなった、その理由", "char_count": 17, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_004", "text": "両想いなのかもしれない、と思ったことはありますか？", "char_count": 25, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_005", "text": "好きな人に振り向いてもらえない本当の理由", "char_count": 20, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_006", "text": "あなたが恋愛でうまくいかない原因、わかりますか？", "char_count": 24, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_007", "text": "なぜ今、この投稿を見ているんだろう", "char_count": 17, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_008", "text": "最近、同じ数字を見かけませんか？", "char_count": 16, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_009", "text": "朝目覚めた時の気分、どうでしたか？", "char_count": 17, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_010", "text": "このカードが気になるのはなぜ？", "char_count": 15, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_gimon_011", "text": "今日、なぜか心がざわつく人へ", "char_count": 14, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } }
+      ]
+    },
+    "運命宿命系": {
+      "description": "スピリチュアル訴求。運命・前世・ソウルメイト",
+      "use_case": "恋愛訴求・スピ系投稿",
+      "items": [
+        { "id": "hook_unmei_001", "text": "運命の人は、すでにあなたの近くにいるかもしれません", "char_count": 25, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_unmei_002", "text": "二人の縁は前世からつながっています", "char_count": 17, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_unmei_003", "text": "この恋、進んでいい縁です", "char_count": 12, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_unmei_004", "text": "あなたの本当のソウルメイトは○○のタイプ", "char_count": 20, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_unmei_005", "text": "今世でこそ結ばれるべき二人", "char_count": 13, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_unmei_006", "text": "宇宙があなたに伝えたいメッセージ", "char_count": 16, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_unmei_007", "text": "守護霊からのお知らせ", "char_count": 10, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_unmei_008", "text": "天使があなたに贈る言葉", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_unmei_009", "text": "星があなたに語りかけている", "char_count": 13, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_unmei_010", "text": "引き寄せの法則でこの縁は必然だった", "char_count": 17, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } }
+      ]
+    },
+    "開運日時事系": {
+      "description": "季節性・時事性訴求。一粒万倍日・天赦日など",
+      "use_case": "タイムリーな投稿",
+      "items": [
+        { "id": "hook_kaiun_001", "text": "一粒万倍日の今日、占いを欲してる方は公式LINEに集合", "char_count": 27, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kaiun_002", "text": "今日は一粒万倍日。始めたことが万倍になって返ってくる日", "char_count": 26, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kaiun_003", "text": "一粒万倍日×大安の最強開運日。今日の決断が人生を変えます", "char_count": 28, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kaiun_004", "text": "天が万物の罪を赦す日。今日から新しいスタートを切りましょう", "char_count": 29, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kaiun_005", "text": "年に数回しかない天赦日", "char_count": 11, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kaiun_006", "text": "春分の日、あなたの運命が新しく始まります", "char_count": 20, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kaiun_007", "text": "冬至は陰から陽へ。ここから運気が上昇します", "char_count": 21, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kaiun_008", "text": "新月の夜、願いを言葉にしてみてください", "char_count": 19, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kaiun_009", "text": "満月の今夜、手放すべきものを決めましょう", "char_count": 20, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } },
+        { "id": "hook_kaiun_010", "text": "○月○日は数年に一度の最強開運日", "char_count": 16, "metrics": { "sample_n": 0, "avg_impressions": null, "avg_likes": null, "avg_comments": null, "avg_reposts": null, "avg_saves": null, "avg_er": null, "priority_score": null } }
+      ]
+    }
+  },
+  "generation_rules": {
+    "primary_rule": "1行目は必ずいずれかの系統に分類可能な形に成形する",
+    "mixing_allowed": true,
+    "effectiveness_ranking": [
+      "共感系 × 数字具体性系",
+      "断言系 × 数字系",
+      "疑問系 × 名指し系"
+    ],
+    "char_count_guide": {
+      "x_twitter": "15〜25文字",
+      "threads": "20〜40文字",
+      "instagram_reel": "10〜20文字",
+      "note_title": "30〜50文字"
+    },
+    "ng_examples": [
+      "今日の運勢です",
+      "皆さんこんにちは",
+      "○月○日の占い"
+    ]
+  }
+}

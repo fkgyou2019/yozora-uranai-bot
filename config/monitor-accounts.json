@@ -9,11 +9,24 @@
     }
   ],
   "threads_accounts": [
-    {
-      "username": "example.uranai",
-      "category": "占い",
-      "note": "ここにThreads占いアカウントを追加"
-    }
+    { "username": "shihoriiinu", "category": "tarot", "note": "アンドロメダうめ: ドS系タロット鑑定、元行政書士" },
+    { "username": "chisa008_tarot", "category": "tarot", "note": "ルネット・デ・タロット: 恋愛特化+LINE連動" },
+    { "username": "naritaitarot", "category": "tarot", "note": "NEO9000: 言語学×タロット" },
+    { "username": "hashimoto_sachino", "category": "tarot", "note": "祥乃: タロット+四柱推命+西洋占星術" },
+    { "username": "suzu_sasaki", "category": "tarot", "note": "笹木すず: 近鉄生駒駅+カバラ数秘術" },
+    { "username": "kaede.3023", "category": "tarot", "note": "楓: 朗読家×タロット" },
+    { "username": "anna_hoshiyomi", "category": "astrology", "note": "ANNA.星読み研究家: 西洋占星術" },
+    { "username": "megumi.horoscope", "category": "astrology", "note": "星よみのめぐみ: 経営者向け占星術" },
+    { "username": "mayumicolorful", "category": "spiritual", "note": "スターリア真弓: タロット+スピ" },
+    { "username": "mipomei", "category": "spiritual", "note": "山口美穂: 占いCafe twoWitches運営" },
+    { "username": "hina.tesou", "category": "palm_numerology", "note": "ひな手相占い師: 手相特化+LINE誘導" },
+    { "username": "feliceacco", "category": "palm_numerology", "note": "占い師Acco: 九星気学+易経" },
+    { "username": "uranai.no1", "category": "palm_numerology", "note": "MASAYUKI: マヤ暦40代向け" },
+    { "username": "divinustathumi", "category": "palm_numerology", "note": "divinusたつみ: アロマ占星術" },
+    { "username": "vocemagazine", "category": "media_official", "note": "VOCE編集部: 美容誌公式12星座" },
+    { "username": "bitekicom", "category": "media_official", "note": "美的子ちゃん占い: 美容誌公式" },
+    { "username": "hatarakupyon", "category": "other", "note": "ピヨ: 占いAI体験談系" },
+    { "username": "hozuki_yorino", "category": "other", "note": "水無月: 新興占い師" }
   ],
   "search_keywords": {
     "primary": ["占い", "星座", "今日の運勢", "タロット"],
