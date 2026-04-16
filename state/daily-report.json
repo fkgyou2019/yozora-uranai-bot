@@ -1,7 +1,7 @@
 {
   "date": "2026-04-16",
-  "generated_at": "2026-04-16T09:10:42+09:00",
-  "one_line": "2026-04-16 | 3件投稿 (1件計測済み) | フックOK 2/3件 | 違反: 7時: 18字「今週、金銭トラブルが起きやすい星座。」 | 平均v=12.0 | 構造G再現性: テスト中（18/55件成功・5件判定待ち） | HC削除: 1件",
+  "generated_at": "2026-04-16T15:16:13+09:00",
+  "one_line": "2026-04-16 | 5件投稿 (4件計測済み) | フックOK 4/5件 | 違反: 7時: 18字「今週、金銭トラブルが起きやすい星座。」 | 平均v=54.8 | 構造G再現性: テスト中（18/56件成功・5件判定待ち） | HC削除: 3件",
   "posts": [
     {
       "hour": 7,
@@ -38,43 +38,71 @@
       "hook": "4/16、仕事が急に動く星座。",
       "hook_len": 15,
       "hook_ok": true,
-      "views": 0,
-      "likes": 0,
+      "views": 41,
+      "likes": 4,
       "comments": 0,
       "reposts": 0,
-      "er": 0,
-      "measured": false
+      "er": 9.76,
+      "measured": true
+    },
+    {
+      "hour": 10,
+      "struct": "H",
+      "pattern": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "hook": "恋愛で迷うときって、",
+      "hook_len": 10,
+      "hook_ok": true,
+      "views": 19,
+      "likes": 1,
+      "comments": 0,
+      "reposts": 0,
+      "er": 5.26,
+      "measured": true
+    },
+    {
+      "hour": 12,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 147,
+      "likes": 26,
+      "comments": 0,
+      "reposts": 0,
+      "er": 17.69,
+      "measured": true
     }
   ],
   "summary": {
-    "total": 3,
-    "measured": 1,
-    "hook_ok": 2,
+    "total": 5,
+    "measured": 4,
+    "hook_ok": 4,
     "hook_violations": 1,
     "violations": [
       "7時: 18字「今週、金銭トラブルが起きやすい星座。」"
     ],
-    "total_views": 12,
-    "avg_views": 12.0,
-    "best_hook": "今週、金銭トラブルが起きやすい星座。",
-    "best_views": 12,
-    "best_er": 50.0
+    "total_views": 219,
+    "avg_views": 54.8,
+    "best_hook": "明日からの3日間、",
+    "best_views": 147,
+    "best_er": 17.69
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 11,
-    "total_posts": 68,
-    "judged_posts": 63,
+    "total_posts": 69,
+    "judged_posts": 64,
     "pending_posts": 5,
-    "measured_posts": 55,
+    "measured_posts": 56,
     "success_posts": 18,
-    "success_rate": 32.7,
+    "success_rate": 32.1,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（18/55件成功・5件判定待ち）"
+    "status": "テスト中（18/56件成功・5件判定待ち）"
   },
   "hc": {
-    "runs": 4,
-    "deleted": 1
+    "runs": 7,
+    "deleted": 3
   }
 }
