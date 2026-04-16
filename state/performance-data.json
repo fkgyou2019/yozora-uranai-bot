@@ -3483,7 +3483,59 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-16T15:16:06.202679+09:00"
+    },
+    {
+      "id": "post_20260415_2358_exp_003",
+      "platform_post_id": "18099724024824547",
+      "posted_at": "2026-04-16T18:05:15.595705+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の内省・哲学",
+      "content_preview": "占いを求める人は、\n実は答えじゃなくて\n「決断する理由」が欲しいんだと思う。\n\n仕事で迷ったとき、恋",
+      "first_line": "占いを求める人は、",
+      "char_count": 187,
+      "metrics": {
+        "views": 20,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-16T21:12:38.594599+09:00"
+    },
+    {
+      "id": "post_20260416_0249_exp_006",
+      "platform_post_id": "18118571407657568",
+      "posted_at": "2026-04-16T19:12:15.656335+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の内省・哲学",
+      "content_preview": "占いを求める人ほど、答えを急いでいる。\n\n仕事で迷ったとき、人間関係で揺らいだとき。\n私たちは「正解",
+      "first_line": "占いを求める人ほど、答えを急いでいる。",
+      "char_count": 194,
+      "metrics": {
+        "views": 4,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 19
+      },
+      "collected_at": "2026-04-16T21:12:38.594599+09:00"
     }
   ],
-  "last_updated": "2026-04-16T17:59:51.855214+09:00"
+  "last_updated": "2026-04-16T21:12:38.594599+09:00"
 }
