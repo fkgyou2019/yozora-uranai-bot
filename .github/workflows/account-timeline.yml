@@ -52,14 +52,19 @@ jobs:
             python agents/account_timeline_collector.py
           fi
 
+      - name: Extract competitor buzz patterns
+        run: |
+          python .github/scripts/extract_competitor_buzz.py
+        continue-on-error: true
+
       - name: Commit timeline data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/account-timeline.json
+          git add state/account-timeline.json state/competitor-buzz-references.json
           if git diff --staged --quiet; then
             echo "変更なし"
           else
-            git commit -m "data: account-timeline update $(date -u +%Y-%m-%dT%H:%MZ)"
-            git push
+            git commit -m "data: account-timeline + buzz-references update $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push || (git pull --rebase && git push)
           fi

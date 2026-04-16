@@ -155,6 +155,59 @@ def build_learning_block(winning):
     return "\n".join(lines)
 
 
+def build_competitor_buzz_block(buzz_data: dict) -> str:
+    """競合バズデータからライター向けの参考ブロックを構築"""
+    if not buzz_data:
+        return ""
+
+    guidance = buzz_data.get("writer_guidance", {})
+    hook_summary = buzz_data.get("hook_pattern_summary", {})
+    structure_summary = buzz_data.get("structure_summary", {})
+
+    lines = ["【🔍 競合40アカウント分析（バズパターン参考）】"]
+    lines.append(f"※ 参考データ。直接コピーは禁止。エッセンスを自分の言葉で昇華すること。")
+
+    # フックパターンTOP3
+    top_hooks = list(hook_summary.items())[:4]
+    if top_hooks:
+        lines.append("■ 高ER フックパターン（競合実測）:")
+        for name, v in top_hooks:
+            lines.append(f"  ・{name}: avg_er={v['avg_er']:.4f}（{v['count']}件）")
+
+    # 構造TOP3
+    top_structs = list(structure_summary.items())[:3]
+    if top_structs:
+        lines.append("■ 高ER 構造パターン（競合実測）:")
+        for name, v in top_structs:
+            lines.append(f"  ・{name}: avg_er={v['avg_er']:.4f}（{v['count']}件）")
+
+    # 強いフック文例（上位5件、コピー禁止注記つき）
+    examples = guidance.get("strong_first_line_examples", [])[:5]
+    if examples:
+        lines.append("■ 競合バズ投稿の1行目（参考のみ・コピー禁止）:")
+        for ex in examples:
+            lines.append(f"  ・{ex}")
+
+    # インサイト
+    insight = guidance.get("insight", "")
+    if insight:
+        lines.append(f"■ 分析インサイト: {insight}")
+
+    # 注意書き
+    lines.append("※ 臨時収入・祈祷強要・いいね強要 → NG表現に該当。エッセンス（希少性・強運断言）のみ参考にすること。")
+
+    return "\n".join(lines)
+
+
+def has_real_affiliate_urls(asp_links: dict) -> bool:
+    """affiliateURLが実際のURLか確認（プレースホルダー【】なら False）"""
+    for c in asp_links.get("campaigns", []):
+        url = c.get("affiliate_url", "")
+        if url and url.startswith("http") and "【" not in url:
+            return True
+    return False
+
+
 def build_common_context(today, used_patterns, learning_block, weekday, series_map):
     """X・Threads共通のコンテキスト情報を構築"""
     today_series = series_map.get(weekday, "")
@@ -715,7 +768,7 @@ def get_structure_template(structure):
     return templates.get(structure, templates["G"])
 
 
-def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block):
+def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block, competitor_buzz_block=""):
     """実験モード: 特定時間帯×パターン向けの投稿を1件生成するプロンプト"""
     hour = slot_info["hour"]
     slot = slot_info["slot"]
@@ -751,7 +804,7 @@ def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block
 """ if hour == 9 and structure == "G" else ""}
 
 {learning_block}
-
+{(chr(10) + competitor_buzz_block + chr(10)) if competitor_buzz_block else ""}
 【🚨 絶対禁止】
 - 励まし型: 「木星の優しい光が」「土星が微笑む」系の抽象励まし
 - 1星座限定の投稿（「蟹座さんへ」等）
@@ -834,7 +887,7 @@ def call_claude_api_single(api_key, prompt):
         return None
 
 
-def generate_experiment_posts(api_key, today, used_patterns, learning_block, slots_to_generate=None):
+def generate_experiment_posts(api_key, today, used_patterns, learning_block, slots_to_generate=None, competitor_buzz_block=""):
     """実験モード: 指定スロット分の投稿を1件ずつ生成してリストで返す"""
     import time as _time
 
@@ -847,7 +900,7 @@ def generate_experiment_posts(api_key, today, used_patterns, learning_block, slo
     for slot_info in slots_to_generate:
         hour = slot_info["hour"]
         print(f"  [{hour}時台] 構造{slot_info['structure']}: {slot_info['pattern_hint'][:20]}...", end=" ", flush=True)
-        prompt = build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block)
+        prompt = build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block, competitor_buzz_block)
         post = call_claude_api_single(api_key, prompt)
 
         if post is not None:
@@ -954,7 +1007,10 @@ def main():
     today_posts = [p for p in history.get("posts", [])
                    if p.get("posted_at", "").startswith(datetime.now(JST).strftime("%Y-%m-%d"))]
     affiliate_today = any(p.get("is_affiliate") for p in today_posts)
-    should_generate_affiliate = affiliate_enabled and not affiliate_today
+    urls_ready = has_real_affiliate_urls(asp_links)
+    should_generate_affiliate = affiliate_enabled and not affiliate_today and urls_ready
+    if affiliate_enabled and not urls_ready:
+        print("[INFO] アフィリエイト: 有効だがURLが未設定（プレースホルダーのまま）→ スキップ")
 
     used_patterns = [p.get("pattern_name", "") for p in history.get("posts", [])[-15:]]
     now = datetime.now(JST)
@@ -976,6 +1032,15 @@ def main():
     }
 
     learning_block = build_learning_block(winning)
+
+    # 競合バズデータ（account-timeline 収集後に extract_competitor_buzz.py が生成）
+    buzz_data = load_json("state/competitor-buzz-references.json")
+    competitor_buzz_block = build_competitor_buzz_block(buzz_data)
+    if competitor_buzz_block:
+        print(f"[INFO] 競合バズデータ読込: {buzz_data.get('buzz_posts_count', 0)}件のバズ投稿参照")
+    else:
+        print("[INFO] 競合バズデータなし（初回 or extract未実行）→スキップ")
+
     ctx = build_common_context(today, used_patterns, learning_block, weekday, series_map)
 
     # ========================================
@@ -1024,7 +1089,7 @@ def main():
             return
 
         print(f"生成対象: {len(slots_to_generate)}スロット（スキップ: {len(skip_hours)}件）")
-        threads_posts = generate_experiment_posts(api_key, today, used_patterns, learning_block, slots_to_generate)
+        threads_posts = generate_experiment_posts(api_key, today, used_patterns, learning_block, slots_to_generate, competitor_buzz_block)
         if not threads_posts:
             print("ERROR: 実験モード投稿の生成に全て失敗")
             sys.exit(1)

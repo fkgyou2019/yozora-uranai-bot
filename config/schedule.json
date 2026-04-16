@@ -31,8 +31,8 @@
     "preferred_time_x": "20:37",
     "preferred_time_threads": "19:37",
     "min_interval_days_same_campaign": 3,
-    "enabled": false,
-    "note": "Phase1はアフィリエイト無効。Threadsはリンク直貼り、Xはプロフ誘導+自己リプ"
+    "enabled": true,
+    "note": "有効。asp-links.jsonのaffiliate_urlをASP登録後の実URLに差し替えると自動で投稿開始（URLが未設定のままはスキップ）"
   },
   "platform_strategy": {
     "x": {
