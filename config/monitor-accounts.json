@@ -9,29 +9,229 @@
     }
   ],
   "threads_accounts": [
-    { "username": "shihoriiinu", "category": "tarot", "note": "アンドロメダうめ: ドS系タロット鑑定、元行政書士" },
-    { "username": "chisa008_tarot", "category": "tarot", "note": "ルネット・デ・タロット: 恋愛特化+LINE連動" },
-    { "username": "naritaitarot", "category": "tarot", "note": "NEO9000: 言語学×タロット" },
-    { "username": "hashimoto_sachino", "category": "tarot", "note": "祥乃: タロット+四柱推命+西洋占星術" },
-    { "username": "suzu_sasaki", "category": "tarot", "note": "笹木すず: 近鉄生駒駅+カバラ数秘術" },
-    { "username": "kaede.3023", "category": "tarot", "note": "楓: 朗読家×タロット" },
-    { "username": "anna_hoshiyomi", "category": "astrology", "note": "ANNA.星読み研究家: 西洋占星術" },
-    { "username": "megumi.horoscope", "category": "astrology", "note": "星よみのめぐみ: 経営者向け占星術" },
-    { "username": "mayumicolorful", "category": "spiritual", "note": "スターリア真弓: タロット+スピ" },
-    { "username": "mipomei", "category": "spiritual", "note": "山口美穂: 占いCafe twoWitches運営" },
-    { "username": "hina.tesou", "category": "palm_numerology", "note": "ひな手相占い師: 手相特化+LINE誘導" },
-    { "username": "feliceacco", "category": "palm_numerology", "note": "占い師Acco: 九星気学+易経" },
-    { "username": "uranai.no1", "category": "palm_numerology", "note": "MASAYUKI: マヤ暦40代向け" },
-    { "username": "divinustathumi", "category": "palm_numerology", "note": "divinusたつみ: アロマ占星術" },
-    { "username": "vocemagazine", "category": "media_official", "note": "VOCE編集部: 美容誌公式12星座" },
-    { "username": "bitekicom", "category": "media_official", "note": "美的子ちゃん占い: 美容誌公式" },
-    { "username": "hatarakupyon", "category": "other", "note": "ピヨ: 占いAI体験談系" },
-    { "username": "hozuki_yorino", "category": "other", "note": "水無月: 新興占い師" }
+    {
+      "username": "shihoriiinu",
+      "category": "tarot",
+      "note": "アンドロメダうめ: ドS系タロット鑑定、元行政書士"
+    },
+    {
+      "username": "chisa008_tarot",
+      "category": "tarot",
+      "note": "ルネット・デ・タロット: 恋愛特化+LINE連動"
+    },
+    {
+      "username": "naritaitarot",
+      "category": "tarot",
+      "note": "NEO9000: 言語学×タロット"
+    },
+    {
+      "username": "hashimoto_sachino",
+      "category": "tarot",
+      "note": "祥乃: タロット+四柱推命+西洋占星術"
+    },
+    {
+      "username": "suzu_sasaki",
+      "category": "tarot",
+      "note": "笹木すず: 近鉄生駒駅+カバラ数秘術"
+    },
+    {
+      "username": "kaede.3023",
+      "category": "tarot",
+      "note": "楓: 朗読家×タロット"
+    },
+    {
+      "username": "anna_hoshiyomi",
+      "category": "astrology",
+      "note": "ANNA.星読み研究家: 西洋占星術"
+    },
+    {
+      "username": "megumi.horoscope",
+      "category": "astrology",
+      "note": "星よみのめぐみ: 経営者向け占星術"
+    },
+    {
+      "username": "mayumicolorful",
+      "category": "spiritual",
+      "note": "スターリア真弓: タロット+スピ"
+    },
+    {
+      "username": "mipomei",
+      "category": "spiritual",
+      "note": "山口美穂: 占いCafe twoWitches運営"
+    },
+    {
+      "username": "hina.tesou",
+      "category": "palm_numerology",
+      "note": "ひな手相占い師: 手相特化+LINE誘導"
+    },
+    {
+      "username": "feliceacco",
+      "category": "palm_numerology",
+      "note": "占い師Acco: 九星気学+易経"
+    },
+    {
+      "username": "uranai.no1",
+      "category": "palm_numerology",
+      "note": "MASAYUKI: マヤ暦40代向け"
+    },
+    {
+      "username": "divinustathumi",
+      "category": "palm_numerology",
+      "note": "divinusたつみ: アロマ占星術"
+    },
+    {
+      "username": "vocemagazine",
+      "category": "media_official",
+      "note": "VOCE編集部: 美容誌公式12星座"
+    },
+    {
+      "username": "bitekicom",
+      "category": "media_official",
+      "note": "美的子ちゃん占い: 美容誌公式"
+    },
+    {
+      "username": "hatarakupyon",
+      "category": "other",
+      "note": "ピヨ: 占いAI体験談系"
+    },
+    {
+      "username": "hozuki_yorino",
+      "category": "other",
+      "note": "水無月: 新興占い師"
+    },
+    {
+      "username": "miko.reishi",
+      "category": "spiritual",
+      "note": "Phase2自動発掘: follower=20000, queries=占い"
+    },
+    {
+      "username": "yoshimigram0926",
+      "category": "major_brand",
+      "note": "Phase2自動発掘: follower=1238, queries=占い"
+    },
+    {
+      "username": "inariuranai",
+      "category": "major_brand",
+      "note": "Phase2自動発掘: follower=9742, queries=占い"
+    },
+    {
+      "username": "mikoto_nanase",
+      "category": "astrology",
+      "note": "Phase2自動発掘: follower=903, queries=占い"
+    },
+    {
+      "username": "yataagarasuu",
+      "category": "spiritual",
+      "note": "Phase2自動発掘: follower=2662, queries=占い"
+    },
+    {
+      "username": "nagi_goen",
+      "category": "major_brand",
+      "note": "Phase2自動発掘: follower=5266, queries=占い"
+    },
+    {
+      "username": "resug.fortune",
+      "category": "palm_numerology",
+      "note": "Phase2自動発掘: follower=1064, queries=占い"
+    },
+    {
+      "username": "mira_uranai_reishi",
+      "category": "spiritual",
+      "note": "Phase2自動発掘: follower=1364, queries=占い"
+    },
+    {
+      "username": "raito.koiuranai",
+      "category": "love_specialized",
+      "note": "Phase2自動発掘: follower=838, queries=タロット占い,今日の運勢"
+    },
+    {
+      "username": "arasa_uranai",
+      "category": "spiritual",
+      "note": "Phase2自動発掘: follower=2557, queries=タロット占い"
+    },
+    {
+      "username": "yuiha.ppy",
+      "category": "spiritual",
+      "note": "Phase2自動発掘: follower=2626, queries=タロット占い"
+    },
+    {
+      "username": "hachico.odyssey",
+      "category": "tarot",
+      "note": "Phase2自動発掘: follower=513, queries=タロット占い"
+    },
+    {
+      "username": "ume_reishi",
+      "category": "spiritual",
+      "note": "Phase2自動発掘: follower=10000, queries=星座占い"
+    },
+    {
+      "username": "uranai.haruto",
+      "category": "astrology",
+      "note": "Phase2自動発掘: follower=4708, queries=星座占い"
+    },
+    {
+      "username": "uranai.fukuen",
+      "category": "spiritual",
+      "note": "Phase2自動発掘: follower=2049, queries=星座占い"
+    },
+    {
+      "username": "kana.chan0713",
+      "category": "spiritual",
+      "note": "Phase2自動発掘: follower=2532, queries=星座占い,恋愛占い"
+    },
+    {
+      "username": "themoontokyo",
+      "category": "astrology",
+      "note": "Phase2自動発掘: follower=1661, queries=星座占い"
+    },
+    {
+      "username": "horoscope.coaching_yuri",
+      "category": "astrology",
+      "note": "Phase2自動発掘: follower=2382, queries=占星術"
+    },
+    {
+      "username": "mu3_888",
+      "category": "major_brand",
+      "note": "Phase2自動発掘: follower=18000, queries=スピリチュアル"
+    },
+    {
+      "username": "akari.wildsoul",
+      "category": "spiritual",
+      "note": "Phase2自動発掘: follower=1114, queries=スピリチュアル"
+    },
+    {
+      "username": "mimika_tarot",
+      "category": "tarot",
+      "note": "Phase2自動発掘: follower=5568, queries=スピリチュアル,AI占い"
+    },
+    {
+      "username": "orihimechan0919",
+      "category": "love_specialized",
+      "note": "Phase2自動発掘: follower=1084, queries=スピリチュアル"
+    }
   ],
   "search_keywords": {
-    "primary": ["占い", "星座", "今日の運勢", "タロット"],
-    "secondary": ["スピリチュアル", "開運", "金運", "恋愛運", "満月", "新月"],
-    "hashtags": ["#今日の占い", "#星座占い", "#タロット占い", "#スピリチュアル", "#12星座"]
+    "primary": [
+      "占い",
+      "星座",
+      "今日の運勢",
+      "タロット"
+    ],
+    "secondary": [
+      "スピリチュアル",
+      "開運",
+      "金運",
+      "恋愛運",
+      "満月",
+      "新月"
+    ],
+    "hashtags": [
+      "#今日の占い",
+      "#星座占い",
+      "#タロット占い",
+      "#スピリチュアル",
+      "#12星座"
+    ]
   },
   "buzz_threshold": {
     "x": {
