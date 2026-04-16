@@ -3558,6 +3558,26 @@
       "platform_post_id": "18015650138833528",
       "source": "post-verify",
       "pattern_name": "構造G_注意喚起+限定型"
+    },
+    {
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の内省・哲学",
+      "content": "占いを求める人は、\n実は答えじゃなくて\n「決断する理由」が欲しいんだと思う。\n\n仕事で迷ったとき、恋で揺らいだとき、\n星の配置を聞くことで\n「今の選択は間違っていない」という\n許可をもらいたい。\n\n占い師の本当の役割は、\nその許可を与えることじゃなくて\n—あなた自身が、すでに\n答えを持っていることに気づかせることなんです。\n\n星はヒントに過ぎない。\n主役はいつも、あなた。",
+      "hashtag": "#星座占い",
+      "time_slot": "哲学深掘り型（18:07）",
+      "scheduled_hour": 18,
+      "scheduled_minute": 7,
+      "id": "post_20260415_2358_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ],
+      "posted_at": "2026-04-16T18:05:15.595705+09:00",
+      "platform_post_id": "18099724024824547",
+      "source": "post-verify"
     }
   ]
 }
