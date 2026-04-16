@@ -3535,7 +3535,33 @@
         "hook_length": 19
       },
       "collected_at": "2026-04-16T21:12:38.594599+09:00"
+    },
+    {
+      "id": "post_20260415_2358_exp_004",
+      "platform_post_id": "17959357020082926",
+      "posted_at": "2026-04-16T20:42:18.861365+09:00",
+      "pattern_name": "構造G_天体根拠×夜の恋愛感情型（今夜の恋ambassador×月の動き×恋愛迷子ターゲット×夜のリラックスタイム）",
+      "category": "恋愛運",
+      "content_preview": "今週後半、恋が動く星座。\n\nたった3つだけです。\n\n双子座、獅子座、射手座\n\n双子座さんは、後半にな",
+      "first_line": "今週後半、恋が動く星座。",
+      "char_count": 179,
+      "metrics": {
+        "views": 143,
+        "likes": 23,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 17.48
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-17T01:14:09.062236+09:00"
     }
   ],
-  "last_updated": "2026-04-16T21:12:38.594599+09:00"
+  "last_updated": "2026-04-17T01:14:09.062236+09:00"
 }

@@ -246,8 +246,8 @@
     "自動検出・低パフォーマンスパターン: 4件"
   ],
   "auto_analysis": {
-    "data_count": 136,
-    "last_analyzed": "2026-04-16T21:12:45.094304+09:00",
+    "data_count": 137,
+    "last_analyzed": "2026-04-17T01:14:21.653132+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -453,6 +453,15 @@
         "total_likes": 78,
         "total_replies": 50,
         "_score": 173.2914
+      },
+      {
+        "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋ambassador×月の動き×恋愛迷子ターゲット×夜のリラックスタイム）",
+        "count": 1,
+        "avg_engagement": 17.48,
+        "avg_views": 143.0,
+        "total_likes": 23,
+        "total_replies": 2,
+        "_score": 167.99640000000002
       },
       {
         "pattern": "構造G_注意喚起+限定型①（日付指定フック必須: 「4/14、急に動く星座。」形式）",
@@ -820,8 +829,8 @@
       },
       {
         "feature": "has_question",
-        "count": 42,
-        "avg_engagement": 12.71
+        "count": 43,
+        "avg_engagement": 12.82
       }
     ],
     "top_hook_styles": [
@@ -989,9 +998,9 @@
       },
       "20": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 17.67,
-        "avg_views": 202.0,
-        "count": 17
+        "avg_eng": 17.66,
+        "avg_views": 199.0,
+        "count": 18
       },
       "21": {
         "slot": "夜（19〜21時台）",
@@ -1065,8 +1074,8 @@
       "自動検出・低パフォーマンスパターン: 4件"
     ]
   },
-  "data_count": 136,
-  "last_analyzed": "2026-04-16T21:12:45.094304+09:00",
+  "data_count": 137,
+  "last_analyzed": "2026-04-17T01:14:21.653132+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1230,6 +1239,15 @@
       "total_likes": 78,
       "total_replies": 50,
       "_score": 173.2914
+    },
+    {
+      "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋ambassador×月の動き×恋愛迷子ターゲット×夜のリラックスタイム）",
+      "count": 1,
+      "avg_engagement": 17.48,
+      "avg_views": 143.0,
+      "total_likes": 23,
+      "total_replies": 2,
+      "_score": 167.99640000000002
     },
     {
       "pattern": "構造G_注意喚起+限定型①（日付指定フック必須: 「4/14、急に動く星座。」形式）",
@@ -1597,8 +1615,8 @@
     },
     {
       "feature": "has_question",
-      "count": 42,
-      "avg_engagement": 12.71
+      "count": 43,
+      "avg_engagement": 12.82
     }
   ],
   "best_posts": [
@@ -1733,9 +1751,9 @@
     },
     "20": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 17.67,
-      "avg_views": 202.0,
-      "count": 17
+      "avg_eng": 17.66,
+      "avg_views": 199.0,
+      "count": 18
     },
     "21": {
       "slot": "夜（19〜21時台）",
