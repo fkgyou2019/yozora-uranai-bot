@@ -181,8 +181,17 @@
         "フック1件追加 (数字インパクト: 1)",
         "インサイト5件追加"
       ]
+    },
+    {
+      "date": "2026-04-17",
+      "hooks_added": 0,
+      "insights_added": 5,
+      "source_posts_analyzed": 1258,
+      "key_changes": [
+        "インサイト5件追加"
+      ]
     }
   ],
-  "total_improvements": 19,
-  "last_improved": "2026-04-16T08:10:39.090404+09:00"
+  "total_improvements": 20,
+  "last_improved": "2026-04-17T08:07:35.439681+09:00"
 }
