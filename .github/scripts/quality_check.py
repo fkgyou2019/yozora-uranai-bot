@@ -66,13 +66,13 @@ def check_post(post):
         max_emoji = 3
         max_hashtags = 2
     else:  # threads
-        min_chars = 80
+        min_chars = 15   # 1ライナー投稿（いいね強要型等）を許容
         max_chars = 500
-        max_line_length = 25
+        max_line_length = 40  # スペース区切り1ライナー（い い ね を〜）を許容
         min_blocks = 3
         max_block_length = 80
         max_total_lines = 16
-        max_hook_length = 22
+        max_hook_length = 40  # スペース区切り1ライナー対応
         max_emoji = 5
         max_hashtags = 1  # Threadsはトピックタグ1つのみ
 
@@ -135,7 +135,7 @@ def check_post(post):
         "だよね？", "じゃん", "マジで", "ヤバい",
         "ウケる", "草", "それな", "知らんけど",
         # よぞら.が使わない表現
-        "泣く", "怒る", "無視", "ぶっちゃけ",
+        "泣く", "怒る", "ぶっちゃけ",
     ]
     for ng in persona_ng_words:
         if ng in content:
