@@ -2368,5 +2368,20 @@
     "peak_velocity": 49.0,
     "peak_velocity_hour": 1,
     "api_fail_count": 5
+  },
+  "verify-retry-20260409191217": {
+    "post_id": "verify-retry-20260409191217",
+    "platform_post_id": "18134105587534988",
+    "threads_url": "",
+    "posted_at": "2026-04-09T19:12:17.839595+09:00",
+    "pattern_name": "構造G_注意喚起+限定型",
+    "slot_hour": 19,
+    "day_of_week": 3,
+    "day_name": "木",
+    "first_line": "今週後半、金銭管理で気をつけた方がいい星座。",
+    "content_preview": "今週後半、金銭管理で気をつけた方がいい星座。\n\nたった3つだけです。\n\n牡羊座・獅子座・射手座は\n木星の逆行影響で\n「予",
+    "hourly": [],
+    "completed": true,
+    "api_fail_count": 7
   }
 }
