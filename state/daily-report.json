@@ -1,7 +1,7 @@
 {
   "date": "2026-04-16",
-  "generated_at": "2026-04-16T08:30:27+09:00",
-  "one_line": "2026-04-16 | 2件投稿 (1件計測済み) | フックOK 1/2件 | 違反: 7時: 18字「今週、金銭トラブルが起きやすい星座。」 | 平均v=12.0 | 構造G再現性: テスト中（17/54件成功・5件判定待ち） | HC削除: 1件",
+  "generated_at": "2026-04-16T09:10:42+09:00",
+  "one_line": "2026-04-16 | 3件投稿 (1件計測済み) | フックOK 2/3件 | 違反: 7時: 18字「今週、金銭トラブルが起きやすい星座。」 | 平均v=12.0 | 構造G再現性: テスト中（18/55件成功・5件判定待ち） | HC削除: 1件",
   "posts": [
     {
       "hour": 7,
@@ -30,12 +30,26 @@
       "reposts": 0,
       "er": 0,
       "measured": false
+    },
+    {
+      "hour": 9,
+      "struct": "G",
+      "pattern": "構造G_天体根拠×仕事アドバイス型（今日の仕事運・仕事迷子ターゲット・仕事開始後のひと息）",
+      "hook": "4/16、仕事が急に動く星座。",
+      "hook_len": 15,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
     }
   ],
   "summary": {
-    "total": 2,
+    "total": 3,
     "measured": 1,
-    "hook_ok": 1,
+    "hook_ok": 2,
     "hook_violations": 1,
     "violations": [
       "7時: 18字「今週、金銭トラブルが起きやすい星座。」"
@@ -50,17 +64,17 @@
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 11,
-    "total_posts": 67,
-    "judged_posts": 62,
+    "total_posts": 68,
+    "judged_posts": 63,
     "pending_posts": 5,
-    "measured_posts": 54,
-    "success_posts": 17,
-    "success_rate": 31.5,
+    "measured_posts": 55,
+    "success_posts": 18,
+    "success_rate": 32.7,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（17/54件成功・5件判定待ち）"
+    "status": "テスト中（18/55件成功・5件判定待ち）"
   },
   "hc": {
-    "runs": 3,
+    "runs": 4,
     "deleted": 1
   }
 }
