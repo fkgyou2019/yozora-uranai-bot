@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-17T15:29:03.997175+09:00",
+  "generated_at": "2026-04-18T00:47:39.040300+09:00",
   "source_accounts": 40,
-  "total_posts": 729,
-  "buzz_posts_count": 477,
+  "total_posts": 803,
+  "buzz_posts_count": 535,
   "filters": {
     "min_pseudo_er": 0.05,
     "min_likes": 5
@@ -26,33 +26,33 @@
         }
       ]
     },
-    "臨時収入型": {
-      "count": 6,
-      "avg_er": 0.1379,
+    "スルー恐怖型": {
+      "count": 4,
+      "avg_er": 0.1409,
       "examples": [
         {
           "handle": "uranai.fukuen",
-          "first_line": "無視する人金運上がらんよ。",
-          "likes": 685,
-          "pseudo_er": 0.6545
+          "first_line": "【ここでスルーしたら4月、築き上げたもの全部失うわよ】",
+          "likes": 346,
+          "pseudo_er": 0.4436
         },
         {
-          "handle": "uranai.fukuen",
-          "first_line": "奇跡の臨時収入が入る生まれ年💰",
-          "likes": 119,
-          "pseudo_er": 0.1354
+          "handle": "arasa_uranai",
+          "first_line": "無視すると4月、急に突然すべてを失う人よ",
+          "likes": 74,
+          "pseudo_er": 0.1038
         },
         {
-          "handle": "akari.wildsoul",
-          "first_line": "過去最高収入や至福感を感じたり",
-          "likes": 8,
-          "pseudo_er": 0.018
+          "handle": "mira_uranai_reishi",
+          "first_line": "絶対スルーしたら損するよ。",
+          "likes": 17,
+          "pseudo_er": 0.0124
         }
       ]
     },
     "強運断言型": {
-      "count": 10,
-      "avg_er": 0.1362,
+      "count": 11,
+      "avg_er": 0.1336,
       "examples": [
         {
           "handle": "hina.tesou",
@@ -74,33 +74,33 @@
         }
       ]
     },
-    "スルー恐怖型": {
-      "count": 4,
-      "avg_er": 0.1202,
+    "臨時収入型": {
+      "count": 8,
+      "avg_er": 0.1068,
       "examples": [
         {
           "handle": "uranai.fukuen",
-          "first_line": "【ここでスルーしたら4月、築き上げたもの全部失うわよ】",
-          "likes": 346,
-          "pseudo_er": 0.4436
+          "first_line": "無視する人金運上がらんよ。",
+          "likes": 685,
+          "pseudo_er": 0.6545
         },
         {
-          "handle": "arasa_uranai",
-          "first_line": "無視すると4月、急に突然すべてを失う人よ",
-          "likes": 15,
-          "pseudo_er": 0.0211
+          "handle": "uranai.fukuen",
+          "first_line": "奇跡の臨時収入が入る生まれ年💰",
+          "likes": 119,
+          "pseudo_er": 0.1354
         },
         {
-          "handle": "mira_uranai_reishi",
-          "first_line": "絶対スルーしたら損するよ。",
-          "likes": 17,
-          "pseudo_er": 0.0124
+          "handle": "orihimechan0919",
+          "first_line": "4/29の三ノ宮での対面鑑定、残り１枠になりました。どんどんご予約が入ってきます。本当にありがとうございます😭",
+          "likes": 7,
+          "pseudo_er": 0.0199
         }
       ]
     },
     "共感・場面描写型": {
-      "count": 25,
-      "avg_er": 0.0844,
+      "count": 28,
+      "avg_er": 0.0765,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -123,8 +123,8 @@
       ]
     },
     "その他": {
-      "count": 427,
-      "avg_er": 0.0498,
+      "count": 479,
+      "avg_er": 0.0477,
       "examples": [
         {
           "handle": "raito.koiuranai",
@@ -148,13 +148,13 @@
     },
     "質問フック型": {
       "count": 3,
-      "avg_er": 0.0096,
+      "avg_er": 0.0184,
       "examples": [
         {
           "handle": "naritaitarot",
           "first_line": "タロットをどのように学んだんですか？",
-          "likes": 5,
-          "pseudo_er": 0.0187
+          "likes": 7,
+          "pseudo_er": 0.0449
         },
         {
           "handle": "hatarakupyon",
@@ -174,7 +174,7 @@
   "structure_summary": {
     "B_ランキング型": {
       "count": 12,
-      "avg_er": 0.1916,
+      "avg_er": 0.1984,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -191,8 +191,8 @@
       ]
     },
     "C_予言・断言型": {
-      "count": 10,
-      "avg_er": 0.1753,
+      "count": 11,
+      "avg_er": 0.1628,
       "examples": [
         {
           "handle": "hina.tesou",
@@ -209,8 +209,8 @@
       ]
     },
     "H_スピ共感型": {
-      "count": 42,
-      "avg_er": 0.1001,
+      "count": 47,
+      "avg_er": 0.0914,
       "examples": [
         {
           "handle": "raito.koiuranai",
@@ -226,9 +226,27 @@
         }
       ]
     },
+    "E_エンゲージ強要型": {
+      "count": 9,
+      "avg_er": 0.0653,
+      "examples": [
+        {
+          "handle": "ume_reishi",
+          "text_preview": "ピン留め済み 2025/12/07 🌸初回無料の霊視鑑定🌸 8歳の頃、視えるのが怖いと言われ 両親に捨てられました。梅と申します。 捨てられそれから紆余曲折、 太宰府の地で厳しい修行を積み、占い師となり 今まで5000人以上の方を\"正しい道",
+          "likes": 2904,
+          "pseudo_er": 0.5216
+        },
+        {
+          "handle": "uranai.fukuen",
+          "text_preview": "ピン留め済み 2026/03/19 🐍初回限定無料鑑定のご案内🐍 ご縁に感謝を込めて、今だけ “無料鑑定”を実施しております。 あなたの人生に必要な言霊を、誰よりも丁寧にお伝えします。 ・金運・良縁を引き寄せたい ・漠然とした不安から抜け出",
+          "likes": 37,
+          "pseudo_er": 0.0265
+        }
+      ]
+    },
     "G_天体根拠型": {
-      "count": 5,
-      "avg_er": 0.0905,
+      "count": 9,
+      "avg_er": 0.0557,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -237,34 +255,16 @@
           "pseudo_er": 0.4436
         },
         {
-          "handle": "mimika_tarot",
-          "text_preview": "17年前、私の母は余命1ヶ月と診断された日から、父と私と妹の3人で病院に寝泊まりしながら看病した。 脳の病だったので、日に日に子供のようになってく母だったけれど、余命1ヶ月と宣告されていたのに半年間も生きることができた。 担当の先生も医学的",
-          "likes": 29,
-          "pseudo_er": 0.0057
-        }
-      ]
-    },
-    "E_エンゲージ強要型": {
-      "count": 9,
-      "avg_er": 0.0654,
-      "examples": [
-        {
-          "handle": "ume_reishi",
-          "text_preview": "ピン留め済み 2025/12/07 🌸初回無料の霊視鑑定🌸 8歳の頃、視えるのが怖いと言われ 両親に捨てられました。梅と申します。 捨てられそれから紆余曲折、 太宰府の地で厳しい修行を積み、占い師となり 今まで5000人以上の方を\"正しい道",
-          "likes": 2902,
-          "pseudo_er": 0.5224
-        },
-        {
-          "handle": "uranai.fukuen",
-          "text_preview": "ピン留め済み 2026/03/19 🐍初回限定無料鑑定のご案内🐍 ご縁に感謝を込めて、今だけ “無料鑑定”を実施しております。 あなたの人生に必要な言霊を、誰よりも丁寧にお伝えします。 ・金運・良縁を引き寄せたい ・漠然とした不安から抜け出",
-          "likes": 36,
-          "pseudo_er": 0.0261
+          "handle": "mipomei",
+          "text_preview": "新月 4.17 新月の夜🌑 静けさの中で 新しい願いが目を覚ます この新月は “本音”に魔法をかけるタイミング 心の奥に隠してた想い そっとすくい上げてあげて それはきっと これからの未来を動かす鍵になるから でももし—— 「自分の本音がわ",
+          "likes": 5,
+          "pseudo_er": 0.0312
         }
       ]
     },
     "F_その他": {
-      "count": 394,
-      "avg_er": 0.0449,
+      "count": 440,
+      "avg_er": 0.0438,
       "examples": [
         {
           "handle": "raito.koiuranai",
@@ -281,8 +281,8 @@
       ]
     },
     "A_限定希少型": {
-      "count": 5,
-      "avg_er": 0.0117,
+      "count": 7,
+      "avg_er": 0.0088,
       "examples": [
         {
           "handle": "mira_uranai_reishi",
@@ -371,9 +371,9 @@
       "category": "other",
       "first_line": "🌸初回無料の霊視鑑定🌸",
       "text": "ピン留め済み\n2025/12/07\n🌸初回無料の霊視鑑定🌸\n8歳の頃、視えるのが怖いと言われ\n両親に捨てられました。梅と申します。\n捨てられそれから紆余曲折、\n太宰府の地で厳しい修行を積み、占い師となり\n今まで5000人以上の方を\"正しい道\"へと導いてきました。\n私のこの活動が両親に届くまで\n今なら\"無料\"で「霊視鑑定」を行っています🌸\n誰にも言えない悩み。お困りごと。\nその全てを受け止め、あなたの全てを限りなく視させて頂き、あなたの未来に光を照らします🎋\n現在のオーラ状態を視ますので、参加条件を満たしてからお越しください。\n【参加条件】\n①\n@ume_reishi\nをフォロー\n②このスレッド",
-      "likes": 2902,
+      "likes": 2904,
       "replies": 69,
-      "pseudo_er": 0.5224,
+      "pseudo_er": 0.5216,
       "hook_pattern": "その他",
       "structure": "E_エンゲージ強要型"
     },
@@ -481,9 +481,9 @@
       "category": "other",
       "first_line": "実は小さい頃から、",
       "text": "ピン留め済み\n2025/11/20\n実は小さい頃から、\n人の縁が視えてしまう体質やって、\n運命の糸、悪意、両想い、片思い、嫌い、憎い、恨みが\n全部視えてしまうんよ。\n昔、大好きやった人の浮気を\n霊視で知ってもうて、\nそれを伝えたら「気持ち悪い」って言われて\n婚約破棄された…\nこの力は、誰にも理解してもらえへんし\n言うと気持ち悪がられて\nかなり辛かったし、4を覚悟したこともあったんやけど\nW不倫の関係に悩んでいた友達に\n相手が別れる時期をドンピシャで当てたら\nめっちゃ感謝されて、\nあ…私の力って人を幸せにできるんやな\nって思った。\nいや、不倫やん！って思うかもしれへんけど、\n純粋な好きという気持",
-      "likes": 519,
+      "likes": 520,
       "replies": 53,
-      "pseudo_er": 0.3285,
+      "pseudo_er": 0.3287,
       "hook_pattern": "その他",
       "structure": "F_その他"
     },
@@ -494,7 +494,7 @@
       "text": "天然石\n2026/04/03\n天然石好きな皆様に、お願いがあります！\n自分のすきな天然石のお写真\n載せてほしいのです！\n４月から異動になって二か所かと思いきや\n（もともと兼務だったのです）\n三か所回らなければならず\n絶望しているのです。笑\nよろしくお願いします！\nちなみに今日の私のおともは\nブラックトルマリンです！",
       "likes": 59,
       "replies": 91,
-      "pseudo_er": 0.3155,
+      "pseudo_er": 0.317,
       "hook_pattern": "その他",
       "structure": "F_その他"
     },
@@ -565,6 +565,17 @@
       "structure": "C_予言・断言型"
     },
     {
+      "handle": "megumi.horoscope",
+      "category": "other",
+      "first_line": "なぜ、みな、詐欺にひっかかるの？",
+      "text": "なぜ、みな、詐欺にひっかかるの？",
+      "likes": 24,
+      "replies": 62,
+      "pseudo_er": 0.2261,
+      "hook_pattern": "その他",
+      "structure": "F_その他"
+    },
+    {
       "handle": "hina.tesou",
       "category": "other",
       "first_line": "やはり、あなたは超強運ですね",
@@ -617,17 +628,6 @@
       "replies": 17,
       "pseudo_er": 0.2013,
       "hook_pattern": "共感・場面描写型",
-      "structure": "H_スピ共感型"
-    },
-    {
-      "handle": "hashimoto_sachino",
-      "category": "other",
-      "first_line": "日中、少しずつ暖かくなって来ましたね",
-      "text": "2026/03/02\n.\n日中、少しずつ暖かくなって来ましたね\n今月もどうぞ宜しくお願い致します✨\n──⋆ ✦✧✦✧✦✧✦✧ ⋆──\n毎月第3土曜日は\n東中野の素敵なカレー屋さん\n@ranunculs_spice\nさんでの\n占いnight🔮\nラナンクルスさんの美味しいお料理とお酒を頂きながら、タロットカード占いはいかがでしょうか〜\n有難い事に毎月大好評〜🙌\n土曜日にラナンクルスさんのお料理が頂けるのは、占いnightの日だけですよー\n3月21日、4月18日どちらも18時〜\nお問合せお待ちしてまーす💓\n#東中野\n#落合\n#ラナンクルス\n#占い\n#タロットリーディング",
-      "likes": 8,
-      "replies": 0,
-      "pseudo_er": 0.1951,
-      "hook_pattern": "その他",
       "structure": "H_スピ共感型"
     }
   ],
@@ -704,9 +704,9 @@
         "category": "other",
         "first_line": "🌸初回無料の霊視鑑定🌸",
         "text": "ピン留め済み\n2025/12/07\n🌸初回無料の霊視鑑定🌸\n8歳の頃、視えるのが怖いと言われ\n両親に捨てられました。梅と申します。\n捨てられそれから紆余曲折、\n太宰府の地で厳しい修行を積み、占い師となり\n今まで5000人以上の方を\"正しい道\"へと導いてきました。\n私のこの活動が両親に届くまで\n今なら\"無料\"で「霊視鑑定」を行っています🌸\n誰にも言えない悩み。お困りごと。\nその全てを受け止め、あなたの全てを限りなく視させて頂き、あなたの未来に光を照らします🎋\n現在のオーラ状態を視ますので、参加条件を満たしてからお越しください。\n【参加条件】\n①\n@ume_reishi\nをフォロー\n②このスレッド",
-        "likes": 2902,
+        "likes": 2904,
         "replies": 69,
-        "pseudo_er": 0.5224,
+        "pseudo_er": 0.5216,
         "hook_pattern": "その他",
         "structure": "E_エンゲージ強要型"
       },
@@ -726,9 +726,9 @@
   "writer_guidance": {
     "top_hook_patterns_by_er": [
       "いいね強要型",
-      "臨時収入型",
-      "強運断言型",
       "スルー恐怖型",
+      "強運断言型",
+      "臨時収入型",
       "共感・場面描写型"
     ],
     "top_structures_by_er": [
