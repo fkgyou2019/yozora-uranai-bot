@@ -3561,7 +3561,111 @@
         "hook_length": 12
       },
       "collected_at": "2026-04-17T01:14:09.062236+09:00"
+    },
+    {
+      "id": "post_20260416_2112_exp_003",
+      "platform_post_id": "17956722111109817",
+      "posted_at": "2026-04-17T08:26:51.783772+09:00",
+      "pattern_name": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "category": "占い師の視点・哲学",
+      "content_preview": "迷う恋って、実は星が教えてくれてる。\n\n朝の満員電車で「この人と続くのかな…」と考えてる。返信が遅い",
+      "first_line": "迷う恋って、実は星が教えてくれてる。",
+      "char_count": 224,
+      "metrics": {
+        "views": 14,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 18
+      },
+      "collected_at": "2026-04-17T15:17:12.230798+09:00"
+    },
+    {
+      "id": "verify-retry-20260417090920",
+      "platform_post_id": "17913434226230317",
+      "posted_at": "2026-04-17T09:09:20.146635+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "今週末、金運が急落する星座。\n\nたった2つだけです。\n\n牡牛座さんは、衝動買いに注意。\n欲しいと思っ",
+      "first_line": "今週末、金運が急落する星座。",
+      "char_count": 161,
+      "metrics": {
+        "views": 211,
+        "likes": 9,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 4.27
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 14
+      },
+      "collected_at": "2026-04-17T15:17:12.230798+09:00"
+    },
+    {
+      "id": "verify-retry-20260417104222",
+      "platform_post_id": "17989534160959075",
+      "posted_at": "2026-04-17T10:42:22.358002+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n睡眠トラブルが起きやすい星座。\n\nたった3つだけです。\n\n蟹座さんは、\n夜中に目",
+      "first_line": "明日からの3日間、",
+      "char_count": 206,
+      "metrics": {
+        "views": 86,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 1.16
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-17T15:17:12.230798+09:00"
+    },
+    {
+      "id": "verify-retry-20260417121216",
+      "platform_post_id": "18102214564759973",
+      "posted_at": "2026-04-17T12:12:16.981023+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n対人関係にズレが生じやすい星座。\n\nたった2つだけです。\n\n双子座さんは、\n言葉",
+      "first_line": "明日からの3日間、",
+      "char_count": 175,
+      "metrics": {
+        "views": 117,
+        "likes": 4,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 3.42
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-17T15:17:12.230798+09:00"
     }
   ],
-  "last_updated": "2026-04-17T09:08:02.985888+09:00"
+  "last_updated": "2026-04-17T15:17:12.230798+09:00"
 }

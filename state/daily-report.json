@@ -1,7 +1,7 @@
 {
   "date": "2026-04-17",
-  "generated_at": "2026-04-17T09:08:15+09:00",
-  "one_line": "2026-04-17 | 1件投稿 (0件計測済み) | フックOK 0/1件 | 違反: 8時: 18字「迷う恋って、実は星が教えてくれてる。」 | 閲覧数取得待ち | 構造G再現性: テスト中（19/59件成功・3件判定待ち）",
+  "generated_at": "2026-04-17T15:17:23+09:00",
+  "one_line": "2026-04-17 | 4件投稿 (4件計測済み) | フックOK 3/4件 | 違反: 8時: 18字「迷う恋って、実は星が教えてくれてる。」 | 平均v=107.0 | 構造G再現性: テスト中（20/61件成功・4件判定待ち） | HC削除: 1件",
   "posts": [
     {
       "hour": 8,
@@ -10,43 +10,85 @@
       "hook": "迷う恋って、実は星が教えてくれてる。",
       "hook_len": 18,
       "hook_ok": false,
-      "views": 0,
+      "views": 14,
       "likes": 0,
       "comments": 0,
       "reposts": 0,
       "er": 0,
-      "measured": false
+      "measured": true
+    },
+    {
+      "hour": 9,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "今週末、金運が急落する星座。",
+      "hook_len": 14,
+      "hook_ok": true,
+      "views": 211,
+      "likes": 9,
+      "comments": 0,
+      "reposts": 0,
+      "er": 4.27,
+      "measured": true
+    },
+    {
+      "hour": 10,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 86,
+      "likes": 1,
+      "comments": 0,
+      "reposts": 0,
+      "er": 1.16,
+      "measured": true
+    },
+    {
+      "hour": 12,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 117,
+      "likes": 4,
+      "comments": 0,
+      "reposts": 0,
+      "er": 3.42,
+      "measured": true
     }
   ],
   "summary": {
-    "total": 1,
-    "measured": 0,
-    "hook_ok": 0,
+    "total": 4,
+    "measured": 4,
+    "hook_ok": 3,
     "hook_violations": 1,
     "violations": [
       "8時: 18字「迷う恋って、実は星が教えてくれてる。」"
     ],
-    "total_views": 0,
-    "avg_views": 0,
-    "best_hook": "迷う恋って、実は星が教えてくれてる。",
-    "best_views": 0,
-    "best_er": 0
+    "total_views": 428,
+    "avg_views": 107.0,
+    "best_hook": "今週末、金運が急落する星座。",
+    "best_views": 211,
+    "best_er": 4.27
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 12,
-    "total_posts": 70,
-    "judged_posts": 67,
-    "pending_posts": 3,
-    "measured_posts": 59,
-    "success_posts": 19,
-    "success_rate": 32.2,
+    "total_posts": 73,
+    "judged_posts": 69,
+    "pending_posts": 4,
+    "measured_posts": 61,
+    "success_posts": 20,
+    "success_rate": 32.8,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（19/59件成功・3件判定待ち）"
+    "status": "テスト中（20/61件成功・4件判定待ち）"
   },
   "hc": {
-    "runs": 5,
-    "deleted": 0
+    "runs": 8,
+    "deleted": 1
   }
 }
