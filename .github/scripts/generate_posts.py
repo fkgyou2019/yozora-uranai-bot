@@ -26,14 +26,17 @@ EXPERIMENT_TIME_SLOTS = [
      "pattern_hint": "天体根拠型（今日の月の動き・天体イベントを根拠にした占い・通勤開始・信頼感・全員ターゲット）"},
     {"hour": 8,  "minute": 7,  "slot": "しいたけ共感型（08:07）",    "structure": "H",
      "pattern_hint": "しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）"},
-    {"hour": 9,  "minute": 37, "slot": "仕事アドバイス型（09:37）",  "structure": "G",
-     "pattern_hint": "天体根拠×仕事アドバイス型（今日の仕事運・仕事迷子ターゲット・仕事開始後のひと息）"},
-    {"hour": 12, "minute": 7,  "slot": "スピ×ラッキー型（12:07）",  "structure": "F",
-     "pattern_hint": "スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）"},
+    {"hour": 9,  "minute": 37, "slot": "いいね強要型（09:37）",      "structure": "X3",
+     "pattern_hint": "いいね強要型（スペース区切り1ライナー＋運気爆上がり断言・朝〜午前のエンゲージメント狙い）",
+     "buzz_type": "engagement_bait"},
+    {"hour": 12, "minute": 7,  "slot": "臨時収入型（12:07）",        "structure": "X2",
+     "pattern_hint": "臨時収入型（●●万円の臨時収入が入ってくる・断言・昼休み拡散狙い）",
+     "buzz_type": "rinji_income"},
     {"hour": 18, "minute": 7,  "slot": "哲学深掘り型（18:07）",      "structure": "H",
      "pattern_hint": "しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）"},
-    {"hour": 20, "minute": 7,  "slot": "夜恋愛型（20:07）",          "structure": "G",
-     "pattern_hint": "天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）"},
+    {"hour": 20, "minute": 7,  "slot": "スルー恐怖型（20:07）",      "structure": "X4",
+     "pattern_hint": "スルー恐怖型（無視・素通りしたら損＋金運ランキング・夜の拡散狙い）",
+     "buzz_type": "suru_fear"},
 ]
 
 
@@ -775,6 +778,137 @@ def get_structure_template(structure):
     return templates.get(structure, templates["G"])
 
 
+def build_buzz_slot_prompt(slot_info, today):
+    """バズ専用スロット用プロンプト（構造テンプレートなし・パターン直書き）"""
+    hour   = slot_info["hour"]
+    minute = slot_info.get("minute", 7)
+    slot   = slot_info["slot"]
+    btype  = slot_info.get("buzz_type", "")
+
+    from datetime import datetime as _dt, timezone as _tz, timedelta as _td
+    _jst  = _tz(_td(hours=9))
+    _now  = _dt.now(_jst)
+    _target = _now + _td(days=1) if _now.hour >= 20 else _now
+    date_label = f"{_target.month}/{_target.day}"
+
+    if btype == "engagement_bait":
+        pattern_instruction = f"""【指定パターン】いいね強要型（競合ER最高 avg 1.52）
+以下のいずれかのフォーマットで生成すること。
+
+フォーマットA（スペース区切り1ライナー）:
+こ れ が 見 え た ら 無 心 で い い ね を🔮
+
+フォーマットB（スペース区切り＋運気断言）:
+い い ね を す る と 運 気 が 爆 上 が り し ま す⛩️
+
+フォーマットC（絵文字CTA＋断言型）:
+🙏を置けた人、
+今から、急にぜんぶ、うまくいきます。
+
+「🌸」を置いた方に、
+今日中に嬉しいことが起きます。
+
+#今日の運勢
+
+上記のフォーマットをベースに、絵文字・文言を少し変えてオリジナル版を生成すること。
+フック（1行目）は40文字以内。文全体は15〜100文字でOK。"""
+
+    elif btype == "rinji_income":
+        pattern_instruction = f"""【指定パターン】臨時収入型（競合ER avg 0.33・最高拡散クラス）
+以下のフォーマットで生成すること。金額は必ず「●●万円」と伏字にすること（数字を入れない）。
+
+フォーマットA:
+嘘は言いません。
+素通りした人以外
+●●万円ほどの臨時収入が入ってきます
+大事に使ってね🌸
+
+#金運
+
+フォーマットB:
+正直に申し上げますね
+あなた{date_label}中に
+●●万円ほどの臨時収入が入ってきます
+信じなくて構いません
+ただ、覚えておいてくださいね🌸
+
+#金運
+
+フォーマットC:
+ごめんね、正直に言うね。
+よぞら.を素通りした人以外…
+今週中に●●万円ほどの
+良いお知らせが届くよ！
+
+#星座占い
+
+上記のいずれかのフォーマットをベースに、文言を少し変えてオリジナル版を生成すること。
+「●●万円」は必ずこの伏字のまま使うこと（具体的な数字に置き換えない）。"""
+
+    elif btype == "suru_fear":
+        pattern_instruction = f"""【指定パターン】スルー恐怖型（競合ER avg 0.15・拡散×エンゲージ同時狙い）
+以下のフォーマットで生成すること。
+
+フォーマットA（ランキング＋恐怖）:
+無視する人金運上がらんよ。
+1位　🐟うお座
+2位 ⚖️てんびん座
+3位 🏹いて座
+4位　🦁しし座
+5位 🦂さそり座
+6位 🏺みずがめ座
+7位 🦀かに座
+8位 ♊双子座
+9位 🐏おひつじ座
+10位 🐂おうし座
+11位 🧑‍🎓おとめ座
+12位 🏹いて座
+
+#星座占い
+
+フォーマットB（ブロック恐怖）:
+飛ばしたら絶対にやめて下さい。
+
+「🐈」を置いた人、
+今から、急にぜんぶ、うまくいきます。🙏
+
+#今日の運勢
+
+フォーマットC（危険度ランキング）:
+【ここでスルーしたら{_target.month}月、
+築き上げたもの全部失うわよ】
+
+危険度99%：2月生まれ × みずがめ座
+危険度90%：5月生まれ × おうし座
+危険度80%：9月生まれ × おとめ座
+
+#今日の運勢
+
+上記のフォーマットをベースに、絵文字・星座・文言を少し変えてオリジナル版を生成すること。"""
+
+    else:
+        pattern_instruction = "【指定パターン】競合バズパターン（断言型・いいね強要型・スルー恐怖型・臨時収入型）を使うこと。"
+
+    return f"""あなたは占いSNSアカウント「よぞら.」のThreads投稿ライターです。
+{hour}時台に投稿する占い投稿を1件だけ生成してください。
+
+【今日の日付】{today}
+【投稿時間帯】{slot}（{hour:02d}:{minute:02d} JST投稿予定）
+【ペルソナ】よぞら.（月詠）: 穏やかで親しみやすい。敬語ベースだが柔らかい。
+
+{pattern_instruction}
+
+【🚨 絶対禁止】
+- 1星座限定の投稿（「蟹座さんへ」等）
+- 「個別に教えます」等の出し惜しみ
+- 励まし型: 「木星の優しい光が」系の抽象励まし
+- ハッシュタグは必ず末尾に1つ
+
+JSON形式で1件返してください:
+{{"pattern_name": "構造{slot_info['structure']}_{slot_info['pattern_hint'][:20]}", "category": "カテゴリ", "content": "本文", "hashtag": "#今日の運勢", "time_slot": "{slot}", "scheduled_hour": {hour}, "scheduled_minute": {minute}}}
+"""
+
+
 def build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block, competitor_buzz_block=""):
     """実験モード: 特定時間帯×パターン向けの投稿を1件生成するプロンプト"""
     hour = slot_info["hour"]
@@ -934,7 +1068,11 @@ def generate_experiment_posts(api_key, today, used_patterns, learning_block, slo
     for slot_info in slots_to_generate:
         hour = slot_info["hour"]
         print(f"  [{hour}時台] 構造{slot_info['structure']}: {slot_info['pattern_hint'][:20]}...", end=" ", flush=True)
-        prompt = build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block, competitor_buzz_block)
+        # バズ専用スロットは専用プロンプトを使う（構造テンプレートなし）
+        if slot_info.get("buzz_type"):
+            prompt = build_buzz_slot_prompt(slot_info, today)
+        else:
+            prompt = build_experiment_slot_prompt(slot_info, today, used_patterns, learning_block, competitor_buzz_block)
         post = call_claude_api_single(api_key, prompt)
 
         if post is not None:
