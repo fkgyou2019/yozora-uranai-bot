@@ -1,3 +1,56 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+      "category": "今日の運勢",
+      "content": "🔮 4/18の12星座\n\n牡羊座　今日動いた分だけ、返ってくる。\n牡牛座　焦らず待つのが、正解の日。\n双子座　その直感は、信じていい。\n蟹　座　誰かの言葉が、心に響く。\n獅子座　静かなチャンス、見落とすな。\n乙女座　気遣いが、ちゃんと伝わってる。\n天秤座　一言が、流れを変える日。\n蠍　座　深く考えず、素直に動こう。\n射手座　踏み出した一歩が、景色を変える。\n山羊座　地道な積み重ねが、今日花開く。\n水瓶座　個性を出すほど、縁が生まれる。\n魚　座　直感は、今日限定で信じていい。\n\nあなたの星座はどうでしたか？🌙\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "time_slot": "めざまし型（06:07）",
+      "scheduled_hour": 6,
+      "scheduled_minute": 7,
+      "id": "post_20260417_2104_exp_001",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ブロックが長すぎ: 226文字（最大80文字）[threads]",
+        "縦長すぎ: 18行（最大16行）[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "category": "恋愛心理",
+      "content": "朝の満員電車で、好きな人からのLINEを何度も読み直してる——\nそういう状態のときって、占いより大事なことがあると思ってる。\n\nそれは「今、自分がどう感じてるか」を\nちゃんと見つめることなんだ。\n\n占いは迷ったときの指針には なるけど、\n本当に動かすのは「あなたの気持ちの整理」だと思う。\n\nだから今日は、占いじゃなくて\nあなたの心の声を聞いてみて。\n\nそっちの方が、星よりも強い。",
+      "hashtag": "#恋愛運",
+      "time_slot": "しいたけ共感型（08:07）",
+      "scheduled_hour": 8,
+      "scheduled_minute": 7,
+      "id": "post_20260417_2104_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の日常・内省",
+      "content": "迷う時間も、実は必要な時間だと思う。\n\n仕事の選択肢が多い人ほど、占いに頼りたくなる。\nでも気づいたのは、占いは「決めてくれるもの」じゃなくて\n「自分の本心を映す鏡」なんだってこと。\n\n星は方角を教えるけど、歩き出すのはあなた。\nその迷いの中にこそ、実は答えが隠れていたりする。\n\nあなたは今、何に迷っていますか？",
+      "hashtag": "#星座占い",
+      "time_slot": "哲学深掘り型（18:07）",
+      "scheduled_hour": 18,
+      "scheduled_minute": 7,
+      "id": "post_20260417_2104_exp_006",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    }
+  ]
 }

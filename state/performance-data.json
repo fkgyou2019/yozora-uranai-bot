@@ -3665,7 +3665,59 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-17T15:17:12.230798+09:00"
+    },
+    {
+      "id": "post_20260416_2112_exp_006",
+      "platform_post_id": "18021523910820330",
+      "posted_at": "2026-04-17T18:03:51.092474+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の哲学・内省",
+      "content_preview": "迷いながら進む人ほど、占いを必要とします。\n\n占い師をやっていて気づくことがあります。確信を持ってい",
+      "first_line": "迷いながら進む人ほど、占いを必要とします。",
+      "char_count": 211,
+      "metrics": {
+        "views": 19,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 21
+      },
+      "collected_at": "2026-04-17T21:05:21.314650+09:00"
+    },
+    {
+      "id": "post_20260417_1517_exp_001",
+      "platform_post_id": "17997400877928553",
+      "posted_at": "2026-04-17T19:12:18.442077+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の視点・内省",
+      "content_preview": "仕事で迷った時、占いに答えを求めていませんか。\n\n実は占いが教えてくれるのは\n「正解」ではなく\n「あ",
+      "first_line": "仕事で迷った時、占いに答えを求めていませんか。",
+      "char_count": 134,
+      "metrics": {
+        "views": 10,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 23
+      },
+      "collected_at": "2026-04-17T21:05:21.314650+09:00"
     }
   ],
-  "last_updated": "2026-04-17T17:58:20.410450+09:00"
+  "last_updated": "2026-04-17T21:05:21.314650+09:00"
 }
