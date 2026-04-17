@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-17T02:03:06.467309+09:00",
+  "generated_at": "2026-04-17T15:29:03.997175+09:00",
   "source_accounts": 40,
-  "total_posts": 657,
-  "buzz_posts_count": 431,
+  "total_posts": 729,
+  "buzz_posts_count": 477,
   "filters": {
     "min_pseudo_er": 0.05,
     "min_likes": 5
@@ -10,7 +10,7 @@
   "hook_pattern_summary": {
     "いいね強要型": {
       "count": 2,
-      "avg_er": 0.4811,
+      "avg_er": 0.4812,
       "examples": [
         {
           "handle": "raito.koiuranai",
@@ -21,14 +21,38 @@
         {
           "handle": "miko.reishi",
           "first_line": "⛩️開運鑑定の無料プレゼント案内⛩️",
-          "likes": 78,
-          "pseudo_er": 0.0039
+          "likes": 84,
+          "pseudo_er": 0.0042
+        }
+      ]
+    },
+    "臨時収入型": {
+      "count": 6,
+      "avg_er": 0.1379,
+      "examples": [
+        {
+          "handle": "uranai.fukuen",
+          "first_line": "無視する人金運上がらんよ。",
+          "likes": 685,
+          "pseudo_er": 0.6545
+        },
+        {
+          "handle": "uranai.fukuen",
+          "first_line": "奇跡の臨時収入が入る生まれ年💰",
+          "likes": 119,
+          "pseudo_er": 0.1354
+        },
+        {
+          "handle": "akari.wildsoul",
+          "first_line": "過去最高収入や至福感を感じたり",
+          "likes": 8,
+          "pseudo_er": 0.018
         }
       ]
     },
     "強運断言型": {
-      "count": 8,
-      "avg_er": 0.1618,
+      "count": 10,
+      "avg_er": 0.1362,
       "examples": [
         {
           "handle": "hina.tesou",
@@ -51,8 +75,8 @@
       ]
     },
     "スルー恐怖型": {
-      "count": 3,
-      "avg_er": 0.1533,
+      "count": 4,
+      "avg_er": 0.1202,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -61,46 +85,22 @@
           "pseudo_er": 0.4436
         },
         {
+          "handle": "arasa_uranai",
+          "first_line": "無視すると4月、急に突然すべてを失う人よ",
+          "likes": 15,
+          "pseudo_er": 0.0211
+        },
+        {
           "handle": "mira_uranai_reishi",
           "first_line": "絶対スルーしたら損するよ。",
           "likes": 17,
           "pseudo_er": 0.0124
-        },
-        {
-          "handle": "miko.reishi",
-          "first_line": "絶対スルーしたら損しますえ。",
-          "likes": 58,
-          "pseudo_er": 0.0038
-        }
-      ]
-    },
-    "臨時収入型": {
-      "count": 5,
-      "avg_er": 0.1385,
-      "examples": [
-        {
-          "handle": "uranai.fukuen",
-          "first_line": "無視する人金運上がらんよ。",
-          "likes": 685,
-          "pseudo_er": 0.6545
-        },
-        {
-          "handle": "akari.wildsoul",
-          "first_line": "過去最高収入や至福感を感じたり",
-          "likes": 8,
-          "pseudo_er": 0.018
-        },
-        {
-          "handle": "hatarakupyon",
-          "first_line": "シングルマザーはお金があれば最高みたいなこと言う人いるけど、どれだけお金があっても心が貧しい人は一生不幸なんだよ。どんな",
-          "likes": 14,
-          "pseudo_er": 0.0091
         }
       ]
     },
     "共感・場面描写型": {
-      "count": 24,
-      "avg_er": 0.0874,
+      "count": 25,
+      "avg_er": 0.0844,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -123,8 +123,8 @@
       ]
     },
     "その他": {
-      "count": 387,
-      "avg_er": 0.0518,
+      "count": 427,
+      "avg_er": 0.0498,
       "examples": [
         {
           "handle": "raito.koiuranai",
@@ -147,9 +147,15 @@
       ]
     },
     "質問フック型": {
-      "count": 2,
-      "avg_er": 0.0047,
+      "count": 3,
+      "avg_er": 0.0096,
       "examples": [
+        {
+          "handle": "naritaitarot",
+          "first_line": "タロットをどのように学んだんですか？",
+          "likes": 5,
+          "pseudo_er": 0.0187
+        },
         {
           "handle": "hatarakupyon",
           "first_line": "どれだけ稼いでもスタイル抜群な身体は手に入らない！！！！筋肉ついて骨格が整った身体は努力でしか手に入らない…",
@@ -159,16 +165,16 @@
         {
           "handle": "mimika_tarot",
           "first_line": "周りの評価が気になるかもしれないけど、人って案外ちゃんと見てるよ。",
-          "likes": 5,
-          "pseudo_er": 0.0009
+          "likes": 10,
+          "pseudo_er": 0.0018
         }
       ]
     }
   },
   "structure_summary": {
     "B_ランキング型": {
-      "count": 10,
-      "avg_er": 0.2275,
+      "count": 12,
+      "avg_er": 0.1916,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -185,8 +191,8 @@
       ]
     },
     "C_予言・断言型": {
-      "count": 8,
-      "avg_er": 0.1983,
+      "count": 10,
+      "avg_er": 0.1753,
       "examples": [
         {
           "handle": "hina.tesou",
@@ -203,8 +209,8 @@
       ]
     },
     "H_スピ共感型": {
-      "count": 39,
-      "avg_er": 0.1038,
+      "count": 42,
+      "avg_er": 0.1001,
       "examples": [
         {
           "handle": "raito.koiuranai",
@@ -239,26 +245,26 @@
       ]
     },
     "E_エンゲージ強要型": {
-      "count": 7,
-      "avg_er": 0.0825,
+      "count": 9,
+      "avg_er": 0.0654,
       "examples": [
         {
           "handle": "ume_reishi",
           "text_preview": "ピン留め済み 2025/12/07 🌸初回無料の霊視鑑定🌸 8歳の頃、視えるのが怖いと言われ 両親に捨てられました。梅と申します。 捨てられそれから紆余曲折、 太宰府の地で厳しい修行を積み、占い師となり 今まで5000人以上の方を\"正しい道",
-          "likes": 2886,
-          "pseudo_er": 0.5192
+          "likes": 2902,
+          "pseudo_er": 0.5224
         },
         {
           "handle": "uranai.fukuen",
           "text_preview": "ピン留め済み 2026/03/19 🐍初回限定無料鑑定のご案内🐍 ご縁に感謝を込めて、今だけ “無料鑑定”を実施しております。 あなたの人生に必要な言霊を、誰よりも丁寧にお伝えします。 ・金運・良縁を引き寄せたい ・漠然とした不安から抜け出",
-          "likes": 35,
-          "pseudo_er": 0.0258
+          "likes": 36,
+          "pseudo_er": 0.0261
         }
       ]
     },
     "F_その他": {
-      "count": 357,
-      "avg_er": 0.0463,
+      "count": 394,
+      "avg_er": 0.0449,
       "examples": [
         {
           "handle": "raito.koiuranai",
@@ -365,9 +371,9 @@
       "category": "other",
       "first_line": "🌸初回無料の霊視鑑定🌸",
       "text": "ピン留め済み\n2025/12/07\n🌸初回無料の霊視鑑定🌸\n8歳の頃、視えるのが怖いと言われ\n両親に捨てられました。梅と申します。\n捨てられそれから紆余曲折、\n太宰府の地で厳しい修行を積み、占い師となり\n今まで5000人以上の方を\"正しい道\"へと導いてきました。\n私のこの活動が両親に届くまで\n今なら\"無料\"で「霊視鑑定」を行っています🌸\n誰にも言えない悩み。お困りごと。\nその全てを受け止め、あなたの全てを限りなく視させて頂き、あなたの未来に光を照らします🎋\n現在のオーラ状態を視ますので、参加条件を満たしてからお越しください。\n【参加条件】\n①\n@ume_reishi\nをフォロー\n②このスレッド",
-      "likes": 2886,
-      "replies": 67,
-      "pseudo_er": 0.5192,
+      "likes": 2902,
+      "replies": 69,
+      "pseudo_er": 0.5224,
       "hook_pattern": "その他",
       "structure": "E_エンゲージ強要型"
     },
@@ -477,7 +483,7 @@
       "text": "ピン留め済み\n2025/11/20\n実は小さい頃から、\n人の縁が視えてしまう体質やって、\n運命の糸、悪意、両想い、片思い、嫌い、憎い、恨みが\n全部視えてしまうんよ。\n昔、大好きやった人の浮気を\n霊視で知ってもうて、\nそれを伝えたら「気持ち悪い」って言われて\n婚約破棄された…\nこの力は、誰にも理解してもらえへんし\n言うと気持ち悪がられて\nかなり辛かったし、4を覚悟したこともあったんやけど\nW不倫の関係に悩んでいた友達に\n相手が別れる時期をドンピシャで当てたら\nめっちゃ感謝されて、\nあ…私の力って人を幸せにできるんやな\nって思った。\nいや、不倫やん！って思うかもしれへんけど、\n純粋な好きという気持",
       "likes": 519,
       "replies": 53,
-      "pseudo_er": 0.3286,
+      "pseudo_er": 0.3285,
       "hook_pattern": "その他",
       "structure": "F_その他"
     },
@@ -488,7 +494,7 @@
       "text": "天然石\n2026/04/03\n天然石好きな皆様に、お願いがあります！\n自分のすきな天然石のお写真\n載せてほしいのです！\n４月から異動になって二か所かと思いきや\n（もともと兼務だったのです）\n三か所回らなければならず\n絶望しているのです。笑\nよろしくお願いします！\nちなみに今日の私のおともは\nブラックトルマリンです！",
       "likes": 59,
       "replies": 91,
-      "pseudo_er": 0.3158,
+      "pseudo_er": 0.3155,
       "hook_pattern": "その他",
       "structure": "F_その他"
     },
@@ -698,9 +704,9 @@
         "category": "other",
         "first_line": "🌸初回無料の霊視鑑定🌸",
         "text": "ピン留め済み\n2025/12/07\n🌸初回無料の霊視鑑定🌸\n8歳の頃、視えるのが怖いと言われ\n両親に捨てられました。梅と申します。\n捨てられそれから紆余曲折、\n太宰府の地で厳しい修行を積み、占い師となり\n今まで5000人以上の方を\"正しい道\"へと導いてきました。\n私のこの活動が両親に届くまで\n今なら\"無料\"で「霊視鑑定」を行っています🌸\n誰にも言えない悩み。お困りごと。\nその全てを受け止め、あなたの全てを限りなく視させて頂き、あなたの未来に光を照らします🎋\n現在のオーラ状態を視ますので、参加条件を満たしてからお越しください。\n【参加条件】\n①\n@ume_reishi\nをフォロー\n②このスレッド",
-        "likes": 2886,
-        "replies": 67,
-        "pseudo_er": 0.5192,
+        "likes": 2902,
+        "replies": 69,
+        "pseudo_er": 0.5224,
         "hook_pattern": "その他",
         "structure": "E_エンゲージ強要型"
       },
@@ -720,9 +726,9 @@
   "writer_guidance": {
     "top_hook_patterns_by_er": [
       "いいね強要型",
+      "臨時収入型",
       "強運断言型",
       "スルー恐怖型",
-      "臨時収入型",
       "共感・場面描写型"
     ],
     "top_structures_by_er": [
@@ -774,6 +780,6 @@
         "pseudo_er": 0.5456
       }
     ],
-    "insight": "競合30件分析結果: 最高ERフックは「いいね強要型」(avg_er=0.4811)。最多バズ構造は「B_ランキング型」。いいね強要・スルー恐怖・ランキング型が特に高拡散。ただしNG表現（断定・祈祷等）に抵触しないよう要注意。"
+    "insight": "競合30件分析結果: 最高ERフックは「いいね強要型」(avg_er=0.4812)。最多バズ構造は「B_ランキング型」。いいね強要・スルー恐怖・ランキング型が特に高拡散。ただしNG表現（断定・祈祷等）に抵触しないよう要注意。"
   }
 }
