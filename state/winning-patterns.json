@@ -240,15 +240,15 @@
   "insights": [
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
-    "絵文字CTAあり → avg eng 19.3%",
-    "恐怖・焦りフックあり → avg eng 18.4%",
+    "絵文字CTAあり → avg eng 19.0%",
+    "恐怖・焦りフックあり → avg eng 18.3%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
     "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
     "自動検出・低パフォーマンスパターン: 5件"
   ],
   "auto_analysis": {
-    "data_count": 143,
-    "last_analyzed": "2026-04-17T21:05:27.644400+09:00",
+    "data_count": 145,
+    "last_analyzed": "2026-04-17T23:44:35.120233+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -412,12 +412,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型",
-        "count": 30,
-        "avg_engagement": 11.49,
+        "count": 31,
+        "avg_engagement": 11.29,
         "avg_views": 201.0,
-        "total_likes": 492,
+        "total_likes": 502,
         "total_replies": 131,
-        "_score": 224.0949
+        "_score": 223.6929
       },
       {
         "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
@@ -456,6 +456,15 @@
         "_score": 173.2914
       },
       {
+        "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+        "count": 4,
+        "avg_engagement": 15.14,
+        "avg_views": 147.0,
+        "total_likes": 77,
+        "total_replies": 13,
+        "_score": 169.2558
+      },
+      {
         "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋ambassador×月の動き×恋愛迷子ターゲット×夜のリラックスタイム）",
         "count": 1,
         "avg_engagement": 17.48,
@@ -472,15 +481,6 @@
         "total_likes": 19,
         "total_replies": 2,
         "_score": 156.99839999999998
-      },
-      {
-        "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
-        "count": 3,
-        "avg_engagement": 14.44,
-        "avg_views": 128.0,
-        "total_likes": 55,
-        "total_replies": 0,
-        "_score": 146.4832
       },
       {
         "pattern": "共感×質問型（推定）",
@@ -815,13 +815,13 @@
       },
       {
         "feature": "has_cta_emoji",
-        "count": 47,
-        "avg_engagement": 19.34
+        "count": 49,
+        "avg_engagement": 19.01
       },
       {
         "feature": "has_fear_hook",
-        "count": 9,
-        "avg_engagement": 18.45
+        "count": 10,
+        "avg_engagement": 18.33
       },
       {
         "feature": "has_number_hook",
@@ -1006,15 +1006,15 @@
       },
       "20": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 17.66,
+        "avg_eng": 17.64,
         "avg_views": 199.0,
-        "count": 18
+        "count": 19
       },
       "21": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 10.54,
-        "avg_views": 249.0,
-        "count": 16
+        "avg_eng": 10.23,
+        "avg_views": 246.0,
+        "count": 17
       },
       "22": {
         "slot": "深夜（22〜0時台）",
@@ -1075,15 +1075,15 @@
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
-      "絵文字CTAあり → avg eng 19.3%",
-      "恐怖・焦りフックあり → avg eng 18.4%",
+      "絵文字CTAあり → avg eng 19.0%",
+      "恐怖・焦りフックあり → avg eng 18.3%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
       "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
       "自動検出・低パフォーマンスパターン: 5件"
     ]
   },
-  "data_count": 143,
-  "last_analyzed": "2026-04-17T21:05:27.644400+09:00",
+  "data_count": 145,
+  "last_analyzed": "2026-04-17T23:44:35.120233+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1205,12 +1205,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "count": 30,
-      "avg_engagement": 11.49,
+      "count": 31,
+      "avg_engagement": 11.29,
       "avg_views": 201.0,
-      "total_likes": 492,
+      "total_likes": 502,
       "total_replies": 131,
-      "_score": 224.0949
+      "_score": 223.6929
     },
     {
       "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
@@ -1249,6 +1249,15 @@
       "_score": 173.2914
     },
     {
+      "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+      "count": 4,
+      "avg_engagement": 15.14,
+      "avg_views": 147.0,
+      "total_likes": 77,
+      "total_replies": 13,
+      "_score": 169.2558
+    },
+    {
       "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋ambassador×月の動き×恋愛迷子ターゲット×夜のリラックスタイム）",
       "count": 1,
       "avg_engagement": 17.48,
@@ -1265,15 +1274,6 @@
       "total_likes": 19,
       "total_replies": 2,
       "_score": 156.99839999999998
-    },
-    {
-      "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
-      "count": 3,
-      "avg_engagement": 14.44,
-      "avg_views": 128.0,
-      "total_likes": 55,
-      "total_replies": 0,
-      "_score": 146.4832
     },
     {
       "pattern": "共感×質問型（推定）",
@@ -1608,13 +1608,13 @@
     },
     {
       "feature": "has_cta_emoji",
-      "count": 47,
-      "avg_engagement": 19.34
+      "count": 49,
+      "avg_engagement": 19.01
     },
     {
       "feature": "has_fear_hook",
-      "count": 9,
-      "avg_engagement": 18.45
+      "count": 10,
+      "avg_engagement": 18.33
     },
     {
       "feature": "has_number_hook",
@@ -1765,15 +1765,15 @@
     },
     "20": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 17.66,
+      "avg_eng": 17.64,
       "avg_views": 199.0,
-      "count": 18
+      "count": 19
     },
     "21": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 10.54,
-      "avg_views": 249.0,
-      "count": 16
+      "avg_eng": 10.23,
+      "avg_views": 246.0,
+      "count": 17
     },
     "22": {
       "slot": "深夜（22〜0時台）",

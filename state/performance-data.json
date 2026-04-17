@@ -3717,7 +3717,59 @@
         "hook_length": 23
       },
       "collected_at": "2026-04-17T21:05:21.314650+09:00"
+    },
+    {
+      "id": "post_20260417_1517_exp_002",
+      "platform_post_id": "18118782526734840",
+      "posted_at": "2026-04-17T20:42:14.400872+09:00",
+      "pattern_name": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+      "category": "恋愛運",
+      "content_preview": "今週後半、恋が急に動く星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、あの",
+      "first_line": "今週後半、恋が急に動く星座。",
+      "char_count": 206,
+      "metrics": {
+        "views": 203,
+        "likes": 22,
+        "replies": 13,
+        "reposts": 0,
+        "engagement_rate": 17.24
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": true,
+        "hook_length": 14
+      },
+      "collected_at": "2026-04-17T23:44:24.650800+09:00"
+    },
+    {
+      "id": "verify-retry-20260417214219",
+      "platform_post_id": "18095026454119610",
+      "posted_at": "2026-04-17T21:42:19.801557+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "今週、金銭トラブルが起きやすい星座。\n\nたった2つだけです。\n\n牡牛座、蠍座\n\n牡牛座さんは、思わぬ",
+      "first_line": "今週、金銭トラブルが起きやすい星座。",
+      "char_count": 195,
+      "metrics": {
+        "views": 193,
+        "likes": 10,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 5.18
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 18
+      },
+      "collected_at": "2026-04-17T23:44:24.650800+09:00"
     }
   ],
-  "last_updated": "2026-04-17T21:05:21.314650+09:00"
+  "last_updated": "2026-04-17T23:44:24.650800+09:00"
 }
