@@ -238,8 +238,8 @@
     "自動検出・低パフォーマンスパターン: 5件"
   ],
   "auto_analysis": {
-    "data_count": 149,
-    "last_analyzed": "2026-04-18T14:57:35.782941+09:00",
+    "data_count": 150,
+    "last_analyzed": "2026-04-18T15:51:31.335792+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -412,12 +412,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型",
-        "count": 33,
-        "avg_engagement": 11.27,
-        "avg_views": 191.0,
+        "count": 34,
+        "avg_engagement": 10.94,
+        "avg_views": 187.0,
         "total_likes": 511,
         "total_replies": 133,
-        "_score": 212.5257
+        "_score": 207.4578
       },
       {
         "pattern": "その他（推定）",
@@ -825,8 +825,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 55,
-        "avg_engagement": 13.76
+        "count": 56,
+        "avg_engagement": 13.51
       },
       {
         "feature": "has_question",
@@ -970,9 +970,9 @@
       },
       "14": {
         "slot": "午後（13〜15時台）",
-        "avg_eng": 20.48,
-        "avg_views": 396.0,
-        "count": 2
+        "avg_eng": 13.65,
+        "avg_views": 279.0,
+        "count": 3
       },
       "15": {
         "slot": "午後（13〜15時台）",
@@ -1068,8 +1068,8 @@
       }
     },
     "optimal_hours": [
-      14,
       22,
+      14,
       21
     ],
     "insights": [
@@ -1082,8 +1082,8 @@
       "自動検出・低パフォーマンスパターン: 5件"
     ]
   },
-  "data_count": 149,
-  "last_analyzed": "2026-04-18T14:57:35.782941+09:00",
+  "data_count": 150,
+  "last_analyzed": "2026-04-18T15:51:31.335792+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1214,12 +1214,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "count": 33,
-      "avg_engagement": 11.27,
-      "avg_views": 191.0,
+      "count": 34,
+      "avg_engagement": 10.94,
+      "avg_views": 187.0,
       "total_likes": 511,
       "total_replies": 133,
-      "_score": 212.5257
+      "_score": 207.4578
     },
     {
       "pattern": "その他（推定）",
@@ -1627,8 +1627,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 55,
-      "avg_engagement": 13.76
+      "count": 56,
+      "avg_engagement": 13.51
     },
     {
       "feature": "has_question",
@@ -1738,9 +1738,9 @@
     },
     "14": {
       "slot": "午後（13〜15時台）",
-      "avg_eng": 20.48,
-      "avg_views": 396.0,
-      "count": 2
+      "avg_eng": 13.65,
+      "avg_views": 279.0,
+      "count": 3
     },
     "15": {
       "slot": "午後（13〜15時台）",
@@ -1792,8 +1792,8 @@
     }
   },
   "optimal_hours": [
-    14,
     22,
+    14,
     21
   ]
 }
