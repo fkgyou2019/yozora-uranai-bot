@@ -3810,6 +3810,26 @@
       "platform_post_id": "18139228138515653",
       "source": "post-verify",
       "pattern_name": "構造G_注意喚起+限定型"
+    },
+    {
+      "pattern_name": "構造B_臨時収入型（●●万円の臨時収入が入ってく）",
+      "category": "金運",
+      "content": "正直に申し上げますね\nあなた4/18中に\n●●万円ほどの臨時収入が入ってきます\n疑ってもいいんです\nただ、この言葉を覚えておいてくださいね🌸",
+      "hashtag": "#金運",
+      "time_slot": "臨時収入型（12:07）",
+      "scheduled_hour": 12,
+      "scheduled_minute": 7,
+      "id": "post_20260418_0904_exp_002",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ],
+      "posted_at": "2026-04-18T12:12:16.415638+09:00",
+      "platform_post_id": "17895735870436749",
+      "source": "post-verify"
     }
   ]
 }
