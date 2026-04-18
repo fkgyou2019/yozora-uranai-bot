@@ -1,0 +1,29 @@
+{
+  "date": "2026-04-17",
+  "generated_at": "2026-04-18 09:02",
+  "summary": {
+    "posts_total": 8,
+    "posts_measured": 5,
+    "posts_deleted": 3,
+    "total_views": 1012,
+    "avg_views": 202.4,
+    "avg_er": 8.13,
+    "experiment_rate": 62.5
+  },
+  "patterns": {
+    "構造G_注意喚起+限定型": {
+      "count": 4,
+      "avg_views": 189.5,
+      "avg_er": 5.25
+    },
+    "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）": {
+      "count": 1,
+      "avg_views": 254.0,
+      "avg_er": 19.69
+    }
+  },
+  "delete_reasons": [
+    "24h経過・低パフォーマンス",
+    "12h経過・低パフォーマンス"
+  ]
+}
