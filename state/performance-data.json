@@ -3795,7 +3795,85 @@
         "hook_length": 11
       },
       "collected_at": "2026-04-18T09:04:37.588165+09:00"
+    },
+    {
+      "id": "verify-retry-20260418082617",
+      "platform_post_id": "18005736443891464",
+      "posted_at": "2026-04-18T08:26:17.839408+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n体調に気をつけた方がいい星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座",
+      "first_line": "明日からの3日間、",
+      "char_count": 215,
+      "metrics": {
+        "views": 24,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 8.33
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-18T14:26:38.475553+09:00"
+    },
+    {
+      "id": "post_20260418_0904_exp_001",
+      "platform_post_id": "18119535241651312",
+      "posted_at": "2026-04-18T09:04:37.508048+09:00",
+      "pattern_name": "フォーマットA_スペース区切り1ライナー",
+      "category": "運気上昇",
+      "content_preview": "こ れ が 見 え た ら 無 心 で い い ね を🌙",
+      "first_line": "こ れ が 見 え た ら 無 心 で い い ね を🌙",
+      "char_count": 28,
+      "metrics": {
+        "views": 14,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 7.14
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 28
+      },
+      "collected_at": "2026-04-18T14:26:38.475553+09:00"
+    },
+    {
+      "id": "verify-retry-20260418104221",
+      "platform_post_id": "18139228138515653",
+      "posted_at": "2026-04-18T10:42:21.205660+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "今週後半、恋愛で\n大きな動きがある星座。\n\nたった2つだけです。\n\n🌙獅子座\n片思い中なら、\nあの人",
+      "first_line": "今週後半、恋愛で",
+      "char_count": 154,
+      "metrics": {
+        "views": 66,
+        "likes": 7,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 13.64
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-04-18T14:26:38.475553+09:00"
     }
   ],
-  "last_updated": "2026-04-18T09:04:37.588165+09:00"
+  "last_updated": "2026-04-18T14:26:38.475553+09:00"
 }

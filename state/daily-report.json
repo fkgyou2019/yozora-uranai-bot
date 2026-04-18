@@ -1,7 +1,7 @@
 {
   "date": "2026-04-18",
-  "generated_at": "2026-04-18T09:04:51+09:00",
-  "one_line": "2026-04-18 | 3件投稿 (1件計測済み) | フックOK 2/3件 | 違反: 9時: 28字「こ れ が 見 え た ら 無 心 で い い ね」 | 平均v=18.0 | 構造G再現性: テスト中（20/62件成功・6件判定待ち） | HC削除: 2件",
+  "generated_at": "2026-04-18T14:26:47+09:00",
+  "one_line": "2026-04-18 | 5件投稿 (3件計測済み) | フックOK 4/5件 | 違反: 9時: 28字「こ れ が 見 え た ら 無 心 で い い ね」 | 平均v=32.7 | 構造G再現性: テスト中（21/65件成功・4件判定待ち） | HC削除: 3件",
   "posts": [
     {
       "hour": 7,
@@ -38,6 +38,34 @@
       "hook": "こ れ が 見 え た ら 無 心 で い い ね を🌙",
       "hook_len": 28,
       "hook_ok": false,
+      "views": 14,
+      "likes": 1,
+      "comments": 0,
+      "reposts": 0,
+      "er": 7.14,
+      "measured": true
+    },
+    {
+      "hour": 10,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "今週後半、恋愛で",
+      "hook_len": 8,
+      "hook_ok": true,
+      "views": 66,
+      "likes": 7,
+      "comments": 2,
+      "reposts": 0,
+      "er": 13.64,
+      "measured": true
+    },
+    {
+      "hour": 12,
+      "struct": "B",
+      "pattern": "構造B_臨時収入型（●●万円の臨時収入が入ってく）",
+      "hook": "正直に申し上げますね",
+      "hook_len": 10,
+      "hook_ok": true,
       "views": 0,
       "likes": 0,
       "comments": 0,
@@ -47,34 +75,34 @@
     }
   ],
   "summary": {
-    "total": 3,
-    "measured": 1,
-    "hook_ok": 2,
+    "total": 5,
+    "measured": 3,
+    "hook_ok": 4,
     "hook_violations": 1,
     "violations": [
       "9時: 28字「こ れ が 見 え た ら 無 心 で い い ね」"
     ],
-    "total_views": 18,
-    "avg_views": 18.0,
-    "best_hook": "🔮 4/18の12星座",
-    "best_views": 18,
-    "best_er": 27.78
+    "total_views": 98,
+    "avg_views": 32.7,
+    "best_hook": "今週後半、恋愛で",
+    "best_views": 66,
+    "best_er": 13.64
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 13,
-    "total_posts": 76,
-    "judged_posts": 70,
-    "pending_posts": 6,
-    "measured_posts": 62,
-    "success_posts": 20,
+    "total_posts": 77,
+    "judged_posts": 73,
+    "pending_posts": 4,
+    "measured_posts": 65,
+    "success_posts": 21,
     "success_rate": 32.3,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（20/62件成功・6件判定待ち）"
+    "status": "テスト中（21/65件成功・4件判定待ち）"
   },
   "hc": {
-    "runs": 4,
-    "deleted": 2
+    "runs": 7,
+    "deleted": 3
   }
 }

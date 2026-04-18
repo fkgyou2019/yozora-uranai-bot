@@ -231,15 +231,15 @@
   "insights": [
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
     "ランキング形式あり → avg eng 23.8%",
-    "絵文字CTAあり → avg eng 19.0%",
+    "絵文字CTAあり → avg eng 18.9%",
     "恐怖・焦りフックあり → avg eng 18.3%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
     "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
     "自動検出・低パフォーマンスパターン: 5件"
   ],
   "auto_analysis": {
-    "data_count": 146,
-    "last_analyzed": "2026-04-18T09:04:51.141150+09:00",
+    "data_count": 149,
+    "last_analyzed": "2026-04-18T14:26:47.566224+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -402,15 +402,6 @@
         "_score": 255.00090000000003
       },
       {
-        "pattern": "構造G_注意喚起+限定型",
-        "count": 31,
-        "avg_engagement": 11.29,
-        "avg_views": 201.0,
-        "total_likes": 502,
-        "total_replies": 131,
-        "_score": 223.6929
-      },
-      {
         "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
         "count": 2,
         "avg_engagement": 3.37,
@@ -418,6 +409,15 @@
         "total_likes": 15,
         "total_replies": 0,
         "_score": 223.2792
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型",
+        "count": 33,
+        "avg_engagement": 11.27,
+        "avg_views": 191.0,
+        "total_likes": 511,
+        "total_replies": 133,
+        "_score": 212.5257
       },
       {
         "pattern": "その他（推定）",
@@ -789,6 +789,15 @@
         "_score": 16.0
       },
       {
+        "pattern": "フォーマットA_スペース区切り1ライナー",
+        "count": 1,
+        "avg_engagement": 7.14,
+        "avg_views": 14.0,
+        "total_likes": 1,
+        "total_replies": 0,
+        "_score": 14.9996
+      },
+      {
         "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子+スピ好きターゲット・退勤後）",
         "count": 1,
         "avg_engagement": 0.0,
@@ -806,8 +815,8 @@
       },
       {
         "feature": "has_cta_emoji",
-        "count": 49,
-        "avg_engagement": 19.01
+        "count": 50,
+        "avg_engagement": 18.9
       },
       {
         "feature": "has_fear_hook",
@@ -816,8 +825,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 54,
-        "avg_engagement": 13.86
+        "count": 55,
+        "avg_engagement": 13.76
       },
       {
         "feature": "has_question",
@@ -931,21 +940,21 @@
       },
       "8": {
         "slot": "朝（6〜9時台）",
-        "avg_eng": 0.0,
-        "avg_views": 14.0,
-        "count": 1
+        "avg_eng": 4.17,
+        "avg_views": 19.0,
+        "count": 2
       },
       "9": {
         "slot": "朝（6〜9時台）",
-        "avg_eng": 14.78,
-        "avg_views": 253.0,
-        "count": 14
+        "avg_eng": 14.27,
+        "avg_views": 237.0,
+        "count": 15
       },
       "10": {
         "slot": "午前（10〜12時台）",
-        "avg_eng": 10.82,
-        "avg_views": 238.0,
-        "count": 16
+        "avg_eng": 10.99,
+        "avg_views": 228.0,
+        "count": 17
       },
       "12": {
         "slot": "午前（10〜12時台）",
@@ -1061,20 +1070,20 @@
     "optimal_hours": [
       14,
       22,
-      9
+      21
     ],
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
       "ランキング形式あり → avg eng 23.8%",
-      "絵文字CTAあり → avg eng 19.0%",
+      "絵文字CTAあり → avg eng 18.9%",
       "恐怖・焦りフックあり → avg eng 18.3%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
       "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
       "自動検出・低パフォーマンスパターン: 5件"
     ]
   },
-  "data_count": 146,
-  "last_analyzed": "2026-04-18T09:04:51.141150+09:00",
+  "data_count": 149,
+  "last_analyzed": "2026-04-18T14:26:47.566224+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1195,15 +1204,6 @@
       "_score": 255.00090000000003
     },
     {
-      "pattern": "構造G_注意喚起+限定型",
-      "count": 31,
-      "avg_engagement": 11.29,
-      "avg_views": 201.0,
-      "total_likes": 502,
-      "total_replies": 131,
-      "_score": 223.6929
-    },
-    {
       "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
       "count": 2,
       "avg_engagement": 3.37,
@@ -1211,6 +1211,15 @@
       "total_likes": 15,
       "total_replies": 0,
       "_score": 223.2792
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型",
+      "count": 33,
+      "avg_engagement": 11.27,
+      "avg_views": 191.0,
+      "total_likes": 511,
+      "total_replies": 133,
+      "_score": 212.5257
     },
     {
       "pattern": "その他（推定）",
@@ -1582,6 +1591,15 @@
       "_score": 16.0
     },
     {
+      "pattern": "フォーマットA_スペース区切り1ライナー",
+      "count": 1,
+      "avg_engagement": 7.14,
+      "avg_views": 14.0,
+      "total_likes": 1,
+      "total_replies": 0,
+      "_score": 14.9996
+    },
+    {
       "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子+スピ好きターゲット・退勤後）",
       "count": 1,
       "avg_engagement": 0.0,
@@ -1599,8 +1617,8 @@
     },
     {
       "feature": "has_cta_emoji",
-      "count": 49,
-      "avg_engagement": 19.01
+      "count": 50,
+      "avg_engagement": 18.9
     },
     {
       "feature": "has_fear_hook",
@@ -1609,8 +1627,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 54,
-      "avg_engagement": 13.86
+      "count": 55,
+      "avg_engagement": 13.76
     },
     {
       "feature": "has_question",
@@ -1690,21 +1708,21 @@
     },
     "8": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 0.0,
-      "avg_views": 14.0,
-      "count": 1
+      "avg_eng": 4.17,
+      "avg_views": 19.0,
+      "count": 2
     },
     "9": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 14.78,
-      "avg_views": 253.0,
-      "count": 14
+      "avg_eng": 14.27,
+      "avg_views": 237.0,
+      "count": 15
     },
     "10": {
       "slot": "午前（10〜12時台）",
-      "avg_eng": 10.82,
-      "avg_views": 238.0,
-      "count": 16
+      "avg_eng": 10.99,
+      "avg_views": 228.0,
+      "count": 17
     },
     "12": {
       "slot": "午前（10〜12時台）",
@@ -1776,6 +1794,6 @@
   "optimal_hours": [
     14,
     22,
-    9
+    21
   ]
 }
