@@ -36,20 +36,76 @@
       ]
     },
     {
-      "pattern_name": "フォーマットB_臨時収入型（●●万円の臨時収入が入ってく）",
+      "pattern_name": "フォーマットA変形（スペース区切り1ライナー）",
+      "category": "運気アップ",
+      "content": "こ れ を 見 た あ な た に は 、 今 日 、 思 わ ぬ 幸 運 が 訪 れ ま す 。 い い ね を す る と よ り 早 く 🌙",
+      "hashtag": "#今日の運勢",
+      "time_slot": "いいね強要型（09:37）",
+      "scheduled_hour": 9,
+      "scheduled_minute": 37,
+      "id": "post_20260419_0856_exp_002",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "行1が長すぎ: 73文字「こ れ を 見 た あ な た に は ...」（最大40文字）[threads]",
+        "フックが長すぎ: 73文字「こ れ を 見 た あ な た...」（最大40文字）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造A_臨時収入型（●●万円の臨時収入が入ってくる）",
       "category": "金運",
-      "content": "正直に申し上げますね\nあなたこの週末に\n●●万円ほどの臨時収入が入ってきます\n信じなくて構いません\nただ、覚えておいてくださいね🌸",
+      "content": "嘘は言いません。\nこの投稿を見かけた人以外\n●●万円ほどの臨時収入が入ってきます\n素敵な使い方をしてくださいね🌸",
       "hashtag": "#金運",
       "time_slot": "臨時収入型（12:07）",
       "scheduled_hour": 12,
       "scheduled_minute": 7,
-      "id": "post_20260419_0704_exp_003",
+      "id": "post_20260419_0856_exp_003",
       "platform": "threads",
       "is_affiliate": false,
       "affiliate_comment": null,
       "status": "queued",
       "quality_warnings": [
         "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の内省・哲学",
+      "content": "占いを求める人の多くは、\n『答え』ではなく『許可』を\n探しているんだと思う。\n\n「このままでいいですか？」\n「辞めてもいいですか？」\n「進んでもいいですか？」\n\n星は答えを教えてくれるのではなく、\nあなたが既に持っている確信に\n背中を押してくれるだけなのかもしれない。\n\n迷いながら歩む人より、\n迷いながらでも進む人の方が、\n運は味方するのだと思う。\n\nあなたの直感、\n信じてみませんか？",
+      "hashtag": "#星座占い",
+      "time_slot": "哲学深掘り型（18:07）",
+      "scheduled_hour": 18,
+      "scheduled_minute": 7,
+      "id": "post_20260419_0856_exp_004",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "縦長すぎ: 18行（最大16行）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "category": "ランキング＋恐怖型",
+      "content": "見落としたら4月中ずっと金運停滞するから注意して下さい。\n\n1位　♏さそり座\n2位 🦁しし座\n3位 🐏おひつじ座\n4位　⚖️てんびん座\n5位 🏺みずがめ座\n6位 🧑‍🎓おとめ座\n7位 🐟うお座\n8位　🏹いて座\n9位 🐂おうし sounds座\n10位 🦀かに座\n11位 ♊双子座\n12位 🌙ふたご座\n\nスクショするだけでも効果あります。",
+      "hashtag": "#今日の運勢",
+      "time_slot": "スルー恐怖型（20:07）",
+      "scheduled_hour": 20,
+      "scheduled_minute": 7,
+      "id": "post_20260419_0856_exp_005",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ブロックが長すぎ: 118文字（最大80文字）[threads]",
+        "ハッシュタグが含まれていない[threads]",
+        "絵文字多すぎ: 13個（最大5個）[threads]"
       ]
     }
   ]
