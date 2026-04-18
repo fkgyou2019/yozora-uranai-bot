@@ -1,0 +1,41 @@
+{
+  "date": "2026-04-18",
+  "generated_at": "2026-04-19 08:54",
+  "summary": {
+    "posts_total": 11,
+    "posts_measured": 7,
+    "posts_deleted": 4,
+    "total_views": 2029,
+    "avg_views": 289.9,
+    "avg_er": 12.11,
+    "experiment_rate": 54.5
+  },
+  "patterns": {
+    "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）": {
+      "count": 1,
+      "avg_views": 52.0,
+      "avg_er": 19.23
+    },
+    "フォーマットA_スペース区切り1ライナー": {
+      "count": 1,
+      "avg_views": 23.0,
+      "avg_er": 4.35
+    },
+    "構造G_注意喚起+限定型": {
+      "count": 4,
+      "avg_views": 467.0,
+      "avg_er": 11.53
+    },
+    "構造X4_スルー恐怖型（無視・素通りしたら損＋金運": {
+      "count": 1,
+      "avg_views": 86.0,
+      "avg_er": 15.12
+    }
+  },
+  "delete_reasons": [
+    "12h経過・低パフォーマンス",
+    "12h経過・低パフォーマンス",
+    "24h経過・低パフォーマンス",
+    "views=72だがlikes=0, replies=0"
+  ]
+}
