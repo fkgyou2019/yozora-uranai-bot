@@ -3925,7 +3925,59 @@
         "hook_length": 10
       },
       "collected_at": "2026-04-18T21:04:34.501268+09:00"
+    },
+    {
+      "id": "verify-retry-20260418204217",
+      "platform_post_id": "18388642780081086",
+      "posted_at": "2026-04-18T20:42:17.029214+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "今週後半、恋愛で\n決断を迫られやすい星座。\n\nたった3つだけです。\n\n💕牡牛座\n相手の言葉をそのまま",
+      "first_line": "今週後半、恋愛で",
+      "char_count": 163,
+      "metrics": {
+        "views": 788,
+        "likes": 52,
+        "replies": 3,
+        "reposts": 0,
+        "engagement_rate": 6.98
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 8
+      },
+      "collected_at": "2026-04-19T07:04:46.426601+09:00"
+    },
+    {
+      "id": "post_20260418_2104_exp_005",
+      "platform_post_id": "18577279057017975",
+      "posted_at": "2026-04-18T21:42:15.511769+09:00",
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運",
+      "category": "星座占い",
+      "content_preview": "見落としたら、この月の金運ガタ落ちです。\n\n1位　🐟うお座\n2位 ⚖️てんびん座\n3位 🦁しし座\n4",
+      "first_line": "見落としたら、この月の金運ガタ落ちです。",
+      "char_count": 139,
+      "metrics": {
+        "views": 83,
+        "likes": 12,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 14.46
+      },
+      "features": {
+        "has_ranking": true,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 20
+      },
+      "collected_at": "2026-04-19T07:04:46.426601+09:00"
     }
   ],
-  "last_updated": "2026-04-18T21:04:34.501268+09:00"
+  "last_updated": "2026-04-19T07:04:46.426601+09:00"
 }
