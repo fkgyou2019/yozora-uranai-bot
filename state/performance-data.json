@@ -3769,7 +3769,33 @@
         "hook_length": 18
       },
       "collected_at": "2026-04-17T23:44:24.650800+09:00"
+    },
+    {
+      "id": "post_20260418_0208_exp_001",
+      "platform_post_id": "17901126972421326",
+      "posted_at": "2026-04-18T07:12:13.652833+09:00",
+      "pattern_name": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+      "category": "今日の運勢",
+      "content_preview": "🔮 4/18の12星座\n\n牡羊座　動いた分だけ、運が返ってくる。\n牡牛座　焦らず待つのが、今日の正解",
+      "first_line": "🔮 4/18の12星座",
+      "char_count": 269,
+      "metrics": {
+        "views": 21,
+        "likes": 5,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 23.81
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": true,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 11
+      },
+      "collected_at": "2026-04-18T09:04:37.588165+09:00"
     }
   ],
-  "last_updated": "2026-04-18T08:10:33.648159+09:00"
+  "last_updated": "2026-04-18T09:04:37.588165+09:00"
 }

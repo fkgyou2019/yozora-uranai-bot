@@ -3779,6 +3779,26 @@
       "platform_post_id": "18005736443891464",
       "source": "post-verify",
       "pattern_name": "構造G_注意喚起+限定型"
+    },
+    {
+      "pattern_name": "フォーマットA_スペース区切り1ライナー",
+      "category": "運気上昇",
+      "content": "こ れ が 見 え た ら 無 心 で い い ね を🌙",
+      "hashtag": "#今日の運勢",
+      "time_slot": "いいね強要型（09:37）",
+      "scheduled_hour": 9,
+      "scheduled_minute": 37,
+      "id": "post_20260418_0904_exp_001",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ],
+      "posting_started_at": "2026-04-18T09:04:32.822388+09:00",
+      "posted_at": "2026-04-18T09:04:37.508048+09:00",
+      "platform_post_id": "18119535241651312"
     }
   ]
 }

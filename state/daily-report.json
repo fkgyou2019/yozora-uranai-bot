@@ -1,7 +1,7 @@
 {
   "date": "2026-04-18",
-  "generated_at": "2026-04-18T08:10:42+09:00",
-  "one_line": "2026-04-18 | 1件投稿 (0件計測済み) | フックOK 1/1件 | 閲覧数取得待ち | 構造G再現性: テスト中（20/62件成功・5件判定待ち） | HC削除: 2件",
+  "generated_at": "2026-04-18T09:04:51+09:00",
+  "one_line": "2026-04-18 | 3件投稿 (1件計測済み) | フックOK 2/3件 | 違反: 9時: 28字「こ れ が 見 え た ら 無 心 で い い ね」 | 平均v=18.0 | 構造G再現性: テスト中（20/62件成功・6件判定待ち） | HC削除: 2件",
   "posts": [
     {
       "hour": 7,
@@ -10,6 +10,34 @@
       "hook": "🔮 4/18の12星座",
       "hook_len": 11,
       "hook_ok": true,
+      "views": 18,
+      "likes": 5,
+      "comments": 0,
+      "reposts": 0,
+      "er": 27.78,
+      "measured": true
+    },
+    {
+      "hour": 8,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 9,
+      "struct": "?",
+      "pattern": "フォーマットA_スペース区切り1ライナー",
+      "hook": "こ れ が 見 え た ら 無 心 で い い ね を🌙",
+      "hook_len": 28,
+      "hook_ok": false,
       "views": 0,
       "likes": 0,
       "comments": 0,
@@ -19,32 +47,34 @@
     }
   ],
   "summary": {
-    "total": 1,
-    "measured": 0,
-    "hook_ok": 1,
-    "hook_violations": 0,
-    "violations": [],
-    "total_views": 0,
-    "avg_views": 0,
+    "total": 3,
+    "measured": 1,
+    "hook_ok": 2,
+    "hook_violations": 1,
+    "violations": [
+      "9時: 28字「こ れ が 見 え た ら 無 心 で い い ね」"
+    ],
+    "total_views": 18,
+    "avg_views": 18.0,
     "best_hook": "🔮 4/18の12星座",
-    "best_views": 0,
-    "best_er": 0
+    "best_views": 18,
+    "best_er": 27.78
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 13,
-    "total_posts": 75,
+    "total_posts": 76,
     "judged_posts": 70,
-    "pending_posts": 5,
+    "pending_posts": 6,
     "measured_posts": 62,
     "success_posts": 20,
     "success_rate": 32.3,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（20/62件成功・5件判定待ち）"
+    "status": "テスト中（20/62件成功・6件判定待ち）"
   },
   "hc": {
-    "runs": 3,
+    "runs": 4,
     "deleted": 2
   }
 }

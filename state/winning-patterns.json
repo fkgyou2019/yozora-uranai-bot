@@ -238,8 +238,8 @@
     "自動検出・低パフォーマンスパターン: 5件"
   ],
   "auto_analysis": {
-    "data_count": 145,
-    "last_analyzed": "2026-04-18T08:10:42.597239+09:00",
+    "data_count": 146,
+    "last_analyzed": "2026-04-18T09:04:51.141150+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -663,15 +663,6 @@
         "_score": 60.0
       },
       {
-        "pattern": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
-        "count": 1,
-        "avg_engagement": 9.62,
-        "avg_views": 52.0,
-        "total_likes": 5,
-        "total_replies": 0,
-        "_score": 57.0024
-      },
-      {
         "pattern": "構造自由_共感質問型",
         "count": 1,
         "avg_engagement": 1.92,
@@ -688,6 +679,15 @@
         "total_likes": 3,
         "total_replies": 0,
         "_score": 45.1176
+      },
+      {
+        "pattern": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+        "count": 2,
+        "avg_engagement": 16.71,
+        "avg_views": 36.0,
+        "total_likes": 10,
+        "total_replies": 0,
+        "_score": 42.0156
       },
       {
         "pattern": "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）",
@@ -816,13 +816,13 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 53,
-        "avg_engagement": 13.67
+        "count": 54,
+        "avg_engagement": 13.86
       },
       {
         "feature": "has_question",
-        "count": 47,
-        "avg_engagement": 11.8
+        "count": 48,
+        "avg_engagement": 12.05
       }
     ],
     "top_hook_styles": [
@@ -925,9 +925,9 @@
       },
       "7": {
         "slot": "朝（6〜9時台）",
-        "avg_eng": 15.24,
-        "avg_views": 106.0,
-        "count": 16
+        "avg_eng": 15.74,
+        "avg_views": 101.0,
+        "count": 17
       },
       "8": {
         "slot": "朝（6〜9時台）",
@@ -1073,8 +1073,8 @@
       "自動検出・低パフォーマンスパターン: 5件"
     ]
   },
-  "data_count": 145,
-  "last_analyzed": "2026-04-18T08:10:42.597239+09:00",
+  "data_count": 146,
+  "last_analyzed": "2026-04-18T09:04:51.141150+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1456,15 +1456,6 @@
       "_score": 60.0
     },
     {
-      "pattern": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
-      "count": 1,
-      "avg_engagement": 9.62,
-      "avg_views": 52.0,
-      "total_likes": 5,
-      "total_replies": 0,
-      "_score": 57.0024
-    },
-    {
       "pattern": "構造自由_共感質問型",
       "count": 1,
       "avg_engagement": 1.92,
@@ -1481,6 +1472,15 @@
       "total_likes": 3,
       "total_replies": 0,
       "_score": 45.1176
+    },
+    {
+      "pattern": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+      "count": 2,
+      "avg_engagement": 16.71,
+      "avg_views": 36.0,
+      "total_likes": 10,
+      "total_replies": 0,
+      "_score": 42.0156
     },
     {
       "pattern": "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）",
@@ -1609,13 +1609,13 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 53,
-      "avg_engagement": 13.67
+      "count": 54,
+      "avg_engagement": 13.86
     },
     {
       "feature": "has_question",
-      "count": 47,
-      "avg_engagement": 11.8
+      "count": 48,
+      "avg_engagement": 12.05
     }
   ],
   "best_posts": [
@@ -1684,9 +1684,9 @@
     },
     "7": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 15.24,
-      "avg_views": 106.0,
-      "count": 16
+      "avg_eng": 15.74,
+      "avg_views": 101.0,
+      "count": 17
     },
     "8": {
       "slot": "朝（6〜9時台）",
