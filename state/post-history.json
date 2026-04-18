@@ -3905,6 +3905,29 @@
       "platform_post_id": "18388642780081086",
       "source": "post-verify",
       "pattern_name": "構造G_注意喚起+限定型"
+    },
+    {
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運",
+      "category": "星座占い",
+      "content": "見落としたら、この月の金運ガタ落ちです。\n\n1位　🐟うお座\n2位 ⚖️てんびん座\n3位 🦁しし座\n4位　🦂さそり座\n5位 🏺みずがめ座\n6位 🦀かに座\n7位 ♊双子座\n8位 🐏おひつじ座\n9位 🐂おうし座\n10位 🧑‍🎓おとめ座\n11位 ♀️おんなのこ座\n12位 🔱べつのなに座",
+      "hashtag": "#星座占い",
+      "time_slot": "スルー恐怖型（20:07）",
+      "scheduled_hour": 20,
+      "scheduled_minute": 7,
+      "id": "post_20260418_2104_exp_005",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "ブロック分割不足: 2ブロック（最低3ブロック）[threads]",
+        "ブロックが長すぎ: 117文字（最大80文字）[threads]",
+        "ハッシュタグが含まれていない[threads]",
+        "絵文字多すぎ: 13個（最大5個）[threads]"
+      ],
+      "posted_at": "2026-04-18T21:42:15.511769+09:00",
+      "platform_post_id": "18577279057017975",
+      "source": "post-verify"
     }
   ]
 }
