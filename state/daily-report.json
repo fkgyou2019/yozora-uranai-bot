@@ -1,7 +1,7 @@
 {
   "date": "2026-04-18",
-  "generated_at": "2026-04-18T20:11:31+09:00",
-  "one_line": "2026-04-18 | 8件投稿 (5件計測済み) | フックOK 6/8件 | 違反: 9時: 28字「こ れ が 見 え た ら 無 心 で い い ね」, 20時: 21字「見落とした人、4月の金運が半減するからね。」 | 平均v=49.6 | 構造G再現性: テスト中（21/65件成功・6件判定待ち） | HC削除: 3件",
+  "generated_at": "2026-04-18T21:04:45+09:00",
+  "one_line": "2026-04-18 | 10件投稿 (7件計測済み) | フックOK 8/10件 | 違反: 9時: 28字「こ れ が 見 え た ら 無 心 で い い ね」, 20時: 21字「見落とした人、4月の金運が半減するからね。」 | 平均v=80.4 | 構造G再現性: テスト中（22/66件成功・6件判定待ち） | HC削除: 3件",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "🔮 4/18の12星座",
       "hook_len": 11,
       "hook_ok": true,
-      "views": 41,
-      "likes": 8,
+      "views": 42,
+      "likes": 9,
       "comments": 0,
       "reposts": 0,
-      "er": 19.51,
+      "er": 21.43,
       "measured": true
     },
     {
@@ -24,11 +24,11 @@
       "hook": "明日からの3日間、",
       "hook_len": 9,
       "hook_ok": true,
-      "views": 27,
+      "views": 28,
       "likes": 2,
       "comments": 0,
       "reposts": 0,
-      "er": 7.41,
+      "er": 7.14,
       "measured": true
     },
     {
@@ -52,11 +52,11 @@
       "hook": "今週後半、恋愛で",
       "hook_len": 8,
       "hook_ok": true,
-      "views": 88,
-      "likes": 12,
+      "views": 101,
+      "likes": 15,
       "comments": 4,
       "reposts": 0,
-      "er": 18.18,
+      "er": 18.81,
       "measured": true
     },
     {
@@ -80,11 +80,11 @@
       "hook": "明日からの3日間、",
       "hook_len": 9,
       "hook_ok": true,
-      "views": 76,
+      "views": 79,
       "likes": 2,
       "comments": 0,
       "reposts": 0,
-      "er": 2.63,
+      "er": 2.53,
       "measured": true
     },
     {
@@ -94,12 +94,12 @@
       "hook": "4月下旬、人間関係で",
       "hook_len": 10,
       "hook_ok": true,
-      "views": 0,
-      "likes": 5,
-      "comments": 2,
+      "views": 287,
+      "likes": 27,
+      "comments": 12,
       "reposts": 0,
-      "er": 0,
-      "measured": false
+      "er": 13.59,
+      "measured": true
     },
     {
       "hour": 20,
@@ -114,38 +114,66 @@
       "reposts": 0,
       "er": 0,
       "measured": false
+    },
+    {
+      "hour": 20,
+      "struct": "H",
+      "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "hook": "占いは「逃げ道」じゃなくて、",
+      "hook_len": 14,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 20,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "今週後半、恋愛で",
+      "hook_len": 8,
+      "hook_ok": true,
+      "views": 10,
+      "likes": 5,
+      "comments": 0,
+      "reposts": 0,
+      "er": 50.0,
+      "measured": true
     }
   ],
   "summary": {
-    "total": 8,
-    "measured": 5,
-    "hook_ok": 6,
+    "total": 10,
+    "measured": 7,
+    "hook_ok": 8,
     "hook_violations": 2,
     "violations": [
       "9時: 28字「こ れ が 見 え た ら 無 心 で い い ね」",
       "20時: 21字「見落とした人、4月の金運が半減するからね。」"
     ],
-    "total_views": 248,
-    "avg_views": 49.6,
-    "best_hook": "今週後半、恋愛で",
-    "best_views": 88,
-    "best_er": 18.18
+    "total_views": 563,
+    "avg_views": 80.4,
+    "best_hook": "4月下旬、人間関係で",
+    "best_views": 287,
+    "best_er": 13.59
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 13,
-    "total_posts": 79,
-    "judged_posts": 73,
+    "total_posts": 80,
+    "judged_posts": 74,
     "pending_posts": 6,
-    "measured_posts": 65,
-    "success_posts": 21,
-    "success_rate": 32.3,
+    "measured_posts": 66,
+    "success_posts": 22,
+    "success_rate": 33.3,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（21/65件成功・6件判定待ち）"
+    "status": "テスト中（22/66件成功・6件判定待ち）"
   },
   "hc": {
-    "runs": 14,
+    "runs": 15,
     "deleted": 3
   }
 }
