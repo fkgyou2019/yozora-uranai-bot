@@ -2398,5 +2398,20 @@
     "hourly": [],
     "completed": true,
     "api_fail_count": 11
+  },
+  "post_20260412_0846_J_001": {
+    "post_id": "post_20260412_0846_J_001",
+    "platform_post_id": "18070405841352180",
+    "threads_url": "",
+    "posted_at": "2026-04-12T10:42:15.656767+09:00",
+    "pattern_name": "構造J_全12星座1行メッセージ型（4/12）",
+    "slot_hour": 10,
+    "day_of_week": 6,
+    "day_name": "日",
+    "first_line": "🔮 4/12の12星座",
+    "content_preview": "🔮 4/12の12星座\n\n牡羊座　動いた分だけ、返ってくる。\n牡牛座　焦らず待つのが、今日の正解。\n双子座　気になるあの",
+    "hourly": [],
+    "completed": true,
+    "api_fail_count": 10
   }
 }
