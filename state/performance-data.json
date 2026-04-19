@@ -3977,7 +3977,85 @@
         "hook_length": 20
       },
       "collected_at": "2026-04-19T07:04:46.426601+09:00"
+    },
+    {
+      "id": "verify-retry-20260419080614",
+      "platform_post_id": "18151664785412659",
+      "posted_at": "2026-04-19T08:06:14.906607+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n仕事で急な判断を\n迫られやすい星座。\n\nたった2つだけです。\n\n⭐山羊座\nメール",
+      "first_line": "明日からの3日間、",
+      "char_count": 159,
+      "metrics": {
+        "views": 19,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": true,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-19T15:10:26.044622+09:00"
+    },
+    {
+      "id": "post_20260419_0856_exp_002",
+      "platform_post_id": "18100245682812123",
+      "posted_at": "2026-04-19T09:02:02.668465+09:00",
+      "pattern_name": "フォーマットA変形（スペース区切り1ライナー）",
+      "category": "運気アップ",
+      "content_preview": "こ れ を 見 た あ な た に は 、 今 日 、 思 わ ぬ 幸 運 が 訪 れ ま す 。 ",
+      "first_line": "こ れ を 見 た あ な た に は 、 今 日 、 思 ",
+      "char_count": 73,
+      "metrics": {
+        "views": 259,
+        "likes": 24,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 9.27
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 73
+      },
+      "collected_at": "2026-04-19T15:10:26.044622+09:00"
+    },
+    {
+      "id": "verify-retry-20260419104220",
+      "platform_post_id": "18169937131412764",
+      "posted_at": "2026-04-19T10:42:20.124312+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n恋愛で思い込みを\n手放した方がいい星座。\n\nたった2つだけです。\n\n⭐牡牛座\n好",
+      "first_line": "明日からの3日間、",
+      "char_count": 162,
+      "metrics": {
+        "views": 72,
+        "likes": 8,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 11.11
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-19T15:10:26.044622+09:00"
     }
   ],
-  "last_updated": "2026-04-19T08:56:33.762282+09:00"
+  "last_updated": "2026-04-19T15:10:26.044622+09:00"
 }
