@@ -4081,7 +4081,59 @@
         "hook_length": 23
       },
       "collected_at": "2026-04-19T21:03:50.022086+09:00"
+    },
+    {
+      "id": "post_20260419_2010_exp_006",
+      "platform_post_id": "18412876096132786",
+      "posted_at": "2026-04-19T20:10:56.580091+09:00",
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "category": "星座占い",
+      "content_preview": "このまま見過ごしたら、4月の金運チャンス逃すよ。\n\n1位 🐠うお座\n2位 ⚖️てんびん座\n3位 🦁し",
+      "first_line": "このまま見過ごしたら、4月の金運チャンス逃すよ。",
+      "char_count": 160,
+      "metrics": {
+        "views": 78,
+        "likes": 6,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 7.69
+      },
+      "features": {
+        "has_ranking": true,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 24
+      },
+      "collected_at": "2026-04-20T07:05:59.937102+09:00"
+    },
+    {
+      "id": "post_20260419_2103_exp_006",
+      "platform_post_id": "18114140932688242",
+      "posted_at": "2026-04-19T21:42:15.952437+09:00",
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "category": "ランキング＋恐怖",
+      "content_preview": "今日これ見て流した人、明日金運ガタ落ちします。\n\n1位 🌙うお座\n2位 ⚖️てんびん座\n3位 🌟いて",
+      "first_line": "今日これ見て流した人、明日金運ガタ落ちします。",
+      "char_count": 133,
+      "metrics": {
+        "views": 41,
+        "likes": 8,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 24.39
+      },
+      "features": {
+        "has_ranking": true,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 23
+      },
+      "collected_at": "2026-04-20T07:05:59.937102+09:00"
     }
   ],
-  "last_updated": "2026-04-19T21:03:50.022086+09:00"
+  "last_updated": "2026-04-20T07:05:59.937102+09:00"
 }
