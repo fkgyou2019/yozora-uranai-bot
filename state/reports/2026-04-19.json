@@ -1,0 +1,40 @@
+{
+  "date": "2026-04-19",
+  "generated_at": "2026-04-20 08:56",
+  "summary": {
+    "posts_total": 10,
+    "posts_measured": 6,
+    "posts_deleted": 4,
+    "total_views": 578,
+    "avg_views": 96.3,
+    "avg_er": 11.54,
+    "experiment_rate": 50.0
+  },
+  "patterns": {
+    "構造G_注意喚起+限定型": {
+      "count": 2,
+      "avg_views": 61.5,
+      "avg_er": 10.77
+    },
+    "フォーマットA変形（スペース区切り1ライナー）": {
+      "count": 1,
+      "avg_views": 285.0,
+      "avg_er": 9.82
+    },
+    "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）": {
+      "count": 1,
+      "avg_views": 47.0,
+      "avg_er": 2.13
+    },
+    "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）": {
+      "count": 2,
+      "avg_views": 61.5,
+      "avg_er": 17.88
+    }
+  },
+  "delete_reasons": [
+    "24h経過・低パフォーマンス",
+    "24h経過・低パフォーマンス",
+    "24h経過・低パフォーマンス"
+  ]
+}
