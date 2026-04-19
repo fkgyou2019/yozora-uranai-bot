@@ -20848,6 +20848,17 @@
           "auto_replies": 0,
           "er": 3.92,
           "velocity_views_per_hour": 0.5
+        },
+        {
+          "h": 61,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 255,
+          "likes": 10,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.92,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -21147,6 +21158,17 @@
           "auto_replies": 0,
           "er": 3.7,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 58,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 135,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.7,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -21464,6 +21486,17 @@
           "auto_replies": 0,
           "er": 17.7,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 50,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 340,
+          "likes": 36,
+          "replies": 24,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 17.65,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -21657,6 +21690,17 @@
           "auto_replies": 0,
           "er": 12.24,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 49,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 343,
+          "likes": 30,
+          "replies": 12,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.24,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -21817,6 +21861,17 @@
           "auto_replies": 0,
           "er": 17.24,
           "velocity_views_per_hour": 0.7
+        },
+        {
+          "h": 39,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 59,
+          "likes": 10,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 16.95,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -22200,6 +22255,17 @@
           "auto_replies": 0,
           "er": 20.75,
           "velocity_views_per_hour": 1.5
+        },
+        {
+          "h": 36,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 160,
+          "likes": 25,
+          "replies": 8,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.62,
+          "velocity_views_per_hour": 0.3
         }
       ],
       "completed": false,
@@ -22459,6 +22525,17 @@
           "auto_replies": 0,
           "er": 13.7,
           "velocity_views_per_hour": 0.7
+        },
+        {
+          "h": 27,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 787,
+          "likes": 65,
+          "replies": 42,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.6,
+          "velocity_views_per_hour": 3.0
         }
       ],
       "completed": false,
@@ -22605,6 +22682,17 @@
           "auto_replies": 0,
           "er": 6.66,
           "velocity_views_per_hour": 48.0
+        },
+        {
+          "h": 26,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 1435,
+          "likes": 85,
+          "replies": 7,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.41,
+          "velocity_views_per_hour": 17.7
         }
       ],
       "completed": false,
@@ -22710,6 +22798,17 @@
           "auto_replies": 0,
           "er": 15.69,
           "velocity_views_per_hour": 4.0
+        },
+        {
+          "h": 25,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 104,
+          "likes": 16,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.38,
+          "velocity_views_per_hour": 0.7
         }
       ],
       "completed": false,
@@ -22729,7 +22828,7 @@
       "content_preview": "今夜、対人関係で\nモヤモヤが晴れる星座。\nたった2つだけです。\n\n🔮双子座\n長く引きずってた\n誤解が解ける予感。\n相手か",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 4
+      "api_fail_count": 5
     },
     "verify-retry-20260419080614": {
       "post_id": "verify-retry-20260419080614",
@@ -22786,6 +22885,17 @@
           "auto_replies": 0,
           "er": 12.5,
           "velocity_views_per_hour": 2.5
+        },
+        {
+          "h": 15,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 26,
+          "likes": 1,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.54,
+          "velocity_views_per_hour": 0.7
         }
       ],
       "completed": false,
@@ -22805,7 +22915,7 @@
       "content_preview": "朝の電車の中で、好きな人のLINEを何度も読み直してしまう。そういう時間が、一番占いを求めてしまう。\n\n占い師として思う",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 4
+      "api_fail_count": 5
     },
     "post_20260419_0856_exp_002": {
       "post_id": "post_20260419_0856_exp_002",
@@ -22862,6 +22972,17 @@
           "auto_replies": 0,
           "er": 9.49,
           "velocity_views_per_hour": 4.0
+        },
+        {
+          "h": 14,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 280,
+          "likes": 27,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.64,
+          "velocity_views_per_hour": 2.0
         }
       ],
       "completed": false,
@@ -22912,6 +23033,17 @@
           "auto_replies": 0,
           "er": 9.76,
           "velocity_views_per_hour": 3.5
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 91,
+          "likes": 9,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.89,
+          "velocity_views_per_hour": 3.0
         }
       ],
       "completed": false,
@@ -22931,7 +23063,7 @@
       "content_preview": "ごめんね、正直に言うね。\nよぞら.を見つけてくれた人以外…\n今週中に●●万円ほどの\n良いお知らせが届くよ！",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 3
+      "api_fail_count": 4
     },
     "post_20260418_2104_exp_004": {
       "post_id": "post_20260418_2104_exp_004",
@@ -22955,6 +23087,17 @@
           "auto_replies": 0,
           "er": 2.56,
           "velocity_views_per_hour": 39.0
+        },
+        {
+          "h": 3,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 45,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.22,
+          "velocity_views_per_hour": 3.0
         }
       ],
       "completed": false,
@@ -22983,12 +23126,66 @@
           "auto_replies": 0,
           "er": 0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 2,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 74,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.76,
+          "velocity_views_per_hour": 37.0
         }
       ],
       "completed": false,
-      "peak_velocity": 0.0,
-      "peak_velocity_hour": 0
+      "peak_velocity": 37.0,
+      "peak_velocity_hour": 2
+    },
+    "verify-retry-20260419204217": {
+      "post_id": "verify-retry-20260419204217",
+      "platform_post_id": "18081257225188596",
+      "threads_url": "",
+      "posted_at": "2026-04-19T20:42:17.710628+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 20,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "今週後半、人間関係が急変する星座。",
+      "content_preview": "今週後半、人間関係が急変する星座。\n\nたった4つだけ注意してね。\n\n🔮 牡牛座\n金銭がらみで誤解が生まれやすい。\n今週中",
+      "hourly": [],
+      "completed": false,
+      "api_fail_count": 1
+    },
+    "post_20260419_2103_exp_006": {
+      "post_id": "post_20260419_2103_exp_006",
+      "platform_post_id": "18114140932688242",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXUEpgZGEG1",
+      "posted_at": "2026-04-19T21:42:15.952437+09:00",
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "slot_hour": 21,
+      "day_of_week": 6,
+      "day_name": "日",
+      "first_line": "今日これ見て流した人、明日金運ガタ落ちします。",
+      "content_preview": "今日これ見て流した人、明日金運ガタ落ちします。\n\n1位 🌙うお座\n2位 ⚖️てんびん座\n3位 🌟いて座\n4位 🦁しし座\n",
+      "hourly": [
+        {
+          "h": 1,
+          "ts": "2026-04-19T23:06:51.868350+09:00",
+          "views": 29,
+          "likes": 6,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 27.59,
+          "velocity_views_per_hour": 29.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 29.0,
+      "peak_velocity_hour": 1
     }
   },
-  "last_updated": "2026-04-19T20:23:48.422135+09:00"
+  "last_updated": "2026-04-19T23:06:51.868350+09:00"
 }
