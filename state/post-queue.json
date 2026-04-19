@@ -1,55 +1,40 @@
 {
   "queue": [
     {
-      "pattern_name": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
-      "category": "よぞら.の視点・哲学型",
-      "content": "朝の満員電車で、好きな人からのLINEを何度も読み返してる。\n\n占い師をしてると気づくんだけど、恋愛迷子の人ほど『答え』を求めがち。でも答えって、もう心の中にあるんだよね。\n\n占いは『背中を押す』ためのもの。決めるのは、いつだって自分。\n\nあなたは今、何を迷ってますか？",
-      "hashtag": "#星座占い",
-      "time_slot": "しいたけ共感型（08:07）",
-      "scheduled_hour": 8,
-      "scheduled_minute": 7,
-      "id": "post_20260419_2010_exp_003",
-      "platform": "threads",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "status": "queued",
-      "quality_warnings": [
-        "行2が長すぎ: 54文字「占い師をしてると気づくんだけど、恋愛迷子...」（最大40文字）[threads]",
-        "ハッシュタグが含まれていない[threads]"
-      ]
-    },
-    {
-      "pattern_name": "フォーマットA_スペース区切り1ライナー",
-      "category": "運気上昇",
-      "content": "こ れ が 見 え た ら 無 心 で い い ね を🌙\n\nあなたの幸運スイッチが今、オンになります。",
-      "hashtag": "#今日の運勢",
-      "time_slot": "いいね強要型（09:37）",
-      "scheduled_hour": 9,
-      "scheduled_minute": 37,
-      "id": "post_20260419_2010_exp_004",
-      "platform": "threads",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "status": "queued",
-      "quality_warnings": [
-        "ハッシュタグが含まれていない[threads]"
-      ]
-    },
-    {
-      "pattern_name": "フォーマットB変形_臨時収入型",
+      "pattern_name": "構造B_臨時収入型（●●万円の臨時収入が入ってくる）",
       "category": "金運",
       "content": "正直に申し上げますね\nあなた4/20中に\n●●万円ほどの臨時収入が入ってきます\n信じなくて構いません\nただ、覚えておいてくださいね🌸",
       "hashtag": "#金運",
       "time_slot": "臨時収入型（12:07）",
       "scheduled_hour": 12,
       "scheduled_minute": 7,
-      "id": "post_20260419_2010_exp_005",
+      "id": "post_20260419_2103_exp_004",
       "platform": "threads",
       "is_affiliate": false,
       "affiliate_comment": null,
       "status": "queued",
       "quality_warnings": [
         "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "category": "ランキング＋恐怖",
+      "content": "今日これ見て流した人、明日金運ガタ落ちします。\n\n1位 🌙うお座\n2位 ⚖️てんびん座\n3位 🌟いて座\n4位 🦁しし座\n5位 🦂さそり座\n6位 💫みずがめ座\n7位 🌊かに座\n8位 ✨双子座\n9位 🐏おひつじ座\n10位 🐂おうし座\n11位 🌸おとめ座\n12位 🏹射手座",
+      "hashtag": "#星座占い",
+      "time_slot": "スルー恐怖型（20:07）",
+      "scheduled_hour": 20,
+      "scheduled_minute": 7,
+      "id": "post_20260419_2103_exp_006",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ブロック分割不足: 2ブロック（最低3ブロック）[threads]",
+        "ブロックが長すぎ: 108文字（最大80文字）[threads]",
+        "ハッシュタグが含まれていない[threads]",
+        "絵文字多すぎ: 12個（最大5個）[threads]"
       ]
     }
   ]

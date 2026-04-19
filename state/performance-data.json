@@ -4055,7 +4055,33 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-19T15:10:26.044622+09:00"
+    },
+    {
+      "id": "post_20260418_2104_exp_004",
+      "platform_post_id": "18042648815555865",
+      "posted_at": "2026-04-19T19:12:14.137443+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の視点・人生哲学",
+      "content_preview": "占いで迷う人ほど、本当は自分の答えを知ってる。\n\n仕事を辞めたいのに占いで「続けろ」と言われるのを待",
+      "first_line": "占いで迷う人ほど、本当は自分の答えを知ってる。",
+      "char_count": 208,
+      "metrics": {
+        "views": 43,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 2.33
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 23
+      },
+      "collected_at": "2026-04-19T21:03:50.022086+09:00"
     }
   ],
-  "last_updated": "2026-04-19T20:10:56.665113+09:00"
+  "last_updated": "2026-04-19T21:03:50.022086+09:00"
 }
