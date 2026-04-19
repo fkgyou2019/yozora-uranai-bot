@@ -1,7 +1,7 @@
 {
   "date": "2026-04-19",
-  "generated_at": "2026-04-19T15:21:40+09:00",
-  "one_line": "2026-04-19 | 6件投稿 (2件計測済み) | フックOK 4/6件 | 違反: 8時: 50字「朝の電車の中で、好きな人のLINEを何度も読み直し」, 9時: 73字「こ れ を 見 た あ な た に は 、 今 日」 | 平均v=41.5 | 構造G再現性: テスト中（23/70件成功・5件判定待ち） | HC削除: 3件",
+  "generated_at": "2026-04-19T16:55:48+09:00",
+  "one_line": "2026-04-19 | 6件投稿 (3件計測済み) | フックOK 4/6件 | 違反: 8時: 50字「朝の電車の中で、好きな人のLINEを何度も読み直し」, 9時: 73字「こ れ を 見 た あ な た に は 、 今 日」 | 平均v=116.7 | 構造G再現性: テスト中（23/70件成功・5件判定待ち） | HC削除: 3件",
   "posts": [
     {
       "hour": 7,
@@ -24,7 +24,7 @@
       "hook": "明日からの3日間、",
       "hook_len": 9,
       "hook_ok": true,
-      "views": 11,
+      "views": 19,
       "likes": 0,
       "comments": 0,
       "reposts": 0,
@@ -52,12 +52,12 @@
       "hook": "こ れ を 見 た あ な た に は 、 今 日 、 思 わ ぬ 幸 運 が ",
       "hook_len": 73,
       "hook_ok": false,
-      "views": 0,
-      "likes": 0,
+      "views": 259,
+      "likes": 25,
       "comments": 0,
       "reposts": 0,
-      "er": 0,
-      "measured": false
+      "er": 9.65,
+      "measured": true
     },
     {
       "hour": 10,
@@ -90,18 +90,18 @@
   ],
   "summary": {
     "total": 6,
-    "measured": 2,
+    "measured": 3,
     "hook_ok": 4,
     "hook_violations": 2,
     "violations": [
       "8時: 50字「朝の電車の中で、好きな人のLINEを何度も読み直し」",
       "9時: 73字「こ れ を 見 た あ な た に は 、 今 日」"
     ],
-    "total_views": 83,
-    "avg_views": 41.5,
-    "best_hook": "明日からの3日間、",
-    "best_views": 72,
-    "best_er": 11.11
+    "total_views": 350,
+    "avg_views": 116.7,
+    "best_hook": "こ れ を 見 た あ な た に は 、 今 日 、 思 わ ぬ 幸 運 が ",
+    "best_views": 259,
+    "best_er": 9.65
   },
   "reproducibility_test": {
     "target": "構造G",
@@ -117,7 +117,7 @@
     "status": "テスト中（23/70件成功・5件判定待ち）"
   },
   "hc": {
-    "runs": 7,
+    "runs": 9,
     "deleted": 3
   }
 }
