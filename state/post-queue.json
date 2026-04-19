@@ -1,14 +1,49 @@
 {
   "queue": [
     {
-      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
-      "category": "占い師の内省・哲学",
-      "content": "占いで迷う人ほど、実は自分の答えをもう持ってる。\n\n仕事で悩む人から相談を受けると、\n「どうしたらいいですか」という質問の奥に\n「決めたいのに決められない心」が隠れていることが多い。\n\n占いはその背中を押すツール。\n星が言ってくれたことで、\nやっと自分の気持ちに許可が出る感じ。\n\n本当は、あなたはもう知ってるんです。\n次に進むべきか、留まるべきか。\n占いはそれを思い出させるだけ。\n\nあなたの直感と星の声、\nどちらを信じていますか？",
-      "hashtag": "#星読み",
-      "time_slot": "哲学深掘り型（18:07）",
-      "scheduled_hour": 18,
+      "pattern_name": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "category": "よぞら.の視点・哲学型",
+      "content": "朝の満員電車で、好きな人からのLINEを何度も読み返してる。\n\n占い師をしてると気づくんだけど、恋愛迷子の人ほど『答え』を求めがち。でも答えって、もう心の中にあるんだよね。\n\n占いは『背中を押す』ためのもの。決めるのは、いつだって自分。\n\nあなたは今、何を迷ってますか？",
+      "hashtag": "#星座占い",
+      "time_slot": "しいたけ共感型（08:07）",
+      "scheduled_hour": 8,
       "scheduled_minute": 7,
-      "id": "post_20260419_1655_exp_001",
+      "id": "post_20260419_2010_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "行2が長すぎ: 54文字「占い師をしてると気づくんだけど、恋愛迷子...」（最大40文字）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "フォーマットA_スペース区切り1ライナー",
+      "category": "運気上昇",
+      "content": "こ れ が 見 え た ら 無 心 で い い ね を🌙\n\nあなたの幸運スイッチが今、オンになります。",
+      "hashtag": "#今日の運勢",
+      "time_slot": "いいね強要型（09:37）",
+      "scheduled_hour": 9,
+      "scheduled_minute": 37,
+      "id": "post_20260419_2010_exp_004",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "フォーマットB変形_臨時収入型",
+      "category": "金運",
+      "content": "正直に申し上げますね\nあなた4/20中に\n●●万円ほどの臨時収入が入ってきます\n信じなくて構いません\nただ、覚えておいてくださいね🌸",
+      "hashtag": "#金運",
+      "time_slot": "臨時収入型（12:07）",
+      "scheduled_hour": 12,
+      "scheduled_minute": 7,
+      "id": "post_20260419_2010_exp_005",
       "platform": "threads",
       "is_affiliate": false,
       "affiliate_comment": null,

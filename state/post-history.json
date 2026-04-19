@@ -4046,6 +4046,28 @@
       "posted_at": "2026-04-19T19:12:14.137443+09:00",
       "platform_post_id": "18042648815555865",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "category": "星座占い",
+      "content": "このまま見過ごしたら、4月の金運チャンス逃すよ。\n\n1位 🐠うお座\n2位 ⚖️てんびん座\n3位 🦁しし座\n4位 🏹いて座\n5位 🦂さそり座\n6位 🪣みずがめ座\n7位 🦀かに座\n8位 👯双子座\n9位 🐑おひつじ座\n10位 🐄おうし座\n11位 📚おとめ座\n12位 🦂さそり座\n\nスクショして持ってると、明日から変わります。🙏",
+      "hashtag": "#星座占い",
+      "time_slot": "スルー恐怖型（20:07）",
+      "scheduled_hour": 20,
+      "scheduled_minute": 7,
+      "id": "post_20260419_2010_exp_006",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "ブロックが長すぎ: 109文字（最大80文字）[threads]",
+        "ハッシュタグが含まれていない[threads]",
+        "絵文字多すぎ: 13個（最大5個）[threads]"
+      ],
+      "posting_started_at": "2026-04-19T20:10:51.656297+09:00",
+      "posted_at": "2026-04-19T20:10:56.580091+09:00",
+      "platform_post_id": "18412876096132786"
     }
   ]
 }
