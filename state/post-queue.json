@@ -36,25 +36,6 @@
       ]
     },
     {
-      "pattern_name": "フォーマットA変形（スペース区切り1ライナー）",
-      "category": "運気アップ",
-      "content": "こ れ を 見 た あ な た に は 、 今 日 、 思 わ ぬ 幸 運 が 訪 れ ま す 。 い い ね を す る と よ り 早 く 🌙",
-      "hashtag": "#今日の運勢",
-      "time_slot": "いいね強要型（09:37）",
-      "scheduled_hour": 9,
-      "scheduled_minute": 37,
-      "id": "post_20260419_0856_exp_002",
-      "platform": "threads",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "status": "queued",
-      "quality_warnings": [
-        "行1が長すぎ: 73文字「こ れ を 見 た あ な た に は ...」（最大40文字）[threads]",
-        "フックが長すぎ: 73文字「こ れ を 見 た あ な た...」（最大40文字）[threads]",
-        "ハッシュタグが含まれていない[threads]"
-      ]
-    },
-    {
       "pattern_name": "構造A_臨時収入型（●●万円の臨時収入が入ってくる）",
       "category": "金運",
       "content": "嘘は言いません。\nこの投稿を見かけた人以外\n●●万円ほどの臨時収入が入ってきます\n素敵な使い方をしてくださいね🌸",

@@ -3972,6 +3972,28 @@
       "posting_started_at": "2026-04-19T08:56:28.625364+09:00",
       "posted_at": "2026-04-19T08:56:33.682856+09:00",
       "platform_post_id": "18090333569184799"
+    },
+    {
+      "pattern_name": "フォーマットA変形（スペース区切り1ライナー）",
+      "category": "運気アップ",
+      "content": "こ れ を 見 た あ な た に は 、 今 日 、 思 わ ぬ 幸 運 が 訪 れ ま す 。 い い ね を す る と よ り 早 く 🌙",
+      "hashtag": "#今日の運勢",
+      "time_slot": "いいね強要型（09:37）",
+      "scheduled_hour": 9,
+      "scheduled_minute": 37,
+      "id": "post_20260419_0856_exp_002",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "行1が長すぎ: 73文字「こ れ を 見 た あ な た に は ...」（最大40文字）[threads]",
+        "フックが長すぎ: 73文字「こ れ を 見 た あ な た...」（最大40文字）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ],
+      "posted_at": "2026-04-19T09:02:02.668465+09:00",
+      "platform_post_id": "18100245682812123",
+      "source": "post-verify"
     }
   ]
 }
