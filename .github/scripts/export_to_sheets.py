@@ -28,19 +28,15 @@ SPREADSHEET_ID = os.environ.get("GOOGLE_SHEETS_ID", "124lW4BIn11nMBxiStcquHBKWUG
 
 def get_gc():
     import gspread
-    from google.oauth2.service_account import Credentials
 
     creds_json = os.environ.get("GOOGLE_SHEETS_CREDENTIALS", "")
     if not creds_json:
         raise RuntimeError("GOOGLE_SHEETS_CREDENTIALS が未設定です")
 
     creds_dict = json.loads(creds_json)
-    scopes = [
-        "https://www.googleapis.com/auth/spreadsheets",
-        "https://www.googleapis.com/auth/drive",
-    ]
-    creds = Credentials.from_service_account_info(creds_dict, scopes=scopes)
-    return gspread.authorize(creds)
+    print(f"[DEBUG] client_email: {creds_dict.get('client_email', 'N/A')}")
+    print(f"[DEBUG] SPREADSHEET_ID: {SPREADSHEET_ID}")
+    return gspread.service_account_from_dict(creds_dict)
 
 
 def ensure_sheet(spreadsheet, title: str):
