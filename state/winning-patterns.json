@@ -7,40 +7,44 @@
   },
   "top_patterns": [
     {
-      "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
-      "avg_views": 181.0,
-      "avg_er": 15.77,
-      "avg_engagement": 15.77,
-      "count": 4,
-      "trend": "↑上昇中",
-      "weight": 5
+      "pattern": "構造G_注意喚起+限定型②",
+      "weight": 5,
+      "avg_engagement": 9.89,
+      "avg_views": 1507.0,
+      "sample_count": 1,
+      "reason": "eng率9.9%・閲覧1507（1件）"
     },
     {
-      "pattern": "構造G_注意喚起+限定型",
-      "avg_views": 286.1,
-      "avg_er": 10.31,
-      "avg_engagement": 10.31,
-      "count": 16,
-      "trend": "→横ばい",
-      "weight": 3
+      "pattern": "注意喚起+限定型（推定）",
+      "weight": 5,
+      "avg_engagement": 14.28,
+      "avg_views": 1208.0,
+      "sample_count": 2,
+      "reason": "eng率14.3%・閲覧1208（2件）"
     },
     {
-      "pattern": "構造G_天体根拠×仕事アドバイス型（今日の仕事運・仕事迷子ターゲット・仕事開始後のひと息）",
-      "avg_views": 106.3,
-      "avg_er": 8.71,
-      "avg_engagement": 8.71,
-      "count": 3,
-      "trend": "データ不足",
-      "weight": 3
+      "pattern": "注意喚起型・仕事運",
+      "weight": 5,
+      "avg_engagement": 42.14,
+      "avg_views": 674.0,
+      "sample_count": 1,
+      "reason": "eng率42.1%・閲覧674（1件）"
     },
     {
-      "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
-      "avg_views": 51.0,
-      "avg_er": 4.43,
-      "avg_engagement": 4.43,
-      "count": 3,
-      "trend": "↓下降中",
-      "weight": 1
+      "pattern": "限定型・恐怖×期待",
+      "weight": 5,
+      "avg_engagement": 20.13,
+      "avg_views": 745.0,
+      "sample_count": 1,
+      "reason": "eng率20.1%・閲覧745（1件）"
+    },
+    {
+      "pattern": "予告型・フォロー動機",
+      "weight": 5,
+      "avg_engagement": 6.91,
+      "avg_views": 767.0,
+      "sample_count": 1,
+      "reason": "eng率6.9%・閲覧767（1件）"
     }
   ],
   "rules": {
@@ -234,39 +238,1438 @@
     "【新規パターン導入】自投稿にない『恐怖・焦り型』（金銭トラブル）を月1-2投稿追加。コメント8件（30view比）を獲得しており、対比構造で不安→安心の感情誘導がコメント増に効果的と判定"
   ],
   "insights": [
-    "【2026-04-21 自動更新】直近7日間の実績に基づき戦略を更新しました。",
-    "現在最強パターン: 「構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋」（平均ER 15.77%・↑上昇中）",
-    "2位: 「構造G_注意喚起+限定型」（平均ER 10.31%）",
-    "全体ERトレンド: 横ばい（直近3日平均 10.6%）"
+    "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
+    "ランキング形式あり → avg eng 20.5%",
+    "絵文字CTAあり → avg eng 18.4%",
+    "恐怖・焦りフックあり → avg eng 18.3%",
+    "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
+    "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
+    "自動検出・低パフォーマンスパターン: 5件"
   ],
   "auto_analysis": {
-    "slot_best_pattern": {},
-    "auto_avoid_patterns": [],
-    "last_run": "2026-04-21"
+    "data_count": 165,
+    "last_analyzed": "2026-04-21T08:29:57.187423+09:00",
+    "confidence": "high",
+    "top_patterns": [
+      {
+        "pattern": "構造G_注意喚起+限定型②",
+        "weight": 5,
+        "avg_engagement": 9.89,
+        "avg_views": 1507.0,
+        "sample_count": 1,
+        "reason": "eng率9.9%・閲覧1507（1件）"
+      },
+      {
+        "pattern": "注意喚起+限定型（推定）",
+        "weight": 5,
+        "avg_engagement": 14.28,
+        "avg_views": 1208.0,
+        "sample_count": 2,
+        "reason": "eng率14.3%・閲覧1208（2件）"
+      },
+      {
+        "pattern": "注意喚起型・仕事運",
+        "weight": 5,
+        "avg_engagement": 42.14,
+        "avg_views": 674.0,
+        "sample_count": 1,
+        "reason": "eng率42.1%・閲覧674（1件）"
+      },
+      {
+        "pattern": "限定型・恐怖×期待",
+        "weight": 5,
+        "avg_engagement": 20.13,
+        "avg_views": 745.0,
+        "sample_count": 1,
+        "reason": "eng率20.1%・閲覧745（1件）"
+      },
+      {
+        "pattern": "予告型・フォロー動機",
+        "weight": 5,
+        "avg_engagement": 6.91,
+        "avg_views": 767.0,
+        "sample_count": 1,
+        "reason": "eng率6.9%・閲覧767（1件）"
+      }
+    ],
+    "pattern_ranking": [
+      {
+        "pattern": "構造G_注意喚起+限定型②",
+        "count": 1,
+        "avg_engagement": 9.89,
+        "avg_views": 1507.0,
+        "total_likes": 144,
+        "total_replies": 5,
+        "_score": 1656.0423
+      },
+      {
+        "pattern": "注意喚起+限定型（推定）",
+        "count": 2,
+        "avg_engagement": 14.28,
+        "avg_views": 1208.0,
+        "total_likes": 299,
+        "total_replies": 167,
+        "_score": 1380.5024
+      },
+      {
+        "pattern": "注意喚起型・仕事運",
+        "count": 1,
+        "avg_engagement": 42.14,
+        "avg_views": 674.0,
+        "total_likes": 93,
+        "total_replies": 191,
+        "_score": 958.0236
+      },
+      {
+        "pattern": "限定型・恐怖×期待",
+        "count": 1,
+        "avg_engagement": 20.13,
+        "avg_views": 745.0,
+        "total_likes": 80,
+        "total_replies": 70,
+        "_score": 894.9685000000001
+      },
+      {
+        "pattern": "予告型・フォロー動機",
+        "count": 1,
+        "avg_engagement": 6.91,
+        "avg_views": 767.0,
+        "total_likes": 53,
+        "total_replies": 0,
+        "_score": 819.9997
+      },
+      {
+        "pattern": "限定×恐怖型・恋愛",
+        "count": 1,
+        "avg_engagement": 21.29,
+        "avg_views": 559.0,
+        "total_likes": 57,
+        "total_replies": 62,
+        "_score": 678.0110999999999
+      },
+      {
+        "pattern": "ランキング型・金運爆発",
+        "count": 1,
+        "avg_engagement": 36.18,
+        "avg_views": 398.0,
+        "total_likes": 79,
+        "total_replies": 65,
+        "_score": 541.9964
+      },
+      {
+        "pattern": "構造D_予告型",
+        "count": 1,
+        "avg_engagement": 5.69,
+        "avg_views": 439.0,
+        "total_likes": 25,
+        "total_replies": 0,
+        "_score": 463.97909999999996
+      },
+      {
+        "pattern": "限定型",
+        "count": 1,
+        "avg_engagement": 16.1,
+        "avg_views": 354.0,
+        "total_likes": 32,
+        "total_replies": 25,
+        "_score": 410.994
+      },
+      {
+        "pattern": "ランキング型",
+        "count": 3,
+        "avg_engagement": 21.32,
+        "avg_views": 254.0,
+        "total_likes": 106,
+        "total_replies": 14,
+        "_score": 308.1528
+      },
+      {
+        "pattern": "フォーマットA変形（スペース区切り1ライナー）",
+        "count": 1,
+        "avg_engagement": 9.27,
+        "avg_views": 259.0,
+        "total_likes": 24,
+        "total_replies": 0,
+        "_score": 283.0093
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型②（天体根拠×夜の恋愛感情型）",
+        "count": 1,
+        "avg_engagement": 22.97,
+        "avg_views": 222.0,
+        "total_likes": 40,
+        "total_replies": 11,
+        "_score": 272.9934
+      },
+      {
+        "pattern": "数字+限定型（推定）",
+        "count": 4,
+        "avg_engagement": 11.68,
+        "avg_views": 232.0,
+        "total_likes": 113,
+        "total_replies": 11,
+        "_score": 259.0976
+      },
+      {
+        "pattern": "星座別アドバイス型",
+        "count": 1,
+        "avg_engagement": 10.39,
+        "avg_views": 231.0,
+        "total_likes": 24,
+        "total_replies": 0,
+        "_score": 255.00090000000003
+      },
+      {
+        "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
+        "count": 2,
+        "avg_engagement": 3.37,
+        "avg_views": 216.0,
+        "total_likes": 15,
+        "total_replies": 0,
+        "_score": 223.2792
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型",
+        "count": 40,
+        "avg_engagement": 10.89,
+        "avg_views": 190.0,
+        "total_likes": 608,
+        "total_replies": 149,
+        "_score": 210.691
+      },
+      {
+        "pattern": "その他（推定）",
+        "count": 10,
+        "avg_engagement": 10.25,
+        "avg_views": 171.0,
+        "total_likes": 149,
+        "total_replies": 40,
+        "_score": 188.5275
+      },
+      {
+        "pattern": "構造F_告白・暴露型（占い師として正直に言います）",
+        "count": 1,
+        "avg_engagement": 3.93,
+        "avg_views": 178.0,
+        "total_likes": 7,
+        "total_replies": 0,
+        "_score": 184.9954
+      },
+      {
+        "pattern": "天文イベント型（推定）",
+        "count": 8,
+        "avg_engagement": 6.97,
+        "avg_views": 162.0,
+        "total_likes": 78,
+        "total_replies": 50,
+        "_score": 173.2914
+      },
+      {
+        "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+        "count": 4,
+        "avg_engagement": 15.14,
+        "avg_views": 147.0,
+        "total_likes": 77,
+        "total_replies": 13,
+        "_score": 169.2558
+      },
+      {
+        "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋ambassador×月の動き×恋愛迷子ターゲット×夜のリラックスタイム）",
+        "count": 1,
+        "avg_engagement": 17.48,
+        "avg_views": 143.0,
+        "total_likes": 23,
+        "total_replies": 2,
+        "_score": 167.99640000000002
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型①（日付指定フック必須: 「4/14、急に動く星座。」形式）",
+        "count": 1,
+        "avg_engagement": 15.44,
+        "avg_views": 136.0,
+        "total_likes": 19,
+        "total_replies": 2,
+        "_score": 156.99839999999998
+      },
+      {
+        "pattern": "共感×質問型（推定）",
+        "count": 1,
+        "avg_engagement": 26.09,
+        "avg_views": 115.0,
+        "total_likes": 3,
+        "total_replies": 27,
+        "_score": 145.0035
+      },
+      {
+        "pattern": "構造F_告白・暴露型②（実は〜という真actual真実を伝えます）",
+        "count": 1,
+        "avg_engagement": 0.71,
+        "avg_views": 140.0,
+        "total_likes": 1,
+        "total_replies": 0,
+        "_score": 140.99400000000003
+      },
+      {
+        "pattern": "自由型_恋愛深掘り",
+        "count": 1,
+        "avg_engagement": 1.45,
+        "avg_views": 138.0,
+        "total_likes": 2,
+        "total_replies": 0,
+        "_score": 140.001
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型①（日付指定フック必須）",
+        "count": 2,
+        "avg_engagement": 24.84,
+        "avg_views": 112.0,
+        "total_likes": 41,
+        "total_replies": 16,
+        "_score": 139.8208
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型④（今週後半ガラッと変わる）",
+        "count": 1,
+        "avg_engagement": 31.13,
+        "avg_views": 106.0,
+        "total_likes": 19,
+        "total_replies": 14,
+        "_score": 138.99779999999998
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+        "count": 5,
+        "avg_engagement": 22.93,
+        "avg_views": 93.0,
+        "total_likes": 55,
+        "total_replies": 17,
+        "_score": 114.3249
+      },
+      {
+        "pattern": "構造B_ランキング型_総合運TOP5",
+        "count": 1,
+        "avg_engagement": 14.14,
+        "avg_views": 99.0,
+        "total_likes": 14,
+        "total_replies": 0,
+        "_score": 112.9986
+      },
+      {
+        "pattern": "緊急生成_verify",
+        "count": 1,
+        "avg_engagement": 5.66,
+        "avg_views": 106.0,
+        "total_likes": 6,
+        "total_replies": 0,
+        "_score": 111.9996
+      },
+      {
+        "pattern": "共感×具体アドバイス型",
+        "count": 1,
+        "avg_engagement": 1.94,
+        "avg_views": 103.0,
+        "total_likes": 2,
+        "total_replies": 0,
+        "_score": 104.99820000000001
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+        "count": 5,
+        "avg_engagement": 21.56,
+        "avg_views": 82.0,
+        "total_likes": 77,
+        "total_replies": 14,
+        "_score": 99.6792
+      },
+      {
+        "pattern": "自由型_水星逆行対策",
+        "count": 1,
+        "avg_engagement": 1.02,
+        "avg_views": 98.0,
+        "total_likes": 1,
+        "total_replies": 0,
+        "_score": 98.9996
+      },
+      {
+        "pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運",
+        "count": 1,
+        "avg_engagement": 14.46,
+        "avg_views": 83.0,
+        "total_likes": 12,
+        "total_replies": 0,
+        "_score": 95.0018
+      },
+      {
+        "pattern": "構造G_天体根拠×仕事アドバイス型（今日の仕事運・仕事迷子ターゲット・仕事開始後のひと息）",
+        "count": 3,
+        "avg_engagement": 10.8,
+        "avg_views": 84.0,
+        "total_likes": 31,
+        "total_replies": 0,
+        "_score": 93.072
+      },
+      {
+        "pattern": "構造D_予告型（今夜の重要発表予告）",
+        "count": 1,
+        "avg_engagement": 14.1,
+        "avg_views": 78.0,
+        "total_likes": 11,
+        "total_replies": 0,
+        "_score": 88.998
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型②（今週急変する・朝向け）",
+        "count": 4,
+        "avg_engagement": 22.87,
+        "avg_views": 70.0,
+        "total_likes": 51,
+        "total_replies": 6,
+        "_score": 86.00899999999999
+      },
+      {
+        "pattern": "ランキング型（推定）",
+        "count": 1,
+        "avg_engagement": 28.33,
+        "avg_views": 60.0,
+        "total_likes": 17,
+        "total_replies": 0,
+        "_score": 76.998
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型①（日付指定フック必須: 「4/12、急に動く星座。」形式）",
+        "count": 2,
+        "avg_engagement": 25.68,
+        "avg_views": 57.0,
+        "total_likes": 27,
+        "total_replies": 2,
+        "_score": 71.63759999999999
+      },
+      {
+        "pattern": "励まし型【禁止】（推定）",
+        "count": 1,
+        "avg_engagement": 6.06,
+        "avg_views": 66.0,
+        "total_likes": 4,
+        "total_replies": 0,
+        "_score": 69.9996
+      },
+      {
+        "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+        "count": 4,
+        "avg_engagement": 7.21,
+        "avg_views": 64.0,
+        "total_likes": 17,
+        "total_replies": 2,
+        "_score": 68.6144
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
+        "count": 1,
+        "avg_engagement": 3.03,
+        "avg_views": 66.0,
+        "total_likes": 2,
+        "total_replies": 0,
+        "_score": 67.9998
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型③（今日・今週大きく動く）",
+        "count": 3,
+        "avg_engagement": 24.35,
+        "avg_views": 52.0,
+        "total_likes": 26,
+        "total_replies": 15,
+        "_score": 64.662
+      },
+      {
+        "pattern": "自由型_仕事運注意喚起",
+        "count": 1,
+        "avg_engagement": 20.0,
+        "avg_views": 50.0,
+        "total_likes": 8,
+        "total_replies": 2,
+        "_score": 60.0
+      },
+      {
+        "pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+        "count": 3,
+        "avg_engagement": 16.03,
+        "avg_views": 48.0,
+        "total_likes": 16,
+        "total_replies": 4,
+        "_score": 55.694399999999995
+      },
+      {
+        "pattern": "構造自由_共感質問型",
+        "count": 1,
+        "avg_engagement": 1.92,
+        "avg_views": 52.0,
+        "total_likes": 1,
+        "total_replies": 0,
+        "_score": 52.998400000000004
+      },
+      {
+        "pattern": "構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
+        "count": 2,
+        "avg_engagement": 2.54,
+        "avg_views": 44.0,
+        "total_likes": 3,
+        "total_replies": 0,
+        "_score": 45.1176
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）",
+        "count": 2,
+        "avg_engagement": 31.0,
+        "avg_views": 32.0,
+        "total_likes": 14,
+        "total_replies": 3,
+        "_score": 41.92
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型（今週の仕事運警告）",
+        "count": 1,
+        "avg_engagement": 24.14,
+        "avg_views": 29.0,
+        "total_likes": 7,
+        "total_replies": 0,
+        "_score": 36.0006
+      },
+      {
+        "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+        "count": 9,
+        "avg_engagement": 1.99,
+        "avg_views": 35.0,
+        "total_likes": 4,
+        "total_replies": 0,
+        "_score": 35.6965
+      },
+      {
+        "pattern": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
+        "count": 3,
+        "avg_engagement": 39.41,
+        "avg_views": 25.0,
+        "total_likes": 18,
+        "total_replies": 8,
+        "_score": 34.8525
+      },
+      {
+        "pattern": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+        "count": 3,
+        "avg_engagement": 13.52,
+        "avg_views": 29.0,
+        "total_likes": 11,
+        "total_replies": 0,
+        "_score": 32.9208
+      },
+      {
+        "pattern": "構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
+        "count": 2,
+        "avg_engagement": 1.19,
+        "avg_views": 28.0,
+        "total_likes": 1,
+        "total_replies": 0,
+        "_score": 28.3332
+      },
+      {
+        "pattern": "構造自由_共感×深掘り質問型",
+        "count": 1,
+        "avg_engagement": 0.0,
+        "avg_views": 27.0,
+        "total_likes": 0,
+        "total_replies": 0,
+        "_score": 27.0
+      },
+      {
+        "pattern": "構造C_天文イベント×質問型",
+        "count": 1,
+        "avg_engagement": 8.33,
+        "avg_views": 24.0,
+        "total_likes": 2,
+        "total_replies": 0,
+        "_score": 25.9992
+      },
+      {
+        "pattern": "構造C_共感型_仕事運",
+        "count": 1,
+        "avg_engagement": 4.17,
+        "avg_views": 24.0,
+        "total_likes": 1,
+        "total_replies": 0,
+        "_score": 25.0008
+      },
+      {
+        "pattern": "自由型_総合運メッセージ",
+        "count": 1,
+        "avg_engagement": 0.0,
+        "avg_views": 24.0,
+        "total_likes": 0,
+        "total_replies": 0,
+        "_score": 24.0
+      },
+      {
+        "pattern": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+        "count": 3,
+        "avg_engagement": 1.75,
+        "avg_views": 16.0,
+        "total_likes": 1,
+        "total_replies": 0,
+        "_score": 16.28
+      },
+      {
+        "pattern": "構造H_しいたけ式深掘り哲学型",
+        "count": 1,
+        "avg_engagement": 0.0,
+        "avg_views": 16.0,
+        "total_likes": 0,
+        "total_replies": 0,
+        "_score": 16.0
+      },
+      {
+        "pattern": "フォーマットA_スペース区切り1ライナー",
+        "count": 1,
+        "avg_engagement": 7.14,
+        "avg_views": 14.0,
+        "total_likes": 1,
+        "total_replies": 0,
+        "_score": 14.9996
+      },
+      {
+        "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子+スピ好きターゲット・退勤後）",
+        "count": 1,
+        "avg_engagement": 0.0,
+        "avg_views": 7.0,
+        "total_likes": 0,
+        "total_replies": 0,
+        "_score": 7.0
+      }
+    ],
+    "feature_ranking": [
+      {
+        "feature": "has_ranking",
+        "count": 10,
+        "avg_engagement": 20.52
+      },
+      {
+        "feature": "has_cta_emoji",
+        "count": 52,
+        "avg_engagement": 18.44
+      },
+      {
+        "feature": "has_fear_hook",
+        "count": 10,
+        "avg_engagement": 18.33
+      },
+      {
+        "feature": "has_number_hook",
+        "count": 63,
+        "avg_engagement": 13.14
+      },
+      {
+        "feature": "has_question",
+        "count": 50,
+        "avg_engagement": 11.71
+      }
+    ],
+    "top_hook_styles": [
+      {
+        "style": "注意喚起+限定型（推定）",
+        "example": "今週後半、気をつけた方がいい星座。",
+        "avg_eng": 19.47
+      },
+      {
+        "style": "構造G_注意喚起+限定型②",
+        "example": "今月後半、急に動く星座。",
+        "avg_eng": 9.89
+      },
+      {
+        "style": "構造G_注意喚起+限定型",
+        "example": "明日からの1週間、",
+        "avg_eng": 8.91
+      },
+      {
+        "style": "注意喚起型・仕事運",
+        "example": "来週、仕事で大きな話が",
+        "avg_eng": 42.14
+      },
+      {
+        "style": "限定型・恐怖×期待",
+        "example": "12星座中、たった3つだけ。",
+        "avg_eng": 20.13
+      }
+    ],
+    "best_posts": [
+      {
+        "id": "verify-retry-20260326091217",
+        "pattern": "注意喚起+限定型（推定）",
+        "eng_rate": 19.47,
+        "views": 2373,
+        "likes": 297,
+        "replies": 165,
+        "first_line": "今週後半、気をつけた方がいい星座。",
+        "content_preview": "今週後半、気をつけた方がいい星座。\n\nたった3つだけです。\n\n双子座、天秤座、水瓶座さん。\n\n双子座",
+        "_score": 2835.0231000000003
+      },
+      {
+        "id": "post_20260403_1007_th_002",
+        "pattern": "構造G_注意喚起+限定型②",
+        "eng_rate": 9.89,
+        "views": 1507,
+        "likes": 144,
+        "replies": 5,
+        "first_line": "今月後半、急に動く星座。",
+        "content_preview": "今月後半、急に動く星座。\n\nたった4つだけです。\n\n牡牛座、蟹座、蠍座、山羊座さん。\n\n牡牛座は仕事",
+        "_score": 1656.0423
+      },
+      {
+        "id": "verify-retry-20260405214216",
+        "pattern": "構造G_注意喚起+限定型",
+        "eng_rate": 8.91,
+        "views": 1290,
+        "likes": 107,
+        "replies": 8,
+        "first_line": "明日からの1週間、",
+        "content_preview": "明日からの1週間、\n恋愛で大切な決断が\n迫る星座。\n\nたった3つだけです。\n\n🔮蟹座\n金星が強まる時",
+        "_score": 1404.9389999999999
+      },
+      {
+        "id": "post_20260324_011",
+        "pattern": "注意喚起型・仕事運",
+        "eng_rate": 42.14,
+        "views": 674,
+        "likes": 93,
+        "replies": 191,
+        "first_line": "来週、仕事で大きな話が",
+        "content_preview": "来週、仕事で大きな話が\n来やすい星座。\n\n獅子座と天秤座。\n\n獅子座は、昇進や抜擢の可能性。\n天秤座",
+        "_score": 958.0236
+      },
+      {
+        "id": "post_20260323_007",
+        "pattern": "限定型・恐怖×期待",
+        "eng_rate": 20.13,
+        "views": 745,
+        "likes": 80,
+        "replies": 70,
+        "first_line": "12星座中、たった3つだけ。",
+        "content_preview": "12星座中、たった3つだけ。\n\n今週、恋愛に\n大きな転機が訪れます。\n\nそれは…蟹座、蠍座、魚座です",
+        "_score": 894.9685000000001
+      }
+    ],
+    "auto_avoid_patterns": [
+      "【avg_views:216・ER:3.4%・2件】構造F_告白・暴露型①（占い師として正直に言います）",
+      "【avg_views:44・ER:2.5%・2件】構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
+      "【avg_views:35・ER:2.0%・9件】構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "【avg_views:28・ER:1.2%・2件】構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
+      "【avg_views:16・ER:1.8%・3件】構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）"
+    ],
+    "hourly_data": {
+      "0": {
+        "slot": "深夜（22〜0時台）",
+        "avg_eng": 1.94,
+        "avg_views": 103.0,
+        "count": 1
+      },
+      "7": {
+        "slot": "朝（6〜9時台）",
+        "avg_eng": 15.61,
+        "avg_views": 92.0,
+        "count": 19
+      },
+      "8": {
+        "slot": "朝（6〜9時台）",
+        "avg_eng": 2.78,
+        "avg_views": 19.0,
+        "count": 3
+      },
+      "9": {
+        "slot": "朝（6〜9時台）",
+        "avg_eng": 13.13,
+        "avg_views": 225.0,
+        "count": 17
+      },
+      "10": {
+        "slot": "午前（10〜12時台）",
+        "avg_eng": 11.0,
+        "avg_views": 219.0,
+        "count": 18
+      },
+      "12": {
+        "slot": "午前（10〜12時台）",
+        "avg_eng": 11.3,
+        "avg_views": 122.0,
+        "count": 16
+      },
+      "13": {
+        "slot": "午後（13〜15時台）",
+        "avg_eng": 27.27,
+        "avg_views": 110.0,
+        "count": 1
+      },
+      "14": {
+        "slot": "午後（13〜15時台）",
+        "avg_eng": 13.65,
+        "avg_views": 279.0,
+        "count": 3
+      },
+      "15": {
+        "slot": "午後（13〜15時台）",
+        "avg_eng": 14.34,
+        "avg_views": 132.0,
+        "count": 17
+      },
+      "16": {
+        "slot": "夕方（16〜18時台）",
+        "avg_eng": 27.34,
+        "avg_views": 139.0,
+        "count": 1
+      },
+      "17": {
+        "slot": "夕方（16〜18時台）",
+        "avg_eng": 6.02,
+        "avg_views": 194.0,
+        "count": 4
+      },
+      "18": {
+        "slot": "夕方（16〜18時台）",
+        "avg_eng": 8.78,
+        "avg_views": 47.0,
+        "count": 6
+      },
+      "19": {
+        "slot": "夜（19〜21時台）",
+        "avg_eng": 10.3,
+        "avg_views": 78.0,
+        "count": 16
+      },
+      "20": {
+        "slot": "夜（19〜21時台）",
+        "avg_eng": 16.63,
+        "avg_views": 213.0,
+        "count": 22
+      },
+      "21": {
+        "slot": "夜（19〜21時台）",
+        "avg_eng": 11.2,
+        "avg_views": 226.0,
+        "count": 19
+      },
+      "22": {
+        "slot": "深夜（22〜0時台）",
+        "avg_eng": 16.16,
+        "avg_views": 312.0,
+        "count": 2
+      }
+    },
+    "slot_best_pattern": {
+      "深夜（22〜0時台）": {
+        "best_pattern": "ランキング型",
+        "avg_eng": 16.16,
+        "avg_views": 312.0,
+        "sample_count": 2,
+        "note": ""
+      },
+      "午前（10〜12時台）": {
+        "best_pattern": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
+        "avg_eng": 39.55,
+        "avg_views": 26.0,
+        "sample_count": 2,
+        "note": ""
+      },
+      "夕方（16〜18時台）": {
+        "best_pattern": "ランキング型",
+        "avg_eng": 31.65,
+        "avg_views": 139.0,
+        "sample_count": 1,
+        "note": "※N=1は参考値"
+      },
+      "夜（19〜21時台）": {
+        "best_pattern": "ランキング型・金運爆発",
+        "avg_eng": 36.18,
+        "avg_views": 398.0,
+        "sample_count": 1,
+        "note": "※N=1は参考値"
+      },
+      "午後（13〜15時台）": {
+        "best_pattern": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
+        "avg_eng": 39.13,
+        "avg_views": 23.0,
+        "sample_count": 1,
+        "note": "※N=1は参考値"
+      },
+      "朝（6〜9時台）": {
+        "best_pattern": "注意喚起型・仕事運",
+        "avg_eng": 42.14,
+        "avg_views": 674.0,
+        "sample_count": 1,
+        "note": "※N=1は参考値"
+      }
+    },
+    "optimal_hours": [
+      22,
+      14,
+      21
+    ],
+    "insights": [
+      "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
+      "ランキング形式あり → avg eng 20.5%",
+      "絵文字CTAあり → avg eng 18.4%",
+      "恐怖・焦りフックあり → avg eng 18.3%",
+      "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
+      "午前（10〜12時台）: 最強パターン=構造G_注意喚起+限定型④（今日・今週大きく動く）（eng39.5%・閲覧26）",
+      "自動検出・低パフォーマンスパターン: 5件"
+    ]
   },
-  "data_count": 37,
-  "last_analyzed": "2026-04-21T00:56:48.710807+09:00",
+  "data_count": 165,
+  "last_analyzed": "2026-04-21T08:29:57.187423+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
-      "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
-      "avg_er": 15.77,
-      "avg_views": 181.0
+      "pattern": "構造G_注意喚起+限定型②",
+      "count": 1,
+      "avg_engagement": 9.89,
+      "avg_views": 1507.0,
+      "total_likes": 144,
+      "total_replies": 5,
+      "_score": 1656.0423
+    },
+    {
+      "pattern": "注意喚起+限定型（推定）",
+      "count": 2,
+      "avg_engagement": 14.28,
+      "avg_views": 1208.0,
+      "total_likes": 299,
+      "total_replies": 167,
+      "_score": 1380.5024
+    },
+    {
+      "pattern": "注意喚起型・仕事運",
+      "count": 1,
+      "avg_engagement": 42.14,
+      "avg_views": 674.0,
+      "total_likes": 93,
+      "total_replies": 191,
+      "_score": 958.0236
+    },
+    {
+      "pattern": "限定型・恐怖×期待",
+      "count": 1,
+      "avg_engagement": 20.13,
+      "avg_views": 745.0,
+      "total_likes": 80,
+      "total_replies": 70,
+      "_score": 894.9685000000001
+    },
+    {
+      "pattern": "予告型・フォロー動機",
+      "count": 1,
+      "avg_engagement": 6.91,
+      "avg_views": 767.0,
+      "total_likes": 53,
+      "total_replies": 0,
+      "_score": 819.9997
+    },
+    {
+      "pattern": "限定×恐怖型・恋愛",
+      "count": 1,
+      "avg_engagement": 21.29,
+      "avg_views": 559.0,
+      "total_likes": 57,
+      "total_replies": 62,
+      "_score": 678.0110999999999
+    },
+    {
+      "pattern": "ランキング型・金運爆発",
+      "count": 1,
+      "avg_engagement": 36.18,
+      "avg_views": 398.0,
+      "total_likes": 79,
+      "total_replies": 65,
+      "_score": 541.9964
+    },
+    {
+      "pattern": "構造D_予告型",
+      "count": 1,
+      "avg_engagement": 5.69,
+      "avg_views": 439.0,
+      "total_likes": 25,
+      "total_replies": 0,
+      "_score": 463.97909999999996
+    },
+    {
+      "pattern": "限定型",
+      "count": 1,
+      "avg_engagement": 16.1,
+      "avg_views": 354.0,
+      "total_likes": 32,
+      "total_replies": 25,
+      "_score": 410.994
+    },
+    {
+      "pattern": "ランキング型",
+      "count": 3,
+      "avg_engagement": 21.32,
+      "avg_views": 254.0,
+      "total_likes": 106,
+      "total_replies": 14,
+      "_score": 308.1528
+    },
+    {
+      "pattern": "フォーマットA変形（スペース区切り1ライナー）",
+      "count": 1,
+      "avg_engagement": 9.27,
+      "avg_views": 259.0,
+      "total_likes": 24,
+      "total_replies": 0,
+      "_score": 283.0093
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型②（天体根拠×夜の恋愛感情型）",
+      "count": 1,
+      "avg_engagement": 22.97,
+      "avg_views": 222.0,
+      "total_likes": 40,
+      "total_replies": 11,
+      "_score": 272.9934
+    },
+    {
+      "pattern": "数字+限定型（推定）",
+      "count": 4,
+      "avg_engagement": 11.68,
+      "avg_views": 232.0,
+      "total_likes": 113,
+      "total_replies": 11,
+      "_score": 259.0976
+    },
+    {
+      "pattern": "星座別アドバイス型",
+      "count": 1,
+      "avg_engagement": 10.39,
+      "avg_views": 231.0,
+      "total_likes": 24,
+      "total_replies": 0,
+      "_score": 255.00090000000003
+    },
+    {
+      "pattern": "構造F_告白・暴露型①（占い師として正直に言います）",
+      "count": 2,
+      "avg_engagement": 3.37,
+      "avg_views": 216.0,
+      "total_likes": 15,
+      "total_replies": 0,
+      "_score": 223.2792
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "avg_er": 10.31,
-      "avg_views": 286.1
+      "count": 40,
+      "avg_engagement": 10.89,
+      "avg_views": 190.0,
+      "total_likes": 608,
+      "total_replies": 149,
+      "_score": 210.691
+    },
+    {
+      "pattern": "その他（推定）",
+      "count": 10,
+      "avg_engagement": 10.25,
+      "avg_views": 171.0,
+      "total_likes": 149,
+      "total_replies": 40,
+      "_score": 188.5275
+    },
+    {
+      "pattern": "構造F_告白・暴露型（占い師として正直に言います）",
+      "count": 1,
+      "avg_engagement": 3.93,
+      "avg_views": 178.0,
+      "total_likes": 7,
+      "total_replies": 0,
+      "_score": 184.9954
+    },
+    {
+      "pattern": "天文イベント型（推定）",
+      "count": 8,
+      "avg_engagement": 6.97,
+      "avg_views": 162.0,
+      "total_likes": 78,
+      "total_replies": 50,
+      "_score": 173.2914
+    },
+    {
+      "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲット・夜のリラックスタイム）",
+      "count": 4,
+      "avg_engagement": 15.14,
+      "avg_views": 147.0,
+      "total_likes": 77,
+      "total_replies": 13,
+      "_score": 169.2558
+    },
+    {
+      "pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋ambassador×月の動き×恋愛迷子ターゲット×夜のリラックスタイム）",
+      "count": 1,
+      "avg_engagement": 17.48,
+      "avg_views": 143.0,
+      "total_likes": 23,
+      "total_replies": 2,
+      "_score": 167.99640000000002
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型①（日付指定フック必須: 「4/14、急に動く星座。」形式）",
+      "count": 1,
+      "avg_engagement": 15.44,
+      "avg_views": 136.0,
+      "total_likes": 19,
+      "total_replies": 2,
+      "_score": 156.99839999999998
+    },
+    {
+      "pattern": "共感×質問型（推定）",
+      "count": 1,
+      "avg_engagement": 26.09,
+      "avg_views": 115.0,
+      "total_likes": 3,
+      "total_replies": 27,
+      "_score": 145.0035
+    },
+    {
+      "pattern": "構造F_告白・暴露型②（実は〜という真actual真実を伝えます）",
+      "count": 1,
+      "avg_engagement": 0.71,
+      "avg_views": 140.0,
+      "total_likes": 1,
+      "total_replies": 0,
+      "_score": 140.99400000000003
+    },
+    {
+      "pattern": "自由型_恋愛深掘り",
+      "count": 1,
+      "avg_engagement": 1.45,
+      "avg_views": 138.0,
+      "total_likes": 2,
+      "total_replies": 0,
+      "_score": 140.001
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型①（日付指定フック必須）",
+      "count": 2,
+      "avg_engagement": 24.84,
+      "avg_views": 112.0,
+      "total_likes": 41,
+      "total_replies": 16,
+      "_score": 139.8208
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型④（今週後半ガラッと変わる）",
+      "count": 1,
+      "avg_engagement": 31.13,
+      "avg_views": 106.0,
+      "total_likes": 19,
+      "total_replies": 14,
+      "_score": 138.99779999999998
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型③（今月・今週後半急上昇）",
+      "count": 5,
+      "avg_engagement": 22.93,
+      "avg_views": 93.0,
+      "total_likes": 55,
+      "total_replies": 17,
+      "_score": 114.3249
+    },
+    {
+      "pattern": "構造B_ランキング型_総合運TOP5",
+      "count": 1,
+      "avg_engagement": 14.14,
+      "avg_views": 99.0,
+      "total_likes": 14,
+      "total_replies": 0,
+      "_score": 112.9986
+    },
+    {
+      "pattern": "緊急生成_verify",
+      "count": 1,
+      "avg_engagement": 5.66,
+      "avg_views": 106.0,
+      "total_likes": 6,
+      "total_replies": 0,
+      "_score": 111.9996
+    },
+    {
+      "pattern": "共感×具体アドバイス型",
+      "count": 1,
+      "avg_engagement": 1.94,
+      "avg_views": 103.0,
+      "total_likes": 2,
+      "total_replies": 0,
+      "_score": 104.99820000000001
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型①（今日・今週急に動く星座）",
+      "count": 5,
+      "avg_engagement": 21.56,
+      "avg_views": 82.0,
+      "total_likes": 77,
+      "total_replies": 14,
+      "_score": 99.6792
+    },
+    {
+      "pattern": "自由型_水星逆行対策",
+      "count": 1,
+      "avg_engagement": 1.02,
+      "avg_views": 98.0,
+      "total_likes": 1,
+      "total_replies": 0,
+      "_score": 98.9996
+    },
+    {
+      "pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運",
+      "count": 1,
+      "avg_engagement": 14.46,
+      "avg_views": 83.0,
+      "total_likes": 12,
+      "total_replies": 0,
+      "_score": 95.0018
     },
     {
       "pattern": "構造G_天体根拠×仕事アドバイス型（今日の仕事運・仕事迷子ターゲット・仕事開始後のひと息）",
-      "avg_er": 8.71,
-      "avg_views": 106.3
+      "count": 3,
+      "avg_engagement": 10.8,
+      "avg_views": 84.0,
+      "total_likes": 31,
+      "total_replies": 0,
+      "_score": 93.072
+    },
+    {
+      "pattern": "構造D_予告型（今夜の重要発表予告）",
+      "count": 1,
+      "avg_engagement": 14.1,
+      "avg_views": 78.0,
+      "total_likes": 11,
+      "total_replies": 0,
+      "_score": 88.998
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型②（今週急変する・朝向け）",
+      "count": 4,
+      "avg_engagement": 22.87,
+      "avg_views": 70.0,
+      "total_likes": 51,
+      "total_replies": 6,
+      "_score": 86.00899999999999
+    },
+    {
+      "pattern": "ランキング型（推定）",
+      "count": 1,
+      "avg_engagement": 28.33,
+      "avg_views": 60.0,
+      "total_likes": 17,
+      "total_replies": 0,
+      "_score": 76.998
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型①（日付指定フック必須: 「4/12、急に動く星座。」形式）",
+      "count": 2,
+      "avg_engagement": 25.68,
+      "avg_views": 57.0,
+      "total_likes": 27,
+      "total_replies": 2,
+      "_score": 71.63759999999999
+    },
+    {
+      "pattern": "励まし型【禁止】（推定）",
+      "count": 1,
+      "avg_engagement": 6.06,
+      "avg_views": 66.0,
+      "total_likes": 4,
+      "total_replies": 0,
+      "_score": 69.9996
+    },
+    {
+      "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
+      "count": 4,
+      "avg_engagement": 7.21,
+      "avg_views": 64.0,
+      "total_likes": 17,
+      "total_replies": 2,
+      "_score": 68.6144
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型（今日・今週の仕事運警告）",
+      "count": 1,
+      "avg_engagement": 3.03,
+      "avg_views": 66.0,
+      "total_likes": 2,
+      "total_replies": 0,
+      "_score": 67.9998
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型③（今日・今週大きく動く）",
+      "count": 3,
+      "avg_engagement": 24.35,
+      "avg_views": 52.0,
+      "total_likes": 26,
+      "total_replies": 15,
+      "_score": 64.662
+    },
+    {
+      "pattern": "自由型_仕事運注意喚起",
+      "count": 1,
+      "avg_engagement": 20.0,
+      "avg_views": 50.0,
+      "total_likes": 8,
+      "total_replies": 2,
+      "_score": 60.0
+    },
+    {
+      "pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "count": 3,
+      "avg_engagement": 16.03,
+      "avg_views": 48.0,
+      "total_likes": 16,
+      "total_replies": 4,
+      "_score": 55.694399999999995
+    },
+    {
+      "pattern": "構造自由_共感質問型",
+      "count": 1,
+      "avg_engagement": 1.92,
+      "avg_views": 52.0,
+      "total_likes": 1,
+      "total_replies": 0,
+      "_score": 52.998400000000004
+    },
+    {
+      "pattern": "構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
+      "count": 2,
+      "avg_engagement": 2.54,
+      "avg_views": 44.0,
+      "total_likes": 3,
+      "total_replies": 0,
+      "_score": 45.1176
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型⑤（今週後半ガラッと変わる）",
+      "count": 2,
+      "avg_engagement": 31.0,
+      "avg_views": 32.0,
+      "total_likes": 14,
+      "total_replies": 3,
+      "_score": 41.92
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型（今週の仕事運警告）",
+      "count": 1,
+      "avg_engagement": 24.14,
+      "avg_views": 29.0,
+      "total_likes": 7,
+      "total_replies": 0,
+      "_score": 36.0006
     },
     {
       "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
-      "avg_er": 4.43,
-      "avg_views": 51.0
+      "count": 9,
+      "avg_engagement": 1.99,
+      "avg_views": 35.0,
+      "total_likes": 4,
+      "total_replies": 0,
+      "_score": 35.6965
+    },
+    {
+      "pattern": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
+      "count": 3,
+      "avg_engagement": 39.41,
+      "avg_views": 25.0,
+      "total_likes": 18,
+      "total_replies": 8,
+      "_score": 34.8525
+    },
+    {
+      "pattern": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+      "count": 3,
+      "avg_engagement": 13.52,
+      "avg_views": 29.0,
+      "total_likes": 11,
+      "total_replies": 0,
+      "_score": 32.9208
+    },
+    {
+      "pattern": "構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
+      "count": 2,
+      "avg_engagement": 1.19,
+      "avg_views": 28.0,
+      "total_likes": 1,
+      "total_replies": 0,
+      "_score": 28.3332
+    },
+    {
+      "pattern": "構造自由_共感×深掘り質問型",
+      "count": 1,
+      "avg_engagement": 0.0,
+      "avg_views": 27.0,
+      "total_likes": 0,
+      "total_replies": 0,
+      "_score": 27.0
+    },
+    {
+      "pattern": "構造C_天文イベント×質問型",
+      "count": 1,
+      "avg_engagement": 8.33,
+      "avg_views": 24.0,
+      "total_likes": 2,
+      "total_replies": 0,
+      "_score": 25.9992
+    },
+    {
+      "pattern": "構造C_共感型_仕事運",
+      "count": 1,
+      "avg_engagement": 4.17,
+      "avg_views": 24.0,
+      "total_likes": 1,
+      "total_replies": 0,
+      "_score": 25.0008
+    },
+    {
+      "pattern": "自由型_総合運メッセージ",
+      "count": 1,
+      "avg_engagement": 0.0,
+      "avg_views": 24.0,
+      "total_likes": 0,
+      "total_replies": 0,
+      "_score": 24.0
+    },
+    {
+      "pattern": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "count": 3,
+      "avg_engagement": 1.75,
+      "avg_views": 16.0,
+      "total_likes": 1,
+      "total_replies": 0,
+      "_score": 16.28
+    },
+    {
+      "pattern": "構造H_しいたけ式深掘り哲学型",
+      "count": 1,
+      "avg_engagement": 0.0,
+      "avg_views": 16.0,
+      "total_likes": 0,
+      "total_replies": 0,
+      "_score": 16.0
+    },
+    {
+      "pattern": "フォーマットA_スペース区切り1ライナー",
+      "count": 1,
+      "avg_engagement": 7.14,
+      "avg_views": 14.0,
+      "total_likes": 1,
+      "total_replies": 0,
+      "_score": 14.9996
+    },
+    {
+      "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子+スピ好きターゲット・退勤後）",
+      "count": 1,
+      "avg_engagement": 0.0,
+      "avg_views": 7.0,
+      "total_likes": 0,
+      "total_replies": 0,
+      "_score": 7.0
     }
   ],
   "feature_ranking": [
@@ -287,13 +1690,13 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 62,
-      "avg_engagement": 13.24
+      "count": 63,
+      "avg_engagement": 13.14
     },
     {
       "feature": "has_question",
-      "count": 49,
-      "avg_engagement": 11.8
+      "count": 50,
+      "avg_engagement": 11.71
     }
   ],
   "best_posts": [
@@ -362,9 +1765,9 @@
     },
     "7": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 16.08,
-      "avg_views": 97.0,
-      "count": 18
+      "avg_eng": 15.61,
+      "avg_views": 92.0,
+      "count": 19
     },
     "8": {
       "slot": "朝（6〜9時台）",

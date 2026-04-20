@@ -4269,6 +4269,26 @@
       "posted_at": "2026-04-21T07:12:15.132558+09:00",
       "platform_post_id": "18075646508211007",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "category": "よぞら.の視点・哲学型",
+      "content": "朝の満員電車で、好きな人のLINEを何度も読み直す。\nそういう瞬間ってありますよね。\n\n占い師をしていて気づいたのは、\n恋愛の答えは星にはなくて、\nあなたの「心が何度も戻る先」に\nいつも隠れているということ。\n\n迷ってるんじゃない。\nもう、決まってるんです。",
+      "hashtag": "#星座占い",
+      "time_slot": "しいたけ共感型（08:07）",
+      "scheduled_hour": 8,
+      "scheduled_minute": 7,
+      "id": "post_20260420_2116_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ],
+      "posting_started_at": "2026-04-21T08:29:41.514388+09:00",
+      "posted_at": "2026-04-21T08:29:45.855154+09:00",
+      "platform_post_id": "18101363779976203"
     }
   ]
 }
