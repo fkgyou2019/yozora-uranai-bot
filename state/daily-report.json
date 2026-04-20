@@ -1,7 +1,7 @@
 {
   "date": "2026-04-20",
-  "generated_at": "2026-04-20T15:35:10+09:00",
-  "one_line": "2026-04-20 | 5件投稿 (1件計測済み) | フックOK 3/5件 | 違反: 9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」, 10時: 21字「今週後半、金銭トラブルが起こりやすい星座。」 | 平均v=32.0 | 構造G再現性: テスト中（25/74件成功・4件判定待ち）",
+  "generated_at": "2026-04-20T16:31:18+09:00",
+  "one_line": "2026-04-20 | 5件投稿 (2件計測済み) | フックOK 3/5件 | 違反: 9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」, 10時: 21字「今週後半、金銭トラブルが起こりやすい星座。」 | 平均v=36.5 | 構造G再現性: テスト中（25/74件成功・4件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "明日からの5日間、",
       "hook_len": 9,
       "hook_ok": true,
-      "views": 32,
-      "likes": 7,
+      "views": 59,
+      "likes": 9,
       "comments": 0,
       "reposts": 0,
-      "er": 21.88,
+      "er": 15.25,
       "measured": true
     },
     {
@@ -38,12 +38,12 @@
       "hook": "朝の満員電車で、好きな人へのLINEを何度も書き直している。",
       "hook_len": 30,
       "hook_ok": false,
-      "views": 0,
+      "views": 14,
       "likes": 0,
       "comments": 0,
       "reposts": 0,
       "er": 0,
-      "measured": false
+      "measured": true
     },
     {
       "hour": 10,
@@ -76,18 +76,18 @@
   ],
   "summary": {
     "total": 5,
-    "measured": 1,
+    "measured": 2,
     "hook_ok": 3,
     "hook_violations": 2,
     "violations": [
       "9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」",
       "10時: 21字「今週後半、金銭トラブルが起こりやすい星座。」"
     ],
-    "total_views": 32,
-    "avg_views": 32.0,
+    "total_views": 73,
+    "avg_views": 36.5,
     "best_hook": "明日からの5日間、",
-    "best_views": 32,
-    "best_er": 21.88
+    "best_views": 59,
+    "best_er": 15.25
   },
   "reproducibility_test": {
     "target": "構造G",
@@ -103,7 +103,7 @@
     "status": "テスト中（25/74件成功・4件判定待ち）"
   },
   "hc": {
-    "runs": 6,
+    "runs": 8,
     "deleted": 0
   }
 }
