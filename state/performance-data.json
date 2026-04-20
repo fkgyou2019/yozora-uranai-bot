@@ -4185,7 +4185,59 @@
         "hook_length": 30
       },
       "collected_at": "2026-04-20T15:35:03.717845+09:00"
+    },
+    {
+      "id": "post_20260420_1630_exp_001",
+      "platform_post_id": "17952837911965389",
+      "posted_at": "2026-04-20T18:28:49.682362+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の内省",
+      "content_preview": "仕事を辞めたいって思うのは、\n本当は星が悪いんじゃなくて、\n自分の声を無視し続けてたからだと思う。\n",
+      "first_line": "仕事を辞めたいって思うのは、",
+      "char_count": 212,
+      "metrics": {
+        "views": 14,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 14
+      },
+      "collected_at": "2026-04-20T21:16:40.982804+09:00"
+    },
+    {
+      "id": "verify-retry-20260420191218",
+      "platform_post_id": "17968351227053272",
+      "posted_at": "2026-04-20T19:12:18.429397+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの3日間、\n恋愛で大きな動きが出やすい星座。\n\nたった2つだけです。\n\n🌙蠍座\n隠れていた感",
+      "first_line": "明日からの3日間、",
+      "char_count": 185,
+      "metrics": {
+        "views": 31,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 9.68
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-20T21:16:40.982804+09:00"
     }
   ],
-  "last_updated": "2026-04-20T18:28:35.418405+09:00"
+  "last_updated": "2026-04-20T21:16:40.982804+09:00"
 }

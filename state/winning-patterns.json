@@ -226,7 +226,7 @@
   "avoid_patterns": [
     "【avg_views:216・ER:3.4%・2件】構造F_告白・暴露型①（占い師として正直に言います）",
     "【avg_views:44・ER:2.5%・2件】構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
-    "【avg_views:37・ER:2.2%・8件】構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+    "【avg_views:35・ER:2.0%・9件】構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
     "【avg_views:28・ER:1.2%・2件】構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
     "【avg_views:16・ER:1.8%・3件】構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）"
   ],
@@ -247,8 +247,8 @@
     "自動検出・低パフォーマンスパターン: 5件"
   ],
   "auto_analysis": {
-    "data_count": 161,
-    "last_analyzed": "2026-04-20T18:28:46.349341+09:00",
+    "data_count": 163,
+    "last_analyzed": "2026-04-20T21:16:53.969276+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -430,12 +430,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型",
-        "count": 39,
-        "avg_engagement": 10.92,
-        "avg_views": 194.0,
-        "total_likes": 605,
+        "count": 40,
+        "avg_engagement": 10.89,
+        "avg_views": 190.0,
+        "total_likes": 608,
         "total_replies": 149,
-        "_score": 215.1848
+        "_score": 210.691
       },
       {
         "pattern": "その他（推定）",
@@ -735,15 +735,6 @@
         "_score": 41.92
       },
       {
-        "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
-        "count": 8,
-        "avg_engagement": 2.24,
-        "avg_views": 37.0,
-        "total_likes": 4,
-        "total_replies": 0,
-        "_score": 37.8288
-      },
-      {
         "pattern": "構造G_注意喚起+限定型（今週の仕事運警告）",
         "count": 1,
         "avg_engagement": 24.14,
@@ -751,6 +742,15 @@
         "total_likes": 7,
         "total_replies": 0,
         "_score": 36.0006
+      },
+      {
+        "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+        "count": 9,
+        "avg_engagement": 1.99,
+        "avg_views": 35.0,
+        "total_likes": 4,
+        "total_replies": 0,
+        "_score": 35.6965
       },
       {
         "pattern": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
@@ -861,8 +861,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 61,
-        "avg_engagement": 13.3
+        "count": 62,
+        "avg_engagement": 13.24
       },
       {
         "feature": "has_question",
@@ -957,7 +957,7 @@
     "auto_avoid_patterns": [
       "【avg_views:216・ER:3.4%・2件】構造F_告白・暴露型①（占い師として正直に言います）",
       "【avg_views:44・ER:2.5%・2件】構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
-      "【avg_views:37・ER:2.2%・8件】構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "【avg_views:35・ER:2.0%・9件】構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
       "【avg_views:28・ER:1.2%・2件】構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
       "【avg_views:16・ER:1.8%・3件】構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）"
     ],
@@ -1030,15 +1030,15 @@
       },
       "18": {
         "slot": "夕方（16〜18時台）",
-        "avg_eng": 10.54,
-        "avg_views": 53.0,
-        "count": 5
+        "avg_eng": 8.78,
+        "avg_views": 47.0,
+        "count": 6
       },
       "19": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 10.34,
-        "avg_views": 82.0,
-        "count": 15
+        "avg_eng": 10.3,
+        "avg_views": 78.0,
+        "count": 16
       },
       "20": {
         "slot": "夜（19〜21時台）",
@@ -1118,8 +1118,8 @@
       "自動検出・低パフォーマンスパターン: 5件"
     ]
   },
-  "data_count": 161,
-  "last_analyzed": "2026-04-20T18:28:46.349341+09:00",
+  "data_count": 163,
+  "last_analyzed": "2026-04-20T21:16:53.969276+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1259,12 +1259,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "count": 39,
-      "avg_engagement": 10.92,
-      "avg_views": 194.0,
-      "total_likes": 605,
+      "count": 40,
+      "avg_engagement": 10.89,
+      "avg_views": 190.0,
+      "total_likes": 608,
       "total_replies": 149,
-      "_score": 215.1848
+      "_score": 210.691
     },
     {
       "pattern": "その他（推定）",
@@ -1564,15 +1564,6 @@
       "_score": 41.92
     },
     {
-      "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
-      "count": 8,
-      "avg_engagement": 2.24,
-      "avg_views": 37.0,
-      "total_likes": 4,
-      "total_replies": 0,
-      "_score": 37.8288
-    },
-    {
       "pattern": "構造G_注意喚起+限定型（今週の仕事運警告）",
       "count": 1,
       "avg_engagement": 24.14,
@@ -1580,6 +1571,15 @@
       "total_likes": 7,
       "total_replies": 0,
       "_score": 36.0006
+    },
+    {
+      "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "count": 9,
+      "avg_engagement": 1.99,
+      "avg_views": 35.0,
+      "total_likes": 4,
+      "total_replies": 0,
+      "_score": 35.6965
     },
     {
       "pattern": "構造G_注意喚起+限定型④（今日・今週大きく動く）",
@@ -1690,8 +1690,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 61,
-      "avg_engagement": 13.3
+      "count": 62,
+      "avg_engagement": 13.24
     },
     {
       "feature": "has_question",
@@ -1825,15 +1825,15 @@
     },
     "18": {
       "slot": "夕方（16〜18時台）",
-      "avg_eng": 10.54,
-      "avg_views": 53.0,
-      "count": 5
+      "avg_eng": 8.78,
+      "avg_views": 47.0,
+      "count": 6
     },
     "19": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 10.34,
-      "avg_views": 82.0,
-      "count": 15
+      "avg_eng": 10.3,
+      "avg_views": 78.0,
+      "count": 16
     },
     "20": {
       "slot": "夜（19〜21時台）",

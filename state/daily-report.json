@@ -1,7 +1,7 @@
 {
   "date": "2026-04-20",
-  "generated_at": "2026-04-20T18:28:46+09:00",
-  "one_line": "2026-04-20 | 5件投稿 (2件計測済み) | フックOK 3/5件 | 違反: 9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」, 10時: 21字「今週後半、金銭トラブルが起こりやすい星座。」 | 平均v=36.5 | 構造G再現性: テスト中（25/74件成功・4件判定待ち）",
+  "generated_at": "2026-04-20T21:16:54+09:00",
+  "one_line": "2026-04-20 | 8件投稿 (5件計測済み) | フックOK 5/8件 | 違反: 9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」, 10時: 21字「今週後半、金銭トラブルが起こりやすい星座。」, 20時: 20字「見逃したら今月の金運、ガチで終わります。」 | 平均v=27.0 | 構造G再現性: テスト中（25/74件成功・4件判定待ち） | HC削除: 1件",
   "posts": [
     {
       "hour": 7,
@@ -10,11 +10,11 @@
       "hook": "明日からの5日間、",
       "hook_len": 9,
       "hook_ok": true,
-      "views": 59,
-      "likes": 9,
+      "views": 67,
+      "likes": 11,
       "comments": 0,
       "reposts": 0,
-      "er": 15.25,
+      "er": 16.42,
       "measured": true
     },
     {
@@ -38,7 +38,7 @@
       "hook": "朝の満員電車で、好きな人へのLINEを何度も書き直している。",
       "hook_len": 30,
       "hook_ok": false,
-      "views": 14,
+      "views": 16,
       "likes": 0,
       "comments": 0,
       "reposts": 0,
@@ -72,29 +72,72 @@
       "reposts": 0,
       "er": 0,
       "measured": false
+    },
+    {
+      "hour": 18,
+      "struct": "H",
+      "pattern": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "hook": "仕事を辞めたいって思うのは、",
+      "hook_len": 14,
+      "hook_ok": true,
+      "views": 14,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": true
+    },
+    {
+      "hour": 19,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 31,
+      "likes": 3,
+      "comments": 0,
+      "reposts": 0,
+      "er": 9.68,
+      "measured": true
+    },
+    {
+      "hour": 20,
+      "struct": "X",
+      "pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "hook": "見逃したら今月の金運、ガチで終わります。",
+      "hook_len": 20,
+      "hook_ok": false,
+      "views": 7,
+      "likes": 2,
+      "comments": 2,
+      "reposts": 0,
+      "er": 57.14,
+      "measured": true
     }
   ],
   "summary": {
-    "total": 5,
-    "measured": 2,
-    "hook_ok": 3,
-    "hook_violations": 2,
+    "total": 8,
+    "measured": 5,
+    "hook_ok": 5,
+    "hook_violations": 3,
     "violations": [
       "9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」",
-      "10時: 21字「今週後半、金銭トラブルが起こりやすい星座。」"
+      "10時: 21字「今週後半、金銭トラブルが起こりやすい星座。」",
+      "20時: 20字「見逃したら今月の金運、ガチで終わります。」"
     ],
-    "total_views": 73,
-    "avg_views": 36.5,
+    "total_views": 135,
+    "avg_views": 27.0,
     "best_hook": "明日からの5日間、",
-    "best_views": 59,
-    "best_er": 15.25
+    "best_views": 67,
+    "best_er": 16.42
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 15,
-    "total_posts": 87,
-    "judged_posts": 83,
+    "total_posts": 88,
+    "judged_posts": 84,
     "pending_posts": 4,
     "measured_posts": 74,
     "success_posts": 25,
@@ -103,7 +146,7 @@
     "status": "テスト中（25/74件成功・4件判定待ち）"
   },
   "hc": {
-    "runs": 9,
-    "deleted": 0
+    "runs": 13,
+    "deleted": 1
   }
 }
