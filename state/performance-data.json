@@ -4237,7 +4237,33 @@
         "hook_length": 9
       },
       "collected_at": "2026-04-20T21:16:40.982804+09:00"
+    },
+    {
+      "id": "post_20260420_1828_exp_001",
+      "platform_post_id": "17884427184508236",
+      "posted_at": "2026-04-20T20:42:14.748928+09:00",
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "category": "星座占い",
+      "content_preview": "見逃したら今月の金運、ガチで終わります。\n\n1位 🐟うお座\n2位 ⚖️てんびん座\n3位 🦁しし座\n4",
+      "first_line": "見逃したら今月の金運、ガチで終わります。",
+      "char_count": 154,
+      "metrics": {
+        "views": 25,
+        "likes": 2,
+        "replies": 2,
+        "reposts": 0,
+        "engagement_rate": 16.0
+      },
+      "features": {
+        "has_ranking": true,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 20
+      },
+      "collected_at": "2026-04-21T00:56:37.618152+09:00"
     }
   ],
-  "last_updated": "2026-04-20T21:16:40.982804+09:00"
+  "last_updated": "2026-04-21T00:56:37.618152+09:00"
 }

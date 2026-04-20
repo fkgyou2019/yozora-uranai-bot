@@ -239,7 +239,7 @@
   ],
   "insights": [
     "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
-    "ランキング形式あり → avg eng 21.0%",
+    "ランキング形式あり → avg eng 20.5%",
     "絵文字CTAあり → avg eng 18.4%",
     "恐怖・焦りフックあり → avg eng 18.3%",
     "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
@@ -247,8 +247,8 @@
     "自動検出・低パフォーマンスパターン: 5件"
   ],
   "auto_analysis": {
-    "data_count": 163,
-    "last_analyzed": "2026-04-20T21:16:53.969276+09:00",
+    "data_count": 164,
+    "last_analyzed": "2026-04-21T00:56:48.710807+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -654,15 +654,6 @@
         "_score": 69.9996
       },
       {
-        "pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
-        "count": 2,
-        "avg_engagement": 16.04,
-        "avg_views": 60.0,
-        "total_likes": 14,
-        "total_replies": 2,
-        "_score": 69.62400000000001
-      },
-      {
         "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
         "count": 4,
         "avg_engagement": 7.21,
@@ -697,6 +688,15 @@
         "total_likes": 8,
         "total_replies": 2,
         "_score": 60.0
+      },
+      {
+        "pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+        "count": 3,
+        "avg_engagement": 16.03,
+        "avg_views": 48.0,
+        "total_likes": 16,
+        "total_replies": 4,
+        "_score": 55.694399999999995
       },
       {
         "pattern": "構造自由_共感質問型",
@@ -846,8 +846,8 @@
     "feature_ranking": [
       {
         "feature": "has_ranking",
-        "count": 9,
-        "avg_engagement": 21.02
+        "count": 10,
+        "avg_engagement": 20.52
       },
       {
         "feature": "has_cta_emoji",
@@ -1042,9 +1042,9 @@
       },
       "20": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 16.66,
-        "avg_views": 222.0,
-        "count": 21
+        "avg_eng": 16.63,
+        "avg_views": 213.0,
+        "count": 22
       },
       "21": {
         "slot": "夜（19〜21時台）",
@@ -1110,7 +1110,7 @@
     ],
     "insights": [
       "最強パターン: 構造G_注意喚起+限定型②（eng率9.9%・閲覧1507・1件）",
-      "ランキング形式あり → avg eng 21.0%",
+      "ランキング形式あり → avg eng 20.5%",
       "絵文字CTAあり → avg eng 18.4%",
       "恐怖・焦りフックあり → avg eng 18.3%",
       "深夜（22〜0時台）: 最強パターン=ランキング型（eng16.2%・閲覧312）",
@@ -1118,8 +1118,8 @@
       "自動検出・低パフォーマンスパターン: 5件"
     ]
   },
-  "data_count": 163,
-  "last_analyzed": "2026-04-20T21:16:53.969276+09:00",
+  "data_count": 164,
+  "last_analyzed": "2026-04-21T00:56:48.710807+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1483,15 +1483,6 @@
       "_score": 69.9996
     },
     {
-      "pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
-      "count": 2,
-      "avg_engagement": 16.04,
-      "avg_views": 60.0,
-      "total_likes": 14,
-      "total_replies": 2,
-      "_score": 69.62400000000001
-    },
-    {
       "pattern": "構造F_告白・暴露型②（実は〜という真実を伝えます）",
       "count": 4,
       "avg_engagement": 7.21,
@@ -1526,6 +1517,15 @@
       "total_likes": 8,
       "total_replies": 2,
       "_score": 60.0
+    },
+    {
+      "pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "count": 3,
+      "avg_engagement": 16.03,
+      "avg_views": 48.0,
+      "total_likes": 16,
+      "total_replies": 4,
+      "_score": 55.694399999999995
     },
     {
       "pattern": "構造自由_共感質問型",
@@ -1675,8 +1675,8 @@
   "feature_ranking": [
     {
       "feature": "has_ranking",
-      "count": 9,
-      "avg_engagement": 21.02
+      "count": 10,
+      "avg_engagement": 20.52
     },
     {
       "feature": "has_cta_emoji",
@@ -1837,9 +1837,9 @@
     },
     "20": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 16.66,
-      "avg_views": 222.0,
-      "count": 21
+      "avg_eng": 16.63,
+      "avg_views": 213.0,
+      "count": 22
     },
     "21": {
       "slot": "夜（19〜21時台）",

@@ -36,23 +36,6 @@
       ]
     },
     {
-      "pattern_name": "フォーマットB変形_臨時収入型",
-      "category": "金運",
-      "content": "正直に申し上げますね\nあなた今日中に\n●●万円ほどの臨時収入が入ってきます\n信じなくて大丈夫です\nただ、この言葉だけは覚えておいてくださいね🌸",
-      "hashtag": "#金運",
-      "time_slot": "臨時収入型（12:07）",
-      "scheduled_hour": 12,
-      "scheduled_minute": 7,
-      "id": "post_20260420_2116_exp_005",
-      "platform": "threads",
-      "is_affiliate": false,
-      "affiliate_comment": null,
-      "status": "queued",
-      "quality_warnings": [
-        "ハッシュタグが含まれていない[threads]"
-      ]
-    },
-    {
       "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
       "category": "占い師の日常・哲学",
       "content": "占いを求める人の半分は、\n本当は『答え』じゃなくて\n『決断の許可』を欲しがってるんだと思う。\n\n星の配置は確かに今のあなたを映す鏡だけど、\nその鏡に映った自分を\nどう解釈するかは、全部あなた次第なんです。\n\n仕事で迷った時、恋で揺らいだ時、\n占いはあなたが『それでいいんだ』と\n思える瞬間を作るお手伝いをするだけ。\n\n本当の強さは、\n星を信じることじゃなくて\n自分を信じることなんですよ。",
@@ -67,6 +50,96 @@
       "status": "queued",
       "quality_warnings": [
         "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+      "category": "今日の運勢",
+      "content": "🔮 4/21の12星座\n\n牡羊座　今日の決断は、必ず正解。\n牡牛座　待ってた返事が、来る予感。\n双子座　誰かの信頼が、形になる。\n蟹　座　感情は、今日に限り信じていい。\n獅子座　動いた分だけ、景色が変わる。\n乙女座　気遣いが、確実に伝わってる。\n天秤座　小さな一言が、大きく響く。\n蠍　座　深く考えるより、素直に進もう。\n射手座　踏み出した一歩が、全部変える。\n山羊座　地味な努力が、今日花開く。\n水瓶座　個性を出すほど、扉が開く。\n魚　座　直感が、チャンスを連れてくる。\n\nあなたの星座はどうでしたか？🌙\n\n#星座占い",
+      "hashtag": "#星座占い",
+      "time_slot": "めざまし型（06:07）",
+      "scheduled_hour": 6,
+      "scheduled_minute": 7,
+      "id": "post_20260421_0056_exp_001",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ブロックが長すぎ: 223文字（最大80文字）[threads]",
+        "縦長すぎ: 18行（最大16行）[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "category": "よぞら.の視点・哲学型",
+      "content": "朝の満員電車で、好きな人のLINEを何度も読み直す。\n\n占い師として気づいたことがある。恋愛の迷いって、星じゃなくて「自分の気持ちを信じられてない」ところから始まる。\n\n何度も同じ星座の相性を調べたり、タロットを引き直したりする人ほど、実は心の中では答えを知ってるんだ。\n\n占いは背中を押すツール。でも、本当の決断は星じゃなく、あなたの中にある。\n\nそこに気づいた時、不思議と迷いは消える。\n\n今日も、星はあなたの味方です。",
+      "hashtag": "#星座占い",
+      "time_slot": "しいたけ共感型（08:07）",
+      "scheduled_hour": 8,
+      "scheduled_minute": 7,
+      "id": "post_20260421_0056_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "行2が長すぎ: 55文字「占い師として気づいたことがある。恋愛の迷...」（最大40文字）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "フォーマットB変形_臨時収入型",
+      "category": "金運",
+      "content": "正直にお伝えします。\nあなたは本日中に\n●●万円ほどの臨時収入が舞い込んできます。\n信じるかどうかはお任せします。\nでも、この言葉だけは覚えていてね🌸",
+      "hashtag": "#金運",
+      "time_slot": "臨時収入型（12:07）",
+      "scheduled_hour": 12,
+      "scheduled_minute": 7,
+      "id": "post_20260421_0056_exp_005",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の内省・哲学",
+      "content": "仕事で迷ってる時ほど、星を見ちゃダメだと思う。\n\n占いは「今のあなたの心」を映す鏡でしかなくて、迷ってる状態で占うと、迷いが強化されるだけ。\n\n逆に、一度自分で決めた後に占いを見ると、その決断が腑に落ちることがある。占いって「確認作業」なんですよ。\n\n答えはもう、あなたの中にあるんです。\n\nあなたは、何に気づきたいんですか？",
+      "hashtag": "#星座占い",
+      "time_slot": "哲学深掘り型（18:07）",
+      "scheduled_hour": 18,
+      "scheduled_minute": 7,
+      "id": "post_20260421_0056_exp_006",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "行2が長すぎ: 45文字「占いは「今のあなたの心」を映す鏡でしかな...」（最大40文字）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "category": "ランキング＋恐怖",
+      "content": "この投稿スルーしたら、4月の金運が半減するって知ってた？\n\n1位 🐠うお座\n2位 ⚖️てんびん座\n3位 🦁しし座\n4位 🏹いて座\n5位 🦂さそり座\n6位 🏺みずがめ座\n7位 🦀かに座\n8位 👯双子座\n9位 🐏おひつじ座\n10位 🐄おうし座\n11位 👩‍🎓おとめ座\n12位 🪐土星座\n\nほんまよ。",
+      "hashtag": "#星座占い",
+      "time_slot": "スルー恐怖型（20:07）",
+      "scheduled_hour": 20,
+      "scheduled_minute": 7,
+      "id": "post_20260421_0056_exp_007",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ブロックが長すぎ: 110文字（最大80文字）[threads]",
+        "ハッシュタグが含まれていない[threads]",
+        "絵文字多すぎ: 13個（最大5個）[threads]"
       ]
     }
   ]
