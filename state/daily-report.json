@@ -1,35 +1,80 @@
 {
   "date": "2026-04-20",
-  "generated_at": "2026-04-20T07:06:26+09:00",
-  "one_line": "2026-04-20 | 0件投稿 (0件計測済み) | フックOK 0/0件 | 閲覧数取得待ち | 構造G再現性: テスト中（25/72件成功・4件判定待ち）",
-  "posts": [],
+  "generated_at": "2026-04-20T09:00:30+09:00",
+  "one_line": "2026-04-20 | 3件投稿 (1件計測済み) | フックOK 2/3件 | 違反: 9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」 | 平均v=32.0 | 構造G再現性: テスト中（25/73件成功・4件判定待ち）",
+  "posts": [
+    {
+      "hour": 7,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの5日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 32,
+      "likes": 7,
+      "comments": 0,
+      "reposts": 0,
+      "er": 21.88,
+      "measured": true
+    },
+    {
+      "hour": 8,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "明日からの3日間、",
+      "hook_len": 9,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 9,
+      "struct": "H",
+      "pattern": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "hook": "朝の満員電車で、好きな人へのLINEを何度も書き直している。",
+      "hook_len": 30,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    }
+  ],
   "summary": {
-    "total": 0,
-    "measured": 0,
-    "hook_ok": 0,
-    "hook_violations": 0,
-    "violations": [],
-    "total_views": 0,
-    "avg_views": 0,
-    "best_hook": "",
-    "best_views": 0,
-    "best_er": 0
+    "total": 3,
+    "measured": 1,
+    "hook_ok": 2,
+    "hook_violations": 1,
+    "violations": [
+      "9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」"
+    ],
+    "total_views": 32,
+    "avg_views": 32.0,
+    "best_hook": "明日からの5日間、",
+    "best_views": 32,
+    "best_er": 21.88
   },
   "reproducibility_test": {
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 15,
-    "total_posts": 84,
-    "judged_posts": 80,
+    "total_posts": 86,
+    "judged_posts": 82,
     "pending_posts": 4,
-    "measured_posts": 72,
+    "measured_posts": 73,
     "success_posts": 25,
-    "success_rate": 34.7,
+    "success_rate": 34.2,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（25/72件成功・4件判定待ち）"
+    "status": "テスト中（25/73件成功・4件判定待ち）"
   },
   "hc": {
-    "runs": 1,
+    "runs": 3,
     "deleted": 0
   }
 }

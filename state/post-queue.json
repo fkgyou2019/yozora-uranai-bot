@@ -1,3 +1,60 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pattern_name": "構造B_臨時収入型（●●万円の臨時収入が入ってく）",
+      "category": "金運",
+      "content": "本当のことを言いますね。\nあなたは4月20日中に\n●●万円ほどの臨時収入が入ってきます。\n信じるかどうかはあなた次第。\nただ、この言葉は覚えておいてね🌸",
+      "hashtag": "#金運",
+      "time_slot": "臨時収入型（12:07）",
+      "scheduled_hour": 12,
+      "scheduled_minute": 7,
+      "id": "post_20260420_0859_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の内省・哲学",
+      "content": "占いを求める人の多くは、実は『答え』を欲しているんじゃなくて『進む勇気』を欲しているんだと気づいた。\n\n仕事で迷ったとき、恋愛で悩んだとき、人は占いの前に座る。でもね、星は『こっちに行け』と教えてくれるわけじゃない。\n\n星が示すのは『今のあなたの状態』と『その先の可能性』だけ。\n\n最後に歩くのは、いつだって自分自身。占いは地図じゃなくて、鏡なんです。\n\nあなたは今、何を怖れていますか？",
+      "hashtag": "#星座占い",
+      "time_slot": "哲学深掘り型（18:07）",
+      "scheduled_hour": 18,
+      "scheduled_minute": 7,
+      "id": "post_20260420_0859_exp_004",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "行1が長すぎ: 50文字「占いを求める人の多くは、実は『答え』を欲...」（最大40文字）[threads]",
+        "フックが長すぎ: 50文字「占いを求める人の多くは、実は『...」（最大40文字）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "category": "ランキング＋恐怖",
+      "content": "見落とすと金運ガタ落ちします。\n\n1位　🌙うお座\n2位 ⭐てんびん座\n3位 🔥さそり座\n4位　✨しし座\n5位 🌊かに座\n6位 🪐みずがめ座\n7位 🌻おとめ座\n8位 🌸おひつじ座\n9位 💎おうし座\n10位 🌬️双子座\n11位 🏹いて座\n12位 🏺おひつじ座",
+      "hashtag": "#星座占い",
+      "time_slot": "スルー恐怖型（20:07）",
+      "scheduled_hour": 20,
+      "scheduled_minute": 7,
+      "id": "post_20260420_0859_exp_005",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ブロック分割不足: 2ブロック（最低3ブロック）[threads]",
+        "ブロックが長すぎ: 110文字（最大80文字）[threads]",
+        "ハッシュタグが含まれていない[threads]",
+        "絵文字多すぎ: 12個（最大5個）[threads]"
+      ]
+    }
+  ]
 }

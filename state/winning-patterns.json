@@ -247,8 +247,8 @@
     "自動検出・低パフォーマンスパターン: 5件"
   ],
   "auto_analysis": {
-    "data_count": 159,
-    "last_analyzed": "2026-04-20T08:02:51.082157+09:00",
+    "data_count": 160,
+    "last_analyzed": "2026-04-20T09:00:30.631271+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -430,12 +430,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型",
-        "count": 38,
-        "avg_engagement": 10.63,
-        "avg_views": 198.0,
-        "total_likes": 598,
+        "count": 39,
+        "avg_engagement": 10.92,
+        "avg_views": 194.0,
+        "total_likes": 605,
         "total_replies": 149,
-        "_score": 219.0474
+        "_score": 215.1848
       },
       {
         "pattern": "その他（推定）",
@@ -861,8 +861,8 @@
       },
       {
         "feature": "has_number_hook",
-        "count": 60,
-        "avg_engagement": 13.16
+        "count": 61,
+        "avg_engagement": 13.3
       },
       {
         "feature": "has_question",
@@ -970,9 +970,9 @@
       },
       "7": {
         "slot": "朝（6〜9時台）",
-        "avg_eng": 15.74,
-        "avg_views": 101.0,
-        "count": 17
+        "avg_eng": 16.08,
+        "avg_views": 97.0,
+        "count": 18
       },
       "8": {
         "slot": "朝（6〜9時台）",
@@ -1118,8 +1118,8 @@
       "自動検出・低パフォーマンスパターン: 5件"
     ]
   },
-  "data_count": 159,
-  "last_analyzed": "2026-04-20T08:02:51.082157+09:00",
+  "data_count": 160,
+  "last_analyzed": "2026-04-20T09:00:30.631271+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1259,12 +1259,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "count": 38,
-      "avg_engagement": 10.63,
-      "avg_views": 198.0,
-      "total_likes": 598,
+      "count": 39,
+      "avg_engagement": 10.92,
+      "avg_views": 194.0,
+      "total_likes": 605,
       "total_replies": 149,
-      "_score": 219.0474
+      "_score": 215.1848
     },
     {
       "pattern": "その他（推定）",
@@ -1690,8 +1690,8 @@
     },
     {
       "feature": "has_number_hook",
-      "count": 60,
-      "avg_engagement": 13.16
+      "count": 61,
+      "avg_engagement": 13.3
     },
     {
       "feature": "has_question",
@@ -1765,9 +1765,9 @@
     },
     "7": {
       "slot": "朝（6〜9時台）",
-      "avg_eng": 15.74,
-      "avg_views": 101.0,
-      "count": 17
+      "avg_eng": 16.08,
+      "avg_views": 97.0,
+      "count": 18
     },
     "8": {
       "slot": "朝（6〜9時台）",

@@ -4133,7 +4133,33 @@
         "hook_length": 23
       },
       "collected_at": "2026-04-20T07:05:59.937102+09:00"
+    },
+    {
+      "id": "verify-retry-20260420071220",
+      "platform_post_id": "18079228628450541",
+      "posted_at": "2026-04-20T07:12:20.258294+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "明日からの5日間、\n恋愛で大きな転機が来やすい星座。\n\nたった3つだけです。\n\n💕牡羊座\n新しい出会",
+      "first_line": "明日からの5日間、",
+      "char_count": 185,
+      "metrics": {
+        "views": 32,
+        "likes": 7,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 21.88
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 9
+      },
+      "collected_at": "2026-04-20T09:00:19.924418+09:00"
     }
   ],
-  "last_updated": "2026-04-20T08:02:46.376694+09:00"
+  "last_updated": "2026-04-20T09:00:19.924418+09:00"
 }
