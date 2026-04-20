@@ -260,6 +260,29 @@ def main():
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    # ── トレンド用スナップショット保存 ──
+    trend_path = os.path.join(PROJECT_DIR, "state", "competitor-buzz-trend.json")
+    trend_data = {"snapshots": []}
+    if os.path.exists(trend_path):
+        with open(trend_path, "r", encoding="utf-8") as f:
+            trend_data = json.load(f)
+
+    today_str = datetime.now(JST).strftime("%Y-%m-%d")
+    # 同日のスナップショットは上書き
+    snapshots = [s for s in trend_data.get("snapshots", []) if s.get("date") != today_str]
+    snapshots.append({
+        "date": today_str,
+        "hook_pattern_summary": {
+            k: {"count": v["count"], "avg_er": v["avg_er"]}
+            for k, v in hook_summary.items()
+        },
+    })
+    snapshots = snapshots[-30:]  # 直近30日分のみ保持
+    trend_data["snapshots"] = snapshots
+    with open(trend_path, "w", encoding="utf-8") as f:
+        json.dump(trend_data, f, ensure_ascii=False, indent=2)
+    print(f"[INFO] トレンドスナップショット保存: {today_str}（累計{len(snapshots)}日分）")
+
     print(f"[INFO] 保存完了: {OUTPUT_PATH}")
     print(f"[INFO] バズ投稿トップ3:")
     for i, p in enumerate(top_overall[:3], 1):

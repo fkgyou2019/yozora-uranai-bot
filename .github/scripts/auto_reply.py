@@ -307,6 +307,10 @@ def main():
     post_pattern_map = build_post_pattern_map()
     pending_log = {}  # comment_id → ログエントリ（返信後にフラグ更新）
 
+    # リピーター判定用：過去にコメントしたユーザー一覧
+    existing_logs = load_json("state/comment-log.json").get("logs", [])
+    known_commenters = {e["commenter"] for e in existing_logs}
+
     for post in posts:
         if total_replied >= max_replies_per_run:
             break
@@ -384,6 +388,7 @@ def main():
                     "comment_text": comment_text,
                     "comment_type": classify_comment_type(comment_text),
                     "commenter": comment_user,
+                    "is_repeat": comment_user in known_commenters,
                     "logged_at": datetime.now(JST).isoformat(),
                     "post_id": post_id,
                     "post_hook": post_info["hook"],

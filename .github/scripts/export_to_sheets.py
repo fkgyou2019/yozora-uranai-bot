@@ -209,6 +209,118 @@ def main():
     else:
         print("[INFO] comment-log.json 未生成（コメントデータ蓄積待ち）")
 
+    # ── Sheet 7: 未使用高ERパターン（②）──────────────────────
+    history_path = os.path.join(PROJECT_DIR, "state", "post-history.json")
+    if os.path.exists(history_path):
+        with open(history_path, "r", encoding="utf-8") as f:
+            history_data = json.load(f)
+        used_patterns = {p.get("pattern_name", "") for p in history_data.get("posts", [])}
+
+        hook_summary = data.get("hook_pattern_summary", {})
+        unused_rows = [["競合フックパターン", "競合平均ER%", "競合件数", "yozora使用状況", "競合文例①", "競合文例②"]]
+        for pattern, v in sorted(hook_summary.items(), key=lambda x: x[1].get("avg_er", 0), reverse=True):
+            # 類似パターン名がpost-historyにあるか簡易チェック
+            pattern_lower = pattern.replace("型", "").replace("系", "")
+            is_used = any(pattern_lower in p for p in used_patterns)
+            status = "使用中" if is_used else "⚠️ 未使用"
+            examples = [e.get("first_line", "") for e in v.get("examples", [])]
+            while len(examples) < 2:
+                examples.append("")
+            unused_rows.append([
+                pattern,
+                round(v.get("avg_er", 0) * 100, 1),
+                v.get("count", 0),
+                status,
+                examples[0],
+                examples[1],
+            ])
+
+        ws7 = ensure_sheet(ss, "未使用高ERパターン")
+        write_sheet(ws7, unused_rows)
+        print(f"[OK] 未使用高ERパターン: {len(unused_rows)-1}件")
+
+    # ── Sheet 8: トレンド監視（⑤）────────────────────────────
+    trend_path = os.path.join(PROJECT_DIR, "state", "competitor-buzz-trend.json")
+    if os.path.exists(trend_path):
+        with open(trend_path, "r", encoding="utf-8") as f:
+            trend_data = json.load(f)
+        snapshots = trend_data.get("snapshots", [])
+
+        if len(snapshots) >= 2:
+            latest = snapshots[-1]
+            prev = snapshots[-2]
+            latest_hooks = latest.get("hook_pattern_summary", {})
+            prev_hooks = prev.get("hook_pattern_summary", {})
+            all_patterns = set(latest_hooks) | set(prev_hooks)
+
+            trend_rows = [["フックパターン", f"直近({latest['date']})", f"前回({prev['date']})", "変化(pt)", "トレンド"]]
+            changes = []
+            for pattern in all_patterns:
+                cur_er = latest_hooks.get(pattern, {}).get("avg_er", 0) * 100
+                prv_er = prev_hooks.get(pattern, {}).get("avg_er", 0) * 100
+                diff = round(cur_er - prv_er, 1)
+                trend = "🔺急上昇" if diff >= 5 else "📈上昇" if diff > 0 else "📉下降" if diff < -5 else "→横ばい"
+                if pattern not in prev_hooks:
+                    trend = "🆕新出現"
+                changes.append([pattern, round(cur_er, 1), round(prv_er, 1), diff, trend])
+            changes.sort(key=lambda x: x[3], reverse=True)
+            trend_rows += changes
+        else:
+            trend_rows = [["状態"], [f"スナップショット蓄積中（現在{len(snapshots)}日分）。2日分以上で比較開始"]]
+
+        ws8 = ensure_sheet(ss, "トレンド監視")
+        write_sheet(ws8, trend_rows)
+        print(f"[OK] トレンド監視シート更新")
+
+    # ── Sheet 9: 返信品質（④）────────────────────────────────
+    if os.path.exists(comment_log_path):
+        logs = json.load(open(comment_log_path, "r", encoding="utf-8")).get("logs", [])
+        if logs:
+            from collections import defaultdict
+
+            # 返信率：コメント種別別
+            type_stats: dict = defaultdict(lambda: {"total": 0, "replied": 0, "repeat": 0})
+            for e in logs:
+                t = e.get("comment_type", "不明")
+                type_stats[t]["total"] += 1
+                if e.get("replied"):
+                    type_stats[t]["replied"] += 1
+                if e.get("is_repeat"):
+                    type_stats[t]["repeat"] += 1
+
+            quality_rows = [["コメント種別", "件数", "返信済み", "返信率%", "リピーター数", "リピーター率%"]]
+            for t, s in sorted(type_stats.items(), key=lambda x: -x[1]["total"]):
+                total = s["total"]
+                replied = s["replied"]
+                repeat = s["repeat"]
+                quality_rows.append([
+                    t, total, replied,
+                    round(replied / total * 100, 1) if total else 0,
+                    repeat,
+                    round(repeat / total * 100, 1) if total else 0,
+                ])
+
+            # パターン別リピーター率
+            pattern_repeat: dict = defaultdict(lambda: {"total": 0, "repeat": 0})
+            for e in logs:
+                p = e.get("post_pattern", "不明")
+                pattern_repeat[p]["total"] += 1
+                if e.get("is_repeat"):
+                    pattern_repeat[p]["repeat"] += 1
+
+            quality_rows += [[], ["── 投稿パターン別リピーター率 ──"], ["投稿パターン", "コメント数", "リピーター数", "リピーター率%"]]
+            for p, s in sorted(pattern_repeat.items(), key=lambda x: -x[1]["total"]):
+                total = s["total"]
+                repeat = s["repeat"]
+                quality_rows.append([
+                    p, total, repeat,
+                    round(repeat / total * 100, 1) if total else 0,
+                ])
+
+            ws9 = ensure_sheet(ss, "返信品質")
+            write_sheet(ws9, quality_rows)
+            print(f"[OK] 返信品質シート更新")
+
     print(f"\n✅ Sheets更新完了: https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}")
 
 
