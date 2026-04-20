@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-21T01:51:45.871632+09:00",
+  "generated_at": "2026-04-21T02:02:16.709186+09:00",
   "source_accounts": 40,
-  "total_posts": 1189,
+  "total_posts": 1190,
   "buzz_posts_count": 833,
   "filters": {
     "min_pseudo_er": 0.05,
@@ -34,13 +34,13 @@
     },
     "強運断言型": {
       "count": 15,
-      "avg_er": 0.2035,
+      "avg_er": 0.2046,
       "examples": [
         {
           "handle": "hina.tesou",
           "first_line": "嘘は言いません。",
-          "likes": 8452,
-          "pseudo_er": 1.2328
+          "likes": 8561,
+          "pseudo_er": 1.2484
         },
         {
           "handle": "hina.tesou",
@@ -216,13 +216,13 @@
     },
     "C_予言・断言型": {
       "count": 18,
-      "avg_er": 0.2001,
+      "avg_er": 0.201,
       "examples": [
         {
           "handle": "hina.tesou",
           "text_preview": "嘘は言いません。 素通りした人以外 88万ほどの臨時収入が入ってきます 大事に使ってね🐻‍❄️🌸 6,831",
-          "likes": 8452,
-          "pseudo_er": 1.2328
+          "likes": 8561,
+          "pseudo_er": 1.2484
         },
         {
           "handle": "hina.tesou",
@@ -351,9 +351,9 @@
       "category": "other",
       "first_line": "嘘は言いません。",
       "text": "嘘は言いません。\n素通りした人以外\n88万ほどの臨時収入が入ってきます\n大事に使ってね🐻‍❄️🌸\n6,831",
-      "likes": 8452,
-      "replies": 175,
-      "pseudo_er": 1.2328,
+      "likes": 8561,
+      "replies": 177,
+      "pseudo_er": 1.2484,
       "hook_pattern": "強運断言型",
       "structure": "C_予言・断言型"
     },
@@ -684,9 +684,9 @@
         "category": "other",
         "first_line": "嘘は言いません。",
         "text": "嘘は言いません。\n素通りした人以外\n88万ほどの臨時収入が入ってきます\n大事に使ってね🐻‍❄️🌸\n6,831",
-        "likes": 8452,
-        "replies": 175,
-        "pseudo_er": 1.2328,
+        "likes": 8561,
+        "replies": 177,
+        "pseudo_er": 1.2484,
         "hook_pattern": "強運断言型",
         "structure": "C_予言・断言型"
       },
@@ -789,7 +789,7 @@
         "hook_pattern": "強運断言型",
         "first_line": "嘘は言いません。",
         "text_excerpt": "嘘は言いません。 素通りした人以外 88万ほどの臨時収入が入ってきます 大事に使ってね🐻‍❄️🌸 6,831",
-        "pseudo_er": 1.2328
+        "pseudo_er": 1.2484
       },
       {
         "hook_pattern": "いいね強要型",
