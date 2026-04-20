@@ -317,6 +317,19 @@ def main():
 
     print(f"\n[PDCA] 完了 ✅ 明日の generate_posts.py は更新済み戦略で動きます")
 
+    # ── セッション現状把握ファイル更新 ──
+    try:
+        import importlib.util, pathlib
+        spec = importlib.util.spec_from_file_location(
+            "update_session_context",
+            pathlib.Path(__file__).parent / "update_session_context.py"
+        )
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        mod.main()
+    except Exception as e:
+        print(f"[PDCA] session-context更新エラー（続行）: {e}")
+
 
 def _export_pdca_to_sheets(entries, top_patterns, avoid, insights, today_str):
     """Google SheetsのPDCA履歴シートを更新"""

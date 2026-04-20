@@ -35,7 +35,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/winning-patterns.json state/pdca-action-log.json
+          git add state/winning-patterns.json state/pdca-action-log.json state/session-context.json
           if git diff --staged --quiet; then
             echo "変更なし"
           else

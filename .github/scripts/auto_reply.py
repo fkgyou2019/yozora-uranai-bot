@@ -489,6 +489,19 @@ def main():
 
     print(f"\n返信完了: {total_replied}件 / スキップ{total_skipped}件（累計{len(replied['replied_ids'])}件）")
 
+    # ── セッション現状把握ファイル更新 ──
+    try:
+        import importlib.util, pathlib
+        spec = importlib.util.spec_from_file_location(
+            "update_session_context",
+            pathlib.Path(__file__).parent / "update_session_context.py"
+        )
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        mod.main()
+    except Exception as e:
+        print(f"[auto_reply] session-context更新エラー（続行）: {e}")
+
 
 if __name__ == "__main__":
     main()
