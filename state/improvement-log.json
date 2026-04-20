@@ -220,8 +220,18 @@
         "フック3件追加 (断言・確信: 2, 呼びかけ・指名: 1)",
         "インサイト5件追加"
       ]
+    },
+    {
+      "date": "2026-04-21",
+      "hooks_added": 3,
+      "insights_added": 5,
+      "source_posts_analyzed": 1901,
+      "key_changes": [
+        "フック3件追加 (断言・確信: 2, 数字インパクト: 1)",
+        "インサイト5件追加"
+      ]
     }
   ],
-  "total_improvements": 23,
-  "last_improved": "2026-04-20T07:04:16.728822+09:00"
+  "total_improvements": 24,
+  "last_improved": "2026-04-21T08:07:11.652519+09:00"
 }
