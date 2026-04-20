@@ -158,6 +158,57 @@ def main():
     write_sheet(ws4, summary_rows)
     print(f"[OK] サマリ書き込み完了")
 
+    # ── Sheet 5: コメントログ（直近200件）────────────────────
+    comment_log_path = os.path.join(PROJECT_DIR, "state", "comment-log.json")
+    if os.path.exists(comment_log_path):
+        with open(comment_log_path, "r", encoding="utf-8") as f:
+            comment_data = json.load(f)
+        logs = comment_data.get("logs", [])[-200:]
+
+        log_rows = [["日時", "コメント種別", "コメント本文", "コメントユーザー", "投稿フック", "投稿パターン", "返信済み", "返信内容"]]
+        for entry in reversed(logs):  # 新しい順
+            log_rows.append([
+                entry.get("logged_at", "")[:16].replace("T", " "),
+                entry.get("comment_type", ""),
+                entry.get("comment_text", ""),
+                f"@{entry.get('commenter', '')}",
+                entry.get("post_hook", ""),
+                entry.get("post_pattern", ""),
+                "✅" if entry.get("replied") else "−",
+                entry.get("reply_text", "")[:60],
+            ])
+
+        ws5 = ensure_sheet(ss, "コメントログ")
+        write_sheet(ws5, log_rows)
+        print(f"[OK] コメントログ: {len(log_rows)-1}件")
+
+        # ── Sheet 6: コメント集計 ──────────────────────────────
+        from collections import defaultdict, Counter
+
+        # 種別分布
+        type_counter = Counter(e.get("comment_type", "不明") for e in logs)
+        # パターン×種別クロス集計
+        pattern_type: dict = defaultdict(lambda: defaultdict(int))
+        for e in logs:
+            pattern_type[e.get("post_pattern", "不明")][e.get("comment_type", "不明")] += 1
+
+        all_types = sorted(type_counter.keys())
+        agg_rows = [["投稿パターン"] + all_types + ["合計"]]
+        for pattern, type_counts in sorted(pattern_type.items(), key=lambda x: -sum(x[1].values())):
+            row = [pattern] + [type_counts.get(t, 0) for t in all_types]
+            row.append(sum(type_counts.values()))
+            agg_rows.append(row)
+        # 合計行
+        total_row = ["【合計】"] + [type_counter.get(t, 0) for t in all_types]
+        total_row.append(sum(type_counter.values()))
+        agg_rows.append(total_row)
+
+        ws6 = ensure_sheet(ss, "コメント集計")
+        write_sheet(ws6, agg_rows)
+        print(f"[OK] コメント集計: {len(agg_rows)-1}パターン")
+    else:
+        print("[INFO] comment-log.json 未生成（コメントデータ蓄積待ち）")
+
     print(f"\n✅ Sheets更新完了: https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}")
 
 

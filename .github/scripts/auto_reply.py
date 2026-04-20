@@ -34,6 +34,58 @@ def save_json(path, data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def classify_comment_type(text: str) -> str:
+    if not text or not text.strip():
+        return "空"
+    stripped = text.strip()
+    is_text = any(c.isalpha() or '\u3040' <= c <= '\u9fff' for c in stripped)
+    if not is_text:
+        return "絵文字のみ"
+    zodiac_names = ["牡羊", "おひつじ", "牡牛", "おうし", "双子", "ふたご", "蟹", "かに",
+                    "獅子", "しし", "乙女", "おとめ", "天秤", "てんびん", "蠍", "さそり",
+                    "射手", "いて", "山羊", "やぎ", "水瓶", "みずがめ", "魚", "うお"]
+    for z in zodiac_names:
+        if z in stripped:
+            return "星座言及"
+    if re.search(r'[？?]|ですか|でしょう|教えて', stripped):
+        return "質問"
+    if re.search(r'ありがと|感謝|嬉しい|良かった|当たっ', stripped):
+        return "感謝・的中報告"
+    if re.search(r'楽しみ|期待|なれます|なりたい|そうなってほし|当たってほし|実現|願', stripped):
+        return "期待・願望"
+    if re.search(r'わかる|当てはまる|そうそう|その通り|確かに|私も|まさに|私かも', stripped):
+        return "共感・共鳴"
+    return "その他"
+
+
+def build_post_pattern_map() -> dict:
+    """post-history.json から platform_post_id → {pattern_name, hook} を返す"""
+    history = load_json("state/post-history.json")
+    pattern_map = {}
+    for post in history.get("posts", []):
+        pid = post.get("platform_post_id")
+        if pid:
+            content = post.get("content", "")
+            first_line = content.split("\n")[0][:60] if content else ""
+            pattern_map[pid] = {
+                "pattern_name": post.get("pattern_name", "不明"),
+                "hook": first_line,
+            }
+    return pattern_map
+
+
+def append_comment_log(entry: dict):
+    """state/comment-log.json にコメントを追記（最大1000件）"""
+    path = "state/comment-log.json"
+    data = load_json(path)
+    logs = data.get("logs", [])
+    existing_ids = {l["comment_id"] for l in logs}
+    if entry["comment_id"] not in existing_ids:
+        logs.append(entry)
+    logs = logs[-1000:]
+    save_json(path, {"logs": logs})
+
+
 def threads_get(url):
     req = urllib.request.Request(url)
     with urllib.request.urlopen(req, timeout=15) as resp:
@@ -252,6 +304,8 @@ def main():
     max_replies_per_run = 5  # 1回の実行で最大5件返信（スパム防止）
     recent_replies = replied.get("recent_reply_texts", [])  # 直近の返信文を保持
     consecutive_errors = {}  # 投稿IDごとの連続400エラー回数
+    post_pattern_map = build_post_pattern_map()
+    pending_log = {}  # comment_id → ログエントリ（返信後にフラグ更新）
 
     for post in posts:
         if total_replied >= max_replies_per_run:
@@ -259,6 +313,7 @@ def main():
 
         post_id = post["id"]
         post_text = post.get("text", "")
+        post_info = post_pattern_map.get(post_id, {"pattern_name": "不明", "hook": post_text.split("\n")[0][:60] if post_text else ""})
 
         # この投稿へのコメントを取得
         replies_url = (
@@ -322,6 +377,21 @@ def main():
             if not comment_text.strip():
                 continue
 
+            # コメントログに記録（返信前にエントリ作成、返信後にフラグ更新）
+            if comment_id not in pending_log:
+                pending_log[comment_id] = {
+                    "comment_id": comment_id,
+                    "comment_text": comment_text,
+                    "comment_type": classify_comment_type(comment_text),
+                    "commenter": comment_user,
+                    "logged_at": datetime.now(JST).isoformat(),
+                    "post_id": post_id,
+                    "post_hook": post_info["hook"],
+                    "post_pattern": post_info["pattern_name"],
+                    "replied": False,
+                    "reply_text": "",
+                }
+
             # 返信判定:
             # - 星座名を含むコメント → 必ず返信（コメント誘導型の約束）
             # - 文章コメント → 必ず返信
@@ -381,6 +451,9 @@ def main():
                 replied_users_this_post.add(comment_user)
                 recent_replies.append({"text": reply_text, "to_user": comment_user, "post_id": post_id})
                 total_replied += 1
+                if comment_id in pending_log:
+                    pending_log[comment_id]["replied"] = True
+                    pending_log[comment_id]["reply_text"] = reply_text
                 print(f"  ✅ @{comment_user}: 「{comment_text[:20]}」→ 「{reply_text[:40]}」")
             except urllib.error.HTTPError as e:
                 error_count = consecutive_errors.get(post_id, 0) + 1
@@ -396,6 +469,12 @@ def main():
             else:
                 # 成功したらこの投稿の連続エラーカウントをリセット
                 consecutive_errors[post_id] = 0
+
+    # コメントログを保存
+    for entry in pending_log.values():
+        append_comment_log(entry)
+    if pending_log:
+        print(f"  📝 コメントログ追記: {len(pending_log)}件")
 
     # 返信済みIDと直近返信テキストを保存
     replied["replied_ids"] = list(replied_ids)[-500:]
