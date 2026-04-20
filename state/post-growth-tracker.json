@@ -20903,6 +20903,17 @@
           "auto_replies": 0,
           "er": 3.92,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 71,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 255,
+          "likes": 10,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.92,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -21250,6 +21261,17 @@
         {
           "h": 66,
           "ts": "2026-04-20T07:02:14.126584+09:00",
+          "views": 135,
+          "likes": 5,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.7,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 68,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
           "views": 135,
           "likes": 5,
           "replies": 0,
@@ -21629,6 +21651,17 @@
           "auto_replies": 0,
           "er": 17.39,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 60,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 345,
+          "likes": 36,
+          "replies": 24,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 17.39,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -21877,6 +21910,17 @@
           "auto_replies": 0,
           "er": 12.21,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 59,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 344,
+          "likes": 30,
+          "replies": 12,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.21,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -22085,6 +22129,17 @@
         {
           "h": 47,
           "ts": "2026-04-20T07:02:14.126584+09:00",
+          "views": 61,
+          "likes": 10,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 16.39,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 49,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
           "views": 61,
           "likes": 10,
           "replies": 0,
@@ -22530,6 +22585,17 @@
           "auto_replies": 0,
           "er": 20.5,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 46,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 162,
+          "likes": 25,
+          "replies": 8,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 20.37,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -22844,6 +22910,17 @@
           "auto_replies": 0,
           "er": 13.58,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 37,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 788,
+          "likes": 65,
+          "replies": 42,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.58,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -23045,6 +23122,17 @@
           "auto_replies": 0,
           "er": 6.36,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 36,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 1448,
+          "likes": 85,
+          "replies": 7,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.35,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -23205,6 +23293,17 @@
           "auto_replies": 0,
           "er": 15.89,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 35,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 107,
+          "likes": 17,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.89,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -23223,8 +23322,8 @@
       "first_line": "今夜、対人関係で",
       "content_preview": "今夜、対人関係で\nモヤモヤが晴れる星座。\nたった2つだけです。\n\n🔮双子座\n長く引きずってた\n誤解が解ける予感。\n相手か",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 9
+      "completed": true,
+      "api_fail_count": 10
     },
     "verify-retry-20260419080614": {
       "post_id": "verify-retry-20260419080614",
@@ -23336,6 +23435,17 @@
           "auto_replies": 0,
           "er": 11.11,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 24,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 27,
+          "likes": 1,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.11,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -23354,8 +23464,8 @@
       "first_line": "朝の電車の中で、好きな人のLINEを何度も読み直してしまう。そういう時間が、一番",
       "content_preview": "朝の電車の中で、好きな人のLINEを何度も読み直してしまう。そういう時間が、一番占いを求めてしまう。\n\n占い師として思う",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 9
+      "completed": true,
+      "api_fail_count": 10
     },
     "post_20260419_0856_exp_002": {
       "post_id": "post_20260419_0856_exp_002",
@@ -23460,6 +23570,17 @@
         {
           "h": 22,
           "ts": "2026-04-20T07:02:14.126584+09:00",
+          "views": 285,
+          "likes": 28,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.82,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 24,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
           "views": 285,
           "likes": 28,
           "replies": 0,
@@ -23572,6 +23693,17 @@
           "auto_replies": 0,
           "er": 10.42,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 22,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 96,
+          "likes": 10,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 10.42,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -23591,7 +23723,7 @@
       "content_preview": "ごめんね、正直に言うね。\nよぞら.を見つけてくれた人以外…\n今週中に●●万円ほどの\n良いお知らせが届くよ！",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 8
+      "api_fail_count": 9
     },
     "post_20260418_2104_exp_004": {
       "post_id": "post_20260418_2104_exp_004",
@@ -23663,6 +23795,17 @@
         {
           "h": 11,
           "ts": "2026-04-20T07:02:14.126584+09:00",
+          "views": 47,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 2.13,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 13,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
           "views": 47,
           "likes": 1,
           "replies": 0,
@@ -23753,6 +23896,17 @@
           "auto_replies": 0,
           "er": 7.69,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 12,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 80,
+          "likes": 7,
+          "replies": 3,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 12.5,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -23772,7 +23926,7 @@
       "content_preview": "今週後半、人間関係が急変する星座。\n\nたった4つだけ注意してね。\n\n🔮 牡牛座\n金銭がらみで誤解が生まれやすい。\n今週中",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 5
+      "api_fail_count": 6
     },
     "post_20260419_2103_exp_006": {
       "post_id": "post_20260419_2103_exp_006",
@@ -23840,12 +23994,94 @@
           "auto_replies": 0,
           "er": 25.0,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 11,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 43,
+          "likes": 8,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 23.26,
+          "velocity_views_per_hour": 1.5
         }
       ],
       "completed": false,
       "peak_velocity": 29.0,
       "peak_velocity_hour": 1
+    },
+    "verify-retry-20260420071220": {
+      "post_id": "verify-retry-20260420071220",
+      "platform_post_id": "18079228628450541",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXVF4mogQMn",
+      "posted_at": "2026-04-20T07:12:20.258294+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 7,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "明日からの5日間、",
+      "content_preview": "明日からの5日間、\n恋愛で大きな転機が来やすい星座。\n\nたった3つだけです。\n\n💕牡羊座\n新しい出会いか、\n関係が進展す",
+      "hourly": [
+        {
+          "h": 1,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 32,
+          "likes": 7,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 21.88,
+          "velocity_views_per_hour": 32.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 32.0,
+      "peak_velocity_hour": 1
+    },
+    "verify-retry-20260420080659": {
+      "post_id": "verify-retry-20260420080659",
+      "platform_post_id": "17906832933224520",
+      "threads_url": "",
+      "posted_at": "2026-04-20T08:06:59.713001+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 8,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "明日からの3日間、",
+      "content_preview": "明日からの3日間、\n仕事で予想外の展開が起こりやすい星座。\n\nたった3つだけです。\n\n🔮 双子座\n上司や取引先からの\n連",
+      "hourly": [],
+      "completed": false,
+      "api_fail_count": 1
+    },
+    "post_20260420_0859_exp_001": {
+      "post_id": "post_20260420_0859_exp_001",
+      "platform_post_id": "17922947835313526",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXVSP7WlJZ7",
+      "posted_at": "2026-04-20T09:00:19.844584+09:00",
+      "pattern_name": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "slot_hour": 9,
+      "day_of_week": 0,
+      "day_name": "月",
+      "first_line": "朝の満員電車で、好きな人へのLINEを何度も書き直している。",
+      "content_preview": "朝の満員電車で、好きな人へのLINEを何度も書き直している。\n\nそういう時間、すごく大事だと思うんです。\n\n占いは「彼が",
+      "hourly": [
+        {
+          "h": 0,
+          "ts": "2026-04-20T09:05:32.317391+09:00",
+          "views": 0,
+          "likes": 0,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 0,
+          "velocity_views_per_hour": 0.0
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 0.0,
+      "peak_velocity_hour": 0
     }
   },
-  "last_updated": "2026-04-20T07:02:14.126584+09:00"
+  "last_updated": "2026-04-20T09:05:32.317391+09:00"
 }
