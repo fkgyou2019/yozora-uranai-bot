@@ -27,32 +27,19 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Check active period (JST 2026-03-31 ~ 2026-04-30)
-        id: period_check
-        run: |
-          JST_DATE=$(TZ='Asia/Tokyo' date +%Y-%m-%d)
-          if [[ "$JST_DATE" < "2026-03-31" || "$JST_DATE" > "2026-04-30" ]]; then
-            echo "稼働期間外 ($JST_DATE)。スキップします。"
-            echo "in_period=false" >> $GITHUB_OUTPUT
-          else
-            echo "稼働期間内 ($JST_DATE)。投稿を実行します。"
-            echo "in_period=true" >> $GITHUB_OUTPUT
-          fi
-
       - name: Checkout repository
-        if: steps.period_check.outputs.in_period == 'true'
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        if: steps.period_check.outputs.in_period == 'true'
+
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Initialize state files if missing
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: |
           mkdir -p state config
           if [ ! -f state/post-queue.json ]; then
@@ -84,7 +71,7 @@ jobs:
           true
 
       - name: Create api-keys.env from secrets
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: |
           cat > config/api-keys.env << EOF
           ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}
@@ -93,7 +80,7 @@ jobs:
           EOF
 
       - name: Flush non-experiment posts from queue
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: |
           python -c "
           import json, os
@@ -118,7 +105,7 @@ jobs:
           "
 
       - name: Pre-fill queue if empty (before posting)
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: |
           REMAINING=$(python -c "
           import json, os
@@ -146,7 +133,7 @@ jobs:
         continue-on-error: true
 
       - name: Post one from queue
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: python agents/poster.py
         env:
           PYTHONIOENCODING: utf-8
@@ -154,7 +141,7 @@ jobs:
           SCHEDULED_POST: "1"
 
       - name: Fetch metrics & analyze (learning loop)
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: |
           python .github/scripts/fetch_metrics.py
           python .github/scripts/analyze_patterns.py
@@ -163,12 +150,12 @@ jobs:
         continue-on-error: true
 
       - name: Generate daily report JSON
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: python .github/scripts/generate_daily_report.py
         continue-on-error: true
 
       - name: Commit state changes
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

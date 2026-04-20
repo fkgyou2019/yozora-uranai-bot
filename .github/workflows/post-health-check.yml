@@ -28,32 +28,19 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Check active period (JST 2026-03-31 ~ 2026-04-30)
-        id: period_check
-        run: |
-          JST_DATE=$(TZ='Asia/Tokyo' date +%Y-%m-%d)
-          if [[ "$JST_DATE" < "2026-03-31" || "$JST_DATE" > "2026-04-30" ]]; then
-            echo "稼働期間外 ($JST_DATE)。スキップします。"
-            echo "in_period=false" >> $GITHUB_OUTPUT
-          else
-            echo "稼働期間内 ($JST_DATE)。ヘルスチェックを実行します。"
-            echo "in_period=true" >> $GITHUB_OUTPUT
-          fi
-
       - name: Checkout repository
-        if: steps.period_check.outputs.in_period == 'true'
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        if: steps.period_check.outputs.in_period == 'true'
+
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Create api-keys.env from secrets
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: |
           mkdir -p config state
           cat > config/api-keys.env << EOF
@@ -66,7 +53,7 @@ jobs:
       # Step 1: ヘルスチェック（RED判定 + 削除試行）
       # ========================================
       - name: Run health check (detect & delete bad posts)
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: python .github/scripts/post_health_check.py
         env:
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
@@ -85,7 +72,7 @@ jobs:
       # Step 3: 状態をコミット
       # ========================================
       - name: Commit state changes
-        if: steps.period_check.outputs.in_period == 'true'
+
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
