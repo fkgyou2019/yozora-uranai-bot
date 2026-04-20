@@ -1,7 +1,7 @@
 {
   "date": "2026-04-20",
-  "generated_at": "2026-04-20T09:00:30+09:00",
-  "one_line": "2026-04-20 | 3件投稿 (1件計測済み) | フックOK 2/3件 | 違反: 9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」 | 平均v=32.0 | 構造G再現性: テスト中（25/73件成功・4件判定待ち）",
+  "generated_at": "2026-04-20T15:35:10+09:00",
+  "one_line": "2026-04-20 | 5件投稿 (1件計測済み) | フックOK 3/5件 | 違反: 9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」, 10時: 21字「今週後半、金銭トラブルが起こりやすい星座。」 | 平均v=32.0 | 構造G再現性: テスト中（25/74件成功・4件判定待ち）",
   "posts": [
     {
       "hour": 7,
@@ -44,15 +44,44 @@
       "reposts": 0,
       "er": 0,
       "measured": false
+    },
+    {
+      "hour": 10,
+      "struct": "G",
+      "pattern": "構造G_注意喚起+限定型",
+      "hook": "今週後半、金銭トラブルが起こりやすい星座。",
+      "hook_len": 21,
+      "hook_ok": false,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
+    },
+    {
+      "hour": 12,
+      "struct": "B",
+      "pattern": "構造B_臨時収入型（●●万円の臨時収入が入ってく）",
+      "hook": "本当のことを言いますね。",
+      "hook_len": 12,
+      "hook_ok": true,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "reposts": 0,
+      "er": 0,
+      "measured": false
     }
   ],
   "summary": {
-    "total": 3,
+    "total": 5,
     "measured": 1,
-    "hook_ok": 2,
-    "hook_violations": 1,
+    "hook_ok": 3,
+    "hook_violations": 2,
     "violations": [
-      "9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」"
+      "9時: 30字「朝の満員電車で、好きな人へのLINEを何度も書き直」",
+      "10時: 21字「今週後半、金銭トラブルが起こりやすい星座。」"
     ],
     "total_views": 32,
     "avg_views": 32.0,
@@ -64,17 +93,17 @@
     "target": "構造G",
     "start_date": "2026-04-06",
     "days_elapsed": 15,
-    "total_posts": 86,
-    "judged_posts": 82,
+    "total_posts": 87,
+    "judged_posts": 83,
     "pending_posts": 4,
-    "measured_posts": 73,
+    "measured_posts": 74,
     "success_posts": 25,
-    "success_rate": 34.2,
+    "success_rate": 33.8,
     "success_criteria": "v>=200 (24h後判定)",
-    "status": "テスト中（25/73件成功・4件判定待ち）"
+    "status": "テスト中（25/74件成功・4件判定待ち）"
   },
   "hc": {
-    "runs": 3,
+    "runs": 6,
     "deleted": 0
   }
 }
