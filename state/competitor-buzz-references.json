@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-21T00:40:04.329314+09:00",
+  "generated_at": "2026-04-21T01:25:52.238115+09:00",
   "source_accounts": 40,
-  "total_posts": 1182,
-  "buzz_posts_count": 830,
+  "total_posts": 1186,
+  "buzz_posts_count": 833,
   "filters": {
     "min_pseudo_er": 0.05,
     "min_likes": 5
@@ -34,13 +34,13 @@
     },
     "強運断言型": {
       "count": 15,
-      "avg_er": 0.1929,
+      "avg_er": 0.2005,
       "examples": [
         {
           "handle": "hina.tesou",
           "first_line": "嘘は言いません。",
-          "likes": 7312,
-          "pseudo_er": 1.0735
+          "likes": 8130,
+          "pseudo_er": 1.1871
         },
         {
           "handle": "hina.tesou",
@@ -105,14 +105,14 @@
       ]
     },
     "その他": {
-      "count": 735,
-      "avg_er": 0.0571,
+      "count": 738,
+      "avg_er": 0.0569,
       "examples": [
         {
           "handle": "hachico.odyssey",
           "first_line": "1lemon_1vitamin",
           "likes": 3,
-          "pseudo_er": 7.4883
+          "pseudo_er": 7.4941
         },
         {
           "handle": "raito.koiuranai",
@@ -216,13 +216,13 @@
     },
     "C_予言・断言型": {
       "count": 18,
-      "avg_er": 0.1911,
+      "avg_er": 0.1975,
       "examples": [
         {
           "handle": "hina.tesou",
           "text_preview": "嘘は言いません。 素通りした人以外 88万ほどの臨時収入が入ってきます 大事に使ってね🐻‍❄️🌸 6,831",
-          "likes": 7312,
-          "pseudo_er": 1.0735
+          "likes": 8130,
+          "pseudo_er": 1.1871
         },
         {
           "handle": "hina.tesou",
@@ -233,8 +233,8 @@
       ]
     },
     "H_スピ共感型": {
-      "count": 74,
-      "avg_er": 0.0761,
+      "count": 75,
+      "avg_er": 0.0753,
       "examples": [
         {
           "handle": "raito.koiuranai",
@@ -251,14 +251,14 @@
       ]
     },
     "F_その他": {
-      "count": 677,
-      "avg_er": 0.053,
+      "count": 679,
+      "avg_er": 0.0529,
       "examples": [
         {
           "handle": "hachico.odyssey",
           "text_preview": "1lemon_1vitamin 先週彼にフラれてからご飯が喉を通らない。 こんなに好きだったんだなって、 今更になって気づいて後悔ばっかりが ぐるぐるしてしんどい、 失恋ってこんなにつらいんだね、、 やっぱり。って戻って来てくれないかなぁ、",
           "likes": 3,
-          "pseudo_er": 7.4883
+          "pseudo_er": 7.4941
         },
         {
           "handle": "raito.koiuranai",
@@ -275,8 +275,8 @@
         {
           "handle": "ume_reishi",
           "text_preview": "ピン留め済み 2025/12/07 🌸初回無料の霊視鑑定🌸 8歳の頃、視えるのが怖いと言われ 両親に捨てられました。梅と申します。 捨てられそれから紆余曲折、 太宰府の地で厳しい修行を積み、占い師となり 今まで5000人以上の方を\"正しい道",
-          "likes": 2966,
-          "pseudo_er": 0.5333
+          "likes": 2967,
+          "pseudo_er": 0.5339
         },
         {
           "handle": "uranai.fukuen",
@@ -288,7 +288,7 @@
     },
     "G_天体根拠型": {
       "count": 19,
-      "avg_er": 0.0387,
+      "avg_er": 0.0388,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -330,8 +330,8 @@
       "first_line": "1lemon_1vitamin",
       "text": "1lemon_1vitamin\n先週彼にフラれてからご飯が喉を通らない。\nこんなに好きだったんだなって、\n今更になって気づいて後悔ばっかりが\nぐるぐるしてしんどい、\n失恋ってこんなにつらいんだね、、\nやっぱり。って戻って来てくれないかなぁ、、\nちんちんちっちゃかったし、まいっか。\n2.3万",
       "likes": 3,
-      "replies": 997,
-      "pseudo_er": 7.4883,
+      "replies": 998,
+      "pseudo_er": 7.4941,
       "hook_pattern": "その他",
       "structure": "F_その他"
     },
@@ -351,9 +351,9 @@
       "category": "other",
       "first_line": "嘘は言いません。",
       "text": "嘘は言いません。\n素通りした人以外\n88万ほどの臨時収入が入ってきます\n大事に使ってね🐻‍❄️🌸\n6,831",
-      "likes": 7312,
-      "replies": 165,
-      "pseudo_er": 1.0735,
+      "likes": 8130,
+      "replies": 171,
+      "pseudo_er": 1.1871,
       "hook_pattern": "強運断言型",
       "structure": "C_予言・断言型"
     },
@@ -450,9 +450,9 @@
       "category": "other",
       "first_line": "🌸初回無料の霊視鑑定🌸",
       "text": "ピン留め済み\n2025/12/07\n🌸初回無料の霊視鑑定🌸\n8歳の頃、視えるのが怖いと言われ\n両親に捨てられました。梅と申します。\n捨てられそれから紆余曲折、\n太宰府の地で厳しい修行を積み、占い師となり\n今まで5000人以上の方を\"正しい道\"へと導いてきました。\n私のこの活動が両親に届くまで\n今なら\"無料\"で「霊視鑑定」を行っています🌸\n誰にも言えない悩み。お困りごと。\nその全てを受け止め、あなたの全てを限りなく視させて頂き、あなたの未来に光を照らします🎋\n現在のオーラ状態を視ますので、参加条件を満たしてからお越しください。\n【参加条件】\n①\n@ume_reishi\nをフォロー\n②このスレッド",
-      "likes": 2966,
+      "likes": 2967,
       "replies": 69,
-      "pseudo_er": 0.5333,
+      "pseudo_er": 0.5339,
       "hook_pattern": "その他",
       "structure": "E_エンゲージ強要型"
     },
@@ -663,8 +663,8 @@
         "first_line": "1lemon_1vitamin",
         "text": "1lemon_1vitamin\n先週彼にフラれてからご飯が喉を通らない。\nこんなに好きだったんだなって、\n今更になって気づいて後悔ばっかりが\nぐるぐるしてしんどい、\n失恋ってこんなにつらいんだね、、\nやっぱり。って戻って来てくれないかなぁ、、\nちんちんちっちゃかったし、まいっか。\n2.3万",
         "likes": 3,
-        "replies": 997,
-        "pseudo_er": 7.4883,
+        "replies": 998,
+        "pseudo_er": 7.4941,
         "hook_pattern": "その他",
         "structure": "F_その他"
       },
@@ -684,9 +684,9 @@
         "category": "other",
         "first_line": "嘘は言いません。",
         "text": "嘘は言いません。\n素通りした人以外\n88万ほどの臨時収入が入ってきます\n大事に使ってね🐻‍❄️🌸\n6,831",
-        "likes": 7312,
-        "replies": 165,
-        "pseudo_er": 1.0735,
+        "likes": 8130,
+        "replies": 171,
+        "pseudo_er": 1.1871,
         "hook_pattern": "強運断言型",
         "structure": "C_予言・断言型"
       },
@@ -777,7 +777,7 @@
         "hook_pattern": "その他",
         "first_line": "1lemon_1vitamin",
         "text_excerpt": "1lemon_1vitamin 先週彼にフラれてからご飯が喉を通らない。 こんなに好きだったんだなって、 今更になって気づいて後悔ばっかりが ぐるぐるしてしんどい、 失恋ってこんなにつらいんだね、、 やっぱり。って戻って来てくれないかなぁ、、 ちんちんちっちゃかったし、まいっか。 2.3万",
-        "pseudo_er": 7.4883
+        "pseudo_er": 7.4941
       },
       {
         "hook_pattern": "その他",
@@ -789,7 +789,7 @@
         "hook_pattern": "強運断言型",
         "first_line": "嘘は言いません。",
         "text_excerpt": "嘘は言いません。 素通りした人以外 88万ほどの臨時収入が入ってきます 大事に使ってね🐻‍❄️🌸 6,831",
-        "pseudo_er": 1.0735
+        "pseudo_er": 1.1871
       },
       {
         "hook_pattern": "いいね強要型",
