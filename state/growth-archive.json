@@ -2443,5 +2443,93 @@
     "hourly": [],
     "completed": true,
     "api_fail_count": 6
+  },
+  "post_20260413_1822_exp_002": {
+    "post_id": "post_20260413_1822_exp_002",
+    "platform_post_id": "18577561906044745",
+    "threads_url": "",
+    "posted_at": "2026-04-13T18:22:07.029760+09:00",
+    "pattern_name": "構造J_全12星座1行メッセージ型（漢字表記・日付フック・まーさ型）",
+    "slot_hour": 18,
+    "day_of_week": 0,
+    "day_name": "月",
+    "first_line": "🔮 4/13の12星座",
+    "content_preview": "🔮 4/13の12星座\n\n牡羊座　今日の決断が、後々嬉しくなる。\n牡牛座　待ってた答えが、やっと見える。\n双子座　声をか",
+    "hourly": [],
+    "completed": true,
+    "api_fail_count": 6
+  },
+  "post_20260413_1822_exp_003": {
+    "post_id": "post_20260413_1822_exp_003",
+    "platform_post_id": "17878819314559817",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DXEWtholAmK",
+    "posted_at": "2026-04-13T19:12:16.065027+09:00",
+    "pattern_name": "構造G_注意喚起+限定型③（今日・今週大きく動く）",
+    "slot_hour": 19,
+    "day_of_week": 0,
+    "day_name": "月",
+    "first_line": "今週、ガラッと変わる星座。",
+    "content_preview": "今週、ガラッと変わる星座。\n\nたった3つだけです。\n\n牡羊座、獅子座、射手座\n\n牡羊座さんは、思いがけない好機が舞い込み",
+    "hourly": [
+      {
+        "h": 1,
+        "ts": "2026-04-13T20:56:30.229280+09:00",
+        "views": 16,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 12.5,
+        "velocity_views_per_hour": 16.0
+      },
+      {
+        "h": 6,
+        "ts": "2026-04-14T01:45:10.529142+09:00",
+        "views": 21,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 14.29,
+        "velocity_views_per_hour": 1.0
+      },
+      {
+        "h": 10,
+        "ts": "2026-04-14T05:37:32.553293+09:00",
+        "views": 22,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 13.64,
+        "velocity_views_per_hour": 0.2
+      },
+      {
+        "h": 13,
+        "ts": "2026-04-14T09:02:10.771595+09:00",
+        "views": 22,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 13.64,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 20,
+        "ts": "2026-04-14T15:22:14.365973+09:00",
+        "views": 24,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 12.5,
+        "velocity_views_per_hour": 0.3
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 16.0,
+    "peak_velocity_hour": 1,
+    "api_fail_count": 3
   }
 }
