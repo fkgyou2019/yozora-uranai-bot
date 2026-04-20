@@ -34,8 +34,6 @@ def get_gc():
         raise RuntimeError("GOOGLE_SHEETS_CREDENTIALS が未設定です")
 
     creds_dict = json.loads(creds_json)
-    print(f"[DEBUG] client_email: {creds_dict.get('client_email', 'N/A')}")
-    print(f"[DEBUG] SPREADSHEET_ID: {SPREADSHEET_ID}")
     return gspread.service_account_from_dict(creds_dict)
 
 
