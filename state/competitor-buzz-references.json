@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-21T00:16:52.962736+09:00",
+  "generated_at": "2026-04-21T00:40:04.329314+09:00",
   "source_accounts": 40,
-  "total_posts": 1137,
-  "buzz_posts_count": 793,
+  "total_posts": 1182,
+  "buzz_posts_count": 830,
   "filters": {
     "min_pseudo_er": 0.05,
     "min_likes": 5
@@ -10,13 +10,13 @@
   "hook_pattern_summary": {
     "いいね強要型": {
       "count": 3,
-      "avg_er": 0.3219,
+      "avg_er": 0.3231,
       "examples": [
         {
           "handle": "raito.koiuranai",
           "first_line": "い い ね を す る と 運 気 が 爆 上 が り し ま す⛩️",
           "likes": 791,
-          "pseudo_er": 0.9582
+          "pseudo_er": 0.9617
         },
         {
           "handle": "miko.reishi",
@@ -33,14 +33,14 @@
       ]
     },
     "強運断言型": {
-      "count": 14,
-      "avg_er": 0.1978,
+      "count": 15,
+      "avg_er": 0.1929,
       "examples": [
         {
           "handle": "hina.tesou",
           "first_line": "嘘は言いません。",
-          "likes": 6831,
-          "pseudo_er": 1.0055
+          "likes": 7312,
+          "pseudo_er": 1.0735
         },
         {
           "handle": "hina.tesou",
@@ -58,7 +58,7 @@
     },
     "スルー恐怖型": {
       "count": 4,
-      "avg_er": 0.1492,
+      "avg_er": 0.1516,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -69,8 +69,8 @@
         {
           "handle": "arasa_uranai",
           "first_line": "無視すると4月、急に突然すべてを失う人よ",
-          "likes": 112,
-          "pseudo_er": 0.1372
+          "likes": 118,
+          "pseudo_er": 0.1464
         },
         {
           "handle": "mira_uranai_reishi",
@@ -82,7 +82,7 @@
     },
     "臨時収入型": {
       "count": 13,
-      "avg_er": 0.094,
+      "avg_er": 0.0964,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -93,8 +93,8 @@
         {
           "handle": "hina.tesou",
           "first_line": "ほんとうに、4月に臨時収入がドバーーーッときそうです！！",
-          "likes": 2130,
-          "pseudo_er": 0.2955
+          "likes": 2153,
+          "pseudo_er": 0.2969
         },
         {
           "handle": "uranai.fukuen",
@@ -105,8 +105,8 @@
       ]
     },
     "その他": {
-      "count": 710,
-      "avg_er": 0.0552,
+      "count": 735,
+      "avg_er": 0.0571,
       "examples": [
         {
           "handle": "hachico.odyssey",
@@ -118,19 +118,19 @@
           "handle": "raito.koiuranai",
           "first_line": "こ れ が 見 え た ら 無 心 で い い ね を🔮",
           "likes": 1258,
-          "pseudo_er": 1.5155
+          "pseudo_er": 1.521
         },
         {
-          "handle": "akari.wildsoul",
-          "first_line": "これ言うとフォロー外されるかもしれませんが、",
-          "likes": 391,
-          "pseudo_er": 0.5885
+          "handle": "uranai.fukuen",
+          "first_line": "残念ですが…無視した人はもう２度とありません。",
+          "likes": 778,
+          "pseudo_er": 0.759
         }
       ]
     },
     "共感・場面描写型": {
-      "count": 45,
-      "avg_er": 0.0539,
+      "count": 54,
+      "avg_er": 0.0558,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -140,27 +140,27 @@
         },
         {
           "handle": "uranai.fukuen",
+          "first_line": "【本日、逆転の兆しがある星座】",
+          "likes": 359,
+          "pseudo_er": 0.3824
+        },
+        {
+          "handle": "uranai.fukuen",
           "first_line": "【令和8年4月、何もかも上手くいく人】",
           "likes": 343,
           "pseudo_er": 0.347
-        },
-        {
-          "handle": "hatarakupyon",
-          "first_line": "「年収500万円あればシングルマザーでも余裕じゃん」って思われがちだけど、実際そんなことないよね。",
-          "likes": 311,
-          "pseudo_er": 0.2694
         }
       ]
     },
     "質問フック型": {
-      "count": 3,
-      "avg_er": 0.0184,
+      "count": 4,
+      "avg_er": 0.0166,
       "examples": [
         {
           "handle": "naritaitarot",
           "first_line": "タロットをどのように学んだんですか？",
-          "likes": 7,
-          "pseudo_er": 0.0449
+          "likes": 10,
+          "pseudo_er": 0.0558
         },
         {
           "handle": "hatarakupyon",
@@ -177,28 +177,52 @@
       ]
     },
     "天体根拠型": {
-      "count": 1,
-      "avg_er": 0.0085,
+      "count": 2,
+      "avg_er": 0.0084,
       "examples": [
         {
           "handle": "anna_hoshiyomi",
           "first_line": "＼太陽牡牛座入り／",
           "likes": 78,
           "pseudo_er": 0.0085
+        },
+        {
+          "handle": "horoscope.coaching_yuri",
+          "first_line": "私たちは天体の動きという",
+          "likes": 20,
+          "pseudo_er": 0.0084
         }
       ]
     }
   },
   "structure_summary": {
+    "B_ランキング型": {
+      "count": 20,
+      "avg_er": 0.2201,
+      "examples": [
+        {
+          "handle": "uranai.fukuen",
+          "text_preview": "残念ですが…無視した人はもう２度とありません。 第1位 おうし座 第2位 おとめ座 第3位みずがめ座 第4位 やぎ座 第5位 かに座 第6位 いて座 第7位 ふたご座 第8位おひつじ座 第9位てんびん座 第10位 しし座 第11位 さそり座",
+          "likes": 778,
+          "pseudo_er": 0.759
+        },
+        {
+          "handle": "uranai.fukuen",
+          "text_preview": "無視する人金運上がらんよ。 1位　 🐟うお座 2位 ⚖️てんびん座 3位 🏹いて座 4位　🦁しし座 5位 🦂さそり座 6位 🏺みずがめ座 7位 🦀かに座 8位 👰‍♀️おとめ座 9位 👬ふたご座 10位 🐐やぎ座 11位 🐮おうし座 12位",
+          "likes": 685,
+          "pseudo_er": 0.6545
+        }
+      ]
+    },
     "C_予言・断言型": {
       "count": 18,
-      "avg_er": 0.1864,
+      "avg_er": 0.1911,
       "examples": [
         {
           "handle": "hina.tesou",
           "text_preview": "嘘は言いません。 素通りした人以外 88万ほどの臨時収入が入ってきます 大事に使ってね🐻‍❄️🌸 6,831",
-          "likes": 6831,
-          "pseudo_er": 1.0055
+          "likes": 7312,
+          "pseudo_er": 1.0735
         },
         {
           "handle": "hina.tesou",
@@ -208,45 +232,27 @@
         }
       ]
     },
-    "B_ランキング型": {
-      "count": 17,
-      "avg_er": 0.1795,
-      "examples": [
-        {
-          "handle": "uranai.fukuen",
-          "text_preview": "無視する人金運上がらんよ。 1位　 🐟うお座 2位 ⚖️てんびん座 3位 🏹いて座 4位　🦁しし座 5位 🦂さそり座 6位 🏺みずがめ座 7位 🦀かに座 8位 👰‍♀️おとめ座 9位 👬ふたご座 10位 🐐やぎ座 11位 🐮おうし座 12位",
-          "likes": 685,
-          "pseudo_er": 0.6545
-        },
-        {
-          "handle": "uranai.fukuen",
-          "text_preview": "【週末に奇跡が待っている人】 第1位：うお座（魚座） 第2位：かに座（蟹座） 第3位：ふたご座（双子座） 第4位：おとめ座（乙女座） 第5位：てんびん座座（天秤座） 「🌕」をそっと置いた人は、 頑固に居座っていた厄病神が浄化されて、 「どう",
-          "likes": 461,
-          "pseudo_er": 0.4601
-        }
-      ]
-    },
     "H_スピ共感型": {
-      "count": 73,
-      "avg_er": 0.0751,
+      "count": 74,
+      "avg_er": 0.0761,
       "examples": [
         {
           "handle": "raito.koiuranai",
           "text_preview": "2026/03/21 こ れ が 見 え た ら 無 心 で い い ね を🔮 1,258",
           "likes": 1258,
-          "pseudo_er": 1.5155
+          "pseudo_er": 1.521
         },
         {
-          "handle": "ume_reishi",
-          "text_preview": "おはようございます🌸 まさかもう、起きてる人いますか？ もし、奇跡的に起きてる人がいたら超幸運です。 2026/4/15（水）１年に１度の 大安×大明日×神吉日が重なる特別な日です。 精霊が集結する時間の 6:00-8:58 の短い間だけ。",
-          "likes": 1321,
-          "pseudo_er": 0.337
+          "handle": "uranai.fukuen",
+          "text_preview": "今、ちょうどスマホを見てる方へ。 人生ぜーんぶ上手くいきます！ 🌸を置いて受け取り完了⭐️",
+          "likes": 481,
+          "pseudo_er": 0.409
         }
       ]
     },
     "F_その他": {
-      "count": 648,
-      "avg_er": 0.0525,
+      "count": 677,
+      "avg_er": 0.053,
       "examples": [
         {
           "handle": "hachico.odyssey",
@@ -258,31 +264,13 @@
           "handle": "raito.koiuranai",
           "text_preview": "2026/03/22 い い ね を す る と 運 気 が 爆 上 が り し ま す⛩️",
           "likes": 791,
-          "pseudo_er": 0.9582
-        }
-      ]
-    },
-    "G_天体根拠型": {
-      "count": 15,
-      "avg_er": 0.0434,
-      "examples": [
-        {
-          "handle": "uranai.fukuen",
-          "text_preview": "【ここでスルーしたら4月、築き上げたもの全部失うわよ】 危険度99%：2月生まれ × みずがめ座 危険度90%：5月生まれ × おうし座 危険度80%：9月生まれ × おとめ座 危険度70%：12月生まれ × いて座 危険度60%：3月生ま",
-          "likes": 346,
-          "pseudo_er": 0.4436
-        },
-        {
-          "handle": "shihoriiinu",
-          "text_preview": "牡羊座新月のタイミングでやったこと。 ・メインのクレカ💳を変更 ・西洋占星術のテキストを購入💫 ・私が推してるアストロカウンセラーターラさんのカペラノートを購入💖 西洋占星術、去年初級講座は受講したけど「深く入るのは今じゃない」と思って置い",
-          "likes": 5,
-          "pseudo_er": 0.0933
+          "pseudo_er": 0.9617
         }
       ]
     },
     "E_エンゲージ強要型": {
       "count": 15,
-      "avg_er": 0.0412,
+      "avg_er": 0.0413,
       "examples": [
         {
           "handle": "ume_reishi",
@@ -295,6 +283,24 @@
           "text_preview": "ピン留め済み 2026/03/19 🐍初回限定無料鑑定のご案内🐍 ご縁に感謝を込めて、今だけ “無料鑑定”を実施しております。 あなたの人生に必要な言霊を、誰よりも丁寧にお伝えします。 ・金運・良縁を引き寄せたい ・漠然とした不安から抜け出",
           "likes": 39,
           "pseudo_er": 0.0271
+        }
+      ]
+    },
+    "G_天体根拠型": {
+      "count": 19,
+      "avg_er": 0.0387,
+      "examples": [
+        {
+          "handle": "uranai.fukuen",
+          "text_preview": "【ここでスルーしたら4月、築き上げたもの全部失うわよ】 危険度99%：2月生まれ × みずがめ座 危険度90%：5月生まれ × おうし座 危険度80%：9月生まれ × おとめ座 危険度70%：12月生まれ × いて座 危険度60%：3月生ま",
+          "likes": 346,
+          "pseudo_er": 0.4436
+        },
+        {
+          "handle": "shihoriiinu",
+          "text_preview": "牡羊座新月のタイミングでやったこと。 ・メインのクレカ💳を変更 ・西洋占星術のテキストを購入💫 ・私が推してるアストロカウンセラーターラさんのカペラノートを購入💖 西洋占星術、去年初級講座は受講したけど「深く入るのは今じゃない」と思って置い",
+          "likes": 5,
+          "pseudo_er": 0.1126
         }
       ]
     },
@@ -336,7 +342,7 @@
       "text": "2026/03/21\nこ れ が 見 え た ら 無 心 で い い ね を🔮\n1,258",
       "likes": 1258,
       "replies": 4,
-      "pseudo_er": 1.5155,
+      "pseudo_er": 1.521,
       "hook_pattern": "その他",
       "structure": "H_スピ共感型"
     },
@@ -345,9 +351,9 @@
       "category": "other",
       "first_line": "嘘は言いません。",
       "text": "嘘は言いません。\n素通りした人以外\n88万ほどの臨時収入が入ってきます\n大事に使ってね🐻‍❄️🌸\n6,831",
-      "likes": 6831,
-      "replies": 160,
-      "pseudo_er": 1.0055,
+      "likes": 7312,
+      "replies": 165,
+      "pseudo_er": 1.0735,
       "hook_pattern": "強運断言型",
       "structure": "C_予言・断言型"
     },
@@ -358,9 +364,20 @@
       "text": "2026/03/22\nい い ね を す る と 運 気 が 爆 上 が り し ま す⛩️",
       "likes": 791,
       "replies": 4,
-      "pseudo_er": 0.9582,
+      "pseudo_er": 0.9617,
       "hook_pattern": "いいね強要型",
       "structure": "F_その他"
+    },
+    {
+      "handle": "uranai.fukuen",
+      "category": "other",
+      "first_line": "残念ですが…無視した人はもう２度とありません。",
+      "text": "残念ですが…無視した人はもう２度とありません。\n第1位 おうし座\n第2位 おとめ座\n第3位みずがめ座\n第4位 やぎ座\n第5位 かに座\n第6位 いて座\n第7位 ふたご座\n第8位おひつじ座\n第9位てんびん座\n第10位 しし座\n第11位 さそり座\n第12位うお座\n今日「🙏」を置けた人全員、\n抱えているすべての悩みから解放され、\n腰を抜かすほどの金運が雪崩のごとく押し寄せます",
+      "likes": 778,
+      "replies": 272,
+      "pseudo_er": 0.759,
+      "hook_pattern": "その他",
+      "structure": "B_ランキング型"
     },
     {
       "handle": "uranai.fukuen",
@@ -400,9 +417,9 @@
       "category": "other",
       "first_line": "重大発表。",
       "text": "重大発表。\n一度出ていったお金が\n「仲間をつれて戻ってくる」\nサインが出てる",
-      "likes": 3794,
-      "replies": 43,
-      "pseudo_er": 0.5419,
+      "likes": 3808,
+      "replies": 44,
+      "pseudo_er": 0.5411,
       "hook_pattern": "その他",
       "structure": "F_その他"
     },
@@ -418,6 +435,17 @@
       "structure": "C_予言・断言型"
     },
     {
+      "handle": "hina.tesou",
+      "category": "other",
+      "first_line": "うちは嘘は言わんよ。",
+      "text": "うちは嘘は言わんよ。\n4/19か4/20にいいねができたあなた、\n今の苦しみが嘘みたいに消え去る🐻‍❄️🌸\n1,643",
+      "likes": 3899,
+      "replies": 1,
+      "pseudo_er": 0.5365,
+      "hook_pattern": "その他",
+      "structure": "F_その他"
+    },
+    {
       "handle": "ume_reishi",
       "category": "other",
       "first_line": "🌸初回無料の霊視鑑定🌸",
@@ -427,17 +455,6 @@
       "pseudo_er": 0.5333,
       "hook_pattern": "その他",
       "structure": "E_エンゲージ強要型"
-    },
-    {
-      "handle": "hina.tesou",
-      "category": "other",
-      "first_line": "うちは嘘は言わんよ。",
-      "text": "うちは嘘は言わんよ。\n4/19か4/20にいいねができたあなた、\n今の苦しみが嘘みたいに消え去る🐻‍❄️🌸\n1,643",
-      "likes": 3721,
-      "replies": 1,
-      "pseudo_er": 0.5151,
-      "hook_pattern": "その他",
-      "structure": "F_その他"
     },
     {
       "handle": "hina.tesou",
@@ -466,9 +483,9 @@
       "category": "other",
       "first_line": "今日から風向きが変わる人よ🌹",
       "text": "今日から風向きが変わる人よ🌹\n🥇 乙女座（おとめ座）\n🥈 山羊座（やぎ座）\n🥉 蟹座（かに座）\nこの投稿に「🌹」をそっと置くと\n早くて7分後から\n物事がぜんぶ、不思議なぐらいうまくいくようになりますわ🌹",
-      "likes": 630,
-      "replies": 170,
-      "pseudo_er": 0.4501,
+      "likes": 632,
+      "replies": 171,
+      "pseudo_er": 0.4482,
       "hook_pattern": "その他",
       "structure": "F_その他"
     },
@@ -484,6 +501,17 @@
       "structure": "G_天体根拠型"
     },
     {
+      "handle": "uranai.fukuen",
+      "category": "other",
+      "first_line": "この漢字が名前にある人",
+      "text": "この漢字が名前にある人\n2026年、人生が覚醒します。\n誠 剛 健 浩 隆 裕 昭 和 博 智\n恵 陽 純 美 雅 紀 真 由 香 佳\n大 雄 英 修 哲 淳 賢 尚 敦 祥\n朋 亜 奈 織 伸 輝 泰 豊 克 貴\n竜 紅 清 環 涼 瞳 愛 正 友 幸\n「🌕」をくれたあなた様。\n幸福と奇跡が次々と訪れる特別な波動をお送りいたします✨",
+      "likes": 299,
+      "replies": 193,
+      "pseudo_er": 0.4229,
+      "hook_pattern": "その他",
+      "structure": "F_その他"
+    },
+    {
       "handle": "mira_uranai_reishi",
       "category": "other",
       "first_line": "ごめんね、正直に言うね。",
@@ -493,6 +521,39 @@
       "pseudo_er": 0.4202,
       "hook_pattern": "その他",
       "structure": "F_その他"
+    },
+    {
+      "handle": "uranai.fukuen",
+      "category": "other",
+      "first_line": "今、ちょうどスマホを見てる方へ。",
+      "text": "今、ちょうどスマホを見てる方へ。\n人生ぜーんぶ上手くいきます！\n🌸を置いて受け取り完了⭐️",
+      "likes": 481,
+      "replies": 126,
+      "pseudo_er": 0.409,
+      "hook_pattern": "その他",
+      "structure": "H_スピ共感型"
+    },
+    {
+      "handle": "uranai.fukuen",
+      "category": "other",
+      "first_line": "残念ですが…無視した人はもう２度とありません。",
+      "text": "残念ですが…無視した人はもう２度とありません。\n第1位 おうし座\n第2位 おとめ座\n第3位みずがめ座\n第4位 やぎ座\n第5位 かに座\n第6位 いて座\n第7位 ふたご座\n第8位おひつじ座\n第9位てんびん座\n第10位 しし座\n第11位 さそり座\n第12位うお座\n今日「🙏」を置けた人全員、\n抱えているすべての悩みから解放され、\n腰を抜かすほどの金運が雪崩のごとく押し寄せます☀️",
+      "likes": 381,
+      "replies": 141,
+      "pseudo_er": 0.3829,
+      "hook_pattern": "その他",
+      "structure": "B_ランキング型"
+    },
+    {
+      "handle": "uranai.fukuen",
+      "category": "other",
+      "first_line": "【本日、逆転の兆しがある星座】",
+      "text": "【本日、逆転の兆しがある星座】\n第1位：さそり座 ★★★★★\n第2位：やぎ座 ★★★★\n第3位：おとめ座 ★★★\nずっと噛み合わなかった何かが、\n今日、静かに正されます。\n「🌸」を置いた方から、修正が始まる🌟",
+      "likes": 359,
+      "replies": 148,
+      "pseudo_er": 0.3824,
+      "hook_pattern": "共感・場面描写型",
+      "structure": "B_ランキング型"
     },
     {
       "handle": "uranai.fukuen",
@@ -585,17 +646,6 @@
     {
       "handle": "uranai.fukuen",
       "category": "other",
-      "first_line": "今、ちょうどスマホを見てる方へ。",
-      "text": "今、ちょうどスマホを見てる方へ。\n人生ぜーんぶ上手くいきます！\n🌸を置いて受け取り完了⭐️",
-      "likes": 391,
-      "replies": 86,
-      "pseudo_er": 0.3086,
-      "hook_pattern": "その他",
-      "structure": "H_スピ共感型"
-    },
-    {
-      "handle": "uranai.fukuen",
-      "category": "other",
       "first_line": "ごめんな…✨",
       "text": "ごめんな…✨\n波動が低い人には表示されません。\n「🙏」を置いて高波動受け取り完了たい☀️🐣",
       "likes": 282,
@@ -603,50 +653,6 @@
       "pseudo_er": 0.3001,
       "hook_pattern": "その他",
       "structure": "H_スピ共感型"
-    },
-    {
-      "handle": "mira_uranai_reishi",
-      "category": "other",
-      "first_line": "私、決めたよ。",
-      "text": "私、決めたよ。\nフランスで占いをしています。\nおばあちゃんから「霊視の力」を受け継ぎ、今はひっそりと暮らしています。\nどこかに、私を必要としている人がいるような気がして…\n今週中にフォローして【🙏】とコメントしてくれた方全員に、\n霊視の占いをさせていただきます。\n「積極的に行動してくれた方」には、ミラが全力で応えます。\n「見えたもの」を一切隠さずお伝えするので、覚悟してね！",
-      "likes": 88,
-      "replies": 106,
-      "pseudo_er": 0.2957,
-      "hook_pattern": "その他",
-      "structure": "F_その他"
-    },
-    {
-      "handle": "hina.tesou",
-      "category": "other",
-      "first_line": "ほんとうに、4月に臨時収入がドバーーーッときそうです！！",
-      "text": "ほんとうに、4月に臨時収入がドバーーーッときそうです！！\n2,130",
-      "likes": 2130,
-      "replies": 3,
-      "pseudo_er": 0.2955,
-      "hook_pattern": "臨時収入型",
-      "structure": "C_予言・断言型"
-    },
-    {
-      "handle": "uranai.fukuen",
-      "category": "other",
-      "first_line": "残念やけど…これ飛ばしたら、一生苦しいままやけんね。",
-      "text": "残念やけど…これ飛ばしたら、一生苦しいままやけんね。\n1位：9月生まれ\n2位：11月生まれ\n3位：12月生まれ\n4位：5月生まれ\n5位：2月生まれ\n6位：10月生まれ\n7位：7月生まれ\n8位：3月生まれ\n9位：8月生まれ\n10位：4月生まれ\n11位：1月生まれ\n12位：6月生まれ\n「🌈」を置いてくれたあんたさん、\n自覚してないだけで、\nあなたの周りに人は引き寄せられてる🎯",
-      "likes": 279,
-      "replies": 98,
-      "pseudo_er": 0.2802,
-      "hook_pattern": "その他",
-      "structure": "B_ランキング型"
-    },
-    {
-      "handle": "uranai.fukuen",
-      "category": "other",
-      "first_line": "嘘は言いません。",
-      "text": "嘘は言いません。\n4/19か4/20にいいねができたあなた。\n4月を終える頃には、今の苦しみが嘘みたいに消え去ります。\n「🌸」を置いて、完了しなはれ💫",
-      "likes": 223,
-      "replies": 116,
-      "pseudo_er": 0.2759,
-      "hook_pattern": "強運断言型",
-      "structure": "F_その他"
     }
   ],
   "top_by_category": {
@@ -669,7 +675,7 @@
         "text": "2026/03/21\nこ れ が 見 え た ら 無 心 で い い ね を🔮\n1,258",
         "likes": 1258,
         "replies": 4,
-        "pseudo_er": 1.5155,
+        "pseudo_er": 1.521,
         "hook_pattern": "その他",
         "structure": "H_スピ共感型"
       },
@@ -678,9 +684,9 @@
         "category": "other",
         "first_line": "嘘は言いません。",
         "text": "嘘は言いません。\n素通りした人以外\n88万ほどの臨時収入が入ってきます\n大事に使ってね🐻‍❄️🌸\n6,831",
-        "likes": 6831,
-        "replies": 160,
-        "pseudo_er": 1.0055,
+        "likes": 7312,
+        "replies": 165,
+        "pseudo_er": 1.0735,
         "hook_pattern": "強運断言型",
         "structure": "C_予言・断言型"
       },
@@ -691,9 +697,20 @@
         "text": "2026/03/22\nい い ね を す る と 運 気 が 爆 上 が り し ま す⛩️",
         "likes": 791,
         "replies": 4,
-        "pseudo_er": 0.9582,
+        "pseudo_er": 0.9617,
         "hook_pattern": "いいね強要型",
         "structure": "F_その他"
+      },
+      {
+        "handle": "uranai.fukuen",
+        "category": "other",
+        "first_line": "残念ですが…無視した人はもう２度とありません。",
+        "text": "残念ですが…無視した人はもう２度とありません。\n第1位 おうし座\n第2位 おとめ座\n第3位みずがめ座\n第4位 やぎ座\n第5位 かに座\n第6位 いて座\n第7位 ふたご座\n第8位おひつじ座\n第9位てんびん座\n第10位 しし座\n第11位 さそり座\n第12位うお座\n今日「🙏」を置けた人全員、\n抱えているすべての悩みから解放され、\n腰を抜かすほどの金運が雪崩のごとく押し寄せます",
+        "likes": 778,
+        "replies": 272,
+        "pseudo_er": 0.759,
+        "hook_pattern": "その他",
+        "structure": "B_ランキング型"
       },
       {
         "handle": "uranai.fukuen",
@@ -727,17 +744,6 @@
         "pseudo_er": 0.5456,
         "hook_pattern": "その他",
         "structure": "F_その他"
-      },
-      {
-        "handle": "hina.tesou",
-        "category": "other",
-        "first_line": "重大発表。",
-        "text": "重大発表。\n一度出ていったお金が\n「仲間をつれて戻ってくる」\nサインが出てる",
-        "likes": 3794,
-        "replies": 43,
-        "pseudo_er": 0.5419,
-        "hook_pattern": "その他",
-        "structure": "F_その他"
       }
     ]
   },
@@ -750,8 +756,8 @@
       "その他"
     ],
     "top_structures_by_er": [
-      "C_予言・断言型",
       "B_ランキング型",
+      "C_予言・断言型",
       "H_スピ共感型"
     ],
     "strong_first_line_examples": [
@@ -759,12 +765,12 @@
       "こ れ が 見 え た ら 無 心 で い い ね を🔮",
       "嘘は言いません。",
       "い い ね を す る と 運 気 が 爆 上 が り し ま す⛩️",
+      "残念ですが…無視した人はもう２度とありません。",
       "無視する人金運上がらんよ。",
       "これ言うとフォロー外されるかもしれませんが、",
       "やっぱり確信しました。",
       "重大発表。",
-      "嘘は言いません。",
-      "🌸初回無料の霊視鑑定🌸"
+      "嘘は言いません。"
     ],
     "top_post_examples": [
       {
@@ -777,27 +783,27 @@
         "hook_pattern": "その他",
         "first_line": "こ れ が 見 え た ら 無 心 で い い ね を🔮",
         "text_excerpt": "2026/03/21 こ れ が 見 え た ら 無 心 で い い ね を🔮 1,258",
-        "pseudo_er": 1.5155
+        "pseudo_er": 1.521
       },
       {
         "hook_pattern": "強運断言型",
         "first_line": "嘘は言いません。",
         "text_excerpt": "嘘は言いません。 素通りした人以外 88万ほどの臨時収入が入ってきます 大事に使ってね🐻‍❄️🌸 6,831",
-        "pseudo_er": 1.0055
+        "pseudo_er": 1.0735
       },
       {
         "hook_pattern": "いいね強要型",
         "first_line": "い い ね を す る と 運 気 が 爆 上 が り し ま す⛩️",
         "text_excerpt": "2026/03/22 い い ね を す る と 運 気 が 爆 上 が り し ま す⛩️",
-        "pseudo_er": 0.9582
+        "pseudo_er": 0.9617
       },
       {
-        "hook_pattern": "臨時収入型",
-        "first_line": "無視する人金運上がらんよ。",
-        "text_excerpt": "無視する人金運上がらんよ。 1位　 🐟うお座 2位 ⚖️てんびん座 3位 🏹いて座 4位　🦁しし座 5位 🦂さそり座 6位 🏺みずがめ座 7位 🦀かに座 8位 👰‍♀️おとめ座 9位 👬ふたご座 10位 🐐やぎ座 11位 🐮おうし座 12位 🐏おひつじ座 『🌸』を置いた人全員、 うちがレイキ流して心整えるで。 理想の幸せのもとに辿り着けます。🐈‍⬛",
-        "pseudo_er": 0.6545
+        "hook_pattern": "その他",
+        "first_line": "残念ですが…無視した人はもう２度とありません。",
+        "text_excerpt": "残念ですが…無視した人はもう２度とありません。 第1位 おうし座 第2位 おとめ座 第3位みずがめ座 第4位 やぎ座 第5位 かに座 第6位 いて座 第7位 ふたご座 第8位おひつじ座 第9位てんびん座 第10位 しし座 第11位 さそり座 第12位うお座 今日「🙏」を置けた人全員、 抱えているすべての悩みから解放され、 腰を抜かすほどの金運が雪崩のごとく押し寄せます",
+        "pseudo_er": 0.759
       }
     ],
-    "insight": "競合30件分析結果: 最高ERフックは「いいね強要型」(avg_er=0.3219)。最多バズ構造は「C_予言・断言型」。いいね強要・スルー恐怖・ランキング型が特に高拡散。ただしNG表現（断定・祈祷等）に抵触しないよう要注意。"
+    "insight": "競合30件分析結果: 最高ERフックは「いいね強要型」(avg_er=0.3231)。最多バズ構造は「B_ランキング型」。いいね強要・スルー恐怖・ランキング型が特に高拡散。ただしNG表現（断定・祈祷等）に抵触しないよう要注意。"
   }
 }
