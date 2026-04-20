@@ -1084,7 +1084,7 @@
           "account_snapshot": {
             "follower_count": 150
           },
-          "pseudo_er": 0.046667,
+          "pseudo_er": 0.046358,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -1109,6 +1109,16 @@
                 "views": null
               },
               "pseudo_er": 0.046667
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:36.766448+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.046358
             }
           ]
         },
@@ -1180,15 +1190,15 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 2,
-            "replies": 1,
+            "likes": 10,
+            "replies": 3,
             "reposts": 0,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 150
           },
-          "pseudo_er": 0.033333,
+          "pseudo_er": 0.125828,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -1203,6 +1213,16 @@
                 "views": null
               },
               "pseudo_er": 0.033333
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:36.766448+09:00",
+              "metrics": {
+                "likes": 10,
+                "replies": 3,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.125828
             }
           ]
         },
@@ -1222,7 +1242,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 11,
+            "likes": 15,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -1230,7 +1250,7 @@
           "account_snapshot": {
             "follower_count": 150
           },
-          "pseudo_er": 0.073333,
+          "pseudo_er": 0.099338,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -1245,13 +1265,65 @@
                 "views": null
               },
               "pseudo_er": 0.073333
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:36.766448+09:00",
+              "metrics": {
+                "likes": 15,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.099338
+            }
+          ]
+        },
+        {
+          "post_id": "DXWtG6fj5jp",
+          "account_handle": "shihoriiinu",
+          "url": "https://www.threads.com/@shihoriiinu/post/DXWtG6fj5jp",
+          "posted_at": "2026-04-20T13:14:13.000Z",
+          "fetched_at": "2026-04-21T00:11:36.766448+09:00",
+          "text": "実家にあったこの目覚まし時計のこと急に思い出して夫に話したら夫の実家にも同じのがあったらしい⏰\nこれってそんなにメジャーな品ですか？",
+          "text_length": 66,
+          "first_line": "実家にあったこの目覚まし時計のこと急に思い出して夫に話したら夫の実家にも同じのがあったらしい⏰",
+          "newline_count": 1,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "image",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 2,
+            "replies": 1,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 151
+          },
+          "pseudo_er": 0.033113,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:11:36.766448+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.033113
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@shihoriiinu",
-      "last_fetched": "2026-04-20T16:28:22.465286+09:00",
-      "follower_count": 150
+      "last_fetched": "2026-04-21T00:11:36.766448+09:00",
+      "follower_count": 151
     },
     "chisa008_tarot": {
       "posts": [
@@ -1279,7 +1351,7 @@
           "account_snapshot": {
             "follower_count": 745
           },
-          "pseudo_er": 0.025538,
+          "pseudo_er": 0.025503,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_B"
@@ -1374,6 +1446,16 @@
                 "views": null
               },
               "pseudo_er": 0.025538
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:45.921378+09:00",
+              "metrics": {
+                "likes": 14,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.025503
             }
           ]
         },
@@ -2549,7 +2631,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 70,
+            "likes": 74,
             "replies": 0,
             "reposts": 1,
             "views": null
@@ -2557,7 +2639,7 @@
           "account_snapshot": {
             "follower_count": 743
           },
-          "pseudo_er": 0.100806,
+          "pseudo_er": 0.10604,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -2592,6 +2674,16 @@
                 "views": null
               },
               "pseudo_er": 0.100806
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:45.921378+09:00",
+              "metrics": {
+                "likes": 74,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.10604
             }
           ]
         },
@@ -2663,7 +2755,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 84,
+            "likes": 102,
             "replies": 0,
             "reposts": 1,
             "views": null
@@ -2671,7 +2763,7 @@
           "account_snapshot": {
             "follower_count": 744
           },
-          "pseudo_er": 0.119624,
+          "pseudo_er": 0.143624,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -2686,6 +2778,16 @@
                 "views": null
               },
               "pseudo_er": 0.119624
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:45.921378+09:00",
+              "metrics": {
+                "likes": 102,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.143624
             }
           ]
         },
@@ -2705,7 +2807,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 18,
+            "likes": 19,
             "replies": 0,
             "reposts": 1,
             "views": null
@@ -2713,7 +2815,7 @@
           "account_snapshot": {
             "follower_count": 744
           },
-          "pseudo_er": 0.030914,
+          "pseudo_er": 0.032215,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_B"
@@ -2728,13 +2830,23 @@
                 "views": null
               },
               "pseudo_er": 0.030914
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:45.921378+09:00",
+              "metrics": {
+                "likes": 19,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.032215
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@chisa008_tarot",
-      "last_fetched": "2026-04-20T16:28:31.470539+09:00",
-      "follower_count": 744
+      "last_fetched": "2026-04-21T00:11:45.921378+09:00",
+      "follower_count": 745
     },
     "naritaitarot": {
       "posts": [
@@ -2762,7 +2874,7 @@
           "account_snapshot": {
             "follower_count": 267
           },
-          "pseudo_er": 0.11194,
+          "pseudo_er": 0.111524,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -2847,6 +2959,16 @@
                 "views": null
               },
               "pseudo_er": 0.11194
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:53.702305+09:00",
+              "metrics": {
+                "likes": 15,
+                "replies": 0,
+                "reposts": 3,
+                "views": null
+              },
+              "pseudo_er": 0.111524
             }
           ]
         },
@@ -3772,7 +3894,7 @@
           "account_snapshot": {
             "follower_count": 267
           },
-          "pseudo_er": 0.052239,
+          "pseudo_er": 0.052045,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -3827,6 +3949,16 @@
                 "views": null
               },
               "pseudo_er": 0.052239
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:53.702305+09:00",
+              "metrics": {
+                "likes": 9,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.052045
             }
           ]
         },
@@ -3854,7 +3986,7 @@
           "account_snapshot": {
             "follower_count": 267
           },
-          "pseudo_er": 0.014925,
+          "pseudo_er": 0.01487,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_B"
@@ -3909,6 +4041,16 @@
                 "views": null
               },
               "pseudo_er": 0.014925
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:53.702305+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.01487
             }
           ]
         },
@@ -3936,7 +4078,7 @@
           "account_snapshot": {
             "follower_count": 267
           },
-          "pseudo_er": 0.033582,
+          "pseudo_er": 0.033457,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_B"
@@ -3991,6 +4133,16 @@
                 "views": null
               },
               "pseudo_er": 0.033582
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:53.702305+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 1,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.033457
             }
           ]
         },
@@ -4018,7 +4170,7 @@
           "account_snapshot": {
             "follower_count": 267
           },
-          "pseudo_er": 0.041045,
+          "pseudo_er": 0.040892,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -4063,6 +4215,16 @@
                 "views": null
               },
               "pseudo_er": 0.041045
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:53.702305+09:00",
+              "metrics": {
+                "likes": 5,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.040892
             }
           ]
         },
@@ -4090,7 +4252,7 @@
           "account_snapshot": {
             "follower_count": 267
           },
-          "pseudo_er": 0.149254,
+          "pseudo_er": 0.148699,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -4135,13 +4297,23 @@
                 "views": null
               },
               "pseudo_er": 0.149254
+            },
+            {
+              "fetched_at": "2026-04-21T00:11:53.702305+09:00",
+              "metrics": {
+                "likes": 23,
+                "replies": 4,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.148699
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@naritaitarot",
-      "last_fetched": "2026-04-20T16:28:39.356190+09:00",
-      "follower_count": 268
+      "last_fetched": "2026-04-21T00:11:53.702305+09:00",
+      "follower_count": 269
     },
     "hashimoto_sachino": {
       "posts": [
@@ -4263,6 +4435,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:28:47.335367+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:01.628136+09:00",
               "metrics": {
                 "likes": 0,
                 "replies": 0,
@@ -4392,6 +4574,16 @@
                 "views": null
               },
               "pseudo_er": 0.097561
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:01.628136+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.097561
             }
           ]
         },
@@ -4507,6 +4699,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:28:47.335367+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.04878
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:01.628136+09:00",
               "metrics": {
                 "likes": 2,
                 "replies": 0,
@@ -4635,6 +4837,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:28:47.335367+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.04878
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:01.628136+09:00",
               "metrics": {
                 "likes": 2,
                 "replies": 0,
@@ -5181,7 +5393,7 @@
         }
       ],
       "url": "https://www.threads.com/@hashimoto_sachino",
-      "last_fetched": "2026-04-20T16:28:47.335367+09:00",
+      "last_fetched": "2026-04-21T00:12:01.628136+09:00",
       "follower_count": 41
     },
     "suzu_sasaki": {
@@ -5304,6 +5516,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:28:55.441416+09:00",
+              "metrics": {
+                "likes": 12,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.031496
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:09.552166+09:00",
               "metrics": {
                 "likes": 12,
                 "replies": 0,
@@ -6206,6 +6428,16 @@
                 "views": null
               },
               "pseudo_er": 0.023622
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:09.552166+09:00",
+              "metrics": {
+                "likes": 9,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.023622
             }
           ]
         },
@@ -6293,6 +6525,16 @@
                 "views": null
               },
               "pseudo_er": 0.020997
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:09.552166+09:00",
+              "metrics": {
+                "likes": 8,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.020997
             }
           ]
         },
@@ -6316,7 +6558,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 3,
+            "likes": 7,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -6324,7 +6566,7 @@
           "account_snapshot": {
             "follower_count": 381
           },
-          "pseudo_er": 0.007874,
+          "pseudo_er": 0.018373,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -6339,12 +6581,22 @@
                 "views": null
               },
               "pseudo_er": 0.007874
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:09.552166+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.018373
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@suzu_sasaki",
-      "last_fetched": "2026-04-20T16:28:55.441416+09:00",
+      "last_fetched": "2026-04-21T00:12:09.552166+09:00",
       "follower_count": 381
     },
     "kaede.3023": {
@@ -6461,6 +6713,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:29:03.602393+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 3,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.046784
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:17.980381+09:00",
               "metrics": {
                 "likes": 7,
                 "replies": 3,
@@ -6590,6 +6852,16 @@
                 "views": null
               },
               "pseudo_er": 0.023392
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:17.980381+09:00",
+              "metrics": {
+                "likes": 5,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.023392
             }
           ]
         },
@@ -6705,6 +6977,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:29:03.602393+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.011696
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:17.980381+09:00",
               "metrics": {
                 "likes": 1,
                 "replies": 1,
@@ -6839,6 +7121,16 @@
                 "views": null
               },
               "pseudo_er": 0.002924
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:17.980381+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.002924
             }
           ]
         },
@@ -6949,6 +7241,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:29:03.602393+09:00",
+              "metrics": {
+                "likes": 3,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.008772
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:17.980381+09:00",
               "metrics": {
                 "likes": 3,
                 "replies": 0,
@@ -7672,6 +7974,16 @@
                 "views": null
               },
               "pseudo_er": 0.011696
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:17.980381+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.011696
             }
           ]
         },
@@ -7778,12 +8090,22 @@
                 "views": null
               },
               "pseudo_er": 0.005848
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:17.980381+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.005848
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@kaede.3023",
-      "last_fetched": "2026-04-20T16:29:03.602393+09:00",
+      "last_fetched": "2026-04-21T00:12:17.980381+09:00",
       "follower_count": 342
     },
     "anna_hoshiyomi": {
@@ -8968,7 +9290,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 59,
+            "likes": 61,
             "replies": 0,
             "reposts": 1,
             "views": null
@@ -8976,7 +9298,7 @@
           "account_snapshot": {
             "follower_count": 11000
           },
-          "pseudo_er": 0.005818,
+          "pseudo_er": 0.006,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -9011,6 +9333,16 @@
                 "views": null
               },
               "pseudo_er": 0.005818
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:25.900085+09:00",
+              "metrics": {
+                "likes": 61,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.006
             }
           ]
         },
@@ -9186,7 +9518,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 76,
+            "likes": 78,
             "replies": 0,
             "reposts": 3,
             "views": null
@@ -9194,7 +9526,7 @@
           "account_snapshot": {
             "follower_count": 11000
           },
-          "pseudo_er": 0.008273,
+          "pseudo_er": 0.008455,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -9219,6 +9551,16 @@
                 "views": null
               },
               "pseudo_er": 0.008273
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:25.900085+09:00",
+              "metrics": {
+                "likes": 78,
+                "replies": 0,
+                "reposts": 3,
+                "views": null
+              },
+              "pseudo_er": 0.008455
             }
           ]
         },
@@ -9238,7 +9580,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 13,
+            "likes": 17,
             "replies": 2,
             "reposts": 0,
             "views": null
@@ -9246,7 +9588,7 @@
           "account_snapshot": {
             "follower_count": 11000
           },
-          "pseudo_er": 0.001727,
+          "pseudo_er": 0.002091,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -9261,12 +9603,64 @@
                 "views": null
               },
               "pseudo_er": 0.001727
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:25.900085+09:00",
+              "metrics": {
+                "likes": 17,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.002091
+            }
+          ]
+        },
+        {
+          "post_id": "DXWjdQckmcN",
+          "account_handle": "anna_hoshiyomi",
+          "url": "https://www.threads.com/@anna_hoshiyomi/post/DXWjdQckmcN",
+          "posted_at": "2026-04-20T11:49:53.000Z",
+          "fetched_at": "2026-04-21T00:12:25.900085+09:00",
+          "text": "《4/21》\n牡羊座：焦らないこと。今は整えることで次が動く！\n牡牛座：自分のペースを守ることがいちばんの前進。\n双子座：自分の想いを伝えることで、流れが変わる。\n蟹　座：抱えすぎてるものを、手放していい日。あとからついてくるよ。\n獅子座：希望への気持ちがたかまる日。交流して広げていこう。\n乙女座：細かさが武器になる日。説明は簡潔にすると◎。\n天秤座：自分の軸を優先しよう。流れを俯瞰する意識が◎。\n蠍　座：内側の本音が次の選択を導いてくる。愛が大事よ。\n射手座：深めつつ、広げていける日。楽しくやろう。\n山羊座：現実的な選択が未来を確実に動かしていく。\n水瓶座：創造性が高まっていく。今あるものを大切に。\n魚　座：優しさの向け先に「自分」も入れてあげること。",
+          "text_length": 331,
+          "first_line": "《4/21》",
+          "newline_count": 12,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "image",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 44,
+            "replies": 1,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 11000
+          },
+          "pseudo_er": 0.004273,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:12:25.900085+09:00",
+              "metrics": {
+                "likes": 44,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.004273
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@anna_hoshiyomi",
-      "last_fetched": "2026-04-20T16:29:12.162680+09:00",
+      "last_fetched": "2026-04-21T00:12:25.900085+09:00",
       "follower_count": 11000
     },
     "megumi.horoscope": {
@@ -10326,6 +10720,16 @@
                 "views": null
               },
               "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:33.603297+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
             }
           ]
         },
@@ -10592,6 +10996,16 @@
                 "views": null
               },
               "pseudo_er": 0.001076
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:33.603297+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.001076
             }
           ]
         },
@@ -10654,6 +11068,16 @@
                 "views": null
               },
               "pseudo_er": 0.005382
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:33.603297+09:00",
+              "metrics": {
+                "likes": 5,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.005382
             }
           ]
         },
@@ -10696,12 +11120,22 @@
                 "views": null
               },
               "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:33.603297+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@megumi.horoscope",
-      "last_fetched": "2026-04-20T16:29:20.127240+09:00",
+      "last_fetched": "2026-04-21T00:12:33.603297+09:00",
       "follower_count": 929
     },
     "mayumicolorful": {
@@ -11813,6 +12247,16 @@
                 "views": null
               },
               "pseudo_er": 0.009278
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:41.292067+09:00",
+              "metrics": {
+                "likes": 9,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.009278
             }
           ]
         },
@@ -11905,6 +12349,16 @@
                 "views": null
               },
               "pseudo_er": 0.013402
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:41.292067+09:00",
+              "metrics": {
+                "likes": 13,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.013402
             }
           ]
         },
@@ -11989,6 +12443,16 @@
                 "views": null
               },
               "pseudo_er": 0.021649
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:41.292067+09:00",
+              "metrics": {
+                "likes": 21,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.021649
             }
           ]
         },
@@ -12012,7 +12476,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 4,
+            "likes": 6,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -12020,7 +12484,7 @@
           "account_snapshot": {
             "follower_count": 968
           },
-          "pseudo_er": 0.004124,
+          "pseudo_er": 0.006186,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -12055,12 +12519,22 @@
                 "views": null
               },
               "pseudo_er": 0.004124
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:41.292067+09:00",
+              "metrics": {
+                "likes": 6,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.006186
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@mayumicolorful",
-      "last_fetched": "2026-04-20T16:29:28.103682+09:00",
+      "last_fetched": "2026-04-21T00:12:41.292067+09:00",
       "follower_count": 970
     },
     "mipomei": {
@@ -12177,6 +12651,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:29:35.865609+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.012461
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:49.029048+09:00",
               "metrics": {
                 "likes": 4,
                 "replies": 0,
@@ -12527,6 +13011,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:29:35.865609+09:00",
+              "metrics": {
+                "likes": 5,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.031153
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:49.029048+09:00",
               "metrics": {
                 "likes": 5,
                 "replies": 0,
@@ -13054,6 +13548,16 @@
                 "views": null
               },
               "pseudo_er": 0.006231
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:49.029048+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.006231
             }
           ]
         },
@@ -13149,6 +13653,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:29:35.865609+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.006231
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:49.029048+09:00",
               "metrics": {
                 "likes": 2,
                 "replies": 0,
@@ -13300,6 +13814,16 @@
                 "views": null
               },
               "pseudo_er": 0.018692
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:49.029048+09:00",
+              "metrics": {
+                "likes": 6,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.018692
             }
           ]
         },
@@ -13347,7 +13871,7 @@
         }
       ],
       "url": "https://www.threads.com/@mipomei",
-      "last_fetched": "2026-04-20T16:29:35.865609+09:00",
+      "last_fetched": "2026-04-21T00:12:49.029048+09:00",
       "follower_count": 321
     },
     "hina.tesou": {
@@ -13368,7 +13892,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 66,
+            "likes": 71,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -13376,7 +13900,7 @@
           "account_snapshot": {
             "follower_count": 6873
           },
-          "pseudo_er": 0.009117,
+          "pseudo_er": 0.009751,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -13471,6 +13995,16 @@
                 "views": null
               },
               "pseudo_er": 0.009117
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:57.069884+09:00",
+              "metrics": {
+                "likes": 71,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.009751
             }
           ]
         },
@@ -15344,15 +15878,15 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 184,
-            "replies": 2,
+            "likes": 258,
+            "replies": 3,
             "reposts": 1,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 7239
           },
-          "pseudo_er": 0.026937,
+          "pseudo_er": 0.037358,
           "classification": {
             "hook_category": "開運日時事系",
             "structure": null
@@ -15367,6 +15901,16 @@
                 "views": null
               },
               "pseudo_er": 0.026937
+            },
+            {
+              "fetched_at": "2026-04-21T00:12:57.069884+09:00",
+              "metrics": {
+                "likes": 258,
+                "replies": 3,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.037358
             }
           ]
         },
@@ -15537,11 +16081,95 @@
               "pseudo_er": 0.003592
             }
           ]
+        },
+        {
+          "post_id": "DXWf4jYEr0T",
+          "account_handle": "hina.tesou",
+          "url": "https://www.threads.com/@hina.tesou/post/DXWf4jYEr0T",
+          "posted_at": "2026-04-20T11:18:39.000Z",
+          "fetched_at": "2026-04-21T00:12:57.069884+09:00",
+          "text": "嘘は言いません。\n素通りした人以外\n88万ほどの臨時収入が入ってきます\n大事に使ってね🐻‍❄️🌸\n6,831",
+          "text_length": 54,
+          "first_line": "嘘は言いません。",
+          "newline_count": 4,
+          "emoji_count": 3,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "image",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 6831,
+            "replies": 160,
+            "reposts": 2,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 7281
+          },
+          "pseudo_er": 1.005494,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:12:57.069884+09:00",
+              "metrics": {
+                "likes": 6831,
+                "replies": 160,
+                "reposts": 2,
+                "views": null
+              },
+              "pseudo_er": 1.005494
+            }
+          ]
+        },
+        {
+          "post_id": "DXWfprVEgzg",
+          "account_handle": "hina.tesou",
+          "url": "https://www.threads.com/@hina.tesou/post/DXWfprVEgzg",
+          "posted_at": "2026-04-20T11:16:37.000Z",
+          "fetched_at": "2026-04-21T00:12:57.069884+09:00",
+          "text": "4月ラスト10日、超超超超超開運が始まります🐻‍❄️🌸",
+          "text_length": 27,
+          "first_line": "4月ラスト10日、超超超超超開運が始まります🐻‍❄️🌸",
+          "newline_count": 0,
+          "emoji_count": 3,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 53,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 7281
+          },
+          "pseudo_er": 0.007279,
+          "classification": {
+            "hook_category": "数字具体性系",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:12:57.069884+09:00",
+              "metrics": {
+                "likes": 53,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.007279
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@hina.tesou",
-      "last_fetched": "2026-04-20T16:29:43.689453+09:00",
-      "follower_count": 7239
+      "last_fetched": "2026-04-21T00:12:57.069884+09:00",
+      "follower_count": 7281
     },
     "feliceacco": {
       "posts": [
@@ -15569,7 +16197,7 @@
           "account_snapshot": {
             "follower_count": 3302
           },
-          "pseudo_er": 0.002724,
+          "pseudo_er": 0.002722,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -15664,6 +16292,16 @@
                 "views": null
               },
               "pseudo_er": 0.002724
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:04.745108+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 3,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.002722
             }
           ]
         },
@@ -15683,7 +16321,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 2,
+            "likes": 3,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -15691,7 +16329,7 @@
           "account_snapshot": {
             "follower_count": 3302
           },
-          "pseudo_er": 0.000605,
+          "pseudo_er": 0.000907,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -15786,6 +16424,16 @@
                 "views": null
               },
               "pseudo_er": 0.000605
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:04.745108+09:00",
+              "metrics": {
+                "likes": 3,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.000907
             }
           ]
         },
@@ -15821,7 +16469,7 @@
           "account_snapshot": {
             "follower_count": 3302
           },
-          "pseudo_er": 0.000908,
+          "pseudo_er": 0.000907,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -15916,6 +16564,16 @@
                 "views": null
               },
               "pseudo_er": 0.000908
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:04.745108+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.000907
             }
           ]
         },
@@ -16765,13 +17423,23 @@
                 "views": null
               },
               "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:04.745108+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@feliceacco",
-      "last_fetched": "2026-04-20T16:29:51.345544+09:00",
-      "follower_count": 3304
+      "last_fetched": "2026-04-21T00:13:04.745108+09:00",
+      "follower_count": 3306
     },
     "uranai.no1": {
       "posts": [
@@ -16894,6 +17562,16 @@
                 "views": null
               },
               "pseudo_er": 0.117647
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:12.842124+09:00",
+              "metrics": {
+                "likes": 14,
+                "replies": 1,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.117647
             }
           ]
         },
@@ -17009,6 +17687,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:30:00.604021+09:00",
+              "metrics": {
+                "likes": 10,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.080214
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:12.842124+09:00",
               "metrics": {
                 "likes": 10,
                 "replies": 0,
@@ -18134,6 +18822,16 @@
                 "views": null
               },
               "pseudo_er": 0.005348
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:12.842124+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.005348
             }
           ]
         },
@@ -18216,6 +18914,16 @@
                 "views": null
               },
               "pseudo_er": 0.005348
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:12.842124+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.005348
             }
           ]
         },
@@ -18288,12 +18996,22 @@
                 "views": null
               },
               "pseudo_er": 0.005348
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:12.842124+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.005348
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@uranai.no1",
-      "last_fetched": "2026-04-20T16:30:00.604021+09:00",
+      "last_fetched": "2026-04-21T00:13:12.842124+09:00",
       "follower_count": 187
     },
     "divinustathumi": {
@@ -19491,6 +20209,16 @@
                 "views": null
               },
               "pseudo_er": 0.006757
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:20.684453+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.006757
             }
           ]
         },
@@ -19593,6 +20321,16 @@
                 "views": null
               },
               "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:20.684453+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
             }
           ]
         },
@@ -19616,7 +20354,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 1,
+            "likes": 2,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -19624,7 +20362,7 @@
           "account_snapshot": {
             "follower_count": 148
           },
-          "pseudo_er": 0.006757,
+          "pseudo_er": 0.013514,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -19639,6 +20377,16 @@
                 "views": null
               },
               "pseudo_er": 0.006757
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:20.684453+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.013514
             }
           ]
         },
@@ -19685,12 +20433,22 @@
                 "views": null
               },
               "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:20.684453+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@divinustathumi",
-      "last_fetched": "2026-04-20T16:30:08.342212+09:00",
+      "last_fetched": "2026-04-21T00:13:20.684453+09:00",
       "follower_count": 148
     },
     "vocemagazine": {
@@ -21261,7 +22019,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 0,
+            "likes": 3,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -21269,7 +22027,7 @@
           "account_snapshot": {
             "follower_count": 90000
           },
-          "pseudo_er": 0.0,
+          "pseudo_er": 3.3e-05,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -21284,6 +22042,16 @@
                 "views": null
               },
               "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:28.619381+09:00",
+              "metrics": {
+                "likes": 3,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 3.3e-05
             }
           ]
         },
@@ -21303,7 +22071,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 3,
+            "likes": 4,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -21311,7 +22079,7 @@
           "account_snapshot": {
             "follower_count": 90000
           },
-          "pseudo_er": 3.3e-05,
+          "pseudo_er": 4.4e-05,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -21326,6 +22094,16 @@
                 "views": null
               },
               "pseudo_er": 3.3e-05
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:28.619381+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 4.4e-05
             }
           ]
         },
@@ -21347,7 +22125,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 1,
+            "likes": 2,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -21355,7 +22133,7 @@
           "account_snapshot": {
             "follower_count": 90000
           },
-          "pseudo_er": 1.1e-05,
+          "pseudo_er": 2.2e-05,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -21370,12 +22148,64 @@
                 "views": null
               },
               "pseudo_er": 1.1e-05
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:28.619381+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 2.2e-05
+            }
+          ]
+        },
+        {
+          "post_id": "DXWMnITEiYT",
+          "account_handle": "vocemagazine",
+          "url": "https://www.threads.com/@vocemagazine/post/DXWMnITEiYT",
+          "posted_at": "2026-04-20T08:30:20.000Z",
+          "fetched_at": "2026-04-21T00:13:28.619381+09:00",
+          "text": "プレゼント\n＼プレゼント🎁／\n「ミノンUVマイルドジェル」を5名様にプレゼント！\nVOCEウェブサイトからアンケートにご協力いただくと、プレゼントが抽選で当たります💫\ni-voce.jp/feed…\nプレゼント\ni-voce.jp\n敏感肌向けの日焼け止め「ミノンUVマイルドジェル」を5名様にプレゼント！【プレゼント＆クーポン】｜美容メディアVOCE（ヴォーチェ）",
+          "text_length": 182,
+          "first_line": "プレゼント",
+          "newline_count": 7,
+          "emoji_count": 2,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "image",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 4,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 90000
+          },
+          "pseudo_er": 4.4e-05,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:13:28.619381+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 4.4e-05
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@vocemagazine",
-      "last_fetched": "2026-04-20T16:30:16.104157+09:00",
+      "last_fetched": "2026-04-21T00:13:28.619381+09:00",
       "follower_count": 90000
     },
     "bitekicom": {
@@ -22778,15 +23608,15 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 71,
+            "likes": 142,
             "replies": 0,
-            "reposts": 7,
+            "reposts": 10,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 120000
           },
-          "pseudo_er": 0.000883,
+          "pseudo_er": 0.0016,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -22801,6 +23631,16 @@
                 "views": null
               },
               "pseudo_er": 0.000883
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:36.345518+09:00",
+              "metrics": {
+                "likes": 142,
+                "replies": 0,
+                "reposts": 10,
+                "views": null
+              },
+              "pseudo_er": 0.0016
             }
           ]
         },
@@ -22826,15 +23666,15 @@
           "media_type": "video",
           "is_thread_root": true,
           "metrics": {
-            "likes": 62,
+            "likes": 107,
             "replies": 0,
-            "reposts": 7,
+            "reposts": 9,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 120000
           },
-          "pseudo_er": 0.000808,
+          "pseudo_er": 0.001267,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -22849,6 +23689,16 @@
                 "views": null
               },
               "pseudo_er": 0.000808
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:36.345518+09:00",
+              "metrics": {
+                "likes": 107,
+                "replies": 0,
+                "reposts": 9,
+                "views": null
+              },
+              "pseudo_er": 0.001267
             }
           ]
         },
@@ -22868,7 +23718,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 16,
+            "likes": 27,
             "replies": 1,
             "reposts": 0,
             "views": null
@@ -22876,7 +23726,7 @@
           "account_snapshot": {
             "follower_count": 120000
           },
-          "pseudo_er": 0.000158,
+          "pseudo_er": 0.00025,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_B"
@@ -22891,6 +23741,16 @@
                 "views": null
               },
               "pseudo_er": 0.000158
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:36.345518+09:00",
+              "metrics": {
+                "likes": 27,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.00025
             }
           ]
         },
@@ -22910,7 +23770,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 5,
+            "likes": 7,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -22918,7 +23778,7 @@
           "account_snapshot": {
             "follower_count": 120000
           },
-          "pseudo_er": 4.2e-05,
+          "pseudo_er": 5.8e-05,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -22933,12 +23793,64 @@
                 "views": null
               },
               "pseudo_er": 4.2e-05
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:36.345518+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 5.8e-05
+            }
+          ]
+        },
+        {
+          "post_id": "DXWd2lzjsgy",
+          "account_handle": "bitekicom",
+          "url": "https://www.threads.com/@bitekicom/post/DXWd2lzjsgy",
+          "posted_at": "2026-04-20T11:00:55.000Z",
+          "fetched_at": "2026-04-21T00:13:36.345518+09:00",
+          "text": "StarGlow\n『美的』の ＃STARGLOW 連載はもうチェックした？💫\n第2回はGOICHIを深堀り♡\n直筆のプロフィールを公開🖋🌟",
+          "text_length": 69,
+          "first_line": "StarGlow",
+          "newline_count": 3,
+          "emoji_count": 4,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "image",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 530,
+            "replies": 1,
+            "reposts": 49,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 120000
+          },
+          "pseudo_er": 0.006483,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:13:36.345518+09:00",
+              "metrics": {
+                "likes": 530,
+                "replies": 1,
+                "reposts": 49,
+                "views": null
+              },
+              "pseudo_er": 0.006483
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@bitekicom",
-      "last_fetched": "2026-04-20T16:30:23.824663+09:00",
+      "last_fetched": "2026-04-21T00:13:36.345518+09:00",
       "follower_count": 120000
     },
     "hatarakupyon": {
@@ -23055,6 +23967,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:30:31.831868+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.002609
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:44.199524+09:00",
               "metrics": {
                 "likes": 4,
                 "replies": 0,
@@ -23184,6 +24106,16 @@
                 "views": null
               },
               "pseudo_er": 0.000652
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:44.199524+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.000652
             }
           ]
         },
@@ -23299,6 +24231,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:30:31.831868+09:00",
+              "metrics": {
+                "likes": 10,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.00848
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:44.199524+09:00",
               "metrics": {
                 "likes": 10,
                 "replies": 1,
@@ -23428,6 +24370,16 @@
                 "views": null
               },
               "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:44.199524+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
             }
           ]
         },
@@ -23543,6 +24495,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:30:31.831868+09:00",
+              "metrics": {
+                "likes": 12,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.007828
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:44.199524+09:00",
               "metrics": {
                 "likes": 12,
                 "replies": 0,
@@ -24023,7 +24985,7 @@
         }
       ],
       "url": "https://www.threads.com/@hatarakupyon",
-      "last_fetched": "2026-04-20T16:30:31.831868+09:00",
+      "last_fetched": "2026-04-21T00:13:44.199524+09:00",
       "follower_count": 1533
     },
     "hozuki_yorino": {
@@ -24147,6 +25109,16 @@
                 "views": null
               },
               "pseudo_er": 0.072072
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:52.363617+09:00",
+              "metrics": {
+                "likes": 21,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.072072
             }
           ]
         },
@@ -24262,6 +25234,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:30:39.641276+09:00",
+              "metrics": {
+                "likes": 17,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.051051
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:52.363617+09:00",
               "metrics": {
                 "likes": 17,
                 "replies": 0,
@@ -25435,6 +26417,16 @@
                 "views": null
               },
               "pseudo_er": 0.036036
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:52.363617+09:00",
+              "metrics": {
+                "likes": 9,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.036036
             }
           ]
         },
@@ -25507,6 +26499,16 @@
                 "views": null
               },
               "pseudo_er": 0.006006
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:52.363617+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.006006
             }
           ]
         },
@@ -25526,7 +26528,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 4,
+            "likes": 6,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -25534,7 +26536,7 @@
           "account_snapshot": {
             "follower_count": 332
           },
-          "pseudo_er": 0.012012,
+          "pseudo_er": 0.018018,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -25569,6 +26571,16 @@
                 "views": null
               },
               "pseudo_er": 0.012012
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:52.363617+09:00",
+              "metrics": {
+                "likes": 6,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.018018
             }
           ]
         },
@@ -25588,7 +26600,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 1,
+            "likes": 7,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -25596,7 +26608,7 @@
           "account_snapshot": {
             "follower_count": 333
           },
-          "pseudo_er": 0.003003,
+          "pseudo_er": 0.021021,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -25611,12 +26623,22 @@
                 "views": null
               },
               "pseudo_er": 0.003003
+            },
+            {
+              "fetched_at": "2026-04-21T00:13:52.363617+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.021021
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@hozuki_yorino",
-      "last_fetched": "2026-04-20T16:30:39.641276+09:00",
+      "last_fetched": "2026-04-21T00:13:52.363617+09:00",
       "follower_count": 333
     },
     "miko.reishi": {
@@ -25637,7 +26659,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 115,
+            "likes": 117,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -25645,7 +26667,7 @@
           "account_snapshot": {
             "follower_count": 20000
           },
-          "pseudo_er": 0.00575,
+          "pseudo_er": 0.00585,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -25740,6 +26762,16 @@
                 "views": null
               },
               "pseudo_er": 0.00575
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+              "metrics": {
+                "likes": 117,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.00585
             }
           ]
         },
@@ -28472,10 +29504,346 @@
               "pseudo_er": 0.00135
             }
           ]
+        },
+        {
+          "post_id": "DXW5ONWGO9a",
+          "account_handle": "miko.reishi",
+          "url": "https://www.threads.com/@miko.reishi/post/DXW5ONWGO9a",
+          "posted_at": "2026-04-20T15:00:09.000Z",
+          "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+          "text": "ブルズゲート到来！\nまさかまだ起きて、スマホ見てる人おる？\nもし起きてる人がいましたら超幸運どす。\n2026/4/21。一年に一度の神吉日×天恩日×ブルズゲートの重なる特別な日どす。\n精霊が集結する時間の\n0:00-1:59の短い間だけ。\n「🙏」を置いてくれた方へ\n占い歴17年以上の私が視えたまま、\n正直にお伝えしますえ。\n早い人だと7分後から変わり始めますえ💫",
+          "text_length": 182,
+          "first_line": "ブルズゲート到来！",
+          "newline_count": 9,
+          "emoji_count": 2,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 18,
+            "replies": 8,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 20000
+          },
+          "pseudo_er": 0.0021,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+              "metrics": {
+                "likes": 18,
+                "replies": 8,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0021
+            }
+          ]
+        },
+        {
+          "post_id": "DXW5PEeGNtj",
+          "account_handle": "miko.reishi",
+          "url": "https://www.threads.com/@miko.reishi/post/DXW5PEeGNtj",
+          "posted_at": "2026-04-20T15:00:16.000Z",
+          "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+          "text": "たくさんのご依頼ありがとうございます🪭\nご希望の方は、ウチ、神子をフォローして、プロフィールのリンクよりお越しくださいな⛩️",
+          "text_length": 62,
+          "first_line": "たくさんのご依頼ありがとうございます🪭",
+          "newline_count": 1,
+          "emoji_count": 1,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 0,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 20000
+          },
+          "pseudo_er": 0.0,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
+            }
+          ]
+        },
+        {
+          "post_id": "DXWre26krhl",
+          "account_handle": "miko.reishi",
+          "url": "https://www.threads.com/@miko.reishi/post/DXWre26krhl",
+          "posted_at": "2026-04-20T13:00:05.000Z",
+          "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+          "text": "ええか、よう聞いておくれやす。\nあんさんの魂をピカピカに磨いて、人生を根っこからひっくり返す「魔法の言霊（ことだま）」、こっそり教えときますえ。\n【自分を極上に満たす魔法の言霊】\n1.「ウチは、そのままでええんやわぁ」（自分を縛る呪いを解く言霊どす）\n2.「おおきに、ありがとうさん」（ええご縁だけを引き寄せる合言葉）\n3.「すべては、ええ塩梅（あんばい）」（流れに身を任せ、不安を手放す）\n4.「自分を許します」（過去の失敗を水に流し、今を生きる）\n5.「ウチ、ようやっとるわぁ」（誰よりも自分を褒め、労う）\n6.「遠慮のう、受け取ります」（幸運の取りこぼしを防ぐ器の言葉）\n7.「面白うなってきよった」（ピンチを最高の遊びに変える呪文）\n8.「堪忍え、もう我慢しまへん」（自分の心を守る優しい結界）\nどうえ？ 口に出すだけで、心がふんわり軽うなるやろ？\n言葉はな…",
+          "text_length": 384,
+          "first_line": "ええか、よう聞いておくれやす。",
+          "newline_count": 12,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 11,
+            "replies": 4,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 20000
+          },
+          "pseudo_er": 0.00115,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+              "metrics": {
+                "likes": 11,
+                "replies": 4,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.00115
+            }
+          ]
+        },
+        {
+          "post_id": "DXWrf1TErnB",
+          "account_handle": "miko.reishi",
+          "url": "https://www.threads.com/@miko.reishi/post/DXWrf1TErnB",
+          "posted_at": "2026-04-20T13:00:11.000Z",
+          "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+          "text": "あんさんの現実を創る、一番身近で最強の魔法なんよ。\nこの言霊で、あんさんの魂の器をピカピカに磨き上げたら、次はいよいよご褒美を受け取る番やで。\nその綺麗になった器に、神さんがどんな『特大のお宝』を授けてくれはるんか。\nウチが【無料鑑定】で、特別に視たげるさかい。\n「ウチ、もう遠慮せんと幸せになるわ！」って覚悟が決まったお人は、\nこの投稿に「🪷」を置いて、魂を磨く浄化の儀式を完了させよしな。\n儀式が終わったら、プロフのリンクからいつでもウチのところにおいでやす。\nあんさんが本来受け取るべき『極上のお宝の地図』、ウチがしっかりお渡ししますさかいね🪭✨",
+          "text_length": 276,
+          "first_line": "あんさんの現実を創る、一番身近で最強の魔法なんよ。",
+          "newline_count": 7,
+          "emoji_count": 1,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 6,
+            "replies": 1,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 20000
+          },
+          "pseudo_er": 0.00045,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+              "metrics": {
+                "likes": 6,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.00045
+            }
+          ]
+        },
+        {
+          "post_id": "DXWdwP1Em91",
+          "account_handle": "miko.reishi",
+          "url": "https://www.threads.com/@miko.reishi/post/DXWdwP1Em91",
+          "posted_at": "2026-04-20T11:00:08.000Z",
+          "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+          "text": "運がいい。運がいい。運がいい。\n運がいい。運がいい。運がいい。\n運がいい。運がいい。運がいい。\nあんさんは絶対、運がいい！！！",
+          "text_length": 63,
+          "first_line": "運がいい。運がいい。運がいい。",
+          "newline_count": 3,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 104,
+            "replies": 14,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 20000
+          },
+          "pseudo_er": 0.0073,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+              "metrics": {
+                "likes": 104,
+                "replies": 14,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0073
+            }
+          ]
+        },
+        {
+          "post_id": "DXWdxRjErlz",
+          "account_handle": "miko.reishi",
+          "url": "https://www.threads.com/@miko.reishi/post/DXWdxRjErlz",
+          "posted_at": "2026-04-20T11:00:16.000Z",
+          "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+          "text": "うちをフォローしといてな。\nここで繋がった人から、一気に流れ変わる。\n早い人は24時間以内、\n信じられん展開が重なりますえ。\nずっと止まっとったあのこと、\nやっと動き出しますえ。\nプロフィールのリンクから登録したら\n特別なプレゼントがあるからね",
+          "text_length": 122,
+          "first_line": "うちをフォローしといてな。",
+          "newline_count": 7,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 25,
+            "replies": 1,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 20000
+          },
+          "pseudo_er": 0.0014,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+              "metrics": {
+                "likes": 25,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0014
+            }
+          ]
+        },
+        {
+          "post_id": "DXWQCU7kmfp",
+          "account_handle": "miko.reishi",
+          "url": "https://www.threads.com/@miko.reishi/post/DXWQCU7kmfp",
+          "posted_at": "2026-04-20T09:00:16.000Z",
+          "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+          "text": "2本の指でくっつけてみて🪭\nピッタリくっつけられた人だけ、\nとんでもない幸運を引き寄せれるんよ✨\n1,052",
+          "text_length": 54,
+          "first_line": "2本の指でくっつけてみて🪭",
+          "newline_count": 3,
+          "emoji_count": 1,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "image",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 1052,
+            "replies": 36,
+            "reposts": 1,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 20000
+          },
+          "pseudo_er": 0.05825,
+          "classification": {
+            "hook_category": "数字具体性系",
+            "structure": "structure_A"
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+              "metrics": {
+                "likes": 1052,
+                "replies": 36,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.05825
+            }
+          ]
+        },
+        {
+          "post_id": "DXWQDVokoqe",
+          "account_handle": "miko.reishi",
+          "url": "https://www.threads.com/@miko.reishi/post/DXWQDVokoqe",
+          "posted_at": "2026-04-20T09:00:21.000Z",
+          "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+          "text": "うちをフォローしといてな。\nここで繋がった人から、一気に流れ変わる。\n早い人は24時間以内、\n信じられん展開が重なりますえ。\nずっと止まっとったあのこと、\nやっと動き出しますえ。\nプロフィールのリンクから登録したら\n特別なプレゼントがあるからね",
+          "text_length": 122,
+          "first_line": "うちをフォローしといてな。",
+          "newline_count": 7,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 22,
+            "replies": 1,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 20000
+          },
+          "pseudo_er": 0.00125,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:00.399327+09:00",
+              "metrics": {
+                "likes": 22,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.00125
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@miko.reishi",
-      "last_fetched": "2026-04-20T16:30:47.489235+09:00",
+      "last_fetched": "2026-04-21T00:14:00.399327+09:00",
       "follower_count": 20000
     },
     "yoshimigram0926": {
@@ -28598,6 +29966,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:30:55.221083+09:00",
+              "metrics": {
+                "likes": 5,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.004036
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:08.331836+09:00",
               "metrics": {
                 "likes": 5,
                 "replies": 0,
@@ -28735,6 +30113,16 @@
                 "views": null
               },
               "pseudo_er": 0.00565
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:08.331836+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.00565
             }
           ]
         },
@@ -28865,6 +30253,16 @@
                 "views": null
               },
               "pseudo_er": 0.001614
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:08.331836+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.001614
             }
           ]
         },
@@ -28982,12 +30380,22 @@
                 "views": null
               },
               "pseudo_er": 0.000807
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:08.331836+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.000807
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@yoshimigram0926",
-      "last_fetched": "2026-04-20T16:30:55.221083+09:00",
+      "last_fetched": "2026-04-21T00:14:08.331836+09:00",
       "follower_count": 1239
     },
     "inariuranai": {
@@ -29008,7 +30416,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 98,
+            "likes": 99,
             "replies": 0,
             "reposts": 8,
             "views": null
@@ -29016,7 +30424,7 @@
           "account_snapshot": {
             "follower_count": 9743
           },
-          "pseudo_er": 0.014144,
+          "pseudo_er": 0.014249,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -29111,6 +30519,16 @@
                 "views": null
               },
               "pseudo_er": 0.014144
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:16.768788+09:00",
+              "metrics": {
+                "likes": 99,
+                "replies": 0,
+                "reposts": 8,
+                "views": null
+              },
+              "pseudo_er": 0.014249
             }
           ]
         },
@@ -30451,11 +31869,137 @@
               "pseudo_er": 0.013119
             }
           ]
+        },
+        {
+          "post_id": "DXWqixek8eT",
+          "account_handle": "inariuranai",
+          "url": "https://www.threads.com/@inariuranai/post/DXWqixek8eT",
+          "posted_at": "2026-04-20T12:51:48.000Z",
+          "fetched_at": "2026-04-21T00:14:16.768788+09:00",
+          "text": "あなたのねがいが\nかないますように",
+          "text_length": 17,
+          "first_line": "あなたのねがいが",
+          "newline_count": 1,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "image",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 368,
+            "replies": 11,
+            "reposts": 2,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 9755
+          },
+          "pseudo_er": 0.042132,
+          "classification": {
+            "hook_category": "その他",
+            "structure": "structure_B"
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:16.768788+09:00",
+              "metrics": {
+                "likes": 368,
+                "replies": 11,
+                "reposts": 2,
+                "views": null
+              },
+              "pseudo_er": 0.042132
+            }
+          ]
+        },
+        {
+          "post_id": "DXWfH8Gky21",
+          "account_handle": "inariuranai",
+          "url": "https://www.threads.com/@inariuranai/post/DXWfH8Gky21",
+          "posted_at": "2026-04-20T11:12:01.000Z",
+          "fetched_at": "2026-04-21T00:14:16.768788+09:00",
+          "text": "整えた者が全て運が良いとは限らない。\nしかし、幸運な者は皆すべからず整えている。",
+          "text_length": 40,
+          "first_line": "整えた者が全て運が良いとは限らない。",
+          "newline_count": 1,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 129,
+            "replies": 3,
+            "reposts": 2,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 9755
+          },
+          "pseudo_er": 0.015172,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:16.768788+09:00",
+              "metrics": {
+                "likes": 129,
+                "replies": 3,
+                "reposts": 2,
+                "views": null
+              },
+              "pseudo_er": 0.015172
+            }
+          ]
+        },
+        {
+          "post_id": "DXWL0RrkwCO",
+          "account_handle": "inariuranai",
+          "url": "https://www.threads.com/@inariuranai/post/DXWL0RrkwCO",
+          "posted_at": "2026-04-20T08:23:19.000Z",
+          "fetched_at": "2026-04-21T00:14:16.768788+09:00",
+          "text": "時々”親ガチャ”と言う言葉を目にしますが、\nお金持ちの親よりも社会的地位がある親よりも\n『正しい倫理・道徳感を教えてくれる親』こそが\n間違いなくぶっちぎりのSSRランクなんです。",
+          "text_length": 89,
+          "first_line": "時々”親ガチャ”と言う言葉を目にしますが、",
+          "newline_count": 3,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 142,
+            "replies": 6,
+            "reposts": 1,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 9755
+          },
+          "pseudo_er": 0.016914,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:16.768788+09:00",
+              "metrics": {
+                "likes": 142,
+                "replies": 6,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.016914
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@inariuranai",
-      "last_fetched": "2026-04-20T16:31:03.156309+09:00",
-      "follower_count": 9757
+      "last_fetched": "2026-04-21T00:14:16.768788+09:00",
+      "follower_count": 9755
     },
     "mikoto_nanase": {
       "posts": [
@@ -30571,6 +32115,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:31:10.925618+09:00",
+              "metrics": {
+                "likes": 1,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.001095
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:24.737124+09:00",
               "metrics": {
                 "likes": 1,
                 "replies": 0,
@@ -32511,15 +34065,15 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 1,
-            "replies": 1,
+            "likes": 3,
+            "replies": 2,
             "reposts": 0,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 913
           },
-          "pseudo_er": 0.004381,
+          "pseudo_er": 0.009858,
           "classification": {
             "hook_category": "疑問問いかけ系",
             "structure": null
@@ -32534,6 +34088,16 @@
                 "views": null
               },
               "pseudo_er": 0.004381
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:24.737124+09:00",
+              "metrics": {
+                "likes": 3,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.009858
             }
           ]
         },
@@ -32569,6 +34133,16 @@
           "snapshots": [
             {
               "fetched_at": "2026-04-20T16:31:10.925618+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:24.737124+09:00",
               "metrics": {
                 "likes": 0,
                 "replies": 0,
@@ -32620,10 +34194,52 @@
               "pseudo_er": 0.008762
             }
           ]
+        },
+        {
+          "post_id": "DXWrqvOE11n",
+          "account_handle": "mikoto_nanase",
+          "url": "https://www.threads.com/@mikoto_nanase/post/DXWrqvOE11n",
+          "posted_at": "2026-04-20T13:01:38.000Z",
+          "fetched_at": "2026-04-21T00:14:24.737124+09:00",
+          "text": "前世占いしたい人いる？",
+          "text_length": 11,
+          "first_line": "前世占いしたい人いる？",
+          "newline_count": 0,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 4,
+            "replies": 2,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 913
+          },
+          "pseudo_er": 0.010953,
+          "classification": {
+            "hook_category": "疑問問いかけ系",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:24.737124+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.010953
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@mikoto_nanase",
-      "last_fetched": "2026-04-20T16:31:10.925618+09:00",
+      "last_fetched": "2026-04-21T00:14:24.737124+09:00",
       "follower_count": 913
     },
     "yataagarasuu": {
@@ -33694,7 +35310,7 @@
         }
       ],
       "url": "https://www.threads.com/@yataagarasuu",
-      "last_fetched": "2026-04-20T16:31:18.602460+09:00",
+      "last_fetched": "2026-04-21T00:14:32.675705+09:00",
       "follower_count": 2680
     },
     "nagi_goen": {
@@ -34941,7 +36557,7 @@
           "account_snapshot": {
             "follower_count": 5276
           },
-          "pseudo_er": 0.019482,
+          "pseudo_er": 0.019478,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_A"
@@ -34976,6 +36592,16 @@
                 "views": null
               },
               "pseudo_er": 0.019482
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:40.297075+09:00",
+              "metrics": {
+                "likes": 37,
+                "replies": 22,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.019478
             }
           ]
         },
@@ -34995,7 +36621,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 79,
+            "likes": 87,
             "replies": 1,
             "reposts": 3,
             "views": null
@@ -35003,7 +36629,7 @@
           "account_snapshot": {
             "follower_count": 5283
           },
-          "pseudo_er": 0.018347,
+          "pseudo_er": 0.019856,
           "classification": {
             "hook_category": "断言逆張り系",
             "structure": null
@@ -35028,6 +36654,16 @@
                 "views": null
               },
               "pseudo_er": 0.018347
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:40.297075+09:00",
+              "metrics": {
+                "likes": 87,
+                "replies": 1,
+                "reposts": 3,
+                "views": null
+              },
+              "pseudo_er": 0.019856
             }
           ]
         },
@@ -35047,7 +36683,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 33,
+            "likes": 35,
             "replies": 22,
             "reposts": 0,
             "views": null
@@ -35055,7 +36691,7 @@
           "account_snapshot": {
             "follower_count": 5287
           },
-          "pseudo_er": 0.018725,
+          "pseudo_er": 0.0191,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_A"
@@ -35070,13 +36706,65 @@
                 "views": null
               },
               "pseudo_er": 0.018725
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:40.297075+09:00",
+              "metrics": {
+                "likes": 35,
+                "replies": 22,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0191
+            }
+          ]
+        },
+        {
+          "post_id": "DXWr3nTkkBU",
+          "account_handle": "nagi_goen",
+          "url": "https://www.threads.com/@nagi_goen/post/DXWr3nTkkBU",
+          "posted_at": "2026-04-20T13:03:23.000Z",
+          "fetched_at": "2026-04-21T00:14:40.297075+09:00",
+          "text": "私の中で占いは相談者さんとの「共同作業」だと思ってる。悩みを解決した先にどうなりたいか、答えが見つからなければ一緒に考える。私にはみんなが期待するような特別な力があるわけでもないから。みんなの言葉に、言霊に、耳を傾けることしかできない。それでも頼ってくれる人たちがいるから私はやれることを全力でやる。ネット苦手だから遅いけどね。",
+          "text_length": 164,
+          "first_line": "私の中で占いは相談者さんとの「共同作業」だと思ってる。悩みを解決した先にどうなりたいか、答えが見つからなければ一緒に考える。私にはみんなが期待するような特別な力があるわけでもないから。みんなの言葉に、言霊に、耳を傾けることしかできない。それでも頼ってくれる人たちがいるから私はやれることを全力でやる。ネット苦手だから遅いけどね。",
+          "newline_count": 0,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 33,
+            "replies": 4,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 5288
+          },
+          "pseudo_er": 0.00851,
+          "classification": {
+            "hook_category": "その他",
+            "structure": "structure_B"
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:14:40.297075+09:00",
+              "metrics": {
+                "likes": 33,
+                "replies": 4,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.00851
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@nagi_goen",
-      "last_fetched": "2026-04-20T16:31:26.124307+09:00",
-      "follower_count": 5287
+      "last_fetched": "2026-04-21T00:14:40.297075+09:00",
+      "follower_count": 5288
     },
     "resug.fortune": {
       "posts": [
@@ -35104,7 +36792,7 @@
           "account_snapshot": {
             "follower_count": 1064
           },
-          "pseudo_er": 0.022684,
+          "pseudo_er": 0.022642,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -35199,6 +36887,16 @@
                 "views": null
               },
               "pseudo_er": 0.022684
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:48.162053+09:00",
+              "metrics": {
+                "likes": 18,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.022642
             }
           ]
         },
@@ -35226,7 +36924,7 @@
           "account_snapshot": {
             "follower_count": 1064
           },
-          "pseudo_er": 0.02741,
+          "pseudo_er": 0.027358,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -35321,6 +37019,16 @@
                 "views": null
               },
               "pseudo_er": 0.02741
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:48.162053+09:00",
+              "metrics": {
+                "likes": 14,
+                "replies": 5,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.027358
             }
           ]
         },
@@ -35348,7 +37056,7 @@
           "account_snapshot": {
             "follower_count": 1064
           },
-          "pseudo_er": 0.318526,
+          "pseudo_er": 0.317925,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -35443,6 +37151,16 @@
                 "views": null
               },
               "pseudo_er": 0.318526
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:48.162053+09:00",
+              "metrics": {
+                "likes": 59,
+                "replies": 91,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.317925
             }
           ]
         },
@@ -35470,7 +37188,7 @@
           "account_snapshot": {
             "follower_count": 1064
           },
-          "pseudo_er": 0.009452,
+          "pseudo_er": 0.009434,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -35565,6 +37283,16 @@
                 "views": null
               },
               "pseudo_er": 0.009452
+            },
+            {
+              "fetched_at": "2026-04-21T00:14:48.162053+09:00",
+              "metrics": {
+                "likes": 5,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.009434
             }
           ]
         },
@@ -36074,8 +37802,8 @@
         }
       ],
       "url": "https://www.threads.com/@resug.fortune",
-      "last_fetched": "2026-04-20T16:31:33.904741+09:00",
-      "follower_count": 1058
+      "last_fetched": "2026-04-21T00:14:48.162053+09:00",
+      "follower_count": 1060
     },
     "mira_uranai_reishi": {
       "posts": [
@@ -36879,7 +38607,7 @@
         }
       ],
       "url": "https://www.threads.com/@mira_uranai_reishi",
-      "last_fetched": "2026-04-20T16:31:41.657827+09:00",
+      "last_fetched": "2026-04-21T00:14:56.117949+09:00",
       "follower_count": 1379
     },
     "raito.koiuranai": {
@@ -36996,6 +38724,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:31:49.096331+09:00",
+              "metrics": {
+                "likes": 10,
+                "replies": 5,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.02994
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:03.722889+09:00",
               "metrics": {
                 "likes": 10,
                 "replies": 5,
@@ -37125,6 +38863,16 @@
                 "views": null
               },
               "pseudo_er": 0.019162
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:03.722889+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 4,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.019162
             }
           ]
         },
@@ -37247,6 +38995,16 @@
                 "views": null
               },
               "pseudo_er": 0.044311
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:03.722889+09:00",
+              "metrics": {
+                "likes": 31,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.044311
             }
           ]
         },
@@ -37362,6 +39120,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:31:49.096331+09:00",
+              "metrics": {
+                "likes": 5,
+                "replies": 10,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.041916
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:03.722889+09:00",
               "metrics": {
                 "likes": 5,
                 "replies": 10,
@@ -37836,7 +39604,7 @@
         }
       ],
       "url": "https://www.threads.com/@raito.koiuranai",
-      "last_fetched": "2026-04-20T16:31:49.096331+09:00",
+      "last_fetched": "2026-04-21T00:15:03.722889+09:00",
       "follower_count": 835
     },
     "arasa_uranai": {
@@ -37865,7 +39633,7 @@
           "account_snapshot": {
             "follower_count": 2558
           },
-          "pseudo_er": 0.050501,
+          "pseudo_er": 0.050618,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_A"
@@ -37960,6 +39728,16 @@
                 "views": null
               },
               "pseudo_er": 0.050501
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:12.336346+09:00",
+              "metrics": {
+                "likes": 36,
+                "replies": 0,
+                "reposts": 19,
+                "views": null
+              },
+              "pseudo_er": 0.050618
             }
           ]
         },
@@ -39503,7 +41281,7 @@
           "account_snapshot": {
             "follower_count": 2595
           },
-          "pseudo_er": 0.011951,
+          "pseudo_er": 0.011978,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -39528,6 +41306,16 @@
                 "views": null
               },
               "pseudo_er": 0.011951
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:12.336346+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 8,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.011978
             }
           ]
         },
@@ -39555,7 +41343,7 @@
           "account_snapshot": {
             "follower_count": 2595
           },
-          "pseudo_er": 0.002313,
+          "pseudo_er": 0.002318,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -39580,6 +41368,16 @@
                 "views": null
               },
               "pseudo_er": 0.002313
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:12.336346+09:00",
+              "metrics": {
+                "likes": 6,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.002318
             }
           ]
         },
@@ -39607,7 +41405,7 @@
           "account_snapshot": {
             "follower_count": 2595
           },
-          "pseudo_er": 0.018504,
+          "pseudo_er": 0.018547,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -39632,13 +41430,23 @@
                 "views": null
               },
               "pseudo_er": 0.018504
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:12.336346+09:00",
+              "metrics": {
+                "likes": 9,
+                "replies": 13,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.018547
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@arasa_uranai",
-      "last_fetched": "2026-04-20T16:31:57.386736+09:00",
-      "follower_count": 2594
+      "last_fetched": "2026-04-21T00:15:12.336346+09:00",
+      "follower_count": 2588
     },
     "yuiha.ppy": {
       "posts": [
@@ -39658,7 +41466,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 262,
+            "likes": 272,
             "replies": 2,
             "reposts": 0,
             "views": null
@@ -39666,7 +41474,7 @@
           "account_snapshot": {
             "follower_count": 2626
           },
-          "pseudo_er": 0.098747,
+          "pseudo_er": 0.10172,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -39761,6 +41569,16 @@
                 "views": null
               },
               "pseudo_er": 0.098747
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+              "metrics": {
+                "likes": 272,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.10172
             }
           ]
         },
@@ -42108,15 +43926,15 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 14,
+            "likes": 116,
             "replies": 1,
-            "reposts": 0,
+            "reposts": 4,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 2714
           },
-          "pseudo_er": 0.006264,
+          "pseudo_er": 0.05086,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -42131,6 +43949,16 @@
                 "views": null
               },
               "pseudo_er": 0.006264
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+              "metrics": {
+                "likes": 116,
+                "replies": 1,
+                "reposts": 4,
+                "views": null
+              },
+              "pseudo_er": 0.05086
             }
           ]
         },
@@ -42150,15 +43978,15 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 8,
+            "likes": 75,
             "replies": 0,
-            "reposts": 0,
+            "reposts": 1,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 2714
           },
-          "pseudo_er": 0.002948,
+          "pseudo_er": 0.029272,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -42173,6 +44001,16 @@
                 "views": null
               },
               "pseudo_er": 0.002948
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+              "metrics": {
+                "likes": 75,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.029272
             }
           ]
         },
@@ -42343,11 +44181,179 @@
               "pseudo_er": 0.001842
             }
           ]
+        },
+        {
+          "post_id": "DXWdw3nDl2E",
+          "account_handle": "yuiha.ppy",
+          "url": "https://www.threads.com/@yuiha.ppy/post/DXWdw3nDl2E",
+          "posted_at": "2026-04-20T11:00:08.000Z",
+          "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+          "text": "職場という閉ざされた環境の中で、特定の方にだけ当たりを強くする人がいます。\n他の方とは談笑しているのに、二人きりになると急に冷淡な空気を纏う。\nそんな不条理な関係に、心をすり減らしながら耐え忍んでいる方がおられます。\n周囲には悟られぬよう微笑みを作り、独りになった瞬間に深い溜息を吐く。\nご自分に非があるのではないかと、自らを責めてしまう夜もあるはずです。\nですが、",
+          "text_length": 183,
+          "first_line": "職場という閉ざされた環境の中で、特定の方にだけ当たりを強くする人がいます。",
+          "newline_count": 5,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 9,
+            "replies": 1,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2733
+          },
+          "pseudo_er": 0.004391,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+              "metrics": {
+                "likes": 9,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.004391
+            }
+          ]
+        },
+        {
+          "post_id": "DXWdxkzDg6M",
+          "account_handle": "yuiha.ppy",
+          "url": "https://www.threads.com/@yuiha.ppy/post/DXWdxkzDg6M",
+          "posted_at": "2026-04-20T11:00:14.000Z",
+          "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+          "text": "その歪んだ関係を霊視の視点から紐解いてみますと、そこには驚くべき一つの共通点が存在いたします。\n相手が頑なに冷たい態度を崩さない、\nその本当の理由は——\n相手が、あなたの持つ強い光や才能を脅威に感じ、恐れているからです。\n自分より優れている存在を認めることができず、\n心の脆さを隠すために、あえて攻撃的な態度で自分を保とうとしている。\n決して軽んじられているわけではありません。\nあなたの存在が、怖くてたまらないのでしょう。\nそして、あなたの静かな強さや誠実さを、\n陰でしっかりと見守り、\n評価している存在も必ずおられます。\nこれまで独りで耐えてきた痛みや、秘めた優しさは、決して無駄にはなりません。\nご自身を苦しめる悪縁を断ち切り、\n本来の輝きが正当に認められる未来へ軌道を戻すために。\n相手が抱える真の正体と、\n今の状況から抜け出すための正しい時期。\n真実を受け取る準備が整った方から、\nプロフィールの先へ、静かにお越しください。",
+          "text_length": 417,
+          "first_line": "その歪んだ関係を霊視の視点から紐解いてみますと、そこには驚くべき一つの共通点が存在いたします。",
+          "newline_count": 17,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 5,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2733
+          },
+          "pseudo_er": 0.001829,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+              "metrics": {
+                "likes": 5,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.001829
+            }
+          ]
+        },
+        {
+          "post_id": "DXWJL5EALAm",
+          "account_handle": "yuiha.ppy",
+          "url": "https://www.threads.com/@yuiha.ppy/post/DXWJL5EALAm",
+          "posted_at": "2026-04-20T08:00:19.000Z",
+          "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+          "text": "少し怖いと感じるかもしれませんが、大切な真実を今お伝えしておきますね。\n「もう限界です」「関わりたくない」と、魂が悲鳴を上げているほど重苦しい存在。\nその存在は、この一年が終わる前に、あなたの歩む道からそっと姿を消していくことになります。\n無理に動いて波風を立てる必要はございません。\n既に因果の大きな流れが動き出しており、静かに、しかし確実に離れる瞬間が——",
+          "text_length": 180,
+          "first_line": "少し怖いと感じるかもしれませんが、大切な真実を今お伝えしておきますね。",
+          "newline_count": 4,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 2,
+            "replies": 1,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2733
+          },
+          "pseudo_er": 0.001829,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.001829
+            }
+          ]
+        },
+        {
+          "post_id": "DXWJMqlgBBf",
+          "account_handle": "yuiha.ppy",
+          "url": "https://www.threads.com/@yuiha.ppy/post/DXWJMqlgBBf",
+          "posted_at": "2026-04-20T08:00:25.000Z",
+          "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+          "text": "すぐそこまで来ているからです。\n無理に耐え忍ぶ時間は、もう十分に終えられました。\nこれからは、すり減った心を取り戻し、本来あるべき安らぎへと帰っていく時期に入ります。\n不毛な縁が整理された後、空いた場所にどのような新しい運命が満ちてゆくのか。\nそして、今の停滞を終わらせるための大切な鍵。\n運命の扉を開く準備ができた方から、どうぞ奥の聖域へとお越しください。",
+          "text_length": 179,
+          "first_line": "すぐそこまで来ているからです。",
+          "newline_count": 5,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 2,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2733
+          },
+          "pseudo_er": 0.000732,
+          "classification": {
+            "hook_category": "その他",
+            "structure": "structure_B"
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:20.136500+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.000732
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@yuiha.ppy",
-      "last_fetched": "2026-04-20T16:32:05.075398+09:00",
-      "follower_count": 2714
+      "last_fetched": "2026-04-21T00:15:20.136500+09:00",
+      "follower_count": 2733
     },
     "hachico.odyssey": {
       "posts": [
@@ -44125,7 +46131,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 1,
+            "likes": 2,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -44133,7 +46139,7 @@
           "account_snapshot": {
             "follower_count": 513
           },
-          "pseudo_er": 0.001953,
+          "pseudo_er": 0.003906,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -44168,6 +46174,16 @@
                 "views": null
               },
               "pseudo_er": 0.001953
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:28.054189+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.003906
             }
           ]
         },
@@ -44188,14 +46204,14 @@
           "is_thread_root": true,
           "metrics": {
             "likes": 3,
-            "replies": 987,
-            "reposts": 162,
+            "replies": 997,
+            "reposts": 168,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 513
           },
-          "pseudo_er": 7.371094,
+          "pseudo_er": 7.488281,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -44230,6 +46246,16 @@
                 "views": null
               },
               "pseudo_er": 7.371094
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:28.054189+09:00",
+              "metrics": {
+                "likes": 3,
+                "replies": 997,
+                "reposts": 168,
+                "views": null
+              },
+              "pseudo_er": 7.488281
             }
           ]
         },
@@ -44249,7 +46275,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 5,
+            "likes": 6,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -44257,7 +46283,7 @@
           "account_snapshot": {
             "follower_count": 513
           },
-          "pseudo_er": 0.009766,
+          "pseudo_er": 0.011719,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -44292,6 +46318,16 @@
                 "views": null
               },
               "pseudo_er": 0.009766
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:28.054189+09:00",
+              "metrics": {
+                "likes": 6,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.011719
             }
           ]
         },
@@ -44311,7 +46347,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 10,
+            "likes": 12,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -44319,7 +46355,7 @@
           "account_snapshot": {
             "follower_count": 512
           },
-          "pseudo_er": 0.019531,
+          "pseudo_er": 0.023438,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -44334,6 +46370,16 @@
                 "views": null
               },
               "pseudo_er": 0.019531
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:28.054189+09:00",
+              "metrics": {
+                "likes": 12,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.023438
             }
           ]
         },
@@ -44353,7 +46399,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 4,
+            "likes": 5,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -44361,7 +46407,7 @@
           "account_snapshot": {
             "follower_count": 512
           },
-          "pseudo_er": 0.007812,
+          "pseudo_er": 0.009766,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -44376,12 +46422,22 @@
                 "views": null
               },
               "pseudo_er": 0.007812
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:28.054189+09:00",
+              "metrics": {
+                "likes": 5,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.009766
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@hachico.odyssey",
-      "last_fetched": "2026-04-20T16:32:12.740056+09:00",
+      "last_fetched": "2026-04-21T00:15:28.054189+09:00",
       "follower_count": 512
     },
     "ume_reishi": {
@@ -44402,7 +46458,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 2963,
+            "likes": 2966,
             "replies": 69,
             "reposts": 432,
             "views": null
@@ -44410,7 +46466,7 @@
           "account_snapshot": {
             "follower_count": 10000
           },
-          "pseudo_er": 0.533,
+          "pseudo_er": 0.5333,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -44495,6 +46551,16 @@
                 "views": null
               },
               "pseudo_er": 0.533
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:35.940674+09:00",
+              "metrics": {
+                "likes": 2966,
+                "replies": 69,
+                "reposts": 432,
+                "views": null
+              },
+              "pseudo_er": 0.5333
             }
           ]
         },
@@ -46458,15 +48524,15 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 716,
-            "replies": 402,
+            "likes": 722,
+            "replies": 405,
             "reposts": 0,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 10000
           },
-          "pseudo_er": 0.1922,
+          "pseudo_er": 0.1937,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -46481,6 +48547,16 @@
                 "views": null
               },
               "pseudo_er": 0.1922
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:35.940674+09:00",
+              "metrics": {
+                "likes": 722,
+                "replies": 405,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.1937
             }
           ]
         },
@@ -46525,10 +48601,94 @@
               "pseudo_er": 0.0433
             }
           ]
+        },
+        {
+          "post_id": "DXW5SJ1kXPE",
+          "account_handle": "ume_reishi",
+          "url": "https://www.threads.com/@ume_reishi/post/DXW5SJ1kXPE",
+          "posted_at": "2026-04-20T15:00:36.000Z",
+          "fetched_at": "2026-04-21T00:15:35.940674+09:00",
+          "text": "トリプル大開運日が明けた、深夜0時🌙\nまさか、まだ起きてる人いますか？\nもし、起きてる人がいたら超幸運です。\n2026/4/21（火) 一年に一度の、天恩日×神吉日×一粒万倍日翌日のエネルギーが重なり、トリプル大開運日の余韻を受け、幸運を引き寄せていく、確信に満ちた特別な日です。\n0:00-2:22 の短い間だけ。\n『🙏🏻』を置いてくれた全ての方へ、\n太宰府から私が視えたまま、正直にお伝えします。",
+          "text_length": 200,
+          "first_line": "トリプル大開運日が明けた、深夜0時🌙",
+          "newline_count": 6,
+          "emoji_count": 3,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 28,
+            "replies": 20,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 10000
+          },
+          "pseudo_er": 0.0088,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:35.940674+09:00",
+              "metrics": {
+                "likes": 28,
+                "replies": 20,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0088
+            }
+          ]
+        },
+        {
+          "post_id": "DXWcD-gERmA",
+          "account_handle": "ume_reishi",
+          "url": "https://www.threads.com/@ume_reishi/post/DXWcD-gERmA",
+          "posted_at": "2026-04-20T10:45:16.000Z",
+          "fetched_at": "2026-04-21T00:15:35.940674+09:00",
+          "text": "かなり大きな地震と津波警報まででていますね。\n今年に入り、何度もお伝えしていますが、\nやはり助かる運、2次災害、水など、備蓄の対策はとても重要だと感じます。\n皆様がご無事でお怪我ないこと、事態が小難で治ること心から願っております。\n私からも何かありましたら、すぐにお知らせいたします。",
+          "text_length": 142,
+          "first_line": "かなり大きな地震と津波警報まででていますね。",
+          "newline_count": 4,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 39,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 10000
+          },
+          "pseudo_er": 0.0039,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:35.940674+09:00",
+              "metrics": {
+                "likes": 39,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0039
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@ume_reishi",
-      "last_fetched": "2026-04-20T16:32:20.546515+09:00",
+      "last_fetched": "2026-04-21T00:15:35.940674+09:00",
       "follower_count": 10000
     },
     "uranai.haruto": {
@@ -47547,7 +49707,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 648,
+            "likes": 654,
             "replies": 28,
             "reposts": 4,
             "views": null
@@ -47555,7 +49715,7 @@
           "account_snapshot": {
             "follower_count": 4733
           },
-          "pseudo_er": 0.159019,
+          "pseudo_er": 0.160389,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -47590,6 +49750,16 @@
                 "views": null
               },
               "pseudo_er": 0.159019
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:43.713864+09:00",
+              "metrics": {
+                "likes": 654,
+                "replies": 28,
+                "reposts": 4,
+                "views": null
+              },
+              "pseudo_er": 0.160389
             }
           ]
         },
@@ -47609,7 +49779,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 531,
+            "likes": 533,
             "replies": 13,
             "reposts": 5,
             "views": null
@@ -47617,7 +49787,7 @@
           "account_snapshot": {
             "follower_count": 4733
           },
-          "pseudo_er": 0.125819,
+          "pseudo_er": 0.126322,
           "classification": {
             "hook_category": "開運日時事系",
             "structure": null
@@ -47652,6 +49822,16 @@
                 "views": null
               },
               "pseudo_er": 0.125819
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:43.713864+09:00",
+              "metrics": {
+                "likes": 533,
+                "replies": 13,
+                "reposts": 5,
+                "views": null
+              },
+              "pseudo_er": 0.126322
             }
           ]
         },
@@ -47671,15 +49851,15 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 398,
-            "replies": 8,
+            "likes": 489,
+            "replies": 9,
             "reposts": 2,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 4729
           },
-          "pseudo_er": 0.091351,
+          "pseudo_er": 0.111299,
           "classification": {
             "hook_category": "開運日時事系",
             "structure": null
@@ -47694,6 +49874,16 @@
                 "views": null
               },
               "pseudo_er": 0.091351
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:43.713864+09:00",
+              "metrics": {
+                "likes": 489,
+                "replies": 9,
+                "reposts": 2,
+                "views": null
+              },
+              "pseudo_er": 0.111299
             }
           ]
         },
@@ -47713,7 +49903,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 284,
+            "likes": 343,
             "replies": 8,
             "reposts": 2,
             "views": null
@@ -47721,7 +49911,7 @@
           "account_snapshot": {
             "follower_count": 4729
           },
-          "pseudo_er": 0.067245,
+          "pseudo_er": 0.079771,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": "structure_D"
@@ -47736,13 +49926,23 @@
                 "views": null
               },
               "pseudo_er": 0.067245
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:43.713864+09:00",
+              "metrics": {
+                "likes": 343,
+                "replies": 8,
+                "reposts": 2,
+                "views": null
+              },
+              "pseudo_er": 0.079771
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@uranai.haruto",
-      "last_fetched": "2026-04-20T16:32:28.241498+09:00",
-      "follower_count": 4729
+      "last_fetched": "2026-04-21T00:15:43.713864+09:00",
+      "follower_count": 4726
     },
     "uranai.fukuen": {
       "posts": [
@@ -47770,7 +49970,7 @@
           "account_snapshot": {
             "follower_count": 2049
           },
-          "pseudo_er": 0.027104,
+          "pseudo_er": 0.027143,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -47865,6 +50065,16 @@
                 "views": null
               },
               "pseudo_er": 0.027104
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:51.500315+09:00",
+              "metrics": {
+                "likes": 39,
+                "replies": 6,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.027143
             }
           ]
         },
@@ -49463,11 +51673,137 @@
               "pseudo_er": 0.266286
             }
           ]
+        },
+        {
+          "post_id": "DXWyZANDB4n",
+          "account_handle": "uranai.fukuen",
+          "url": "https://www.threads.com/@uranai.fukuen/post/DXWyZANDB4n",
+          "posted_at": "2026-04-20T14:00:22.000Z",
+          "fetched_at": "2026-04-21T00:15:51.500315+09:00",
+          "text": "今通り過ぎようとした人へ。\n💰をおいた人、\n思いがけない幸運が舞い降りてきますよ🐢",
+          "text_length": 41,
+          "first_line": "今通り過ぎようとした人へ。",
+          "newline_count": 2,
+          "emoji_count": 2,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "video",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 20,
+            "replies": 9,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2100
+          },
+          "pseudo_er": 0.022381,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:51.500315+09:00",
+              "metrics": {
+                "likes": 20,
+                "replies": 9,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.022381
+            }
+          ]
+        },
+        {
+          "post_id": "DXWkr5Cirq8",
+          "account_handle": "uranai.fukuen",
+          "url": "https://www.threads.com/@uranai.fukuen/post/DXWkr5Cirq8",
+          "posted_at": "2026-04-20T12:00:37.000Z",
+          "fetched_at": "2026-04-21T00:15:51.500315+09:00",
+          "text": "ほんまにゾッとする話やけど、お伝えしておきますえ。\nこの警告をスルーしてまうと、今月後半からあんさんの魂に植えられた『巨万の富の種』が見えへん邪気に根こそぎ食い荒らされて、一生お金の苦労から抜け出せんくなるお人。\n第1位：蠍座 × 11月生まれ\n第2位：蟹座 × 7月生まれ\n第3位：双子座 × 5月生まれ\n第4位：魚座 × 3月生まれ\n第5位：牡羊座 × 4月生まれ\n第6位：山羊座 × 12月生まれ\n第7位：水瓶座 × 2月生まれ\n第8位：乙女座 × 8月生まれ\nそやけど…",
+          "text_length": 239,
+          "first_line": "ほんまにゾッとする話やけど、お伝えしておきますえ。",
+          "newline_count": 10,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 4,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2100
+          },
+          "pseudo_er": 0.001905,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:51.500315+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.001905
+            }
+          ]
+        },
+        {
+          "post_id": "DXWW9cMCfYF",
+          "account_handle": "uranai.fukuen",
+          "url": "https://www.threads.com/@uranai.fukuen/post/DXWW9cMCfYF",
+          "posted_at": "2026-04-20T10:00:41.000Z",
+          "fetched_at": "2026-04-21T00:15:51.500315+09:00",
+          "text": "ごめんなさい、正直に言います。\nこの投稿に「🙏」置けたあなた、\nたぶん、500万くらいの臨時収入が入ってくる兆しが出てます。💫\n信じなくていいです。\nでも、覚えておいてください。💫🐉",
+          "text_length": 91,
+          "first_line": "ごめんなさい、正直に言います。",
+          "newline_count": 4,
+          "emoji_count": 4,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "image",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 55,
+            "replies": 20,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2100
+          },
+          "pseudo_er": 0.054762,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:51.500315+09:00",
+              "metrics": {
+                "likes": 55,
+                "replies": 20,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.054762
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@uranai.fukuen",
-      "last_fetched": "2026-04-20T16:32:35.848385+09:00",
-      "follower_count": 2103
+      "last_fetched": "2026-04-21T00:15:51.500315+09:00",
+      "follower_count": 2100
     },
     "kana.chan0713": {
       "posts": [
@@ -49495,7 +51831,7 @@
           "account_snapshot": {
             "follower_count": 2532
           },
-          "pseudo_er": 0.329653,
+          "pseudo_er": 0.329263,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -49590,6 +51926,16 @@
                 "views": null
               },
               "pseudo_er": 0.329653
+            },
+            {
+              "fetched_at": "2026-04-21T00:15:59.503219+09:00",
+              "metrics": {
+                "likes": 524,
+                "replies": 54,
+                "reposts": 30,
+                "views": null
+              },
+              "pseudo_er": 0.329263
             }
           ]
         },
@@ -51314,11 +53660,137 @@
               "pseudo_er": 0.003155
             }
           ]
+        },
+        {
+          "post_id": "DXW5afAmD-Q",
+          "account_handle": "kana.chan0713",
+          "url": "https://www.threads.com/@kana.chan0713/post/DXW5afAmD-Q",
+          "posted_at": "2026-04-20T15:02:17.000Z",
+          "fetched_at": "2026-04-21T00:15:59.503219+09:00",
+          "text": "夜中にこれ見てるあなた。\n今、誰かのことを考えてへん？\nその人との縁、今どうなってるか\n霊視で視てあげるわ。\n「♥️」置いてくれたら返すで。",
+          "text_length": 70,
+          "first_line": "夜中にこれ見てるあなた。",
+          "newline_count": 4,
+          "emoji_count": 1,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 4,
+            "replies": 2,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2539
+          },
+          "pseudo_er": 0.003939,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:59.503219+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.003939
+            }
+          ]
+        },
+        {
+          "post_id": "DXW4-1ZCYbV",
+          "account_handle": "kana.chan0713",
+          "url": "https://www.threads.com/@kana.chan0713/post/DXW4-1ZCYbV",
+          "posted_at": "2026-04-20T14:58:32.000Z",
+          "fetched_at": "2026-04-21T00:15:59.503219+09:00",
+          "text": "ごめんなさい、正直に言います。\nこの投稿に「🙏」置けたあなた、\nあの人と愛し合える兆しが出てます。☄\n信じなくていいです。\nでも、覚えておいてください。🌟",
+          "text_length": 77,
+          "first_line": "ごめんなさい、正直に言います。",
+          "newline_count": 4,
+          "emoji_count": 3,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 2,
+            "replies": 1,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2539
+          },
+          "pseudo_er": 0.001969,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:59.503219+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.001969
+            }
+          ]
+        },
+        {
+          "post_id": "DXWyHLdDpp2",
+          "account_handle": "kana.chan0713",
+          "url": "https://www.threads.com/@kana.chan0713/post/DXWyHLdDpp2",
+          "posted_at": "2026-04-20T13:58:25.000Z",
+          "fetched_at": "2026-04-21T00:15:59.503219+09:00",
+          "text": "ストップ！ストーーーーーップ！\nこの投稿をみたあなた、\n腰を抜かすくらい\n最高の出会いが、もうすぐやってくる！！\n🌸をおいて引き寄せ完了✨",
+          "text_length": 69,
+          "first_line": "ストップ！ストーーーーーップ！",
+          "newline_count": 4,
+          "emoji_count": 2,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "video",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 15,
+            "replies": 10,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 2539
+          },
+          "pseudo_er": 0.017724,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:15:59.503219+09:00",
+              "metrics": {
+                "likes": 15,
+                "replies": 10,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.017724
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@kana.chan0713",
-      "last_fetched": "2026-04-20T16:32:43.672528+09:00",
-      "follower_count": 2536
+      "last_fetched": "2026-04-21T00:15:59.503219+09:00",
+      "follower_count": 2539
     },
     "themoontokyo": {
       "posts": [
@@ -52558,15 +55030,15 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 11,
-            "replies": 0,
+            "likes": 41,
+            "replies": 1,
             "reposts": 0,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 1691
           },
-          "pseudo_er": 0.006505,
+          "pseudo_er": 0.02602,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -52581,6 +55053,16 @@
                 "views": null
               },
               "pseudo_er": 0.006505
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:07.597936+09:00",
+              "metrics": {
+                "likes": 41,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.02602
             }
           ]
         },
@@ -52600,7 +55082,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 10,
+            "likes": 21,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -52608,7 +55090,7 @@
           "account_snapshot": {
             "follower_count": 1691
           },
-          "pseudo_er": 0.005914,
+          "pseudo_er": 0.012419,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -52623,6 +55105,16 @@
                 "views": null
               },
               "pseudo_er": 0.005914
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:07.597936+09:00",
+              "metrics": {
+                "likes": 21,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.012419
             }
           ]
         },
@@ -52667,10 +55159,94 @@
               "pseudo_er": 0.06919
             }
           ]
+        },
+        {
+          "post_id": "DXWktOFCrkr",
+          "account_handle": "themoontokyo",
+          "url": "https://www.threads.com/@themoontokyo/post/DXWktOFCrkr",
+          "posted_at": "2026-04-20T12:00:48.000Z",
+          "fetched_at": "2026-04-21T00:16:07.597936+09:00",
+          "text": "蠍座\n蠍座が不機嫌になるのは♏\n・迷惑動画を見たとき\n・世の中の人を見下してしまう\n・過去の失敗が頭をよぎる\n・嘘つかれた裏切られた\n・秘密をバラされた\n・浮気を疑ってしまうとき\n・親しい人とささいなことで疎遠\n・期待していた通りに物事が進まないとき\n・もっと世の中こうあるべきだ！が強くなる",
+          "text_length": 146,
+          "first_line": "蠍座",
+          "newline_count": 10,
+          "emoji_count": 1,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 14,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 1691
+          },
+          "pseudo_er": 0.008279,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:16:07.597936+09:00",
+              "metrics": {
+                "likes": 14,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.008279
+            }
+          ]
+        },
+        {
+          "post_id": "DXWQCg6ERJM",
+          "account_handle": "themoontokyo",
+          "url": "https://www.threads.com/@themoontokyo/post/DXWQCg6ERJM",
+          "posted_at": "2026-04-20T09:00:12.000Z",
+          "fetched_at": "2026-04-21T00:16:07.597936+09:00",
+          "text": "天秤座\n天秤座が不機嫌になるのは♎\n・嘘をつかなければいけない状況\n・友達同士の仲が悪くなる\n・自分の意見をはっきり言えない\n・センスを否定される\n・人前で恥をかく\n・好きな人への嫉妬心を抱く\n・人の期待に応えられない\n・他人の方が上だと思ってしまう\n・思い通りに周りが動いてくれない",
+          "text_length": 142,
+          "first_line": "天秤座",
+          "newline_count": 10,
+          "emoji_count": 1,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 18,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 1691
+          },
+          "pseudo_er": 0.010645,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:16:07.597936+09:00",
+              "metrics": {
+                "likes": 18,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.010645
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@themoontokyo",
-      "last_fetched": "2026-04-20T16:32:51.746911+09:00",
+      "last_fetched": "2026-04-21T00:16:07.597936+09:00",
       "follower_count": 1691
     },
     "horoscope.coaching_yuri": {
@@ -52699,7 +55275,7 @@
           "account_snapshot": {
             "follower_count": 2383
           },
-          "pseudo_er": 0.005437,
+          "pseudo_er": 0.005433,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_B"
@@ -52794,6 +55370,16 @@
                 "views": null
               },
               "pseudo_er": 0.005437
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:15.436240+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.005433
             }
           ]
         },
@@ -52821,7 +55407,7 @@
           "account_snapshot": {
             "follower_count": 2383
           },
-          "pseudo_er": 0.002091,
+          "pseudo_er": 0.002089,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -52916,6 +55502,16 @@
                 "views": null
               },
               "pseudo_er": 0.002091
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:15.436240+09:00",
+              "metrics": {
+                "likes": 2,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.002089
             }
           ]
         },
@@ -53031,6 +55627,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:32:59.526039+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:15.436240+09:00",
               "metrics": {
                 "likes": 0,
                 "replies": 0,
@@ -53441,7 +56047,7 @@
           "account_snapshot": {
             "follower_count": 2388
           },
-          "pseudo_er": 0.099122,
+          "pseudo_er": 0.099039,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -53506,6 +56112,16 @@
                 "views": null
               },
               "pseudo_er": 0.099122
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:15.436240+09:00",
+              "metrics": {
+                "likes": 190,
+                "replies": 9,
+                "reposts": 4,
+                "views": null
+              },
+              "pseudo_er": 0.099039
             }
           ]
         },
@@ -53533,7 +56149,7 @@
           "account_snapshot": {
             "follower_count": 2388
           },
-          "pseudo_er": 0.014202,
+          "pseudo_er": 0.014208,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -53588,6 +56204,16 @@
                 "views": null
               },
               "pseudo_er": 0.014202
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:15.436240+09:00",
+              "metrics": {
+                "likes": 28,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.014208
             }
           ]
         },
@@ -53687,7 +56313,7 @@
           "account_snapshot": {
             "follower_count": 2394
           },
-          "pseudo_er": 0.002928,
+          "pseudo_er": 0.002925,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -53712,13 +56338,23 @@
                 "views": null
               },
               "pseudo_er": 0.002928
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:15.436240+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.002925
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@horoscope.coaching_yuri",
-      "last_fetched": "2026-04-20T16:32:59.526039+09:00",
-      "follower_count": 2391
+      "last_fetched": "2026-04-21T00:16:15.436240+09:00",
+      "follower_count": 2393
     },
     "mu3_888": {
       "posts": [
@@ -53841,6 +56477,16 @@
                 "views": null
               },
               "pseudo_er": 0.002556
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:23.408831+09:00",
+              "metrics": {
+                "likes": 38,
+                "replies": 1,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.002556
             }
           ]
         },
@@ -53956,6 +56602,16 @@
             },
             {
               "fetched_at": "2026-04-20T16:33:07.558816+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.000222
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:23.408831+09:00",
               "metrics": {
                 "likes": 4,
                 "replies": 0,
@@ -55102,7 +57758,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 17,
+            "likes": 21,
             "replies": 2,
             "reposts": 0,
             "views": null
@@ -55110,7 +57766,7 @@
           "account_snapshot": {
             "follower_count": 18000
           },
-          "pseudo_er": 0.001278,
+          "pseudo_er": 0.0015,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -55125,6 +57781,16 @@
                 "views": null
               },
               "pseudo_er": 0.001278
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:23.408831+09:00",
+              "metrics": {
+                "likes": 21,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0015
             }
           ]
         },
@@ -55144,7 +57810,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 13,
+            "likes": 14,
             "replies": 0,
             "reposts": 1,
             "views": null
@@ -55152,7 +57818,7 @@
           "account_snapshot": {
             "follower_count": 18000
           },
-          "pseudo_er": 0.001,
+          "pseudo_er": 0.001056,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -55167,6 +57833,16 @@
                 "views": null
               },
               "pseudo_er": 0.001
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:23.408831+09:00",
+              "metrics": {
+                "likes": 14,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.001056
             }
           ]
         },
@@ -55209,6 +57885,16 @@
                 "views": null
               },
               "pseudo_er": 0.0
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:23.408831+09:00",
+              "metrics": {
+                "likes": 0,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.0
             }
           ]
         },
@@ -55228,7 +57914,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 3,
+            "likes": 4,
             "replies": 1,
             "reposts": 0,
             "views": null
@@ -55236,7 +57922,7 @@
           "account_snapshot": {
             "follower_count": 18000
           },
-          "pseudo_er": 0.000333,
+          "pseudo_er": 0.000389,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -55251,6 +57937,16 @@
                 "views": null
               },
               "pseudo_er": 0.000333
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:23.408831+09:00",
+              "metrics": {
+                "likes": 4,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.000389
             }
           ]
         },
@@ -55270,7 +57966,7 @@
           "media_type": "text",
           "is_thread_root": true,
           "metrics": {
-            "likes": 2,
+            "likes": 3,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -55278,7 +57974,7 @@
           "account_snapshot": {
             "follower_count": 18000
           },
-          "pseudo_er": 0.000111,
+          "pseudo_er": 0.000167,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_D"
@@ -55293,12 +57989,22 @@
                 "views": null
               },
               "pseudo_er": 0.000111
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:23.408831+09:00",
+              "metrics": {
+                "likes": 3,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.000167
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@mu3_888",
-      "last_fetched": "2026-04-20T16:33:07.558816+09:00",
+      "last_fetched": "2026-04-21T00:16:23.408831+09:00",
       "follower_count": 18000
     },
     "akari.wildsoul": {
@@ -55327,7 +58033,7 @@
           "account_snapshot": {
             "follower_count": 1114
           },
-          "pseudo_er": 0.587971,
+          "pseudo_er": 0.5885,
           "classification": {
             "hook_category": "その他",
             "structure": "structure_B"
@@ -55422,6 +58128,16 @@
                 "views": null
               },
               "pseudo_er": 0.587971
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:31.453832+09:00",
+              "metrics": {
+                "likes": 391,
+                "replies": 83,
+                "reposts": 3,
+                "views": null
+              },
+              "pseudo_er": 0.5885
             }
           ]
         },
@@ -55449,7 +58165,7 @@
           "account_snapshot": {
             "follower_count": 1114
           },
-          "pseudo_er": 0.337522,
+          "pseudo_er": 0.337826,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": "structure_B"
@@ -55544,6 +58260,16 @@
                 "views": null
               },
               "pseudo_er": 0.337522
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:31.453832+09:00",
+              "metrics": {
+                "likes": 287,
+                "replies": 28,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.337826
             }
           ]
         },
@@ -55571,7 +58297,7 @@
           "account_snapshot": {
             "follower_count": 1114
           },
-          "pseudo_er": 0.017953,
+          "pseudo_er": 0.017969,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": "structure_B"
@@ -55666,6 +58392,16 @@
                 "views": null
               },
               "pseudo_er": 0.017953
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:31.453832+09:00",
+              "metrics": {
+                "likes": 8,
+                "replies": 4,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.017969
             }
           ]
         },
@@ -55693,7 +58429,7 @@
           "account_snapshot": {
             "follower_count": 1114
           },
-          "pseudo_er": 0.031418,
+          "pseudo_er": 0.031447,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -55788,6 +58524,16 @@
                 "views": null
               },
               "pseudo_er": 0.031418
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:31.453832+09:00",
+              "metrics": {
+                "likes": 26,
+                "replies": 3,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.031447
             }
           ]
         },
@@ -55815,7 +58561,7 @@
           "account_snapshot": {
             "follower_count": 1114
           },
-          "pseudo_er": 0.007181,
+          "pseudo_er": 0.007188,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -55910,6 +58656,16 @@
                 "views": null
               },
               "pseudo_er": 0.007181
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:31.453832+09:00",
+              "metrics": {
+                "likes": 8,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.007188
             }
           ]
         },
@@ -55937,7 +58693,7 @@
           "account_snapshot": {
             "follower_count": 1114
           },
-          "pseudo_er": 0.01167,
+          "pseudo_er": 0.01168,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -56022,6 +58778,16 @@
                 "views": null
               },
               "pseudo_er": 0.01167
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:31.453832+09:00",
+              "metrics": {
+                "likes": 10,
+                "replies": 1,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.01168
             }
           ]
         },
@@ -56049,7 +58815,7 @@
           "account_snapshot": {
             "follower_count": 1114
           },
-          "pseudo_er": 0.007181,
+          "pseudo_er": 0.007188,
           "classification": {
             "hook_category": "数字具体性系",
             "structure": null
@@ -56134,13 +58900,23 @@
                 "views": null
               },
               "pseudo_er": 0.007181
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:31.453832+09:00",
+              "metrics": {
+                "likes": 8,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.007188
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@akari.wildsoul",
-      "last_fetched": "2026-04-20T16:33:15.705413+09:00",
-      "follower_count": 1114
+      "last_fetched": "2026-04-21T00:16:31.453832+09:00",
+      "follower_count": 1113
     },
     "mimika_tarot": {
       "posts": [
@@ -58017,11 +60793,179 @@
               "pseudo_er": 0.01617
             }
           ]
+        },
+        {
+          "post_id": "DXWy9Eyk7l4",
+          "account_handle": "mimika_tarot",
+          "url": "https://www.threads.com/@mimika_tarot/post/DXWy9Eyk7l4",
+          "posted_at": "2026-04-20T14:05:18.000Z",
+          "fetched_at": "2026-04-21T00:16:39.958885+09:00",
+          "text": "嫌われてもいいじゃない。\n本音で生きてるあなたはかっこいいよ。",
+          "text_length": 31,
+          "first_line": "嫌われてもいいじゃない。",
+          "newline_count": 1,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 17,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 5570
+          },
+          "pseudo_er": 0.003052,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:16:39.958885+09:00",
+              "metrics": {
+                "likes": 17,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.003052
+            }
+          ]
+        },
+        {
+          "post_id": "DXWxveZE-um",
+          "account_handle": "mimika_tarot",
+          "url": "https://www.threads.com/@mimika_tarot/post/DXWxveZE-um",
+          "posted_at": "2026-04-20T13:54:42.000Z",
+          "fetched_at": "2026-04-21T00:16:39.958885+09:00",
+          "text": "スピリチュアル的に見たら、魂に価値なんてないと思ってるのよ。でもね、この世界は価値の交換で成り立っているから、まずは価値の中で揺れる経験がとても大切だと思ってる。",
+          "text_length": 81,
+          "first_line": "スピリチュアル的に見たら、魂に価値なんてないと思ってるのよ。でもね、この世界は価値の交換で成り立っているから、まずは価値の中で揺れる経験がとても大切だと思ってる。",
+          "newline_count": 0,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 6,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 5570
+          },
+          "pseudo_er": 0.001077,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:16:39.958885+09:00",
+              "metrics": {
+                "likes": 6,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.001077
+            }
+          ]
+        },
+        {
+          "post_id": "DXWfNEIExZP",
+          "account_handle": "mimika_tarot",
+          "url": "https://www.threads.com/@mimika_tarot/post/DXWfNEIExZP",
+          "posted_at": "2026-04-20T11:12:43.000Z",
+          "fetched_at": "2026-04-21T00:16:39.958885+09:00",
+          "text": "与えるのは得意で、受け取るのが苦手なのは男性性が過剰に動いてる状態。\nじゃあどうしたら受け取れる、つまり女性性もスムーズに流れ出すかと言うと、まず体の休息を強制的にでも取る。\n※人は体から入らないと体感として理解したり腑に落とすことができないから\n次に、思考で動く前に止まる。\n好きか嫌いか、快・不快など感覚で判断する。「これって本当にやりたいこと？」「楽しいこと？」「満足してる？」って自問自答。\nそして小さく自分に与える練習をする。\n質が高くて美味しいものを食べる。\nいつもより上質な服を身に付けてみる。\n最後に人の好意をそのまま受け取り、小さく何か手伝ってもらう。\n※あくまで断られても良いというスタンスで。\nそして最も大切なこと。\nそれは「自分に変わることを求めない」こと。\n女性性は結果ではなくプロセスであり育み。\n種をまいてすぐにすぐに芽が出ないのと同じ。\n急がない、焦らない。\n信じて待つの。",
+          "text_length": 403,
+          "first_line": "与えるのは得意で、受け取るのが苦手なのは男性性が過剰に動いてる状態。",
+          "newline_count": 15,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 23,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 5570
+          },
+          "pseudo_er": 0.004129,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:16:39.958885+09:00",
+              "metrics": {
+                "likes": 23,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.004129
+            }
+          ]
+        },
+        {
+          "post_id": "DXWaFoGk1J1",
+          "account_handle": "mimika_tarot",
+          "url": "https://www.threads.com/@mimika_tarot/post/DXWaFoGk1J1",
+          "posted_at": "2026-04-20T10:28:01.000Z",
+          "fetched_at": "2026-04-21T00:16:39.958885+09:00",
+          "text": "災害も事件も事故も病も、すべて起こらない平和な世界だったらいいのにね。\nこの世界は止められないこと、個人レベルで太刀打ちできないことがたくさんある。\nそれでも祈ること、自分には何ができるか考えて行動するしかない。その繰り返し。",
+          "text_length": 113,
+          "first_line": "災害も事件も事故も病も、すべて起こらない平和な世界だったらいいのにね。",
+          "newline_count": 2,
+          "emoji_count": 0,
+          "hashtags": [],
+          "has_external_link": false,
+          "media_type": "text",
+          "is_thread_root": true,
+          "metrics": {
+            "likes": 11,
+            "replies": 0,
+            "reposts": 0,
+            "views": null
+          },
+          "account_snapshot": {
+            "follower_count": 5570
+          },
+          "pseudo_er": 0.001975,
+          "classification": {
+            "hook_category": "その他",
+            "structure": null
+          },
+          "snapshots": [
+            {
+              "fetched_at": "2026-04-21T00:16:39.958885+09:00",
+              "metrics": {
+                "likes": 11,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.001975
+            }
+          ]
         }
       ],
       "url": "https://www.threads.com/@mimika_tarot",
-      "last_fetched": "2026-04-20T16:33:23.738737+09:00",
-      "follower_count": 5566
+      "last_fetched": "2026-04-21T00:16:39.958885+09:00",
+      "follower_count": 5570
     },
     "orihimechan0919": {
       "posts": [
@@ -58049,7 +60993,7 @@
           "account_snapshot": {
             "follower_count": 1084
           },
-          "pseudo_er": 0.056007,
+          "pseudo_er": 0.055806,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -58144,6 +61088,16 @@
                 "views": null
               },
               "pseudo_er": 0.056007
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:47.803208+09:00",
+              "metrics": {
+                "likes": 43,
+                "replies": 3,
+                "reposts": 2,
+                "views": null
+              },
+              "pseudo_er": 0.055806
             }
           ]
         },
@@ -58913,15 +61867,15 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 6,
-            "replies": 0,
+            "likes": 18,
+            "replies": 2,
             "reposts": 0,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 1107
           },
-          "pseudo_er": 0.00542,
+          "pseudo_er": 0.021602,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -58936,6 +61890,16 @@
                 "views": null
               },
               "pseudo_er": 0.00542
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:47.803208+09:00",
+              "metrics": {
+                "likes": 18,
+                "replies": 2,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.021602
             }
           ]
         },
@@ -58955,7 +61919,7 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 1,
+            "likes": 7,
             "replies": 0,
             "reposts": 0,
             "views": null
@@ -58963,7 +61927,7 @@
           "account_snapshot": {
             "follower_count": 1107
           },
-          "pseudo_er": 0.000903,
+          "pseudo_er": 0.006301,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -58978,6 +61942,16 @@
                 "views": null
               },
               "pseudo_er": 0.000903
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:47.803208+09:00",
+              "metrics": {
+                "likes": 7,
+                "replies": 0,
+                "reposts": 0,
+                "views": null
+              },
+              "pseudo_er": 0.006301
             }
           ]
         },
@@ -58997,15 +61971,15 @@
           "media_type": "image",
           "is_thread_root": true,
           "metrics": {
-            "likes": 10,
+            "likes": 20,
             "replies": 0,
-            "reposts": 0,
+            "reposts": 1,
             "views": null
           },
           "account_snapshot": {
             "follower_count": 1107
           },
-          "pseudo_er": 0.009033,
+          "pseudo_er": 0.022502,
           "classification": {
             "hook_category": "その他",
             "structure": null
@@ -59020,15 +61994,25 @@
                 "views": null
               },
               "pseudo_er": 0.009033
+            },
+            {
+              "fetched_at": "2026-04-21T00:16:47.803208+09:00",
+              "metrics": {
+                "likes": 20,
+                "replies": 0,
+                "reposts": 1,
+                "views": null
+              },
+              "pseudo_er": 0.022502
             }
           ]
         }
       ],
       "url": "https://www.threads.com/@orihimechan0919",
-      "last_fetched": "2026-04-20T16:33:31.509654+09:00",
-      "follower_count": 1107
+      "last_fetched": "2026-04-21T00:16:47.803208+09:00",
+      "follower_count": 1111
     }
   },
-  "last_run": "2026-04-20T16:33:36.564802+09:00",
+  "last_run": "2026-04-21T00:16:52.769461+09:00",
   "total_accounts": 40
 }
