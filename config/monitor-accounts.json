@@ -1,10 +1,16 @@
 {
   "description": "バズ投稿監視対象アカウント",
+  "use_types": {
+    "comment_outreach": "コメント営業専用（占い好き読者が集まる・コメント活発・中規模）",
+    "buzz_analysis": "バズ分析専用（高エンゲ・独自フォーマット・よぞら.に取り込める型）",
+    "monitor": "バズ監視のみ（参考情報収集）"
+  },
   "x_accounts": [
     {
       "username": "example_uranai",
       "user_id": "",
       "category": "占い",
+      "use": "monitor",
       "note": "ここにX占いアカウントを追加"
     }
   ],
@@ -12,192 +18,206 @@
     {
       "username": "sion_enmusubi",
       "category": "major_brand",
+      "use": "buzz_analysis",
       "note": "縁結び系占い: TOP5ランキング型で1千いいね・347コメント実績。感情的CTAの手本"
     },
     {
       "username": "shihoriiinu",
       "category": "tarot",
+      "use": "monitor",
       "note": "アンドロメダうめ: ドS系タロット鑑定、元行政書士"
     },
     {
       "username": "chisa008_tarot",
       "category": "tarot",
+      "use": "monitor",
       "note": "ルネット・デ・タロット: 恋愛特化+LINE連動"
     },
     {
       "username": "naritaitarot",
       "category": "tarot",
+      "use": "monitor",
       "note": "NEO9000: 言語学×タロット"
     },
     {
       "username": "hashimoto_sachino",
       "category": "tarot",
+      "use": "monitor",
       "note": "祥乃: タロット+四柱推命+西洋占星術"
     },
     {
       "username": "suzu_sasaki",
       "category": "tarot",
+      "use": "monitor",
       "note": "笹木すず: 近鉄生駒駅+カバラ数秘術"
     },
     {
       "username": "kaede.3023",
       "category": "tarot",
+      "use": "monitor",
       "note": "楓: 朗読家×タロット"
     },
     {
       "username": "anna_hoshiyomi",
       "category": "astrology",
+      "use": "monitor",
       "note": "ANNA.星読み研究家: 西洋占星術"
     },
     {
       "username": "megumi.horoscope",
       "category": "astrology",
+      "use": "monitor",
       "note": "星よみのめぐみ: 経営者向け占星術"
     },
     {
       "username": "mayumicolorful",
       "category": "spiritual",
+      "use": "monitor",
       "note": "スターリア真弓: タロット+スピ"
     },
     {
       "username": "mipomei",
       "category": "spiritual",
+      "use": "monitor",
       "note": "山口美穂: 占いCafe twoWitches運営"
     },
     {
       "username": "hina.tesou",
       "category": "palm_numerology",
+      "use": "monitor",
       "note": "ひな手相占い師: 手相特化+LINE誘導"
     },
     {
       "username": "feliceacco",
       "category": "palm_numerology",
+      "use": "monitor",
       "note": "占い師Acco: 九星気学+易経"
     },
     {
       "username": "uranai.no1",
       "category": "palm_numerology",
+      "use": "monitor",
       "note": "MASAYUKI: マヤ暦40代向け"
     },
     {
       "username": "divinustathumi",
       "category": "palm_numerology",
+      "use": "monitor",
       "note": "divinusたつみ: アロマ占星術"
-    },
-    {
-      "username": "vocemagazine",
-      "category": "media_official",
-      "note": "VOCE編集部: 美容誌公式12星座"
-    },
-    {
-      "username": "bitekicom",
-      "category": "media_official",
-      "note": "美的子ちゃん占い: 美容誌公式"
-    },
-    {
-      "username": "hatarakupyon",
-      "category": "other",
-      "note": "ピヨ: 占いAI体験談系"
     },
     {
       "username": "hozuki_yorino",
       "category": "other",
+      "use": "monitor",
       "note": "水無月: 新興占い師"
     },
     {
       "username": "miko.reishi",
       "category": "spiritual",
-      "note": "神子(みこ): 霊視占い師・霊視で恋/金/仕事・復縁/音信不通・7,000件以上救済・フォロワー限定無料霊視"
+      "use": "comment_outreach",
+      "note": "神子(みこ): 霊視占い師・指くっつけインタラクティブ投稿306いいね/155コメント実績・神吉日コンテンツ・フォロワー限定無料霊視"
     },
     {
       "username": "inariuranai",
       "category": "major_brand",
-      "note": "稲荷: 秘匿性占術士・占術×科学×習慣の三視点で運の構造を視える化・開運五大特典"
+      "use": "buzz_analysis",
+      "note": "稲荷: 秘匿性占術士・占術×科学×習慣の三視点で運の構造を視える化・独自切り口バズ分析用"
     },
     {
       "username": "mikoto_nanase",
       "category": "love_specialized",
-      "note": "七瀬美琴: 元マチアプ廃人のバツイチ占い師・インド占星術・子ども占い・恋愛/人間関係"
+      "use": "comment_outreach",
+      "note": "七瀬美琴: 元マチアプ廃人のバツイチ占い師・インド占星術・恋愛/人間関係・共感コメント多い"
     },
     {
       "username": "nagi_goen",
       "category": "spiritual",
-      "note": "ナギ: 自給自足の占い師・都会疲れで北海道移住・東京17年・ご縁と自然の力・言霊"
+      "use": "comment_outreach",
+      "note": "ナギ: 自給自足の占い師・都会疲れで北海道移住・ご縁と自然の力・言霊・ほっこり系でコメントつきやすい"
     },
     {
       "username": "resug.fortune",
       "category": "palm_numerology",
-      "note": "ゆら: 手相占い×パワーストーン・手相で人生のすべてが分かる・心と現実の真ん中で背中を押す"
+      "use": "comment_outreach",
+      "note": "ゆら: 手相占い×パワーストーン・心と現実の真ん中で背中を押す・悩み解決型で読者質高い"
     },
     {
       "username": "raito.koiuranai",
       "category": "love_specialized",
-      "note": "ライト: 恋愛惹き寄せ占い師・フォローで溺愛・音信不通から復縁・曖昧な関係から大本命に"
+      "use": "comment_outreach",
+      "note": "ライト: 恋愛惹き寄せ占い師・音信不通から復縁・曖昧な関係から大本命に・恋愛悩み層直撃"
     },
     {
       "username": "arasa_uranai",
       "category": "love_specialized",
-      "note": "アラサー看護師占い師: 【恋愛】×【不倫】・元看護師・霊視×男性心理・鑑定実績4000件・満足度90%超"
+      "use": "comment_outreach",
+      "note": "アラサー看護師占い師: 恋愛/不倫・霊視×男性心理・鑑定実績4000件・満足度90%超・悩み層が厚い"
     },
     {
       "username": "yuiha.ppy",
       "category": "spiritual",
-      "note": "結(ゆい): 霊視占い師・霊視鑑定初回無料・不倫/仕事/人間関係・人の心に寄り添う霊視"
+      "use": "comment_outreach",
+      "note": "結(ゆい): 霊視占い師・霊視体験談・不倫/仕事/人間関係・悩み共感でコメント誘発型"
     },
     {
       "username": "hachico.odyssey",
       "category": "tarot",
+      "use": "monitor",
       "note": "Hachico: スピリチュアルカウンセリング・多層リーディング×現実軌道修正・霊感×占術×タロット"
     },
     {
       "username": "ume_reishi",
       "category": "spiritual",
-      "note": "梅🌸: 霊視占い師・太宰府の視える霊視占い師・8,000名以上鑑定・太宰府の神主から加護"
+      "use": "buzz_analysis",
+      "note": "梅🌸: 霊視占い師・トリプル大開運日2,980いいね実績・開運日コンテンツ・太宰府の神主から加護"
     },
     {
       "username": "uranai.haruto",
       "category": "astrology",
+      "use": "monitor",
       "note": "晴人: 男心専門占い師・KADOKAWA「男心のトリセツ」著者・男心を毎日発信"
     },
     {
       "username": "uranai.fukuen",
       "category": "spiritual",
-      "note": "福縁霊視占い師: 恋財縁結びの霊導師・愛と豊かさを導く・霊視・LINE相談受付中"
+      "use": "buzz_analysis",
+      "note": "福縁霊視占い師: 「無視する人金運上がらんよ」スルー恐怖型・誕生月ランキング・よぞら.フォーマット直結"
     },
     {
       "username": "kana.chan0713",
       "category": "spiritual",
-      "note": "かな: 運命の糸・悪意・両想い・片思いが視える・霊視系・恋愛/人間関係"
+      "use": "comment_outreach",
+      "note": "かな: 運命の糸・524いいね実績・両想い/片思いが視える・霊視系・恋愛/人間関係"
     },
     {
       "username": "themoontokyo",
       "category": "major_brand",
-      "note": "占い師くるとん: SNS総フォロワー5万超え・川越No.1・占い館ミルキーウェイ代表・占い師養成CAMP全国展開"
+      "use": "buzz_analysis",
+      "note": "占い師くるとん: 12星座「不機嫌になるのは」型・SNS総フォロワー5万超え・川越No.1・占い館ミルキーウェイ代表"
     },
     {
       "username": "horoscope.coaching_yuri",
       "category": "astrology",
-      "note": "ゆり⭐️: 心と脳に効く西洋占星術・脳科学×心理学×占星術・楽天/リクルートから独立・月商7桁"
+      "use": "buzz_analysis",
+      "note": "ゆり⭐️: 心と脳に効く西洋占星術・脳科学×心理学×占星術・190いいね・楽天/リクルートから独立・月商7桁"
     },
     {
       "username": "mu3_888",
       "category": "spiritual",
-      "note": "むーさん🌙: 潜在意識の専門家・2,000人超の潜在意識書き換え実績・たった1時間で悩みを消す"
+      "use": "buzz_analysis",
+      "note": "むーさん🌙: 潜在意識の専門家・2,000人超の潜在意識書き換え実績・LINE誘導フォーマット研究用"
     },
     {
       "username": "akari.wildsoul",
       "category": "spiritual",
-      "note": "AKARI ☾☼: 自由な魂を解放する女神・覚醒の導き手・魂との対話・エネルギーワーク・氣功"
+      "use": "buzz_analysis",
+      "note": "AKARI ☾☼: 自由な魂を解放する女神・391いいね/287いいね・スピリチュアル覚醒投稿・高エンゲ型研究用"
     },
     {
       "username": "mimika_tarot",
       "category": "tarot",
+      "use": "monitor",
       "note": "美々架(みみか): 自己信頼再構築ガイド・感受性強い繊細女性向けタロット・他人軸からの脱却"
-    },
-    {
-      "username": "orihimechan0919",
-      "category": "spiritual",
-      "note": "座敷わらし織姫: 遠隔透視者・名前が喋って教えてくれる・座敷わらしから力を授かった・過去に未解決事件を透視で解決"
     }
   ],
   "search_keywords": {
