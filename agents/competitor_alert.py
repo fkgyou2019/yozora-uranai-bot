@@ -37,10 +37,6 @@ JST = timezone(timedelta(hours=9))
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ── 設定 ──────────────────────────────────────────────────────────
-# 通知対象：フォロワー数フィルタ
-MIN_FOLLOWERS_ALERT = 1_000
-MAX_FOLLOWERS_ALERT = 500_000
-
 # スクレイプ設定
 PAGE_WAIT_MS       = 3000   # JS レンダリング待機（ms）
 PAGE_TIMEOUT_MS    = 25000  # ページロードタイムアウト（ms）
@@ -249,13 +245,6 @@ async def run_alert_check(handles: list[str], last_seen: dict, topic: str) -> tu
                 # スクレイプ失敗でも last_checked だけ更新
                 if handle in last_seen.get("accounts", {}):
                     last_seen["accounts"][handle]["last_checked"] = now_str
-                await asyncio.sleep(INTER_ACCOUNT_WAIT)
-                continue
-
-            # フォロワーフィルタ
-            fc = latest["follower_count"]
-            if fc > 0 and not (MIN_FOLLOWERS_ALERT <= fc <= MAX_FOLLOWERS_ALERT):
-                log("SKIP", f"@{handle}: フォロワー{fc:,}人（範囲外）")
                 await asyncio.sleep(INTER_ACCOUNT_WAIT)
                 continue
 
