@@ -1321,6 +1321,82 @@ def main():
             print(f"  ✂ 行数トリミング: {len(lines)}行→{len(post['content'].split(chr(10)))}行 [{post.get('pattern_name','?')}]")
 
     # ========================================
+    # Phase 2.6: フォロー促進CTA付与（10投稿中3件・ソフト訴求）
+    # ========================================
+    # 「フォローして」等の直接要求はMeta規約違反。
+    # 「毎日届けている」「また来てください」等の事実・誘いに留める。
+    FOLLOW_CTA_PATTERNS = [
+        "\n\n毎朝・昼・夜、星読みをお届けしています🌙",
+        "\n\n明日もまた、星の流れをお伝えします✨",
+        "\n\n気に入っていただけたら、また遊びに来てください🔮",
+        "\n\n毎日更新中。続きはまた明日💫",
+        "\n\n今日も読んでくださってありがとうございます🌙",
+        "\n\n明日も星があなたのそばにいます✨",
+        "\n\n毎日、あなたの運気をお届けしています🔮",
+        "\n\n続きは明日。また星読みしましょう🌙",
+        "\n\n読んでくださる方がいると、励みになります✨",
+        "\n\n気になる日はまた読みに来てください💫",
+    ]
+
+    # CTA使用状況を管理（連続同一パターン防止）
+    cta_state = load_json("state/cta-state.json")
+    if not cta_state:
+        cta_state = {"last_used_indices": [], "total_with_cta": 0, "total_without_cta": 0}
+
+    last_used = cta_state.get("last_used_indices", [])
+    total_with = cta_state.get("total_with_cta", 0)
+    total_without = cta_state.get("total_without_cta", 0)
+
+    for post in threads_posts:
+        # 30%の確率でCTAを付与（直近の比率で補正）
+        total_so_far = total_with + total_without
+        current_rate = total_with / total_so_far if total_so_far > 0 else 0
+        # 現在の付与率が30%未満なら確率を上げ、超えていれば下げる
+        target_prob = max(0.1, min(0.5, 0.3 + (0.3 - current_rate) * 0.5))
+
+        if random.random() > target_prob:
+            total_without += 1
+            continue
+
+        # 直近3件で使っていないパターンから選ぶ
+        available = [i for i in range(len(FOLLOW_CTA_PATTERNS)) if i not in last_used[-3:]]
+        if not available:
+            available = list(range(len(FOLLOW_CTA_PATTERNS)))
+        chosen_idx = random.choice(available)
+        cta_text = FOLLOW_CTA_PATTERNS[chosen_idx]
+
+        # 末尾に追加（既存のハッシュタグ行の前に挿入）
+        content = post.get("content", "")
+        lines = content.split("\n")
+        # 末尾のハッシュタグ行を探す（#で始まる行）
+        hashtag_idx = None
+        for li in range(len(lines) - 1, -1, -1):
+            if lines[li].strip().startswith("#"):
+                hashtag_idx = li
+                break
+
+        if hashtag_idx is not None and hashtag_idx > 0:
+            # ハッシュタグの直前に挿入
+            lines.insert(hashtag_idx, cta_text.strip())
+            lines.insert(hashtag_idx, "")  # 空行で区切り
+            post["content"] = "\n".join(lines)
+        else:
+            post["content"] = content + cta_text
+
+        post["has_follow_cta"] = True
+        last_used.append(chosen_idx)
+        total_with += 1
+        print(f"  💬 フォローCTA付与: [{post.get('pattern_name','?')[:20]}] パターン{chosen_idx+1}")
+
+    # CTA状態を保存
+    cta_state["last_used_indices"] = last_used[-10:]
+    cta_state["total_with_cta"] = total_with
+    cta_state["total_without_cta"] = total_without
+    save_json("state/cta-state.json", cta_state)
+    cta_rate = round(total_with / (total_with + total_without) * 100, 1) if (total_with + total_without) > 0 else 0
+    print(f"  フォローCTA付与率: {cta_rate}% (累計 付与{total_with}件/未付与{total_without}件)")
+
+    # ========================================
     # Phase 3: 類似度チェック（プラットフォーム別）
     # ========================================
     from difflib import SequenceMatcher
