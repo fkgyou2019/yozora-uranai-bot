@@ -87,22 +87,24 @@ def load_alert_targets() -> list[str]:
 
 # ── ntfy.sh 通知 ─────────────────────────────────────────────────
 def send_push(topic: str, title: str, body: str, priority: str = "high", url: str = ""):
-    """ntfy.sh に push 通知を送る"""
-    endpoint = f"{NTFY_BASE_URL}/{topic}"
-    headers = {
-        "Title":    urllib.parse.quote(title),   # 日本語は URL エンコード必須
-        "Priority": priority,
-        "Tags":     "bell",
-        "Content-Type": "text/plain; charset=utf-8",
+    """ntfy.sh に push 通知を送る（JSON API 使用で日本語タイトル対応）"""
+    endpoint = f"{NTFY_BASE_URL}"
+    priority_map = {"high": 4, "default": 3, "low": 2}
+    payload = {
+        "topic":    topic,
+        "title":    title,
+        "message":  body,
+        "priority": priority_map.get(priority, 3),
+        "tags":     ["bell"],
     }
     if url:
-        headers["Click"] = url   # 通知タップで URL を開く
+        payload["click"] = url   # 通知タップで URL を開く
 
     try:
         req = urllib.request.Request(
             endpoint,
-            data=body.encode("utf-8"),
-            headers=headers,
+            data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
             method="POST",
         )
         with urllib.request.urlopen(req, timeout=10) as resp:
