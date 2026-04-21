@@ -1,19 +1,19 @@
 {
   "_readme": "Claudeがセッション開始時に読む現状把握ファイル。各ワークフローが自動更新する。",
-  "generated_at": "2026-04-21 08:33 JST",
+  "generated_at": "2026-04-22 00:57 JST",
   "overall_status": "OK",
   "issues": [],
   "next_actions": [
     "✅ 特に問題なし。通常運用中。"
   ],
   "posting": {
-    "last_7days_total_posts": 57,
-    "last_7days_avg_er": 10.98,
-    "last_7days_avg_views": 184.1,
+    "last_7days_total_posts": 55,
+    "last_7days_avg_er": 11.49,
+    "last_7days_avg_views": 151.0,
     "days_with_report": 6,
-    "last_report_date": "2026-04-19",
-    "queue_remaining": 7,
-    "last_posted_at": "2026-04-21T07:12"
+    "last_report_date": "2026-04-20",
+    "queue_remaining": 5,
+    "last_posted_at": "2026-04-21T21:11"
   },
   "auto_reply": {
     "last_7days_comments": 0,
@@ -26,14 +26,18 @@
   "pdca": {
     "last_updated": "2026-04-21",
     "confidence": "high",
-    "data_count": 37,
-    "top1_pattern": "構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋愛・恋愛迷子ターゲッ",
-    "top1_er": 15.77,
-    "top1_trend": "↑上昇中",
-    "top2_pattern": "構造G_注意喚起+限定型",
-    "top2_er": 10.31,
-    "avoid_count": 0,
-    "avoid_patterns": [],
+    "data_count": 168,
+    "top1_pattern": "構造G_注意喚起+限定型②",
+    "top1_er": 0,
+    "top1_trend": "",
+    "top2_pattern": "注意喚起+限定型（推定）",
+    "top2_er": 0,
+    "avoid_count": 5,
+    "avoid_patterns": [
+      "【avg_views:216・ER:3.4%・2件】構造F_",
+      "【avg_views:44・ER:2.5%・2件】構造J_全",
+      "【avg_views:33・ER:1.8%・10件】構造H_"
+    ],
     "last_actions": [
       "新規採用: 「構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋」",
       "新規採用: 「構造G_注意喚起+限定型」",
@@ -43,7 +47,7 @@
   "workflow": {
     "kill_switch": false,
     "consecutive_errors": 0,
-    "today_post_count": 1,
+    "today_post_count": 0,
     "issues": []
   }
 }

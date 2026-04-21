@@ -18,18 +18,73 @@
       ]
     },
     {
-      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
-      "category": "星座占い",
-      "content": "スルーしたら4月、金の流れ止まるよ。\n\n第1位：みずがめ座\n第2位：やぎ座\n第3位：うお座\n第4位：ふたご座\n第5位：おとめ座\n\n「✨」をそっと置いた人は、\nずっと諦めてた事柄が急展開して\n「こんなことあるんだ…」って\n心底驚く喜びが来ます🕯️💫\n\n#今日の運勢",
+      "pattern_name": "構造B_ランキング型（仕事運優先・金運・恋愛運TOP3・メダル絵文字必須・ER25%実績型）",
+      "category": "仕事運ランキング",
+      "content": "【今週後半、仕事で急に動く方】\n\n🥇第1位：さそり座\n🥈第2位：やぎ座\n🥉第3位：いて座\n\n第4位：みずがめ座\n第5位：てんびん座\n\n「🕊️」をそっと置いた人は、\nほんとうに難しいと思ってた案件が\n急に話が進んで、\n「絶対に無理だ…」とずっと諦めてた昇進が\n一気に叶います✨\n\n本当です。",
       "hashtag": "#今日の運勢",
-      "time_slot": "スルー恐怖型（20:07）",
-      "scheduled_hour": 20,
-      "scheduled_minute": 7,
-      "id": "post_20260421_2137_exp_002",
+      "time_slot": "ランキング型（09:37）",
+      "scheduled_hour": 9,
+      "scheduled_minute": 37,
+      "id": "post_20260422_0056_exp_002",
       "platform": "threads",
       "is_affiliate": false,
       "affiliate_comment": null,
-      "status": "queued"
+      "status": "queued",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "フォーマットB変型_臨時収入型（●●万円の臨時収入）",
+      "category": "金運",
+      "content": "素直に申し上げますね\nあなた本日中に\n●●万円ほどの臨時収入が入ってきます\n信じるかどうかはあなたの自由です\nただ、この言葉を覚えておいてくださいね🌸",
+      "hashtag": "#金運",
+      "time_slot": "臨時収入型（12:07）",
+      "scheduled_hour": 12,
+      "scheduled_minute": 7,
+      "id": "post_20260422_0056_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の視点・内省",
+      "content": "占いを求める人の多くは、\n「答え」を欲しがっている。\n\nでも本当は違う気がする。\n\n占いが教えてくれるのは、\n自分がどう選択するかの\n「許可」なんだと思う。\n\n迷ったとき、\n「大丈夫、進んでいい」\nそう背中を押してもらう場所。\n\n当たるかより、\n動けるか。\n\nあなたは今、\n何の許可を待っていますか？",
+      "hashtag": "#星座占い",
+      "time_slot": "哲学深掘り型（18:07）",
+      "scheduled_hour": 18,
+      "scheduled_minute": 7,
+      "id": "post_20260422_0056_exp_004",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "縦長すぎ: 18行（最大16行）[threads]",
+        "ハッシュタグが含まれていない[threads]"
+      ]
+    },
+    {
+      "pattern_name": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+      "category": "星座占い",
+      "content": "スルーしたら4月、金運が逃げてくわよ。\n\n第1位：やぎ座\n第2位：うお座\n第3位：てんびん座\n第4位：ふたご座\n第5位：いて座\n\n「🌙」をそっと置いた人は、\nずっと我慢してきた気持ちが報われて\n「こんなことあるんだ…」って\n思わず涙が出るくらい嬉しいことが起こります🙏✨",
+      "hashtag": "#星座占い",
+      "time_slot": "スルー恐怖型（20:07）",
+      "scheduled_hour": 20,
+      "scheduled_minute": 7,
+      "id": "post_20260422_0056_exp_005",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "queued",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ]
     }
   ]
 }

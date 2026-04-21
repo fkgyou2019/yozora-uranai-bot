@@ -4341,7 +4341,33 @@
         "hook_length": 12
       },
       "collected_at": "2026-04-21T20:37:17.800413+09:00"
+    },
+    {
+      "id": "verify-retry-20260421211142",
+      "platform_post_id": "18064182113379890",
+      "posted_at": "2026-04-21T21:11:42.120534+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "今週後半、\n金銭面で予期せぬ\n出来事が起こりやすい星座。\n\nたった2つだけです。\n\n【牡牛座・天秤座",
+      "first_line": "今週後半、",
+      "char_count": 166,
+      "metrics": {
+        "views": 217,
+        "likes": 12,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 5.53
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 5
+      },
+      "collected_at": "2026-04-22T00:57:13.784044+09:00"
     }
   ],
-  "last_updated": "2026-04-21T21:37:11.691838+09:00"
+  "last_updated": "2026-04-22T00:57:13.784044+09:00"
 }

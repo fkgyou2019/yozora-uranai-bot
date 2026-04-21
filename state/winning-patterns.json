@@ -247,8 +247,8 @@
     "自動検出・低パフォーマンスパターン: 5件"
   ],
   "auto_analysis": {
-    "data_count": 167,
-    "last_analyzed": "2026-04-21T21:37:24.982043+09:00",
+    "data_count": 168,
+    "last_analyzed": "2026-04-22T00:57:30.060285+09:00",
     "confidence": "high",
     "top_patterns": [
       {
@@ -430,12 +430,12 @@
       },
       {
         "pattern": "構造G_注意喚起+限定型",
-        "count": 41,
-        "avg_engagement": 10.68,
-        "avg_views": 187.0,
-        "total_likes": 610,
+        "count": 42,
+        "avg_engagement": 10.56,
+        "avg_views": 188.0,
+        "total_likes": 622,
         "total_replies": 149,
-        "_score": 206.9716
+        "_score": 207.85279999999997
       },
       {
         "pattern": "その他（推定）",
@@ -1048,9 +1048,9 @@
       },
       "21": {
         "slot": "夜（19〜21時台）",
-        "avg_eng": 11.2,
+        "avg_eng": 10.91,
         "avg_views": 226.0,
-        "count": 19
+        "count": 20
       },
       "22": {
         "slot": "深夜（22〜0時台）",
@@ -1118,8 +1118,8 @@
       "自動検出・低パフォーマンスパターン: 5件"
     ]
   },
-  "data_count": 167,
-  "last_analyzed": "2026-04-21T21:37:24.982043+09:00",
+  "data_count": 168,
+  "last_analyzed": "2026-04-22T00:57:30.060285+09:00",
   "confidence": "high",
   "pattern_ranking": [
     {
@@ -1259,12 +1259,12 @@
     },
     {
       "pattern": "構造G_注意喚起+限定型",
-      "count": 41,
-      "avg_engagement": 10.68,
-      "avg_views": 187.0,
-      "total_likes": 610,
+      "count": 42,
+      "avg_engagement": 10.56,
+      "avg_views": 188.0,
+      "total_likes": 622,
       "total_replies": 149,
-      "_score": 206.9716
+      "_score": 207.85279999999997
     },
     {
       "pattern": "その他（推定）",
@@ -1843,9 +1843,9 @@
     },
     "21": {
       "slot": "夜（19〜21時台）",
-      "avg_eng": 11.2,
+      "avg_eng": 10.91,
       "avg_views": 226.0,
-      "count": 19
+      "count": 20
     },
     "22": {
       "slot": "深夜（22〜0時台）",
