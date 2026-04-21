@@ -260,7 +260,7 @@ async def run_alert_check(handles: list[str], last_seen: dict, topic: str) -> tu
                 "last_post_id":  latest["post_id"],
                 "last_posted_at": latest["posted_at"],
                 "last_checked":  now_str,
-                "follower_count": fc,
+                "follower_count": latest.get("follower_count", 0),
             }
 
             if is_new and prev_post_id:
