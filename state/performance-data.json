@@ -4289,7 +4289,33 @@
         "hook_length": 11
       },
       "collected_at": "2026-04-21T08:29:45.939509+09:00"
+    },
+    {
+      "id": "verify-retry-20260421091216",
+      "platform_post_id": "18088882895253838",
+      "posted_at": "2026-04-21T09:12:16.990992+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "category": "",
+      "content_preview": "4月下旬、人間関係で\n揉める可能性がある星座。\n\nたった3つだけ注意です。\n\n🔮牡蟹座\n→言葉選びで",
+      "first_line": "4月下旬、人間関係で",
+      "char_count": 187,
+      "metrics": {
+        "views": 77,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 2.6
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": true,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 10
+      },
+      "collected_at": "2026-04-21T10:37:13.727816+09:00"
     }
   ],
-  "last_updated": "2026-04-21T09:09:22.291681+09:00"
+  "last_updated": "2026-04-21T10:37:13.727816+09:00"
 }
