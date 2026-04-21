@@ -286,10 +286,10 @@ def main():
 
     replied_ids = set(replied.get("replied_ids", []))
 
-    # 最近の投稿を取得（直近10件）
+    # 最近の投稿を取得（直近20件）
     posts_url = (
         f"https://graph.threads.net/v1.0/{user_id}/threads"
-        f"?fields=id,text,timestamp&limit=10&access_token={access_token}"
+        f"?fields=id,text,timestamp&limit=20&access_token={access_token}"
     )
 
     try:
@@ -301,7 +301,7 @@ def main():
     posts = posts_data.get("data", [])
     total_replied = 0
     total_skipped = 0
-    max_replies_per_run = 5  # 1回の実行で最大5件返信（スパム防止）
+    max_replies_per_run = 15  # 1回の実行で最大15件返信
     recent_replies = replied.get("recent_reply_texts", [])  # 直近の返信文を保持
     consecutive_errors = {}  # 投稿IDごとの連続400エラー回数
     post_pattern_map = build_post_pattern_map()
@@ -319,20 +319,41 @@ def main():
         post_text = post.get("text", "")
         post_info = post_pattern_map.get(post_id, {"pattern_name": "不明", "hook": post_text.split("\n")[0][:60] if post_text else ""})
 
-        # この投稿へのコメントを取得
-        replies_url = (
+        # この投稿へのコメントを全件取得（ページネーション対応）
+        comments = []
+        next_url = (
             f"https://graph.threads.net/v1.0/{post_id}/replies"
-            f"?fields=id,text,username,timestamp&access_token={access_token}"
+            f"?fields=id,text,username,timestamp&limit=50&access_token={access_token}"
         )
+        page_count = 0
+        while next_url and page_count < 5:  # 最大5ページ（250件）
+            try:
+                replies_data = threads_get(next_url)
+            except urllib.error.HTTPError as e:
+                print(f"  [WARN] コメント取得HTTPエラー (post={post_id}, page={page_count+1}): {e.code}")
+                break
+            except Exception as e:
+                print(f"  [WARN] コメント取得エラー (post={post_id}): {e}")
+                break
+            comments.extend(replies_data.get("data", []))
+            next_url = replies_data.get("paging", {}).get("next")
+            page_count += 1
 
-        try:
-            replies_data = threads_get(replies_url)
-        except urllib.error.HTTPError:
+        if not comments:
             continue
-        except Exception:
-            continue
+        print(f"\n📨 投稿 {post_id[:10]}... : {len(comments)}件のコメント（{page_count}ページ取得）")
+        # コメントを優先度順にソート: 星座言及 > 文章 > 絵文字のみ
+        def _comment_priority(c):
+            txt = c.get("text", "")
+            zodiac_names_short = ["牡羊", "牡牛", "双子", "蟹", "獅子", "乙女",
+                                   "天秤", "蠍", "射手", "山羊", "水瓶", "魚"]
+            if any(z in txt for z in zodiac_names_short):
+                return 0  # 最優先
+            if any(ch.isalpha() or '\u3040' <= ch <= '\u9fff' for ch in txt):
+                return 1  # 文章コメント
+            return 2  # 絵文字のみ
+        comments = sorted(comments, key=_comment_priority)
 
-        comments = replies_data.get("data", [])
         replied_users_this_post = set()  # この投稿で既に返信したユーザー
 
         # Threads API上で既に返信済みのコメントIDとユーザーを特定
@@ -445,8 +466,8 @@ def main():
                     break
 
             if reply_text is None:
-                print(f"  [WARN] @{comment_user}: 3回生成しても類似度90%超。スキップ")
-                replied_ids.add(comment_id)
+                print(f"  [SKIP] @{comment_user}: 返信生成失敗（3回試行）→ 次回に持ち越し")
+                # replied_ids に追加しない → 次回の実行で再試行される
                 continue
 
             # Threads APIで返信投稿（reply_to_idには元の投稿IDを使う。コメントIDではない）
