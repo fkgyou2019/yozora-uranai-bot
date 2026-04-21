@@ -23640,6 +23640,17 @@
           "auto_replies": 0,
           "er": 8.82,
           "velocity_views_per_hour": 0.7
+        },
+        {
+          "h": 64,
+          "ts": "2026-04-22T00:53:15.092582+09:00",
+          "views": 34,
+          "likes": 1,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.82,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -23886,7 +23897,7 @@
       "completed": false,
       "peak_velocity": 43.2,
       "peak_velocity_hour": 6,
-      "api_fail_count": 1
+      "api_fail_count": 2
     },
     "verify-retry-20260419104220": {
       "post_id": "verify-retry-20260419104220",
@@ -24108,6 +24119,17 @@
           "auto_replies": 0,
           "er": 9.52,
           "velocity_views_per_hour": 0.7
+        },
+        {
+          "h": 62,
+          "ts": "2026-04-22T00:53:15.092582+09:00",
+          "views": 105,
+          "likes": 10,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.52,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -24433,6 +24455,17 @@
           "auto_replies": 0,
           "er": 11.58,
           "velocity_views_per_hour": 0.7
+        },
+        {
+          "h": 52,
+          "ts": "2026-04-22T00:53:15.092582+09:00",
+          "views": 95,
+          "likes": 8,
+          "replies": 3,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.58,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -24641,6 +24674,17 @@
           "auto_replies": 0,
           "er": 17.74,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 51,
+          "ts": "2026-04-22T00:53:15.092582+09:00",
+          "views": 63,
+          "likes": 10,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 19.05,
+          "velocity_views_per_hour": 0.5
         }
       ],
       "completed": false,
@@ -24779,6 +24823,17 @@
           "auto_replies": 0,
           "er": 14.46,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 41,
+          "ts": "2026-04-22T00:53:15.092582+09:00",
+          "views": 83,
+          "likes": 12,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 14.46,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -25053,6 +25108,17 @@
           "auto_replies": 0,
           "er": 8.0,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 29,
+          "ts": "2026-04-22T00:53:15.092582+09:00",
+          "views": 50,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -25163,7 +25229,7 @@
       "completed": false,
       "peak_velocity": 7.0,
       "peak_velocity_hour": 0,
-      "api_fail_count": 1
+      "api_fail_count": 2
     },
     "post_20260420_2116_exp_007": {
       "post_id": "post_20260420_2116_exp_007",
@@ -25257,6 +25323,17 @@
           "auto_replies": 0,
           "er": 3.45,
           "velocity_views_per_hour": 1.3
+        },
+        {
+          "h": 17,
+          "ts": "2026-04-22T00:53:15.092582+09:00",
+          "views": 30,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 3.33,
+          "velocity_views_per_hour": 1.0
         }
       ],
       "completed": false,
@@ -25276,7 +25353,7 @@
       "content_preview": "朝の満員電車で、好きな人のLINEを何度も読み直す。\nそういう瞬間ってありますよね。\n\n占い師をしていて気づいたのは、\n",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 5
+      "api_fail_count": 6
     },
     "verify-retry-20260421091216": {
       "post_id": "verify-retry-20260421091216",
@@ -25344,6 +25421,17 @@
           "auto_replies": 0,
           "er": 1.57,
           "velocity_views_per_hour": 4.3
+        },
+        {
+          "h": 15,
+          "ts": "2026-04-22T00:53:15.092582+09:00",
+          "views": 130,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.54,
+          "velocity_views_per_hour": 3.0
         }
       ],
       "completed": false,
@@ -25363,7 +25451,7 @@
       "content_preview": "4月下旬、金銭トラブルが起きやすい星座。\n\nたった2つだけ注意です。\n\n🔮獅子座\n→衝動買いが増える時期。\n大きな買い物",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 5
+      "api_fail_count": 6
     },
     "post_20260421_0909_exp_002": {
       "post_id": "post_20260421_0909_exp_002",
@@ -25378,7 +25466,7 @@
       "content_preview": "正直に申し上げますね\nあなた4/21中に\n●●万円ほどの臨時収入が入ってきます\n信じなくて構いません\nただ、覚えておいて",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 5
+      "api_fail_count": 6
     },
     "post_20260420_2116_exp_006": {
       "post_id": "post_20260420_2116_exp_006",
@@ -25418,7 +25506,7 @@
       "completed": false,
       "peak_velocity": 11.0,
       "peak_velocity_hour": 0,
-      "api_fail_count": 1
+      "api_fail_count": 2
     },
     "post_20260421_0909_exp_003": {
       "post_id": "post_20260421_0909_exp_003",
@@ -25433,7 +25521,7 @@
       "content_preview": "仕事を辞めたいと思ったことはありますか？\n\n占い師をしていて気づいたのは、\n迷いの中にいる人ほど「答え」を求めるというこ",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 2
+      "api_fail_count": 3
     },
     "post_20260421_2038_exp_004": {
       "post_id": "post_20260421_2038_exp_004",
@@ -25448,7 +25536,7 @@
       "content_preview": "仕事を辞めたくなるのは、\n星のせいじゃなくて、\n自分の声を無視してるからだと思う。\n\n占いをしていて気づくのは、\n「運が",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 1
+      "api_fail_count": 2
     },
     "verify-retry-20260421211142": {
       "post_id": "verify-retry-20260421211142",
@@ -25472,6 +25560,17 @@
           "auto_replies": 0,
           "er": 5.73,
           "velocity_views_per_hour": 96.0
+        },
+        {
+          "h": 3,
+          "ts": "2026-04-22T00:53:15.092582+09:00",
+          "views": 216,
+          "likes": 12,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 5.56,
+          "velocity_views_per_hour": 24.0
         }
       ],
       "completed": false,
@@ -25479,5 +25578,5 @@
       "peak_velocity_hour": 2
     }
   },
-  "last_updated": "2026-04-21T23:16:14.572906+09:00"
+  "last_updated": "2026-04-22T00:53:15.092582+09:00"
 }
