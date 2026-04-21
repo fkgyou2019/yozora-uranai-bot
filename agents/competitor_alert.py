@@ -90,7 +90,7 @@ def send_push(topic: str, title: str, body: str, priority: str = "high", url: st
     """ntfy.sh に push 通知を送る"""
     endpoint = f"{NTFY_BASE_URL}/{topic}"
     headers = {
-        "Title":    title.encode("utf-8"),
+        "Title":    urllib.parse.quote(title),   # 日本語は URL エンコード必須
         "Priority": priority,
         "Tags":     "bell",
         "Content-Type": "text/plain; charset=utf-8",
@@ -327,6 +327,19 @@ def main():
     ntfy_topic = os.environ.get("NTFY_TOPIC", DEFAULT_TOPIC).strip()
     if not ntfy_topic:
         ntfy_topic = DEFAULT_TOPIC
+
+    # テストモード: DRY_RUN=true の場合はテスト通知だけ送って終了
+    dry_run = os.environ.get("DRY_RUN", "false").lower() == "true"
+    if dry_run:
+        log("TEST", f"テスト通知を送信中... (topic: {ntfy_topic})")
+        send_push(
+            ntfy_topic,
+            "🔔 テスト通知",
+            "ntfy の接続確認です。このメッセージが届いていれば設定完了！",
+            priority="default",
+        )
+        log("TEST", "テスト通知送信完了")
+        return
 
     log("START", f"競合アラートチェック開始 (ntfy topic: {ntfy_topic})")
 
