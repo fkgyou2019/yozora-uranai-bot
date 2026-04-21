@@ -1,6 +1,6 @@
 {
   "_readme": "Claudeがセッション開始時に読む現状把握ファイル。各ワークフローが自動更新する。",
-  "generated_at": "2026-04-22 00:57 JST",
+  "generated_at": "2026-04-22 01:36 JST",
   "overall_status": "OK",
   "issues": [],
   "next_actions": [
@@ -24,22 +24,18 @@
     "last_log_at": "なし"
   },
   "pdca": {
-    "last_updated": "2026-04-21",
+    "last_updated": "2026-04-22",
     "confidence": "high",
-    "data_count": 168,
-    "top1_pattern": "構造G_注意喚起+限定型②",
-    "top1_er": 0,
-    "top1_trend": "",
-    "top2_pattern": "注意喚起+限定型（推定）",
-    "top2_er": 0,
-    "avoid_count": 5,
-    "avoid_patterns": [
-      "【avg_views:216・ER:3.4%・2件】構造F_",
-      "【avg_views:44・ER:2.5%・2件】構造J_全",
-      "【avg_views:33・ER:1.8%・10件】構造H_"
-    ],
+    "data_count": 33,
+    "top1_pattern": "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）",
+    "top1_er": 17.13,
+    "top1_trend": "データ不足",
+    "top2_pattern": "構造G_注意喚起+限定型",
+    "top2_er": 10.47,
+    "avoid_count": 0,
+    "avoid_patterns": [],
     "last_actions": [
-      "新規採用: 「構造G_天体根拠×夜の恋愛感情型（今夜の恋愛運・月の動き×恋」",
+      "新規採用: 「構造X4_スルー恐怖型（無視・素通りしたら損＋金運）」",
       "新規採用: 「構造G_注意喚起+限定型」",
       "新規採用: 「構造G_天体根拠×仕事アドバイス型（今日の仕事運・仕事迷子タ」"
     ]
