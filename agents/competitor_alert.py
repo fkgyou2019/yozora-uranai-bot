@@ -88,9 +88,9 @@ def load_alert_targets() -> list[str]:
 
 
 # ── ntfy.sh 通知 ─────────────────────────────────────────────────
-def send_push(topic: str, title: str, body: str, priority: str = "high", url: str = ""):
+def send_push(topic: str, title: str, body: str, priority: str = "default",
+              url: str = "", actions: list | None = None):
     """ntfy.sh に push 通知を送る（JSON API 使用で日本語タイトル対応）"""
-    endpoint = f"{NTFY_BASE_URL}"
     priority_map = {"high": 4, "default": 3, "low": 2}
     payload = {
         "topic":    topic,
@@ -100,11 +100,13 @@ def send_push(topic: str, title: str, body: str, priority: str = "high", url: st
         "tags":     ["bell"],
     }
     if url:
-        payload["click"] = url   # 通知タップで URL を開く
+        payload["click"] = url
+    if actions:
+        payload["actions"] = actions
 
     try:
         req = urllib.request.Request(
-            endpoint,
+            NTFY_BASE_URL,
             data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
             headers={"Content-Type": "application/json"},
             method="POST",
@@ -352,37 +354,38 @@ def generate_comment(post: dict, moon_phase: str, api_key: str) -> str | None:
 
 
 # ── 通知メッセージ生成（1件分）────────────────────────────────────
-def build_single_notification(post: dict, comment: str | None) -> tuple[str, str, str]:
+def build_single_notification(post: dict, comment: str | None) -> dict:
     """
-    1投稿分の title, body, click_url を返す。
-    comment が生成できていれば本文に含める。
+    1投稿分の ntfy JSON ペイロードを返す。
+    - 本文 = コメント案のみ（長押しでコピーしやすい）
+    - 投稿URLはアクションボタンに分離（タップで投稿を開く）
     """
     fc_str = f"{post['follower_count']:,}" if post.get('follower_count', 0) > 0 else "?"
     title = f"🔔 @{post['handle']} が投稿（{fc_str}F）"
-    click_url = post.get("url", f"https://www.threads.com/@{post['handle']}")
+    post_url = post.get("url", f"https://www.threads.com/@{post['handle']}")
 
-    body_lines = []
-
-    # コメント案
+    # 本文：コメント案 or シンプルな案内
     if comment:
-        body_lines += [
-            "【コメント案・長押しでコピー】",
-            comment,
-            "",
-        ]
+        message = comment
     else:
-        body_lines += ["コメントチャンス！", ""]
+        text = post.get("text", "")
+        snippet = f"「{text[:40]}…」" if len(text) > 40 else (f"「{text}」" if text else "")
+        message = f"コメントチャンス！\n{snippet}".strip()
 
-    # 投稿冒頭
-    text = post.get("text", "")
-    if text:
-        snippet = f"「{text[:45]}…」" if len(text) > 45 else f"「{text}」"
-        body_lines += [snippet, ""]
-
-    # 投稿 URL（タップで開けるが本文にも表示）
-    body_lines.append(click_url)
-
-    return title, "\n".join(body_lines), click_url
+    return {
+        "title":    title,
+        "message":  message,
+        "priority": 4,
+        "tags":     ["bell"],
+        "actions": [
+            {
+                "action": "view",
+                "label":  "投稿を開く",
+                "url":    post_url,
+                "clear":  False,
+            }
+        ],
+    }
 
 
 # ── メイン ────────────────────────────────────────────────────────
@@ -456,8 +459,14 @@ def main():
                 if comment:
                     log("GEN", f"生成完了: {comment}")
 
-            title, body, click_url = build_single_notification(post, comment)
-            send_push(ntfy_topic, title, body, priority="high", url=click_url)
+            payload = build_single_notification(post, comment)
+            send_push(
+                ntfy_topic,
+                payload["title"],
+                payload["message"],
+                priority="high",
+                actions=payload.get("actions"),
+            )
     else:
         log("INFO", "新投稿なし → 通知なし")
 
