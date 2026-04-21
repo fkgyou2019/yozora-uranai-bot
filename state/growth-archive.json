@@ -2685,5 +2685,67 @@
     "hourly": [],
     "completed": true,
     "api_fail_count": 6
+  },
+  "post_20260414_1758_exp_001": {
+    "post_id": "post_20260414_1758_exp_001",
+    "platform_post_id": "18321127822283439",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DXGzFCTlRzT",
+    "posted_at": "2026-04-14T17:58:36.488651+09:00",
+    "pattern_name": "構造H_しいたけ式深掘り哲学型",
+    "slot_hour": 17,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "占いは迷った時の地図じゃなく、鏡だと思う。",
+    "content_preview": "占いは迷った時の地図じゃなく、鏡だと思う。\n\n仕事の選択肢で悩んでいる人から相談をもらう度に気づくのは、星が示しているの",
+    "hourly": [
+      {
+        "h": 1,
+        "ts": "2026-04-14T19:48:28.134468+09:00",
+        "views": 16,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 16.0
+      },
+      {
+        "h": 6,
+        "ts": "2026-04-15T00:55:08.672374+09:00",
+        "views": 21,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 1.0
+      },
+      {
+        "h": 11,
+        "ts": "2026-04-15T05:14:39.904213+09:00",
+        "views": 21,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 14,
+        "ts": "2026-04-15T08:06:58.789286+09:00",
+        "views": 21,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 0.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 16.0,
+    "peak_velocity_hour": 1,
+    "api_fail_count": 3
   }
 }
