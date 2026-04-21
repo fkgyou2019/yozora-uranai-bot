@@ -65,11 +65,20 @@ jobs:
           GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
           GOOGLE_SHEETS_ID: ${{ secrets.GOOGLE_SHEETS_ID }}
 
+      - name: Generate comment suggestions
+        run: |
+          python .github/scripts/generate_comment_suggestions.py
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
+          GOOGLE_SHEETS_ID: ${{ secrets.GOOGLE_SHEETS_ID }}
+
       - name: Commit timeline data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/account-timeline.json state/competitor-buzz-references.json state/competitor-buzz-trend.json
+          git add state/account-timeline.json state/competitor-buzz-references.json state/competitor-buzz-trend.json state/comment-suggestions.json
           if git diff --staged --quiet; then
             echo "変更なし"
           else
