@@ -4351,6 +4351,26 @@
       "posted_at": "2026-04-21T18:12:49.273518+09:00",
       "platform_post_id": "18099869230825710",
       "source": "post-verify"
+    },
+    {
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の視点・内省型",
+      "content": "仕事を辞めたいと思ったことはありますか？\n\n占い師をしていて気づいたのは、\n迷いの中にいる人ほど「答え」を求めるということです。\n\n星は「こっちが正解」とは教えてくれない。\nむしろ「あなたはどうしたいのか」という問いを\n何度も何度も返してくる。\n\n退勤後、疲れた頭で占いを見る人も多いと思う。\nでも、その時間が実は一番大事なのかもしれません。\n\n星の声を聞くより、\n自分の声に耳を澄ます時間。\n\nあなたは今、何を望んでいますか？",
+      "hashtag": "#星読み",
+      "time_slot": "哲学深掘り型（18:07）",
+      "scheduled_hour": 18,
+      "scheduled_minute": 7,
+      "id": "post_20260421_0909_exp_003",
+      "platform": "threads",
+      "is_affiliate": false,
+      "affiliate_comment": null,
+      "status": "posted",
+      "quality_warnings": [
+        "ハッシュタグが含まれていない[threads]"
+      ],
+      "posted_at": "2026-04-21T19:12:17.957732+09:00",
+      "platform_post_id": "18089525713980298",
+      "source": "post-verify"
     }
   ]
 }
