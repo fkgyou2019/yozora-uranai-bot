@@ -17149,61 +17149,6 @@
       "peak_velocity": 56.0,
       "peak_velocity_hour": 1
     },
-    "post_20260414_0831_exp_001": {
-      "post_id": "post_20260414_0831_exp_001",
-      "platform_post_id": "18144766513492461",
-      "threads_url": "",
-      "posted_at": "2026-04-14T09:12:18.683196+09:00",
-      "pattern_name": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
-      "slot_hour": 9,
-      "day_of_week": 1,
-      "day_name": "火",
-      "first_line": "🔮 4/14の12星座",
-      "content_preview": "🔮 4/14の12星座\n\n牡羊座　勇気を出した分、扉が開く。\n牡牛座　焦らず進めば、道は広がる。\n双子座　気になる話題が",
-      "hourly": [],
-      "completed": true,
-      "api_fail_count": 6
-    },
-    "post_20260414_0831_exp_005": {
-      "post_id": "post_20260414_0831_exp_005",
-      "platform_post_id": "17867081964526298",
-      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXGBJFlDgPq",
-      "posted_at": "2026-04-14T10:42:15.509203+09:00",
-      "pattern_name": "構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
-      "slot_hour": 10,
-      "day_of_week": 1,
-      "day_name": "火",
-      "first_line": "実は、昼休みが最強の運気リセットタイム。",
-      "content_preview": "実は、昼休みが最強の運気リセットタイム。\n\n今日のあなたに必要なのは\n白いハンカチと、青いボールペン。\n\nこの2つを持っ",
-      "hourly": [
-        {
-          "h": 4,
-          "ts": "2026-04-14T15:22:14.365973+09:00",
-          "views": 14,
-          "likes": 0,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 0.0,
-          "velocity_views_per_hour": 3.5
-        },
-        {
-          "h": 9,
-          "ts": "2026-04-14T19:48:28.134468+09:00",
-          "views": 19,
-          "likes": 0,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 0.0,
-          "velocity_views_per_hour": 1.0
-        }
-      ],
-      "completed": true,
-      "peak_velocity": 3.5,
-      "peak_velocity_hour": 4,
-      "api_fail_count": 4
-    },
     "verify-retry-20260414121218": {
       "post_id": "verify-retry-20260414121218",
       "platform_post_id": "18003415103859916",
@@ -17567,90 +17512,6 @@
       "completed": false,
       "peak_velocity": 133.0,
       "peak_velocity_hour": 4
-    },
-    "post_20260414_0831_exp_006": {
-      "post_id": "post_20260414_0831_exp_006",
-      "platform_post_id": "17911967757181811",
-      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXGgMAiFXKa",
-      "posted_at": "2026-04-14T15:13:34.153206+09:00",
-      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
-      "slot_hour": 15,
-      "day_of_week": 1,
-      "day_name": "火",
-      "first_line": "迷いながら進む人ほど、星は応援している。",
-      "content_preview": "迷いながら進む人ほど、星は応援している。\n\n仕事を辞めたいと相談してくれる人は多い。でも占い師として感じるのは、その迷い",
-      "hourly": [
-        {
-          "h": 0,
-          "ts": "2026-04-14T15:22:14.365973+09:00",
-          "views": 0,
-          "likes": 0,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 0,
-          "velocity_views_per_hour": 0.0
-        },
-        {
-          "h": 4,
-          "ts": "2026-04-14T19:48:28.134468+09:00",
-          "views": 81,
-          "likes": 1,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 1.23,
-          "velocity_views_per_hour": 20.2
-        },
-        {
-          "h": 9,
-          "ts": "2026-04-15T00:55:08.672374+09:00",
-          "views": 85,
-          "likes": 1,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 1.18,
-          "velocity_views_per_hour": 0.8
-        },
-        {
-          "h": 14,
-          "ts": "2026-04-15T05:14:39.904213+09:00",
-          "views": 85,
-          "likes": 1,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 1.18,
-          "velocity_views_per_hour": 0.0
-        },
-        {
-          "h": 16,
-          "ts": "2026-04-15T08:06:58.789286+09:00",
-          "views": 86,
-          "likes": 1,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 1.16,
-          "velocity_views_per_hour": 0.5
-        },
-        {
-          "h": 24,
-          "ts": "2026-04-15T15:17:12.902338+09:00",
-          "views": 88,
-          "likes": 1,
-          "replies": 0,
-          "reposts": 0,
-          "auto_replies": 0,
-          "er": 1.14,
-          "velocity_views_per_hour": 0.2
-        }
-      ],
-      "completed": true,
-      "peak_velocity": 20.2,
-      "peak_velocity_hour": 4,
-      "api_fail_count": 3
     },
     "post_20260414_1522_exp_001": {
       "post_id": "post_20260414_1522_exp_001",
@@ -22990,6 +22851,17 @@
           "auto_replies": 0,
           "er": 13.48,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 68,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 794,
+          "likes": 65,
+          "replies": 42,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 13.48,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -23257,6 +23129,17 @@
           "auto_replies": 0,
           "er": 6.3,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 66,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 1461,
+          "likes": 85,
+          "replies": 7,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 6.3,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -23483,6 +23366,17 @@
           "auto_replies": 0,
           "er": 15.32,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 65,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 111,
+          "likes": 17,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.32,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -23673,6 +23567,17 @@
         {
           "h": 47,
           "ts": "2026-04-21T08:05:29.327340+09:00",
+          "views": 32,
+          "likes": 1,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.38,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 55,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
           "views": 32,
           "likes": 1,
           "replies": 2,
@@ -23877,6 +23782,17 @@
           "auto_replies": 0,
           "er": 9.66,
           "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 54,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 290,
+          "likes": 28,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.66,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -24041,6 +23957,17 @@
         {
           "h": 45,
           "ts": "2026-04-21T08:05:29.327340+09:00",
+          "views": 103,
+          "likes": 10,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 9.71,
+          "velocity_views_per_hour": 0.0
+        },
+        {
+          "h": 52,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
           "views": 103,
           "likes": 10,
           "replies": 0,
@@ -24318,6 +24245,17 @@
           "auto_replies": 0,
           "er": 11.83,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 43,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 93,
+          "likes": 8,
+          "replies": 3,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 11.83,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -24471,6 +24409,17 @@
           "auto_replies": 0,
           "er": 18.64,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 41,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 59,
+          "likes": 9,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 18.64,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -24554,6 +24503,17 @@
           "auto_replies": 0,
           "er": 15.0,
           "velocity_views_per_hour": 0.3
+        },
+        {
+          "h": 32,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 80,
+          "likes": 12,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.0,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -24572,8 +24532,8 @@
       "first_line": "明日からの3日間、",
       "content_preview": "明日からの3日間、\n仕事で予想外の展開が起こりやすい星座。\n\nたった3つだけです。\n\n🔮 双子座\n上司や取引先からの\n連",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 6
+      "completed": true,
+      "api_fail_count": 7
     },
     "post_20260420_0859_exp_001": {
       "post_id": "post_20260420_0859_exp_001",
@@ -24621,10 +24581,10 @@
           "velocity_views_per_hour": 0.4
         }
       ],
-      "completed": false,
+      "completed": true,
       "peak_velocity": 2.0,
       "peak_velocity_hour": 7,
-      "api_fail_count": 3
+      "api_fail_count": 4
     },
     "verify-retry-20260420104219": {
       "post_id": "verify-retry-20260420104219",
@@ -24638,8 +24598,8 @@
       "first_line": "今週後半、金銭トラブルが起こりやすい星座。",
       "content_preview": "今週後半、金銭トラブルが起こりやすい星座。\n\nたった3つだけです。\n\n💰獅子座\n衝動買いのサインが出ています。\n金曜日ま",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 5
+      "completed": true,
+      "api_fail_count": 6
     },
     "post_20260420_0859_exp_003": {
       "post_id": "post_20260420_0859_exp_003",
@@ -24653,8 +24613,8 @@
       "first_line": "本当のことを言いますね。",
       "content_preview": "本当のことを言いますね。\nあなたは4月20日中に\n●●万円ほどの臨時収入が入ってきます。\n信じるかどうかはあなた次第。\n",
       "hourly": [],
-      "completed": false,
-      "api_fail_count": 5
+      "completed": true,
+      "api_fail_count": 6
     },
     "post_20260420_1630_exp_001": {
       "post_id": "post_20260420_1630_exp_001",
@@ -24715,7 +24675,8 @@
       ],
       "completed": false,
       "peak_velocity": 7.0,
-      "peak_velocity_hour": 2
+      "peak_velocity_hour": 2,
+      "api_fail_count": 1
     },
     "verify-retry-20260420191218": {
       "post_id": "verify-retry-20260420191218",
@@ -24772,6 +24733,17 @@
           "auto_replies": 0,
           "er": 8.51,
           "velocity_views_per_hour": 0.7
+        },
+        {
+          "h": 20,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 47,
+          "likes": 4,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 8.51,
+          "velocity_views_per_hour": 0.0
         }
       ],
       "completed": false,
@@ -24833,6 +24805,17 @@
           "auto_replies": 0,
           "er": 16.67,
           "velocity_views_per_hour": 1.0
+        },
+        {
+          "h": 18,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 33,
+          "likes": 3,
+          "replies": 2,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 15.15,
+          "velocity_views_per_hour": 0.4
         }
       ],
       "completed": false,
@@ -24852,7 +24835,7 @@
       "content_preview": "今夜見逃したら、5月の金運ガタ落ちらしいです。\n\n1位　🌙うお座\n2位 ⚡おうし座\n3位 💎しし座\n4位　✨てんびん座\n",
       "hourly": [],
       "completed": false,
-      "api_fail_count": 3
+      "api_fail_count": 4
     },
     "post_20260420_2116_exp_001": {
       "post_id": "post_20260420_2116_exp_001",
@@ -24876,12 +24859,96 @@
           "auto_replies": 0,
           "er": 7.14,
           "velocity_views_per_hour": 14.0
+        },
+        {
+          "h": 8,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 24,
+          "likes": 1,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 4.17,
+          "velocity_views_per_hour": 1.2
         }
       ],
       "completed": false,
       "peak_velocity": 14.0,
       "peak_velocity_hour": 0
+    },
+    "post_20260420_2116_exp_003": {
+      "post_id": "post_20260420_2116_exp_003",
+      "platform_post_id": "18101363779976203",
+      "threads_url": "",
+      "posted_at": "2026-04-21T08:29:45.855154+09:00",
+      "pattern_name": "構造H_しいたけ式共感・場面描写型（恋愛の悩みの場面を具体的に描写・恋愛迷子ターゲット・通勤ピーク）",
+      "slot_hour": 8,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "朝の満員電車で、好きな人のLINEを何度も読み直す。",
+      "content_preview": "朝の満員電車で、好きな人のLINEを何度も読み直す。\nそういう瞬間ってありますよね。\n\n占い師をしていて気づいたのは、\n",
+      "hourly": [],
+      "completed": false,
+      "api_fail_count": 1
+    },
+    "verify-retry-20260421091216": {
+      "post_id": "verify-retry-20260421091216",
+      "platform_post_id": "18088882895253838",
+      "threads_url": "https://www.threads.com/@yozora.uranai/post/DXX4aSOCd-R",
+      "posted_at": "2026-04-21T09:12:16.990992+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 9,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "4月下旬、人間関係で",
+      "content_preview": "4月下旬、人間関係で\n揉める可能性がある星座。\n\nたった3つだけ注意です。\n\n🔮牡蟹座\n→言葉選びで誤解が生まれやすい。",
+      "hourly": [
+        {
+          "h": 6,
+          "ts": "2026-04-21T15:21:19.346572+09:00",
+          "views": 104,
+          "likes": 2,
+          "replies": 0,
+          "reposts": 0,
+          "auto_replies": 0,
+          "er": 1.92,
+          "velocity_views_per_hour": 17.3
+        }
+      ],
+      "completed": false,
+      "peak_velocity": 17.3,
+      "peak_velocity_hour": 6
+    },
+    "verify-retry-20260421104218": {
+      "post_id": "verify-retry-20260421104218",
+      "platform_post_id": "18113889064757735",
+      "threads_url": "",
+      "posted_at": "2026-04-21T10:42:18.143523+09:00",
+      "pattern_name": "構造G_注意喚起+限定型",
+      "slot_hour": 10,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "4月下旬、金銭トラブルが起きやすい星座。",
+      "content_preview": "4月下旬、金銭トラブルが起きやすい星座。\n\nたった2つだけ注意です。\n\n🔮獅子座\n→衝動買いが増える時期。\n大きな買い物",
+      "hourly": [],
+      "completed": false,
+      "api_fail_count": 1
+    },
+    "post_20260421_0909_exp_002": {
+      "post_id": "post_20260421_0909_exp_002",
+      "platform_post_id": "18089873488982060",
+      "threads_url": "",
+      "posted_at": "2026-04-21T12:12:14.676557+09:00",
+      "pattern_name": "構造B_臨時収入型（●●万円の臨時収入が入ってく）",
+      "slot_hour": 12,
+      "day_of_week": 1,
+      "day_name": "火",
+      "first_line": "正直に申し上げますね",
+      "content_preview": "正直に申し上げますね\nあなた4/21中に\n●●万円ほどの臨時収入が入ってきます\n信じなくて構いません\nただ、覚えておいて",
+      "hourly": [],
+      "completed": false,
+      "api_fail_count": 1
     }
   },
-  "last_updated": "2026-04-21T08:05:29.327340+09:00"
+  "last_updated": "2026-04-21T15:21:19.346572+09:00"
 }

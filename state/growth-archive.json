@@ -2531,5 +2531,144 @@
     "peak_velocity": 16.0,
     "peak_velocity_hour": 1,
     "api_fail_count": 3
+  },
+  "post_20260414_0831_exp_001": {
+    "post_id": "post_20260414_0831_exp_001",
+    "platform_post_id": "18144766513492461",
+    "threads_url": "",
+    "posted_at": "2026-04-14T09:12:18.683196+09:00",
+    "pattern_name": "構造J_全12星座1行メッセージ型（めざまし型・起床直後の今日の運勢チェック需要・全員ターゲット）",
+    "slot_hour": 9,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "🔮 4/14の12星座",
+    "content_preview": "🔮 4/14の12星座\n\n牡羊座　勇気を出した分、扉が開く。\n牡牛座　焦らず進めば、道は広がる。\n双子座　気になる話題が",
+    "hourly": [],
+    "completed": true,
+    "api_fail_count": 6
+  },
+  "post_20260414_0831_exp_005": {
+    "post_id": "post_20260414_0831_exp_005",
+    "platform_post_id": "17867081964526298",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DXGBJFlDgPq",
+    "posted_at": "2026-04-14T10:42:15.509203+09:00",
+    "pattern_name": "構造F_スピ×ラッキーアイテム型（ラッキーカラー・ラッキーアイテム・軽くて楽しい・スピ好きターゲット・昼休み）",
+    "slot_hour": 10,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "実は、昼休みが最強の運気リセットタイム。",
+    "content_preview": "実は、昼休みが最強の運気リセットタイム。\n\n今日のあなたに必要なのは\n白いハンカチと、青いボールペン。\n\nこの2つを持っ",
+    "hourly": [
+      {
+        "h": 4,
+        "ts": "2026-04-14T15:22:14.365973+09:00",
+        "views": 14,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 3.5
+      },
+      {
+        "h": 9,
+        "ts": "2026-04-14T19:48:28.134468+09:00",
+        "views": 19,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0.0,
+        "velocity_views_per_hour": 1.0
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 3.5,
+    "peak_velocity_hour": 4,
+    "api_fail_count": 4
+  },
+  "post_20260414_0831_exp_006": {
+    "post_id": "post_20260414_0831_exp_006",
+    "platform_post_id": "17911967757181811",
+    "threads_url": "https://www.threads.com/@yozora.uranai/post/DXGgMAiFXKa",
+    "posted_at": "2026-04-14T15:13:34.153206+09:00",
+    "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+    "slot_hour": 15,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "迷いながら進む人ほど、星は応援している。",
+    "content_preview": "迷いながら進む人ほど、星は応援している。\n\n仕事を辞めたいと相談してくれる人は多い。でも占い師として感じるのは、その迷い",
+    "hourly": [
+      {
+        "h": 0,
+        "ts": "2026-04-14T15:22:14.365973+09:00",
+        "views": 0,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 0,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 4,
+        "ts": "2026-04-14T19:48:28.134468+09:00",
+        "views": 81,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.23,
+        "velocity_views_per_hour": 20.2
+      },
+      {
+        "h": 9,
+        "ts": "2026-04-15T00:55:08.672374+09:00",
+        "views": 85,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.18,
+        "velocity_views_per_hour": 0.8
+      },
+      {
+        "h": 14,
+        "ts": "2026-04-15T05:14:39.904213+09:00",
+        "views": 85,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.18,
+        "velocity_views_per_hour": 0.0
+      },
+      {
+        "h": 16,
+        "ts": "2026-04-15T08:06:58.789286+09:00",
+        "views": 86,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.16,
+        "velocity_views_per_hour": 0.5
+      },
+      {
+        "h": 24,
+        "ts": "2026-04-15T15:17:12.902338+09:00",
+        "views": 88,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0,
+        "auto_replies": 0,
+        "er": 1.14,
+        "velocity_views_per_hour": 0.2
+      }
+    ],
+    "completed": true,
+    "peak_velocity": 20.2,
+    "peak_velocity_hour": 4,
+    "api_fail_count": 3
   }
 }
