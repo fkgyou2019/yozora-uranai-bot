@@ -1,0 +1,76 @@
+name: Competitor Buzz Analysis（競合バズ投稿分析）
+
+# 監視アカウントの直近投稿（いいね・コメント数）を毎日収集・分析し、
+# generate_posts.py のプロンプトに注入するデータを更新する。
+#
+# 【出力ファイル】
+#   state/competitor-buzz-references.json
+#     - バズ投稿の構造分析結果
+#     - generate_posts.py の build_competitor_buzz_block() が読み込む
+#
+# 【実行タイミング】
+#   毎日 JST 03:00（UTC 18:00）
+#   workflow_dispatch で手動実行も可能
+#
+# 【コスト概算】
+#   1回 × 約8分 = 8分/日 ≒ 240分/月（GitHub Free 2,000分の12%）
+
+on:
+  schedule:
+    - cron: '0 18 * * *'   # JST 03:00
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'スクレイプのみ（Claude分析・保存なし）'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: competitor-buzz-analysis
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ runner.os }}-playwright-buzz
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          python -m playwright install chromium --with-deps
+
+      - name: Run competitor buzz analyzer
+        run: python agents/competitor_buzz_analyzer.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit updated buzz references
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/competitor-buzz-references.json
+          if git diff --staged --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "chore: competitor-buzz-references update $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+            git push || (git pull --rebase && git push)
+          fi
