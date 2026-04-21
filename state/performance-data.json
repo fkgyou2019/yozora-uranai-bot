@@ -4315,7 +4315,33 @@
         "hook_length": 10
       },
       "collected_at": "2026-04-21T10:37:13.727816+09:00"
+    },
+    {
+      "id": "post_20260420_2116_exp_006",
+      "platform_post_id": "18099869230825710",
+      "posted_at": "2026-04-21T18:12:49.273518+09:00",
+      "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+      "category": "占い師の日常・哲学",
+      "content_preview": "占いを求める人の半分は、\n本当は『答え』じゃなくて\n『決断の許可』を欲しがってるんだと思う。\n\n星の",
+      "first_line": "占いを求める人の半分は、",
+      "char_count": 194,
+      "metrics": {
+        "views": 15,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0,
+        "engagement_rate": 0.0
+      },
+      "features": {
+        "has_ranking": false,
+        "has_number_hook": false,
+        "has_question": false,
+        "has_cta_emoji": false,
+        "has_fear_hook": false,
+        "hook_length": 12
+      },
+      "collected_at": "2026-04-21T20:37:17.800413+09:00"
     }
   ],
-  "last_updated": "2026-04-21T19:07:12.425803+09:00"
+  "last_updated": "2026-04-21T20:37:17.800413+09:00"
 }
