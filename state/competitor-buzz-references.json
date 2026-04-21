@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-21T15:29:14.153672+09:00",
-  "source_accounts": 40,
-  "total_posts": 1261,
-  "buzz_posts_count": 876,
+  "generated_at": "2026-04-22T01:24:54.233019+09:00",
+  "source_accounts": 41,
+  "total_posts": 1316,
+  "buzz_posts_count": 919,
   "filters": {
     "min_pseudo_er": 0.05,
     "min_likes": 5
@@ -10,7 +10,7 @@
   "hook_pattern_summary": {
     "いいね強要型": {
       "count": 3,
-      "avg_er": 0.3231,
+      "avg_er": 0.3232,
       "examples": [
         {
           "handle": "raito.koiuranai",
@@ -21,8 +21,8 @@
         {
           "handle": "miko.reishi",
           "first_line": "⛩️開運鑑定の無料プレゼント案内⛩️",
-          "likes": 121,
-          "pseudo_er": 0.006
+          "likes": 124,
+          "pseudo_er": 0.0062
         },
         {
           "handle": "miko.reishi",
@@ -104,33 +104,9 @@
         }
       ]
     },
-    "その他": {
-      "count": 779,
-      "avg_er": 0.0557,
-      "examples": [
-        {
-          "handle": "hachico.odyssey",
-          "first_line": "1lemon_1vitamin",
-          "likes": 3,
-          "pseudo_er": 7.4941
-        },
-        {
-          "handle": "raito.koiuranai",
-          "first_line": "こ れ が 見 え た ら 無 心 で い い ね を🔮",
-          "likes": 1258,
-          "pseudo_er": 1.521
-        },
-        {
-          "handle": "uranai.fukuen",
-          "first_line": "残念ですが…無視した人はもう２度とありません。",
-          "likes": 778,
-          "pseudo_er": 0.759
-        }
-      ]
-    },
     "共感・場面描写型": {
-      "count": 55,
-      "avg_er": 0.0548,
+      "count": 59,
+      "avg_er": 0.0562,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -149,6 +125,30 @@
           "first_line": "【令和8年4月、何もかも上手くいく人】",
           "likes": 343,
           "pseudo_er": 0.347
+        }
+      ]
+    },
+    "その他": {
+      "count": 818,
+      "avg_er": 0.0553,
+      "examples": [
+        {
+          "handle": "hachico.odyssey",
+          "first_line": "1lemon_1vitamin",
+          "likes": 3,
+          "pseudo_er": 7.4941
+        },
+        {
+          "handle": "raito.koiuranai",
+          "first_line": "こ れ が 見 え た ら 無 心 で い い ね を🔮",
+          "likes": 1258,
+          "pseudo_er": 1.521
+        },
+        {
+          "handle": "uranai.fukuen",
+          "first_line": "残念ですが…無視した人はもう２度とありません。",
+          "likes": 778,
+          "pseudo_er": 0.759
         }
       ]
     },
@@ -197,8 +197,8 @@
   },
   "structure_summary": {
     "B_ランキング型": {
-      "count": 23,
-      "avg_er": 0.1964,
+      "count": 24,
+      "avg_er": 0.2014,
       "examples": [
         {
           "handle": "uranai.fukuen",
@@ -215,8 +215,8 @@
       ]
     },
     "C_予言・断言型": {
-      "count": 18,
-      "avg_er": 0.1379,
+      "count": 21,
+      "avg_er": 0.123,
       "examples": [
         {
           "handle": "hina.tesou",
@@ -233,7 +233,7 @@
       ]
     },
     "H_スピ共感型": {
-      "count": 78,
+      "count": 81,
       "avg_er": 0.0751,
       "examples": [
         {
@@ -251,8 +251,8 @@
       ]
     },
     "F_その他": {
-      "count": 716,
-      "avg_er": 0.0517,
+      "count": 751,
+      "avg_er": 0.0513,
       "examples": [
         {
           "handle": "hachico.odyssey",
@@ -269,8 +269,8 @@
       ]
     },
     "E_エンゲージ強要型": {
-      "count": 15,
-      "avg_er": 0.0415,
+      "count": 16,
+      "avg_er": 0.039,
       "examples": [
         {
           "handle": "ume_reishi",
@@ -281,8 +281,8 @@
         {
           "handle": "uranai.fukuen",
           "text_preview": "ピン留め済み 2026/03/19 🐍初回限定無料鑑定のご案内🐍 ご縁に感謝を込めて、今だけ “無料鑑定”を実施しております。 あなたの人生に必要な言霊を、誰よりも丁寧にお伝えします。 ・金運・良縁を引き寄せたい ・漠然とした不安から抜け出",
-          "likes": 39,
-          "pseudo_er": 0.0271
+          "likes": 40,
+          "pseudo_er": 0.0276
         }
       ]
     },
@@ -367,6 +367,17 @@
       "pseudo_er": 0.759,
       "hook_pattern": "その他",
       "structure": "B_ランキング型"
+    },
+    {
+      "handle": "arasa_uranai",
+      "category": "other",
+      "first_line": "今日から風向きが変わる人よ🌹",
+      "text": "今日から風向きが変わる人よ🌹\n🥇 乙女座（おとめ座）\n🥈 山羊座（やぎ座）\n🥉 蟹座（かに座）\nこの投稿に「🌹」をそっと置くと\n早くて7分後から\n物事がぜんぶ、不思議なぐらいうまくいくようになりますわ🌹",
+      "likes": 813,
+      "replies": 317,
+      "pseudo_er": 0.6733,
+      "hook_pattern": "その他",
+      "structure": "F_その他"
     },
     {
       "handle": "uranai.fukuen",
@@ -593,9 +604,9 @@
       "category": "other",
       "first_line": "実は小さい頃から、",
       "text": "ピン留め済み\n2025/11/20\n実は小さい頃から、\n人の縁が視えてしまう体質やって、\n運命の糸、悪意、両想い、片思い、嫌い、憎い、恨みが\n全部視えてしまうんよ。\n昔、大好きやった人の浮気を\n霊視で知ってもうて、\nそれを伝えたら「気持ち悪い」って言われて\n婚約破棄された…\nこの力は、誰にも理解してもらえへんし\n言うと気持ち悪がられて\nかなり辛かったし、4を覚悟したこともあったんやけど\nW不倫の関係に悩んでいた友達に\n相手が別れる時期をドンピシャで当てたら\nめっちゃ感謝されて、\nあ…私の力って人を幸せにできるんやな\nって思った。\nいや、不倫やん！って思うかもしれへんけど、\n純粋な好きという気持",
-      "likes": 524,
+      "likes": 526,
       "replies": 54,
-      "pseudo_er": 0.3291,
+      "pseudo_er": 0.3301,
       "hook_pattern": "その他",
       "structure": "F_その他"
     },
@@ -617,7 +628,7 @@
       "text": "天然石\n2026/04/03\n天然石好きな皆様に、お願いがあります！\n自分のすきな天然石のお写真\n載せてほしいのです！\n４月から異動になって二か所かと思いきや\n（もともと兼務だったのです）\n三か所回らなければならず\n絶望しているのです。笑\nよろしくお願いします！\nちなみに今日の私のおともは\nブラックトルマリンです！",
       "likes": 59,
       "replies": 91,
-      "pseudo_er": 0.3179,
+      "pseudo_er": 0.3185,
       "hook_pattern": "その他",
       "structure": "F_その他"
     },
@@ -642,17 +653,6 @@
       "pseudo_er": 0.3001,
       "hook_pattern": "その他",
       "structure": "H_スピ共感型"
-    },
-    {
-      "handle": "hina.tesou",
-      "category": "other",
-      "first_line": "ほんとうに、4月に臨時収入がドバーーーッときそうです！！",
-      "text": "ほんとうに、4月に臨時収入がドバーーーッときそうです！！\n2,130",
-      "likes": 2153,
-      "replies": 3,
-      "pseudo_er": 0.2966,
-      "hook_pattern": "臨時収入型",
-      "structure": "C_予言・断言型"
     }
   ],
   "top_by_category": {
@@ -702,6 +702,17 @@
         "structure": "B_ランキング型"
       },
       {
+        "handle": "arasa_uranai",
+        "category": "other",
+        "first_line": "今日から風向きが変わる人よ🌹",
+        "text": "今日から風向きが変わる人よ🌹\n🥇 乙女座（おとめ座）\n🥈 山羊座（やぎ座）\n🥉 蟹座（かに座）\nこの投稿に「🌹」をそっと置くと\n早くて7分後から\n物事がぜんぶ、不思議なぐらいうまくいくようになりますわ🌹",
+        "likes": 813,
+        "replies": 317,
+        "pseudo_er": 0.6733,
+        "hook_pattern": "その他",
+        "structure": "F_その他"
+      },
+      {
         "handle": "uranai.fukuen",
         "category": "other",
         "first_line": "無視する人金運上がらんよ。",
@@ -733,17 +744,6 @@
         "pseudo_er": 0.5456,
         "hook_pattern": "その他",
         "structure": "F_その他"
-      },
-      {
-        "handle": "hina.tesou",
-        "category": "other",
-        "first_line": "重大発表。",
-        "text": "重大発表。\n一度出ていったお金が\n「仲間をつれて戻ってくる」\nサインが出てる",
-        "likes": 3809,
-        "replies": 44,
-        "pseudo_er": 0.5406,
-        "hook_pattern": "その他",
-        "structure": "F_その他"
       }
     ]
   },
@@ -753,7 +753,7 @@
       "スルー恐怖型",
       "強運断言型",
       "臨時収入型",
-      "その他"
+      "共感・場面描写型"
     ],
     "top_structures_by_er": [
       "B_ランキング型",
@@ -765,12 +765,12 @@
       "こ れ が 見 え た ら 無 心 で い い ね を🔮",
       "い い ね を す る と 運 気 が 爆 上 が り し ま す⛩️",
       "残念ですが…無視した人はもう２度とありません。",
+      "今日から風向きが変わる人よ🌹",
       "無視する人金運上がらんよ。",
       "これ言うとフォロー外されるかもしれませんが、",
       "やっぱり確信しました。",
       "重大発表。",
-      "嘘は言いません。",
-      "🌸初回無料の霊視鑑定🌸"
+      "嘘は言いません。"
     ],
     "top_post_examples": [
       {
@@ -798,12 +798,12 @@
         "pseudo_er": 0.759
       },
       {
-        "hook_pattern": "臨時収入型",
-        "first_line": "無視する人金運上がらんよ。",
-        "text_excerpt": "無視する人金運上がらんよ。 1位　 🐟うお座 2位 ⚖️てんびん座 3位 🏹いて座 4位　🦁しし座 5位 🦂さそり座 6位 🏺みずがめ座 7位 🦀かに座 8位 👰‍♀️おとめ座 9位 👬ふたご座 10位 🐐やぎ座 11位 🐮おうし座 12位 🐏おひつじ座 『🌸』を置いた人全員、 うちがレイキ流して心整えるで。 理想の幸せのもとに辿り着けます。🐈‍⬛",
-        "pseudo_er": 0.6545
+        "hook_pattern": "その他",
+        "first_line": "今日から風向きが変わる人よ🌹",
+        "text_excerpt": "今日から風向きが変わる人よ🌹 🥇 乙女座（おとめ座） 🥈 山羊座（やぎ座） 🥉 蟹座（かに座） この投稿に「🌹」をそっと置くと 早くて7分後から 物事がぜんぶ、不思議なぐらいうまくいくようになりますわ🌹",
+        "pseudo_er": 0.6733
       }
     ],
-    "insight": "競合30件分析結果: 最高ERフックは「いいね強要型」(avg_er=0.3231)。最多バズ構造は「B_ランキング型」。いいね強要・スルー恐怖・ランキング型が特に高拡散。ただしNG表現（断定・祈祷等）に抵触しないよう要注意。"
+    "insight": "競合30件分析結果: 最高ERフックは「いいね強要型」(avg_er=0.3232)。最多バズ構造は「B_ランキング型」。いいね強要・スルー恐怖・ランキング型が特に高拡散。ただしNG表現（断定・祈祷等）に抵触しないよう要注意。"
   }
 }
