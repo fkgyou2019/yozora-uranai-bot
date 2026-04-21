@@ -163,7 +163,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add state/post-queue.json state/post-history.json state/system-status.json state/performance-data.json state/winning-patterns.json state/metrics.json state/daily-report.json state/cta-state.json state/session-context.json
+          git add state/post-queue.json state/post-history.json state/system-status.json state/performance-data.json state/winning-patterns.json state/metrics.json state/daily-report.json state/session-context.json
+          git add state/cta-state.json || true
           if git diff --cached --quiet; then
             echo "No state changes to commit"
           else
