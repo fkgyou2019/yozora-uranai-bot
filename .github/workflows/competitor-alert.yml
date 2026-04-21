@@ -77,7 +77,7 @@ jobs:
         run: python agents/competitor_alert.py
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          # dry_run は競合スクリプト内では未使用だが、将来の拡張用に渡しておく
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
 
       - name: Commit updated last-seen state

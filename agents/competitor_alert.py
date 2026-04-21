@@ -19,9 +19,11 @@ config/monitor-accounts.json の threads_accounts を巡回し、
 
 import asyncio
 import json
+import math
 import os
 import sys
 import time
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone, timedelta
 
@@ -287,41 +289,100 @@ async def run_alert_check(handles: list[str], last_seen: dict, topic: str) -> tu
     return new_posts, last_seen
 
 
-# ── 通知メッセージ生成 ────────────────────────────────────────────
-def build_notification(new_posts: list[dict]) -> tuple[str, str, str]:
-    """
-    title, body, click_url を返す。
-    複数投稿がある場合は最初の投稿URLを click_url に。
-    """
-    count = len(new_posts)
+# ── 月相 ─────────────────────────────────────────────────────────
+def get_moon_phase(dt: datetime) -> str:
+    known_new_moon = datetime(2000, 1, 6, 18, 14, tzinfo=timezone.utc)
+    lunar_cycle = 29.53058867
+    diff = (dt.astimezone(timezone.utc) - known_new_moon).total_seconds() / 86400
+    phase_day = diff % lunar_cycle
+    if phase_day < 1.5:   return "新月（新しいスタートのエネルギー）"
+    elif phase_day < 7.4:  return "上弦の月（行動・積み上げのエネルギー）"
+    elif phase_day < 8.9:  return "上弦の半月（バランスを取るエネルギー）"
+    elif phase_day < 14.8: return "満月前（感情が高まり・直感が冴える時期）"
+    elif phase_day < 16.3: return "満月（感情のピーク・気づきと解放のエネルギー）"
+    elif phase_day < 22.1: return "下弦の月（手放し・内省のエネルギー）"
+    elif phase_day < 23.6: return "下弦の半月（整理と見直しのエネルギー）"
+    else:                  return "晦日（新月前夜・静寂と準備のエネルギー）"
 
-    if count == 1:
-        p = new_posts[0]
-        fc_str = f"{p['follower_count']:,}" if p['follower_count'] > 0 else "?"
-        title = f"🔔 @{p['handle']} が投稿（{fc_str}F）"
-        body_lines = [
-            "コメントチャンス！今すぐコメントで露出を獲得",
+
+# ── コメント生成（Claude Haiku）───────────────────────────────────
+def generate_comment(post: dict, moon_phase: str, api_key: str) -> str | None:
+    """新投稿に対するコメント案をその場で生成して返す"""
+    prompt = f"""あなたは占いSNSアカウント「よぞら.」の運営者・月詠（つくよみ）です。
+競合占いアカウント @{post['handle']} の投稿に自然なコメントを残します。
+
+【相手の投稿内容】
+{post.get('text', '')[:300]}
+
+【今の月相】
+{moon_phase}
+
+【コメントのルール】
+1. 25〜40文字程度
+2. 占い・星読みの知識を1片だけ自然に含める
+3. 宣伝・自アカウント名は完全禁止
+4. 相手の投稿内容に具体的に触れる
+5. 絵文字は0〜1個（🌙✨🔮⭐💫のいずれか）
+
+コメント文のみ出力。説明不要。"""
+
+    body = json.dumps({
+        "model": "claude-haiku-4-5-20251001",
+        "max_tokens": 100,
+        "messages": [{"role": "user", "content": prompt}]
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        "https://api.anthropic.com/v1/messages",
+        data=body,
+        headers={
+            "Content-Type": "application/json",
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+        return result["content"][0]["text"].strip()
+    except Exception as e:
+        log("WARN", f"コメント生成エラー: {e}")
+        return None
+
+
+# ── 通知メッセージ生成（1件分）────────────────────────────────────
+def build_single_notification(post: dict, comment: str | None) -> tuple[str, str, str]:
+    """
+    1投稿分の title, body, click_url を返す。
+    comment が生成できていれば本文に含める。
+    """
+    fc_str = f"{post['follower_count']:,}" if post.get('follower_count', 0) > 0 else "?"
+    title = f"🔔 @{post['handle']} が投稿（{fc_str}F）"
+    click_url = post.get("url", f"https://www.threads.com/@{post['handle']}")
+
+    body_lines = []
+
+    # コメント案
+    if comment:
+        body_lines += [
+            "【コメント案・長押しでコピー】",
+            comment,
             "",
         ]
-        if p.get("text"):
-            body_lines.append(f"「{p['text'][:50]}…」" if len(p['text']) > 50 else f"「{p['text']}」")
-        click_url = p.get("url", f"https://www.threads.com/@{p['handle']}")
-
     else:
-        # 複数まとめ通知
-        handles_str = "  ".join([f"@{p['handle']}" for p in new_posts[:5]])
-        if count > 5:
-            handles_str += f"  他{count-5}件"
-        title = f"🔔 {count}アカウントが新規投稿！"
-        body_lines = [
-            "早めのコメントで露出を最大化！",
-            "",
-            handles_str,
-        ]
-        click_url = new_posts[0].get("url", "https://www.threads.com")
+        body_lines += ["コメントチャンス！", ""]
 
-    body = "\n".join(body_lines)
-    return title, body, click_url
+    # 投稿冒頭
+    text = post.get("text", "")
+    if text:
+        snippet = f"「{text[:45]}…」" if len(text) > 45 else f"「{text}」"
+        body_lines += [snippet, ""]
+
+    # 投稿 URL（タップで開けるが本文にも表示）
+    body_lines.append(click_url)
+
+    return title, "\n".join(body_lines), click_url
 
 
 # ── メイン ────────────────────────────────────────────────────────
@@ -343,7 +404,21 @@ def main():
         log("TEST", "テスト通知送信完了")
         return
 
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        # ローカル実行時のフォールバック
+        env_path = os.path.join(PROJECT_DIR, "config", "api-keys.env")
+        if os.path.exists(env_path):
+            for line in open(env_path, encoding="utf-8"):
+                line = line.strip()
+                if line.startswith("ANTHROPIC_API_KEY="):
+                    api_key = line.split("=", 1)[1].strip()
+
     log("START", f"競合アラートチェック開始 (ntfy topic: {ntfy_topic})")
+    if api_key:
+        log("INFO", "Claude API あり → コメント案を通知に含めます")
+    else:
+        log("INFO", "Claude API なし → コメント案なしで通知します")
 
     # 監視対象アカウント
     handles = load_alert_targets()
@@ -367,21 +442,22 @@ def main():
     _save("state/alert-last-seen.json", updated_last_seen)
     log("INFO", "alert-last-seen.json 保存完了")
 
-    # 通知
+    # 通知（1件ずつ個別送信）
     if new_posts:
         log("NOTIFY", f"新投稿 {len(new_posts)}件 → push通知送信")
-        title, body, click_url = build_notification(new_posts)
-        send_push(ntfy_topic, title, body, priority="high", url=click_url)
+        moon_phase = get_moon_phase(datetime.now(JST))
 
-        # 複数件は個別にも通知（3件以下なら1件ずつ）
-        if 2 <= len(new_posts) <= 3:
-            for p in new_posts:
-                fc_str = f"{p['follower_count']:,}" if p['follower_count'] > 0 else "?"
-                t = f"@{p['handle']}（{fc_str}F）が投稿"
-                b_lines = ["コメントチャンス！"]
-                if p.get("text"):
-                    b_lines.append(f"「{p['text'][:40]}…」" if len(p['text']) > 40 else f"「{p['text']}」")
-                send_push(ntfy_topic, t, "\n".join(b_lines), priority="default", url=p.get("url", ""))
+        for post in new_posts:
+            # コメント案生成（API キーあれば）
+            comment = None
+            if api_key and post.get("text"):
+                log("GEN", f"@{post['handle']} のコメント案を生成中...")
+                comment = generate_comment(post, moon_phase, api_key)
+                if comment:
+                    log("GEN", f"生成完了: {comment}")
+
+            title, body, click_url = build_single_notification(post, comment)
+            send_push(ntfy_topic, title, body, priority="high", url=click_url)
     else:
         log("INFO", "新投稿なし → 通知なし")
 
