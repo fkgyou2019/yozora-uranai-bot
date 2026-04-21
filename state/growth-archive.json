@@ -2670,5 +2670,20 @@
     "peak_velocity": 20.2,
     "peak_velocity_hour": 4,
     "api_fail_count": 3
+  },
+  "post_20260414_1522_exp_001": {
+    "post_id": "post_20260414_1522_exp_001",
+    "platform_post_id": "17942012121179032",
+    "threads_url": "",
+    "posted_at": "2026-04-14T15:22:34.361431+09:00",
+    "pattern_name": "構造H_しいたけ式深掘り哲学型（占い師の視点・深い言葉・内省モード・仕事迷子＋スピ好きターゲット・退勤後）",
+    "slot_hour": 15,
+    "day_of_week": 1,
+    "day_name": "火",
+    "first_line": "占いを求める人の9割は、答えじゃなく「決断の許可」を欲しがってる。",
+    "content_preview": "占いを求める人の9割は、答えじゃなく「決断の許可」を欲しがってる。\n\n仕事で迷った時、恋愛で揺れた時。\nそんな時に人は星",
+    "hourly": [],
+    "completed": true,
+    "api_fail_count": 6
   }
 }
