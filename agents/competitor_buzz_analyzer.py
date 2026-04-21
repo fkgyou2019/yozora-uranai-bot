@@ -389,18 +389,19 @@ def main():
                 if line.startswith("ANTHROPIC_API_KEY="):
                     api_key = line.split("=", 1)[1].strip()
 
-    # 監視対象アカウント
+    # 監視対象アカウント（use: "buzz_analysis" のみ）
     config = _load("config/monitor-accounts.json", {})
     handles = [
         acc.get("username", "").strip()
         for acc in config.get("threads_accounts", [])
         if acc.get("username", "").strip()
+        and acc.get("use") == "buzz_analysis"
     ]
     if not handles:
-        log("WARN", "monitor-accounts.json にアカウントが見つかりません")
+        log("WARN", "monitor-accounts.json に use:buzz_analysis アカウントが見つかりません")
         return
 
-    log("START", f"競合バズ分析開始: {len(handles)}アカウント")
+    log("START", f"競合バズ分析開始: {len(handles)}アカウント（buzz_analysis 専用）")
 
     # スクレイプ
     start = time.time()
