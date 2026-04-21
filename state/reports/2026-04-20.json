@@ -1,0 +1,29 @@
+{
+  "date": "2026-04-20",
+  "generated_at": "2026-04-21 09:08",
+  "summary": {
+    "posts_total": 9,
+    "posts_measured": 3,
+    "posts_deleted": 6,
+    "total_views": 159,
+    "avg_views": 53.0,
+    "avg_er": 13.04,
+    "experiment_rate": 55.6
+  },
+  "patterns": {
+    "構造G_注意喚起+限定型": {
+      "count": 2,
+      "avg_views": 63.5,
+      "avg_er": 11.75
+    },
+    "構造X4_スルー恐怖型（無視・素通りしたら損＋金運）": {
+      "count": 1,
+      "avg_views": 32.0,
+      "avg_er": 15.62
+    }
+  },
+  "delete_reasons": [
+    "24h経過・低パフォーマンス",
+    "12h経過・低パフォーマンス"
+  ]
+}
