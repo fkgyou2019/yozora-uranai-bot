@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import * as path from 'path';
 import { existsSync } from 'fs';
 import { getThreadsAccounts } from '@/lib/accounts';
+import { readJsonWithLock, writeJsonWithLock } from '@/lib/file-lock';
 
 /**
  * Resolve the path to config/accounts.json in a cwd-independent way.
@@ -39,5 +40,25 @@ export async function GET() {
       { error: error.message ?? 'Failed to read accounts' },
       { status: 500 }
     );
+  }
+}
+
+export async function PATCH(request: Request) {
+  try {
+    const accountsPath = resolveAccountsPath();
+    const body = await request.json();
+    const { id, enabled } = body as { id: string; enabled: boolean };
+
+    const { data, mtimeMs } = await readJsonWithLock<any>(accountsPath);
+    const idx = (data.threads_accounts ?? []).findIndex((a: any) => a.id === id);
+    if (idx === -1) {
+      return NextResponse.json({ error: 'Account not found' }, { status: 404 });
+    }
+    data.threads_accounts[idx].enabled = enabled;
+    await writeJsonWithLock(accountsPath, data, { expectedMtimeMs: mtimeMs });
+    return NextResponse.json({ ok: true });
+  } catch (error: any) {
+    console.error('[api/accounts PATCH] error:', error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
