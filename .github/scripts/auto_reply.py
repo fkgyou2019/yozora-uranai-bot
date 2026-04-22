@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-コメント自動返信: 投稿へのコメントにClaude APIで返信を生成し、Threads APIで投稿
+コメント自動返信: 投稿へのコメントに固定LINE誘導文を返信し、Threads APIで投稿
+（Claude API不使用・コスト0。全コメント共通文）
 30分おきにGitHub Actionsで実行
 """
 
@@ -119,146 +120,22 @@ def threads_reply(text, reply_to_id, user_id, access_token):
         raise
 
 
-def generate_reply(comment_text, original_post_text, commenter_name, recent_replies, api_key):
-    now = datetime.now(JST)
-    hour = now.hour
-    if 5 <= hour < 11:
-        time_context = "現在は朝です。朝らしい爽やかな挨拶を入れてもOK（「おはようございます」等）"
-    elif 11 <= hour < 17:
-        time_context = "現在は昼です。"
-    elif 17 <= hour < 22:
-        time_context = "現在は夜です。夜らしい挨拶を入れてもOK（「こんばんは」「夜分に」等）"
-    else:
-        time_context = "現在は深夜です。「遅い時間にありがとうございます」等の気遣いを入れてもOK"
-
-    # 直近の返信を渡して重複を防ぐ
-    recent_block = ""
-    if recent_replies:
-        recent_block = "【直近の返信（これと同じ言い回しは絶対に使うな）】\n"
-        for r in recent_replies[-5:]:
-            text = r.get("text", "") if isinstance(r, dict) else str(r)
-            recent_block += f"・{text[:40]}\n"
-
-    # 星座名コメントの検出（コメント誘導型の投稿への返信）
-    zodiac_hint = ""
-    zodiac_names = ["牡羊座", "おひつじ座", "牡牛座", "おうし座", "双子座", "ふたご座",
-                    "蟹座", "かに座", "獅子座", "しし座", "乙女座", "おとめ座",
-                    "天秤座", "てんびん座", "蠍座", "さそり座", "射手座", "いて座",
-                    "山羊座", "やぎ座", "水瓶座", "みずがめ座", "魚座", "うお座"]
-    found_zodiac = None
-    for z in zodiac_names:
-        if z in comment_text:
-            found_zodiac = z
-            break
-    if found_zodiac:
-        zodiac_hint = f"\n※ この方は「{found_zodiac}」と星座を教えてくれました。元の投稿で約束した通り、この星座に個別のアドバイスを3行程度で具体的に伝えてください。スピリチュアルな表現を入れつつも、実際に行動できる具体的なアドバイスを含めること。これは返信の中で最も重要な要素です。"
-
-    # 絵文字コメントの種類別ヒント
-    emoji_hint = ""
-    stripped = comment_text.strip()
-    if len(stripped) <= 3 and not any(c.isalpha() or ('\u3040' <= c <= '\u309f') or ('\u30a0' <= c <= '\u30ff') or ('\u4e00' <= c <= '\u9fff') for c in stripped):
-        emoji_map = {
-            "🔮": "水晶玉→占いへの関心。「見えてきましたよ」「導きが届きます」系",
-            "✨": "キラキラ→ポジティブ。「輝きが増しますね」「その光が広がります」系",
-            "🌙": "月→夜空・神秘。「月の力が味方してます」「静かな流れが来ます」系",
-            "🌸": "桜→春・恋愛。「春の風が吹いてきましたね」系",
-            "🍀": "四葉→幸運。「ご縁が近づいてますよ」系",
-            "⭐": "星→希望。「星の導きがありますよ」系",
-        }
-        for emoji, hint in emoji_map.items():
-            if emoji in stripped:
-                emoji_hint = f"\n※ この絵文字の解釈ヒント: {hint}"
-                break
-
-    prompt = f"""あなたは占いSNSアカウント「よぞら.」の運営者・月詠（つくよみ）です。
-穏やかで温かい人柄。フレンドリーだが、ほんの少し神秘的。
-
-【コメントしてくれた人】@{commenter_name} さん
-
-【元の投稿（あなたが書いたもの）】
-{original_post_text[:200]}
-
-【届いたコメント】
-{comment_text}{zodiac_hint}{emoji_hint}
-
-【{time_context}】
-
-{recent_block}
-【返信ルール】
-1. 冒頭に「@{commenter_name} さん\\n\\n」から始めること（必須。さんの後に必ず改行＋空行）
-2. {'星座コメントの場合は3行以内で個別アドバイスを含める' if found_zodiac else '1-2行の短い返信（40-60文字が理想）'}。名前行は行数に含めない
-3. 返信全体は3行以内に収めること（短く簡潔に）
-4. 1行は20文字以内にすること（超えたら改行する）
-5. 絵文字は1個まで（🌙✨🔮⭐のいずれか）
-
-【最重要：人間味のあるコミュニケーションをしろ】
-あなたはBotではない。友人や知人に返信するように、自然な会話をしろ。
-以下のパターンをランダムに使い分けること：
-
-A.「感謝+共感」型:
-  - 「返信ありがとう！嬉しいです🌙」
-  - 「コメントありがとうね✨」
-  - 「いつもありがとう！励みになります」
-
-B.「相手に触れる」型:
-  - 「○○さん、いつもコメントくれて嬉しい🌙」
-  - 「○○さんの直感、当たってますよ」
-  - 「○○さんも同じこと感じてたんですね」
-
-C.「会話を広げる」型:
-  - 「○○座なんですね！来週楽しみにしてて✨」
-  - 「気になりますよね、また詳しく書きますね」
-  - 「それ分かります！私もそう思います🌙」
-
-【禁止（Bot感が出るため絶対NG）】
-- 毎回「ありがとうございます」で始める
-- 「受け取ってくださり」
-- 「良い流れが届きますように」
-- 「素敵なタイミングですね」
-- 「星が微笑んでますよ」
-- 同じ定型文の繰り返し
-   - 「その想い、きっと届きますよ」
-9. 相手のコメントに文章がある場合は、その内容に具体的に触れる
-10. 相手の星座が分かれば星座に触れる
-11. 直近の返信と絶対に同じ言い回しを使わない
-12. 【改行ルール（重要）】
-   - @usernameさん の後は必ず改行すること
-   - 1行は最大20文字。超えたら改行する
-   - 名前の後は必ず空行を入れる
-   - 2文以上の返信は文と文の間に改行を入れる
-   - スマホで読みやすいように詰め込まない
-
-返信文のみを出力。「@{commenter_name} さん\\n\\n本文」の形式で。余計な説明不要。"""
-
-    body = json.dumps({
-        "model": "claude-haiku-4-5-20251001",
-        "max_tokens": 200,
-        "messages": [{"role": "user", "content": prompt}]
-    }).encode("utf-8")
-
-    req = urllib.request.Request(
-        "https://api.anthropic.com/v1/messages",
-        data=body,
-        headers={
-            "Content-Type": "application/json",
-            "x-api-key": api_key,
-            "anthropic-version": "2023-06-01",
-        },
-        method="POST",
+def generate_reply(comment_text=None, original_post_text=None, commenter_name=None, recent_replies=None, api_key=None):
+    """固定LINE誘導文を返す（Claude API不使用・コスト0）"""
+    return (
+        "せっかくのご縁なので\n"
+        "あなたの恋の流れを、霊視で視させてください✨\n"
+        "ルナ姉のアイコンをタップした先の\n"
+        "固定投稿からお受け取りください🌙\n"
+        "https://lin.ee/Y4Pyykb"
     )
-
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
-
-    return result["content"][0]["text"].strip()
 
 
 def main():
     access_token = os.environ.get("THREADS_ACCESS_TOKEN", "")
     user_id = os.environ.get("THREADS_USER_ID", "")
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
 
-    if not all([access_token, user_id, api_key]):
+    if not all([access_token, user_id]):
         # ローカルのapi-keys.envから読む
         env_path = os.path.join(PROJECT_DIR, "config", "api-keys.env")
         if os.path.exists(env_path):
@@ -272,11 +149,9 @@ def main():
                             access_token = v
                         elif k == "THREADS_USER_ID" and not user_id:
                             user_id = v
-                        elif k == "ANTHROPIC_API_KEY" and not api_key:
-                            api_key = v
 
-    if not all([access_token, user_id, api_key]):
-        print("ERROR: 必要な環境変数が未設定")
+    if not all([access_token, user_id]):
+        print("ERROR: 必要な環境変数が未設定 (THREADS_ACCESS_TOKEN, THREADS_USER_ID)")
         sys.exit(1)
 
     # 返信済みコメントIDを記録するファイル
@@ -432,43 +307,8 @@ def main():
                 print(f"  ⏭ @{comment_user}: 「{comment_text[:10]}」（スキップ）")
                 continue
 
-            # Claude APIで返信生成（類似性チェック付き。合格するまで最大3回再生成）
-            reply_text = None
-            for attempt in range(3):
-                try:
-                    candidate = generate_reply(
-                        comment_text, post_text,
-                        comment_user, recent_replies, api_key
-                    )
-                except Exception as e:
-                    print(f"  [WARN] 返信生成エラー (attempt {attempt+1}): {e}")
-                    break
-
-                # 類似性チェック: 同じ投稿への直近返信と90%以上類似なら棄却
-                from difflib import SequenceMatcher
-                is_similar = False
-                same_post_replies = [
-                    r for r in recent_replies
-                    if (r.get("post_id") if isinstance(r, dict) else None) == post_id
-                ][-5:]
-                for prev in same_post_replies:
-                    prev_text = prev.get("text", "") if isinstance(prev, dict) else str(prev)
-                    ratio = SequenceMatcher(None, candidate, prev_text).ratio()
-                    if ratio >= 0.90:
-                        print(f"  ⚠ 類似度{ratio:.0%}で棄却 (attempt {attempt+1})")
-                        is_similar = True
-                        break
-
-                if not is_similar:
-                    reply_text = candidate
-                    if attempt > 0:
-                        print(f"  ✅ {attempt+1}回目で合格")
-                    break
-
-            if reply_text is None:
-                print(f"  [SKIP] @{comment_user}: 返信生成失敗（3回試行）→ 次回に持ち越し")
-                # replied_ids に追加しない → 次回の実行で再試行される
-                continue
+            # 固定LINE誘導文を返信（Claude API不使用・コスト0）
+            reply_text = generate_reply()
 
             # Threads APIで返信投稿（reply_to_idには元の投稿IDを使う。コメントIDではない）
             try:
