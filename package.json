@@ -1,0 +1,12 @@
+{
+  "name": "ai-uranai-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo root for AI占い自動運用システム (Threads Manager含む)",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

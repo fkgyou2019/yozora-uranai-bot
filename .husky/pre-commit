@@ -1,0 +1,15 @@
+# Prevent accidental commit of app-credentials.json
+if git diff --cached --name-only | grep -qE "state/threads-manager/app-credentials\.json$"; then
+  echo "❌ ERROR: state/threads-manager/app-credentials.json must not be committed."
+  echo "   This file contains the Threads App Secret."
+  echo "   If committed accidentally, ROTATE the App Secret in Meta Developer Console."
+  exit 1
+fi
+
+# Prevent commit of log files
+if git diff --cached --name-only | grep -qE "state/threads-manager/logs/"; then
+  echo "❌ ERROR: state/threads-manager/logs/ must not be committed."
+  exit 1
+fi
+
+exit 0

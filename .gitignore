@@ -31,3 +31,11 @@ node_modules/
 .next/
 apps/*/node_modules/
 apps/*/.next/
+
+# Threads Manager
+apps/threads-manager/dist-electron/
+apps/threads-manager/out/
+
+# Threads Manager sensitive data
+state/threads-manager/app-credentials.json
+state/threads-manager/logs/
