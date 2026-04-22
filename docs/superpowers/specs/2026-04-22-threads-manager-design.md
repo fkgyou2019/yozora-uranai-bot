@@ -552,6 +552,22 @@ apps/threads-manager/
 
 ---
 
+## 14.1 Phase 2 開始前に確認すべき事項
+
+スペックレビューで指摘された軽微なオープンアイテム。Phase 1 は Phase 2 に入る前にクリアにする。
+
+1. **`npm run start` を非サポートと明示**: README と package.json の scripts に「production mode (`next start`) は MVP 範囲外」とコメント追加。
+2. **プレコミットフックの永続化**: `husky` を採用し、`.husky/pre-commit` をリポジトリにコミット。クローン後 `npm install` で自動インストールされる構成にする。
+3. **`post-history.json` の `deleted_at` スキーマ互換性**:
+   - Phase 3 実装前に `agents/poster.py` と `.github/scripts/generate_posts.py` を読み、`deleted_at` フィールドを無視できるか確認
+   - 互換性に不安があれば、`state/threads-manager/deleted-posts.json` に別途管理する代替案に切替
+4. **`[強制投稿]` と既存 NG ガードの相互作用**:
+   - 既存システムの「禁止パターン二重ガード」（`system_fixes_log.md` 記載）は auto-poster 側で再チェックするため、Manager から強制投稿しても既存 auto-poster 経由ではないので衝突しない想定
+   - ただし手動投稿が auto-poster の NG 語ログに記録されるかは Phase 7 実装時に確認
+5. **Redirect URI の HTTPS 要件**:
+   - Meta の Threads App コンソールで `http://localhost:47823/callback` が登録可能か **Phase 2 開始前に検証**
+   - HTTPS が必須なら、Electron main で自己署名証明書による HTTPS サーバーに切替（大きな設計変更となる）
+
 ## 15. 設計決定事項（FAQ 形式）
 
 ### Q1. Manager が動作中に GitHub Actions の auto-post が走ったら安全か？
