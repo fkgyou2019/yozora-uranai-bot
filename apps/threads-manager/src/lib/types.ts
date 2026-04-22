@@ -28,3 +28,17 @@ export interface AccountsFile {
   groups: Group[];
   personas?: string[];
 }
+
+export interface AppCredentials {
+  app_id: string;
+  app_secret: string;
+}
+
+export type TokenStatus = 'valid' | 'warning' | 'expired' | 'none';
+
+export interface OAuthResult {
+  status: 'success' | 'error' | 'cancelled';
+  accountId?: string;
+  username?: string;
+  message?: string;
+}
