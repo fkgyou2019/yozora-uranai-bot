@@ -1,0 +1,35 @@
+{
+  "name": "threads-manager",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k -n NEXT,ELECTRON -c cyan,green \"npm:dev:next\" \"npm:dev:electron\"",
+    "dev:next": "next dev -p 3050",
+    "dev:electron": "npm run build:electron && wait-on http://localhost:3050 && electron .",
+    "build:electron": "tsc -p tsconfig.electron.json",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^8.2.0",
+    "electron": "^32.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "wait-on": "^7.2.0"
+  }
+}
