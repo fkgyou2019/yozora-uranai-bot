@@ -4,11 +4,15 @@
     "module": "CommonJS",
     "moduleResolution": "Node",
     "outDir": "./dist-electron",
-    "rootDir": "./electron",
+    "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "baseUrl": "."
   },
-  "include": ["electron/**/*"]
+  "include": ["electron/**/*", "src/lib/**/*"]
 }
