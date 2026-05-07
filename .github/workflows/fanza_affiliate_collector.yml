@@ -1,0 +1,36 @@
+name: FANZA アフィリエイト 収益データ収集
+
+on:
+  schedule:
+    # 毎日 23:55 JST (= 14:55 UTC)
+    - cron: '55 14 * * *'
+  workflow_dispatch:
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python 3.12 セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 依存ライブラリをインストール
+        run: |
+          pip install playwright boto3
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: FANZA 収益データ収集を実行
+        env:
+          FANZA_EMAIL:              ${{ secrets.FANZA_EMAIL }}
+          FANZA_PASSWORD:           ${{ secrets.FANZA_PASSWORD }}
+          AWS_ACCESS_KEY_ID:        ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY:    ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION:       ap-northeast-1
+        run: python .github/scripts/fanza_affiliate_collector.py
