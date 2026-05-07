@@ -4,10 +4,16 @@ FANZA アフィリエイト 収益データ収集スクリプト
 毎日 23:55 JST に GitHub Actions から実行
 
 テーブル構成:
-  fanza-affiliate-sales    … 日別売上レコード (PK=sale_date, SK=sale_timestamp)
+  fanza-affiliate-sales    … 日別×商品別集計 (PK=sale_date, SK=product_id)
   fanza-product-metadata   … 作品メタデータキャッシュ (PK=product_id)
+
+データ粒度について:
+  FANZA アフィリエイトダッシュボードは個別売上タイムスタンプを公開していない。
+  利用可能な最小粒度は「日別×商品別集計」のため、それに合わせた設計とする。
 """
 
+import csv
+import io
 import os
 import re
 import asyncio
@@ -36,44 +42,41 @@ def get_dynamo():
 
 
 def ensure_tables(dynamo):
-    existing = {t.name for t in dynamo.tables.all()}
-
-    if TABLE_SALES not in existing:
-        dynamo.create_table(
-            TableName=TABLE_SALES,
-            KeySchema=[
-                {"AttributeName": "sale_date",      "KeyType": "HASH"},
-                {"AttributeName": "sale_timestamp",  "KeyType": "RANGE"},
+    """テーブルが存在しなければ作成する（ListTables を使わない実装）"""
+    tables = [
+        (
+            TABLE_SALES,
+            [
+                {"AttributeName": "sale_date",  "KeyType": "HASH"},
+                {"AttributeName": "product_id", "KeyType": "RANGE"},
             ],
-            AttributeDefinitions=[
-                {"AttributeName": "sale_date",      "AttributeType": "S"},
-                {"AttributeName": "sale_timestamp",  "AttributeType": "S"},
-            ],
-            BillingMode="PAY_PER_REQUEST",
-        )
-        print(f"[INFO] Created table: {TABLE_SALES}")
-
-    if TABLE_META not in existing:
-        dynamo.create_table(
-            TableName=TABLE_META,
-            KeySchema=[
-                {"AttributeName": "product_id", "KeyType": "HASH"},
-            ],
-            AttributeDefinitions=[
+            [
+                {"AttributeName": "sale_date",  "AttributeType": "S"},
                 {"AttributeName": "product_id", "AttributeType": "S"},
             ],
-            BillingMode="PAY_PER_REQUEST",
-        )
-        print(f"[INFO] Created table: {TABLE_META}")
-
+        ),
+        (
+            TABLE_META,
+            [{"AttributeName": "product_id", "KeyType": "HASH"}],
+            [{"AttributeName": "product_id", "AttributeType": "S"}],
+        ),
+    ]
     client = dynamo.meta.client
-    for name in [TABLE_SALES, TABLE_META]:
-        if name not in existing:
+    for name, key_schema, attr_defs in tables:
+        try:
+            dynamo.create_table(
+                TableName=name,
+                KeySchema=key_schema,
+                AttributeDefinitions=attr_defs,
+                BillingMode="PAY_PER_REQUEST",
+            )
             client.get_waiter("table_exists").wait(TableName=name)
-            print(f"[INFO] Table ready: {name}")
+            print(f"[INFO] Created table: {name}")
+        except client.exceptions.ResourceInUseException:
+            print(f"[INFO] Table exists: {name}")
 
 
-def get_product_cache(dynamo, product_id):
+def get_product_cache(dynamo, product_id: str) -> dict | None:
     try:
         resp = dynamo.Table(TABLE_META).get_item(Key={"product_id": product_id})
         return resp.get("Item")
@@ -81,7 +84,7 @@ def get_product_cache(dynamo, product_id):
         return None
 
 
-def save_product_cache(dynamo, product_id, meta):
+def save_product_cache(dynamo, product_id: str, meta: dict):
     now_str = datetime.now(JST).strftime("%Y/%m/%d %H:%M")
     try:
         dynamo.Table(TABLE_META).put_item(Item={
@@ -93,8 +96,8 @@ def save_product_cache(dynamo, product_id, meta):
         print(f"[WARN] Cache save failed ({product_id}): {e}")
 
 
-def find_x_post(dynamo, product_id):
-    """folder_name に product_id を含む最古のポスト記録を返す"""
+def find_x_post(dynamo, product_id: str) -> dict | None:
+    """folder_name に product_id を含む最古の投稿記録を返す"""
     try:
         resp = dynamo.Table(TABLE_POSTS).scan(
             FilterExpression="contains(folder_name, :pid)",
@@ -110,10 +113,10 @@ def find_x_post(dynamo, product_id):
     return None
 
 
-def save_sale(dynamo, record):
+def save_sale(dynamo, record: dict):
     try:
         dynamo.Table(TABLE_SALES).put_item(Item=record)
-        print(f"[INFO] Saved: {record['sale_timestamp']}  {record.get('product_name','')[:30]}")
+        print(f"[INFO] Saved: {record['sale_date']}  {record.get('product_name', '')[:30]}")
     except ClientError as e:
         print(f"[ERROR] Save failed: {e}")
 
@@ -123,14 +126,11 @@ def save_sale(dynamo, record):
 # ─────────────────────────────────────────
 
 def extract_product_id(url: str) -> str:
-    """FANZA URL から cid を抽出"""
-    m = re.search(r"cid=([A-Za-z0-9_-]+)", url)
-    if m:
-        return m.group(1)
-    # /detail/=/cid=XXXXX/ 形式
-    m = re.search(r"/cid/([A-Za-z0-9_-]+)", url)
-    if m:
-        return m.group(1)
+    """FANZA/DMM URL から cid (作品ID) を抽出"""
+    for pattern in [r"cid=([A-Za-z0-9_-]+)", r"/cid/([A-Za-z0-9_-]+)", r"/([a-z]{2,6}\d{3,8})/"]:
+        m = re.search(pattern, url)
+        if m:
+            return m.group(1)
     return ""
 
 
@@ -142,19 +142,6 @@ def to_decimal(text: str) -> Decimal:
         return Decimal("0")
 
 
-def compute_days_since_post(sale_ts: str, post_iso: str):
-    if not post_iso:
-        return None
-    try:
-        sale_dt = datetime.strptime(sale_ts, "%Y/%m/%d %H:%M").replace(tzinfo=JST)
-        post_dt = datetime.fromisoformat(post_iso)
-        if post_dt.tzinfo is None:
-            post_dt = post_dt.replace(tzinfo=JST)
-        return max(0, (sale_dt - post_dt).days)
-    except Exception:
-        return None
-
-
 # ─────────────────────────────────────────
 # Playwright: ログイン
 # ─────────────────────────────────────────
@@ -164,165 +151,186 @@ async def login_fanza(page):
     password = os.environ["FANZA_PASSWORD"]
 
     await page.goto("https://www.dmm.com/my/-/login/", wait_until="domcontentloaded")
-    await page.wait_for_load_state("networkidle", timeout=20_000)
+    try:
+        await page.wait_for_load_state("networkidle", timeout=20_000)
+    except PWTimeout:
+        pass
 
     await page.fill("input[name='login_id']", email)
     await page.fill("input[name='password']", password)
     await page.click("input[type='submit'], button[type='submit']")
-    await page.wait_for_load_state("networkidle", timeout=20_000)
+    try:
+        await page.wait_for_load_state("networkidle", timeout=20_000)
+    except PWTimeout:
+        pass
 
     print(f"[INFO] Logged in. URL={page.url[:60]}")
 
-    # アフィリエイトトップへ
-    await page.goto("https://affiliate.dmm.com/affiliate/", wait_until="domcontentloaded")
-    await page.wait_for_load_state("networkidle", timeout=20_000)
-
 
 # ─────────────────────────────────────────
-# Playwright: 成果レポート収集
+# Playwright: 商品別レポート CSV ダウンロード
 # ─────────────────────────────────────────
 
-async def collect_today_sales(page, target_date: datetime) -> list[dict]:
+async def download_goods_report_csv(page, target_date: datetime) -> str:
+    """
+    商品別レポート → FANZA タブ → CSV ダウンロード
+    戻り値: CSV 文字列（空の場合は ""）
+    """
     date_str = target_date.strftime("%Y/%m/%d")
 
-    # 成果レポートページへ移動
-    # ※ FANZA アフィリエイト UI 変更時はこの URL を更新すること
-    report_urls = [
-        "https://affiliate.dmm.com/affiliate/report/",
-        "https://affiliate.dmm.com/report/",
-    ]
-    for url in report_urls:
-        await page.goto(url, wait_until="domcontentloaded")
-        await page.wait_for_load_state("networkidle", timeout=15_000)
-        if page.url != url and "login" not in page.url:
-            break
+    # アフィリエイトレポートページへ移動
+    await page.goto("https://affiliate.dmm.com/affiliate/report/", wait_until="domcontentloaded")
+    try:
+        await page.wait_for_load_state("networkidle", timeout=20_000)
+    except PWTimeout:
+        pass
 
-    # 日付フィルタ設定
-    for sel in ["input[name='date_from']", "input[id='date_from']", "input[placeholder*='開始']"]:
-        loc = page.locator(sel)
-        if await loc.count() > 0:
-            await loc.first.fill(date_str)
-            break
-
-    for sel in ["input[name='date_to']", "input[id='date_to']", "input[placeholder*='終了']"]:
-        loc = page.locator(sel)
-        if await loc.count() > 0:
-            await loc.first.fill(date_str)
-            break
-
-    for sel in ["button:has-text('検索')", "input[type='submit']", "button[type='submit']"]:
+    # 「商品別レポート」タブをクリック
+    for sel in [
+        "a:has-text('商品別レポート')",
+        "li:has-text('商品別レポート') a",
+        "a[href*='goods']",
+    ]:
         loc = page.locator(sel)
         if await loc.count() > 0:
             await loc.first.click()
-            await page.wait_for_load_state("networkidle", timeout=15_000)
+            try:
+                await page.wait_for_load_state("networkidle", timeout=15_000)
+            except PWTimeout:
+                pass
             break
 
+    print(f"[INFO] Navigated to: {page.url[:70]}")
+
+    # 集計期間を今日に設定 (すでに今日になっている場合もある)
+    for sel in ["input[name='date_from']", "input[id='date_from']"]:
+        loc = page.locator(sel)
+        if await loc.count() > 0:
+            await loc.first.triple_click()
+            await loc.first.fill(date_str)
+            break
+    for sel in ["input[name='date_to']", "input[id='date_to']"]:
+        loc = page.locator(sel)
+        if await loc.count() > 0:
+            await loc.first.triple_click()
+            await loc.first.fill(date_str)
+            break
+
+    # 検索実行
+    for sel in ["button:has-text('集計')", "button:has-text('検索')", "input[type='submit']"]:
+        loc = page.locator(sel)
+        if await loc.count() > 0:
+            await loc.first.click()
+            try:
+                await page.wait_for_load_state("networkidle", timeout=15_000)
+            except PWTimeout:
+                pass
+            break
+
+    # FANZA タブを選択（アクティブでなければクリック）
+    fanza_tab = page.locator("a:has-text('FANZA'), .tab-fanza a, li:has-text('FANZA') a")
+    if await fanza_tab.count() > 0:
+        await fanza_tab.first.click()
+        try:
+            await page.wait_for_load_state("networkidle", timeout=15_000)
+        except PWTimeout:
+            pass
+
+    # CSV ダウンロード
+    csv_btn = page.locator("a:has-text('CSVデータをダウンロード'), a:has-text('CSV'), button:has-text('CSV')")
+    if await csv_btn.count() == 0:
+        print("[WARN] CSV download button not found")
+        return ""
+
+    async with page.expect_download(timeout=30_000) as dl_info:
+        await csv_btn.first.click()
+    download = await dl_info.value
+
+    save_path = "/tmp/fanza_report.csv"
+    await download.save_as(save_path)
+
+    # エンコーディングを試行 (Shift-JIS / UTF-8)
+    for enc in ["shift_jis", "utf-8-sig", "utf-8"]:
+        try:
+            with open(save_path, encoding=enc) as f:
+                content = f.read()
+            print(f"[INFO] CSV downloaded ({enc}): {len(content)} chars")
+            return content
+        except UnicodeDecodeError:
+            continue
+
+    print("[WARN] CSV encoding detection failed")
+    return ""
+
+
+# ─────────────────────────────────────────
+# CSV パース
+# ─────────────────────────────────────────
+
+def parse_goods_csv(csv_text: str, target_date: datetime) -> list[dict]:
+    """
+    商品別レポート CSV をパースして辞書リストを返す
+
+    想定カラム例:
+      サービス, 商品名, 価格, 詳細情報, 報酬体系, 報酬件数, 獲得報酬
+    ※ 実際のカラム名は FANZA 仕様に依存。ヘッダー行を確認してマッピングする。
+    """
+    if not csv_text.strip():
+        return []
+
+    reader = csv.DictReader(io.StringIO(csv_text))
+    rows = list(reader)
+    if not rows:
+        print("[INFO] CSV has no data rows")
+        return []
+
+    print(f"[INFO] CSV columns: {list(rows[0].keys())}")
+
+    date_str    = target_date.strftime("%Y/%m/%d")
+    day_of_week = DAY_NAMES[target_date.weekday()]
     sales = []
-    page_num = 1
 
-    while True:
-        # テーブル行を取得 (セレクタは FANZA の実 UI に合わせて要調整)
-        row_selectors = [
-            "table tbody tr",
-            ".affiliate-report tbody tr",
-            ".result-table tbody tr",
-            "#report_detail tbody tr",
-        ]
-        rows = []
-        for sel in row_selectors:
-            rows = await page.locator(sel).all()
-            if rows:
-                break
+    for row in rows:
+        # 合計行をスキップ
+        values = list(row.values())
+        if any(v in ("合計", "期間内合計", "総合計") for v in values if v):
+            continue
 
-        if not rows:
-            print(f"[INFO] No rows (page {page_num})")
-            break
+        # カラム名の揺れに対応するマッピング
+        def get(keys):
+            for k in keys:
+                for col in row:
+                    if k in col:
+                        return (row[col] or "").strip()
+            return ""
 
-        for row in rows:
-            sale = await parse_row(row, target_date)
-            if sale:
-                sales.append(sale)
+        service       = get(["サービス"])
+        product_name  = get(["商品名", "作品名", "販売商品"])
+        price_text    = get(["価格", "販売金額"])
+        commission_type = get(["報酬体系", "体系"])
+        count_text    = get(["報酬件数", "件数"])
+        revenue_text  = get(["獲得報酬", "報酬金額", "報酬"])
 
-        # 次ページ
-        next_loc = page.locator("a:has-text('次へ'), .pagination .next a, a[rel='next']")
-        if await next_loc.count() > 0:
-            await next_loc.first.click()
-            await page.wait_for_load_state("networkidle", timeout=15_000)
-            page_num += 1
-        else:
-            break
+        if not product_name:
+            continue
 
-    print(f"[INFO] Collected {len(sales)} sales (page count: {page_num})")
+        sale_price    = to_decimal(price_text)
+        sale_count    = int(to_decimal(count_text))
+        revenue       = to_decimal(revenue_text)
+
+        sales.append({
+            "_date":            date_str,
+            "_day_of_week":     day_of_week,
+            "_service":         service,
+            "_product_name":    product_name,
+            "_sale_price":      sale_price,
+            "_commission_type": commission_type,
+            "_sale_count":      sale_count,
+            "_revenue":         revenue,
+        })
+
+    print(f"[INFO] Parsed {len(sales)} products from CSV")
     return sales
-
-
-async def parse_row(row, target_date: datetime) -> dict | None:
-    cells = await row.locator("td").all()
-    if len(cells) < 4:
-        return None
-
-    texts = [(await c.inner_text()).strip() for c in cells]
-
-    # 1列目: タイムスタンプ
-    ts_text = texts[0].replace("-", "/")
-    if not re.search(r"\d{4}/\d{2}/\d{2}", ts_text):
-        return None
-    ts_text = ts_text[:16]  # "YYYY/MM/DD HH:MM"
-
-    # 作品名・URL
-    product_name = ""
-    product_url  = ""
-    link_loc = row.locator("a[href*='dmm.co.jp'], a[href*='dmm.com'], a[href*='fanza.com']")
-    if await link_loc.count() > 0:
-        product_url  = (await link_loc.first.get_attribute("href")) or ""
-        product_name = (await link_loc.first.inner_text()).strip()
-    if not product_name and len(texts) > 1:
-        product_name = texts[1]
-
-    # 数値列 (¥ / % を除去)
-    nums = [(i, to_decimal(t)) for i, t in enumerate(texts) if re.search(r"[\d,]+", t) and i > 0]
-
-    # 報酬率 (%) は % 含む列
-    commission_rate = Decimal("0")
-    for i, t in enumerate(texts):
-        if "%" in t:
-            commission_rate = to_decimal(t)
-            break
-
-    # 価格を推定: 100円以上の数値列から最大2つ
-    price_nums = sorted([(v, i) for i, v in nums if v >= Decimal("100")], reverse=True)
-    original_price = price_nums[0][0] if len(price_nums) >= 1 else Decimal("0")
-    sale_price     = price_nums[1][0] if len(price_nums) >= 2 else original_price
-
-    # 収益: 最後の数値列 (通常最右)
-    revenue = Decimal("0")
-    for i, v in reversed(nums):
-        if v > 0:
-            revenue = v
-            break
-
-    is_sale   = sale_price < original_price
-    sale_type = "rental" if any("レンタル" in t for t in texts) else "purchase"
-
-    try:
-        dt = datetime.strptime(ts_text, "%Y/%m/%d %H:%M").replace(tzinfo=JST)
-    except ValueError:
-        dt = target_date
-
-    return {
-        "_ts":          ts_text,
-        "_date":        ts_text[:10],
-        "product_id":   extract_product_id(product_url),
-        "product_name": product_name,
-        "product_url":  product_url,
-        "sale_type":    sale_type,
-        "original_price": original_price,
-        "sale_price":     sale_price,
-        "revenue":        revenue,
-        "commission_rate": commission_rate,
-        "is_sale":        is_sale,
-        "day_of_week":    DAY_NAMES[dt.weekday()],
-    }
 
 
 # ─────────────────────────────────────────
@@ -336,57 +344,82 @@ async def scrape_product_page(browser, product_url: str) -> dict:
 
     page = await browser.new_page()
     try:
-        # al.dmm.co.jp (アフィリエイトリンク) はリダイレクト先を追う
         await page.goto(product_url, wait_until="domcontentloaded", timeout=20_000)
         try:
             await page.wait_for_load_state("networkidle", timeout=15_000)
         except PWTimeout:
             pass
 
-        actual_url = page.url
-        print(f"[INFO] Product page: {actual_url[:70]}")
-
-        # 作品詳細テーブル行セレクタ (FANZA/DMM 共通パターン)
-        # ※ UI 変更時は以下のセレクタを更新すること
         async def get_table_values(label: str) -> list[str]:
-            results = []
             for sel in [
-                f"tr:has(td:text('{label}')) td:not(:first-child) a",
-                f"tr:has(th:text('{label}')) td a",
-                f".pd-info tr:has(td:text('{label}')) td a",
+                f"tr:has(td:text-is('{label}')) td:not(:first-child) a",
+                f"tr:has(th:text-is('{label}')) td a",
+                f"tr:has(td:has-text('{label}')) td:last-child a",
             ]:
                 els = await page.locator(sel).all()
                 if els:
-                    for el in els:
-                        t = (await el.inner_text()).strip()
-                        if t:
-                            results.append(t)
-                    break
-            # リンクなしテキストのフォールバック
-            if not results:
-                for sel in [
-                    f"tr:has(td:text('{label}')) td:last-child",
-                    f"tr:has(th:text('{label}')) td:last-child",
-                ]:
-                    els = await page.locator(sel).all()
-                    if els:
-                        t = (await els[0].inner_text()).strip()
-                        if t:
-                            results.append(t)
-                        break
-            return results
+                    return [(await e.inner_text()).strip() for e in els if (await e.inner_text()).strip()]
+            # リンクなし行
+            for sel in [
+                f"tr:has(td:text-is('{label}')) td:last-child",
+                f"tr:has(th:text-is('{label}')) td:last-child",
+            ]:
+                els = await page.locator(sel).all()
+                if els:
+                    t = (await els[0].inner_text()).strip()
+                    return [t] if t else []
+            return []
 
-        meta["product_genre"]  = await get_table_values("ジャンル")
-        meta["actress_name"]   = await get_table_values("出演者")
-        meta["maker_name"]     = (await get_table_values("メーカー") or [""])[0]
-        meta["release_date"]   = (await get_table_values("発売日")   or [""])[0]
+        meta["product_genre"] = await get_table_values("ジャンル")
+        meta["actress_name"]  = await get_table_values("出演者")
+        maker = await get_table_values("メーカー")
+        meta["maker_name"]    = maker[0] if maker else ""
+        release = await get_table_values("発売日")
+        meta["release_date"]  = release[0] if release else ""
 
     except Exception as e:
-        print(f"[WARN] Product scrape error: {e}")
+        print(f"[WARN] Product scrape error ({product_url[:50]}): {e}")
     finally:
         await page.close()
 
     return meta
+
+
+# ─────────────────────────────────────────
+# 商品別レポートからの製品 URL 取得
+# ─────────────────────────────────────────
+
+async def collect_product_urls(page, target_date: datetime) -> dict[str, str]:
+    """
+    商品別レポートのテーブルから 商品名 → 商品URL のマッピングを取得する
+    CSV には URL が含まれないため、HTML テーブルから補完する
+    """
+    urls: dict[str, str] = {}
+
+    page_num = 1
+    while True:
+        rows = await page.locator("table tbody tr").all()
+        for row in rows:
+            link = row.locator("a[href*='dmm.co.jp'], a[href*='dmm.com'], a[href*='fanza.com']")
+            if await link.count() > 0:
+                href = (await link.first.get_attribute("href")) or ""
+                name = (await link.first.inner_text()).strip()
+                if href and name:
+                    urls[name] = href
+
+        next_btn = page.locator("a:has-text('次へ'), .pagination .next a")
+        if await next_btn.count() > 0:
+            await next_btn.first.click()
+            try:
+                await page.wait_for_load_state("networkidle", timeout=10_000)
+            except PWTimeout:
+                pass
+            page_num += 1
+        else:
+            break
+
+    print(f"[INFO] Collected {len(urls)} product URLs from HTML table ({page_num} pages)")
+    return urls
 
 
 # ─────────────────────────────────────────
@@ -399,7 +432,7 @@ async def main():
 
     now_jst     = datetime.now(JST)
     target_date = now_jst
-    print(f"[INFO] Run: {now_jst.strftime('%Y/%m/%d %H:%M')} JST  →  target={target_date.strftime('%Y/%m/%d')}")
+    print(f"[INFO] Run: {now_jst.strftime('%Y/%m/%d %H:%M')} JST  target={target_date.strftime('%Y/%m/%d')}")
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(
@@ -410,29 +443,50 @@ async def main():
             locale="ja-JP",
             timezone_id="Asia/Tokyo",
             viewport={"width": 1280, "height": 800},
+            accept_downloads=True,
         )
         page = await context.new_page()
 
+        # ログイン
         await login_fanza(page)
-        sales = await collect_today_sales(page, target_date)
+
+        # HTML テーブルから商品 URL を先に取得（CSV に URL が含まれないため）
+        product_urls = await collect_product_urls(page, target_date)
+
+        # CSV ダウンロード & パース
+        csv_text = await download_goods_report_csv(page, target_date)
+        sales    = parse_goods_csv(csv_text, target_date)
 
         if not sales:
             print("[INFO] No sales today. Exit.")
             await browser.close()
             return
 
-        processed = 0
+        # 各商品を処理
         for sale in sales:
-            product_id = sale["product_id"]
+            product_name = sale["_product_name"]
 
-            # 作品メタデータ (キャッシュ優先)
+            # 商品 URL (HTML テーブルから取得済み、または部分一致で探す)
+            product_url = product_urls.get(product_name, "")
+            if not product_url:
+                # 部分一致フォールバック
+                for k, v in product_urls.items():
+                    if product_name[:10] in k or k[:10] in product_name:
+                        product_url = v
+                        break
+
+            product_id = extract_product_id(product_url) if product_url else ""
+            if not product_id:
+                product_id = re.sub(r"[^\w]", "_", product_name[:20])
+
+            # 作品メタデータ（キャッシュ優先）
             meta = None
-            if product_id:
+            if product_url:
                 meta = get_product_cache(dynamo, product_id)
                 if meta:
                     print(f"[INFO] Cache hit: {product_id}")
                 else:
-                    meta = await scrape_product_page(browser, sale["product_url"])
+                    meta = await scrape_product_page(browser, product_url)
                     save_product_cache(dynamo, product_id, meta)
 
             # X 投稿との紐付け
@@ -448,38 +502,22 @@ async def main():
                     if tweet_id:
                         post_url = f"https://x.com/i/web/status/{tweet_id}"
 
-            # 派生フィールド計算
-            days_since  = compute_days_since_post(sale["_ts"], post_datetime)
-
-            op = sale["original_price"]
-            sp = sale["sale_price"]
-            discount_rate = (
-                Decimal(str(round(float(op - sp) / float(op), 4)))
-                if op > 0 and sp < op else None
-            )
-
             # 保存レコード
             record: dict = {
-                "sale_date":       sale["_date"],
-                "sale_timestamp":  sale["_ts"],
-                "product_id":      product_id or "unknown",
-                "product_name":    sale["product_name"],
-                "product_url":     sale["product_url"],
-                "sale_type":       sale["sale_type"],
-                "original_price":  sale["original_price"],
-                "sale_price":      sale["sale_price"],
-                "revenue":         sale["revenue"],
-                "commission_rate": sale["commission_rate"],
-                "is_sale":         sale["is_sale"],
-                "day_of_week":     sale["day_of_week"],
-                "post_url":        post_url,
-                "post_datetime":   post_datetime,
-                "account_id":      account_id,
+                "sale_date":        sale["_date"],
+                "product_id":       product_id,
+                "product_name":     product_name,
+                "product_url":      product_url,
+                "service_type":     sale["_service"],
+                "sale_price":       sale["_sale_price"],
+                "commission_type":  sale["_commission_type"],
+                "sale_count":       sale["_sale_count"],
+                "revenue":          sale["_revenue"],
+                "day_of_week":      sale["_day_of_week"],
+                "post_url":         post_url,
+                "post_datetime":    post_datetime,
+                "account_id":       account_id,
             }
-            if days_since is not None:
-                record["days_since_post"] = days_since
-            if discount_rate is not None:
-                record["discount_rate"] = discount_rate
             if meta:
                 if meta.get("product_genre"):
                     record["product_genre"] = meta["product_genre"]
@@ -491,11 +529,10 @@ async def main():
                     record["release_date"] = meta["release_date"]
 
             save_sale(dynamo, record)
-            processed += 1
 
         await browser.close()
 
-    print(f"[INFO] Done. {processed}/{len(sales)} records saved.")
+    print(f"[INFO] Done. {len(sales)} products processed.")
 
 
 if __name__ == "__main__":
