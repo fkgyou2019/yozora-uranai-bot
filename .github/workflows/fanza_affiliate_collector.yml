@@ -34,3 +34,11 @@ jobs:
           AWS_SECRET_ACCESS_KEY:    ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION:       ap-northeast-1
         run: python .github/scripts/fanza_affiliate_collector.py
+
+      - name: デバッグスクリーンショットをアップロード
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-screenshots
+          path: /tmp/*.png
+          if-no-files-found: ignore

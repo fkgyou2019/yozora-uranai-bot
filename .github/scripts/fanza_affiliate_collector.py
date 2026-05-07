@@ -146,25 +146,100 @@ def to_decimal(text: str) -> Decimal:
 # Playwright: ログイン
 # ─────────────────────────────────────────
 
+async def save_screenshot(page, name: str):
+    path = f"/tmp/{name}.png"
+    try:
+        await page.screenshot(path=path, full_page=False)
+        print(f"[DEBUG] Screenshot saved: {path}")
+    except Exception as e:
+        print(f"[WARN] Screenshot failed: {e}")
+
+
 async def login_fanza(page):
     email    = os.environ["FANZA_EMAIL"]
     password = os.environ["FANZA_PASSWORD"]
 
-    await page.goto("https://www.dmm.com/my/-/login/", wait_until="domcontentloaded")
+    # アフィリエイトダッシュボードへ移動 → 未ログイン時は accounts.dmm.com へリダイレクト
+    await page.goto("https://affiliate.dmm.com/", wait_until="domcontentloaded")
     try:
         await page.wait_for_load_state("networkidle", timeout=20_000)
     except PWTimeout:
         pass
 
-    await page.fill("input[name='login_id']", email)
-    await page.fill("input[name='password']", password)
-    await page.click("input[type='submit'], button[type='submit']")
-    try:
-        await page.wait_for_load_state("networkidle", timeout=20_000)
-    except PWTimeout:
-        pass
+    print(f"[INFO] Pre-login URL: {page.url[:80]}")
+    await save_screenshot(page, "01_pre_login")
 
-    print(f"[INFO] Logged in. URL={page.url[:60]}")
+    # ログインページにいる場合はフォーム入力
+    if "login" in page.url or "accounts.dmm.com" in page.url:
+        # メールアドレス入力 (複数セレクタをフォールバック)
+        email_filled = False
+        for sel in [
+            "input[name='login_id']",
+            "input[type='email']",
+            "input[id='login_id']",
+            "input[placeholder*='メール']",
+            "input[placeholder*='ID']",
+        ]:
+            loc = page.locator(sel)
+            if await loc.count() > 0:
+                await loc.first.fill(email)
+                email_filled = True
+                print(f"[INFO] Email filled with selector: {sel}")
+                break
+        if not email_filled:
+            print("[WARN] Email input not found")
+
+        # パスワード入力
+        pass_filled = False
+        for sel in [
+            "input[name='password']",
+            "input[type='password']",
+            "input[id='password']",
+        ]:
+            loc = page.locator(sel)
+            if await loc.count() > 0:
+                await loc.first.fill(password)
+                pass_filled = True
+                print(f"[INFO] Password filled with selector: {sel}")
+                break
+        if not pass_filled:
+            print("[WARN] Password input not found")
+
+        await save_screenshot(page, "02_form_filled")
+
+        # 送信
+        for sel in [
+            "button[type='submit']",
+            "input[type='submit']",
+            "button:has-text('ログイン')",
+            "button:has-text('Login')",
+            "input[value*='ログイン']",
+        ]:
+            loc = page.locator(sel)
+            if await loc.count() > 0:
+                await loc.first.click()
+                print(f"[INFO] Submit clicked: {sel}")
+                break
+
+        try:
+            await page.wait_for_load_state("networkidle", timeout=25_000)
+        except PWTimeout:
+            pass
+
+        print(f"[INFO] Post-submit URL: {page.url[:80]}")
+        await save_screenshot(page, "03_post_login")
+
+    # アフィリエイトドメインにいることを確認
+    if "affiliate.dmm.com" not in page.url:
+        await page.goto("https://affiliate.dmm.com/", wait_until="domcontentloaded")
+        try:
+            await page.wait_for_load_state("networkidle", timeout=15_000)
+        except PWTimeout:
+            pass
+        print(f"[INFO] Re-navigated to affiliate: {page.url[:80]}")
+        await save_screenshot(page, "04_affiliate_top")
+
+    print(f"[INFO] Login complete. URL={page.url[:80]}")
 
 
 # ─────────────────────────────────────────
