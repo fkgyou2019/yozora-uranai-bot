@@ -27,9 +27,10 @@ from playwright.async_api import async_playwright, TimeoutError as PWTimeout
 # ─────────────────────────────────────────
 JST = timezone(timedelta(hours=9))
 AWS_REGION = os.environ.get("AWS_DEFAULT_REGION", "ap-northeast-1")
-TABLE_SALES = "fanza-affiliate-sales"
-TABLE_META  = "fanza-product-metadata"
-TABLE_POSTS = "x-poster-daily-posts"
+TABLE_SALES   = "fanza-affiliate-sales"
+TABLE_META    = "fanza-product-metadata"
+TABLE_CLICKS  = "fanza-hourly-clicks"
+TABLE_POSTS   = "x-poster-daily-posts"
 
 DAY_NAMES = ["月", "火", "水", "木", "金", "土", "日"]
 
@@ -59,6 +60,11 @@ def ensure_tables(dynamo):
             TABLE_META,
             [{"AttributeName": "product_id", "KeyType": "HASH"}],
             [{"AttributeName": "product_id", "AttributeType": "S"}],
+        ),
+        (
+            TABLE_CLICKS,
+            [{"AttributeName": "date", "KeyType": "HASH"}],
+            [{"AttributeName": "date", "AttributeType": "S"}],
         ),
     ]
     client = dynamo.meta.client
@@ -498,6 +504,106 @@ async def collect_product_urls(page, target_date: datetime) -> dict[str, str]:
 
 
 # ─────────────────────────────────────────
+# Playwright: 時間別クリック数 (レポートトップ Highcharts)
+# ─────────────────────────────────────────
+
+async def scrape_hourly_clicks(page, target_date: datetime) -> dict[str, int]:
+    """
+    レポートトップの時間別クリック数グラフ（Highcharts）から
+    0〜23時のクリック数を抽出して返す。
+    戻り値: {"00": 795, "01": 680, ..., "23": 0}
+    """
+    date_str = target_date.strftime("%Y/%m/%d")
+
+    # レポートトップへ移動（今日タブ）
+    await page.goto("https://affiliate.dmm.com/affiliate/report/", wait_until="domcontentloaded")
+    try:
+        await page.wait_for_load_state("networkidle", timeout=20_000)
+    except PWTimeout:
+        pass
+
+    # FANZA タブを選択
+    fanza_tab = page.locator("a:has-text('FANZA'), .tab-fanza a")
+    if await fanza_tab.count() > 0:
+        await fanza_tab.first.click()
+        try:
+            await page.wait_for_load_state("networkidle", timeout=10_000)
+        except PWTimeout:
+            pass
+
+    # 「今日」タブが選択されていない場合はクリック
+    today_tab = page.locator("a:has-text('今日'), button:has-text('今日')")
+    if await today_tab.count() > 0:
+        await today_tab.first.click()
+        try:
+            await page.wait_for_load_state("networkidle", timeout=10_000)
+        except PWTimeout:
+            pass
+
+    # Highcharts のレンダリングを待つ
+    await page.wait_for_timeout(3_000)
+    await save_screenshot(page, "05_report_top")
+
+    # Highcharts から クリック数 series のデータを抽出
+    raw = await page.evaluate("""
+        () => {
+            try {
+                const charts = window.Highcharts && window.Highcharts.charts;
+                if (!charts) return null;
+                for (const chart of charts) {
+                    if (!chart) continue;
+                    // クリック数 series を探す
+                    const series = chart.series.find(s =>
+                        s.name && (s.name.includes('クリック') || s.name.toLowerCase().includes('click'))
+                    );
+                    if (series) {
+                        return series.data.map(p => (p && p.y !== undefined) ? p.y : 0);
+                    }
+                }
+                // フォールバック: 最初の series を使用
+                for (const chart of charts) {
+                    if (!chart || !chart.series || !chart.series[0]) continue;
+                    return chart.series[0].data.map(p => (p && p.y !== undefined) ? p.y : 0);
+                }
+            } catch(e) {
+                return null;
+            }
+            return null;
+        }
+    """)
+
+    if not raw:
+        print("[WARN] Highcharts data not found")
+        return {}
+
+    # 最大 24 要素 (0〜23時) に正規化
+    result: dict[str, int] = {}
+    for i, val in enumerate(raw[:24]):
+        result[str(i).zfill(2)] = int(val or 0)
+
+    total = sum(result.values())
+    print(f"[INFO] Hourly clicks extracted: {len(result)} hours, total={total}")
+    return result
+
+
+def save_hourly_clicks(dynamo, date_str: str, clicks: dict[str, int]):
+    if not clicks:
+        return
+    now_str = datetime.now(JST).strftime("%Y/%m/%d %H:%M")
+    total   = sum(clicks.values())
+    try:
+        dynamo.Table(TABLE_CLICKS).put_item(Item={
+            "date":          date_str,
+            "clicks_by_hour": {h: Decimal(str(v)) for h, v in clicks.items()},
+            "total_clicks":   Decimal(str(total)),
+            "scraped_at":     now_str,
+        })
+        print(f"[INFO] Saved hourly clicks: date={date_str}, total={total}")
+    except ClientError as e:
+        print(f"[ERROR] Failed to save hourly clicks: {e}")
+
+
+# ─────────────────────────────────────────
 # メイン処理
 # ─────────────────────────────────────────
 
@@ -524,6 +630,10 @@ async def main():
 
         # ログイン
         await login_fanza(page)
+
+        # 時間別クリック数を収集（レポートトップ Highcharts）
+        hourly_clicks = await scrape_hourly_clicks(page, target_date)
+        save_hourly_clicks(dynamo, target_date.strftime("%Y/%m/%d"), hourly_clicks)
 
         # HTML テーブルから商品 URL を先に取得（CSV に URL が含まれないため）
         product_urls = await collect_product_urls(page, target_date)
