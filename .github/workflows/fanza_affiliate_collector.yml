@@ -1,44 +1,88 @@
 name: FANZA アフィリエイト 収益データ収集
 
 on:
-  schedule:
-    # 毎日 23:55 JST (= 14:55 UTC)
-    - cron: '55 14 * * *'
+  # fanza-collector/ のコード変更時に自動デプロイ
+  push:
+    paths:
+      - 'fanza-collector/**'
+  # 手動で Lambda を即時呼び出す
   workflow_dispatch:
+    inputs:
+      invoke_lambda:
+        description: 'Lambda を今すぐ実行する (true/false)'
+        required: false
+        default: 'true'
+
+env:
+  REGION:    ap-northeast-1
+  FUNC_NAME: fanza-collector
+  REPO_NAME: fanza-collector
 
 jobs:
-  collect:
+  # ─────────────────────────────────────────────────────────────────────────
+  # fanza-collector/ の変更を ECR にビルド&プッシュして Lambda を更新
+  # ─────────────────────────────────────────────────────────────────────────
+  deploy:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
     steps:
-      - name: リポジトリをチェックアウト
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Python 3.12 セットアップ
-        uses: actions/setup-python@v5
+      - name: AWS 認証
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          python-version: '3.12'
+          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region:            ${{ env.REGION }}
 
-      - name: 依存ライブラリをインストール
+      - name: ECR ログイン
+        id: ecr-login
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Docker ビルド & ECR プッシュ
         run: |
-          pip install playwright boto3
-          playwright install chromium
-          playwright install-deps chromium
+          ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+          ECR_URI="${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${REPO_NAME}"
+          cd fanza-collector
+          docker build -t "${ECR_URI}:latest" .
+          docker push "${ECR_URI}:latest"
+          echo "ECR_URI=${ECR_URI}" >> $GITHUB_ENV
 
-      - name: FANZA 収益データ収集を実行
-        env:
-          FANZA_EMAIL:              ${{ secrets.FANZA_EMAIL }}
-          FANZA_PASSWORD:           ${{ secrets.FANZA_PASSWORD }}
-          AWS_ACCESS_KEY_ID:        ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY:    ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION:       ap-northeast-1
-        run: python .github/scripts/fanza_affiliate_collector.py
+      - name: Lambda コード更新
+        run: |
+          aws lambda update-function-code \
+            --function-name $FUNC_NAME \
+            --region $REGION \
+            --image-uri "${ECR_URI}:latest"
+          aws lambda wait function-updated \
+            --function-name $FUNC_NAME \
+            --region $REGION
+          echo "Lambda updated successfully"
 
-      - name: デバッグスクリーンショットをアップロード
-        if: always()
-        uses: actions/upload-artifact@v4
+  # ─────────────────────────────────────────────────────────────────────────
+  # 手動トリガー: Lambda を即時呼び出して結果を確認
+  # ─────────────────────────────────────────────────────────────────────────
+  invoke:
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.invoke_lambda == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: AWS 認証
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          name: debug-screenshots
-          path: /tmp/*.png
-          if-no-files-found: ignore
+          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region:            ${{ env.REGION }}
+
+      - name: Lambda 呼び出し (同期)
+        run: |
+          aws lambda invoke \
+            --function-name $FUNC_NAME \
+            --region $REGION \
+            --log-type Tail \
+            --query 'LogResult' \
+            --output text \
+            /tmp/response.json | base64 -d || true
+          echo "--- Response ---"
+          cat /tmp/response.json
