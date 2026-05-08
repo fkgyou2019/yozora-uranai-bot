@@ -1,70 +1,14 @@
-name: FANZA アフィリエイト 収益データ収集
+name: FANZA アフィリエイト 収益データ収集（手動実行）
 
 on:
-  # fanza-collector/ のコード変更時に自動デプロイ
-  push:
-    paths:
-      - 'fanza-collector/**'
-  # 手動で Lambda を即時呼び出す
   workflow_dispatch:
-    inputs:
-      invoke_lambda:
-        description: 'Lambda を今すぐ実行する (true/false)'
-        required: false
-        default: 'true'
 
 env:
   REGION:    ap-northeast-1
   FUNC_NAME: fanza-collector
-  REPO_NAME: fanza-collector
 
 jobs:
-  # ─────────────────────────────────────────────────────────────────────────
-  # fanza-collector/ の変更を ECR にビルド&プッシュして Lambda を更新
-  # ─────────────────────────────────────────────────────────────────────────
-  deploy:
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: AWS 認証
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id:     ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region:            ${{ env.REGION }}
-
-      - name: ECR ログイン
-        id: ecr-login
-        uses: aws-actions/amazon-ecr-login@v2
-
-      - name: Docker ビルド & ECR プッシュ
-        run: |
-          ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-          ECR_URI="${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${REPO_NAME}"
-          cd fanza-collector
-          docker build -t "${ECR_URI}:latest" .
-          docker push "${ECR_URI}:latest"
-          echo "ECR_URI=${ECR_URI}" >> $GITHUB_ENV
-
-      - name: Lambda コード更新
-        run: |
-          aws lambda update-function-code \
-            --function-name $FUNC_NAME \
-            --region $REGION \
-            --image-uri "${ECR_URI}:latest"
-          aws lambda wait function-updated \
-            --function-name $FUNC_NAME \
-            --region $REGION
-          echo "Lambda updated successfully"
-
-  # ─────────────────────────────────────────────────────────────────────────
-  # 手動トリガー: Lambda を即時呼び出して結果を確認
-  # ─────────────────────────────────────────────────────────────────────────
   invoke:
-    if: github.event_name == 'workflow_dispatch' && github.event.inputs.invoke_lambda == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
